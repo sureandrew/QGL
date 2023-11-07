@@ -1,0 +1,156 @@
+<?xml version="1.0" ?>
+<!-- Our to do list data -->
+<UI>
+	<ID Name="TargetEquip" />
+	<!--<Font Name="Data\mingliu.ttc" Width="12" Height="12" />-->
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	<Panel Name="TargetEquipPanel" Image="Data\interface0040.tga" X="413" Y="46" 
+			Left="10" Top="10" Right="193" Bottom="222" LuaRButtonUp="CloseTargetEquipMenu" LuaKeyChar="CloseTargetEquipMenu" DetectImage = "1"
+			Drag="1" DragLeft="0" DragTop="0" DragRight="339" DragBottom="205" LuaMouseWheel="TargetEquipMenuPanelWheel">
+		<Button Name="TargetEquipMenuPanelClose" Image="Data\interface0040.tga" X="152" Y="8" LuaLButtonDown="CloseTargetEquipMenu">
+			<ButtonRect State="0" Left="10" Top="230" Right="34" Bottom="248" />
+			<ButtonRect State="1" Left="36" Top="230" Right="59" Bottom="248" />
+			<ButtonRect State="2" Left="61" Top="230" Right="85" Bottom="248" />
+		</Button>
+		
+		<StaticText Name="TargetEquipPanelName" X="39" Y="39" Row="1" Column="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0"  Align="Center" Width="106" Height="20">	
+		不败之娘
+		</StaticText>
+
+		<!-- Equip UI -->
+		<UIImage Name="TargetEquipBGPanel" Image="Data\interface0005_main_B.tga" X="29" Y="74" 
+				Left="642" Top="17" Right="768" Bottom="143" Hide="0" AutoDelete="0"/>
+
+	<!-- Equip Item -->
+	
+		<Tips Name="TargetEquipNeckTips" X="31" Y="74" Width="44" Height="44" Tips="护物符" TimeOutCount="500" />
+		<Tips Name="TargetEquipHeadTips" X="72" Y="74" Width="44" Height="44" Tips="头饰" TimeOutCount="500" />	
+		<Tips Name="TargetEquipHatTips" X="113" Y="74" Width="44" Height="44" Tips="外观头饰" TimeOutCount="500" />
+		
+		<Tips Name="TargetEquipWeaponTips" X="31" Y="115" Width="44" Height="44" Tips="武器" TimeOutCount="500" />
+		<Tips Name="TargetEquipShirtTips" X="72" Y="115" Width="44" Height="44" Tips="衣服" TimeOutCount="500" />	
+		<Tips Name="TargetEquipClothTips" X="113" Y="115" Width="44" Height="44" Tips="外观衣服" TimeOutCount="500" />
+		
+		<Tips Name="TargetEquipRingTips" X="31" Y="156" Width="44" Height="44" Tips="戒指" TimeOutCount="500" />
+		<Tips Name="TargetEquipShoesTips" X="72" Y="156" Width="44" Height="44" Tips="鞋子" TimeOutCount="500" />	
+		<Tips Name="TargetEquipBeltTips" X="113" Y="156" Width="44" Height="44" Tips="腰带" TimeOutCount="500" />
+		
+	
+		<UIImage Name="TargetEquip006Color1" X="32" Y="76" Image="Data\interface0005_main_B.tga" Left="59" Top="525" Right="99" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="TargetEquip006Color2" X="32" Y="76" Image="Data\interface0005_main_B.tga" Left="106" Top="525" Right="146" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="TargetEquip006Color3" X="32" Y="76" Image="Data\interface0005_main_B.tga" Left="200" Top="525" Right="240" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="TargetEquip006Color4" X="32" Y="76" Image="Data\interface0005_main_B.tga" Left="153" Top="525" Right="193" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="TargetEquip006Color5" X="32" Y="76" Image="Data\interface0005_main_B.tga" Left="11" Top="525" Right="51" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<AniIcon Name="TargetEquip006Icon" X="32" Y="76" Image="" AutoDelete="0" LuaRButtonUp="TargetEquip006"
+			LuaLButtonUp="" LuaMouseMove="TargetEquipOver006" LuaMouseOut = "TargetEquipMouseOut" InsertToEventList = "1" Detect = "1"/>
+		<StaticText Name="TargetEquip006Stack" X="26" Y="102" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="TargetEquip006Lvl" X="26" Y="79" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	
+		<UIImage Name="TargetEquip001Color1" X="72" Y="76" Image="Data\interface0005_main_B.tga" Left="59" Top="525" Right="99" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="TargetEquip001Color2" X="72" Y="76" Image="Data\interface0005_main_B.tga" Left="106" Top="525" Right="146" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="TargetEquip001Color3" X="72" Y="76" Image="Data\interface0005_main_B.tga" Left="200" Top="525" Right="240" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="TargetEquip001Color4" X="72" Y="76" Image="Data\interface0005_main_B.tga" Left="153" Top="525" Right="193" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="TargetEquip001Color5" X="72" Y="76" Image="Data\interface0005_main_B.tga" Left="11" Top="525" Right="51" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<AniIcon Name="TargetEquip001Icon" X="72" Y="76" Image=""  AutoDelete="0" LuaRButtonUp="TargetEquip001"
+			LuaLButtonUp="" LuaMouseMove="TargetEquipOver001" LuaMouseOut = "TargetEquipMouseOut" InsertToEventList = "1" Detect = "1"/>
+		<StaticText Name="TargetEquip001Stack" X="74" Y="102" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="TargetEquip001Lvl" X="74" Y="79" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	
+		<UIImage Name="TargetEquip007Color1" X="113" Y="76" Image="Data\interface0005_main_B.tga" Left="59" Top="525" Right="99" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="TargetEquip007Color2" X="113" Y="76" Image="Data\interface0005_main_B.tga" Left="106" Top="525" Right="146" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="TargetEquip007Color3" X="113" Y="76" Image="Data\interface0005_main_B.tga" Left="200" Top="525" Right="240" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="TargetEquip007Color4" X="113" Y="76" Image="Data\interface0005_main_B.tga" Left="153" Top="525" Right="193" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="TargetEquip007Color5" X="113" Y="76" Image="Data\interface0005_main_B.tga" Left="11" Top="525" Right="51" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<AniIcon Name="TargetEquip007Icon" X="113" Y="76" Image=""  AutoDelete="0" LuaRButtonUp="TargetEquip007"
+			LuaLButtonUp="" LuaMouseMove="TargetEquipOver007" LuaMouseOut = "TargetEquipMouseOut" InsertToEventList = "1" Detect = "1"/>
+		<StaticText Name="TargetEquip007Stack" X="122" Y="102" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="TargetEquip007Lvl" X="122" Y="79" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	
+		<UIImage Name="TargetEquip000Color1" X="31" Y="117" Image="Data\interface0005_main_B.tga" Left="59" Top="525" Right="99" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="TargetEquip000Color2" X="31" Y="117" Image="Data\interface0005_main_B.tga" Left="106" Top="525" Right="146" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="TargetEquip000Color3" X="31" Y="117" Image="Data\interface0005_main_B.tga" Left="200" Top="525" Right="240" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="TargetEquip000Color4" X="31" Y="117" Image="Data\interface0005_main_B.tga" Left="153" Top="525" Right="193" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="TargetEquip000Color5" X="31" Y="117" Image="Data\interface0005_main_B.tga" Left="11" Top="525" Right="51" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<AniIcon Name="TargetEquip000Icon" X="31" Y="117" Image=""  AutoDelete="0" LuaRButtonUp="TargetEquip000"
+			LuaLButtonUp="" LuaMouseMove="TargetEquipOver000" LuaMouseOut = "TargetEquipMouseOut" InsertToEventList = "1" Detect = "1"/>
+		<StaticText Name="TargetEquip000Stack" X="26" Y="150" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="TargetEquip000Lvl" X="26" Y="127" Row="1" Column="4" width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	
+		<UIImage Name="TargetEquip002Color1" X="72" Y="117" image="Data\interface0005_main_B.tga" Left="59" Top="525" Right="99" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="TargetEquip002Color2" X="72" Y="117" image="Data\interface0005_main_B.tga" Left="106" Top="525" Right="146" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="TargetEquip002Color3" X="72" Y="117" image="Data\interface0005_main_B.tga" Left="200" Top="525" Right="240" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="TargetEquip002Color4" X="72" Y="117" image="Data\interface0005_main_B.tga" Left="153" Top="525" Right="193" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="TargetEquip002Color5" X="72" Y="117" image="Data\interface0005_main_B.tga" Left="11" Top="525" Right="51" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<AniIcon Name="TargetEquip002Icon" X="72" Y="117" Image=""  AutoDelete="0" LuaRButtonUp="TargetEquip002"
+			LuaLButtonUp="" LuaMouseMove="TargetEquipOver002" LuaMouseOut = "TargetEquipMouseOut" InsertToEventList = "1" Detect = "1"/>
+		<StaticText Name="TargetEquip002Stack" X="74" Y="150" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="TargetEquip002Lvl" X="74" Y="127" Row="1" Column="4" width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	
+		<UIImage Name="TargetEquip008Color1" X="113" Y="117" image="Data\interface0005_main_B.tga" Left="59" Top="525" Right="99" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="TargetEquip008Color2" X="113" Y="117" image="Data\interface0005_main_B.tga" Left="106" Top="525" Right="146" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="TargetEquip008Color3" X="113" Y="117" image="Data\interface0005_main_B.tga" Left="200" Top="525" Right="240" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="TargetEquip008Color4" X="113" Y="117" image="Data\interface0005_main_B.tga" Left="153" Top="525" Right="193" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="TargetEquip008Color5" X="113" Y="117" Image="Data\interface0005_main_B.tga" Left="11" Top="525" Right="51" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<AniIcon Name="TargetEquip008Icon" X="113" Y="117" Image=""  AutoDelete="0" LuaRButtonUp="TargetEquip008"
+			LuaLButtonUp="" LuaMouseMove="TargetEquipOver008" LuaMouseOut = "TargetEquipMouseOut" InsertToEventList = "1" Detect = "1"/>
+		<StaticText Name="TargetEquip008Stack" X="122" Y="150" Row="1" Column="4" width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="TargetEquip008Lvl" X="122" Y="127" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	
+		<UIImage Name="TargetEquip005Color1" X="31" Y="158" Image="Data\interface0005_main_B.tga" Left="59" Top="525" Right="99" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="TargetEquip005Color2" X="31" Y="158" Image="Data\interface0005_main_B.tga" Left="106" Top="525" Right="146" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="TargetEquip005Color3" X="31" Y="158" Image="Data\interface0005_main_B.tga" Left="200" Top="525" Right="240" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="TargetEquip005Color4" X="31" Y="158" Image="Data\interface0005_main_B.tga" Left="153" Top="525" Right="193" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="TargetEquip005Color5" X="31" Y="158" Image="Data\interface0005_main_B.tga" Left="11" Top="525" Right="51" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<AniIcon Name="TargetEquip005Icon" X="31" Y="158" Image=""  AutoDelete="0" LuaRButtonUp="TargetEquip005"
+			LuaLButtonUp="" LuaMouseMove="TargetEquipOver005" LuaMouseOut = "TargetEquipMouseOut" InsertToEventList = "1" Detect = "1"/>
+		<StaticText Name="TargetEquip005Stack" X="26" Y="198" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="TargetEquip005Lvl" X="26" Y="175" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		
+		<UIImage Name="TargetEquip003Color1" X="72" Y="158" Image="Data\interface0005_main_B.tga" Left="59" Top="525" Right="99" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="TargetEquip003Color2" X="72" Y="158" Image="Data\interface0005_main_B.tga" Left="106" Top="525" Right="146" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="TargetEquip003Color3" X="72" Y="158" Image="Data\interface0005_main_B.tga" Left="200" Top="525" Right="240" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="TargetEquip003Color4" X="72" Y="158" Image="Data\interface0005_main_B.tga" Left="153" Top="525" Right="193" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="TargetEquip003Color5" X="72" Y="158" Image="Data\interface0005_main_B.tga" Left="11" Top="525" Right="51" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<AniIcon Name="TargetEquip003Icon" X="72" Y="158" Image=""  AutoDelete="0" LuaRButtonUp="TargetEquip003"
+			LuaLButtonUp="" LuaMouseMove="TargetEquipOver003" LuaMouseOut = "TargetEquipMouseOut" InsertToEventList = "1" Detect = "1"/>
+		<StaticText Name="TargetEquip003Stack" X="74" Y="198" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="TargetEquip003Lvl" X="74" Y="175" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+
+		<UIImage Name="TargetEquip004Color1" X="113" Y="158" Image="Data\interface0005_main_B.tga" Left="59" Top="525" Right="99" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="TargetEquip004Color2" X="113" Y="158" Image="Data\interface0005_main_B.tga" Left="106" Top="525" Right="146" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="TargetEquip004Color3" X="113" Y="158" Image="Data\interface0005_main_B.tga" Left="200" Top="525" Right="240" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="TargetEquip004Color4" X="113" Y="158" Image="Data\interface0005_main_B.tga" Left="153" Top="525" Right="193" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="TargetEquip004Color5" X="113" Y="158" Image="Data\interface0005_main_B.tga" Left="11" Top="525" Right="51" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<AniIcon Name="TargetEquip004Icon" X="113" Y="158" Image=""  AutoDelete="0" LuaRButtonUp="TargetEquip004"
+			LuaLButtonUp="" LuaMouseMove="TargetEquipOver004" LuaMouseOut = "TargetEquipMouseOut" InsertToEventList = "1" Detect = "1"/>
+		<StaticText Name="TargetEquip004Stack" X="122" Y="198" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="TargetEquip004Lvl" X="122" Y="175" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		
+		<UIImage Name="TargetEquipBoard" X="0" Y="0" Image="Data\interface0005_main_B.tga" Left="388" Top="366" Right="430" Bottom="408" AutoDelete="0" NotDetected="1" Hide="1"
+		 TimeOutCount="100" LuaTimeOut="ShowTargetEquipBoard"/>
+	</Panel>
+
+	<!-- Moving Panel-->
+	<Panel Name="TargetEquipMovingPanel" Image="" X="0" Y="50" Left="0" Top="0" Right="40" Bottom="40"
+		 Hide="1" Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="TargetEquipDragEnd" LuaRButtonDown="TargetEquipResetDrag" >
+		<AniIcon Name="TargetEquipMovingIcon" X="0" Y="0" Image=""  AutoDelete="0" Detect = "1" />
+	</Panel>
+</UI>

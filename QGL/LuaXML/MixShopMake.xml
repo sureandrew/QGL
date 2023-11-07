@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" ?>
+<UI>
+	<ID Name="MixShopMake" />
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	<Panel Name="MixShopMakePanel" X="253" Y="150" Image="Data\interface0032_thebox_Q.tga" Left="312" Top="5" Right="652" Bottom="463" 
+		Drag="1" DragLeft="0" DragTop="0" DragRight="340" DragBottom="458" DetectImage = "1" 
+		LuaRButtonUp="CloseMixShopMake" LuaKeyChar="CloseMixShopMake"  LuaMouseWheel="MixShopMakePanelWheel">
+						
+		<UIImage Name="MixShopTitle04" X="140" Y="5" Image="Data\interface0032_thebox_Q.tga" NotDetected = "1" Left="669" Top="21" Right="728" Bottom="38" Hide="1" />
+		<UIImage Name="MixShopTitle05" X="140" Y="5" Image="Data\interface0032_thebox_Q.tga" NotDetected = "1" Left="669" Top="41" Right="728" Bottom="58" Hide="1" />
+		<UIImage Name="MixShopTitle06" X="140" Y="5" Image="Data\interface0032_thebox_Q.tga" NotDetected = "1" Left="669" Top="61" Right="728" Bottom="78" Hide="1" /> 
+		<UIImage Name="MixShopTitle07" X="154" Y="5" Image="Data\interface0032_thebox_Q.tga" NotDetected = "1" Left="684" Top="162" Right="716" Bottom="179" Hide="1" />
+		<UIImage Name="MixShopTitle08" X="154" Y="5" Image="Data\interface0032_thebox_Q.tga" NotDetected = "1" Left="684" Top="183" Right="716" Bottom="200" Hide="1" />
+		<UIImage Name="MixShopTitle09" X="154" Y="5" Image="Data\interface0032_thebox_Q.tga" NotDetected = "1" Left="684" Top="227" Right="716" Bottom="244" Hide="1" /> 
+		
+		<ScrollBarV Name="MixShopProductScrollBar" X="174" Y="27" Width ="14" Height="171" Limit="0" BarColor="0" LuaLButtonDown="MixShopShowItemScrollMove">
+			<PrevButton Name="MixShopProductScrollUp" Image="Data\interface0032_thebox_Q.tga" X="0" Y="0" LuaLButtonUp="MixShopShowItemScrollUp">
+				<ButtonRect State="0" Left="9" Top="449" Right="20" Bottom="463" />	
+				<ButtonRect State="1" Left="23" Top="449" Right="34" Bottom="463" />
+				<ButtonRect State="2" Left="37" Top="449" Right="48" Bottom="463" />
+			</PrevButton>
+			<NextButton Name="MixShopProductScrollDown" Image="Data\interface0032_thebox_Q.tga" X="0" Y="157" LuaLButtonUp="MixShopShowItemScrollDown">
+				<ButtonRect State="0" Left="9" Top="465" Right="20" Bottom="478" />	
+				<ButtonRect State="1" Left="23" Top="465" Right="34" Bottom="478" />
+				<ButtonRect State="2" Left="37" Top="465" Right="48" Bottom="478" />
+			</NextButton>
+			<MoveButton Image="Data\interface0032_thebox_Q.tga" X="0" Y="14"  LuaMouseMove="MixShopShowItemScrollMove">
+				<ButtonRect State="0" Left="53" Top="449" Right="64" Bottom="479" />
+				<ButtonRect State="1" Left="53" Top="449" Right="64" Bottom="479" />
+				<ButtonRect State="2" Left="53" Top="449" Right="64" Bottom="479" />
+			</MoveButton>
+		</ScrollBarV>
+		<AniIcon Name="MixShopMakeBigIcon" X="203" Y="55" Image="" AutoDelete="0"/>
+		<UIImage Name="MixShopMakeBigIconBlank" X="192" Y="27" Image="Data\interface0032_thebox_Q.tga" NotDetected = "1" Left="655" Top="292" Right="799" Bottom="464" Hide="0" /> 
+		
+		<UIImage Name="MixShopItemSelected" Image="Data\interface0032_thebox_Q.tga" X="10" Y="30" Left="5" Top="379" Right="170" Bottom="396" Hide="1" LuaLButtonUp="" />
+		
+		<CheckBox Name = "MixShopCheckBox00" Image="Data\interface0032_thebox_Q.tga" X="15" Y="30" Hide="1"  LuaLButtonDown="">
+			<CheckBoxRect Index="0" Left="61" Top="427" Right="77" Bottom="441" />
+			<CheckBoxRect Index="1" Left="61" Top="427" Right="77" Bottom="441" />
+			<CheckBoxRect Index="2" Left="85" Top="427" Right="101" Bottom="441" />
+		</CheckBox>
+		<StaticText Name="MixShopItemName00" X="38" Y="30" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="240" Height="20" NotDetected="1" Align="Left" Hide="1" >
+		</StaticText>
+		<UIImage Name="MixShopItem00" Image="" X="15" Y="30" Left="0" Top="0" Right="120" Bottom="17" LuaLButtonUp="SeletMixShopMakeIndex0" LuaMouseMove="MixOver00" LuaMouseOut = "MixDetailMouseOut" InsertToEventList = "1" Detect = "1" Hide="0"/>
+		
+		<CheckBox Name = "MixShopCheckBox01" Image="Data\interface0032_thebox_Q.tga" X="15" Y="47" Hide="1"  LuaLButtonDown="">
+			<CheckBoxRect Index="0" Left="61" Top="427" Right="77" Bottom="441" />
+			<CheckBoxRect Index="1" Left="61" Top="427" Right="77" Bottom="441" />
+			<CheckBoxRect Index="2" Left="85" Top="427" Right="101" Bottom="441" />
+		</CheckBox>
+		<StaticText Name="MixShopItemName01" X="38" Y="47" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="240" Height="20" NotDetected="1" Align="Left" Hide="1" >
+		</StaticText>
+		<UIImage Name="MixShopItem01" Image="" X="15" Y="47" Left="0" Top="0" Right="120" Bottom="17" LuaLButtonUp="SeletMixShopMakeIndex1" LuaMouseMove="MixOver01" LuaMouseOut = "MixDetailMouseOut" InsertToEventList = "1" Detect = "1" Hide="0"/>
+		
+		<CheckBox Name = "MixShopCheckBox02" Image="Data\interface0032_thebox_Q.tga" X="15" Y="64" Hide="1"  LuaLButtonDown="">
+			<CheckBoxRect Index="0" Left="61" Top="427" Right="77" Bottom="441" />
+			<CheckBoxRect Index="1" Left="61" Top="427" Right="77" Bottom="441" />
+			<CheckBoxRect Index="2" Left="85" Top="427" Right="101" Bottom="441" />
+		</CheckBox>
+		<StaticText Name="MixShopItemName02" X="38" Y="64" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="240" Height="20" NotDetected="1" Align="Left" Hide="1" >
+		</StaticText>
+		<UIImage Name="MixShopItem02" Image="" X="15" Y="64" Left="0" Top="0" Right="120" Bottom="17" LuaLButtonUp="SeletMixShopMakeIndex2" LuaMouseMove="MixOver02" LuaMouseOut = "MixDetailMouseOut" InsertToEventList = "1" Detect = "1" Hide="0"/>
+		
+		<CheckBox Name = "MixShopCheckBox03" Image="Data\interface0032_thebox_Q.tga" X="15" Y="81" Hide="1"  LuaLButtonDown="">
+			<CheckBoxRect Index="0" Left="61" Top="427" Right="77" Bottom="441" />
+			<CheckBoxRect Index="1" Left="61" Top="427" Right="77" Bottom="441" />
+			<CheckBoxRect Index="2" Left="85" Top="427" Right="101" Bottom="441" />
+		</CheckBox>
+		<StaticText Name="MixShopItemName03" X="38" Y="80" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="240" Height="20" NotDetected="1" Align="Left" Hide="1" >
+		</StaticText>
+		<UIImage Name="MixShopItem03" Image="" X="15" Y="80" Left="0" Top="0" Right="120" Bottom="17" LuaLButtonUp="SeletMixShopMakeIndex3" LuaMouseMove="MixOver03" LuaMouseOut = "MixDetailMouseOut" InsertToEventList = "1" Detect = "1" Hide="0"/>
+		
+		<CheckBox Name = "MixShopCheckBox04" Image="Data\interface0032_thebox_Q.tga" X="15" Y="98" Hide="1"  LuaLButtonDown="">
+			<CheckBoxRect Index="0" Left="61" Top="427" Right="77" Bottom="441" />
+			<CheckBoxRect Index="1" Left="61" Top="427" Right="77" Bottom="441" />
+			<CheckBoxRect Index="2" Left="85" Top="427" Right="101" Bottom="441" />
+		</CheckBox>
+		<StaticText Name="MixShopItemName04" X="38" Y="97" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="240" Height="20" NotDetected="1" Align="Left" Hide="1" >
+		</StaticText>
+		<UIImage Name="MixShopItem04" Image="" X="15" Y="97" Left="0" Top="0" Right="120" Bottom="17" LuaLButtonUp="SeletMixShopMakeIndex4" LuaMouseMove="MixOver04" LuaMouseOut = "MixDetailMouseOut" InsertToEventList = "1" Detect = "1" Hide="0"/>
+		
+		<CheckBox Name = "MixShopCheckBox05" Image="Data\interface0032_thebox_Q.tga" X="15" Y="115" Hide="1"  LuaLButtonDown="">
+			<CheckBoxRect Index="0" Left="61" Top="427" Right="77" Bottom="441" />
+			<CheckBoxRect Index="1" Left="61" Top="427" Right="77" Bottom="441" />
+			<CheckBoxRect Index="2" Left="85" Top="427" Right="101" Bottom="441" />
+		</CheckBox>
+		<StaticText Name="MixShopItemName05" X="38" Y="114" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="240" Height="20" NotDetected="1" Align="Left" Hide="1" >
+		</StaticText>
+		<UIImage Name="MixShopItem05" Image="" X="15" Y="114" Left="0" Top="0" Right="120" Bottom="17" LuaLButtonUp="SeletMixShopMakeIndex5" LuaMouseMove="MixOver05" LuaMouseOut = "MixDetailMouseOut" InsertToEventList = "1" Detect = "1" Hide="0"/>
+		
+		<CheckBox Name = "MixShopCheckBox06" Image="Data\interface0032_thebox_Q.tga" X="15" Y="132" Hide="1"  LuaLButtonDown="">
+			<CheckBoxRect Index="0" Left="61" Top="427" Right="77" Bottom="441" />
+			<CheckBoxRect Index="1" Left="61" Top="427" Right="77" Bottom="441" />
+			<CheckBoxRect Index="2" Left="85" Top="427" Right="101" Bottom="441" />
+		</CheckBox>
+		<StaticText Name="MixShopItemName06" X="38" Y="131" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="240" Height="20" NotDetected="1" Align="Left" Hide="1" >
+		</StaticText>
+		<UIImage Name="MixShopItem06" Image="" X="10" Y="131" Left="0" Top="0" Right="120" Bottom="17" LuaLButtonUp="SeletMixShopMakeIndex6" LuaMouseMove="MixOver06" LuaMouseOut = "MixDetailMouseOut" InsertToEventList = "1" Detect = "1" Hide="0"/>
+		
+		<CheckBox Name = "MixShopCheckBox07" Image="Data\interface0032_thebox_Q.tga" X="15" Y="149" Hide="1"  LuaLButtonDown="">
+			<CheckBoxRect Index="0" Left="61" Top="427" Right="77" Bottom="441" />
+			<CheckBoxRect Index="1" Left="61" Top="427" Right="77" Bottom="441" />
+			<CheckBoxRect Index="2" Left="85" Top="427" Right="101" Bottom="441" />
+		</CheckBox>
+		<StaticText Name="MixShopItemName07" X="38" Y="148" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="240" Height="20" NotDetected="1" Align="Left" Hide="1" >
+		</StaticText>
+		<UIImage Name="MixShopItem07" Image="" X="10" Y="148" Left="0" Top="0" Right="120" Bottom="17" LuaLButtonUp="SeletMixShopMakeIndex7" LuaMouseMove="MixOver07" LuaMouseOut = "MixDetailMouseOut" InsertToEventList = "1" Detect = "1" Hide="0"/>
+		
+		<CheckBox Name = "MixShopCheckBox08" Image="Data\interface0032_thebox_Q.tga" X="15" Y="166" Hide="1"  LuaLButtonDown="">
+			<CheckBoxRect Index="0" Left="61" Top="427" Right="77" Bottom="441" />
+			<CheckBoxRect Index="1" Left="61" Top="427" Right="77" Bottom="441" />
+			<CheckBoxRect Index="2" Left="85" Top="427" Right="101" Bottom="441" />
+		</CheckBox>
+		<StaticText Name="MixShopItemName08" X="38" Y="165" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="240" Height="20" NotDetected="1" Align="Left" Hide="1" >
+		</StaticText>
+		<UIImage Name="MixShopItem08" Image="" X="10" Y="165" Left="0" Top="0" Right="120" Bottom="17" LuaLButtonUp="SeletMixShopMakeIndex8" LuaMouseMove="MixOver08" LuaMouseOut = "MixDetailMouseOut" InsertToEventList = "1" Detect = "1" Hide="0"/>
+		
+		<CheckBox Name = "MixShopCheckBox09" Image="Data\interface0032_thebox_Q.tga" X="15" Y="183" Hide="1"  LuaLButtonDown="">
+			<CheckBoxRect Index="0" Left="61" Top="427" Right="77" Bottom="441" />
+			<CheckBoxRect Index="1" Left="61" Top="427" Right="77" Bottom="441" />
+			<CheckBoxRect Index="2" Left="85" Top="427" Right="101" Bottom="441" />
+		</CheckBox>
+		<StaticText Name="MixShopItemName09" X="38" Y="182" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="240" Height="20" NotDetected="1" Align="Left" Hide="1" >
+		</StaticText>
+		<UIImage Name="MixShopItem09" Image="" X="10" Y="182" Left="0" Top="0" Right="120" Bottom="17" LuaLButtonUp="SeletMixShopMakeIndex9" LuaMouseMove="MixOver09" LuaMouseOut = "MixDetailMouseOut" InsertToEventList = "1" Detect = "1" Hide="0"/>
+				
+		<ScrollBarV Name="MixShopDragItemScrollBar" X="322" Y="203" Width ="14" Height="106" Limit="0" BarColor="0" LuaLButtonDown="MixShopSourceItemScrollMove">
+			<PrevButton Name="MixShopDragItemScrollUp" Image="Data\interface0032_thebox_Q.tga" X="0" Y="0" LuaLButtonUp="MixShopSourceItemScrollUp">
+				<ButtonRect State="0" Left="9" Top="449" Right="20" Bottom="463" />	
+				<ButtonRect State="1" Left="23" Top="449" Right="34" Bottom="463" />
+				<ButtonRect State="2" Left="37" Top="449" Right="48" Bottom="463" />
+			</PrevButton>
+			<NextButton Name="MixShopDragItemScrollDown" Image="Data\interface0032_thebox_Q.tga" X="0" Y="92" LuaLButtonUp="MixShopSourceItemScrollDown">
+				<ButtonRect State="0" Left="9" Top="465" Right="20" Bottom="478" />	
+				<ButtonRect State="1" Left="23" Top="465" Right="34" Bottom="478" />
+				<ButtonRect State="2" Left="37" Top="465" Right="48" Bottom="478" />
+			</NextButton>
+			<MoveButton Image="Data\interface0032_thebox_Q.tga" X="0" Y="14"  LuaMouseMove="MixShopSourceItemScrollMove">
+				<ButtonRect State="0" Left="53" Top="449" Right="64" Bottom="479" />
+				<ButtonRect State="1" Left="53" Top="449" Right="64" Bottom="479" />
+				<ButtonRect State="2" Left="53" Top="449" Right="64" Bottom="479" />
+			</MoveButton>
+		</ScrollBarV>
+		
+		<UIImage Name="MixShopDragItemBlank00" X="13" Y="209" Image="Data\interface0032_thebox_Q.tga" Left="111" Top="403" Right="155" Bottom="447" Hide="1" />
+		<AniIcon Name="MixShopDragItem00"  X="14" Y="210" Hide="1" LuaLButtonUp="MixShopSourceMove00" Detect = "1"/>
+		<StaticText Name="MixShopDragItemName00" X="62" Y="213" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="80" Height="20" NotDetected="1" Align="Left" Hide="1" >
+		</StaticText>
+		<StaticText Name="MixShopDragItemStack00" X="62" Y="230" Width="80" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" 
+			NotDetected="1" Align="Right" Hide="1" FontName="Data\simsun.ttc" FontHeight="10" FontWidth="10">
+		</StaticText>
+		
+		<UIImage Name="MixShopDragItemBlank01" X="167" Y="209" Image="Data\interface0032_thebox_Q.tga" Left="111" Top="403" Right="155" Bottom="447" Hide="1" />
+		<AniIcon Name="MixShopDragItem01"  X="168" Y="210" Hide="1" LuaLButtonUp="MixShopSourceMove01" Detect = "1"/>
+		<StaticText Name="MixShopDragItemName01" X="216" Y="213" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="80" Height="20" NotDetected="1" Align="Left" Hide="1" >
+		</StaticText>
+		<StaticText Name="MixShopDragItemStack01" X="216" Y="230" Width="80" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" 
+			NotDetected="1" Align="Right" Hide="1" FontName="Data\simsun.ttc" FontHeight="10" FontWidth="10">
+		</StaticText>
+		
+		<UIImage Name="MixShopDragItemBlank02" X="13" Y="260" Image="Data\interface0032_thebox_Q.tga" Left="111" Top="403" Right="155" Bottom="447" Hide="1" />
+		<AniIcon Name="MixShopDragItem02"  X="14" Y="261" Hide="1" LuaLButtonUp="MixShopSourceMove02" Detect = "1"/>
+		<StaticText Name="MixShopDragItemName02" X="62" Y="264" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="80" Height="20" NotDetected="1" Align="Left" Hide="1" >
+		</StaticText>
+		<StaticText Name="MixShopDragItemStack02" X="62" Y="281" Width="80" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" 
+			NotDetected="1" Align="Right" Hide="1" FontName="Data\simsun.ttc" FontHeight="10" FontWidth="10">
+		</StaticText>
+		
+		<UIImage Name="MixShopDragItemBlank03" X="167" Y="260" Image="Data\interface0032_thebox_Q.tga" Left="111" Top="403" Right="155" Bottom="447" Hide="1" />
+		<AniIcon Name="MixShopDragItem03"  X="168" Y="261" Hide="1" LuaLButtonUp="MixShopSourceMove03" Detect = "1"/>
+		<StaticText Name="MixShopDragItemName03" X="216" Y="264" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="80" Height="20" NotDetected="1" Align="Left" Hide="1" >
+		</StaticText>
+		<StaticText Name="MixShopDragItemStack03" X="216" Y="281" Width="80" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" 
+			NotDetected="1" Align="Right" Hide="1" FontName="Data\simsun.ttc" FontHeight="10" FontWidth="10">
+		</StaticText>
+		
+		<UIImage Name="MixShopQualityNormal" X="12" Y="313" Image="Data\interface0032_thebox_Q.tga" Left="115" Top="453" Right="135" Bottom="474" Hide="1" />
+		<StaticText Name="MixShopQualityProp00" X="31" Y="317" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="38" Height="20" NotDetected="1" Align="Center" Hide="1" >
+		</StaticText>
+		
+		<UIImage Name="MixShopQualityFine" X="68" Y="313" Image="Data\interface0032_thebox_Q.tga" Left="169" Top="453" Right="189" Bottom="474" Hide="1" />
+		<StaticText Name="MixShopQualityProp01" X="87" Y="317" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="38" Height="20" NotDetected="1" Align="Center" Hide="1" >
+		</StaticText>
+		
+		<UIImage Name="MixShopQualityPretty" X="126" Y="313" Image="Data\interface0032_thebox_Q.tga" Left="142" Top="453" Right="162" Bottom="474" Hide="1" />
+		<StaticText Name="MixShopQualityProp02" X="143" Y="317" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="38" Height="20" NotDetected="1" Align="Center" Hide="1" >
+		</StaticText>
+		
+		<UIImage Name="MixShopQualityHiQuality" X="180" Y="313" Image="Data\interface0032_thebox_Q.tga" Left="197" Top="453" Right="217" Bottom="474" Hide="1" />
+		<StaticText Name="MixShopQualityProp03" X="199" Y="317" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="38" Height="20" NotDetected="1" Align="Center" Hide="1" >
+		</StaticText>
+		
+		<UIImage Name="MixShopQualityBest" X="236" Y="313" Image="Data\interface0032_thebox_Q.tga" Left="226" Top="453" Right="246" Bottom="474" Hide="1" />
+		<StaticText Name="MixShopQualityProp04" X="256" Y="317" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="38" Height="20" NotDetected="1" Align="Center" Hide="1" >
+		</StaticText>
+		
+		<UIImage Name="MixShopQualityGod" X="236" Y="313" Image="Data\interface0032_thebox_Q.tga" Left="255" Top="453" Right="275" Bottom="474" Hide="1" />
+	
+		<StaticText Name="MixShopMakeNeed00" X="10" Y="345" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="156" Height="20" NotDetected="1" Align="Center" Hide="1">
+		</StaticText>
+		
+		<StaticText Name="MixShopMakeNeed01" X="174" Y="345" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="156" Height="20" NotDetected="1" Align="Center" Hide="1">
+		</StaticText>
+		
+		<StaticText Name="MixShopMakeNeed02" X="10" Y="370" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="156" Height="20" NotDetected="1" Align="Center" Hide="1">
+		</StaticText>
+		
+		<StaticText Name="MixShopMakeNeed03" X="174" Y="370" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="156" Height="20" NotDetected="1" Align="Center" Hide="1">
+		</StaticText>
+		
+		<LinerImage Name="MixShopMakeTimeLine" X="11" Y="395" Image="Data\interface0032_thebox_Q.tga" Left="19" Top="429"
+			Right="25" Bottom="445" LineWidth="319" BaseWidth="319" Hide="1" Denumerator="100" Numerator="1" />
+				
+		<UIImage Name="MixShopBlockImage" X="0" Y="0" Image="" Left="0" Top="0" Right="340" Bottom="394" Hide="1" />
+		
+		<!-- for Eq make-->
+		<Button Name="MixShopButtonMake" Image="Data\interface0032_thebox_Q.tga" X="95" Y="421" LuaLButtonUp="MixShopStartMake" Hide="1">
+			<ButtonRect State="0" Left="9" Top="508" Right="101" Bottom="529" />
+			<ButtonRect State="1" Left="105" Top="508" Right="197" Bottom="529" />
+			<ButtonRect State="2" Left="201" Top="508" Right="293" Bottom="529" />
+			<ButtonRect State="3" Left="297" Top="508" Right="389" Bottom="529" />
+		</Button>
+	
+		<Button Name="MixShopButtonCancel" Image="Data\interface0032_thebox_Q.tga" X="193" Y="421" LuaLButtonUp="CancelMixShopMaking" Hide="1">
+			<ButtonRect State="0" Left="9" Top="534" Right="101" Bottom="555" />
+			<ButtonRect State="1" Left="105" Top="534" Right="197" Bottom="555" />
+			<ButtonRect State="2" Left="201" Top="534" Right="293" Bottom="555" />
+			<ButtonRect State="3" Left="297" Top="534" Right="389" Bottom="555" />
+		</Button>
+		
+		<!-- for live skill-->
+		<Button Name="MixShopButtonAllMake" Image="Data\interface0032_thebox_Q.tga" X="11" Y="421" LuaLButtonUp="MixShopStartMixAll" Hide="1">
+			<ButtonRect State="0" Left="396" Top="534" Right="488" Bottom="555" />
+			<ButtonRect State="1" Left="492" Top="534" Right="584" Bottom="555" />
+			<ButtonRect State="2" Left="588" Top="534" Right="680" Bottom="555" />
+			<ButtonRect State="3" Left="684" Top="534" Right="776" Bottom="555" />
+		</Button>
+	
+		<Button Name="MixShopButtonMake2" Image="Data\interface0032_thebox_Q.tga" X="190" Y="421" LuaLButtonUp="MixShopStartMix2" Hide="1">
+			<ButtonRect State="0" Left="396" Top="508" Right="456" Bottom="529" />
+			<ButtonRect State="1" Left="460" Top="508" Right="520" Bottom="529" />
+			<ButtonRect State="2" Left="524" Top="508" Right="584" Bottom="529" />
+			<ButtonRect State="3" Left="588" Top="508" Right="648" Bottom="529" />
+		</Button>
+		
+		<Button Name="MixShopButtonCancel2" Image="Data\interface0032_thebox_Q.tga" X="255" Y="421" LuaLButtonUp="CancelMixShopMaking2" Hide="1">
+			<ButtonRect State="0" Left="396" Top="482" Right="456" Bottom="503" />
+			<ButtonRect State="1" Left="460" Top="482" Right="520" Bottom="503" />
+			<ButtonRect State="2" Left="524" Top="482" Right="584" Bottom="503" />
+			<ButtonRect State="3" Left="588" Top="482" Right="648" Bottom="503" />
+		</Button>
+		
+		<Button Name="MixShopButtonAdd" Image="Data\interface0032_thebox_Q.tga" X="163" Y="421" LuaLButtonUp="MixShopAddOne" Hide="1">
+			<ButtonRect State="0" Left="176" Top="378" Right="198" Bottom="399" />
+			<ButtonRect State="1" Left="199" Top="378" Right="221" Bottom="399" />
+			<ButtonRect State="2" Left="223" Top="378" Right="245" Bottom="399" />
+			<ButtonRect State="3" Left="246" Top="378" Right="268" Bottom="399" />
+		</Button>
+		
+		<Button Name="MixShopButtonSub" Image="Data\interface0032_thebox_Q.tga" X="110" Y="421" LuaLButtonUp="MixShopSubOne" Hide="1">
+			<ButtonRect State="0" Left="176" Top="400" Right="198" Bottom="421" />
+			<ButtonRect State="1" Left="199" Top="400" Right="221" Bottom="421" />
+			<ButtonRect State="2" Left="223" Top="400" Right="245" Bottom="421" />
+			<ButtonRect State="3" Left="246" Top="400" Right="268" Bottom="421" />
+		</Button>
+		
+		<UIImage Name="MixShopMake2CountBg" X="134" Y="421" Image="Data\interface0032_thebox_Q.tga" Left="177" Top="425" Right="204" Bottom="447" Hide="1" />
+		<EditBox Name="MixShopMake2Count" X="137" Y="425" Row="1" Column="2" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" Hide="1"
+			ShadowColor="FF000000" Limit="2" NumOnly="1">
+			1
+		</EditBox>
+		
+		
+		
+		
+		<Button Name="MixShopMakeCross" Image="Data\interface0032_thebox_Q.tga" X="305" Y="8" LuaLButtonUp="CloseMixShopMake">
+			<ButtonRect State="0" Left="5" Top="403" Right="29" Bottom="421" />
+			<ButtonRect State="1" Left="30" Top="403" Right="54" Bottom="421" />
+			<ButtonRect State="2" Left="55" Top="403" Right="79" Bottom="421" />
+		</Button>
+		
+	</Panel>
+	
+	<!-- Moving Panel-->
+	<Panel Name="MixShopMakeMovingPanel" Image="" X="0" Y="50" Left="0" Top="0" Right="40" Bottom="40"
+		 Hide="1" Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="MixShopMakeEndDrag" LuaRButtonDown="ResetMixShopMakingDrag" >
+		<AniIcon Name="MixShopMakeMovingIcon" X="0" Y="0" Image=""  AutoDelete="0" Detect = "1" />
+	</Panel>
+</UI>

@@ -1,0 +1,24 @@
+//-- Config
+config
+{
+	SubPath="Logic/";
+	ClassID=33000;
+	StartID=33000;
+	EndID  =33999;
+	ModifyMask=1;
+}
+
+//-- include
+
+//-- object class
+class Skill : NetObject
+{
+	//-- object state
+	info { 			UInt16	skill_id;		};
+	owner_info { 	UInt32	owner_id;
+					BYTE	owner_type; 	};	//0 player 1 partner 2 pet
+	Level { 		UInt16	skill_level;	};
+	CoolDown {		UInt32	cool_down;		};
+	PartnerSkillType { BYTE	partner_skill_type; }; //0: normal skill 1:special skill
+	//-- command to RPC server
+}

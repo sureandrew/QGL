@@ -1,0 +1,51 @@
+//-- Config
+config
+{
+	SubPath="Logic/";
+	ClassID=25000;
+	StartID=25000;
+	EndID  =25999;
+}
+
+//-- include
+
+//-- object class
+class BatItem
+{
+	//-- object attributes
+	id { 		UInt32 item_uid;
+				UInt32 item_id;		};
+	owner_id { 	UInt32 owner_id;	};
+	bagIndex {	UInt8  bagIndex; 	};
+	eq_element { UInt8 eq_element; 	};
+	endure { 	UInt16 endure; 		};
+	grade {		UInt16 grade;		};
+	remain {	UInt8  remain;		};
+	stack {		UInt8  stack;		};
+	attrib {	Int16 STA;
+				Int16 SPR;
+				Int16 STR;
+				Int16 CON;
+				Int16 AGI;
+				Int16 ATK;
+				Int16 DEF;
+				Int16 HIT;
+				Int16 EVA;
+				Int16 POW;
+				Int16 SPD;
+				Int16 maxHP;
+				Int16 maxSP;
+				Int16 maxVP;		};
+	addon { 	UInt16 addon; 		};
+	buff { 		String buff; 		};
+	
+	quality {	UInt16 item_quality;	};
+	soulboundState {	UInt8 item_soulboundState;	};
+	IdentifyState {	UInt8 item_IdentifyState;	};
+	ExpireDate		{UInt32	item_expireDate; };
+	//TimeLeft		{UInt32	item_TimeLeft; };
+	Value		{	UInt16	itemValue1;
+					UInt16	itemValue2;
+					UInt16	itemValue3;
+					};
+}

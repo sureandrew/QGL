@@ -1,0 +1,122 @@
+<?xml version="1.0" ?>
+<!-- Our to do list data -->
+<UI>
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	<Panel Name="ChannelHistoryPopPanel" Image="Data\interface008_chat.tga" X="150" Y="100" DetectImage = "1"
+			Left="5" Top="351" Right="321" Bottom="597" LuaRButtonUp="CloseChannelHisLua"
+			Drag="1" DragLeft="0" DragTop="0" DragRight="346" DragBottom="19" LuaMouseWheel="ChatHisMouseWheel" LuaKeyChar="CloseChannelHisLua">
+		<CheckBox Name = "MapChannelHis" Image="Data\interface008_chat.tga" X="8" Y="28"  LuaLButtonDown="MapChannelHisLua">
+			<CheckBoxRect Index="0" Left="3" Top="134" Right="36" Bottom="152" />
+			<CheckBoxRect Index="1" Left="3" Top="134" Right="36" Bottom="152" />
+			<CheckBoxRect Index="2" Left="75" Top="134" Right="109" Bottom="152" />
+		</CheckBox>
+		<CheckBox Name = "PartyChannelHis" Image="Data\interface008_chat.tga" X="8" Y="47"  LuaLButtonDown="PartyChannelHisLua">
+			<CheckBoxRect Index="0" Left="3" Top="155" Right="36" Bottom="173" />
+			<CheckBoxRect Index="1" Left="3" Top="155" Right="36" Bottom="173" />
+			<CheckBoxRect Index="2" Left="75" Top="155" Right="109" Bottom="172" />
+			
+		</CheckBox>
+		<CheckBox Name = "GangChannelHis" Image="Data\interface008_chat.tga" X="8" Y="66"  LuaLButtonDown="GangChannelHisLua">
+			<CheckBoxRect Index="0" Left="3" Top="176" Right="36" Bottom="194" />
+			<CheckBoxRect Index="1" Left="3" Top="176" Right="36" Bottom="194" />
+			<CheckBoxRect Index="2" Left="75" Top="176" Right="109" Bottom="194" />
+		</CheckBox>
+		<CheckBox Name = "GuildChannelHis" Image="Data\interface008_chat.tga" X="8" Y="85"  LuaLButtonDown="GuildChannelHisLua">
+			<CheckBoxRect Index="0" Left="3" Top="197" Right="36" Bottom="215" />
+			<CheckBoxRect Index="1" Left="3" Top="197" Right="36" Bottom="215" />
+			<CheckBoxRect Index="2" Left="75" Top="197" Right="109" Bottom="215" />
+		</CheckBox>
+		<CheckBox Name = "PrivateChannelHis" Image="Data\interface008_chat.tga" X="8" Y="104"  LuaLButtonDown="PrivateChannelHisLua">
+			<CheckBoxRect Index="0" Left="3" Top="218" Right="36" Bottom="236" />
+			<CheckBoxRect Index="1" Left="3" Top="218" Right="36" Bottom="236" />
+			<CheckBoxRect Index="2" Left="75" Top="218" Right="109" Bottom="236" />
+		</CheckBox>
+		<CheckBox Name = "GlobalChannelHis" Image="Data\interface008_chat.tga" X="8" Y="123"  LuaLButtonDown="GlobalChannelHisLua">
+			<CheckBoxRect Index="0" Left="3" Top="239" Right="36" Bottom="257" />
+			<CheckBoxRect Index="1" Left="3" Top="239" Right="36" Bottom="257" />
+			<CheckBoxRect Index="2" Left="75" Top="239" Right="109" Bottom="257" />
+		</CheckBox>
+		<CheckBox Name = "CoupleChannelHis" Image="Data\interface008_chat.tga" X="8" Y="142"  LuaLButtonDown="CoupleChannelHisLua">
+			<CheckBoxRect Index="0" Left="3" Top="282" Right="36" Bottom="300" />
+			<CheckBoxRect Index="1" Left="3" Top="282" Right="36" Bottom="300" />
+			<CheckBoxRect Index="2" Left="75" Top="282" Right="109" Bottom="300" />
+			
+			
+		</CheckBox>
+		<CheckBox Name = "SystemChannelHis" Image="Data\interface008_chat.tga" X="8" Y="161"  LuaLButtonDown="SystemChannelHisLua">			
+			
+			<CheckBoxRect Index="0" Left="3" Top="304" Right="36" Bottom="322" />
+			<CheckBoxRect Index="1" Left="3" Top="304" Right="36" Bottom="322" />
+			<CheckBoxRect Index="2" Left="75" Top="304" Right="109" Bottom="322" />
+			
+		</CheckBox>
+		<CheckBox Name = "RumorChannelHis" Image="Data\interface008_chat.tga" X="8" Y="180"  LuaLButtonDown="RumorChannelHisLua">
+			<CheckBoxRect Index="0" Left="158" Top="84" Right="192" Bottom="102" />
+			<CheckBoxRect Index="1" Left="158" Top="84" Right="192" Bottom="102" />
+			<CheckBoxRect Index="2" Left="230" Top="84" Right="264" Bottom="102" />
+			
+		</CheckBox>
+		<CheckBox Name = "AllChannelHis" Image="Data\interface008_chat.tga" X="8" Y="199"  LuaLButtonDown="AllChannelHisLua">
+			<CheckBoxRect Index="0" Left="3" Top="327" Right="36" Bottom="345" />
+			<CheckBoxRect Index="1" Left="3" Top="327" Right="36" Bottom="345" />
+			<CheckBoxRect Index="2" Left="75" Top="327" Right="109" Bottom="345" />
+		</CheckBox>
+		<Button Name = "CloseChannelHis" Image="Data\interface008_chat.tga" X="282" Y="7"  LuaLButtonUp="CloseChannelHisLua">
+			<ButtonRect State="0" Left="328" Top="349" Right="352" Bottom="367" />
+			<ButtonRect State="1" Left="353" Top="349" Right="377" Bottom="367" />
+			<ButtonRect State="2" Left="378" Top="349" Right="402" Bottom="367" />
+			
+		</Button>
+		<Button Name = "CoverChannelHis" Image="Data\interface008_chat.tga" X="64" Y="219"  LuaLButtonUp="CoverChannelHisLua">
+			<ButtonRect State="0" Left="112" Top="223" Right="168" Bottom="241" />
+			<ButtonRect State="1" Left="112" Top="243" Right="168" Bottom="261" />
+			<ButtonRect State="2" Left="112" Top="263" Right="168" Bottom="281" />
+			
+		</Button>
+		<Button Name = "ExportChannelHis" Image="Data\interface008_chat.tga" X="214" Y="219"  LuaLButtonUp="ExportChannelHisLua">
+			<ButtonRect State="0" Left="112" Top="286" Right="168" Bottom="304" />
+			<ButtonRect State="1" Left="112" Top="306" Right="168" Bottom="324" />
+			<ButtonRect State="2" Left="112" Top="327" Right="168" Bottom="345" />
+		</Button>
+		<!--<Button Name = "ChannelHisUp" Image="Data\interface008_chat.tga" X="288" Y="32"  LuaLButtonUp="ChannelHisUpLua">
+			<ButtonRect State="0" Left="361" Top="249" Right="375" Bottom="264" />
+			<ButtonRect State="1" Left="377" Top="249" Right="391" Bottom="264" />
+			<ButtonRect State="2" Left="393" Top="249" Right="407" Bottom="264" />
+		</Button>
+		<Button Name = "ChannelHisDown" Image="Data\interface008_chat.tga" X="288" Y="201"  LuaLButtonUp="ChannelHisDownLua">
+			<ButtonRect State="0" Left="361" Top="266" Right="375" Bottom="281" />
+			<ButtonRect State="1" Left="377" Top="266" Right="391" Bottom="281" />
+			<ButtonRect State="2" Left="393" Top="266" Right="407" Bottom="281" />
+		</Button>
+		<Button Name = "ChannelHisScroll" Image="Data\interface008_chat.tga" X="288" Y="45"  LuaLButtonUp="ChannelHisScrollLua">
+			<ButtonRect State="0" Left="410" Top="249" Right="424" Bottom="279" />
+			<ButtonRect State="1" Left="410" Top="249" Right="424" Bottom="279" />
+			<ButtonRect State="2" Left="410" Top="249" Right="424" Bottom="279" />
+		</Button>
+		-->
+		<ScrollBarV Name="ChannelHisScroll" X="288" Y="32" Width ="14" Height="185" Limit="0" BarColor="0" LuaLButtonDown="ChannelHisScrollLua">
+			<PrevButton Image="Data\interface008_chat.tga" X="0" Y="0" LuaLButtonUp="ChannelHisUpLua">
+				<ButtonRect State="0" Left="361" Top="249" Right="375" Bottom="264" />
+				<ButtonRect State="1" Left="377" Top="249" Right="391" Bottom="264" />
+				<ButtonRect State="2" Left="393" Top="249" Right="407" Bottom="264" />
+			</PrevButton>
+			<NextButton Image="Data\interface008_chat.tga" X="0" Y="185" LuaLButtonUp="ChannelHisDownLua">
+				<ButtonRect State="0" Left="361" Top="266" Right="375" Bottom="281" />
+				<ButtonRect State="1" Left="377" Top="266" Right="391" Bottom="281" />
+				<ButtonRect State="2" Left="393" Top="266" Right="407" Bottom="281" />
+			</NextButton>
+			<MoveButton Image="Data\interface008_chat.tga" X="0" Y="30" LuaMouseMove="ChannelHisScrollLua">
+				<ButtonRect State="0" Left="410" Top="249" Right="424" Bottom="279" />
+				<ButtonRect State="1" Left="410" Top="249" Right="424" Bottom="279" />
+				<ButtonRect State="2" Left="410" Top="249" Right="424" Bottom="279" />
+			</MoveButton>
+		</ScrollBarV>
+		
+		<ChatPanel Name="ChatHistory" X="48" Y="32" Width="238" Height="180" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" FillColor="7F0000FF" DisableScroll="1">
+			
+		</ChatPanel>
+		
+		
+	</Panel>
+</UI>

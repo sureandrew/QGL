@@ -1,0 +1,289 @@
+<?xml version="1.0" ?>
+<UI>
+	<ID Name="HelperPanel" />
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	<KeyIn Item="HelperSerach" />
+	<Panel Name="HelperPanel" Image="Data\interface0029_main_N.tga" X="80" Y="60" 
+		Left="7" Top="12" Right="648" Bottom="481" DetectImage = "1"
+		Drag="1" DragLeft="0" DragTop="0" DragRight="641" DragBottom="459" 
+		LuaRButtonUp="CloseHelperPanel" LuaKeyChar="CloseHelperPanel" LuaMouseWheel="HelperPanelWheel"
+		>
+
+		<UIImage Name="LeftHightLight" Hide="1" X="12" Y="34" Image ="Data\interface0029_main_N.tga" Left="295" Top="516" Right="490" Bottom="533" NotDetected= "1"/>
+		<UIImage Name="RightHightLight" Hide="1" X="100" Y="0" Image ="Data\interface0029_main_N.tga" Left="103" Top="537" Right="490" Bottom="554" NotDetected= "1"/>
+		
+		<Button Name="FindHelpBtn" Image="Data\interface0029_main_N.tga" X="142" Y="426" LuaLButtonUp="FindHelperContent">
+			<ButtonRect State="0" Left="12" Top="488" Right="91" Bottom="509" />	
+			<ButtonRect State="1" Left="12" Top="511" Right="91" Bottom="532" />
+			<ButtonRect State="2" Left="12" Top="534" Right="91" Bottom="555" />
+			<ButtonRect State="3" Left="12" Top="534" Right="91" Bottom="555" />
+		</Button>
+		
+		<Button Name="CloseHelperPanel" Image="Data\interface0029_main_N.tga" X="606" Y="8" LuaLButtonUp="CloseHelperPanel">
+			<ButtonRect State="0" Left="223" Top="487" Right="247" Bottom="505" />	
+			<ButtonRect State="1" Left="248" Top="487" Right="272" Bottom="505" />
+			<ButtonRect State="2" Left="273" Top="487" Right="297" Bottom="505" />
+		</Button>
+		
+		<ScrollBarV Name="LeftHelperPanelScroll" X="209" Y="32" Width ="14" Height="385" Limit="0" BarColor="0">
+			<PrevButton Image="Data\interface0029_main_N.tga" X="30" Y="0" LuaLButtonUp="LeftHelperPanelUp">
+				<ButtonRect State="0" Left="103" Top="490" Right="117" Bottom="504" />
+				<ButtonRect State="1" Left="119" Top="490" Right="133" Bottom="504" />
+				<ButtonRect State="2" Left="135" Top="490" Right="149" Bottom="504" />
+				<ButtonRect State="3" Left="135" Top="490" Right="149" Bottom="504" />
+			</PrevButton>
+			<NextButton Image="Data\interface0029_main_N.tga" X="30" Y="200" LuaLButtonUp="LeftHelperPanelDown">
+				<ButtonRect State="0" Left="103" Top="507" Right="117" Bottom="520" />
+				<ButtonRect State="1" Left="119" Top="507" Right="133" Bottom="520" />
+				<ButtonRect State="2" Left="135" Top="507" Right="149" Bottom="520" />
+				<ButtonRect State="3" Left="135" Top="507" Right="149" Bottom="520" />
+			</NextButton>
+			<MoveButton Image="Data\interface0029_main_N.tga" X="30" Y="30" LuaMouseMove="LeftHelperPanelScrollLua">
+				<ButtonRect State="0" Left="152" Top="490" Right="166" Bottom="520" />
+				<ButtonRect State="1" Left="152" Top="490" Right="166" Bottom="520" />
+				<ButtonRect State="2" Left="152" Top="490" Right="166" Bottom="520" />
+			</MoveButton>
+		</ScrollBarV>
+		
+		<ScrollBarV Name="RightHelperPanelScroll" X="619" Y="32" Width ="14" Height="411" Limit="0" BarColor="0">
+			<PrevButton Image="Data\interface0029_main_N.tga" X="30" Y="0" LuaLButtonUp="RightHelperPanelUp">
+				<ButtonRect State="0" Left="103" Top="490" Right="117" Bottom="504" />
+				<ButtonRect State="1" Left="119" Top="490" Right="133" Bottom="504" />
+				<ButtonRect State="2" Left="135" Top="490" Right="149" Bottom="504" />
+				<ButtonRect State="3" Left="135" Top="490" Right="149" Bottom="504" />
+			</PrevButton>
+			<NextButton Image="Data\interface0029_main_N.tga" X="30" Y="200" LuaLButtonUp="RightHelperPanelDown">
+				<ButtonRect State="0" Left="103" Top="507" Right="117" Bottom="520" />
+				<ButtonRect State="1" Left="119" Top="507" Right="133" Bottom="520" />
+				<ButtonRect State="2" Left="135" Top="507" Right="149" Bottom="520" />
+				<ButtonRect State="3" Left="135" Top="507" Right="149" Bottom="520" />
+			</NextButton>
+			<MoveButton Image="Data\interface0029_main_N.tga" X="30" Y="30" LuaMouseMove="RightHelperPanelScrollLua">
+				<ButtonRect State="0" Left="152" Top="490" Right="166" Bottom="520" />
+				<ButtonRect State="1" Left="152" Top="490" Right="166" Bottom="520" />
+				<ButtonRect State="2" Left="152" Top="490" Right="166" Bottom="520" />
+			</MoveButton>
+		</ScrollBarV>
+		
+		<ChatPanel Name="HelperPanelContext" X="235" Y="33" Width="380" Height="420" ContinueRun = "1" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" FillColor="7F0000FF" DisableScroll="1" >
+		</ChatPanel>
+
+		<EditBox Name="HelperSerach" X="20" Y="430" Row="1" Column="15" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+		ShadowColor="FF000000" Limit="75" Width = "110" Height = "16" ></EditBox>
+	
+		<CheckBox Name = "HelperItem1" Image="Data\interface0029_main_N.tga" X="14" Y="36"  LuaLButtonUp="OpenChange1Lua">
+			<CheckBoxRect Index="0" Left="181" Top="489" Right="195" Bottom="501" />
+			<CheckBoxRect Index="1" Left="181" Top="489" Right="195" Bottom="501" />
+			<CheckBoxRect Index="2" Left="200" Top="489" Right="214" Bottom="501" />
+		</CheckBox>
+		<UIImage Name="HelperItemLast1" Hide="1" X="14" Y="36" Image ="Data\interface0029_main_N.tga" Left="181" Top="505" Right="195" Bottom="517"LuaLButtonUp="ShowContent1Lua"/>
+		<StaticText Name="HelperItemName1" X="30" Y="36" Row="1" Column="10" Width="90" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000"  LuaLButtonUp="ShowContent1Lua" textDetect="1">
+			商城
+		</StaticText>
+		
+		<CheckBox Name = "HelperItem2" Image="Data\interface0029_main_N.tga" X="14" Y="54" LuaLButtonUp="OpenChange2Lua">
+			<CheckBoxRect Index="0" Left="181" Top="489" Right="195" Bottom="501" />
+			<CheckBoxRect Index="1" Left="181" Top="489" Right="195" Bottom="501" />
+			<CheckBoxRect Index="2" Left="200" Top="489" Right="214" Bottom="501" />
+		</CheckBox>
+		<UIImage Name="HelperItemLast2" Hide="1" X="14" Y="54" Image ="Data\interface0029_main_N.tga" Left="181" Top="505" Right="195" Bottom="517"LuaLButtonUp="ShowContent2Lua"/>
+		<StaticText Name="HelperItemName2" X="30" Y="54" Row="1" Column="10" Width="90" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000"  LuaLButtonUp="ShowContent2Lua" textDetect="1">
+			商城
+		</StaticText>
+		
+		<CheckBox Name = "HelperItem3" Image="Data\interface0029_main_N.tga" X="14" Y="72" LuaLButtonUp="OpenChange3Lua">
+			<CheckBoxRect Index="0" Left="181" Top="489" Right="195" Bottom="501" />
+			<CheckBoxRect Index="1" Left="181" Top="489" Right="195" Bottom="501" />
+			<CheckBoxRect Index="2" Left="200" Top="489" Right="214" Bottom="501" />
+		</CheckBox>
+		<UIImage Name="HelperItemLast3" Hide="1" X="14" Y="72" Image ="Data\interface0029_main_N.tga" Left="181" Top="505" Right="195" Bottom="517"LuaLButtonUp="ShowContent3Lua"/>
+		<StaticText Name="HelperItemName3" X="30" Y="72" Row="1" Column="10" Width="90" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000"  LuaLButtonUp="ShowContent3Lua" textDetect="1">
+			商城
+		</StaticText>
+		
+		<CheckBox Name = "HelperItem4" Image="Data\interface0029_main_N.tga" X="14" Y="90" LuaLButtonUp="OpenChange4Lua">
+			<CheckBoxRect Index="0" Left="181" Top="489" Right="195" Bottom="501" />
+			<CheckBoxRect Index="1" Left="181" Top="489" Right="195" Bottom="501" />
+			<CheckBoxRect Index="2" Left="200" Top="489" Right="214" Bottom="501" />
+		</CheckBox>
+		<UIImage Name="HelperItemLast4" Hide="1" X="14" Y="90" Image ="Data\interface0029_main_N.tga" Left="181" Top="505" Right="195" Bottom="517"LuaLButtonUp="ShowContent4Lua"/>
+		<StaticText Name="HelperItemName4" X="30" Y="90" Row="1" Column="10" Width="90" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000"  LuaLButtonUp="ShowContent4Lua" textDetect="1">
+			商城
+		</StaticText>
+		
+		<CheckBox Name = "HelperItem5" Image="Data\interface0029_main_N.tga" X="14" Y="108" LuaLButtonUp="OpenChange5Lua">
+			<CheckBoxRect Index="0" Left="181" Top="489" Right="195" Bottom="501" />
+			<CheckBoxRect Index="1" Left="181" Top="489" Right="195" Bottom="501" />
+			<CheckBoxRect Index="2" Left="200" Top="489" Right="214" Bottom="501" />
+		</CheckBox>
+		<UIImage Name="HelperItemLast5" Hide="1" X="14" Y="108" Image ="Data\interface0029_main_N.tga" Left="181" Top="505" Right="195" Bottom="517"LuaLButtonUp="ShowContent5Lua"/>
+		<StaticText Name="HelperItemName5" X="30" Y="108" Row="1" Column="10" Width="90" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000"  LuaLButtonUp="ShowContent5Lua" textDetect="1">
+			商城
+		</StaticText>
+		
+		<CheckBox Name = "HelperItem6" Image="Data\interface0029_main_N.tga" X="14" Y="126" LuaLButtonUp="OpenChange6Lua">
+			<CheckBoxRect Index="0" Left="181" Top="489" Right="195" Bottom="501" />
+			<CheckBoxRect Index="1" Left="181" Top="489" Right="195" Bottom="501" />
+			<CheckBoxRect Index="2" Left="200" Top="489" Right="214" Bottom="501" />
+		</CheckBox>
+		<UIImage Name="HelperItemLast6" Hide="1" X="14" Y="126" Image ="Data\interface0029_main_N.tga" Left="181" Top="505" Right="195" Bottom="517"LuaLButtonUp="ShowContent6Lua"/>
+		<StaticText Name="HelperItemName6" X="30" Y="126" Row="1" Column="10" Width="90" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000"  LuaLButtonUp="ShowContent6Lua" textDetect="1">
+			商城
+		</StaticText>
+		
+		<CheckBox Name = "HelperItem7" Image="Data\interface0029_main_N.tga" X="14" Y="144" LuaLButtonUp="OpenChange7Lua">
+			<CheckBoxRect Index="0" Left="181" Top="489" Right="195" Bottom="501" />
+			<CheckBoxRect Index="1" Left="181" Top="489" Right="195" Bottom="501" />
+			<CheckBoxRect Index="2" Left="200" Top="489" Right="214" Bottom="501" />
+		</CheckBox>
+		<UIImage Name="HelperItemLast7" Hide="1" X="14" Y="144" Image ="Data\interface0029_main_N.tga" Left="181" Top="505" Right="195" Bottom="517"LuaLButtonUp="ShowContent7Lua"/>
+		<StaticText Name="HelperItemName7" X="30" Y="144" Row="1" Column="10" Width="90" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000"  LuaLButtonUp="ShowContent7Lua" textDetect="1">
+			商城
+		</StaticText>
+		
+		<CheckBox Name = "HelperItem8" Image="Data\interface0029_main_N.tga" X="14" Y="162" LuaLButtonUp="OpenChange8Lua">
+			<CheckBoxRect Index="0" Left="181" Top="489" Right="195" Bottom="501" />
+			<CheckBoxRect Index="1" Left="181" Top="489" Right="195" Bottom="501" />
+			<CheckBoxRect Index="2" Left="200" Top="489" Right="214" Bottom="501" />
+		</CheckBox>
+		<UIImage Name="HelperItemLast8" Hide="1" X="14" Y="162" Image ="Data\interface0029_main_N.tga" Left="181" Top="505" Right="195" Bottom="517"LuaLButtonUp="ShowContent8Lua"/>
+		<StaticText Name="HelperItemName8" X="30" Y="162" Row="1" Column="10" Width="90" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000"  LuaLButtonUp="ShowContent8Lua" textDetect="1">
+			商城
+		</StaticText>
+		
+		<CheckBox Name = "HelperItem9" Image="Data\interface0029_main_N.tga" X="14" Y="180" LuaLButtonUp="OpenChange9Lua">
+			<CheckBoxRect Index="0" Left="181" Top="489" Right="195" Bottom="501" />
+			<CheckBoxRect Index="1" Left="181" Top="489" Right="195" Bottom="501" />
+			<CheckBoxRect Index="2" Left="200" Top="489" Right="214" Bottom="501" />
+		</CheckBox>
+		<UIImage Name="HelperItemLast9" Hide="1" X="14" Y="180" Image ="Data\interface0029_main_N.tga" Left="181" Top="505" Right="195" Bottom="517"LuaLButtonUp="ShowContent9Lua"/>
+		<StaticText Name="HelperItemName9" X="30" Y="180" Row="1" Column="10" Width="90" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000"  LuaLButtonUp="ShowContent9Lua" textDetect="1">
+			商城
+		</StaticText>
+		
+		<CheckBox Name = "HelperItem10" Image="Data\interface0029_main_N.tga" X="14" Y="198" LuaLButtonUp="OpenChange10Lua">
+			<CheckBoxRect Index="0" Left="181" Top="489" Right="195" Bottom="501" />
+			<CheckBoxRect Index="1" Left="181" Top="489" Right="195" Bottom="501" />
+			<CheckBoxRect Index="2" Left="200" Top="489" Right="214" Bottom="501" />
+		</CheckBox>
+		<UIImage Name="HelperItemLast10" Hide="1" X="14" Y="198" Image ="Data\interface0029_main_N.tga" Left="181" Top="505" Right="195" Bottom="517"LuaLButtonUp="ShowContent10Lua"/>
+		<StaticText Name="HelperItemName10" X="30" Y="198" Row="1" Column="10" Width="90" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000"  LuaLButtonUp="ShowContent10Lua" textDetect="1">
+			商城
+		</StaticText>
+		
+		<CheckBox Name = "HelperItem11" Image="Data\interface0029_main_N.tga" X="14" Y="216" LuaLButtonUp="OpenChange11Lua">
+			<CheckBoxRect Index="0" Left="181" Top="489" Right="195" Bottom="501" />
+			<CheckBoxRect Index="1" Left="181" Top="489" Right="195" Bottom="501" />
+			<CheckBoxRect Index="2" Left="200" Top="489" Right="214" Bottom="501" />
+		</CheckBox>
+		<UIImage Name="HelperItemLast11" Hide="1" X="14" Y="216" Image ="Data\interface0029_main_N.tga" Left="181" Top="505" Right="195" Bottom="517"LuaLButtonUp="ShowContent11Lua"/>
+		<StaticText Name="HelperItemName11" X="30" Y="216" Row="1" Column="10" Width="90" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000"  LuaLButtonUp="ShowContent11Lua" textDetect="1">
+			商城
+		</StaticText>
+		
+		<CheckBox Name = "HelperItem12" Image="Data\interface0029_main_N.tga" X="14" Y="234" LuaLButtonUp="OpenChange12Lua">
+			<CheckBoxRect Index="0" Left="181" Top="489" Right="195" Bottom="501" />
+			<CheckBoxRect Index="1" Left="181" Top="489" Right="195" Bottom="501" />
+			<CheckBoxRect Index="2" Left="200" Top="489" Right="214" Bottom="501" />
+		</CheckBox>
+		<UIImage Name="HelperItemLast12" Hide="1" X="14" Y="234" Image ="Data\interface0029_main_N.tga" Left="181" Top="505" Right="195" Bottom="517"LuaLButtonUp="ShowContent12Lua"/>
+		<StaticText Name="HelperItemName12" X="30" Y="234" Row="1" Column="10" Width="90" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000"  LuaLButtonUp="ShowContent12Lua" textDetect="1">
+			商城
+		</StaticText>
+		
+		<CheckBox Name = "HelperItem13" Image="Data\interface0029_main_N.tga" X="14" Y="252" LuaLButtonUp="OpenChange13Lua">
+			<CheckBoxRect Index="0" Left="181" Top="489" Right="195" Bottom="501" />
+			<CheckBoxRect Index="1" Left="181" Top="489" Right="195" Bottom="501" />
+			<CheckBoxRect Index="2" Left="200" Top="489" Right="214" Bottom="501" />
+		</CheckBox>
+		<UIImage Name="HelperItemLast13" Hide="1" X="14" Y="252" Image ="Data\interface0029_main_N.tga" Left="181" Top="505" Right="195" Bottom="517"LuaLButtonUp="ShowContent13Lua"/>
+		<StaticText Name="HelperItemName13" X="30" Y="252" Row="1" Column="10" Width="90" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000"  LuaLButtonUp="ShowContent13Lua" textDetect="1">
+			商城
+		</StaticText>
+		
+		<CheckBox Name = "HelperItem14" Image="Data\interface0029_main_N.tga" X="14" Y="270" LuaLButtonUp="OpenChange14Lua">
+			<CheckBoxRect Index="0" Left="181" Top="489" Right="195" Bottom="501" />
+			<CheckBoxRect Index="1" Left="181" Top="489" Right="195" Bottom="501" />
+			<CheckBoxRect Index="2" Left="200" Top="489" Right="214" Bottom="501" />
+		</CheckBox>
+		<UIImage Name="HelperItemLast14" Hide="1" X="14" Y="270" Image ="Data\interface0029_main_N.tga" Left="181" Top="505" Right="195" Bottom="517"LuaLButtonUp="ShowContent14Lua"/>
+		<StaticText Name="HelperItemName14" X="30" Y="270" Row="1" Column="10" Width="90" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000"  LuaLButtonUp="ShowContent14Lua" textDetect="1">
+			商城
+		</StaticText>
+		
+		<CheckBox Name = "HelperItem15" Image="Data\interface0029_main_N.tga" X="14" Y="288" LuaLButtonUp="OpenChange15Lua">
+			<CheckBoxRect Index="0" Left="181" Top="489" Right="195" Bottom="501" />
+			<CheckBoxRect Index="1" Left="181" Top="489" Right="195" Bottom="501" />
+			<CheckBoxRect Index="2" Left="200" Top="489" Right="214" Bottom="501" />
+		</CheckBox>
+		<UIImage Name="HelperItemLast15" Hide="1" X="14" Y="288" Image ="Data\interface0029_main_N.tga" Left="181" Top="505" Right="195" Bottom="517"LuaLButtonUp="ShowContent15Lua"/>
+		<StaticText Name="HelperItemName15" X="30" Y="288" Row="1" Column="10" Width="90" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000"  LuaLButtonUp="ShowContent15Lua" textDetect="1">
+			商城
+		</StaticText>
+		
+		<CheckBox Name = "HelperItem16" Image="Data\interface0029_main_N.tga" X="14" Y="306" LuaLButtonUp="OpenChange16Lua">
+			<CheckBoxRect Index="0" Left="181" Top="489" Right="195" Bottom="501" />
+			<CheckBoxRect Index="1" Left="181" Top="489" Right="195" Bottom="501" />
+			<CheckBoxRect Index="2" Left="200" Top="489" Right="214" Bottom="501" />
+		</CheckBox>
+		<UIImage Name="HelperItemLast16" Hide="1" X="14" Y="306" Image ="Data\interface0029_main_N.tga" Left="181" Top="505" Right="195" Bottom="517" LuaLButtonUp="ShowContent16Lua"/>
+		<StaticText Name="HelperItemName16" X="30" Y="306" Row="1" Column="10" Width="90" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000"  LuaLButtonUp="ShowContent16Lua" textDetect="1">
+			商城
+		</StaticText>
+		
+		<CheckBox Name = "HelperItem17" Image="Data\interface0029_main_N.tga" X="14" Y="324" LuaLButtonUp="OpenChange17Lua">
+			<CheckBoxRect Index="0" Left="181" Top="489" Right="195" Bottom="501" />
+			<CheckBoxRect Index="1" Left="181" Top="489" Right="195" Bottom="501" />
+			<CheckBoxRect Index="2" Left="200" Top="489" Right="214" Bottom="501" />
+		</CheckBox>
+		<UIImage Name="HelperItemLast17" Hide="1" X="14" Y="324" Image ="Data\interface0029_main_N.tga" Left="181" Top="505" Right="195" Bottom="517" LuaLButtonUp="ShowContent17Lua"/>
+		<StaticText Name="HelperItemName17" X="30" Y="324" Row="1" Column="10" Width="90" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000"  LuaLButtonUp="ShowContent17Lua" textDetect="1">
+			商城
+		</StaticText>
+		
+		<CheckBox Name = "HelperItem18" Image="Data\interface0029_main_N.tga" X="14" Y="342" LuaLButtonUp="OpenChange18Lua">
+			<CheckBoxRect Index="0" Left="181" Top="489" Right="195" Bottom="501" />
+			<CheckBoxRect Index="1" Left="181" Top="489" Right="195" Bottom="501" />
+			<CheckBoxRect Index="2" Left="200" Top="489" Right="214" Bottom="501" />
+		</CheckBox>
+		<UIImage Name="HelperItemLast18" Hide="1" X="14" Y="342" Image ="Data\interface0029_main_N.tga" Left="181" Top="505" Right="195" Bottom="517"  LuaLButtonUp="ShowContent18Lua"/>
+		<StaticText Name="HelperItemName18" X="30" Y="342" Row="1" Column="10" Width="90" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000"  LuaLButtonUp="ShowContent18Lua" textDetect="1">
+			商城
+		</StaticText>
+		
+		<CheckBox Name = "HelperItem19" Image="Data\interface0029_main_N.tga" X="14" Y="360" LuaLButtonUp="OpenChange19Lua">
+			<CheckBoxRect Index="0" Left="181" Top="489" Right="195" Bottom="501" />
+			<CheckBoxRect Index="1" Left="181" Top="489" Right="195" Bottom="501" />
+			<CheckBoxRect Index="2" Left="200" Top="489" Right="214" Bottom="501" />
+		</CheckBox>
+		<UIImage Name="HelperItemLast19" Hide="1" X="14" Y="360" Image ="Data\interface0029_main_N.tga" Left="181" Top="505" Right="195" Bottom="517"LuaLButtonUp="ShowContent19Lua" />
+		<StaticText Name="HelperItemName19" X="30" Y="360" Row="1" Column="10" Width="90" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000"  LuaLButtonUp="ShowContent19Lua" textDetect="1">
+			商城
+		</StaticText>
+		
+		<CheckBox Name = "HelperItem20" Image="Data\interface0029_main_N.tga" X="14" Y="378" LuaLButtonUp="OpenChange20Lua">
+			<CheckBoxRect Index="0" Left="181" Top="489" Right="195" Bottom="501" />
+			<CheckBoxRect Index="1" Left="181" Top="489" Right="195" Bottom="501" />
+			<CheckBoxRect Index="2" Left="200" Top="489" Right="214" Bottom="501" />
+		</CheckBox>
+		<UIImage Name="HelperItemLast20" Hide="1" X="14" Y="378" Image ="Data\interface0029_main_N.tga" Left="181" Top="505" Right="195" Bottom="517" LuaLButtonUp="ShowContent20Lua"/>
+		<StaticText Name="HelperItemName20" X="30" Y="378" Row="1" Column="10" Width="90" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000"  LuaLButtonUp="ShowContent20Lua" textDetect="1">
+			商城
+		</StaticText>
+		
+		<CheckBox Name = "HelperItem21" Image="Data\interface0029_main_N.tga" X="14" Y="396" LuaLButtonUp="OpenChange21Lua">
+			<CheckBoxRect Index="0" Left="181" Top="489" Right="195" Bottom="501" />
+			<CheckBoxRect Index="1" Left="181" Top="489" Right="195" Bottom="501" />
+			<CheckBoxRect Index="2" Left="200" Top="489" Right="214" Bottom="501" />
+		</CheckBox>
+		<UIImage Name="HelperItemLast21" Hide="1" X="14" Y="396" Image ="Data\interface0029_main_N.tga" Left="181" Top="505" Right="195" Bottom="517"LuaLButtonUp="ShowContent21Lua" />
+		<StaticText Name="HelperItemName21" X="30" Y="396" Row="1" Column="10" Width="90" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000"  LuaLButtonUp="ShowContent21Lua" textDetect="1">
+			商城
+		</StaticText>
+		
+		
+		
+	</Panel>
+	
+</UI>

@@ -1,0 +1,32 @@
+//-- Config
+config
+{
+	SubPath="Logic/";
+	ClassID=47000;
+	StartID=47000;
+	EndID  =47999;
+	ModifyMask=1;
+}
+
+//-- include
+#include "Reuben/Network/NetGroup.h"
+
+//-- object class
+class HawkGroup : NetGroup
+{
+	//-- object state
+	ownerInfo{		UInt32 ownerID;		};
+	hawkNameInfo{		String hawkName;	};
+
+	//-- command to RPC server
+	BuyHawkItem(UInt32 itemID, UInt8 itemType, UInt8 itemStack);
+	CB_UpdateHawkItem(UInt32 itemID, UInt8 itemType);
+	CB_BuyHawkItemSuccess(Boolean owner, UInt32 itemID, UInt8 itemType, UInt8 itemStack, UInt32 tax);
+	ChangeHawkName(String hawkName);
+	CB_ChangeHawkName();
+	CloseHawkForUser(UInt32 charID);
+	CB_CloseHawkForUser();
+	StopHawk();
+	CB_StopHawk();		
+	CB_AddSellStartHawkItemInfo(NetGroup* addHawkItem);	
+}

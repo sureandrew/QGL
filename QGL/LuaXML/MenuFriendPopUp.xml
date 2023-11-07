@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<!-- Our to do list data -->
+<UI>
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+
+	<Panel Name="FriendChatPopUpPanel" Hide="0" X="600" Y="100" Image="Data\interface0007_main_D.tga" Left="7" Top="500"
+		Right="205" Bottom="688" DetectImage="1" LuaRButtonUp="CloseFriendChatPopUp" LuaKeyChar="CloseFriendChatPopUp" >
+		
+		<StaticText Name="FriendChatPopUpName" X="50" Y="35" Width="180" Height="20"  Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+			zgzg(123)
+		</StaticText>
+		<ChatPanel Name="FriendChatPopUpMsg" X="15" Y="58" Width="170" Height="100" ContinueRun = "0" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" FillColor="7F0000FF">
+		</ChatPanel>
+		
+		<AniIcon Name="FriendChatPopUpIcon" Image ="facechatL00000a.ent" X="7" Y="6" Rotation = "0" 
+			AnimationIndex = "0" Loop = "1" Align = "0" Hide="0"  Detect = "0"></AniIcon>
+		
+		<StaticText Name="FriendChatPopUpLine" X="15" Y="160" Width="200" Height="20"  Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+			lineOne
+		</StaticText>
+		
+	</Panel>
+</UI>
+

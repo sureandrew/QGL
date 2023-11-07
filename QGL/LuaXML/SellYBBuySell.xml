@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" ?>
+<UI>
+	<ID Name="SellYBBuySell" />
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	<Panel Name="SellYBBuySellPanel" X="253" Y="150" Image="Data\interface0040_Remit.tga" Left="4" Top="3" Right="445" Bottom="332" 
+		Drag="1" DragLeft="0" DragTop="0" DragRight="441" DragBottom="329" DetectImage = "1" 
+		LuaRButtonUp="SellYBBuySellReturn" LuaKeyChar="SellYBBuySellReturn">
+		
+		<Button Name="SellYBBuySellCross" Image="Data\interface0040_Remit.tga" X="404" Y="8" LuaLButtonUp="SellYBBuySellReturn">
+			<ButtonRect State="0" Left="12" Top="420" Right="36" Bottom="438" />
+			<ButtonRect State="1" Left="37" Top="420" Right="61" Bottom="438" />
+			<ButtonRect State="2" Left="62" Top="420" Right="86" Bottom="438" />			
+		</Button>
+		
+		<ChatPanel Name="SellYBBuySellOwnInfo" X="273" Y="30" Width="160" Height="80" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" FillColor="7F0000FF" Hide="1" NotDetected = "1">
+			
+		</ChatPanel>	
+		<ChatPanel Name="SellYBBuySellRule" X="273" Y="105" Width="160" Height="100" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" FillColor="7F0000FF" Hide="1" NotDetected = "1">
+			
+		</ChatPanel>	
+		<UIImage Name="SellYBSellTitle" X="205" Y="5" Image="Data\interface0040_Remit.tga" NotDetected="1" Left="90" Top="519" Right="121" Bottom="536" Hide="1" />
+		<UIImage Name="SellYBBuyTitle" X="205" Y="5" Image="Data\interface0040_Remit.tga" NotDetected="1" Left="133" Top="519" Right="164" Bottom="536" Hide="1" />
+		
+		<UIImage Name="SellYBSellCountBG" X="272" Y="221" Image="Data\interface0040_Remit.tga" NotDetected="1" Left="191" Top="519" Right="354" Bottom="594" Hide="1"/>
+		<EditBox Name="SellYBSellAmount" X="334" Y="224" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" Limit="8" NumOnly="1" Hide="1" LuaKeyChar="ShowSellYBChoiceTotalAmount" 
+			LuaKeyDown="ShowSellYBChoiceTotalAmount_DelKey" >
+			1 
+		</EditBox>
+		<EditBox Name="SellYBSellPrice" X="334" Y="244" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" Limit="8" NumOnly="1" Hide="1" LuaKeyChar="ShowSellYBTotalPrice">
+			10000 
+		</EditBox>
+		<StaticText Name="SellYBSellTax" X="334" Y="265" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="60" Height="20" NotDetected="1" Align="Left" Hide="1">
+			10000
+		</StaticText>
+		<StaticText Name="SellYBSellTotalPrice" X="334" Y="285" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="100" Height="20" NotDetected="1" Align="Left" Hide="1">
+		</StaticText>
+		
+		<UIImage Name="SellYBBuyHighLight00" X="3" Y="63" Image="Data\interface0040_Remit.tga" Left="364" Top="573" Right="629" Bottom="597" Hide="1"/>
+		<UIImage Name="SellYBBuyHighLight01" X="3" Y="91" Image="Data\interface0040_Remit.tga" Left="364" Top="573" Right="629" Bottom="597" Hide="1"/>
+		<UIImage Name="SellYBBuyHighLight02" X="3" Y="119" Image="Data\interface0040_Remit.tga" Left="364" Top="573" Right="629" Bottom="597" Hide="1"/>
+		<UIImage Name="SellYBBuyHighLight03" X="3" Y="147" Image="Data\interface0040_Remit.tga" Left="364" Top="573" Right="629" Bottom="597" Hide="1"/>
+		<UIImage Name="SellYBBuyHighLight04" X="3" Y="175" Image="Data\interface0040_Remit.tga" Left="364" Top="573" Right="629" Bottom="597" Hide="1"/>
+		<UIImage Name="SellYBBuyHighLight05" X="3" Y="203" Image="Data\interface0040_Remit.tga" Left="364" Top="573" Right="629" Bottom="597" Hide="1"/>
+		<UIImage Name="SellYBBuyHighLight06" X="3" Y="231" Image="Data\interface0040_Remit.tga" Left="364" Top="573" Right="629" Bottom="597" Hide="1"/>
+		<UIImage Name="SellYBBuyHighLight07" X="3" Y="259" Image="Data\interface0040_Remit.tga" Left="364" Top="573" Right="629" Bottom="597" Hide="1"/>
+		
+		<UIImage Name="SellYBYBTIcon00" X="12" Y="67" Image="Data\interface0040_Remit.tga" NotDetected="1" Left="29" Top="448" Right="46" Bottom="464" Hide="1" />
+		<UIImage Name="SellYBYBTIcon01" X="12" Y="95" Image="Data\interface0040_Remit.tga" NotDetected="1" Left="29" Top="448" Right="46" Bottom="464" Hide="1" />
+		<UIImage Name="SellYBYBTIcon02" X="12" Y="123" Image="Data\interface0040_Remit.tga" NotDetected="1" Left="29" Top="448" Right="46" Bottom="464" Hide="1" />
+		<UIImage Name="SellYBYBTIcon03" X="12" Y="151" Image="Data\interface0040_Remit.tga" NotDetected="1" Left="29" Top="448" Right="46" Bottom="464" Hide="1" />
+		<UIImage Name="SellYBYBTIcon04" X="12" Y="179" Image="Data\interface0040_Remit.tga" NotDetected="1" Left="29" Top="448" Right="46" Bottom="464" Hide="1" />
+		<UIImage Name="SellYBYBTIcon05" X="12" Y="207" Image="Data\interface0040_Remit.tga" NotDetected="1" Left="29" Top="448" Right="46" Bottom="464" Hide="1" />
+		<UIImage Name="SellYBYBTIcon06" X="12" Y="235" Image="Data\interface0040_Remit.tga" NotDetected="1" Left="29" Top="448" Right="46" Bottom="464" Hide="1" />
+		<UIImage Name="SellYBYBTIcon07" X="12" Y="263" Image="Data\interface0040_Remit.tga" NotDetected="1" Left="29" Top="448" Right="46" Bottom="464" Hide="1" />
+		
+		<UIImage Name="SellYBMoneyIcon00" X="113" Y="66" Image="Data\interface0040_Remit.tga" NotDetected="1" Left="58" Top="446" Right="76" Bottom="464" Hide="1" />
+		<UIImage Name="SellYBMoneyIcon01" X="113" Y="94" Image="Data\interface0040_Remit.tga" NotDetected="1" Left="58" Top="446" Right="76" Bottom="464" Hide="1" />
+		<UIImage Name="SellYBMoneyIcon02" X="113" Y="122" Image="Data\interface0040_Remit.tga" NotDetected="1" Left="58" Top="446" Right="76" Bottom="464" Hide="1" />
+		<UIImage Name="SellYBMoneyIcon03" X="113" Y="150" Image="Data\interface0040_Remit.tga" NotDetected="1" Left="58" Top="446" Right="76" Bottom="464" Hide="1" />
+		<UIImage Name="SellYBMoneyIcon04" X="113" Y="178" Image="Data\interface0040_Remit.tga" NotDetected="1" Left="58" Top="446" Right="76" Bottom="464" Hide="1" />
+		<UIImage Name="SellYBMoneyIcon05" X="113" Y="206" Image="Data\interface0040_Remit.tga" NotDetected="1" Left="58" Top="446" Right="76" Bottom="464" Hide="1" />
+		<UIImage Name="SellYBMoneyIcon06" X="113" Y="234" Image="Data\interface0040_Remit.tga" NotDetected="1" Left="58" Top="446" Right="76" Bottom="464" Hide="1" />
+		<UIImage Name="SellYBMoneyIcon07" X="113" Y="262" Image="Data\interface0040_Remit.tga" NotDetected="1" Left="58" Top="446" Right="76" Bottom="464" Hide="1" />
+		
+		<StaticText Name="SellYBBuySellName00" X="30" Y="68" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="60" Height="20" NotDetected="1" Align="Center" Hide="1">
+		</StaticText>
+		<StaticText Name="SellYBBuySellName01" X="30" Y="97" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="60" Height="20" NotDetected="1" Align="Center" Hide="1">
+		</StaticText>
+		<StaticText Name="SellYBBuySellName02" X="30" Y="125" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="60" Height="20" NotDetected="1" Align="Center" Hide="1">
+		</StaticText>
+		<StaticText Name="SellYBBuySellName03" X="30" Y="153" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="60" Height="20" NotDetected="1" Align="Center" Hide="1">
+		</StaticText>
+		<StaticText Name="SellYBBuySellName04" X="30" Y="181" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="60" Height="20" NotDetected="1" Align="Center" Hide="1">
+		</StaticText>
+		<StaticText Name="SellYBBuySellName05" X="30" Y="209" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="60" Height="20" NotDetected="1" Align="Center" Hide="1">
+		</StaticText>
+		<StaticText Name="SellYBBuySellName06" X="30" Y="237" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="60" Height="20" NotDetected="1" Align="Center" Hide="1">
+		</StaticText>
+		<StaticText Name="SellYBBuySellName07" X="30" Y="265" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="60" Height="20" NotDetected="1" Align="Center" Hide="1">
+		</StaticText>
+		
+		<StaticText Name="SellYBBuySellPrice00" X="135" Y="68" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="90" Height="20" NotDetected="1" Align="Left" Hide="1">
+		</StaticText>
+		<StaticText Name="SellYBBuySellPrice01" X="135" Y="97" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="90" Height="20" NotDetected="1" Align="Left" Hide="1">
+		</StaticText>
+		<StaticText Name="SellYBBuySellPrice02" X="135" Y="125" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="90" Height="20" NotDetected="1" Align="Left" Hide="1">
+		</StaticText>
+		<StaticText Name="SellYBBuySellPrice03" X="135" Y="153" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="90" Height="20" NotDetected="1" Align="Left" Hide="1">
+		</StaticText>
+		<StaticText Name="SellYBBuySellPrice04" X="135" Y="181" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="90" Height="20" NotDetected="1" Align="Left" Hide="1">
+		</StaticText>
+		<StaticText Name="SellYBBuySellPrice05" X="135" Y="209" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="90" Height="20" NotDetected="1" Align="Left" Hide="1">
+		</StaticText>
+		<StaticText Name="SellYBBuySellPrice06" X="135" Y="237" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="90" Height="20" NotDetected="1" Align="Left" Hide="1">
+		</StaticText>
+		<StaticText Name="SellYBBuySellPrice07" X="135" Y="265" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="90" Height="20" NotDetected="1" Align="Left" Hide="1">
+		</StaticText>
+		
+		<StaticText Name="SellYBBuySellCount00" X="219" Y="68" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="48" Height="20" NotDetected="1" Align="Center" Hide="1">
+		</StaticText>
+		<StaticText Name="SellYBBuySellCount01" X="219" Y="97" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="48" Height="20" NotDetected="1" Align="Center" Hide="1">
+		</StaticText>
+		<StaticText Name="SellYBBuySellCount02" X="219" Y="125" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="48" Height="20" NotDetected="1" Align="Center" Hide="1">
+		</StaticText>
+		<StaticText Name="SellYBBuySellCount03" X="219" Y="153" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="48" Height="20" NotDetected="1" Align="Center" Hide="1">
+		</StaticText>
+		<StaticText Name="SellYBBuySellCount04" X="219" Y="181" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="48" Height="20" NotDetected="1" Align="Center" Hide="1">
+		</StaticText>
+		<StaticText Name="SellYBBuySellCount05" X="219" Y="209" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="48" Height="20" NotDetected="1" Align="Center" Hide="1">
+		</StaticText>
+		<StaticText Name="SellYBBuySellCount06" X="219" Y="237" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="48" Height="20" NotDetected="1" Align="Center" Hide="1">
+		</StaticText>
+		<StaticText Name="SellYBBuySellCount07" X="219" Y="265" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="48" Height="20" NotDetected="1" Align="Center" Hide="1">						
+		</StaticText>
+		
+		<UIImage Name="SellYBBuySelect00" X="3" Y="64" Image="" Left="0" Top="0" Right="264" Bottom="22" DetectImage="1" LuaLButtonUp="SelectBuySellYB00" Hide="1"/>
+		<UIImage Name="SellYBBuySelect01" X="3" Y="92" Image="" Left="0" Top="0" Right="264" Bottom="22" DetectImage="1" LuaLButtonUp="SelectBuySellYB01" Hide="1"/>
+		<UIImage Name="SellYBBuySelect02" X="3" Y="120" Image="" Left="0" Top="0" Right="264" Bottom="22" DetectImage="1" LuaLButtonUp="SelectBuySellYB02" Hide="1"/>
+		<UIImage Name="SellYBBuySelect03" X="3" Y="148" Image="" Left="0" Top="0" Right="264" Bottom="22" DetectImage="1" LuaLButtonUp="SelectBuySellYB03" Hide="1"/>
+		<UIImage Name="SellYBBuySelect04" X="3" Y="176" Image="" Left="0" Top="0" Right="264" Bottom="22" DetectImage="1" LuaLButtonUp="SelectBuySellYB04" Hide="1"/>
+		<UIImage Name="SellYBBuySelect05" X="3" Y="204" Image="" Left="0" Top="0" Right="264" Bottom="22" DetectImage="1" LuaLButtonUp="SelectBuySellYB05" Hide="1"/>
+		<UIImage Name="SellYBBuySelect06" X="3" Y="232" Image="" Left="0" Top="0" Right="264" Bottom="22" DetectImage="1" LuaLButtonUp="SelectBuySellYB06" Hide="1"/>
+		<UIImage Name="SellYBBuySelect07" X="3" Y="260" Image="" Left="0" Top="0" Right="264" Bottom="22" DetectImage="1" LuaLButtonUp="SelectBuySellYB07" Hide="1"/>
+		
+		<Button Name="SellYBBuySellPageUp" Image="Data\interface0040_Remit.tga" X="80" Y="295" LuaLButtonUp="SellYBBuySellPageUp" >
+			<ButtonRect State="0" Left="23" Top="339" Right="49" Bottom="363" />
+			<ButtonRect State="1" Left="23" Top="364" Right="49" Bottom="388" />
+			<ButtonRect State="2" Left="23" Top="389" Right="49" Bottom="413" />
+			<ButtonRect State="3" Left="23" Top="389" Right="49" Bottom="413" />
+		</Button>
+		
+		<StaticText Name="SellYBBuySellPageNo" X="106" Y="300" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="54" Height="20" NotDetected="1" Align="Center">						
+		</StaticText>
+		
+		<Button Name="SellYBBuySellPageDown" Image="Data\interface0040_Remit.tga" X="160" Y="295" LuaLButtonUp="SellYBBuySellPageDown" >
+			<ButtonRect State="0" Left="59" Top="339" Right="85" Bottom="363" />
+			<ButtonRect State="1" Left="59" Top="364" Right="85" Bottom="388" />
+			<ButtonRect State="2" Left="59" Top="389" Right="85" Bottom="413" />
+			<ButtonRect State="3" Left="59" Top="389" Right="85" Bottom="413" />
+		</Button>				
+		
+		<Button Name="SellYBSell" Image="Data\interface0040_Remit.tga" X="307" Y="302" LuaLButtonUp="ShowSellYBSellConfirm" Hide="1">
+			<ButtonRect State="0" Left="291" Top="341" Right="383" Bottom="362" />
+			<ButtonRect State="1" Left="291" Top="366" Right="383" Bottom="387" />
+			<ButtonRect State="2" Left="291" Top="391" Right="383" Bottom="412" />
+			<ButtonRect State="3" Left="291" Top="391" Right="383" Bottom="412" />
+		</Button>
+		
+		<Button Name="SellYBBuy" Image="Data\interface0040_Remit.tga" X="307" Y="260" LuaLButtonUp="ShowSellYBBuyConfirm" Hide="1">
+			<ButtonRect State="0" Left="191" Top="341" Right="283" Bottom="362" />
+			<ButtonRect State="1" Left="191" Top="366" Right="283" Bottom="387" />
+			<ButtonRect State="2" Left="191" Top="391" Right="283" Bottom="412" />
+			<ButtonRect State="3" Left="191" Top="391" Right="283" Bottom="412" />
+		</Button>
+	</Panel>
+	
+	<Panel Name="SellYBBuySellConfirmPanel" X="253" Y="150" Image="" Left="0" Top="0" Right="247" Bottom="125" 
+		Drag="1" DragLeft="0" DragTop="0" DragRight="247" DragBottom="125" DetectImage = "1" Hide="1"
+		LuaRButtonUp="CancelSellYBBuySellConfirm" LuaKeyChar="CancelSellYBBuySellConfirm">
+		
+		<UIImage Name="SellYBSellConfrimPanelHead" X="0" Y="0" Image="Data\interface0003_popup.tga" NotDetected = "1" Left="364" Top="7" Right="611" Bottom="23" />
+		<UIImage Name="SellYBSellConfrimPanelFoot" X="0" Y="107" Image="Data\interface0003_popup.tga" NotDetected = "1" Left="364" Top="41" Right="611" Bottom="59" />		
+		<LinerImageV Name="SellYBSellConfrimPanelMiddle" X="0" Y="16" Image="Data\interface0003_popup.tga" Left="364" Top="24"
+			Right="611" Bottom="40" LineHeight="91" BaseHeight="91" Hide="0" Denumerator="100" Numerator="100" />
+		<StaticText Name="SellYBSellConfrimText" X="5" Y="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="240" Height="32" NotDetected="1" Align="Center">
+		</StaticText>
+		
+		<StaticText Name="SellYBBuySellPasswordTitle" X="3" Y="63" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="90" Height="20" NotDetected="1" Align="Center">
+			账户密码:
+		</StaticText>
+		<UIImage Name="SellYBBuySellConfrimTextBG" X="90" Y="60" Image="Data\interface0040_Remit.tga" NotDetected = "1" Left="424" Top="498" Right="535" Bottom="516" />
+		<EditBox Name="SellYBBuySellConfrimTextPassword" Password="1" X="100" Y="63" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" Limit="50" LuaKeyChar="">		
+		</EditBox>
+		
+		<StaticText Name="SellYBBuyAmountTitle" X="3" Y="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="90" Height="20" NotDetected="1" Align="Center">
+			购买数量:
+		</StaticText>
+		<UIImage Name="SellYBBuyAmountBG" X="80" Y="5" Image="Data\interface0040_Remit.tga" NotDetected = "1" Left="424" Top="498" Right="535" Bottom="516" />
+		<EditBox Name="SellYBBuyAmount" X="90" Y="8" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" Limit="10" LuaKeyChar="DisplayBuyYBInfo" NumOnly="1">		
+		</EditBox>
+		<StaticText Name="SellYBBuyPricePerUnit" X="5" Y="25" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="250" Height="20" NotDetected="1" Align="Center">
+		</StaticText>
+		<StaticText Name="SellYBBuyTotalPrice" X="5" Y="40" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="250" Height="20" NotDetected="1" Align="Center">
+		</StaticText>
+		
+		
+		<Button Name="SellYBBuySellFinalConfirm" Image="Data\interface0040_Remit.tga" X="29" Y="90" LuaLButtonUp="ConfirmSellYBBuySell">
+			<ButtonRect State="0" Left="191" Top="341" Right="283" Bottom="362" />
+			<ButtonRect State="1" Left="191" Top="366" Right="283" Bottom="387" />
+			<ButtonRect State="2" Left="191" Top="391" Right="283" Bottom="412" />
+			<ButtonRect State="3" Left="191" Top="391" Right="283" Bottom="412" />
+		</Button>
+		
+		<Button Name="SellYBBuySellConfirmCancel" Image="Data\interface0040_Remit.tga" X="137" Y="90" LuaLButtonUp="CancelSellYBBuySellConfirm">
+			<ButtonRect State="0" Left="393" Top="341" Right="485" Bottom="362" />
+			<ButtonRect State="1" Left="393" Top="366" Right="485" Bottom="387" />
+			<ButtonRect State="2" Left="393" Top="391" Right="485" Bottom="412" />
+			<ButtonRect State="3" Left="393" Top="391" Right="485" Bottom="412" />
+		</Button>
+	</Panel>
+</UI>

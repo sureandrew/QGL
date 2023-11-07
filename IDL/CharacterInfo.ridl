@@ -1,0 +1,51 @@
+//-- Config
+config
+{
+	SubPath="Logic/";
+	ClassID=12000;
+	StartID=12000;
+	EndID  =12999;
+}
+
+//-- include
+
+//-- object class
+class CharacterInfo : NetObject
+{
+	//-- object attributes
+	id {		UInt32 acct_id;
+				UInt32 char_id; 		};
+	info {		String nickName;
+				UInt8 sex;
+				UInt8 cclass;
+				UInt16 level;
+				UInt32 exp;
+				UInt8 faction;
+				UInt32 money; 			};
+	map {		UInt16 map_id;
+				UInt8  line_id;
+				UInt32 map_ownerId;
+				UInt16 map_x;
+				UInt16 map_y; 			};
+	reborn {	UInt16 reborn_map;
+				UInt16 reborn_x;
+				UInt16 reborn_y; 		};
+	style {		UInt16 photo_id;
+				UInt16 hairStyle1;
+				UInt16 hairStyle2;
+				UInt16 hairColor;		};
+	eqWeapon {	UInt32 eq_weapon;	
+				UInt16 eq_weaponColor;	};
+	eqHead {	UInt32 eq_headBand;	
+				UInt16 eq_headColor;	};
+	eqCloth {	UInt32 eq_cloth;	
+				UInt16 eq_clothColor;	};
+	status {	UInt8  status;			};
+	
+	orgHairStyle {		UInt16 org_hairStyle1;
+				UInt16 org_hairColor;		};
+	orgEqCloth {	UInt32 org_eq_cloth;	
+				UInt16 org_eq_clothColor;	};
+	deleteDate {	UInt32 delete_date;	};
+
+}

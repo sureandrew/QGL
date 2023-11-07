@@ -1,0 +1,36 @@
+//-- Config
+config
+{
+	SubPath="Logic/";
+	ClassID=27000;
+	StartID=27000;
+	EndID  =27999;
+}
+
+//-- include
+
+//-- object class
+class Channel : NetObject
+{
+	info {		
+		BYTE ChannelType;
+	};
+	//-- object attributes
+
+	//-- method called by client
+
+public:
+	SendGrpMessage(String Msg, UInt32 SourceId, Boolean guildSysMsg);
+	SendGrpFlushMessage(String Msg, UInt32 SourceId);
+	SendEmotion(UInt32 emo_id, UInt32 SourceId, UInt32 TargetID, bool isPet);
+	
+	//-- callback
+	CB_ReceiveMessage(String Msg, String SrcName, SessionIDVector listeners);
+	CB_SendGrpMessage(BYTE Result, UInt32 resultFlag);
+	CB_ReceiveEmotion(UInt32 emo_id, String SrcName, String TargetName, bool isPet);
+	
+	SetListen(BOOL IsListen, UInt32 char_Id);
+	CB_SetListen();
+	LeaveChannel(UInt32 char_id);
+	CB_LeaveChannel();
+}

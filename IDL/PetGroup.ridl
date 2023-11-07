@@ -1,0 +1,34 @@
+//-- Config
+config
+{
+	SubPath="Logic/";
+	ClassID=45000;
+	StartID=45000;
+	EndID  =45999;
+}
+
+//-- include
+#include "Reuben/Network/NetGroup.h"
+
+//-- object class
+class PetGroup : NetGroup
+{
+	//-- object attributes
+	owner {		UInt32	owner_id;		};
+
+	//-- method
+public:
+	
+	DeletePet(UInt32 pet_uid);
+	ChangePetState(UInt32 pet_uid, UInt8 state);
+	PutToWareHouse(UInt32 petUID);
+	GetFromWareHouse(UInt32 petUID);
+
+	//-- callback
+	CB_Error(UInt32 errCode, String errMsg);
+	CB_AddSkills(NetGroup* skillGrp);
+	CB_AddPets(NetGroup *petGrp, NetGroup* skillGroup);
+	CB_RemovePets(UInt32Vector pet_ids);
+	CB_UpdateAllPets(NetGroup *petlGrp);
+	CB_WareHouse(UInt8 processIndex, UInt8 msgIndex);
+}

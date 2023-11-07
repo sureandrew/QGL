@@ -1,0 +1,50 @@
+<?xml version="1.0" ?>
+<UI>
+	<ID Name="FactionDetailMenu" />
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	<Panel Name="FactionDetailMenuPanel" Image="Data\interface0010_main_E.tga" X="33" Y="73" DetectImage="1"
+		Left="8" Top="580" Right="294" Bottom="874" LuaRButtonUp="CloseFactionDetailMenu" LuaKeyChar="CloseFactionDetailMenu" 
+		Drag="1" DragLeft="0" DragTop="0" DragRight="285" DragBottom="294">
+	
+		<StaticText Name="FactionDetailName" X="77" Y="25" Row="1" Column="10" Width="90" Height="20" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		幫派名
+		</StaticText>	
+		
+		<StaticText Name="FactionDetailDonate" X="77" Y="49" Row="1" Column="10" Width="90" Height="20" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		幫派貢
+		</StaticText>	
+		
+		<StaticText Name="FactionDetailChar1" X="75" Y="75" Row="1" Column="10" Width="150" Height="20" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" >
+		幫派角色
+		</StaticText>	
+		
+		<StaticText Name="FactionDetailChar2" X="75" Y="98" Row="1" Column="10" Width="150" Height="20" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" >
+		幫派角色
+		</StaticText>	
+		
+		<StaticText Name="FactionDetailTalent" X="75" Y="118" Row="1" Column="10" Width="210" Height="32" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" >
+		幫派天
+		</StaticText>	
+		
+		<ChatPanel Name="FactionDetailDes" X="75" Y="165" Row="1" Column="10" Width="210" Height="200" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000">
+		幫派介紹
+		</ChatPanel>	
+		
+		
+		<AniIcon Name="FactionDetailIcon" Image="skill.ent" X="218" Y="21" Rotation = "0" 
+		AnimationIndex = "0" Loop = "1" Align = "0" Hide="0" />
+		
+		<Button Name="FactionDetailClose" Image="Data\interface0010_main_E.tga" X="249" Y="0"
+			LuaLButtonDown="CloseFactionDetailMenu" Tips="關閉" TimeOutCount="2000" LuaTimeOut="DefaultTips">
+			<ButtonRect State="0" Left="350" Top="6" Right="374" Bottom="24" />
+			<ButtonRect State="1" Left="375" Top="6" Right="399" Bottom="24" />
+			<ButtonRect State="2" Left="400" Top="6" Right="424" Bottom="24" />
+		</Button>
+	</Panel>
+</UI>

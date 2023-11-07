@@ -1,0 +1,122 @@
+<?xml version="1.0" ?>
+<UI xmlns="http://tempuri.org/LoginUI.xsd">
+	<ID Name="ChangeLine" />
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	<Panel Name="ChangeLinePanel" X="260" Y="128" Image="Data\interface0016_begin_B.tga" Left="596" Top="6" Right="887" Bottom="354" 
+		 LuaRButtonUp="CloseChangeLine" LuaKeyChar="CloseChangeLine" DetectImage = "1">
+		
+		<Button Name="ChangeLineOK" Image="Data\interface0016_begin_B.tga" X="35" Y="312" LuaLButtonUp="ConfirmChangeLine">
+			<ButtonRect State="0" Left="601" Top="436" Right="693" Bottom="457" />
+			<ButtonRect State="1" Left="601" Top="459" Right="693" Bottom="480" />
+			<ButtonRect State="2" Left="601" Top="483" Right="693" Bottom="504" />
+		</Button>
+		<Button Name="ChangeLineCancel" Image="Data\interface0016_begin_B.tga" X="165" Y="312" LuaLButtonUp="CloseChangeLine">
+			<ButtonRect State="0" Left="697" Top="436" Right="789" Bottom="457" />
+			<ButtonRect State="1" Left="697" Top="459" Right="789" Bottom="480" />
+			<ButtonRect State="2" Left="697" Top="483" Right="789" Bottom="504" />
+		</Button>
+				
+		<Button Name="MapLine1" Image="Data\interface0016_begin_B.tga" X="6" Y="43" LuaLButtonUp="SelectMapLine1" LuaLButtonDBLCLK="DBCLChangeLine1">
+			<ButtonRect State="0" Left="602" Top="406" Right="878" Bottom="431" />
+			<ButtonRect State="1" Left="602" Top="376" Right="878" Bottom="401" />
+			<ButtonRect State="2" Left="602" Top="406" Right="878" Bottom="431" />
+			<ButtonRect State="3" Left="602" Top="376" Right="878" Bottom="401" />
+		</Button>
+		<StaticText Name="MapLineName1" X="35" Y="46" Row="1" Column="15" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<UIImage Name="MapLineState1" X="210" Y="46" Image="" Left="" Top=""	Right="" Bottom="" AutoDelete="1" NotDetected="1" />
+			
+		<Button Name="MapLine2" Image="Data\interface0016_begin_B.tga" X="6" Y="68" LuaLButtonUp="SelectMapLine2" LuaLButtonDBLCLK="DBCLChangeLine2">
+			<ButtonRect State="0" Left="602" Top="406" Right="878" Bottom="431" />
+			<ButtonRect State="1" Left="602" Top="376" Right="878" Bottom="401" />
+			<ButtonRect State="2" Left="602" Top="406" Right="878" Bottom="431" />
+			<ButtonRect State="3" Left="602" Top="376" Right="878" Bottom="401" />
+		</Button>
+		<StaticText Name="MapLineName2" X="35" Y="71" Row="1" Column="15" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<UIImage Name="MapLineState2" X="210" Y="71" Image="" Left="" Top=""	Right="" Bottom="" AutoDelete="1" NotDetected="1" />
+			
+		<Button Name="MapLine3" Image="Data\interface0016_begin_B.tga" X="6" Y="93" LuaLButtonUp="SelectMapLine3" LuaLButtonDBLCLK="DBCLChangeLine3">
+			<ButtonRect State="0" Left="602" Top="406" Right="878" Bottom="431" />
+			<ButtonRect State="1" Left="602" Top="376" Right="878" Bottom="401" />
+			<ButtonRect State="2" Left="602" Top="406" Right="878" Bottom="431" />
+			<ButtonRect State="3" Left="602" Top="376" Right="878" Bottom="401" />
+		</Button>
+		<StaticText Name="MapLineName3" X="35" Y="96" Row="1" Column="15" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<UIImage Name="MapLineState3" X="210" Y="96" Image="" Left="" Top=""	Right="" Bottom="" AutoDelete="1" NotDetected="1" />
+			
+		<Button Name="MapLine4" Image="Data\interface0016_begin_B.tga" X="6" Y="118" LuaLButtonUp="SelectMapLine4" LuaLButtonDBLCLK="DBCLChangeLine4">
+			<ButtonRect State="0" Left="602" Top="406" Right="878" Bottom="431" />
+			<ButtonRect State="1" Left="602" Top="376" Right="878" Bottom="401" />
+			<ButtonRect State="2" Left="602" Top="406" Right="878" Bottom="431" />
+			<ButtonRect State="3" Left="602" Top="376" Right="878" Bottom="401" />
+		</Button>
+		<StaticText Name="MapLineName4" X="35" Y="121" Row="1" Column="15" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<UIImage Name="MapLineState4" X="210" Y="121" Image="" Left="" Top="" Right="" Bottom="" AutoDelete="1" NotDetected="1" />
+		
+		<Button Name="MapLine5" Image="Data\interface0016_begin_B.tga" X="6" Y="143" LuaLButtonUp="SelectMapLine5" LuaLButtonDBLCLK="DBCLChangeLine5">
+			<ButtonRect State="0" Left="602" Top="406" Right="878" Bottom="431" />
+			<ButtonRect State="1" Left="602" Top="376" Right="878" Bottom="401" />
+			<ButtonRect State="2" Left="602" Top="406" Right="878" Bottom="431" />
+			<ButtonRect State="3" Left="602" Top="376" Right="878" Bottom="401" />
+		</Button>
+		<StaticText Name="MapLineName5" X="35" Y="146" Row="1" Column="15" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" >
+		</StaticText>
+		<UIImage Name="MapLineState5" X="210" Y="146" Image="" Left="" Top="" Right="" Bottom="" AutoDelete="1" NotDetected="1" />
+		
+		<Button Name="MapLine6" Image="Data\interface0016_begin_B.tga" X="6" Y="168" LuaLButtonUp="SelectMapLine6" LuaLButtonDBLCLK="DBCLChangeLine6">
+			<ButtonRect State="0" Left="602" Top="406" Right="878" Bottom="431" />
+			<ButtonRect State="1" Left="602" Top="376" Right="878" Bottom="401" />
+			<ButtonRect State="2" Left="602" Top="406" Right="878" Bottom="431" />
+			<ButtonRect State="3" Left="602" Top="376" Right="878" Bottom="401" />
+		</Button>
+		<StaticText Name="MapLineName6" X="35" Y="171" Row="1" Column="15" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<UIImage Name="MapLineState6" X="210" Y="171" Image="" Left="" Top="" Right="" Bottom="" AutoDelete="1" NotDetected="1" />
+		
+		
+		<Button Name="MapLine7" Image="Data\interface0016_begin_B.tga" X="6" Y="193" LuaLButtonUp="SelectMapLine7" LuaLButtonDBLCLK="DBCLChangeLine7">
+			<ButtonRect State="0" Left="602" Top="406" Right="878" Bottom="431" />
+			<ButtonRect State="1" Left="602" Top="376" Right="878" Bottom="401" />
+			<ButtonRect State="2" Left="602" Top="406" Right="878" Bottom="431" />
+			<ButtonRect State="3" Left="602" Top="376" Right="878" Bottom="401" />
+		</Button>
+		<StaticText Name="MapLineName7" X="35" Y="196" Row="1" Column="15" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" >
+		</StaticText>
+		<UIImage Name="MapLineState7" X="210" Y="196" Image="" Left="" Top="" Right="" Bottom="" AutoDelete="1" NotDetected="1" />
+		
+		
+		<Button Name="MapLine8" Image="Data\interface0016_begin_B.tga" X="6" Y="218" LuaLButtonUp="SelectMapLine8" LuaLButtonDBLCLK="DBCLChangeLine8">
+			<ButtonRect State="0" Left="602" Top="406" Right="878" Bottom="431" />
+			<ButtonRect State="1" Left="602" Top="376" Right="878" Bottom="401" />
+			<ButtonRect State="2" Left="602" Top="406" Right="878" Bottom="431" />
+			<ButtonRect State="3" Left="602" Top="376" Right="878" Bottom="401" />
+		</Button>
+		<StaticText Name="MapLineName8" X="35" Y="221" Row="1" Column="15" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" >
+		</StaticText>
+		<UIImage Name="MapLineState8" X="210" Y="221" Image="" Left="" Top="" Right="" Bottom="" AutoDelete="1" NotDetected="1" />
+		
+		
+		<Button Name="MapLine9" Image="Data\interface0016_begin_B.tga" X="6" Y="243" LuaLButtonUp="SelectMapLine9" LuaLButtonDBLCLK="DBCLChangeLine9">
+			<ButtonRect State="0" Left="602" Top="406" Right="878" Bottom="431" />
+			<ButtonRect State="1" Left="602" Top="376" Right="878" Bottom="401" />
+			<ButtonRect State="2" Left="602" Top="406" Right="878" Bottom="431" />
+			<ButtonRect State="3" Left="602" Top="376" Right="878" Bottom="401" />
+		</Button>
+		<StaticText Name="MapLineName9" X="35" Y="246" Row="1" Column="15" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" >
+		</StaticText>
+		<UIImage Name="MapLineState9" X="210" Y="246" Image="" Left="" Top="" Right="" Bottom="" AutoDelete="1" NotDetected="1" />
+				
+		<Button Name="MapLine10" Image="Data\interface0016_begin_B.tga" X="6" Y="268" LuaLButtonUp="SelectMapLine10" LuaLButtonDBLCLK="DBCLChangeLine10">
+			<ButtonRect State="0" Left="602" Top="406" Right="878" Bottom="431" />
+			<ButtonRect State="1" Left="602" Top="376" Right="878" Bottom="401" />
+			<ButtonRect State="2" Left="602" Top="406" Right="878" Bottom="431" />
+			<ButtonRect State="3" Left="602" Top="376" Right="878" Bottom="401" />
+		</Button>	
+		<StaticText Name="MapLineName10" X="35" Y="271" Row="1" Column="15" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<UIImage Name="MapLineState10" X="210" Y="271" Image="" Left="" Top="" Right="" Bottom="" AutoDelete="1" NotDetected="1" />
+	</Panel>
+</UI>

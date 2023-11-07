@@ -1,0 +1,42 @@
+//-- Config
+config
+{
+	SubPath="Data/";
+	ClassID=10110;
+	StartID=10110;
+	EndID  =10119;
+	TwoDirect=1;
+}
+
+//-- include
+
+//-- object class
+class ChargeShopData
+{
+	//-- object attributes
+	idInfo	{		UInt32 chargeShopID;	};
+	itemInfo { 		String name;
+				UInt8 shopType;
+				UInt8 itemType;
+				UInt32 itemId;	
+				UInt32 yuanBao;	
+				UInt8 LV;
+				UInt8 PreviewType;	};
+
+	activeInfo	{		UInt8 active;		};
+
+	discountInfo { 		UInt8 discount;	};
+
+	stockInfo {		UInt16 totalStock; 	};
+	remainInfo{		UInt16 remain;		};
+
+	limitedInfo {		UInt8 LimitType;
+				UInt8 restore;		};
+	
+	existTimeInfo { 	UInt32 StartTime;
+				UInt32 EndTime;		};
+	
+	lastOrderInfo {		UInt32 lastOrderDate;	};
+			
+	sellInfo {		UInt32 totalSell;	};	
+}

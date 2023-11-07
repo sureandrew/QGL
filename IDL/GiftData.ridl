@@ -1,0 +1,22 @@
+//-- Config
+config
+{
+	SubPath="Data/";
+	ClassID=10170;
+	StartID=10170;
+	EndID  =10179;
+	TwoDirect=1;
+}
+
+//-- include
+
+//-- object class
+class GiftData
+{
+	idInfo { 	UInt32 giftID;
+			UInt32 acctID;			};
+	giftInfo {	UInt32 itemID;
+			UInt8 itemType;
+			UInt8 itemQuantity;		};
+	serialNoInfo {	String serialNo;		};
+}

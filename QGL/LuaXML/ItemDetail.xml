@@ -1,0 +1,534 @@
+<?xml version="1.0" ?>
+<!-- Our to do list data -->
+<UI>
+	<ID Name="ItemDetailMenu" />
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	<Panel Expand="1" Name="ItemDetailMenuPanel" X="100" Y="100" Image="Data\interface0005_main_B.tga" Hide="0"
+		Left="9" Top="475" Right="297" Bottom="487" 
+		LineRectLeft="9" LineRectTop="489" LineRectRight="297"	LineRectBottom="502" LineCount="60"
+		BottomRectLeft="9" BottomRectTop="504" BottomRectRight="297" BottomRectBottom="518"
+		NotDetected="0" DetectImage="1" LuaRButtonDown="CloseItemDetail" LuaKeyChar="CloseItemDetail"
+		>
+		<Button Name="ItemDetailPanelClose" Image="Data\interface0005_main_B.tga" X="268" Y="7" LuaLButtonDown="CloseItemDetail">
+			<ButtonRect State="0" Left="335" Top="476" Right="349" Bottom="489" />
+			<ButtonRect State="1" Left="352" Top="476" Right="366" Bottom="489" />
+			<ButtonRect State="2" Left="369" Top="476" Right="383" Bottom="489" />
+		</Button>
+		<AniIcon Name="ItemDetailImage" X="10" Y="30" Image="" AutoDelete="0"/>
+		<UIImage Name="ItemDetailBaseElement" X="10" Y="30" Image="Data\interface0005_main_B.tga" AutoDelete="0"/>
+<!-- common - Basic info part -->
+		<StaticText Name="ItemDetailTextName" X="10" Y="10" Row="1" Column="20" Width="150" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		
+		</StaticText>
+
+			
+		<StaticText Name="ItemDetailMakeByName" X="140" Y="10" Row="1" Column="20" Width="120" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		
+		</StaticText>
+		
+		<StaticText Name="ItemDetailTextSellingType" X="140" Y="26" Hide="1" Row="1" Column="20" Width="42" Height="20" EdgeCode="LIGHT" FontColor="FF00FFFF" ShadowColor="FF000000">
+		
+		</StaticText>
+
+		<StaticText Name="ItemDetailTextPrice" X="180" Y="26" Hide="1" Row="1" Column="20" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		
+		</StaticText>
+		
+		<StaticText Name="ItemDetailTextPriceUnit" X="280" Y="26" Hide="1" Row="1" Column="20" Width="42" Height="20" EdgeCode="LIGHT" FontColor="FF00FFFF" ShadowColor="FF000000">
+		
+		</StaticText>
+		
+		<StaticText Name="ItemDetailTextStatus0" X="140" Y="26" Hide="1" Width="80" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		
+		</StaticText>
+		
+		<StaticText Name="ItemDetailTextStatus1" X="210" Y="26" Hide="1" Width="80" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		
+		</StaticText>
+		
+		<StaticText Name="ItemDetailTextType" X="140" Y="26" Row="1" Column="20" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		
+		</StaticText>
+		<StaticText Name="ItemDetailTextSubType" X="220" Y="26" Row="1" Column="20" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		
+		</StaticText>
+		<!--<StaticText Name="ItemDetailLabelEqLvl" X="140" Y="42" Row="1" Column="10" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		物品级数：
+		</StaticText>
+		<StaticText Name="ItemDetailTextEqLvl" X="220" Y="42" Row="1" Column="20" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		＊＊
+		</StaticText>-->
+		<StaticText Name="ItemDetailLabelReqLvl" X="140" Y="58" Row="1" Column="10" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		等级要求：
+		</StaticText>
+		<StaticText Name="ItemDetailTextReqLvl" X="220" Y="58" Row="1" Column="10" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		
+		</StaticText>
+		<StaticText Name="ItemDetailLabelReqSexClass" X="140" Y="74" Row="1" Column="10" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		角色要求：
+		</StaticText>
+		<StaticText Name="ItemDetailTextReqSexClass1" X="220" Y="74" Row="1" Column="10" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		
+		</StaticText>
+		<StaticText Name="ItemDetailTextReqSexClass2" X="220" Y="90" Row="1" Column="10" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		
+		</StaticText>
+		<StaticText Name="ItemDetailLabelReqFaction" X="140" Y="106" Row="1" Column="10" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		帮派要求：
+		</StaticText>
+		<StaticText Name="ItemDetailTextReqFaction" X="220" Y="106" Row="1" Column="20" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		
+		</StaticText>
+<!-- common - Description part -->
+		<!--<StaticText Name="ItemDetailLabelDesc" X="10" Y="152" Row="1" Column="20" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		物品描述
+		</StaticText>-->
+		<StaticText Name="ItemDetailTextDesc" X="20" Y="152" Row="3" Column="40" Width="260" Height="52" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		
+		</StaticText>
+<!-- equip only - Details part 1 -->
+		<StaticText Name="ItemDetailLabelAtk" X="20" Y="212" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		攻击：
+		</StaticText>
+		<StaticText Name="ItemDetailTextAtk" X="58" Y="212" Row="1" Column="20" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		
+		</StaticText>
+		<StaticText Name="ItemDetailLabelDef" X="20" Y="228" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		防御：
+		</StaticText>
+		<StaticText Name="ItemDetailTextDef" X="58" Y="228" Row="1" Column="20" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		
+		</StaticText>
+		<StaticText Name="ItemDetailLabelHit" X="20" Y="244" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		命中：
+		</StaticText>
+		<StaticText Name="ItemDetailTextHit" X="58" Y="244" Row="1" Column="40" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		
+		</StaticText>
+		<StaticText Name="ItemDetailLabelEva" X="20" Y="260" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		闪避：
+		</StaticText>
+		<StaticText Name="ItemDetailTextEva" X="58" Y="260" Row="1" Column="40" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		
+		</StaticText>
+		<StaticText Name="ItemDetailLabelPow" X="20" Y="276" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		内功：
+		</StaticText>
+		<StaticText Name="ItemDetailTextPow" X="58" Y="276" Row="1" Column="40" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		
+		</StaticText>
+		<StaticText Name="ItemDetailLabelSpd" X="20" Y="292" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		速度：
+		</StaticText>
+		<StaticText Name="ItemDetailTextSpd" X="58" Y="292" Row="1" Column="40" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		
+		</StaticText>
+<!-- equip only - Details part 2 -->
+		<StaticText Name="ItemDetailLabelStr" X="140" Y="308" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		臂力：
+		</StaticText>
+		<StaticText Name="ItemDetailTextStr" X="178" Y="308" Row="1" Column="40" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		
+		</StaticText>
+		<StaticText Name="ItemDetailLabelCon" X="140" Y="324" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		体质：
+		</StaticText>
+		<StaticText Name="ItemDetailTextCon" X="178" Y="324" Row="1" Column="40" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		
+		</StaticText>
+		<StaticText Name="ItemDetailLabelSta" X="140" Y="340" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		根骨：
+		</StaticText>
+		<StaticText Name="ItemDetailTextSta" X="178" Y="340" Row="1" Column="40" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		
+		</StaticText>
+		<StaticText Name="ItemDetailLabelAgi" X="140" Y="356" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		身法：
+		</StaticText>
+		<StaticText Name="ItemDetailTextAgi" X="178" Y="356" Row="1" Column="40" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		
+		</StaticText>
+		<StaticText Name="ItemDetailLabelSpr" X="140" Y="372" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		内息：
+		</StaticText>
+		<StaticText Name="ItemDetailTextSpr" X="178" Y="372" Row="1" Column="40" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		
+		</StaticText>
+<!-- equip only - Details part 3 -->
+		<StaticText Name="ItemDetailLabelMaxHp" X="20" Y="384" Row="1" Column="10" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		生命：
+		</StaticText>
+		<StaticText Name="ItemDetailTextMaxHp" X="58" Y="384" Row="1" Column="40" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		
+		</StaticText>
+		<StaticText Name="ItemDetailLabelMaxSp" X="20" Y="400" Row="1" Column="10" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		内力：
+		</StaticText>
+		<StaticText Name="ItemDetailTextMaxSp" X="58" Y="400" Row="1" Column="40" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		
+		</StaticText>
+		<StaticText Name="ItemDetailLabelMaxVp" X="20" Y="416" Row="1" Column="10" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		体力：
+		</StaticText>
+		<StaticText Name="ItemDetailTextMaxVp" X="58" Y="416" Row="1" Column="40" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		
+		</StaticText>
+<!-- equip only - Details part 4 -->
+		<StaticText Name="ItemDetailLabelBuff" X="20" Y="432" Row="1" Column="10" Width="80" Height="20" EdgeCode="LIGHT" FontColor="FFF0F800" ShadowColor="FF000000">
+		临时附加
+		</StaticText>
+		<StaticText Name="ItemDetailTextBuffTime" X="100" Y="432" Row="1" Column="10" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFF0F800" ShadowColor="FF000000">
+		
+		</StaticText>
+		<StaticText Name="ItemDetailTextBuffName" X="210" Y="432" Row="1" Column="10" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFF0F800" ShadowColor="FF000000">
+		
+		</StaticText>
+		<StaticText Name="ItemDetailLabelAddOn" X="20" Y="448" Row="1" Column="10" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		永久力持能力
+		</StaticText>
+		<StaticText Name="ItemDetailTextAddOn" X="100" Y="448" Row="1" Column="10" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		
+		</StaticText>
+<!-- equip only - Details part 5 -->
+		<StaticText Name="ItemDetailLabelSet" X="20" Y="464" Row="1" Column="10" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		套装
+		</StaticText>
+		<StaticText Name="ItemDetailTextSetName" X="20" Y="464" Row="1" Column="10" Width="180" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		
+		</StaticText>
+		<StaticText Name="ItemDetailTextSetRatio" X="130" Y="464" Row="1" Column="10" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		
+		</StaticText>
+		<StaticText Name="ItemDetailLabelSetBatAttrib1" X="20" Y="480" Row="1" Column="10" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FF7F7F7F" ShadowColor="FF000000">
+		攻击:
+		</StaticText>
+		<StaticText Name="ItemDetailTextSetBatAttrib1" X="68" Y="480" Row="1" Column="10" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FF7F7F7F" ShadowColor="FF000000">
+		
+		</StaticText>
+		<StaticText Name="ItemDetailLabelSetBatAttrib2" X="20" Y="496" Row="1" Column="10" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FF7F7F7F" ShadowColor="FF000000">
+		防御:
+		</StaticText>
+		<StaticText Name="ItemDetailTextSetBatAttrib2" X="68" Y="496" Row="1" Column="10" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FF7F7F7F" ShadowColor="FF000000">
+		
+		</StaticText>
+		<StaticText Name="ItemDetailLabelSetBatAttrib3" X="20" Y="512" Row="1" Column="10" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FF7F7F7F" ShadowColor="FF000000">
+		内功:
+		</StaticText>
+		<StaticText Name="ItemDetailTextSetBatAttrib3" X="68" Y="512" Row="1" Column="10" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FF7F7F7F" ShadowColor="FF000000">
+		
+		</StaticText>
+		<StaticText Name="ItemDetailLabelSetBatAttrib4" X="20" Y="528" Row="1" Column="10" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FF7F7F7F" ShadowColor="FF000000">
+		生命:
+		</StaticText>
+		<StaticText Name="ItemDetailTextSetBatAttrib4" X="68" Y="528" Row="1" Column="10" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FF7F7F7F" ShadowColor="FF000000">
+		
+		</StaticText>
+		<StaticText Name="ItemDetailLabelSetBatAttrib5" X="20" Y="544" Row="1" Column="10" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FF7F7F7F" ShadowColor="FF000000">
+		内力:
+		</StaticText>
+		<StaticText Name="ItemDetailTextSetBatAttrib5" X="68" Y="544" Row="1" Column="10" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FF7F7F7F" ShadowColor="FF000000">
+		
+		</StaticText>
+		<StaticText Name="ItemDetailLabelSetBatAttrib6" X="20" Y="560" Row="1" Column="10" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FF7F7F7F" ShadowColor="FF000000">
+		命中:
+		</StaticText>
+		<StaticText Name="ItemDetailTextSetBatAttrib6" X="68" Y="560" Row="1" Column="10" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FF7F7F7F" ShadowColor="FF000000">
+		
+		</StaticText>
+		<StaticText Name="ItemDetailLabelSetBatAttrib7" X="20" Y="576" Row="1" Column="10" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FF7F7F7F" ShadowColor="FF000000">
+		闪避:
+		</StaticText>
+		<StaticText Name="ItemDetailTextSetBatAttrib7" X="68" Y="576" Row="1" Column="10" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FF7F7F7F" ShadowColor="FF000000">
+		
+		</StaticText>
+		<StaticText Name="ItemDetailLabelSetBatAttrib8" X="20" Y="592" Row="1" Column="10" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FF7F7F7F" ShadowColor="FF000000">
+		速度:
+		</StaticText>
+		<StaticText Name="ItemDetailTextSetBatAttrib8" X="68" Y="592" Row="1" Column="10" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FF7F7F7F" ShadowColor="FF000000">
+		
+		</StaticText>
+
+		<StaticText Name="ItemDetailLabelSetAttrib1" X="160" Y="480" Row="1" Column="10" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FF7F7F7F" ShadowColor="FF000000">
+		臂力:
+		</StaticText>
+		<StaticText Name="ItemDetailTextSetAttrib1" X="208" Y="480" Row="1" Column="10" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FF7F7F7F" ShadowColor="FF000000">
+		
+		</StaticText>
+		<StaticText Name="ItemDetailLabelSetAttrib2" X="160" Y="496" Row="1" Column="10" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FF7F7F7F" ShadowColor="FF000000">
+		体质:
+		</StaticText>
+		<StaticText Name="ItemDetailTextSetAttrib2" X="208" Y="496" Row="1" Column="10" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FF7F7F7F" ShadowColor="FF000000">
+		
+		</StaticText>
+		<StaticText Name="ItemDetailLabelSetAttrib3" X="160" Y="512" Row="1" Column="10" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FF7F7F7F" ShadowColor="FF000000">
+		根骨:
+		</StaticText>
+		<StaticText Name="ItemDetailTextSetAttrib3" X="208" Y="512" Row="1" Column="10" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FF7F7F7F" ShadowColor="FF000000">
+		
+		</StaticText>
+		<StaticText Name="ItemDetailLabelSetAttrib4" X="160" Y="528" Row="1" Column="10" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FF7F7F7F" ShadowColor="FF000000">
+		身法:
+		</StaticText>
+		<StaticText Name="ItemDetailTextSetAttrib4" X="208" Y="528" Row="1" Column="10" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FF7F7F7F" ShadowColor="FF000000">
+		
+		</StaticText>
+		<StaticText Name="ItemDetailLabelSetAttrib5" X="160" Y="544" Row="1" Column="10" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FF7F7F7F" ShadowColor="FF000000">
+		内息:
+		</StaticText>
+		<StaticText Name="ItemDetailTextSetAttrib5" X="208" Y="544" Row="1" Column="10" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FF7F7F7F" ShadowColor="FF000000">
+		
+		</StaticText>
+
+		<StaticText Name="ItemDetailLabelSetAtkRatio" X="20" Y="592" Row="1" Column="10" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FF7F7F7F" ShadowColor="FF000000">
+		攻击:
+		</StaticText>
+		<StaticText Name="ItemDetailLabelSetDefRatio" X="20" Y="592" Row="1" Column="10" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FF7F7F7F" ShadowColor="FF000000">
+		防御:
+		</StaticText>
+		<StaticText Name="ItemDetailLabelSetHitRatio" X="20" Y="592" Row="1" Column="10" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FF7F7F7F" ShadowColor="FF000000">
+		生命:
+		</StaticText>
+		<StaticText Name="ItemDetailLabelSetEvaRatio" X="20" Y="592" Row="1" Column="10" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FF7F7F7F" ShadowColor="FF000000">
+		内力:
+		</StaticText>
+		<StaticText Name="ItemDetailLabelSetPowRatio" X="20" Y="592" Row="1" Column="10" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FF7F7F7F" ShadowColor="FF000000">
+		内功:
+		</StaticText>
+		<StaticText Name="ItemDetailLabelSetSpdRatio" X="20" Y="592" Row="1" Column="10" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FF7F7F7F" ShadowColor="FF000000">
+		速度:
+		</StaticText>
+		<StaticText Name="ItemDetailTextSetBatAttribRatio" X="68" Y="592" Row="1" Column="10" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FF7F7F7F" ShadowColor="FF000000">
+		
+		</StaticText>
+
+		<StaticText Name="ItemDetailLabelSetSkill" X="20" Y="608" Row="3" Column="40" Width="260" Height="52" EdgeCode="LIGHT" FontColor="FF7F7F7F" ShadowColor="FF000000">
+		武学:
+		</StaticText>
+		<StaticText Name="ItemDetailTextSetSkill" X="68" Y="608" Row="3" Column="40" Width="180" Height="52" EdgeCode="LIGHT" FontColor="FF7F7F7F" ShadowColor="FF000000">
+		
+		</StaticText>
+<!-- equip only - Details part 6 -->
+		<!--<StaticText Name="ItemDetailLabelBlacksmith" X="20" Y="576" Row="1" Column="10" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		蕴藏内力
+		</StaticText>
+		<StaticText Name="ItemDetailTextBlacksmith" X="100" Y="576" Row="1" Column="10" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFF0F800" ShadowColor="FF000000">
+		3/10
+		</StaticText>-->>
+		
+		<StaticText Name="ItemDetailLabelDura" X="20" Y="608" Row="1" Column="10" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		耐久度
+		</StaticText>
+		<StaticText Name="ItemDetailTextDura" X="100" Y="608" Row="1" Column="40" Width="200" Height="20" EdgeCode="LIGHT" FontColor="FFF0F800" ShadowColor="FF000000">
+		
+		</StaticText>
+<!-- usual item only - Details part 1 -->
+		<!--<StaticText Name="ItemDetailLabelUsePlace" X="20" Y="212" Row="1" Column="10" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		使用场合
+		</StaticText>
+		<StaticText Name="ItemDetailTextUsePlace" X="100" Y="212" Row="1" Column="40" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		＊＊＊＊
+		</StaticText>
+		
+		<StaticText Name="ItemDetailLabelTargetType" X="20" Y="244" Row="1" Column="10" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		目标类型
+		</StaticText>
+		<StaticText Name="ItemDetailTextTargetType" X="100" Y="244" Row="1" Column="40" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		＊＊＊＊
+		</StaticText>
+		<StaticText Name="ItemDetailLabelTarget" X="20" Y="260" Row="1" Column="10" Width="200" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		目标／有效目标数
+		</StaticText>
+		<StaticText Name="ItemDetailTextTarget" X="100" Y="260" Row="1" Column="40" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		＊＊(99)
+		</StaticText>
+		<StaticText Name="ItemDetailLabelPeriod" X="20" Y="276" Row="1" Column="10" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		有效时间
+		</StaticText>
+		<StaticText Name="ItemDetailTextPeriod" X="100" Y="276" Row="1" Column="40" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		9999
+		</StaticText>
+		<StaticText Name="ItemDetailLabelCoolTime" X="20" Y="292" Row="1" Column="10" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		冻结时间
+		</StaticText>
+		<StaticText Name="ItemDetailTextCoolTime" X="100" Y="292" Row="1" Column="40" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		9999
+		</StaticText>-->
+		<StaticText Name="ItemDetailLabelPeriod" X="20" Y="276" Row="1" Column="10" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		
+		</StaticText>
+		<StaticText Name="ItemDetailTextPeriod" X="100" Y="276" Row="1" Column="40" Width="180" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		
+		</StaticText>
+		<StaticText Name="ItemDetailLabelQuality" X="20" Y="228" Row="1" Column="10" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFF0F800" ShadowColor="FF000000">
+		品质
+		</StaticText>
+		<StaticText Name="ItemDetailTextQuality" X="100" Y="228" Row="1" Column="40" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFF0F800" ShadowColor="FF000000">
+		
+		</StaticText>
+		<StaticText Name="ItemDetailLabelUseCount" X="10" Y="228" Row="1" Column="10" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		使用次数
+		</StaticText>
+		<StaticText Name="ItemDetailTextUseCount" X="100" Y="228" Row="1" Column="40" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFF0F800" ShadowColor="FF000000">
+		
+		</StaticText>
+		<StaticText Name="ItemDetailTextFunctionDesc" X="20" Y="308" Row="5" Column="40" Width="260" Height="65" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		
+		</StaticText>
+		<ChatPanel Name="ItemDetailBuffDesc" X="20" Y="308" Width="260" Height="150" EdgeCode="LIGHT" FontColor="FF38F838"
+			ShadowColor="FF000000" FillColor="7F0000FF" Hide="0" NotDetected = "1">
+			
+		</ChatPanel>	
+		<StaticText Name="ItemDetailTextUnknowItem" X="0" Y="300" Width="288" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			
+		</StaticText>
+		<ChatPanel Name="ItemDetailSkillDesc" X="20" Y="638" Width="260" Height="150" EdgeCode="LIGHT" FontColor="FF38F838"
+			ShadowColor="FF000000" FillColor="7F0000FF" Hide="0" NotDetected = "1">
+		
+		</ChatPanel>
+		<!-- gem inlay -->
+		<StaticText Name="ItemDetailLabelInlayGemAtk" X="20" Y="212" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		攻击：
+		</StaticText>
+		<StaticText Name="ItemDetailTextInlayGemAtk" X="58" Y="212" Row="1" Column="20" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		
+		</StaticText>
+		<UIImage Name="ItemDetailBGInlayGemAtk00" X="90" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="18" Top="432" Right="38" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemAtk01" X="105" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="18" Top="432" Right="38" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemAtk02" X="120" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="18" Top="432" Right="38" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemAtk03" X="135" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="18" Top="432" Right="38" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemAtk04" X="150" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="18" Top="432" Right="38" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemAtk05" X="165" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="18" Top="432" Right="38" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemAtk06" X="180" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="18" Top="432" Right="38" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemAtk07" X="195" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="18" Top="432" Right="38" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemAtk08" X="210" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="18" Top="432" Right="38" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemAtk09" X="225" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="18" Top="432" Right="38" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemAtkBlock" X="90" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="188" Top="432" Right="208" Bottom="452" Hide="1" />
+
+		<StaticText Name="ItemDetailLabelInlayGemDef" X="20" Y="228" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		防御：
+		</StaticText>
+		<StaticText Name="ItemDetailTextInlayGemDef" X="58" Y="228" Row="1" Column="20" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		
+		</StaticText>
+		<UIImage Name="ItemDetailBGInlayGemDef00" X="90" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="38" Top="432" Right="58" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemDef01" X="105" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="38" Top="432" Right="58" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemDef02" X="120" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="38" Top="432" Right="58" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemDef03" X="135" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="38" Top="432" Right="58" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemDef04" X="150" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="38" Top="432" Right="58" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemDef05" X="165" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="38" Top="432" Right="58" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemDef06" X="180" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="38" Top="432" Right="58" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemDef07" X="195" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="38" Top="432" Right="58" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemDef08" X="210" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="38" Top="432" Right="58" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemDef09" X="225" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="38" Top="432" Right="58" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemDefBlock" X="90" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="188" Top="432" Right="208" Bottom="452" Hide="1" />
+
+		<StaticText Name="ItemDetailLabelInlayGemMaxHp" X="20" Y="384" Row="1" Column="10" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		生命：
+		</StaticText>
+		<StaticText Name="ItemDetailTextInlayGemMaxHp" X="58" Y="384" Row="1" Column="40" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		
+		</StaticText>
+		<UIImage Name="ItemDetailBGInlayGemMaxHp00" X="90" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="138" Top="432" Right="158" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemMaxHp01" X="105" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="138" Top="432" Right="158" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemMaxHp02" X="120" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="138" Top="432" Right="158" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemMaxHp03" X="135" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="138" Top="432" Right="158" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemMaxHp04" X="150" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="138" Top="432" Right="158" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemMaxHp05" X="165" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="138" Top="432" Right="158" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemMaxHp06" X="180" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="138" Top="432" Right="158" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemMaxHp07" X="195" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="138" Top="432" Right="158" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemMaxHp08" X="210" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="138" Top="432" Right="158" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemMaxHp09" X="225" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="138" Top="432" Right="158" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemMaxHpBlock" X="90" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="188" Top="432" Right="208" Bottom="452" Hide="1" />
+
+		<StaticText Name="ItemDetailLabelInlayGemPow" X="20" Y="276" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		内功：
+		</StaticText>
+		<StaticText Name="ItemDetailTextInlayGemPow" X="58" Y="276" Row="1" Column="40" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		
+		</StaticText>
+		<UIImage Name="ItemDetailBGInlayGemPow00" X="90" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="98" Top="432" Right="118" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemPow01" X="105" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="98" Top="432" Right="118" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemPow02" X="120" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="98" Top="432" Right="118" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemPow03" X="135" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="98" Top="432" Right="118" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemPow04" X="150" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="98" Top="432" Right="118" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemPow05" X="165" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="98" Top="432" Right="118" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemPow06" X="180" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="98" Top="432" Right="118" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemPow07" X="195" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="98" Top="432" Right="118" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemPow08" X="210" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="98" Top="432" Right="118" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemPow09" X="225" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="98" Top="432" Right="118" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemPowBlock" X="90" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="188" Top="432" Right="208" Bottom="452" Hide="1" />
+
+		<StaticText Name="ItemDetailLabelInlayGemMaxSp" X="20" Y="400" Row="1" Column="10" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		内力：
+		</StaticText>
+		<StaticText Name="ItemDetailTextInlayGemMaxSp" X="58" Y="400" Row="1" Column="40" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		
+		</StaticText>
+		<UIImage Name="ItemDetailBGInlayGemMaxSp00" X="90" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="158" Top="432" Right="178" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemMaxSp01" X="105" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="158" Top="432" Right="178" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemMaxSp02" X="120" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="158" Top="432" Right="178" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemMaxSp03" X="135" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="158" Top="432" Right="178" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemMaxSp04" X="150" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="158" Top="432" Right="178" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemMaxSp05" X="165" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="158" Top="432" Right="178" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemMaxSp06" X="180" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="158" Top="432" Right="178" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemMaxSp07" X="195" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="158" Top="432" Right="178" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemMaxSp08" X="210" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="158" Top="432" Right="178" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemMaxSp09" X="225" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="158" Top="432" Right="178" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemMaxSpBlock" X="90" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="188" Top="432" Right="208" Bottom="452" Hide="1" />
+
+		<StaticText Name="ItemDetailLabelInlayGemHit" X="20" Y="244" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		命中：
+		</StaticText>
+		<StaticText Name="ItemDetailTextInlayGemHit" X="58" Y="244" Row="1" Column="40" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		
+		</StaticText>
+		<UIImage Name="ItemDetailBGInlayGemHit00" X="90" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="58" Top="432" Right="78" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemHit01" X="105" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="58" Top="432" Right="78" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemHit02" X="120" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="58" Top="432" Right="78" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemHit03" X="135" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="58" Top="432" Right="78" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemHit04" X="150" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="58" Top="432" Right="78" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemHit05" X="165" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="58" Top="432" Right="78" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemHit06" X="180" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="58" Top="432" Right="78" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemHit07" X="195" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="58" Top="432" Right="78" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemHit08" X="210" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="58" Top="432" Right="78" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemHit09" X="225" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="58" Top="432" Right="78" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemHitBlock" X="90" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="188" Top="432" Right="208" Bottom="452" Hide="1" />
+
+		<StaticText Name="ItemDetailLabelInlayGemEva" X="20" Y="260" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		闪避：
+		</StaticText>
+		<StaticText Name="ItemDetailTextInlayGemEva" X="58" Y="260" Row="1" Column="40" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		
+		</StaticText>
+		<UIImage Name="ItemDetailBGInlayGemEva00" X="90" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="78" Top="432" Right="98" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemEva01" X="105" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="78" Top="432" Right="98" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemEva02" X="120" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="78" Top="432" Right="98" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemEva03" X="135" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="78" Top="432" Right="98" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemEva04" X="150" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="78" Top="432" Right="98" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemEva05" X="165" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="78" Top="432" Right="98" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemEva06" X="180" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="78" Top="432" Right="98" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemEva07" X="195" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="78" Top="432" Right="98" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemEva08" X="210" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="78" Top="432" Right="98" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemEva09" X="225" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="78" Top="432" Right="98" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemEvaBlock" X="90" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="188" Top="432" Right="208" Bottom="452" Hide="1" />
+
+		<StaticText Name="ItemDetailLabelInlayGemSpd" X="20" Y="292" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		速度：
+		</StaticText>
+		<StaticText Name="ItemDetailTextInlayGemSpd" X="58" Y="292" Row="1" Column="40" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		
+		</StaticText>
+		<UIImage Name="ItemDetailBGInlayGemSpd00" X="90" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="118" Top="432" Right="138" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemSpd01" X="105" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="118" Top="432" Right="138" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemSpd02" X="120" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="118" Top="432" Right="138" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemSpd03" X="135" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="118" Top="432" Right="138" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemSpd04" X="150" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="118" Top="432" Right="138" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemSpd05" X="165" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="118" Top="432" Right="138" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemSpd06" X="180" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="118" Top="432" Right="138" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemSpd07" X="195" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="118" Top="432" Right="138" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemSpd08" X="210" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="118" Top="432" Right="138" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemSpd09" X="225" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="118" Top="432" Right="138" Bottom="452" Hide="1" />
+		<UIImage Name="ItemDetailBGInlayGemSpdBlock" X="90" Y="210" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="188" Top="432" Right="208" Bottom="452" Hide="1" />
+
+	</Panel>
+</UI>

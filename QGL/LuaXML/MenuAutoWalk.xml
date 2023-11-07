@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+<UI>
+	<ID Name="MenuAutoWalk" />
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	<Panel Name="AutoWalkPanel" Image="Data\interface0038_zidong.tga" X="275" Y="200" 
+		Left="0" Top="0" Right="250" Bottom="200" NotDetected="0" DetectImage="2"
+		  Drag="1"
+		DragLeft="0" DragTop="0" DragRight="316" DragBottom="481" LuaRButtonUp="OnCloseAutoWalk" LuaKeyChar="">
+		
+		<Button  Name= "StopAutoWalk" Image="Data\interface0038_zidong.tga" X="30" Y="160" LuaLButtonUp="OnStopAutoWalk">
+				<ButtonRect State="0" Left="10" Top="206" Right="71" Bottom="221" />
+				<ButtonRect State="1" Left="76" Top="206" Right="137" Bottom="221" />
+				<ButtonRect State="2" Left="142" Top="206" Right="203" Bottom="221" />
+		</Button>
+		<Button  Name= "StartAutoWalk" Image="Data\interface0038_zidong.tga" X="30" Y="160" LuaLButtonUp="OnStartAutoWalk">
+				<ButtonRect State="0" Left="10" Top="225" Right="71" Bottom="240" />
+				<ButtonRect State="1" Left="76" Top="225" Right="137" Bottom="240" />
+				<ButtonRect State="2" Left="142" Top="225" Right="203" Bottom="240" />
+		</Button>
+		
+		<Button  Name= "CancelAutoWalk" Image="Data\interface0038_zidong.tga" X="160" Y="160" LuaLButtonUp="OnCloseAutoWalk">
+				<ButtonRect State="0" Left="10" Top="244" Right="71" Bottom="259" />
+				<ButtonRect State="1" Left="76" Top="244" Right="137" Bottom="259" />
+				<ButtonRect State="2" Left="142" Top="244" Right="203" Bottom="259" />
+		</Button>
+		
+		<Button  Name= "CloseAutoWalk" Image="Data\interface0038_zidong.tga" X="212" Y="16" LuaLButtonUp="OnCloseAutoWalk">
+				<ButtonRect State="0" Left="10" Top="270" Right="32" Bottom="287" />
+				<ButtonRect State="1" Left="34" Top="270" Right="56" Bottom="287" />
+				<ButtonRect State="2" Left="60" Top="270" Right="82" Bottom="287" />
+		</Button>
+	
+		<CheckBox Name = "ChooseHitBoss" Image="Data\interface0038_zidong.tga" X="78" Y="126" 
+								TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonDown="OnChooseHitBoss">
+			<CheckBoxRect Index="0" Left="124" Top="268" Right="145" Bottom="288" />
+			<CheckBoxRect Index="1" Left="124" Top="268" Right="145" Bottom="288" />
+			<CheckBoxRect Index="2" Left="94" Top="268" Right="115" Bottom="288" />
+		</CheckBox>
+		
+		<StaticText Name="AutoWalkTime" X="20" Y="50" Row="1" Column="16" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="200" Height="75" NotDetected="1" Align="Left">
+		
+		</StaticText>
+		
+		
+	</Panel>
+	
+	
+</UI>

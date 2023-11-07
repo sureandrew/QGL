@@ -1,0 +1,28 @@
+//-- Config
+config
+{
+	SubPath="Data/";
+	ClassID=10050;
+	StartID=10050;
+	EndID  =10059;
+	TwoDirect=1;
+}
+
+//-- include
+
+//-- object class
+class SkillData : NetObject
+{
+	//-- object state
+	info { 		UInt16 skill_id;
+		};
+		
+	owner_info { 	UInt32 owner_id;
+				BYTE	owner_type; 	};//0 player 1 partner 2 pet
+				
+	Level { UInt16 skill_level;};
+	
+	CoolDown{ UInt32 cool_down;};
+
+	//-- command to RPC server
+}

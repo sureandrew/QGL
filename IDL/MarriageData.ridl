@@ -1,0 +1,23 @@
+//-- Config	
+config
+{
+	SubPath="Data/";
+	ClassID=10320;
+	StartID=10320;
+	EndID  =10329;
+	TwoDirect=1;
+}
+
+//-- include
+
+//-- object class
+class MarriageData : NetObject
+{
+	//-- object state
+	marriage_id {UInt32 marriage_id;};	
+	husband_id	{UInt32 husband_id;};
+	wife_id	{UInt32 wife_id;};
+	marriagetime{	UInt32	marriage_time; };
+	state{UInt32   state;};	
+	//-- command to RPC server
+}

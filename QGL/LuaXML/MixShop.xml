@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" ?>
+<UI>
+	<ID Name="MixShop" />
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	<Panel Name="MixShopPanel" X="253" Y="150" Image="Data\interface0032_thebox_Q.tga" Left="5" Top="4" Right="308" Bottom="373" 
+		Drag="1" DragLeft="0" DragTop="0" DragRight="303" DragBottom="369" DetectImage = "1" 
+		LuaRButtonUp="CloseMixShop" LuaKeyChar="CloseMixShop">
+						
+		<UIImage Name="MixShopTitle00" X="123" Y="5" Image="Data\interface0032_thebox_Q.tga" NotDetected = "1" Left="669" Top="120" Right="728" Bottom="137" Hide="1" />		
+		<UIImage Name="MixShopTitle11" X="123" Y="5" Image="Data\interface0032_thebox_Q.tga" NotDetected = "1" Left="669" Top="100" Right="728" Bottom="117" Hide="1" />
+		<UIImage Name="MixShopTitle14" X="123" Y="5" Image="Data\interface0032_thebox_Q.tga" NotDetected = "1" Left="733" Top="21" Right="792" Bottom="37" Hide="1" />
+		
+		<AniIcon Name="MixShopItem00"  X="216" Y="63" Hide="1" LuaLButtonUp="MixShopMove00" Detect = "1"/>
+		<StaticText Name="MixShopItem00Name" X="15" Y="73" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="287" Height="20" NotDetected="1" Align="Left" Hide="1">
+		</StaticText>
+		<StaticText Name="MixShopItem00Stack" X="219" Y="88" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="32" Height="20" NotDetected="1" Align="Left" Hide="1">
+		</StaticText>
+		<AniIcon Name="MixShopItem01"  X="216" Y="111" Hide="1" LuaLButtonUp="MixShopMove01" Detect = "1"/>
+		<StaticText Name="MixShopItem01Name" X="15" Y="121" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="287" Height="20" NotDetected="1" Align="Left" Hide="1">
+		</StaticText>
+		<StaticText Name="MixShopItem01Stack" X="219" Y="136" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="287" Height="20" NotDetected="1" Align="Left" Hide="1">
+		</StaticText>
+		<AniIcon Name="MixShopItem02"  X="216" Y="159" Hide="1" LuaLButtonUp="MixShopMove02" Detect = "1"/>
+		<StaticText Name="MixShopItem02Name" X="15" Y="169" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="287" Height="20" NotDetected="1" Align="Left" Hide="1">
+		</StaticText>
+		<StaticText Name="MixShopItem02Stack" X="219" Y="184" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="287" Height="20" NotDetected="1" Align="Left" Hide="1">
+		</StaticText>
+		
+		<ChatPanel Name="MixShopSuggestion" X="8" Y="212" Width="290" Height="40" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" FillColor="7F0000FF" Hide="1" NotDetected = "1">
+			
+		</ChatPanel>	
+		
+		<ChatPanel Name="MixShopNeed" X="8" Y="260" Width="287" Height="50" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" FillColor="7F0000FF" Hide="1" NotDetected = "1">
+			
+		</ChatPanel>	
+		
+		<LinerImage Name="MixShopTimeLine" X="11" Y="309" Image="Data\interface0032_thebox_Q.tga" Left="43" Top="429"
+			Right="49" Bottom="447" LineWidth="283" BaseWidth="283" Hide="1" Denumerator="100" Numerator="1" />
+				
+		<Button Name="MixShopButtonRepair" Image="Data\interface0032_thebox_Q.tga" X="95" Y="337" LuaLButtonUp="MixShopStartMix" Hide="1">
+			<ButtonRect State="0" Left="9" Top="560" Right="101" Bottom="581" />
+			<ButtonRect State="1" Left="105" Top="560" Right="197" Bottom="581" />
+			<ButtonRect State="2" Left="201" Top="560" Right="293" Bottom="581" />
+			<ButtonRect State="3" Left="297" Top="560" Right="389" Bottom="581" />
+		</Button>
+		
+		<Button Name="MixShopButtonRebuild" Image="Data\interface0032_thebox_Q.tga" X="95" Y="337" LuaLButtonUp="MixShopStartMix" Hide="1">
+			<ButtonRect State="0" Left="396" Top="560" Right="488" Bottom="581" />
+			<ButtonRect State="1" Left="492" Top="560" Right="584" Bottom="581" />
+			<ButtonRect State="2" Left="588" Top="560" Right="680" Bottom="581" />
+			<ButtonRect State="3" Left="684" Top="560" Right="776" Bottom="581" />
+		</Button>
+		
+		<Button Name="MixShopButtonUnSoulBound" Image="Data\interface0032_thebox_Q.tga" X="95" Y="337" LuaLButtonUp="MixShopStartMix" Hide="1">
+			<ButtonRect State="0" Left="680" Top="244" Right="774" Bottom="267" />
+			<ButtonRect State="1" Left="680" Top="269" Right="774" Bottom="292" />
+			<ButtonRect State="2" Left="651" Top="481" Right="745" Bottom="504" />
+			<ButtonRect State="3" Left="651" Top="507" Right="745" Bottom="530" />
+		</Button>
+		
+		<Button Name="MixShopButtonStoneMix" Image="Data\interface0032_thebox_Q2.tga" X="95" Y="337" LuaLButtonUp="MixShopStartMix" Hide="1">
+			<ButtonRect State="0" Left="5" Top="570" Right="97" Bottom="591" />
+			<ButtonRect State="1" Left="101" Top="570" Right="193" Bottom="591" />
+			<ButtonRect State="2" Left="197" Top="570" Right="289" Bottom="591" />
+			<ButtonRect State="3" Left="293" Top="570" Right="385" Bottom="591" />
+		</Button>
+		
+		<Button Name="MixShopButtonDecompose" Image="Data\interface0032_thebox_Q2.tga" X="95" Y="337" LuaLButtonUp="" Hide="1">
+			<ButtonRect State="0" Left="9" Top="482" Right="101" Bottom="503" />
+			<ButtonRect State="1" Left="105" Top="482" Right="197" Bottom="503" />
+			<ButtonRect State="2" Left="201" Top="482" Right="293" Bottom="503" />
+			<ButtonRect State="3" Left="297" Top="482" Right="389" Bottom="503" />
+		</Button>
+	
+		<Button Name="MixShopCancel" Image="Data\interface0032_thebox_Q.tga" X="193" Y="337" LuaLButtonUp="CancelMixShopMixing">
+			<ButtonRect State="0" Left="9" Top="534" Right="101" Bottom="555" />
+			<ButtonRect State="1" Left="105" Top="534" Right="197" Bottom="555" />
+			<ButtonRect State="2" Left="201" Top="534" Right="293" Bottom="555" />
+			<ButtonRect State="3" Left="297" Top="534" Right="389" Bottom="555" />
+		</Button>
+		
+		<Button Name="MixShopCross" Image="Data\interface0032_thebox_Q.tga" X="270" Y="8" LuaLButtonUp="CloseMixShop">
+			<ButtonRect State="0" Left="5" Top="403" Right="29" Bottom="421" />
+			<ButtonRect State="1" Left="30" Top="403" Right="54" Bottom="421" />
+			<ButtonRect State="2" Left="55" Top="403" Right="79" Bottom="421" />
+		</Button>
+		
+	</Panel>
+	
+	<!-- Moving Panel-->
+	<Panel Name="MixShopMovingPanel" Image="" X="0" Y="50" Left="0" Top="0" Right="40" Bottom="40"
+		 Hide="1" Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="MixShopMakeEndDrag" LuaRButtonDown="ResetMixShopMakingDrag" >
+		<AniIcon Name="MixShopMovingIcon" X="0" Y="0" Image=""  AutoDelete="0" Detect = "1" />
+	</Panel>
+	
+	<!-- TradingItemCount -->
+	<Panel Name="MixShopCountPanel" X="253" Y="267" Image="Data\inerface0004_main_A.tga" Left="314" Top="293" Right="542" Bottom="391" 
+		Drag="1" DragLeft="0" DragTop="0" DragRight="228" DragBottom="98"  Hide="1"
+		LuaRButtonUp="CloseMixShopCount"  LuaKeyChar="CloseMixShopCount">
+		
+		<UIImage X="12" Y="37" Image="Data\inerface0004_main_A.tga" Left="544" Top="394" Right="647" Bottom="412"/>
+		
+		<EditBox Name="NumberOfMixShopSourceItem" X="22" Y="40" Row="1" Column="3" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" Limit="5" NumOnly="1">
+			1 
+		</EditBox>
+			
+		
+		<StaticText Name="MixShopText" X="12" Y="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFEDD97A" ShadowColor="FF000000">
+			请输入给予数量
+		</StaticText>
+		
+		<Button Name="ConfirmMixShopYes" Image="Data\inerface0004_main_A.tga" X="86" Y="60" LuaLButtonUp="ConfirmMixShopItemNum">
+			<ButtonRect State="0" Left="4" Top="511" Right="68" Bottom="528" />
+			<ButtonRect State="1" Left="70" Top="511" Right="134" Bottom="528" />
+			<ButtonRect State="2" Left="136" Top="511" Right="200" Bottom="528" />
+		</Button>
+		
+		
+		<Button Name="ConfirmMixShopNo" Image="Data\inerface0004_main_A.tga" X="153" Y="60" LuaLButtonUp="CloseMixShopCount">
+			<ButtonRect State="0" Left="4" Top="530" Right="68" Bottom="547" />
+			<ButtonRect State="1" Left="70" Top="530" Right="134" Bottom="547" />
+			<ButtonRect State="2" Left="136" Top="530" Right="200" Bottom="547" />
+		</Button>
+		
+		<Button Name="MixShopMaxStack" Image="Data\inerface0004_main_A.tga" X="155" Y="38" LuaLButtonUp="MixShopMaxStack">
+			<ButtonRect State="0" Left="384" Top="395" Right="414" Bottom="411" />
+			<ButtonRect State="1" Left="384" Top="412" Right="414" Bottom="428" />
+			<ButtonRect State="2" Left="384" Top="429" Right="414" Bottom="445" />
+		</Button>
+		
+		<Button Name="MixShopSetZero" Image="Data\inerface0004_main_A.tga" X="186" Y="38" LuaLButtonUp="MixShopMinStack">
+			<ButtonRect State="0" Left="352" Top="395" Right="382" Bottom="411" />
+			<ButtonRect State="1" Left="352" Top="412" Right="382" Bottom="428" />
+			<ButtonRect State="2" Left="352" Top="429" Right="382" Bottom="445" />
+		</Button>
+		
+		<Button Name="AddOneMixShopStack" Image="Data\inerface0004_main_A.tga" X="119" Y="38" LuaLButtonUp="MixShopMixAddOne">
+			<ButtonRect State="0" Left="314" Top="395" Right="331" Bottom="411" />
+			<ButtonRect State="1" Left="314" Top="412" Right="331" Bottom="428" />
+			<ButtonRect State="2" Left="314" Top="429" Right="331" Bottom="445" />
+		</Button>
+		
+		<Button Name="DiffOneMixShopStack" Image="Data\inerface0004_main_A.tga" X="137" Y="38" LuaLButtonUp="MixShopMixDiffOne">
+			<ButtonRect State="0" Left="333" Top="395" Right="350" Bottom="411" />
+			<ButtonRect State="1" Left="333" Top="412" Right="350" Bottom="428" />
+			<ButtonRect State="2" Left="333" Top="429" Right="350" Bottom="445" />
+		</Button>
+	</Panel>
+</UI>

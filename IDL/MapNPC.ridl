@@ -1,0 +1,21 @@
+//-- Config
+config
+{
+	SubPath="Logic/";
+	ClassID=15000;
+	StartID=15000;
+	EndID  =15999;
+}
+
+//-- include
+#include "MapActor.h"
+
+//-- object class
+class MapNPC : MapActor
+{	
+	id { 		UInt32 npc_uid;
+				UInt32 npc_id; 			};
+	visible {	bool visible ;				};
+	//-- command on click run script
+
+}

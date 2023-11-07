@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" ?>
+
+<UI>
+	<ID Name="ConfirmQuitGame" />
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	<Panel Name="ConfirmQuitGamePanel" Image="Data\interface0028_main_M.tga" X="270" Y="250" Left="342" Top="298" Right="620" Bottom="410"
+		Drag="1" DragLeft="0" DragTop="0" DragRight="278"	DragBottom="112" LuaKeyChar="CloseConfirmQuitGame">
+		<StaticText Name="ConfirmQuitGameText" X="0" Y="35" Height="20" Width="278" Row="1" Column="6" EdgeCode="LIGHT" FontColor="FFEDD97A" ShadowColor="FF000000" Align="CENTER">
+			离开游戏
+		</StaticText>
+		
+		<Button Name="QuitGameOK" Image="Data\interface0028_main_M.tga" X="180" Y="60" LuaLButtonUp="ConfirmQuitGame">
+			<ButtonRect State="0" Left="343" Top="193" Right="419" Bottom="214" />
+			<ButtonRect State="1" Left="425" Top="193" Right="501" Bottom="214" />
+			<ButtonRect State="2" Left="507" Top="193" Right="583" Bottom="214" />
+		</Button>
+		
+		<Button Name="QuitGameRestart" Image="Data\interface0028_main_M.tga" X="100" Y="60" LuaLButtonUp="RestartGame">
+			<ButtonRect State="0" Left="343" Top="221" Right="419" Bottom="242" />
+			<ButtonRect State="1" Left="425" Top="221" Right="501" Bottom="242" />
+			<ButtonRect State="2" Left="507" Top="221" Right="583" Bottom="242" />
+		</Button>
+		
+		<Button Name="QuitGameNO" Image="Data\interface0028_main_M.tga" X="20" Y="60" LuaLButtonUp="CloseConfirmQuitGame">
+			<ButtonRect State="0" Left="343" Top="164" Right="419" Bottom="185" />
+			<ButtonRect State="1" Left="425" Top="164" Right="501" Bottom="185" />
+			<ButtonRect State="2" Left="507" Top="164" Right="583" Bottom="185" />
+		</Button>
+	
+	</Panel>	
+</UI>

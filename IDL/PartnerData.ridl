@@ -1,0 +1,58 @@
+//-- Config
+config
+{
+	SubPath="Data/";
+	ClassID=10040;
+	StartID=10040;
+	EndID  =10049;
+	TwoDirect=1;
+}
+
+//-- include
+
+//-- object class
+class PartnerData : NetObject
+{
+	//-- object attributes
+	id { 		UInt32 partner_id;
+				UInt32 mob_id;		};
+	owner { 	UInt32 owner_id; 	};
+	info {		String raname;		};
+	level {		UInt16 level;		};
+	exp {		UInt32 exp; 		};
+	attrib1 {	UInt16 STA;
+				UInt16 SPR;
+				UInt16 STR;
+				UInt16 CON;
+				UInt16 AGI; 		};
+	
+	attrPoint { 	UInt16 attrPoint; 	};
+	native {	UInt16 HP_native;
+				UInt16 SP_native;
+				UInt16 ATK_native;
+				UInt16 DEF_native;
+				UInt16 SPD_native;
+				UInt16 POW_native;
+				UInt16 HIT_native;
+				UInt16 EVA_native;	};
+	grow {		float grow;			};
+	HP {		UInt16 HP;
+				UInt16 maxHP;			};
+	SP {		UInt16 SP;
+				UInt16 maxSP;			};
+	favor	{	float favor;		};
+	state { 	UInt8 state; 		};
+	buff { 		String buff; 		};
+	health { 	UInt16 health; 		};
+	goodness {	Int32 goodness;			};
+	soulboundState{	UInt8 soulboundState;	};
+	ExpireDate{	UInt32	expireDate; };
+	Element	{	UInt8 element; };
+	OutLookColor {	UInt16 outLookColor; };
+	inWareHouse{	UInt8 inWareHouse;	};
+	assetLock{      Boolean lock;            };
+
+	Cultivation{	UInt16 cultivation;	};
+	Practice{	UInt16 practice;	};
+	//--- RPC method
+}

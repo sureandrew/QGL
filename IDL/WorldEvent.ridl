@@ -1,0 +1,37 @@
+//-- Config
+config
+{
+	SubPath="Logic/";
+	ClassID=46000;
+	StartID=46000;
+	EndID  =46999;
+}
+
+//-- include
+struct NpcInfo
+{
+	UInt32 npcId;
+	UInt16 mapId;
+	bool operator == (const NpcInfo& b) const;
+	bool operator < (const NpcInfo& b) const;
+};
+
+typedef StlVector<NpcInfo, ManagedAllocator<NpcInfo> > NpcInfoVec;
+
+//-- object class
+class WorldEvent
+{
+	info 	{		UInt16 			eventId;			
+					UInt8			eventType;
+					UInt8			mapType;
+					UInt32			endTime; 			};
+	npcList {		NpcInfoVec		npcList;			
+					UInt16Vector	npcLineCounts;		};
+	npcLiveTime {	UInt32			npcLiveTime; 		};
+	buffEvent { 	UInt16Vector	buffList;
+					UInt16			buffPeriod;
+					Boolean 		buffClear;
+					Boolean 		buffLeave;			};
+	mapList {		UInt16Vector	mapList;			};
+	script {		String 			script;				};
+}

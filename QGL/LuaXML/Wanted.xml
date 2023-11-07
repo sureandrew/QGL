@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" ?>
+<UI>
+	<ID Name="Wanted" />
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	<Panel Name="WantedPanel" Image="Data\interface0042.tga" X="182" Y="100" 
+			Left="16" Top="12" Right="452" Bottom="415" LuaRButtonUp="CloseWantedPanel"  DetectImage = "1"
+			Drag="1" DragLeft="0" DragTop="0" DragRight="699" DragBottom="404">
+			
+		<Button Name="WantedPanelClose" Image="Data\interface0042.tga" X="405" Y="9" LuaLButtonUp="CloseWantedPanel">
+			<ButtonRect State="0" Left="460" Top="89" Right="483" Bottom="105" />
+			<ButtonRect State="1" Left="484" Top="89" Right="507" Bottom="105" />
+			<ButtonRect State="2" Left="508" Top="89" Right="531" Bottom="105" />
+		</Button>
+		
+		
+		<ScrollBarV Name="WantedScroll" X="413" Y="90" Width ="14" Height="269" Limit="0" BarColor="0" LuaLButtonDown="WantedScroll">
+			<PrevButton Name="WantedUp" Image="Data\interface0042.tga" X="0" Y="0" LuaLButtonUp="WantedScrollUp">
+				<ButtonRect State="0" Left="458" Top="43" Right="473" Bottom="58" />
+				<ButtonRect State="1" Left="474" Top="43" Right="489" Bottom="58" />
+				<ButtonRect State="2" Left="490" Top="43" Right="505" Bottom="58" />
+			</PrevButton>
+			<NextButton Name="WantedDown" Image="Data\interface0042.tga" X="0" Y="254" LuaLButtonUp="WantedScrollDown">
+				<ButtonRect State="0" Left="458" Top="60" Right="473" Bottom="75" />
+				<ButtonRect State="1" Left="474" Top="60" Right="489" Bottom="75" />
+				<ButtonRect State="2" Left="490" Top="60" Right="505" Bottom="75" />
+			</NextButton>
+			<MoveButton Image="Data\interface0042.tga" X="0" Y="15"  LuaMouseMove="WantedScroll">
+				<ButtonRect State="0" Left="507" Top="43" Right="522" Bottom="74" />
+				<ButtonRect State="1" Left="507" Top="43" Right="522" Bottom="74" />
+				<ButtonRect State="2" Left="507" Top="43" Right="522" Bottom="74" />
+			</MoveButton>
+		</ScrollBarV>
+		
+		<UIImage Name="WantedSelected" X="9" Y="0" Image="Data\interface0042.tga" Left="13" Top="548" Right="413" Bottom="573" NotDetected="1" Hide="1" />
+		
+		<StaticText Name="WantedID00" X="9" Y="97" Width="75" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		36
+		</StaticText>
+		<StaticText Name="WantedName00" X="84" Y="97" Width="100" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		陶陶陶少侠
+		</StaticText>
+		<StaticText Name="WantedLevel00" X="184" Y="97" Width="46" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		127
+		</StaticText>
+		<StaticText Name="WantedPKValue00" X="250" Y="97" Width="50" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		18
+		</StaticText>
+		<StaticText Name="WantedReward00" X="300" Y="97" Width="110" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		432142
+		</StaticText>
+		<UIImage Name="WantedSelect00" X="9" Y="95" Image="" Left="0" Top="0" Right="400" Bottom="25" Detect="1" LuaLButtonUp="SelectWanted00" />
+		
+		<StaticText Name="WantedID01" X="9" Y="123" Width="75" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		36
+		</StaticText>
+		<StaticText Name="WantedName01" X="84" Y="123" Width="100" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		陶陶陶少侠
+		</StaticText>
+		<StaticText Name="WantedLevel01" X="184" Y="123" Width="46" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		127
+		</StaticText>
+		<StaticText Name="WantedPKValue01" X="250" Y="123" Width="50" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		18
+		</StaticText>
+		<StaticText Name="WantedReward01" X="300" Y="123" Width="110" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		432142
+		</StaticText>
+		<UIImage Name="WantedSelect01" X="9" Y="121" Image="" Left="0" Top="0" Right="400" Bottom="25" Detect="1" LuaLButtonUp="SelectWanted01" />
+		
+		<StaticText Name="WantedID02" X="9" Y="149" Width="75" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		36
+		</StaticText>
+		<StaticText Name="WantedName02" X="84" Y="149" Width="100" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		陶陶陶少侠
+		</StaticText>
+		<StaticText Name="WantedLevel02" X="184" Y="149" Width="46" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		127
+		</StaticText>
+		<StaticText Name="WantedPKValue02" X="250" Y="149" Width="50" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		18
+		</StaticText>
+		<StaticText Name="WantedReward02" X="300" Y="149" Width="110" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		432142
+		</StaticText>
+		<UIImage Name="WantedSelect02" X="9" Y="147" Image="" Left="0" Top="0" Right="400" Bottom="25" Detect="1" LuaLButtonUp="SelectWanted02" />
+		
+		<StaticText Name="WantedID03" X="9" Y="175" Width="75" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		36
+		</StaticText>
+		<StaticText Name="WantedName03" X="84" Y="175" Width="100" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		陶陶陶少侠
+		</StaticText>
+		<StaticText Name="WantedLevel03" X="184" Y="175" Width="46" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		127
+		</StaticText>
+		<StaticText Name="WantedPKValue03" X="250" Y="175" Width="50" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		18
+		</StaticText>
+		<StaticText Name="WantedReward03" X="300" Y="175" Width="110" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		432142
+		</StaticText>
+		<UIImage Name="WantedSelect03" X="9" Y="173" Image="" Left="0" Top="0" Right="400" Bottom="25" Detect="1" LuaLButtonUp="SelectWanted03" />
+		
+		<StaticText Name="WantedID04" X="9" Y="201" Width="75" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		36
+		</StaticText>
+		<StaticText Name="WantedName04" X="84" Y="201" Width="100" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		陶陶陶少侠
+		</StaticText>
+		<StaticText Name="WantedLevel04" X="184" Y="201" Width="46" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		127
+		</StaticText>
+		<StaticText Name="WantedPKValue04" X="250" Y="201" Width="50" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		18
+		</StaticText>
+		<StaticText Name="WantedReward04" X="300" Y="201" Width="110" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		432142
+		</StaticText>
+		<UIImage Name="WantedSelect04" X="9" Y="199" Image="" Left="0" Top="0" Right="400" Bottom="25" Detect="1" LuaLButtonUp="SelectWanted04" />
+		
+		<StaticText Name="WantedID05" X="9" Y="227" Width="75" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		36
+		</StaticText>
+		<StaticText Name="WantedName05" X="84" Y="227" Width="100" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		陶陶陶少侠
+		</StaticText>
+		<StaticText Name="WantedLevel05" X="184" Y="227" Width="46" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		127
+		</StaticText>
+		<StaticText Name="WantedPKValue05" X="250" Y="227" Width="50" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		18
+		</StaticText>
+		<StaticText Name="WantedReward05" X="300" Y="227" Width="110" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		432142
+		</StaticText>
+		<UIImage Name="WantedSelect05" X="9" Y="225" Image="" Left="0" Top="0" Right="400" Bottom="25" Detect="1" LuaLButtonUp="SelectWanted05" />
+		
+		<StaticText Name="WantedID06" X="9" Y="253" Width="75" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		36
+		</StaticText>
+		<StaticText Name="WantedName06" X="84" Y="253" Width="100" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		陶陶陶少侠
+		</StaticText>
+		<StaticText Name="WantedLevel06" X="184" Y="253" Width="46" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		127
+		</StaticText>
+		<StaticText Name="WantedPKValue06" X="250" Y="253" Width="50" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		18
+		</StaticText>
+		<StaticText Name="WantedReward06" X="300" Y="253" Width="110" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		432142
+		</StaticText>
+		<UIImage Name="WantedSelect06" X="9" Y="251" Image="" Left="0" Top="0" Right="400" Bottom="25" Detect="1" LuaLButtonUp="SelectWanted06" />
+		
+		<StaticText Name="WantedID07" X="9" Y="279" Width="75" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		36
+		</StaticText>
+		<StaticText Name="WantedName07" X="84" Y="279" Width="100" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		陶陶陶少侠
+		</StaticText>
+		<StaticText Name="WantedLevel07" X="184" Y="279" Width="46" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		127
+		</StaticText>
+		<StaticText Name="WantedPKValue07" X="250" Y="279" Width="50" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		18
+		</StaticText>
+		<StaticText Name="WantedReward07" X="300" Y="279" Width="110" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		432142
+		</StaticText>
+		<UIImage Name="WantedSelect07" X="9" Y="277" Image="" Left="0" Top="0" Right="400" Bottom="25" Detect="1" LuaLButtonUp="SelectWanted07" />
+		
+		<StaticText Name="WantedID08" X="9" Y="305" Width="75" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		36
+		</StaticText>
+		<StaticText Name="WantedName08" X="84" Y="305" Width="100" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		陶陶陶少侠
+		</StaticText>
+		<StaticText Name="WantedLevel08" X="184" Y="305" Width="46" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		127
+		</StaticText>
+		<StaticText Name="WantedPKValue08" X="250" Y="305" Width="50" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		18
+		</StaticText>
+		<StaticText Name="WantedReward08" X="300" Y="305" Width="110" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		432142
+		</StaticText>
+		<UIImage Name="WantedSelect08" X="9" Y="303" Image="" Left="0" Top="0" Right="400" Bottom="25" Detect="1" LuaLButtonUp="SelectWanted08" />
+		
+		<StaticText Name="WantedID09" X="9" Y="331" Width="75" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		36
+		</StaticText>
+		<StaticText Name="WantedName09" X="84" Y="331" Width="100" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		陶陶陶少侠
+		</StaticText>
+		<StaticText Name="WantedLevel09" X="184" Y="331" Width="46" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		127
+		</StaticText>
+		<StaticText Name="WantedPKValue09" X="250" Y="331" Width="50" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		18
+		</StaticText>
+		<StaticText Name="WantedReward09" X="300" Y="331" Width="110" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		432142
+		</StaticText>
+		<UIImage Name="WantedSelect09" X="9" Y="329" Image="" Left="0" Top="0" Right="400" Bottom="25" Detect="1" LuaLButtonUp="SelectWanted09" />
+		
+
+
+		<Button Name="WantedButtonReward" Image="Data\interface0042.tga" X="235" Y="372" LuaLButtonUp="WantedButtonReward">
+			<ButtonRect State="0" Left="14" Top="471" Right="92" Bottom="492" />
+			<ButtonRect State="1" Left="14" Top="494" Right="92" Bottom="515" />
+			<ButtonRect State="2" Left="14" Top="517" Right="92" Bottom="538" />
+			<ButtonRect State="4" Left="14" Top="449" Right="92" Bottom="470" />
+		</Button>
+		
+		<Button Name="WantedButtonDetail" Image="Data\interface0042.tga" X="324" Y="372" LuaLButtonUp="WantedButtonDetail">
+			<ButtonRect State="0" Left="102" Top="471" Right="180" Bottom="492" />
+			<ButtonRect State="1" Left="102" Top="494" Right="180" Bottom="515" />
+			<ButtonRect State="2" Left="102" Top="517" Right="180" Bottom="538" />
+			<ButtonRect State="4" Left="102" Top="449" Right="180" Bottom="470" />
+		</Button>
+		
+		<Button Name="WantedButtonClass3" Image="Data\interface0042.tga" X="47" Y="30" LuaLButtonUp="WantedButtonClass3">
+			<ButtonRect State="0" Left="367" Top="471" Right="460" Bottom="492" />
+			<ButtonRect State="1" Left="367" Top="494" Right="460" Bottom="515" />
+			<ButtonRect State="2" Left="367" Top="517" Right="460" Bottom="538" />
+			<ButtonRect State="3" Left="367" Top="449" Right="460" Bottom="470" />
+			<ButtonRect State="4" Left="367" Top="494" Right="460" Bottom="515" />
+		</Button>
+		
+		<Button Name="WantedButtonClass2" Image="Data\interface0042.tga" X="167" Y="30" LuaLButtonUp="WantedButtonClass2">
+			<ButtonRect State="0" Left="470" Top="471" Right="563" Bottom="492" />
+			<ButtonRect State="1" Left="470" Top="494" Right="563" Bottom="515" />
+			<ButtonRect State="2" Left="470" Top="517" Right="563" Bottom="538" />
+			<ButtonRect State="3" Left="470" Top="449" Right="563" Bottom="470" />
+			<ButtonRect State="4" Left="470" Top="494" Right="563" Bottom="515" />
+		</Button>
+		
+		<Button Name="WantedButtonClass1" Image="Data\interface0042.tga" X="287" Y="30" LuaLButtonUp="WantedButtonClass1">
+			<ButtonRect State="0" Left="573" Top="471" Right="666" Bottom="492" />
+			<ButtonRect State="1" Left="573" Top="494" Right="666" Bottom="515" />
+			<ButtonRect State="2" Left="573" Top="517" Right="666" Bottom="538" />
+			<ButtonRect State="3" Left="573" Top="449" Right="666" Bottom="470" />
+			<ButtonRect State="4" Left="573" Top="494" Right="666" Bottom="515" />
+		</Button>
+			
+	</Panel>
+	
+</UI>

@@ -1,0 +1,107 @@
+<?xml version="1.0" ?>
+<!-- Our to do list data -->
+<UI>
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	<KeyIn Item="FriendSelfSettingSign" />
+	<Panel Name="FriendSelfSettingPanel" Hide="0" X="300" Y="100" Image="Data\interface0007_main_D2.tga" Left="10" Top="9"
+		Right="279" Bottom="328" DetectImage="1" LuaRButtonUp="CloseFriendSelfSettingMenuLua" Drag="1"
+		LuaKeyChar="CloseFriendSelfSettingMenuLua" 
+		DragLeft="0" DragTop="0" DragRight="269" DragBottom="319">
+		
+		<AniIcon Name="FriendSelfSettingIcon" Image ="facechatL00000a.ent" X="211" Y="37" Rotation = "0" 
+			AnimationIndex = "0" Loop = "1" Align = "0" Hide="0"  Detect = "1"></AniIcon>
+			
+		<StaticText Name="FriendSelfSettingID" X="80" Y="40" Width="85" Height="20"  Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			123456789
+		</StaticText>
+		<StaticText Name="FriendSelfSettingName" X="80" Y="67" Width="85" Height="20"  Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			無雙無雙無雙
+		</StaticText>
+
+		<Button Name="CloseFriendSelfSettingMenu" Image="Data\interface0007_main_D.tga" X="238" Y="8" LuaLButtonUp="CloseFriendSelfSettingMenuLua" >
+			<ButtonRect State="0" Left="151" Top="9" Right="173" Bottom="25" />
+			<ButtonRect State="1" Left="176" Top="9" Right="198" Bottom="25" />
+			<ButtonRect State="2" Left="201" Top="9" Right="223" Bottom="25" />
+		</Button>
+		
+		<Button Name="FriendSelfSettingChangeIcon" Image="Data\interface0007_main_D2.tga" X="195" Y="83" LuaLButtonUp="OpenChangeIconLua" >
+			<ButtonRect State="0" Left="11" Top="400" Right="78" Bottom="419" />
+			<ButtonRect State="1" Left="11" Top="423" Right="78" Bottom="442" />
+			<ButtonRect State="2" Left="11" Top="446" Right="78" Bottom="465" />
+		</Button>
+		
+		<Button Name="FriendSelfSettingConfirm" Image="Data\interface0007_main_D2.tga" X="98" Y="290" LuaLButtonUp="FriendSelfSettingConfirmLua" >
+			<ButtonRect State="0" Left="119" Top="354" Right="196" Bottom="373" />
+			<ButtonRect State="1" Left="119" Top="377" Right="196" Bottom="396" />
+			<ButtonRect State="2" Left="119" Top="400" Right="196" Bottom="419" />
+		</Button>
+		
+		<Button Name="FriendSelfSettingCancel" Image="Data\interface0007_main_D2.tga" X="183" Y="290" LuaLButtonUp="CloseFriendSelfSettingMenuLua">
+			<ButtonRect State="0" Left="204" Top="354" Right="281" Bottom="373" />
+			<ButtonRect State="1" Left="204" Top="377" Right="281" Bottom="395" />
+			<ButtonRect State="2" Left="204" Top="400" Right="281" Bottom="419" />
+		</Button>
+		
+		<Button Name = "FriendSelfSettingStateChange" Image="Data\interface0007_main_D2.tga" X="10" Y="263" LuaLButtonUp="SelfSettingReplyChange">
+			<ButtonRect State="0" Left="64" Top="498" Right="113" Bottom="514" />
+			<ButtonRect State="1" Left="12" Top="498" Right="61" Bottom="514" />
+			<ButtonRect State="2" Left="116" Top="498" Right="165" Bottom="514" />
+		</Button>
+		
+		<UIImage Name = "FriendSelfSettingOnline" Image="Data\interface0007_main_D2.tga" X="10" Y="264" Left="12" Top="541" Right="61" Bottom="554" NotDetected="1">
+		</UIImage>
+		
+		<UIImage Name = "FriendSelfSettingOffline" Image="Data\interface0007_main_D2.tga" X="10" Y="263" Left="12" Top="520" Right="61" Bottom="534"  Hide = "1" NotDetected="1">
+		</UIImage>
+		
+		<!--<CheckBox Name = "FriendSelfSettingOffline" Image="Data\interface0007_main_D2.tga" X="205" Y="186"  LuaLButtonDown="FriendListGroup1Lua">
+			<CheckBoxRect Index="0" Left="32" Top="519" Right="92" Bottom="536" />
+			<CheckBoxRect Index="1" Left="32" Top="519" Right="92" Bottom="536" />
+			<CheckBoxRect Index="2" Left="94" Top="519" Right="154" Bottom="536" />
+		</CheckBox>-->
+		
+		<!--
+		<EditBox Expand="1" Name="FriendSelfSettingSign" X="15" Y="116" Row="4" Column="16" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			LIGHTColor="FF000000" Next="FriendSelfSettingOfflineReply" Prev="FriendSelfSettingOfflineReply" Limit="50"  Width = "190"/>
+		-->
+			
+		<ChatPanel Name="FriendSelfSettingSign" Edit="1" X="15" Y="116" Width="230" Height="64" ContinueRun="0" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" FillColor="7F0000FF" DisableScroll="1" Limit="50" UseEnter="1" MaxLine="4"
+			Next="FriendSelfSettingOfflineReply" Prev="FriendSelfSettingOfflineReply" 
+			>
+		</ChatPanel>
+			
+		<!--
+		<EditBox Expand="1" Name="FriendSelfSettingOfflineReply" X="15" Y="208" Row="3" Column="16" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			LIGHTColor="FF000000" Next="FriendSelfSettingSign" Prev="FriendSelfSettingSign" Limit="48"  Width = "190"/>
+		-->
+			
+		<ChatPanel Name="FriendSelfSettingOfflineReply" Edit="1" X="15" Y="208" Width="230" Height="48" ContinueRun="0" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" FillColor="7F0000FF" DisableScroll="1" Limit="48" UseEnter="1" MaxLine="3"
+			Next="FriendSelfSettingSign" Prev="FriendSelfSettingSign" 
+			>
+		</ChatPanel>
+			
+		<CheckBox Name = "FriendSelfSettingAutoSave" Image="Data\interface0007_main_D2.tga" X="141" Y="263"  LuaLButtonDown="FriendSelfSettingAutoSaveLua">
+			<CheckBoxRect Index="0" Left="151" Top="272" Right="168" Bottom="289" />
+			<CheckBoxRect Index="1" Left="151" Top="272" Right="168" Bottom="289" />
+			<CheckBoxRect Index="2" Left="94" Top="472" Right="111" Bottom="489" />
+		</CheckBox>
+		</Panel>
+		
+		<Panel Name="FriendSelfSettingPopPanel" X="300" Y="100" Image="Data\interface0007_main_D2.tga" Left="172" Top="496"
+		Right="220" Bottom="534" DetectImage="1" Hide = "1">
+			<Button Name = "FriendSelfSettingStateChangeOnline" Image="Data\interface0007_main_D2.tga" X="10" Y="4" LuaLButtonUp="SelfSettingReplyChangeOnline">
+				<ButtonRect State="0" Left="18" Top="541" Right="46" Bottom="554" />
+				<ButtonRect State="1" Left="70" Top="541" Right="98" Bottom="554" />
+				<ButtonRect State="2" Left="122" Top="541" Right="150" Bottom="554" />
+			</Button>
+		
+			<Button Name = "FriendSelfSettingStateChangeOffline" Image="Data\interface0007_main_D2.tga" X="10" Y="20" LuaLButtonUp="SelfSettingReplyChangeOffline">
+				<ButtonRect State="0" Left="18" Top="520" Right="46" Bottom="534" />
+				<ButtonRect State="1" Left="70" Top="520" Right="98" Bottom="534" />
+				<ButtonRect State="2" Left="122" Top="520" Right="150" Bottom="534" />
+			</Button>
+		</Panel>
+</UI>
+

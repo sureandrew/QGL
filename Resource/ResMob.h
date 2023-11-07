@@ -1,0 +1,131 @@
+#pragma once
+#ifndef _RESOURCE_MOB_H_
+#define _RESOURCE_MOB_H_
+
+struct MobData
+{
+	UInt32 mob_id;
+	UInt8 mob_type;    // according to adjust the ability of the mob, it donesn't mean this mob is a boss or not, please use the other variable "boss" to check the mob is boss or not!!!!!
+	TCHAR pre_name[20];
+	TCHAR mid_name[20];
+	UInt16 pos_name;
+	Boolean bFaction;
+	UInt8 race;
+	UInt8 cclass;
+	UInt8 faction;
+	UInt8 sex;
+	Int32 goodness;
+	Boolean boss;
+	UInt8 elite_type;
+	UInt16 ai_type;
+	UInt8 element;
+	UInt8 partner_type;
+	UInt16 req_lv;
+	UInt8 talent;
+	UInt8 potential;
+	UInt16 lv_d;
+	UInt16 lv_u;
+	UInt16 STA_base_d;
+	UInt16 STA_base_u;
+	UInt16 SPR_base_d;
+	UInt16 SPR_base_u;
+	UInt16 STR_base_d;
+	UInt16 STR_base_u;
+	UInt16 CON_base_d;
+	UInt16 CON_base_u;
+	UInt16 AGI_base_d;
+	UInt16 AGI_base_u;
+	float grow_d;
+	float grow_u;
+	UInt16 HP_native_d;
+	UInt16 HP_native_u;
+	UInt16 SP_native_d;
+	UInt16 SP_native_u;
+	UInt16 ATK_native_d;
+	UInt16 ATK_native_u;
+	UInt16 DEF_native_d;
+	UInt16 DEF_native_u;
+	UInt16 SPD_native_d;
+	UInt16 SPD_native_u;
+	UInt16 POW_native_d;
+	UInt16 POW_native_u;
+	UInt16 HIT_native_d;
+	UInt16 HIT_native_u;
+	UInt16 EVA_native_d;
+	UInt16 EVA_native_u;
+	TCHAR model[32];
+	TCHAR color[32];
+	UInt32 Health_f;
+	UInt16 skill_file_id;
+	UInt8 rare;
+	UInt16 TimeLimit;
+	UInt8 TimeLimitType;
+	UInt8 soulbound;
+	UInt8 unique;
+	UInt16 outlookColor;
+
+	MobData()
+		: mob_id(C_UINT32(0))
+		, mob_type(C_UINT8(0))
+		, pos_name(C_UINT16(0))
+		, bFaction(BOOLEAN_FALSE)
+		, race(C_UINT8(0))
+		, cclass(C_UINT8(0))
+		, faction(C_UINT8(0))
+		, sex(C_UINT8(0))
+		, goodness(C_INT32(0))
+		, boss(BOOLEAN_FALSE)
+		, elite_type(C_UINT8(0))
+		, ai_type(C_UINT16(0))
+		, element(C_UINT8(0))
+		, partner_type(C_UINT8(0))
+		, req_lv(C_UINT16(0))
+		, talent(C_UINT8(0))
+		, potential(C_UINT8(0))
+		, lv_d(C_UINT16(0))
+		, lv_u(C_UINT16(0))
+		, STA_base_d(C_UINT16(0))
+		, STA_base_u(C_UINT16(0))
+		, SPR_base_d(C_UINT16(0))
+		, SPR_base_u(C_UINT16(0))
+		, STR_base_d(C_UINT16(0))
+		, STR_base_u(C_UINT16(0))
+		, CON_base_d(C_UINT16(0))
+		, CON_base_u(C_UINT16(0))
+		, AGI_base_d(C_UINT16(0))
+		, AGI_base_u(C_UINT16(0))
+		, grow_d(0.0f)
+		, grow_u(0.0f)
+		, HP_native_d(C_UINT16(0))
+		, HP_native_u(C_UINT16(0))
+		, SP_native_d(C_UINT16(0))
+		, SP_native_u(C_UINT16(0))
+		, ATK_native_d(C_UINT16(0))
+		, ATK_native_u(C_UINT16(0))
+		, DEF_native_d(C_UINT16(0))
+		, DEF_native_u(C_UINT16(0))
+		, SPD_native_d(C_UINT16(0))
+		, SPD_native_u(C_UINT16(0))
+		, POW_native_d(C_UINT16(0))
+		, POW_native_u(C_UINT16(0))
+		, HIT_native_d(C_UINT16(0))
+		, HIT_native_u(C_UINT16(0))
+		, EVA_native_d(C_UINT16(0))
+		, EVA_native_u(C_UINT16(0))
+		, Health_f(C_UINT32(0))
+		, skill_file_id(C_UINT16(0))
+		, rare(C_UINT8(0))
+		, TimeLimit(C_UINT16(0))
+		, TimeLimitType(C_UINT8(0))
+		, soulbound(C_UINT8(0))
+		, unique(C_UINT8(0))
+		, outlookColor(C_UINT16(0))
+	{
+		ZeroMemory(pre_name, 20*sizeof(TCHAR));
+		ZeroMemory(mid_name, 20*sizeof(TCHAR));
+		ZeroMemory(model, 32*sizeof(TCHAR));
+		ZeroMemory(color, 32*sizeof(TCHAR));
+	}
+};
+
+#endif // _RESOURCE_MOB_H_

@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" ?>
+<UI>
+	<ID Name="PartnerDetail" />
+	<Font Name="Data\simsun.ttc" Width="12" Height="12" />
+	<Panel Name="PartnerDetailPanel" Image="Data\interface0012_main_F2.tga" X="33" Y="73" 
+		Left="4" Top="4" Right="318" Bottom="430" NotDetected="0" DetectImage="1"
+		LuaRButtonUp="ClosePartnerDetail" LuaKeyChar="ClosePartnerDetail">
+		
+		<Button Name="PartnerDetailPanelClose" Image="Data\interface0005_main_B.tga" X="296" Y="4" LuaLButtonDown="ClosePartnerDetail">
+			<ButtonRect State="0" Left="335" Top="476" Right="349" Bottom="489" />
+			<ButtonRect State="1" Left="352" Top="476" Right="366" Bottom="489" />
+			<ButtonRect State="2" Left="369" Top="476" Right="383" Bottom="489" />
+		</Button>
+			
+		<AniIcon Name="PartnerDetailModel"  X="-180" Y="-195" Rotation = "1" AnimationIndex = "0" Loop = "1" Align = "0" Hide="0" />
+			
+		<LinerImage Name="PartnerDetailHPBar" X="186" Y="88" Image="Data\interface0012_main_F2.tga" Left="322" Top="49"
+			Right="328" Bottom="62" LineWidth="116" BaseWidth="116" Hide="0" Denumerator="100" Numerator="50" />
+		<LinerImage Name="PartnerDetailSPBar" X="186" Y="106" Image="Data\interface0012_main_F2.tga" Left="330" Top="49"
+			Right="336" Bottom="62" LineWidth="116" BaseWidth="116" Hide="0" Denumerator="100" Numerator="50" />
+
+		<StaticText Name="PartnerDetailName" X="186" Y="15" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="116" Height="20" NotDetected="1" Align="Center">
+			9999
+		</StaticText>
+		
+		<StaticText Name="PartnerDetailLevel" X="186" Y="35" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="116" Height="20" NotDetected="1" Align="Center">
+			9999
+		</StaticText>
+		
+		<StaticText Name="PartnerDetailGoodness" X="186" Y="53" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="116" Height="20" NotDetected="1" Align="Center">
+			9999
+		</StaticText>
+		
+		<StaticText Name="PartnerDetailLovely" X="186" Y="71" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="116" Height="20" NotDetected="1" Align="Center">
+			9999
+		</StaticText>
+		
+		<StaticText Name="PartnerDetailHPText" X="186" Y="89" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="116" Height="20" NotDetected="1" Align="Center">
+			9999
+		</StaticText>
+		
+		<StaticText Name="PartnerDetailSPText" X="186" Y="107" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="116" Height="20" NotDetected="1" Align="Center">
+			9999
+		</StaticText>
+		
+		<StaticText Name="PartnerDetailHealth" X="186" Y="125" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="116" Height="20" NotDetected="1" Align="Center">
+			9999
+		</StaticText>
+		
+		<StaticText Name="PartnerDetailDay" X="214" Y="143" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="88" Height="20" NotDetected="1" Align="Center">
+			9999
+		</StaticText>
+		
+		
+		<StaticText Name="PartnerDetailATK" X="46" Y="170" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="48" Height="20" NotDetected="1" Align="Center">
+			9999
+		</StaticText>
+		
+		<StaticText Name="PartnerDetailDEF" X="46" Y="186" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="48" Height="20" NotDetected="1" Align="Center">
+			9999
+		</StaticText>
+		
+		<StaticText Name="PartnerDetailHIT" X="46" Y="202" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="48" Height="20" NotDetected="1" Align="Center">
+			9999
+		</StaticText>
+		
+		<StaticText Name="PartnerDetailEVA" X="46" Y="218" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="48" Height="20" NotDetected="1" Align="Center">
+			9999
+		</StaticText>
+		
+		<StaticText Name="PartnerDetailPWD" X="46" Y="234" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="48" Height="20" NotDetected="1" Align="Center">
+			9999
+		</StaticText>
+		
+		<StaticText Name="PartnerDetailSPD" X="46" Y="250" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="48" Height="20" NotDetected="1" Align="Center">
+			9999
+		</StaticText>
+		
+		<StaticText Name="PartnerDetailReqLv" X="71" Y="282" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="30" Height="20" NotDetected="1" Align="Center">
+			9999
+		</StaticText>
+	
+		
+		<StaticText Name="PartnerDetailSTR" X="134" Y="170" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="48" Height="20" NotDetected="1" Align="Center">
+			9999
+		</StaticText>
+		
+		<StaticText Name="PartnerDetailCON" X="134" Y="186" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="48" Height="20" NotDetected="1" Align="Center">
+			9999
+		</StaticText>
+		
+		<StaticText Name="PartnerDetailSTA" X="134" Y="202" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="48" Height="20" NotDetected="1" Align="Center">
+			9999
+		</StaticText>
+		
+		<StaticText Name="PartnerDetailAGI" X="134" Y="218" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="48" Height="20" NotDetected="1" Align="Center">
+			9999
+		</StaticText>
+		
+		<StaticText Name="PartnerDetailSPR" X="134" Y="234" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="48" Height="20" NotDetected="1" Align="Center">
+			9999
+		</StaticText>
+				
+		<StaticText Name="PartnerDetailPOT" X="134" Y="250" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="48" Height="20" NotDetected="1" Align="Center">
+			9999
+		</StaticText>
+	
+		
+		<StaticText Name="PartnerDetailIntHIT" X="250" Y="170" Row="1" Column="5" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="48" Height="20" NotDetected="1" Align="Center">
+			9999
+		</StaticText>
+		
+		<StaticText Name="PartnerDetailIntEVA" X="250" Y="186" Row="1" Column="5" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="48" Height="20" NotDetected="1" Align="Center">
+			9999
+		</StaticText>
+		
+		<StaticText Name="PartnerDetailIntPWD" X="250" Y="202" Row="1" Column="5" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="48" Height="20" NotDetected="1" Align="Center">
+			9999
+		</StaticText>
+		
+		<StaticText Name="PartnerDetailIntSPD" X="250" Y="218" Row="1" Column="5" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="48" Height="20" NotDetected="1" Align="Center">
+			9999
+		</StaticText>
+		
+		<StaticText Name="PartnerDetailIntHP" X="250" Y="234" Row="1" Column="5" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="48" Height="20" NotDetected="1" Align="Center">
+			9999
+		</StaticText>
+		
+		<StaticText Name="PartnerDetailIntSP" X="250" Y="250" Row="1" Column="5" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="48" Height="20" NotDetected="1" Align="Center">
+			9999
+		</StaticText>
+		
+		<StaticText Name="PartnerDetailIntATK" X="250" Y="266" Row="1" Column="5" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="48" Height="20" NotDetected="1" Align="Center">
+			9999
+		</StaticText>
+		
+		<StaticText Name="PartnerDetailIntDEF" X="250" Y="282" Row="1" Column="5" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="48" Height="20" NotDetected="1" Align="Center">
+			9999
+		</StaticText>
+		
+		<StaticText Name="PartnerDetailGrow" X="250" Y="298" Row="1" Column="5" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="48" Height="20" NotDetected="1" Align="Center">
+			9999
+		</StaticText>
+		
+		<StaticText Name="PartnerDetailGrowLevel0" X="223" Y="298" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="60" NotDetected="1" Align="Left" Hide="1">
+		极品
+		</StaticText>
+		<StaticText Name="PartnerDetailGrowLevel1" X="223" Y="298" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="60" NotDetected="1" Align="Left" Hide="1">
+		上品
+		</StaticText>
+		<StaticText Name="PartnerDetailGrowLevel2" X="223" Y="298" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="60" NotDetected="1" Align="Left" Hide="1">
+		中品
+		</StaticText>
+		<StaticText Name="PartnerDetailGrowLevel3" X="223" Y="298" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="60" NotDetected="1" Align="Left" Hide="1">
+		下品
+		</StaticText>
+		<StaticText Name="PartnerDetailGrowLevel4" X="223" Y="298" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="60" NotDetected="1" Align="Left" Hide="1">
+		山寨
+		</StaticText>
+		
+		<UIImage Name="PartnerDetailRaceType01" X="150" Y="282" Image="Data\interface0012_main_F2.tga" Left="426" Top="98" Right="443" Bottom="119" Hide="1" />
+		<UIImage Name="PartnerDetailRaceType02" X="150" Y="282" Image="Data\interface0012_main_F2.tga" Left="400" Top="98" Right="417" Bottom="119" Hide="1"/>
+		<UIImage Name="PartnerDetailRaceType03" X="150" Y="282" Image="Data\interface0012_main_F2.tga" Left="374" Top="98" Right="391" Bottom="119" Hide="1"/>
+		<UIImage Name="PartnerDetailRaceType04" X="150" Y="282" Image="Data\interface0012_main_F2.tga" Left="348" Top="98" Right="365" Bottom="119" Hide="1"/>
+		<UIImage Name="PartnerDetailRaceType05" X="150" Y="282" Image="Data\interface0012_main_F2.tga" Left="322" Top="98" Right="339" Bottom="119" Hide="1"/>
+		<UIImage Name="PartnerDetailRaceType11" X="150" Y="282" Image="Data\interface0012_main_F2.tga" Left="453" Top="98" Right="471" Bottom="119" Hide="1"/>
+		
+		<UIImage Name="PartnerDetailRaceType06" X="150" Y="282" Image="Data\interface0012_main_F2.tga" Left="426" Top="73" Right="443" Bottom="91" Hide="1"/>
+		<UIImage Name="PartnerDetailRaceType07" X="150" Y="282" Image="Data\interface0012_main_F2.tga" Left="400" Top="73" Right="417" Bottom="91" Hide="1"/>
+		<UIImage Name="PartnerDetailRaceType08" X="150" Y="282" Image="Data\interface0012_main_F2.tga" Left="374" Top="73" Right="391" Bottom="91" Hide="1"/>
+		<UIImage Name="PartnerDetailRaceType09" X="150" Y="282" Image="Data\interface0012_main_F2.tga" Left="348" Top="73" Right="365" Bottom="91" Hide="1"/>
+		<UIImage Name="PartnerDetailRaceType10" X="150" Y="282" Image="Data\interface0012_main_F2.tga" Left="322" Top="73" Right="339" Bottom="91" Hide="1"/>
+		
+		<AniIcon Name="PartnerDetailNormalSkill00" X="30" Y="337" Image=""  AutoDelete="0" Tips="ShortCut 1" TimeOutCount="50" LuaTimeOut="DefaultTips" InsertToEventList = "1" Detect = "1"  Hide="1"/>
+		<AniIcon Name="PartnerDetailNormalSkill01" X="67" Y="337" Image=""  AutoDelete="0" Tips="ShortCut 1" TimeOutCount="50" LuaTimeOut="DefaultTips" InsertToEventList = "1" Detect = "1"  Hide="1"/>
+		<AniIcon Name="PartnerDetailNormalSkill02" X="104" Y="337" Image=""  AutoDelete="0" Tips="ShortCut 1" TimeOutCount="50" LuaTimeOut="DefaultTips" InsertToEventList = "1" Detect = "1"  Hide="1"/>
+		<AniIcon Name="PartnerDetailNormalSkill03" X="141" Y="337" Image=""  AutoDelete="0" Tips="ShortCut 1" TimeOutCount="50" LuaTimeOut="DefaultTips" InsertToEventList = "1" Detect = "1"  Hide="1"/>
+		<AniIcon Name="PartnerDetailNormalSkill04" X="178" Y="337" Image=""  AutoDelete="0" Tips="ShortCut 1" TimeOutCount="50" LuaTimeOut="DefaultTips" InsertToEventList = "1" Detect = "1"  Hide="1"/>
+		<AniIcon Name="PartnerDetailNormalSkill05" X="215" Y="337" Image=""  AutoDelete="0" Tips="ShortCut 1" TimeOutCount="50" LuaTimeOut="DefaultTips" InsertToEventList = "1" Detect = "1"  Hide="1"/>
+		<AniIcon Name="PartnerDetailNormalSkill06" X="252" Y="337" Image=""  AutoDelete="0" Tips="ShortCut 1" TimeOutCount="50" LuaTimeOut="DefaultTips" InsertToEventList = "1" Detect = "1"  Hide="1"/>
+		
+		<AniIcon Name="PartnerDetailSpecialSkill00" X="30" Y="380" Image=""  AutoDelete="0" Tips="ShortCut 1" TimeOutCount="50" LuaTimeOut="DefaultTips" InsertToEventList = "1" Detect = "1"  Hide="1"/>
+		<AniIcon Name="PartnerDetailSpecialSkill01" X="67" Y="380" Image=""  AutoDelete="0" Tips="ShortCut 1" TimeOutCount="50" LuaTimeOut="DefaultTips" InsertToEventList = "1" Detect = "1"  Hide="1"/>
+		<AniIcon Name="PartnerDetailSpecialSkill02" X="104" Y="380" Image=""  AutoDelete="0" Tips="ShortCut 1" TimeOutCount="50" LuaTimeOut="DefaultTips" InsertToEventList = "1" Detect = "1"  Hide="1"/>
+		<AniIcon Name="PartnerDetailSpecialSkill03" X="141" Y="380" Image=""  AutoDelete="0" Tips="ShortCut 1" TimeOutCount="50" LuaTimeOut="DefaultTips" InsertToEventList = "1" Detect = "1"  Hide="1"/>
+		<AniIcon Name="PartnerDetailSpecialSkill04" X="178" Y="380" Image=""  AutoDelete="0" Tips="ShortCut 1" TimeOutCount="50" LuaTimeOut="DefaultTips" InsertToEventList = "1" Detect = "1"  Hide="1"/>
+	
+		
+		<StaticText Name="PartnerDetailCultivation" X="46" Y="266" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="48" Height="20" NotDetected="1" Align="Center">
+			9999
+		</StaticText>
+		<StaticText Name="PartnerDetailPractice" X="134" Y="266" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="48" Height="20" NotDetected="1" Align="Center">
+			9999
+		</StaticText>
+		
+	</Panel>
+</UI>

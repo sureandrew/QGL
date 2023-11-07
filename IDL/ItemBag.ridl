@@ -1,0 +1,56 @@
+//-- Config
+config
+{
+	SubPath="Logic/";
+	ClassID=23000;
+	StartID=23000;
+	EndID  =23999;
+}
+
+//-- include
+
+//-- object class
+class ItemBag
+{
+	//-- object attributes
+	owner_id {		UInt32 owner_id;		};
+	
+	//--- RPC method (call Map Service even in Battle)
+public:
+	MoveItem(UInt8 srcIdx, UInt8 dstIdx);
+	DropItem(UInt8 bagIndex, UInt8 count);
+	UseItem(UInt8 bagIndex, UInt32 itemId, Boolean bScript, UInt32 partnerID, UInt32 pet_uid);
+	EquipItem(UInt8 srcIdx, UInt8 dstIdx);
+
+	BuyItemFromShop(UInt32 itemId, Int32 shopId, UInt8 slot, UInt16 count);
+	SellItemToShop(Int32 shopId, UInt8 bagIndex, UInt8 count);
+
+	MarkMixStartTime(Boolean startOrCancel);
+	MakeItemMix(UInt32 mixProductID, UInt32 mixShopID, UInt32Vector itemUids, UInt8Vector stacks);
+	MixItem(UInt32 mixShopID, UInt32Vector itemUids, UInt8Vector stacks, UInt8 removeGemIndex);
+	IdentifyItem(UInt8 ItemSlot, UInt8 IdentifyItemSlot);
+	PutToWareHouse(UInt32 item_uid, UInt8 stack, UInt8 desIndex);
+	GetFromWareHouse(UInt32 item_uid, UInt8 stack, UInt8 desIndex);
+	WareHouseItemMove(UInt8 srcIndex, UInt8 desIndex);
+	BuyItemFromBusinessShop(UInt32 itemId, Int16 shopId, UInt16 count);
+	SellItemToBusinessShop(Int16 shopId, UInt8 bagIndex, UInt16 count);
+
+	UseFastFoodItem(UInt8 useType,UInt32 partnerID);
+	Jpack(UInt8 bagType);
+	CleanWarehouse(UInt8 page);
+	//--- callback
+	CB_Error(UInt32 errCode, String errMsg);
+	CB_SyncItems(NetGroup *items);
+	CB_ItemCount(UInt8 bagIndex, UInt8 stack, UInt8 remain);
+	CB_BuytItemSuccess(UInt32 itemId, UInt32 cost);
+	CB_SelltItemSuccess(UInt32 itemId, UInt32 getMoney);
+	CB_ItemUseResult(Boolean bRes);
+	CB_EqItemGiven(UInt32Vector givenList);
+	CB_MarkMixStartTime(Boolean startOrCancel);
+	CB_MakeItemMix(Boolean success, UInt8 msgCode, UInt32Vector item_uid, UInt8Vector reduceStacks);
+	CB_MixItem(Boolean success, UInt8 msgCode);
+	CB_IdentifyItem(UInt8 index, UInt8 itemSlot, UInt8 identifyItemSlot);
+	CB_WareHouse(UInt8 processIndex, UInt8 msgIndex);
+	CB_BuyItemFromBusinessShop(UInt32 itemId, UInt32 cost);
+	CB_SellItemToBusinessShop(UInt32 itemId, UInt32 getMoney, Boolean bEnough);
+}

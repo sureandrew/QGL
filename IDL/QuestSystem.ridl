@@ -1,0 +1,34 @@
+//-- Config
+config
+{
+	SubPath="Logic/";
+	ClassID=36000;
+	StartID=36000;
+	EndID  =36999;
+}
+
+//-- include
+
+//-- object class
+class QuestSystem
+{
+	//-- object attributes
+
+	//-- method
+public:
+	CancelQuest(UInt16 quest_id);
+
+	//-- callback
+	CB_QuestLogLst(NetGroup* questLogGrp, NetGroup* questTypeGrp);
+	CB_UpdateQuests(NetGroup* grp);
+	CB_AddQuestLogs(NetGroup* questLogGrp);
+	CB_RemoveQuestLogs(UInt16Vector quest_ids);
+	CB_AddQuestTypes(NetGroup* questTypeGrp);
+	CB_RemoveQuestTypes(UInt16Vector gtype_ids);
+	CB_AddQuestHints(RPCNetIDVector npcIds, UInt16Vector questIds);
+	CB_RemoveQuestHints(RPCNetIDVector npcIds, UInt16Vector questIds);
+	CB_AddJournals(NetGroup* grp);
+	CB_RemoveJournals(UInt16Vector journal_ids);
+	CB_QuestLogFlagChangeLst(UInt16Vector questIDs, UInt32Vector questFlags, UInt16Vector Flagdel_ids);
+	CB_QuestLogFlagLoadLst(UInt16Vector questIDs, UInt32Vector questFlags);
+}

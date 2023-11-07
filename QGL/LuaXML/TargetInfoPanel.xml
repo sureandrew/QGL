@@ -1,0 +1,112 @@
+<?xml version="1.0" ?>
+<!-- Our to do list data -->
+<UI>
+	<ID Name="TargetDetailInfoPanel" />
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	<Panel Name="TargetDetailInfoPanel" Image="Data\interface0010_main_E.tga" X="400" Y="10" 
+			Left="354" Top="189" Right="690" Bottom="545" LuaRButtonUp="CloseTargetInfoPanel" LuaKeyChar="CloseTargetInfoPanel"
+			Drag="1" DragLeft="0" DragTop="0" DragRight="337" DragBottom="356" DetectImage="1"
+		>
+		<AniIcon Name="TargetInfo3DFace" Hide="0" X="78" Y="85" Image="" AutoDelete="0"  Loop = "1" Align = "1" Rotation="1"/>
+		
+		<Button Name="TargetInfoGetEquip" Image="Data\interface0010_main_E.tga" X="7" Y="275" LuaLButtonUp="TargetInfoGetEquipLua">
+			<ButtonRect State="0" Left="361" Top="600" Right="414" Bottom="635" />
+			<ButtonRect State="1" Left="421" Top="600" Right="474" Bottom="635" />
+			<ButtonRect State="2" Left="481" Top="600" Right="534" Bottom="635" />
+			<ButtonRect State="3" Left="541" Top="600" Right="594" Bottom="635" />
+		</Button>
+		
+		<Button Name="TargetInfoUpdate" Image="Data\interface0010_main_E.tga" X="7" Y="320" LuaLButtonUp="TargetInfoUpdateLua">
+			<ButtonRect State="0" Left="696" Top="189" Right="749" Bottom="208" />
+			<ButtonRect State="1" Left="696" Top="214" Right="749" Bottom="233" />
+			<ButtonRect State="2" Left="696" Top="239" Right="749" Bottom="258" />
+			<ButtonRect State="3" Left="696" Top="264" Right="749" Bottom="283" />
+		</Button>
+		
+		<Button Name="TargetInfoPrivate" Image="Data\interface0010_main_E.tga" X="64" Y="320" LuaLButtonUp="TargetInfoPrivateLua">
+			<ButtonRect State="0" Left="754" Top="189" Right="807" Bottom="208" />
+			<ButtonRect State="1" Left="754" Top="214" Right="807" Bottom="233" />
+			<ButtonRect State="2" Left="754" Top="239" Right="807" Bottom="258" />
+			<ButtonRect State="3" Left="754" Top="264" Right="807" Bottom="283" />
+		</Button>
+		
+		<Button Name="TargetInfoAddFriend" Image="Data\interface0010_main_E.tga" X="121" Y="320" LuaLButtonUp="TargetInfoAddFriendLua">
+			<ButtonRect State="0" Left="812" Top="189" Right="884" Bottom="208" />
+			<ButtonRect State="1" Left="812" Top="214" Right="884" Bottom="233" />
+			<ButtonRect State="2" Left="812" Top="239" Right="884" Bottom="258" />
+			<ButtonRect State="3" Left="812" Top="264" Right="884" Bottom="283" />
+		</Button>
+		
+		<Button Name="TargetInfoChangeGrp" Image="Data\interface0010_main_E.tga" X="121" Y="320" LuaLButtonUp="TargetInfoChangeGrpLua">
+			<ButtonRect State="0" Left="742" Top="29" Right="814" Bottom="48" />
+			<ButtonRect State="1" Left="742" Top="54" Right="814" Bottom="73" />
+			<ButtonRect State="2" Left="742" Top="79" Right="814" Bottom="98" />
+			<ButtonRect State="3" Left="742" Top="104" Right="814" Bottom="123" />
+		</Button>
+		
+		<Button Name="TargetInfoBreak" Image="Data\interface0010_main_E.tga" X="197" Y="320" LuaLButtonUp="TargetInfoBreakLua">
+			<ButtonRect State="0" Left="889" Top="189" Right="942" Bottom="208" />
+			<ButtonRect State="1" Left="889" Top="214" Right="942" Bottom="233" />
+			<ButtonRect State="2" Left="889" Top="239" Right="942" Bottom="258" />
+			<ButtonRect State="3" Left="889" Top="264" Right="942" Bottom="283" />
+		</Button>
+		
+		<Button Name="TargetInfoBlackList" Image="Data\interface0010_main_E.tga" X="254" Y="320" LuaLButtonUp="TargetInfoBlackListLua">
+			<ButtonRect State="0" Left="947" Top="189" Right="1019" Bottom="208" />
+			<ButtonRect State="1" Left="947" Top="214" Right="1019" Bottom="233" />
+			<ButtonRect State="2" Left="947" Top="239" Right="1019" Bottom="258" />
+			<ButtonRect State="3" Left="947" Top="264" Right="1019" Bottom="283" />
+		</Button>
+		
+		<Button Name="TargetInfoClose" Image="Data\interface0010_main_E.tga" X="307" Y="8" LuaLButtonUp="CloseTargetInfoPanel">
+			<ButtonRect State="0" Left="351" Top="7" Right="374" Bottom="23" />
+			<ButtonRect State="1" Left="376" Top="7" Right="398" Bottom="23" />
+			<ButtonRect State="2" Left="401" Top="7" Right="423" Bottom="23" />
+			<ButtonRect State="3" Left="401" Top="7" Right="423" Bottom="23" />
+		</Button>
+		
+		
+		<StaticText Name="TargetInfoPanelName" X="72" Y="194" Row="1" Column="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0"  Align="Center" Width="120" Height="20">	
+		不败之娘
+		</StaticText>
+		
+		<StaticText Name="TargetInfoID" X="80" Y="220" Row="1" Column="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center" Width="120" Height="20">	
+		123
+		</StaticText>
+		
+		<StaticText Name="TargetInfoTitle" X="190" Y="34" Row="1" Column="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center" Width="135" Height="20">	
+		无
+		</StaticText>
+		
+		<StaticText Name="TargetInfoLevel" X="190" Y="60" Row="1" Column="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center" Width="135" Height="20">	
+		20
+		</StaticText>
+		
+		<StaticText Name="TargetInfoClass" X="190" Y="85" Row="1" Column="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center" Width="135" Height="20">	
+		玉郎
+		</StaticText>
+		
+		<StaticText Name="TargetInfoFaction" X="190" Y="111" Row="1" Column="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center" Width="135" Height="20">	
+		无
+		</StaticText>
+		
+		<StaticText Name="TargetInfoGuild" X="190" Y="138" Row="1" Column="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center" Width="135" Height="20">	
+		无
+		</StaticText>
+		<StaticText Name="TargetInfoFriendship" X="200" Y="165" Row="1" Column="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center" Width="126" Height="126">	
+		0
+		</StaticText>
+		
+		<StaticText Name="TargetInfoRelation" X="262" Y="196" Row="1" Column="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center" Width="60" Height="20">	
+		无
+		</StaticText>
+		
+		<StaticText Name="TargetInfoPKEnable" X="262" Y="220" Row="1" Column="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center" Width="60" Height="20">	
+		開
+		</StaticText>
+		
+		<ChatPanel Name="TargetInfoAbout" X="80" Y="245" Width="250" Height="60" ContinueRun = "1" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" FillColor="7F0000FF"  >
+		</ChatPanel>
+	</Panel>
+</UI>

@@ -1,0 +1,59 @@
+<?xml version="1.0" ?>
+<!-- Our to do list data -->
+<UI>
+	--<Font Name="Data\mingliu.ttc" Width="12" Height="12" />
+	--<Font Name="Data\DFGB5_Y9.TTC" Width="12" Height="12" />
+	<Font Name="Data\mingliu.ttc" Width="12" Height="12" />
+
+	<Panel Expand="1" Name="BetaMessageBox" X="210" Y="220" Image="Data\interface008_chat.tga" Hide="0"
+		Left="410" Top="9" Right="790" Bottom="22" 
+		LineRectLeft="410" LineRectTop="22" LineRectRight="790" LineRectBottom="39" LineCount="5" 
+		BottomRectLeft="410" BottomRectTop="119" BottomRectRight="790" BottomRectBottom="131"
+		LuaLButtonDown="AMBClickNext">
+
+		<ChatPanel Name="TalkMsgChat" X="14" Y="13" Width="350" Height="70" EdgeCode="SHADOW" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" FillColor="7F0000FF">
+		</ChatPanel>
+		
+		<Button Name="AMBUp" Image="Data\interface008_chat.tga" X="360" Y="10" Hide="1" LuaLButtonUp="AMBScrollUp">
+			<ButtonRect State="0" Left="361" Top="249" Right="375" Bottom="264" />
+			<ButtonRect State="1" Left="377" Top="249" Right="391" Bottom="264" />
+			<ButtonRect State="2" Left="393" Top="249" Right="407" Bottom="264" />
+		</Button>
+			
+		<Button Name="AMBDown" Image="Data\interface008_chat.tga" X="360" Y="105" Hide="1" LuaLButtonUp="AMBScrollDown">
+			<ButtonRect State="0" Left="361" Top="266" Right="375" Bottom="279" />
+			<ButtonRect State="1" Left="377" Top="266" Right="391" Bottom="279" />
+			<ButtonRect State="2" Left="393" Top="266" Right="407" Bottom="279" />
+		</Button>
+
+		<!--
+		<Button Name="AMBButtonNext" Image="Data\interface0016_begin_C.tga" X="10" Y="10" Hide="1" LuaLButtonUp="AMBNext">
+			<ButtonRect State="0" Left="389" Top="360" Right="481" Bottom="381" />
+			<ButtonRect State="1" Left="389" Top="386" Right="481" Bottom="407" />
+			<ButtonRect State="2" Left="389" Top="413" Right="481" Bottom="434" />
+		</Button>
+		-->
+	</Panel>
+
+	<!--
+	<Panel Name="BetaMessageBox" Image="Data\interface008_chat.tga" X="210" Y="220" 
+			Left="410" Top="8" Right="790" Bottom="132">
+		<ChatPanel Name="TalkMsgChat" X="14" Y="15" Width="350" Height="105" EdgeCode="SHADOW" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" FillColor="7F0000FF">
+		</ChatPanel>
+		
+		<Button Name="AMBUp" Image="Data\inerface0001_main.tga" X="360" Y="10" LuaLButtonUp="AMBScrollUp">
+			<ButtonRect State="0" Left="341" Top="417" Right="355" Bottom="426" />
+			<ButtonRect State="1" Left="357" Top="417" Right="371" Bottom="426" />
+			<ButtonRect State="2" Left="371" Top="417" Right="385" Bottom="426" />
+		</Button>
+			
+		<Button Name="AMBDown" Image="Data\inerface0001_main.tga" X="360" Y="105" LuaLButtonUp="AMBScrollDown">
+			<ButtonRect State="0" Left="341" Top="427" Right="355" Bottom="436" />
+			<ButtonRect State="1" Left="356" Top="427" Right="370" Bottom="436" />
+			<ButtonRect State="2" Left="371" Top="427" Right="385" Bottom="436" />
+		</Button>
+	</Panel>
+	-->
+</UI>

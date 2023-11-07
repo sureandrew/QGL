@@ -1,0 +1,27 @@
+//-- Config
+config
+{
+	SubPath="Logic/";
+	ClassID=61500;
+	StartID=61500;
+	EndID  =61999;
+}
+
+//-- include
+
+//-- object class
+class Generation: NetObject
+{
+     ids {	UInt32 uiRelatedId; };
+     info { String strNickName;
+			UInt8  ui8Class;
+			UInt16 ui16Level;
+			UInt32 uiOfflineTime;
+			UInt32 uiAccmulOrRecvExp;
+			UInt32 uiGiftPointOrHistAccm;
+     };
+     flag { BOOL bYoung; };
+}
+     
+     
+     

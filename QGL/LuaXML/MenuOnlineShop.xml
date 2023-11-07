@@ -1,0 +1,637 @@
+<?xml version="1.0" ?>
+<UI>
+	<ID Name="MenuOnlineShop" />
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	<Panel Name="OnlineShopPanel" Image="Data\interface0025_main_K.tga" X="20" Y="73" 
+		Left="4" Top="2" Right="575" Bottom="467" LuaRButtonUp="CloseOnlineShop" LuaKeyChar="CloseOnlineShop" DetectImage = "1"
+		Drag="1" DragLeft="0" DragTop="0" DragRight="571" DragBottom="465" 
+		LuaTimeOut="OnlineShopDetailPopupTimeOut" TimeOutCount="100">
+		
+		<Button Name="OnlineShopHotSale" Image="Data\interface0025_main_K.tga" X="152" Y="37" Tips="热卖商品"
+		              TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="OnlineShopShowHotSale" >
+			<ButtonRect State="0" Left="13" Top="473" Right="68" Bottom="494" />	
+			<ButtonRect State="1" Left="13" Top="525" Right="68" Bottom="546" />
+			<ButtonRect State="2" Left="13" Top="499" Right="68" Bottom="520" />
+			<ButtonRect State="3" Left="13" Top="499" Right="68" Bottom="520" />
+		</Button>	
+		
+		<Button Name="OnlineShopPartner" Image="Data\interface0025_main_K.tga" X="221" Y="37" Tips="同伴及同伴相关物品"
+		               TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="OnlineShopShowPartner" >
+			<ButtonRect State="0" Left="249" Top="473" Right="304" Bottom="494" />	
+			<ButtonRect State="1" Left="249" Top="525" Right="304" Bottom="546" />
+			<ButtonRect State="2" Left="249" Top="499" Right="304" Bottom="520" />
+			<ButtonRect State="3" Left="249" Top="499" Right="304" Bottom="520" />
+		</Button>	
+			
+		<Button Name="OnlineShopPet" Image="Data\interface0025_main_K.tga" X="288" Y="37" Tips="宠物及喂养宠物道具" 
+		              TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="OnlineShopShowPet" >
+			<ButtonRect State="0" Left="190" Top="473" Right="245" Bottom="494" />	
+			<ButtonRect State="1" Left="190" Top="525" Right="245" Bottom="546" />
+			<ButtonRect State="2" Left="190" Top="499" Right="245" Bottom="520" />
+			<ButtonRect State="3" Left="190" Top="499" Right="245" Bottom="520" />
+		</Button>	
+					
+		<Button Name="OnlineShopDiamond" Image="Data\interface0025_main_K.tga" X="357" Y="37" Tips="宝石物品" 
+						TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="OnlineShopShowDiamond" >
+			<ButtonRect State="0" Left="13" Top="557" Right="68" Bottom="578" />
+			<ButtonRect State="1" Left="13" Top="609" Right="68" Bottom="630" />
+			<ButtonRect State="2" Left="13" Top="583" Right="68" Bottom="604" />
+			<ButtonRect State="3" Left="13" Top="583" Right="68" Bottom="604" />
+		</Button>	
+		
+		<Button Name="OnlineShopMix" Image="Data\interface0025_main_K.tga" X="425" Y="37" Tips="各种合成相关的物品" 
+						TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="OnlineShopShowMix" >
+			<ButtonRect State="0" Left="72" Top="473" Right="127" Bottom="494" />
+			<ButtonRect State="1" Left="72" Top="525" Right="127" Bottom="546" />
+			<ButtonRect State="2" Left="72" Top="499" Right="127" Bottom="520" />
+			<ButtonRect State="3" Left="72" Top="499" Right="127" Bottom="520" />
+		</Button>	
+		
+		<!-- 
+		<Button Name="OnlineShopBook" Image="Data\interface0025_main_K.tga" X="497" Y="37" Tips="秘籍物品" 
+		                TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="OnlineShopShowBook" >
+			<ButtonRect State="0" Left="190" Top="557" Right="244" Bottom="578" />	
+			<ButtonRect State="1" Left="190" Top="609" Right="244" Bottom="630" />
+			<ButtonRect State="2" Left="190" Top="609" Right="244" Bottom="630" />
+			<ButtonRect State="3" Left="190" Top="583" Right="244" Bottom="604" />
+		</Button>	
+		-->
+		<Button Name="OnlineShopCloth" Image="Data\interface0025_main_K.tga" X="152" Y="67" Tips="角色的服饰" 
+		                TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="OnlineShopShowCloth" >
+			<ButtonRect State="0" Left="308" Top="473" Right="363" Bottom="494" />	
+			<ButtonRect State="1" Left="308" Top="525" Right="363" Bottom="546" />
+			<ButtonRect State="2" Left="308" Top="499" Right="363" Bottom="520" />
+			<ButtonRect State="3" Left="308" Top="499" Right="363" Bottom="520" />
+		</Button>	
+		
+		<Button Name="OnlineShopCap" Image="Data\interface0025_main_K.tga" X="221" Y="67" Tips="角色的头饰" 
+		                TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="OnlineShopShowCap" >
+			<ButtonRect State="0" Left="72" Top="557" Right="127" Bottom="578" />	
+			<ButtonRect State="1" Left="72" Top="609" Right="127" Bottom="630" />
+			<ButtonRect State="2" Left="72" Top="609" Right="127" Bottom="630" />
+			<ButtonRect State="3" Left="72" Top="583" Right="127" Bottom="604" />
+		</Button>	
+		
+		<Button Name="OnlineShopFireworks" Image="Data\interface0025_main_K.tga" X="288" Y="67" Tips="烟花" 
+		                TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="OnlineShopShowFireworks" >
+			<ButtonRect State="0" Left="131" Top="557" Right="186" Bottom="578" />	
+			<ButtonRect State="1" Left="131" Top="609" Right="186" Bottom="630" />
+			<ButtonRect State="2" Left="131" Top="609" Right="186" Bottom="630" />
+			<ButtonRect State="3" Left="131" Top="583" Right="186" Bottom="604" />
+		</Button>	
+		
+		<Button Name="OnlineShopAssc" Image="Data\interface0025_main_K.tga" X="357" Y="67" Tips="辅助玩者的物品" 
+						TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="OnlineShopShowAssc" >
+			<ButtonRect State="0" Left="131" Top="473" Right="186" Bottom="494" />	
+			<ButtonRect State="1" Left="131" Top="525" Right="186" Bottom="546" />
+			<ButtonRect State="2" Left="131" Top="499" Right="186" Bottom="520" />
+			<ButtonRect State="3" Left="131" Top="499" Right="186" Bottom="520" />
+		</Button>	
+		
+
+		<Button Name="OnlineShopOther" Image="Data\interface0025_main_K.tga" X="425" Y="67" Tips="其它杂项物品" 
+		               TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="OnlineShopShowOther" >
+			<ButtonRect State="0" Left="367" Top="473" Right="422" Bottom="494" />	
+			<ButtonRect State="1" Left="367" Top="525" Right="422" Bottom="546" />
+			<ButtonRect State="2" Left="367" Top="499" Right="422" Bottom="520" />
+			<ButtonRect State="3" Left="367" Top="499" Right="422" Bottom="520" />
+		</Button>	
+		
+		<!-- 
+		<Button Name="OnlineShopMould" Image="Data\interface0025_main_K.tga" X="497" Y="67" Tips="模具" 
+		               TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="OnlineShopShowMould" >
+			<ButtonRect State="0" Left="249" Top="557" Right="303" Bottom="578" />	
+			<ButtonRect State="1" Left="249" Top="609" Right="303" Bottom="630" />
+			<ButtonRect State="2" Left="249" Top="609" Right="303" Bottom="630" />
+			<ButtonRect State="3" Left="249" Top="583" Right="303" Bottom="604" />
+		</Button>	
+		-->
+	
+		<UIImage Name="OnlineShopBack00Icon" X="161" Y="115" Image="Data\interface0025_main_K.tga" Left="586" Top="40" Right="626" Bottom="80" Hide="1"/>
+		<AniIcon Name="OnlineShopItem00Icon" X="161" Y="115" Image=""  AutoDelete="0" Detect = "1" Hide="1"
+			LuaMouseIn = "OnlineShopItemMouseIn" LuaMouseOut = "OnlineShopItemMouseOut" InsertToEventList = "1"/>
+		<Button Name="OnlineShopItem00" Image="Data\interface0025_main_K.tga" X="157" Y="112" LuaLButtonUp="OnlineShopItem00Select" >
+			<ButtonRect State="0" Left="790" Top="365" Right="980" Bottom="415" />	
+			<ButtonRect State="1" Left="588" Top="293" Right="776" Bottom="341" />
+			<ButtonRect State="2" Left="588" Top="240" Right="776" Bottom="288" />
+			<ButtonRect State="3" Left="588" Top="240" Right="776" Bottom="288" />
+		</Button>	
+		<StaticText Name="OnlineShopItem00Name" X="205" Y="118" Height="20" Width="133" Row="1" Colume="9" 
+			EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="LEFT">
+			高級赤色瑪瑙
+		</StaticText>
+		<StaticText Name="OnlineShopItem00CostTitle" X="205" Y="136" Height="20" Width="45" Row="1" Colume="3" 
+			EdgeCode="LIGHT" FontColor="FF00F8F0" ShadowColor="FF000000" Align="LEFT">
+			元宝：
+		</StaticText>
+		<StaticText Name="OnlineShopItem00Cost" X="241" Y="136" Height="20" Width="120" Row="1" Colume="9" 
+			EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="LEFT">
+			99999
+		</StaticText>
+		<StaticText Name="OnlineShopItem00Day" X="254" Y="136" Height="20" Width="83" Row="1" Colume="9" 
+			EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="RIGHT">
+			7天
+		</StaticText>
+		
+		<UIImage Name="OnlineShopBack01Icon" X="363" Y="115" Image="Data\interface0025_main_K.tga" Left="586" Top="40" Right="626" Bottom="80" Hide="1"/>
+		<AniIcon Name="OnlineShopItem01Icon" X="363" Y="115" Image=""  AutoDelete="0" Detect = "1" Hide="1"
+			LuaMouseIn = "OnlineShopItemMouseIn" LuaMouseOut = "OnlineShopItemMouseOut" InsertToEventList = "1"/>
+		<Button Name="OnlineShopItem01" Image="Data\interface0025_main_K.tga" X="359" Y="112" LuaLButtonUp="OnlineShopItem01Select" >
+			<ButtonRect State="0" Left="790" Top="365" Right="980" Bottom="415" />	
+			<ButtonRect State="1" Left="588" Top="293" Right="776" Bottom="341" />
+			<ButtonRect State="2" Left="588" Top="240" Right="776" Bottom="288" />
+			<ButtonRect State="3" Left="588" Top="240" Right="776" Bottom="288" />
+		</Button>	
+		<StaticText Name="OnlineShopItem01Name" X="408" Y="118" Height="20" Width="133" Row="1" Colume="9" 
+			EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="LEFT">
+			高級赤色瑪瑙
+		</StaticText>
+		<StaticText Name="OnlineShopItem01CostTitle" X="408" Y="136" Height="20" Width="45" Row="1" Colume="3" 
+			EdgeCode="LIGHT" FontColor="FF00F8F0" ShadowColor="FF000000" Align="LEFT">
+			元宝：
+		</StaticText>
+		<StaticText Name="OnlineShopItem01Cost" X="444" Y="136" Height="20" Width="120" Row="1" Colume="9" 
+			EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="LEFT">
+			99999
+		</StaticText>
+		<StaticText Name="OnlineShopItem01Day" X="458" Y="136" Height="20" Width="83" Row="1" Colume="9" 
+			EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="RIGHT">
+			7天
+		</StaticText>
+		
+		<UIImage Name="OnlineShopBack02Icon" X="161" Y="174" Image="Data\interface0025_main_K.tga" Left="586" Top="40" Right="626" Bottom="80" Hide="1"/>
+		<AniIcon Name="OnlineShopItem02Icon" X="161" Y="174" Image=""  AutoDelete="0" Detect = "1" Hide="1"
+			LuaMouseIn = "OnlineShopItemMouseIn" LuaMouseOut = "OnlineShopItemMouseOut" InsertToEventList = "1"/>
+		<Button Name="OnlineShopItem02" Image="Data\interface0025_main_K.tga" X="157" Y="171" LuaLButtonUp="OnlineShopItem02Select" >
+			<ButtonRect State="0" Left="790" Top="365" Right="980" Bottom="415" />	
+			<ButtonRect State="1" Left="588" Top="293" Right="776" Bottom="341" />
+			<ButtonRect State="2" Left="588" Top="240" Right="776" Bottom="288" />
+			<ButtonRect State="3" Left="588" Top="240" Right="776" Bottom="288" />
+		</Button>	
+		<StaticText Name="OnlineShopItem02Name" X="205" Y="177" Height="20" Width="133" Row="1" Colume="9" 
+			EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="LEFT">
+			高級赤色瑪瑙
+		</StaticText>
+		<StaticText Name="OnlineShopItem02CostTitle" X="205" Y="195" Height="20" Width="45" Row="1" Colume="3" 
+			EdgeCode="LIGHT" FontColor="FF00F8F0" ShadowColor="FF000000" Align="LEFT">
+			元宝：
+		</StaticText>
+		<StaticText Name="OnlineShopItem02Cost" X="241" Y="195" Height="20" Width="120" Row="1" Colume="9" 
+			EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="LEFT">
+			99999
+		</StaticText>
+		<StaticText Name="OnlineShopItem02Day" X="254" Y="195" Height="20" Width="83" Row="1" Colume="9" 
+			EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="RIGHT">
+			7天
+		</StaticText>
+		
+		<UIImage Name="OnlineShopBack03Icon" X="363" Y="174" Image="Data\interface0025_main_K.tga" Left="586" Top="40" Right="626" Bottom="80" Hide="1"/>
+		<AniIcon Name="OnlineShopItem03Icon" X="363" Y="174" Image=""  AutoDelete="0" Detect = "1" Hide="1"
+			LuaMouseIn = "OnlineShopItemMouseIn" LuaMouseOut = "OnlineShopItemMouseOut" InsertToEventList = "1"/>
+		<Button Name="OnlineShopItem03" Image="Data\interface0025_main_K.tga" X="359" Y="171" LuaLButtonUp="OnlineShopItem03Select" >
+			<ButtonRect State="0" Left="790" Top="365" Right="980" Bottom="415" />	
+			<ButtonRect State="1" Left="588" Top="293" Right="776" Bottom="341" />
+			<ButtonRect State="2" Left="588" Top="240" Right="776" Bottom="288" />
+			<ButtonRect State="3" Left="588" Top="240" Right="776" Bottom="288" />
+		</Button>	
+		<StaticText Name="OnlineShopItem03Name" X="408" Y="177" Height="20" Width="133" Row="1" Colume="9" 
+			EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="LEFT">
+			高級赤色瑪瑙
+		</StaticText>
+		<StaticText Name="OnlineShopItem03CostTitle" X="408" Y="195" Height="20" Width="45" Row="1" Colume="3" 
+			EdgeCode="LIGHT" FontColor="FF00F8F0" ShadowColor="FF000000" Align="LEFT">
+			元宝：
+		</StaticText>
+		<StaticText Name="OnlineShopItem03Cost" X="444" Y="195" Height="20" Width="120" Row="1" Colume="9" 
+			EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="LEFT">
+			99999
+		</StaticText>
+		<StaticText Name="OnlineShopItem03Day" X="458" Y="195" Height="20" Width="83" Row="1" Colume="9" 
+			EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="RIGHT">
+			7天
+		</StaticText>
+		
+		<UIImage Name="OnlineShopBack04Icon" X="161" Y="233" Image="Data\interface0025_main_K.tga" Left="586" Top="40" Right="626" Bottom="80" Hide="1"/>
+		<AniIcon Name="OnlineShopItem04Icon" X="161" Y="233" Image=""  AutoDelete="0" Detect = "1" Hide="1"
+			LuaMouseIn = "OnlineShopItemMouseIn" LuaMouseOut = "OnlineShopItemMouseOut" InsertToEventList = "1"/>
+		<Button Name="OnlineShopItem04" Image="Data\interface0025_main_K.tga" X="157" Y="230" LuaLButtonUp="OnlineShopItem04Select" >
+			<ButtonRect State="0" Left="790" Top="365" Right="980" Bottom="415" />	
+			<ButtonRect State="1" Left="588" Top="293" Right="776" Bottom="341" />
+			<ButtonRect State="2" Left="588" Top="240" Right="776" Bottom="288" />
+			<ButtonRect State="3" Left="588" Top="240" Right="776" Bottom="288" />
+		</Button>	
+		<StaticText Name="OnlineShopItem04Name" X="205" Y="236" Height="20" Width="133" Row="1" Colume="9" 
+			EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="LEFT">
+			高級赤色瑪瑙
+		</StaticText>
+		<StaticText Name="OnlineShopItem04CostTitle" X="205" Y="254" Height="20" Width="45" Row="1" Colume="3" 
+			EdgeCode="LIGHT" FontColor="FF00F8F0" ShadowColor="FF000000" Align="LEFT">
+			元宝：
+		</StaticText>
+		<StaticText Name="OnlineShopItem04Cost" X="241" Y="254" Height="20" Width="120" Row="1" Colume="9" 
+			EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="LEFT">
+			99999
+		</StaticText>
+		<StaticText Name="OnlineShopItem04Day" X="254" Y="254" Height="20" Width="83" Row="1" Colume="9" 
+			EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="RIGHT">
+			7天
+		</StaticText>
+		
+		<UIImage Name="OnlineShopBack05Icon" X="363" Y="233" Image="Data\interface0025_main_K.tga" Left="586" Top="40" Right="626" Bottom="80" Hide="1"/>
+		<AniIcon Name="OnlineShopItem05Icon" X="363" Y="233" Image=""  AutoDelete="0"  Detect = "1" Hide="1"
+			LuaMouseIn = "OnlineShopItemMouseIn" LuaMouseOut = "OnlineShopItemMouseOut" InsertToEventList = "1"/>
+		<Button Name="OnlineShopItem05" Image="Data\interface0025_main_K.tga" X="359" Y="230" LuaLButtonUp="OnlineShopItem05Select" >
+			<ButtonRect State="0" Left="790" Top="365" Right="980" Bottom="415" />	
+			<ButtonRect State="1" Left="588" Top="293" Right="776" Bottom="341" />
+			<ButtonRect State="2" Left="588" Top="240" Right="776" Bottom="288" />
+			<ButtonRect State="3" Left="588" Top="240" Right="776" Bottom="288" />
+		</Button>	
+		<StaticText Name="OnlineShopItem05Name" X="408" Y="236" Height="20" Width="133" Row="1" Colume="9" 
+			EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="LEFT">
+			高級赤色瑪瑙
+		</StaticText>
+		<StaticText Name="OnlineShopItem05CostTitle" X="408" Y="254" Height="20" Width="45" Row="1" Colume="3" 
+			EdgeCode="LIGHT" FontColor="FF00F8F0" ShadowColor="FF000000" Align="LEFT">
+			元宝：
+		</StaticText>
+		<StaticText Name="OnlineShopItem05Cost" X="444" Y="254" Height="20" Width="120" Row="1" Colume="9" 
+			EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="LEFT">
+			99999
+		</StaticText>
+		<StaticText Name="OnlineShopItem05Day" X="458" Y="254" Height="20" Width="83" Row="1" Colume="9" 
+			EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="RIGHT">
+			7天
+		</StaticText>
+		
+		<UIImage Name="OnlineShopBack06Icon" X="161" Y="291" Image="Data\interface0025_main_K.tga" Left="586" Top="40" Right="626" Bottom="80" Hide="1"/>
+		<AniIcon Name="OnlineShopItem06Icon" X="161" Y="291" Image=""  AutoDelete="0" Detect = "1" Hide="1"
+			LuaMouseIn = "OnlineShopItemMouseIn" LuaMouseOut = "OnlineShopItemMouseOut" InsertToEventList = "1"/>
+		<Button Name="OnlineShopItem06" Image="Data\interface0025_main_K.tga" X="157" Y="288" LuaLButtonUp="OnlineShopItem06Select" >
+			<ButtonRect State="0" Left="790" Top="365" Right="980" Bottom="415" />	
+			<ButtonRect State="1" Left="588" Top="293" Right="776" Bottom="341" />
+			<ButtonRect State="2" Left="588" Top="240" Right="776" Bottom="288" />
+			<ButtonRect State="3" Left="588" Top="240" Right="776" Bottom="288" />
+		</Button>	
+		<StaticText Name="OnlineShopItem06Name" X="205" Y="294" Height="20" Width="133" Row="1" Colume="9" 
+			EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="LEFT">
+			高級赤色瑪瑙
+		</StaticText>
+		<StaticText Name="OnlineShopItem06CostTitle" X="205" Y="312" Height="20" Width="45" Row="1" Colume="3" 
+			EdgeCode="LIGHT" FontColor="FF00F8F0" ShadowColor="FF000000" Align="LEFT">
+			元宝：
+		</StaticText>
+		<StaticText Name="OnlineShopItem06Cost" X="241" Y="312" Height="20" Width="120" Row="1" Colume="9" 
+			EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="LEFT">
+			99999
+		</StaticText>
+		<StaticText Name="OnlineShopItem06Day" X="254" Y="312" Height="20" Width="83" Row="1" Colume="9" 
+			EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="RIGHT">
+			7天
+		</StaticText>
+		
+		<UIImage Name="OnlineShopBack07Icon" X="363" Y="291" Image="Data\interface0025_main_K.tga" Left="586" Top="40" Right="626" Bottom="80" Hide="1"/>
+		<AniIcon Name="OnlineShopItem07Icon" X="363" Y="291" Image=""  AutoDelete="0"  Detect = "1" Hide="1"
+			LuaMouseIn = "OnlineShopItemMouseIn" LuaMouseOut = "OnlineShopItemMouseOut" InsertToEventList = "1"/>
+		<Button Name="OnlineShopItem07" Image="Data\interface0025_main_K.tga" X="359" Y="288" LuaLButtonUp="OnlineShopItem07Select" >
+			<ButtonRect State="0" Left="790" Top="365" Right="980" Bottom="415" />	
+			<ButtonRect State="1" Left="588" Top="293" Right="776" Bottom="341" />
+			<ButtonRect State="2" Left="588" Top="240" Right="776" Bottom="288" />
+			<ButtonRect State="3" Left="588" Top="240" Right="776" Bottom="288" />
+		</Button>	
+		<StaticText Name="OnlineShopItem07Name" X="408" Y="294" Height="20" Width="133" Row="1" Colume="9" 
+			EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="LEFT">
+			高級赤色瑪瑙
+		</StaticText>
+		<StaticText Name="OnlineShopItem07CostTitle" X="408" Y="312" Height="20" Width="45" Row="1" Colume="3" 
+			EdgeCode="LIGHT" FontColor="FF00F8F0" ShadowColor="FF000000" Align="LEFT">
+			元宝：
+		</StaticText>
+		<StaticText Name="OnlineShopItem07Cost" X="444" Y="312" Height="20" Width="120" Row="1" Colume="9" 
+			EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="LEFT">
+			99999
+		</StaticText>
+		<StaticText Name="OnlineShopItem07Day" X="458" Y="312" Height="20" Width="83" Row="1" Colume="9" 
+			EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="RIGHT">
+			7天
+		</StaticText>
+				
+		<UIImage Name="OnlineShopBack08Icon" X="161" Y="350" Image="Data\interface0025_main_K.tga" Left="586" Top="40" Right="626" Bottom="80" Hide="1"/>
+		<AniIcon Name="OnlineShopItem08Icon" X="161" Y="350" Image=""  AutoDelete="0" Detect = "1" Hide="1"
+			LuaMouseIn = "OnlineShopItemMouseIn" LuaMouseOut = "OnlineShopItemMouseOut" InsertToEventList = "1"/>
+		<Button Name="OnlineShopItem08" Image="Data\interface0025_main_K.tga" X="157" Y="347" LuaLButtonUp="OnlineShopItem08Select" >
+			<ButtonRect State="0" Left="790" Top="365" Right="980" Bottom="415" />	
+			<ButtonRect State="1" Left="588" Top="293" Right="776" Bottom="341" />
+			<ButtonRect State="2" Left="588" Top="240" Right="776" Bottom="288" />
+			<ButtonRect State="3" Left="588" Top="240" Right="776" Bottom="288" />
+		</Button>	
+		<StaticText Name="OnlineShopItem08Name" X="205" Y="353" Height="20" Width="133" Row="1" Colume="9" 
+			EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="LEFT">
+			高級赤色瑪瑙
+		</StaticText>
+		<StaticText Name="OnlineShopItem08CostTitle" X="205" Y="371" Height="20" Width="45" Row="1" Colume="3" 
+			EdgeCode="LIGHT" FontColor="FF00F8F0" ShadowColor="FF000000" Align="LEFT">
+			元宝：
+		</StaticText>
+		<StaticText Name="OnlineShopItem08Cost" X="241" Y="371" Height="20" Width="120" Row="1" Colume="9" 
+			EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="LEFT">
+			99999
+		</StaticText>
+		<StaticText Name="OnlineShopItem08Day" X="254" Y="371" Height="20" Width="83" Row="1" Colume="9" 
+			EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="RIGHT">
+			7天
+		</StaticText>
+		
+		
+		<UIImage Name="OnlineShopBack09Icon" X="363" Y="350" Image="Data\interface0025_main_K.tga" Left="586" Top="40" Right="626" Bottom="80" Hide="1"/>
+		<AniIcon Name="OnlineShopItem09Icon" X="363" Y="350" Image=""  AutoDelete="0"  Detect = "1" Hide="1"
+			LuaMouseIn = "OnlineShopItemMouseIn" LuaMouseOut = "OnlineShopItemMouseOut" InsertToEventList = "1"/>
+		<Button Name="OnlineShopItem09" Image="Data\interface0025_main_K.tga" X="359" Y="347" LuaLButtonUp="OnlineShopItem09Select" >
+			<ButtonRect State="0" Left="790" Top="365" Right="980" Bottom="415" />	
+			<ButtonRect State="1" Left="588" Top="293" Right="776" Bottom="341" />
+			<ButtonRect State="2" Left="588" Top="240" Right="776" Bottom="288" />
+			<ButtonRect State="3" Left="588" Top="240" Right="776" Bottom="288" />
+		</Button>	
+		<StaticText Name="OnlineShopItem09Name" X="408" Y="353" Height="20" Width="133" Row="1" Colume="9" 
+			EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="LEFT">
+			高級赤色瑪瑙
+		</StaticText>
+		<StaticText Name="OnlineShopItem09CostTitle" X="408" Y="371" Height="20" Width="45" Row="1" Colume="3" 
+			EdgeCode="LIGHT" FontColor="FF00F8F0" ShadowColor="FF000000" Align="LEFT">
+			元宝：
+		</StaticText>
+		<StaticText Name="OnlineShopItem09Cost" X="444" Y="371" Height="20" Width="120" Row="1" Colume="9" 
+			EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="LEFT">
+			99999
+		</StaticText>
+		<StaticText Name="OnlineShopItem09Day" X="458" Y="371" Height="20" Width="83" Row="1" Colume="9" 
+			EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="RIGHT">
+			7天
+		</StaticText>
+		
+		<UIImage Name="OnlineShopLimitedBackIcon" X="56" Y="67" Image="Data\interface0025_main_K.tga" Left="586" Top="40" Right="626" Bottom="80" Hide="1"/>
+		<AniIcon Name="OnlineShopLimitedItemIcon" X="56" Y="67" Image=""  AutoDelete="0" Detect = "1" Hide="1"
+			LuaMouseIn="OnlineShopLimitItemMouseIn" LuaMouseOut="OnlineShopItemMouseOut" InsertToEventList = "1" />
+		<Button Name="OnlineShopLimitedItem" Image="Data\interface0025_main_K.tga" X="10" Y="38" LuaLButtonUp="OnlineShopLimitedItemSelect" >
+			<ButtonRect State="0" Left="870" Top="9" Right="999" Bottom="144" />	
+			<ButtonRect State="1" Left="736" Top="119" Right="865" Bottom="224" />
+			<ButtonRect State="2" Left="736" Top="9" Right="865" Bottom="114" />
+			<ButtonRect State="3" Left="736" Top="9" Right="865" Bottom="114" />
+		</Button>	
+		<StaticText Name="OnlineShopLimitedItemName" X="11" Y="46" Height="20" Width="130" Row="1" Colume="9" 
+			EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="CENTER">
+			高級赤色瑪瑙(7天)
+		</StaticText>
+		<StaticText Name="OnlineShopLimitedItemCostTitle" X="39" Y="109" Height="20" Width="45" Row="1" Colume="3" 
+			EdgeCode="LIGHT" FontColor="FF00F8F0" ShadowColor="FF000000" Align="LEFT">
+			元宝：
+		</StaticText>
+		<StaticText Name="OnlineShopLimitedItemCost" X="79" Y="109" Height="20" Width="120" Row="1" Colume="9" 
+			EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="LEFT">
+			99999
+		</StaticText>
+		<StaticText Name="OnlineShopLimitedItemCount" X="10" Y="124" Height="20" Width="130" Row="1" Colume="9" 
+			EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="CENTER">
+			
+		</StaticText>
+		
+		<UIImage Name="OnlineShopDiscountBack00Icon" X="19" Y="190" Image="Data\interface0025_main_K.tga" Left="586" Top="40" Right="626" Bottom="80" Hide="1"/>
+		<AniIcon Name="OnlineShopDiscountItem00Icon" X="19" Y="190" Image=""  AutoDelete="0"  Detect = "1" Hide="1" 
+			LuaMouseIn="OnlineShopDiscountItemMouseIn" LuaMouseOut="OnlineShopItemMouseOut" InsertToEventList = "1"/>
+		<Button Name="OnlineShopDiscountItem00" Image="Data\interface0025_main_K.tga" X="10" Y="166" LuaLButtonUp="OnlineShopDiscountItem00Select" >
+			<ButtonRect State="0" Left="870" Top="9" Right="999" Bottom="79" />	
+			<ButtonRect State="1" Left="586" Top="165" Right="715" Bottom="235" />
+			<ButtonRect State="2" Left="586" Top="91" Right="715" Bottom="161" />
+			<ButtonRect State="3" Left="586" Top="91" Right="715" Bottom="161" />
+		</Button>	
+		<StaticText Name="OnlineShopDiscountItem00Name" X="11" Y="171" Height="20" Width="130" Row="1" Colume="9" 
+			EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="CENTER">
+			高級赤色瑪瑙(7天)
+		</StaticText>
+		
+		<StaticText Name="OnlineShopDiscountItem00Title" X="62" Y="194" Height="20" Width="45" Row="1" Colume="9" 
+			EdgeCode="LIGHT" FontColor="FF00F8F0" ShadowColor="FF000000" Align="LEFT">
+			特价：
+		</StaticText>
+		<StaticText Name="OnlineShopDiscountItem00Cost" X="97" Y="194" Height="20" Width="80" Row="1" Colume="9" 
+			EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="LEFT">
+			9999
+		</StaticText>
+		<StaticText Name="OnlineShopDiscountItem00OrgTitle" X="62" Y="209" Height="20" Width="45" Row="1" Colume="9" 
+			EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="LEFT">
+			原价：
+		</StaticText>
+		<StaticText Name="OnlineShopDiscountItem00OrgCost" X="97" Y="209" Height="20" Width="80" Row="1" Colume="9" 
+			EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="LEFT">
+			9999
+		</StaticText>
+		
+		<UIImage Name="OnlineShopDiscountBack01Icon" X="19" Y="272" Image="Data\interface0025_main_K.tga" Left="586" Top="40" Right="626" Bottom="80" Hide="1"/>
+		<AniIcon Name="OnlineShopDiscountItem01Icon" X="19" Y="272" Image=""  AutoDelete="0" Detect = "1" Hide="1" 
+			LuaMouseIn="OnlineShopDiscountItemMouseIn" LuaMouseOut="OnlineShopItemMouseOut" InsertToEventList = "1"/>
+		<Button Name="OnlineShopDiscountItem01" Image="Data\interface0025_main_K.tga" X="10" Y="249" LuaLButtonUp="OnlineShopDiscountItem01Select" >
+			<ButtonRect State="0" Left="870" Top="9" Right="999" Bottom="79" />	
+			<ButtonRect State="1" Left="586" Top="165" Right="715" Bottom="235" />
+			<ButtonRect State="2" Left="586" Top="91" Right="715" Bottom="161" />
+			<ButtonRect State="3" Left="586" Top="91" Right="715" Bottom="161" />
+		</Button>	
+		<StaticText Name="OnlineShopDiscountItem01Name" X="11" Y="251" Height="20" Width="130" Row="1" Colume="9" 
+			EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="CENTER">
+			高級赤色瑪瑙(7天)
+		</StaticText>
+		<StaticText Name="OnlineShopDiscountItem01Title" X="62" Y="278" Height="20" Width="45" Row="1" Colume="9" 
+			EdgeCode="LIGHT" FontColor="FF00F8F0" ShadowColor="FF000000" Align="LEFT">
+			特价：
+		</StaticText>
+		<StaticText Name="OnlineShopDiscountItem01Cost" X="97" Y="278" Height="20" Width="80" Row="1" Colume="9" 
+			EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="LEFT">
+			9999
+		</StaticText>
+		<StaticText Name="OnlineShopDiscountItem01OrgTitle" X="62" Y="293" Height="20" Width="45" Row="1" Colume="9" 
+			EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="LEFT">
+			原价：
+		</StaticText>
+		<StaticText Name="OnlineShopDiscountItem01OrgCost" X="97" Y="293" Height="20" Width="80" Row="1" Colume="9" 
+			EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="LEFT">
+			9999
+		</StaticText>
+		
+		<UIImage Name="OnlineShopDiscountBack02Icon" X="19" Y="355" Image="Data\interface0025_main_K.tga" Left="586" Top="40" Right="626" Bottom="80" Hide="1"/>
+		<AniIcon Name="OnlineShopDiscountItem02Icon" X="19" Y="355" Image=""  AutoDelete="0" Detect = "1" Hide="1" 
+			LuaMouseIn="OnlineShopDiscountItemMouseIn" LuaMouseOut="OnlineShopItemMouseOut" InsertToEventList = "1"/>
+		<Button Name="OnlineShopDiscountItem02" Image="Data\interface0025_main_K.tga" X="10" Y="332" LuaLButtonUp="OnlineShopDiscountItem02Select" >
+			<ButtonRect State="0" Left="870" Top="9" Right="999" Bottom="79" />	
+			<ButtonRect State="1" Left="586" Top="165" Right="715" Bottom="235" />
+			<ButtonRect State="2" Left="586" Top="91" Right="715" Bottom="161" />
+			<ButtonRect State="3" Left="586" Top="91" Right="715" Bottom="161" />
+		</Button>	
+		<StaticText Name="OnlineShopDiscountItem02Name" X="11" Y="336" Height="20" Width="130" Row="1" Colume="9" 
+			EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="CENTER">
+			高級赤色瑪瑙(7天)
+		</StaticText>
+		<StaticText Name="OnlineShopDiscountItem02Title" X="62" Y="362" Height="20" Width="45" Row="1" Colume="9" 
+			EdgeCode="LIGHT" FontColor="FF00F8F0" ShadowColor="FF000000" Align="LEFT">
+			特价：
+		</StaticText>
+		<StaticText Name="OnlineShopDiscountItem02Cost" X="97" Y="362" Height="20" Width="80" Row="1" Colume="9" 
+			EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="LEFT">
+			9999
+		</StaticText>
+		<StaticText Name="OnlineShopDiscountItem02OrgTitle" X="62" Y="377" Height="20" Width="45" Row="1" Colume="9" 
+			EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="LEFT">
+			原价：
+		</StaticText>
+		<StaticText Name="OnlineShopDiscountItem02OrgCost" X="97" Y="377" Height="20" Width="80" Row="1" Colume="9" 
+			EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="LEFT">
+			9999
+		</StaticText>
+		
+		<Button Name="OnlineShopCross" Image="Data\interface0025_main_K.tga" X="536" Y="8" LuaLButtonUp="CloseOnlineShop" >
+			<ButtonRect State="0" Left="589" Top="13" Right="613" Bottom="31" />	
+			<ButtonRect State="1" Left="614" Top="13" Right="638" Bottom="31" />
+			<ButtonRect State="2" Left="639" Top="13" Right="663" Bottom="31" />
+		</Button>	
+				
+		<Button Name="OnlineShopBuy" Image="Data\interface0025_main_K.tga" X="365" Y="429" LuaLButtonUp="OnlineShopPreConfirm" >
+			<ButtonRect State="0" Left="606" Top="514" Right="698" Bottom="535" />	
+			<ButtonRect State="1" Left="606" Top="539" Right="698" Bottom="560" />
+			<ButtonRect State="2" Left="606" Top="564" Right="698" Bottom="585" />
+		</Button>	
+		
+		<Button Name="OnlineShopGift" Image="Data\interface0025_main_K.tga" X="464" Y="429" >
+			<ButtonRect State="0" Left="606" Top="439" Right="698" Bottom="460" />	
+			<ButtonRect State="1" Left="606" Top="464" Right="698" Bottom="485" />
+			<ButtonRect State="2" Left="606" Top="489" Right="698" Bottom="510" />
+			<ButtonRect State="3" Left="606" Top="489" Right="698" Bottom="510" />
+		</Button>	
+		
+		<Button Name="OnlineShopCharge" Image="Data\interface0025_main_K.tga" X="17" Y="429" LuaLButtonUp="OnlineShopShowChargePage">
+			<ButtonRect State="0" Left="704" Top="514" Right="796" Bottom="535" />	
+			<ButtonRect State="1" Left="704" Top="539" Right="796" Bottom="560" />
+			<ButtonRect State="2" Left="704" Top="564" Right="796" Bottom="585" />
+			<ButtonRect State="3" Left="704" Top="564" Right="796" Bottom="585" />
+		</Button>	
+		
+		<Button Name="OnlineShopChangeMoney" Image="Data\interface0025_main_K.tga" X="114" Y="429" LuaLButtonUp="OnlineShopShowChangePage">
+			<ButtonRect State="0" Left="704" Top="439" Right="796" Bottom="460" />	
+			<ButtonRect State="1" Left="704" Top="464" Right="796" Bottom="485" />
+			<ButtonRect State="2" Left="704" Top="489" Right="796" Bottom="510" />
+			<ButtonRect State="3" Left="704" Top="489" Right="796" Bottom="510" />
+		</Button>	
+		
+		<Button Name="OnlineShopCharge" Image="Data\interface0025_main_K.tga" X="17" Y="429" LuaLButtonUp="OnlineShopShowChargePage">
+			<ButtonRect State="0" Left="704" Top="514" Right="796" Bottom="535" />	
+			<ButtonRect State="1" Left="704" Top="539" Right="796" Bottom="560" />
+			<ButtonRect State="2" Left="704" Top="564" Right="796" Bottom="585" />
+			<ButtonRect State="3" Left="704" Top="564" Right="796" Bottom="585" />
+		</Button>	
+		
+		<Button Name="OnlineShopUpdateMoney" Image="Data\interface0025_main_K.tga" X="211" Y="429" LuaLButtonUp="OnlineShopUpdateMoney">
+			<ButtonRect State="0" Left="802" Top="439" Right="879" Bottom="460" />	
+			<ButtonRect State="1" Left="802" Top="464" Right="879" Bottom="485" />
+			<ButtonRect State="2" Left="802" Top="489" Right="879" Bottom="510" />
+			<ButtonRect State="3" Left="802" Top="489" Right="879" Bottom="510" />
+		</Button>	
+		
+		<Button Name="OnlineShopPageUp" Image="Data\interface0025_main_K.tga" X="286" Y="397" LuaLButtonUp="OnlineShopPrevPage" >
+			<ButtonRect State="0" Left="713" Top="362" Right="739" Bottom="386" />	
+			<ButtonRect State="1" Left="713" Top="387" Right="739" Bottom="411" />
+			<ButtonRect State="2" Left="713" Top="412" Right="739" Bottom="436" />
+		</Button>	
+		
+		<StaticText Name="OnlineShopPageNo" X="314" Y="402" Height="20" Width="55" Row="1" Colume="5" 
+			EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="CENTER">
+			1 / 3	
+		</StaticText>
+		
+		<Button Name="OnlineShopPageDown" Image="Data\interface0025_main_K.tga" X="369" Y="397" LuaLButtonUp="OnlineShopNextPage" >
+			<ButtonRect State="0" Left="749" Top="362" Right="775" Bottom="386" />	
+			<ButtonRect State="1" Left="749" Top="387" Right="775" Bottom="411" />
+			<ButtonRect State="2" Left="749" Top="412" Right="775" Bottom="436" />
+		</Button>	
+		
+		<StaticText Name="OnlineShopContainMoney" X="450" Y="402" Height="20" Width="130" Row="1" Colume="10" 
+			EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="CENTER">
+			99999999
+		</StaticText>
+		
+	</Panel>
+	
+	<!-- Charge Shop Item Count Panel -->
+	
+	<Panel Name="ChargeShopItemCountBox" X="253" Y="267" Hide="1" Image="Data\interface0009_shop.tga" Left="307" Top="290" Right="562" Bottom="407"  
+		Drag="1" DragLeft="0" DragTop="0" DragRight="281" DragBottom="117" >
+		
+		<StaticText Name="ChargeShopItem_Text" X="20" Y="18" Row="1" Column="14" EdgeCode="LIGHT" FontColor="FFEDD97A" ShadowColor="FF000000">
+			请输入数量
+		</StaticText>
+		
+		<UIImage X="19" Y="39" Image="Data\interface0009_shop.tga" Left="409" Top="410" Right="512" Bottom="428"/>
+		
+		<EditBox Name="ChargeShopItem_EditBox" X="31" Y="43" Row="1" Column="3" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" LuaKeyUp="OnlineShopCountKeyUp" LuaLButtonUp="" Limit="5" NumOnly="1">
+			1 
+		</EditBox>
+		
+		<StaticText Name="ChargeShopItem_Price" X="20" Y="66" Row="1" Column="14" EdgeCode="LIGHT" FontColor="FFEDD97A" ShadowColor="FF000000">
+			Price 999, 999, 999, 999
+		</StaticText>
+				
+		<Button Name="ChargeShopItem_YesButton" Image="Data\interface0009_shop.tga" X="100" Y="84" LuaLButtonUp="ShowOnlineShopConfirmBox">
+			<ButtonRect State="0" Left="387" Top="464" Right="451" Bottom="481" />
+			<ButtonRect State="1" Left="453" Top="464" Right="517" Bottom="481" />
+			<ButtonRect State="2" Left="520" Top="464" Right="583" Bottom="481" />
+		</Button>
+			
+		<Button Name="ChargeShopItem_NoButton" Image="Data\interface0009_shop.tga" X="170" Y="84" LuaLButtonUp="SwitchOffOnlineShopCount">
+			<ButtonRect State="0" Left="387" Top="483" Right="451" Bottom="500" />
+			<ButtonRect State="1" Left="453" Top="483" Right="517" Bottom="500" />
+			<ButtonRect State="2" Left="520" Top="483" Right="583" Bottom="500" />
+		</Button>
+		
+		<Button Name="ChargeShopItem_MaxButton" Image="Data\interface0009_shop.tga" X="170" Y="40" LuaLButtonUp="OnlineShopCountSetMax">
+			<ButtonRect State="0" Left="377" Top="410" Right="407" Bottom="426" />
+			<ButtonRect State="1" Left="377" Top="427" Right="407" Bottom="443" />
+			<ButtonRect State="2" Left="377" Top="444" Right="407" Bottom="460" />
+		</Button>
+		
+		<Button Name="ChargeShopItem_MinButton" Image="Data\interface0009_shop.tga" X="204" Y="40" LuaLButtonUp="OnlineShopCountSetMin">
+			<ButtonRect State="0" Left="345" Top="410" Right="375" Bottom="426" />
+			<ButtonRect State="1" Left="345" Top="427" Right="375" Bottom="443" />
+			<ButtonRect State="2" Left="345" Top="444" Right="375" Bottom="460" />
+		</Button>
+		
+		<Button Name="ChargeShopItem_AddButton" Image="Data\interface0009_shop.tga" X="130" Y="40" LuaLButtonUp="OnlineShopCountAddOne">
+			<ButtonRect State="0" Left="307" Top="410" Right="324" Bottom="426" />
+			<ButtonRect State="1" Left="307" Top="427" Right="324" Bottom="443" />
+			<ButtonRect State="2" Left="307" Top="444" Right="324" Bottom="460" />
+		</Button>
+		
+		<Button Name="ChargeShopItem_SubButton" Image="Data\interface0009_shop.tga" X="150" Y="40" LuaLButtonUp="OnlineShopCountSubOne">
+			<ButtonRect State="0" Left="326" Top="410" Right="343" Bottom="426" />
+			<ButtonRect State="1" Left="326" Top="427" Right="343" Bottom="443" />
+			<ButtonRect State="2" Left="326" Top="444" Right="343" Bottom="460" />
+		</Button>
+	</Panel>
+
+	<Panel Name="ConfirmBuyOnlineShopItemPanel" Image="Data\inerface0004_main_A.tga" X="300" Y="250" Left="314" Top="293" Right="542" Bottom="391"
+		Drag="1" DragLeft="0" DragTop="0" DragRight="228"	DragBottom="98" Hide="1">
+		<StaticText Name="ConfirmBuyOnlineShopItemText" X="0" Y="35" Height="20" Width="228" Row="1" Column="6" EdgeCode="LIGHT" FontColor="FFEDD97A" ShadowColor="FF000000" Align="CENTER">
+			确定购买?
+		</StaticText>
+		
+		<Button Name="BuyOnlineShopItemOK" Image="Data\inerface0004_main_A.tga" X="46" Y="60" LuaLButtonUp="ConfirmBuyOnlineShopItem">
+			<ButtonRect State="0" Left="4" Top="511" Right="68" Bottom="528" />
+			<ButtonRect State="1" Left="70" Top="511" Right="134" Bottom="528" />
+			<ButtonRect State="2" Left="136" Top="511" Right="200" Bottom="528" />
+		</Button>
+		
+		<Button Name="BuyOnlineShopItemNO" Image="Data\inerface0004_main_A.tga" X="123" Y="60" LuaLButtonUp="CloseConfirmBuyOnlineShopItem">
+			<ButtonRect State="0" Left="4" Top="530" Right="68" Bottom="547" />
+			<ButtonRect State="1" Left="70" Top="530" Right="134" Bottom="547" />
+			<ButtonRect State="2" Left="136" Top="530" Right="200" Bottom="547" />
+		</Button>
+	
+	</Panel>	
+
+	
+</UI>

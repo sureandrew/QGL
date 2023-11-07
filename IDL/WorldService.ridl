@@ -1,0 +1,174 @@
+//-- Config
+config
+{
+	SubPath="Service/";
+	StartID=2000;
+	EndID=2999;
+}
+
+//-- Include header
+#include "Common/common_binary.h"
+
+struct NpcLiveInfo
+{
+	UInt32 npcId;
+	UInt16 mapId;
+	UInt8  lineId;
+	UInt32 ownerId;
+	UInt16 x;
+	UInt16 y;
+	UInt16 eventId;
+
+	NpcLiveInfo();
+	bool operator == (const NpcLiveInfo& b) const;
+};
+typedef StlVector<NpcLiveInfo, ManagedAllocator<NpcLiveInfo> > NpcLiveList;
+
+//-- RPC functions
+private:
+nonblock:
+RegisterProxy(ServiceID serviceId);
+UnregisterProxy(ServiceID serviceId);
+RegisterMap(ServiceID serviceId, UInt16 map_id, UInt8 line_id, UInt32 owner_id, Boolean bOpen);
+UnregisterMap(ServiceID serviceId, UInt16 map_id, UInt8 line_id, UInt32 owner_id);
+RegisterInstance(UInt16 instId, UInt32 owner_id);
+UnregisterInstance(UInt16 instId, UInt32 owner_id);
+
+// for character location
+ValidateMap(UInt16 map_id, UInt8 line_id, UInt32 owner_id);
+QueryInstance(UInt16 instId, UInt32 owner_id);
+CB_QueryInstance(Boolean bExist, UInt16 allowCount);
+CanChangeLine(UInt8 line_id);
+RemoteCreateNpc(UInt16 map_id, UInt8 line_id, UInt32 owner_id, 
+			UInt32 npc_id, UInt16 x, UInt16 y, UInt32 lifeTime, 
+			UInt16 eventId, UInt32 char_id);
+
+block:
+ReleaseSession(SessionID sid, Boolean bDelete);
+CharacterLeave(UInt32 acct_id, UInt32 char_id);
+CharJumpMap(EnterInfo info, UInt32Vector memberIdList, AntiAddictInfo addictInfo, String buffCache,UInt32 uiLineupId,int iKeyPos);
+NpcJumpMap(UInt32 npc_id, UInt16 map_id, UInt8 line_id, UInt16 x, UInt16 y, 
+			UInt32 followId);
+CharUpdateLocation(EnterInfo info);
+
+CB_JumpSuccess();
+CB_ValidMap(Boolean bOpen);
+CB_UpdateLocation();
+CB_CanChangeLine(Boolean canChange);
+
+// for world event
+public:
+nonblock:
+GetWorldGameTime();
+block:
+CB_GetWorldGameTime(SYSTEMTIME sysTime);
+
+// for world event
+private:
+nonblock:
+NotifyNpcCreate(NpcLiveInfo npc);
+NotifyNpcDead(NpcLiveInfo npc);
+QueryNpcExist(NpcLiveList npcList);
+ForceLogout(UInt32 acct_id, UInt32 char_id, String msg);
+block:
+CB_NpcNotExist(NpcLiveList npcList);
+CB_StartEvent(NetGroup* events);
+CB_StopEvent(UInt32Vector eventIds, Boolean bForce);
+CB_PeriodEvent(NetGroup* events, UInt8 line_id);
+CB_TimeZoneChanged(UInt8 gameTime);
+StartEvent(UInt32 eventId);
+
+// for login
+public:
+LoginAccount(UInt32 ip, String loginName, ByteArray password);
+KickAccount(Boolean bKick);
+nonblock:
+GetMapLines(UInt16 map_id);
+VersionChecking(UInt32 versionNo);
+block:
+CB_GetMapLines(Int32Vector lineCounts, UInt16Vector lineState);
+CB_LoginResult(UInt8 result);
+CB_WaitAccount(UInt32 waitTime);
+CB_LoginAccount(NetObject* account, SYSTEMTIME sysTime);
+CB_VersionCorrect(Boolean equal);
+CB_ForceLogout(String forceOutMsg);
+
+// for charge shop
+private:
+CheckCanBuyLimitedItem(UInt32 chargeShopID, UInt16 stack, UInt32 char_id);
+ReduceLimitItem(UInt32 chargeShopID, Boolean buySuccess, UInt16 reduceStack, UInt32 char_id);
+CB_CheckCanBuyLimitedItem(UInt8 msgCode);
+// for Manager Service Cheat
+nonblock:
+SendCheatCommand(NetGroup* cheatCommandGroup);
+block:
+
+public:
+// for anti-hack
+CB_AntiHack(ByteArray image, AntiHackData data);
+AnswerAntiHack(UInt8 answer);
+
+// for misc
+private:
+nonblock:
+WorldCheat(UInt32 exe_id, UInt32 srcAcct_id, UInt32 target_acct_id, UInt32 target_char_id, String command);
+GetCharacterRank(UInt8 rankType);
+GetGuildRank();
+StoreApolloLog(UInt32 msgTime, UInt16 msgType, String TypeName, String msg);
+block:
+
+public:
+CB_Error(UInt32 err, String errMsg);
+CB_WorldCheat();
+CB_GetCharacterRank(NetGroup *charRankGrp, UInt8 rankType);
+CB_RankChangeMsg(String rankTitle, String char_name, UInt16 preRank, UInt16 curRank, SessionIDVector listeners);
+CB_GetGuildRank(NetGroup *charRankGrp);
+
+public:
+nonblock:
+ApolloMsg(ByteArray msg);
+CB_ApolloMsg(ByteArray msg);
+
+//for sell yuanbao
+GetSellYuanBao();
+CB_GetSellYuanBao(NetGroup* sellYuanBaoGroup, NetGroup* sellRecord);
+private:
+block:
+AddSellYuanBao(UInt32 YBT, UInt32 pricePerUnit, ByteArray password);
+CB_AddSellYuanBao(UInt8 msgIndex);
+BuySellYuanBao(UInt32 sellYuanBaoID, UInt32 YBT, UInt32 charTotalMoney, UInt32 moneyPerUnit, ByteArray password);
+CB_BuySellYuanBao(UInt8 msgIndex, Boolean fromWorld);
+GetTempBank(ByteArray password);
+CB_GetTempBank(UInt8 msgIndex, UInt32 totalYBT, UInt32 totalMoney);
+
+private:
+nonblock:
+ClientDisconnect();
+
+public:
+//wanted
+UpdateWantedReward(UInt32 targetId,Int32 money);
+CB_UpdateWantedReward(Boolean result);
+WantedDetail(UInt32 targetId);
+CB_WantedDetail(String name,UInt32 lineId,UInt32 mapId, UInt32 mapX, UInt32 mapY);
+RemoveFromWantedRank(UInt32 targetId);
+
+public:
+//generation
+DeleteGenerationTrans(UInt32 uiTargetId,UInt32 uiRelatedId);
+RecvGenerationAccmulationTrans(UInt32 uiTargetId,UInt32 uiRelatedId,UInt32 uiAcc);
+GenerationOnlineNotifyTrans(UInt32 uiTargetId,UInt32 uiRelatedId);
+GenerationOfflineNotifyTrans(UInt32 uiTargetId,UInt32 uiRelatedId);
+
+public:
+//global npc flag
+HasGlobalNpcFlag(UInt32 npc_id,UInt32 owner_id,UInt16 flag_id);
+CB_HasGlobalNpcFlag(Boolean result);
+GetGlobalNpcFlag(UInt32 npc_id,UInt32 owner_id,UInt16 flag_id);
+CB_GetGlobalNpcFlag(UInt32 flag);
+SetGlobalNpcFlag(UInt32 npc_id,UInt32 owner_id,UInt16 flag_id, UInt16 flag);
+CB_SetGlobalNpcFlag();
+RemoveGlobalNpcFlag(UInt32 npc_id,UInt32 owner_id,UInt16 flag_id);
+CB_RemoveGlobalNpcFlag();
+
+

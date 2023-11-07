@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<!-- Our to do list data -->
+<UI>
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	<!-- main body -->
+	<Panel Expand="1" Name="BDB_DialogueBox" X="210" Y="220" Image="Data\interface008_chat.tga" Hide="0"
+		THeight="410"
+		Left="410" Top="9" Right="790" Bottom="22" 
+		LineRectLeft="410" LineRectTop="22" LineRectRight="790" LineRectBottom="42" LineCount="5" 
+		BottomRectLeft="410" BottomRectTop="119" BottomRectRight="790" BottomRectBottom="131"
+		LuaLButtonDown="BDB_ClickNextMsg">
+
+		<ChatPanel Name="BDB_DialogueChat" X="14" Y="15" Width="350" Height="70" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" FillColor="7F0000FF" LuaLButtonDown="BDB_ClickNextMsg">
+		</ChatPanel>
+		
+		<PopUpMenu Name="BDB_DialogueChoosePopup" X="14" Y="15" Hide="1" BarWidth="350" Row="5" Column="24" 
+			EdgeCode="LIGHT" FontColor="FF00FF00" ShadowColor="FF000000"
+			LinePitch=6 SelFontColor="FFFF0000"
+			SelBarColor="00000000" LuaLButtonDown="BDB_DialogueChoose">
+		</PopUpMenu>
+	</Panel>
+	<!-- npc image -->
+	<Panel Name="BDB_DialogImagePanel" X="210" Y="0" Left="0" Top="0" Right="189" Bottom="225">
+		<UIImage Name="BDB_NPCPic"  X="0" Y="0" 
+			NotDetected = "1"
+			Left="0" Top="0" Right="189" Bottom="211" AutoDelete="1">
+	</Panel>
+</UI>

@@ -1,0 +1,47 @@
+<?xml version="1.0" ?>
+<!-- Our to do list data -->
+<UI>
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+		
+	<Panel Expand="1" Name="ChatBalloonParty1" X="150" Y="100" Image="Data\interface008_chat.tga" Hide="1"
+		Left="150" Top="48" Right="316" Bottom="59"
+		LineRectLeft="150" LineRectTop="61" LineRectRight="316" LineRectBottom="65" LineCount="150"
+		BottomRectLeft="150" BottomRectTop="74" BottomRectRight="316" BottomRectBottom="80"
+		LuaTimeOut="ChatBalloonPartyClose1" TimeOutCount="3000"
+		>
+		<ChatPanel Name="ChatBalloonPartyContext1" X="15" Y="6" Width="150" Height="55" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" FillColor="7F0000FF" >
+		</ChatPanel>
+	</Panel>
+	<Panel Expand="1" Name="ChatBalloonParty2" X="150" Y="150" Image="Data\interface008_chat.tga" Hide="1"
+		Left="150" Top="48" Right="316" Bottom="59"
+		LineRectLeft="150" LineRectTop="61" LineRectRight="316" LineRectBottom="65" LineCount="150"
+		BottomRectLeft="150" BottomRectTop="74" BottomRectRight="316" BottomRectBottom="80"
+		LuaTimeOut="ChatBalloonPartyClose2" TimeOutCount="3000"
+		>
+		<ChatPanel Name="ChatBalloonPartyContext2" X="15" Y="6" Width="150" Height="55" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" FillColor="7F0000FF">
+		</ChatPanel>
+	</Panel>
+	<Panel Expand="1" Name="ChatBalloonParty3" X="150" Y="200" Image="Data\interface008_chat.tga" Hide="1"
+		Left="150" Top="48" Right="316" Bottom="59"
+		LineRectLeft="150" LineRectTop="61" LineRectRight="316" LineRectBottom="65" LineCount="150"
+		BottomRectLeft="150" BottomRectTop="74" BottomRectRight="316" BottomRectBottom="80"
+		LuaTimeOut="ChatBalloonPartyClose3" TimeOutCount="3000"
+		>
+		<ChatPanel Name="ChatBalloonPartyContext3" X="15" Y="6" Width="150" Height="55" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" FillColor="7F0000FF" LuaLButtonDown="ChatBalloonPartyClose3">
+		</ChatPanel>
+	</Panel>
+	<Panel Expand="1" Name="ChatBalloonParty4" X="150" Y="250" Image="Data\interface008_chat.tga" Hide="1"
+		Left="150" Top="48" Right="316" Bottom="59"
+		LineRectLeft="150" LineRectTop="61" LineRectRight="316" LineRectBottom="65" LineCount="150"
+		BottomRectLeft="150" BottomRectTop="74" BottomRectRight="316" BottomRectBottom="80"
+		LuaTimeOut="ChatBalloonPartyClose4" TimeOutCount="3000"
+		>
+		<ChatPanel Name="ChatBalloonPartyContext4" X="15" Y="6" Width="150" Height="55" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" FillColor="7F0000FF" >
+		</ChatPanel>
+	</Panel>
+</UI>
+

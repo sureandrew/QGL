@@ -1,0 +1,21 @@
+//-- Config
+config
+{
+	SubPath="Logic/";
+	ClassID=51000;
+	StartID=51000;
+	EndID  =51999;
+}
+
+//-- include
+
+//-- object class
+class GuildApplicant : NetObject
+{
+	//-- object state
+	id {			UInt32 char_id; 		};
+	name { 			String name; 			}; 
+	applyDate { 	UInt32 ApplyDate; 		}; 
+	level {			UInt16 level;			};
+	
+}

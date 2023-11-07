@@ -1,0 +1,53 @@
+// $ANTLR 2.7.4: IDL.g -> IDLTokenTypes.txt$
+IDL    // output token vocab name
+PREPROC_DIRECTIVE("a preprocessor directive")=4
+TYPEDEF("a typedef directive")=5
+STRUCT("a struct directive")=6
+LITERAL_public="public"=7
+COLON(":")=8
+LITERAL_private="private"=9
+LITERAL_block="block"=10
+LITERAL_nonblock="nonblock"=11
+LITERAL_config="config"=12
+LCURLY("{")=13
+RCURLY("}")=14
+IDENT("an identifer")=15
+ASSIGN("=")=16
+INT("an integer value")=17
+STRING_LITERAL("a string literal")=18
+SEMI(";")=19
+LITERAL_class="class"=20
+LPAREN("(")=21
+COMMA(",")=22
+RPAREN(")")=23
+TYPEP("a type prefix")=24
+STAR("*")=25
+AND("&")=26
+LT_("<")=27
+FLOAT("an floating point value")=28
+GT(">")=29
+LBRACK("[")=30
+RBRACK("]")=31
+QUESTION("?")=32
+OR("|")=33
+XOR("^")=34
+DOT(".")=35
+NOT("!")=36
+LSHIFT("<<")=37
+RSHIFT(">>")=38
+DIV("/")=39
+PLUS("+")=40
+MINUS("-")=41
+TILDE("~")=42
+MOD("%")=43
+SCOPEOP("::")=44
+WS_("white space")=45
+SL_COMMENT("a comment")=46
+ML_COMMENT("a comment")=47
+CHAR_LITERAL("a character literal")=48
+ESC("an escape sequence")=49
+VOCAB("an escaped character value")=50
+DIGIT("a digit")=51
+OCTDIGIT("an octal digit")=52
+HEXDIGIT("a hexadecimal digit")=53
+HEX("a hexadecimal value value")=54

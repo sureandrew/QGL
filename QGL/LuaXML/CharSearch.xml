@@ -1,0 +1,320 @@
+<?xml version="1.0" ?>
+<!-- Our to do list data -->
+<UI>
+	<ID Name="CharSearch" />
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	<Panel Name="CharSearchPanel" Image="Data\interface0046_search_Char.tga" X="50" Y="100" Left="16"
+		Top="12" Right="516" Bottom="404" Drag="1" DragLeft="0" DragTop="0" DragRight="500"
+		DragBottom="392" LuaRButtonUp="CloseNPCSearch" LuaKeyChar="CloseNPCSearch"
+		DetectImage = "1">	
+		<Button Name="CloseCharSearch" Image="Data\interface0025_main_J.tga" X="470" Y="8" LuaLButtonUp="CloseNPCSearch">
+			<ButtonRect State="0" Left="265" Top="8" Right="289" Bottom="26" />
+			<ButtonRect State="1" Left="290" Top="8" Right="314" Bottom="26" />
+			<ButtonRect State="2" Left="315" Top="8" Right="339" Bottom="26" />
+		</Button>
+		<Button Name="CharSearchPagePrev" Image="Data\interface0025_main_K.tga" X="60" Y="360" LuaLButtonUp="OnCharSearchPagePrev" >
+			<ButtonRect State="0" Left="713" Top="362" Right="739" Bottom="386" />	
+			<ButtonRect State="1" Left="713" Top="387" Right="739" Bottom="411" />
+			<ButtonRect State="2" Left="713" Top="412" Right="739" Bottom="436" />
+		</Button>	
+		
+		<StaticText Name="CharSearchPageNo" X="100" Y="365" Height="20" Width="55" Row="1" Colume="5" 
+			EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="CENTER">
+		</StaticText>
+		
+		<Button Name="CharSearchPageNext" Image="Data\interface0025_main_K.tga" X="164" Y="360" LuaLButtonUp="OnCharSearchPageNext" >
+			<ButtonRect State="0" Left="749" Top="362" Right="775" Bottom="386" />	
+			<ButtonRect State="1" Left="749" Top="387" Right="775" Bottom="411" />
+			<ButtonRect State="2" Left="749" Top="412" Right="775" Bottom="436" />
+		</Button>
+		
+		<Button Name="JoinCharSearch" Image="Data\interface0046_search_Char.tga" X="250" Y="360" LuaLButtonUp="OnJoinCharSearch" >
+			<ButtonRect State="0" Left="549" Top="72" Right="626" Bottom="91" />	
+			<ButtonRect State="1" Left="549" Top="95" Right="626" Bottom="114" />
+			<ButtonRect State="2" Left="549" Top="118" Right="626" Bottom="137" />
+		</Button>
+		
+		<Button Name="CloseCharSearch3" Image="Data\interface0046_search_Char.tga" X="350" Y="360" LuaLButtonUp="CloseNPCSearch" >
+			<ButtonRect State="0" Left="639" Top="72" Right="716" Bottom="91" />	
+			<ButtonRect State="1" Left="639" Top="95" Right="716" Bottom="114" />
+			<ButtonRect State="2" Left="639" Top="118" Right="716" Bottom="137" />
+		</Button>
+		
+		<CheckBox Name="ShowCharList3" Image="Data\interface0025_main_J.tga" X="71" Y="31" State="1" LuaLButtonDown="ShowCharList3">
+			<CheckBoxRect Index="0" Left="334" Top="298" Right="403" Bottom="319" />
+			<CheckBoxRect Index="1" Left="334" Top="298" Right="403" Bottom="319" />
+			<CheckBoxRect Index="2" Left="260" Top="298" Right="329" Bottom="319" />
+		</CheckBox>
+		
+		<CheckBox Name="ShowNPCList3" Image="Data\interface0025_main_J.tga" X="7" Y="31" State="0" LuaLButtonDown="ShowNPCList3">
+			<CheckBoxRect Index="0" Left="334" Top="274" Right="398" Bottom="295" />
+			<CheckBoxRect Index="1" Left="334" Top="274" Right="398" Bottom="295" />
+			<CheckBoxRect Index="2" Left="260" Top="274" Right="329" Bottom="295" />
+		</CheckBox>
+		
+		<CheckBox Name="ShowPartyList3" Image="Data\interface0025_main_J.tga" X="135" Y="31" State="0" LuaLButtonDown="ShowPartyList3">
+			<CheckBoxRect Index="0" Left="334" Top="322" Right="398" Bottom="343" />
+			<CheckBoxRect Index="1" Left="334" Top="322" Right="398" Bottom="343" />
+			<CheckBoxRect Index="2" Left="260" Top="322" Right="329" Bottom="343" />
+		</CheckBox>
+		
+		<UIImage Name="CharInfoHighLight" Image="Data\interface0046_search_Char.tga" X="0" Y="0" Left="16"
+			Top="478" Right="500" Bottom="501" Hide="1" LuaRButtonUp="ShowLeaderInfo"/>
+		<UIImage Name="CharInfoHighLight1" Image="Data\interface0046_search_Char.tga" X="9" Y="70"  
+			LuaLButtonUp="CharInfoSearchClick" Left="16" Top="504" Right="500" Bottom="527" LuaRButtonUp="ShowLeaderInfo"/>
+		<UIImage Name="CharInfoHighLight2" Image="Data\interface0046_search_Char.tga" X="9" Y="93"  
+			LuaLButtonUp="CharInfoSearchClick" Left="16" Top="504" Right="500" Bottom="527" LuaRButtonUp="ShowLeaderInfo"/>
+		<UIImage Name="CharInfoHighLight3" Image="Data\interface0046_search_Char.tga" X="9" Y="112"  
+			LuaLButtonUp="CharInfoSearchClick" Left="16" Top="504" Right="500" Bottom="527" LuaRButtonUp="ShowLeaderInfo"/>
+		<UIImage Name="CharInfoHighLight4" Image="Data\interface0046_search_Char.tga" X="9" Y="139"  
+			LuaLButtonUp="CharInfoSearchClick" Left="16" Top="504" Right="500" Bottom="527" LuaRButtonUp="ShowLeaderInfo"/>
+		<UIImage Name="CharInfoHighLight5" Image="Data\interface0046_search_Char.tga" X="9" Y="162"  
+			LuaLButtonUp="CharInfoSearchClick" Left="16" Top="504" Right="500" Bottom="527" LuaRButtonUp="ShowLeaderInfo"/>
+		<UIImage Name="CharInfoHighLight6" Image="Data\interface0046_search_Char.tga" X="9" Y="185"  
+			LuaLButtonUp="CharInfoSearchClick" Left="16" Top="504" Right="500" Bottom="527" LuaRButtonUp="ShowLeaderInfo"/>
+		<UIImage Name="CharInfoHighLight7" Image="Data\interface0046_search_Char.tga" X="9" Y="208"  
+			LuaLButtonUp="CharInfoSearchClick" Left="16" Top="504" Right="500" Bottom="527" LuaRButtonUp="ShowLeaderInfo"/>
+		<UIImage Name="CharInfoHighLight8" Image="Data\interface0046_search_Char.tga" X="9" Y="231"  
+			LuaLButtonUp="CharInfoSearchClick" Left="16" Top="504" Right="500" Bottom="527" LuaRButtonUp="ShowLeaderInfo"/>
+		<UIImage Name="CharInfoHighLight9" Image="Data\interface0046_search_Char.tga" X="9" Y="254"  
+			LuaLButtonUp="CharInfoSearchClick" Left="16" Top="504" Right="500" Bottom="527" LuaRButtonUp="ShowLeaderInfo"/>
+		<UIImage Name="CharInfoHighLight10" Image="Data\interface0046_search_Char.tga" X="9" Y="277"  
+			LuaLButtonUp="CharInfoSearchClick" Left="16" Top="504" Right="500" Bottom="527" LuaRButtonUp="ShowLeaderInfo"/>
+		<UIImage Name="CharInfoHighLight11" Image="Data\interface0046_search_Char.tga" X="9" Y="300"  
+			LuaLButtonUp="CharInfoSearchClick" Left="16" Top="504" Right="500" Bottom="527" LuaRButtonUp="ShowLeaderInfo"/>
+		<UIImage Name="CharInfoHighLight12" Image="Data\interface0046_search_Char.tga" X="9" Y="323"  
+			LuaLButtonUp="CharInfoSearchClick" Left="16" Top="504" Right="500" Bottom="527" LuaRButtonUp="ShowLeaderInfo"/>
+
+		<CheckBox Name="CharInfoFaction" Image="Data\interface0046_search_Char.tga" X="168" Y="50" State="0" LuaLButtonDown="CharInfoFactionClick" >
+			<CheckBoxRect Index="0" Left="95" Top="412" Right="130" Bottom="430" />	
+			<CheckBoxRect Index="1" Left="95" Top="432" Right="130" Bottom="450" />
+			<CheckBoxRect Index="2" Left="95" Top="412" Right="130" Bottom="430" />
+		</CheckBox>
+		<CheckBox Name="CharInfoCclass" Image="Data\interface0046_search_Char.tga" X="291" Y="50" State="0" LuaLButtonDown="CharInfoCclassClick" >
+			<CheckBoxRect Index="0" Left="165" Top="412" Right="200" Bottom="430" />
+			<CheckBoxRect Index="1" Left="165" Top="432" Right="200" Bottom="450" />	
+			<CheckBoxRect Index="2" Left="165" Top="412" Right="200" Bottom="430" />
+		</CheckBox>
+		<CheckBox Name="CharInfoLevel" Image="Data\interface0046_search_Char.tga" X="418" Y="50" State="0" LuaLButtonDown="CharInfoLevelClick" >
+			<CheckBoxRect Index="0" Left="215" Top="412" Right="250" Bottom="430" />
+			<CheckBoxRect Index="1" Left="215" Top="432" Right="250" Bottom="450" />	
+			<CheckBoxRect Index="2" Left="215" Top="412" Right="250" Bottom="430" />
+		</CheckBox>
+		<!-- <CheckBox Name="CharInfoCount" Image="Data\interface0046_search_Char.tga" X="300" Y="50" State="0" LuaLButtonDown="CharInfoCountClick" >
+			<CheckBoxRect Index="0" Left="268" Top="412" Right="300" Bottom="430" />
+			<CheckBoxRect Index="1" Left="268" Top="432" Right="300" Bottom="450" />	
+			<CheckBoxRect Index="2" Left="268" Top="412" Right="300" Bottom="430" />
+		</CheckBox>
+		<CheckBox Name="CharInfoDesc" Image="Data\interface0046_search_Char.tga" X="370" Y="50" State="1" LuaLButtonDown="CharInfoDescClick" >
+			<CheckBoxRect Index="0" Left="352" Top="412" Right="414" Bottom="430" />
+			<CheckBoxRect Index="1" Left="352" Top="432" Right="414" Bottom="450" />	
+			<CheckBoxRect Index="2" Left="352" Top="412" Right="414" Bottom="430" />
+		</CheckBox>
+		<UIImage Name="CharInfoFaction" Image="Data\interface0046_search_Char.tga" X="130" Y="50"  
+			LuaLButtonDown="CharInfoFactionClick" Left="95" Top="412" Right="130" Bottom="430" DetectImage = "1"/>
+		<UIImage Name="CharInfoCclass" Image="Data\interface0046_search_Char.tga" X="200" Y="50"  
+			LuaLButtonDown="CharInfoCclassClick" Left="165" Top="412" Right="200" Bottom="430" DetectImage = "1"/>
+		<UIImage Name="CharInfoLevel" Image="Data\interface0046_search_Char.tga" X="250" Y="50"  
+			LuaLButtonDown="CharInfoLevelClick" Left="215" Top="412" Right="250" Bottom="430" DetectImage = "1"/>
+		<UIImage Name="CharInfoCount" Image="Data\interface0046_search_Char.tga" X="300" Y="50"  
+			LuaLButtonDown="CharInfoCountClick" Left="268" Top="412" Right="300" Bottom="430" DetectImage = "1"/>
+		<UIImage Name="CharInfoDesc" Image="Data\interface0046_search_Char.tga" X="370" Y="50"  
+			LuaLButtonDown="CharInfoDescClick" Left="352" Top="412" Right="414" Bottom="430" DetectImage = "1"/> -->
+			
+		<StaticText Name="CharInfoName01" Align="Center" X="10" Y="73" Hide="1" Row="1" Column="4" Width="114" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="CharInfoFaction01" Align="Center" X="134" Y="73" Hide="1" Row="1" Column="4" Width="110" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="CharInfoCclass01" Align="Center" X="254" Y="73" Hide="1" Row="1" Column="4" Width="110" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="CharInfoLevel01" Align="Center" X="384" Y="73" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<!-- <StaticText Name="CharInfoCount01" Align="Center" X="293" Y="73" Hide="1" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="CharInfoDesc01" Align="Center" X="345" Y="73" Hide="1" Row="1" Column="4" Width="150" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>-->
+		
+		<StaticText Name="CharInfoName02" Align="Center" X="10" Y="96" Hide="1" Row="1" Column="4" Width="114" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="CharInfoFaction02" Align="Center" X="134" Y="96" Hide="1" Row="1" Column="4" Width="110" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="CharInfoCclass02" Align="Center" X="254" Y="96" Hide="1" Row="1" Column="4" Width="110" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="CharInfoLevel02" Align="Center" X="384" Y="96" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<!-- <StaticText Name="CharInfoCount02" Align="Center" X="293" Y="96" Hide="1" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="CharInfoDesc02" Align="Center" X="345" Y="96" Hide="1" Row="1" Column="4" Width="150" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>-->
+		
+		<StaticText Name="CharInfoName03" Align="Center" X="10" Y="119" Hide="1" Row="1" Column="4" Width="114" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="CharInfoFaction03" Align="Center" X="134" Y="119" Hide="1" Row="1" Column="4" Width="110" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="CharInfoCclass03" Align="Center" X="254" Y="119" Hide="1" Row="1" Column="4" Width="110" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="CharInfoLevel03" Align="Center" X="384" Y="119" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<!-- <StaticText Name="CharInfoCount03" Align="Center" X="293" Y="119" Hide="1" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="CharInfoDesc03" Align="Center" X="345" Y="119" Hide="1" Row="1" Column="4" Width="150" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>-->
+		
+		<StaticText Name="CharInfoName04" Align="Center" X="10" Y="142" Hide="1" Row="1" Column="4" Width="114" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="CharInfoFaction04" Align="Center" X="134" Y="142" Hide="1" Row="1" Column="4" Width="110" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="CharInfoCclass04" Align="Center" X="254" Y="142" Hide="1" Row="1" Column="4" Width="110" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="CharInfoLevel04" Align="Center" X="384" Y="142" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<!-- <StaticText Name="CharInfoCount04" Align="Center" X="293" Y="142" Hide="1" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="CharInfoDesc04" Align="Center" X="345" Y="142" Hide="1" Row="1" Column="4" Width="150" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>-->
+		
+		<StaticText Name="CharInfoName05" Align="Center" X="10" Y="165" Hide="1" Row="1" Column="4" Width="114" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="CharInfoFaction05" Align="Center" X="134" Y="165" Hide="1" Row="1" Column="4" Width="110" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="CharInfoCclass05" Align="Center" X="254" Y="165" Hide="1" Row="1" Column="4" Width="110" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="CharInfoLevel05" Align="Center" X="384" Y="165" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<!-- <StaticText Name="CharInfoCount05" Align="Center" X="293" Y="165" Hide="1" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="CharInfoDesc05" Align="Center" X="345" Y="165" Hide="1" Row="1" Column="4" Width="150" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>-->
+		
+		<StaticText Name="CharInfoName06" Align="Center" X="10" Y="188" Hide="1" Row="1" Column="4" Width="114" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="CharInfoFaction06" Align="Center" X="134" Y="188" Hide="1" Row="1" Column="4" Width="110" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="CharInfoCclass06" Align="Center" X="254" Y="188" Hide="1" Row="1" Column="4" Width="110" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="CharInfoLevel06" Align="Center" X="384" Y="188" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<!-- <StaticText Name="CharInfoCount06" Align="Center" X="293" Y="188" Hide="1" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="CharInfoDesc06" Align="Center" X="345" Y="188" Hide="1" Row="1" Column="4" Width="150" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>-->
+		
+		<StaticText Name="CharInfoName07" Align="Center" X="10" Y="211" Hide="1" Row="1" Column="4" Width="114" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="CharInfoFaction07" Align="Center" X="134" Y="211" Hide="1" Row="1" Column="4" Width="110" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="CharInfoCclass07" Align="Center" X="254" Y="211" Hide="1" Row="1" Column="4" Width="110" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="CharInfoLevel07" Align="Center" X="384" Y="211" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<!-- <StaticText Name="CharInfoCount07" Align="Center" X="293" Y="211" Hide="1" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="CharInfoDesc07" Align="Center" X="345" Y="211" Hide="1" Row="1" Column="4" Width="150" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>-->
+		
+		<StaticText Name="CharInfoName08" Align="Center" X="10" Y="234" Hide="1" Row="1" Column="4" Width="114" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="CharInfoFaction08" Align="Center" X="134" Y="234" Hide="1" Row="1" Column="4" Width="110" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="CharInfoCclass08" Align="Center" X="254" Y="234" Hide="1" Row="1" Column="4" Width="110" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="CharInfoLevel08" Align="Center" X="384" Y="234" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<!-- <StaticText Name="CharInfoCount08" Align="Center" X="293" Y="234" Hide="1" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="CharInfoDesc08" Align="Center" X="345" Y="234" Hide="1" Row="1" Column="4" Width="150" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>-->
+		
+		<StaticText Name="CharInfoName09" Align="Center" X="10" Y="257" Hide="1" Row="1" Column="4" Width="114" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="CharInfoFaction09" Align="Center" X="134" Y="257" Hide="1" Row="1" Column="4" Width="110" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="CharInfoCclass09" Align="Center" X="254" Y="257" Hide="1" Row="1" Column="4" Width="110" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="CharInfoLevel09" Align="Center" X="384" Y="257" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<!-- <StaticText Name="CharInfoCount09" Align="Center" X="293" Y="257" Hide="1" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="CharInfoDesc09" Align="Center" X="345" Y="257" Hide="1" Row="1" Column="4" Width="150" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>-->
+		
+		<StaticText Name="CharInfoName10" Align="Center" X="10" Y="280" Hide="1" Row="1" Column="4" Width="114" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="CharInfoFaction10" Align="Center" X="134" Y="280" Hide="1" Row="1" Column="4" Width="110" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="CharInfoCclass10" Align="Center" X="254" Y="280" Hide="1" Row="1" Column="4" Width="110" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="CharInfoLevel10" Align="Center" X="384" Y="280" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<!-- <StaticText Name="CharInfoCount10" Align="Center" X="293" Y="280" Hide="1" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="CharInfoDesc10" Align="Center" X="345" Y="280" Hide="1" Row="1" Column="4" Width="150" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>-->
+		
+		<StaticText Name="CharInfoName11" Align="Center" X="10" Y="303" Hide="1" Row="1" Column="4" Width="114" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="CharInfoFaction11" Align="Center" X="134" Y="303" Hide="1" Row="1" Column="4" Width="110" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="CharInfoCclass11" Align="Center" X="254" Y="303" Hide="1" Row="1" Column="4" Width="110" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="CharInfoLevel11" Align="Center" X="384" Y="303" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<!-- <StaticText Name="CharInfoCount11" Align="Center" X="293" Y="303" Hide="1" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="CharInfoDesc11" Align="Center" X="345" Y="303" Hide="1" Row="1" Column="4" Width="150" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>-->
+		
+		<StaticText Name="CharInfoName12" Align="Center" X="10" Y="326" Hide="1" Row="1" Column="4" Width="114" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="CharInfoFaction12" Align="Center" X="134" Y="326" Hide="1" Row="1" Column="4" Width="110" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="CharInfoCclass12" Align="Center" X="254" Y="326" Hide="1" Row="1" Column="4" Width="110" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="CharInfoLevel12" Align="Center" X="384" Y="326" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<!-- <StaticText Name="CharInfoCount12" Align="Center" X="293" Y="326" Hide="1" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="CharInfoDesc12" Align="Center" X="345" Y="326" Hide="1" Row="1" Column="4" Width="150" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>-->
+	</Panel>
+	<Panel Name="CharInfoSelectPanel" Image="Data\interface0046_search_Char.tga" X="50" Y="100" Left="548"
+		Top="220" Right="734" Bottom="451" Drag="1" DragLeft="0" DragTop="0" DragRight="186"
+		DragBottom="331" LuaRButtonUp="CloseCharInfoSelectPanel" LuaKeyChar="CloseCharInfoSelectPanel"
+		DetectImage = "1">	
+		<StaticText Name="CharInfoSelectName1" Align="Center" X="14" Y="14" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="CharInfoSelectLevel1" Align="Center" X="122" Y="14" Hide="1" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="CharInfoSelectFaction1" Align="Center" X="14" Y="37" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="CharInfoSelectCclass1" Align="Center" X="122" Y="37" Hide="1" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		
+		<StaticText Name="CharInfoSelectName2" Align="Center" X="14" Y="70" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="CharInfoSelectLevel2" Align="Center" X="122" Y="70" Hide="1" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="CharInfoSelectFaction2" Align="Center" X="14" Y="93" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="CharInfoSelectCclass2" Align="Center" X="122" Y="93" Hide="1" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		
+		<StaticText Name="CharInfoSelectName3" Align="Center" X="14" Y="126" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="CharInfoSelectLevel3" Align="Center" X="122" Y="126" Hide="1" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="CharInfoSelectFaction3" Align="Center" X="14" Y="149" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="CharInfoSelectCclass3" Align="Center" X="122" Y="149" Hide="1" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		
+		<StaticText Name="CharInfoSelectName4" Align="Center" X="14" Y="182" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="CharInfoSelectLevel4" Align="Center" X="122" Y="182" Hide="1" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="CharInfoSelectFaction4" Align="Center" X="14" Y="205" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="CharInfoSelectCclass4" Align="Center" X="122" Y="205" Hide="1" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+</UI>

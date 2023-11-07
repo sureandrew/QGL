@@ -1,0 +1,71 @@
+<?xml version="1.0" ?>
+<!-- Our to do list data -->
+<UI>
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	<Panel Name="ChatIconPopPanel" Image="Data\interface008_chat3.tga" X="180" Y="70" 
+			Left="3" Top="3" Right="579" Bottom="410" LuaRButtonDown="CloseChatIconPanel" LuaMouseWheel="">
+	
+	<ChatPanel Name="ChatIconPanel" X="6" Y="6" Width="565" Height="400" ContinueRun = "0" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" FillColor="7F0000FF" LuaLButtonDown="AddChatIconToEditLine" LuaRButtonDown="CloseChatIconPanel"
+			DisableScroll="1">
+		</ChatPanel>
+		
+	<Button Image="Data\interface008_chat.tga" X="560" Y="4" LuaLButtonUp="CloseChatIconPanel">
+			<ButtonRect State="0" Left="112" Top="182" Right="125" Bottom="195" />
+			<ButtonRect State="1" Left="129" Top="182" Right="142" Bottom="195" />
+			<ButtonRect State="2" Left="146" Top="182" Right="159" Bottom="195" />
+			
+	</Button>
+	<!--
+	<ScrollBarV Name="ChatIconScrollBar" X="317" Y="18" Width ="14" Height="228" Limit="2" BarColor="0" LuaLButtonDown="ChatIconPanelScroll">
+			<PrevButton Name="ChatIconPanelUp" Image="Data\interface008_chat.tga" X="0" Y="0"  LuaLButtonDown="ChatIconPanelUp">
+				<ButtonRect State="0" Left="361" Top="249" Right="375" Bottom="264" />
+				<ButtonRect State="1" Left="377" Top="249" Right="391" Bottom="264" />
+				<ButtonRect State="2" Left="393" Top="249" Right="407" Bottom="264" />
+			</PrevButton>
+			<NextButton Name="ChatIconPanelDown" Image="Data\interface008_chat.tga" X="0" Y="213"  LuaLButtonDown="ChatIconPanelDown">
+				<ButtonRect State="0" Left="361" Top="266" Right="375" Bottom="281" />
+				<ButtonRect State="1" Left="377" Top="266" Right="391" Bottom="281" />
+				<ButtonRect State="2" Left="393" Top="266" Right="407" Bottom="281" />
+			</NextButton>
+			<MoveButton Image="Data\interface008_chat.tga" X="0" Y="15"  LuaMouseMove="ChatIconPanelScroll">
+				<ButtonRect State="0" Left="410" Top="249" Right="424" Bottom="279" />
+				<ButtonRect State="1" Left="410" Top="249" Right="424" Bottom="279" />
+				<ButtonRect State="2" Left="410" Top="249" Right="424" Bottom="279" />
+			</MoveButton>
+	</ScrollBarV>
+		
+		<Button Image="Data\interface008_chat.tga" X="317" Y="18"  LuaLButtonUp="ChatIconPanelUp">
+			<ButtonRect State="0" Left="361" Top="249" Right="375" Bottom="264" />
+			<ButtonRect State="1" Left="377" Top="249" Right="391" Bottom="264" />
+			<ButtonRect State="2" Left="393" Top="249" Right="407" Bottom="264" />
+		</Button>
+		<Button Image="Data\interface008_chat.tga" X="317" Y="231"  LuaLButtonUp="ChatIconPanelDown">
+			<ButtonRect State="0" Left="361" Top="266" Right="375" Bottom="281" />
+			<ButtonRect State="1" Left="377" Top="266" Right="391" Bottom="281" />
+			<ButtonRect State="2" Left="393" Top="266" Right="407" Bottom="281" />
+		</Button>
+		<Button Image="Data\interface008_chat.tga" X="317" Y="30"  LuaLButtonUp="ChatIconPanelScroll">
+			<ButtonRect State="0" Left="410" Top="249" Right="424" Bottom="279" />
+			<ButtonRect State="1" Left="410" Top="249" Right="424" Bottom="279" />
+			<ButtonRect State="2" Left="410" Top="249" Right="424" Bottom="279" />
+		</Button>
+		-->
+		<!--<Button  Image="Data\interface008_chat.tga" X="317" Y="32"  LuaLButtonUp="ChatIconPanelUp">
+			<ButtonRect State="0" Left="323" Top="350" Right="334" Bottom="357" />
+			<ButtonRect State="1" Left="323" Top="350" Right="334" Bottom="357" />
+			<ButtonRect State="2" Left="323" Top="350" Right="334" Bottom="357" />
+		</Button>
+		<Button  Image="Data\interface008_chat.tga" X="317" Y="203"  LuaLButtonUp="ChatIconPanelDown">
+			<ButtonRect State="0" Left="323" Top="362" Right="334" Bottom="369" />
+			<ButtonRect State="1" Left="323" Top="362" Right="334" Bottom="369" />
+			<ButtonRect State="2" Left="323" Top="362" Right="334" Bottom="369" />
+		</Button>
+		<Button  Image="Data\interface008_chat.tga" X="317" Y="45"  LuaLButtonUp="ChatIconPanelScroll">
+			<ButtonRect State="0" Left="338" Top="356" Right="352" Bottom="363" />
+			<ButtonRect State="1" Left="338" Top="356" Right="352" Bottom="363" />
+			<ButtonRect State="2" Left="338" Top="356" Right="352" Bottom="363" />
+		</Button>
+		-->
+	</Panel>
+</UI>

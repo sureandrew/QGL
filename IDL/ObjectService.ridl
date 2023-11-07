@@ -1,0 +1,303 @@
+//-- Config
+config
+{
+	SubPath="Service/";
+	TrustOnly=1;
+	StartID=1000;
+	EndID=1999;
+}
+
+//-- Include header
+
+//-- Error Handle
+private:
+CB_Error(UInt32 errCode, String errMsg);
+
+//-- RPC functions for AccountData
+CreateAccount(String loginName, ByteArray password_hash);
+DeleteAccount(UInt32 acct_id);
+SetYuanBaoLock(UInt32 acct_id, Boolean lock);
+IsAssetProtected(UInt32 acct_id);
+StoreAssetPassword(ByteArray password, UInt32 acctID);
+SetAssetPassResetDate(UInt32 acctID, UInt32 now);
+GetAssetPassword(UInt32 acctID);
+nonblock:
+GetAccountByName(String loginName, Boolean bReactive);
+GetYaunBaoByAcctID(UInt32 acct_id);
+block:
+UpdateAccount(UInt32 acctID, NetObject *acctdata);
+UpdateAccountAddictInfo(UInt32 acctID, UInt32 disconnectTime, UInt32 offTime, UInt32 onTime);
+ReleaseAccount(UInt32 acct_id);
+UpdateYuanBao(UInt32 acct_id, Int32 change);
+UpdateYuanBaoTicket(UInt32 acct_id, Int32 change, ByteArray password);
+CB_GetAccountData(NetObject *acctData);
+CB_UpdateAccountSuccess();
+CB_IsAssetProtected(Boolean bProtext, Boolean bNeedResetPass);
+CB_StoreAssetPassword(Boolean success);
+CB_ResetAssetPassDate(Boolean success);
+CB_GetAssetPassword(ByteArray pass);
+CB_GetYuanBaoByAcctID(UInt32 yuanBao, UInt32 yuanBaoticket, Boolean yuanBaoLock, UInt32 locktime);
+CB_UpdateYuanBao(UInt32 yuanBao, Boolean success);
+CB_UpdateYuanBaoTicket(UInt32 yuanBao, UInt32 yuanBaoTicket, UInt8 msgIndex);
+
+//-- RPC functions for CharacterData
+CreateCharacter(UInt32 acct_id, String nickName, UInt8 sex, UInt8 cclass, NetObject *charData, UInt8 detail);
+DeleteCharacter(UInt32 char_id, UInt32 acct_id);
+KeepCharacter(UInt32 acct_id, UInt32 char_id);
+ReleaseCharacter(UInt32 acct_id, UInt32 char_id);
+RestoreCharacter(UInt32 char_id);
+SetCharacterExpiryDate(UInt32 char_id, UInt32 extendPeriod);
+SetBankLock(UInt32 charID, Boolean lock);
+nonblock:
+GetCharacters(UInt32 acct_id, UInt32 char_id, UInt8 detail);
+HasCharacter(String charName);
+block:
+UpdateCharacter(UInt32 char_id, NetObject* charData);
+CB_GetCharacterGroup(NetGroup *charGroup, UInt8 detail);
+CB_UpdateCharacter();
+CB_CreateCharacterSuccess(UInt32 char_id);
+CB_DeleteCharacterSuccess();
+CB_HasCharacter(BOOL hasChar);
+CB_QueueNetGroup(NetGroup* grp);
+CB_RestoreCharacterSuccess();
+CB_SetCharExpiryDateSuccess(UInt32 deletetime);
+UpdateCharGenAcc(UInt32 uiCharId,UInt32 uiHistoryAcc,UInt32 uiCurAcc);
+CB_UpdateCharGenAcc(int iRet);
+
+//-- RPC functions for ItemData
+CreateItemList(UInt32Vector item_ids, UInt32 owner_id, UInt8Vector bagIndices, UInt8 detail);
+SetItemLock(UInt32 itemUID, Boolean lock);
+nonblock:
+GetItemsByOwner(UInt32 owner_id, UInt8 inWareHouse, UInt8 detail);
+block:
+UpdateItemList(UInt32Vector itemList, UInt32 owner_id, NetGroup* grp, Boolean separated);
+CB_CreateItemDone();
+CB_GetItemData(NetObject *itemData, UInt8 detail);
+CB_GetItemGroup(NetGroup *itemGroup, UInt8 detail);
+CB_UpdateItemList(NetGroup *itemGroup);
+CB_SetAssetLock(Boolean success);
+
+//-- RPC functions for PartnerData
+CreatePartner(UInt32 mob_id, UInt32 level, UInt32 owner_id, UInt8 detail);
+SetPartnerLock(UInt32 partnerID, Boolean lock);
+nonblock:
+GetPartnersByCharID(UInt32 char_id, UInt8 inWareHouse, UInt8 detail);
+block:
+UpdatePartnerList(UInt32Vector partnerList, NetGroup* grp, Boolean separated);
+CB_CreatePartnerSuccess(NetObject* partner);
+CB_GetPartnerGroup(NetGroup *partnerGroup, UInt8 detail);
+CB_UpdatePartnerList(NetGroup *newGroup);
+
+// -- RPC functions for SkillData
+CreateSkillList(UInt8 owner_type, UInt32Vector owner_ids, UInt16Vector skill_ids, UInt16Vector skill_levels);
+UpdateSkillList(UInt32 owner_id, UInt8 owner_type, NetGroup* skillData);
+DeleteSkillList(UInt32 owner_id, UInt16Vector skill_ids, UInt8 owner_type);
+nonblock:
+GetSkillList(UInt32Vector owner_ids, UInt8Vector owner_types);
+block:
+CB_GetSkillList(NetGroup *skillDataGroup);
+CB_CreateSkillDone(NetObject * skillData);
+CB_DeleteSKillDone();
+CB_UpdateSkillList();
+
+//-- RPC functions for Quest
+nonblock:
+GetQuestList(UInt32 owner_id);
+block:
+UpdateQuestLogs(UInt32 owner_id, NetGroup* grp);
+CB_GetQuestList(NetGroup *questLogDataGroup, NetGroup *questTypeDataGroup, NetGroup *questFlagDataGroup);
+CB_UpdateQuestLogs();
+CB_QueueQuests(NetGroup* questLogs, NetGroup* questTypes, NetGroup* questFlags);
+
+UpdateQuestTypes(UInt32 owner_id, NetGroup* grp);
+CB_UpdateQuestTypes();
+
+UpdateQuestFlags(UInt32 owner_id, NetGroup* grp, UInt16Vector del_ids);
+CB_UpdateQuestFlags();
+
+//Relations function
+CreateMessenger(UInt32 owner_id, UInt32 target_id, UInt16 relations, UInt8 group, UInt16 friendly);
+DeleteMessenger(UInt32 owner_id, UInt32 target_id);
+DeleteMessengerList(UInt32 owner_id);
+UpdateMessenger(UInt32 owner_id, UInt32 target_id, NetObject* relation);
+nonblock:
+GetMessengerLst(UInt32 player_char_id);
+block:
+CB_DeleteMessenger();
+CB_DeleteMessengerList();
+CB_UpdateMessenger();
+CB_CreateMessenger(NetObject * relationData);
+CB_GetMessengerLst(NetGroup *messengerDataGroup);
+
+//Rank function
+nonblock:
+GetCharacterRank(UInt8 rankType,UInt8 subType);
+GetGuildRank();
+block:
+CB_GetCharacterRank(UInt8 rankType, UInt8 subType, NetGroup *charRankGrp);
+CB_GetGuildRank(NetGroup *charRankGrp);
+
+//ChargeShop function
+nonblock:
+GetChargeShop(UInt8 index); //0: all, 1: active, 2: disactive
+GetCacheChargeShop(UInt8 index); //0: all, 3: onlyLimitItem
+block:
+UpdateChargeShop(NetGroup* chargeShop, Boolean needCallBack);
+CB_GetChargeShop(NetGroup* chargeShop);
+CB_UpdateChargeShopSuccess();
+
+//Pet function
+CreatePet(UInt32 pet_id, UInt32 level, UInt32 master_id, UInt32 father_id, String father_name, UInt32 mother_id, String mother_name, String first_master_name);
+SetPetLock(UInt32 petUID, Boolean lock);
+nonblock:
+GetPetList(UInt32 master_id, UInt8 inWareHouse);
+block:
+UpdatePetList(UInt32Vector petList, NetGroup* grp, Boolean separated);
+CB_CreatePet(NetObject * pPetData);
+CB_PetList(NetGroup * grp);
+CB_UpdatePetList(NetGroup *newGroup);
+
+//title function
+CreateTitle(UInt32 owner_id, UInt16 title_id);
+DeleteTitle(UInt32 title_uid);
+nonblock:
+GetTitleList(UInt32 owner_id);
+block:
+UpdateTitle(UInt32 title_uid, NetObject* titleData);
+
+CB_TitleList(NetGroup * grp);
+CB_DeleteTitle();
+CB_CreateTitle(NetObject * pTitleData);
+CB_UpdateTitle();
+
+//msg character function
+nonblock:
+GetMessageCharacters(UInt32Vector charList, Boolean bReactive);
+block:
+CB_GetMsgCharacterGroup(NetGroup *charGroup);
+KeepMsgCharacter(UInt32 char_id);
+ReleaseMsgCharacter(UInt32 char_id);
+UpdateMsgCharacter(UInt32 char_id, NetObject * msgCharData);
+CB_UpdateMsgCharacter();
+
+//guild function
+CreateGuild(UInt32 char_id, String guild_name, UInt8 guildPost, String creator, String master);
+nonblock:
+GetGuildByID(UInt32 guild_id);
+GetGuildByPvPGroup();
+GetGuildByPvPBid();
+block:
+UpdateGuildList(UInt32Vector guild_ids, NetGroup *grp, Boolean separated);
+DeleteGuildList(UInt32Vector guild_uids);
+ReleaseGuildAndMem(UInt32 guild_uid);
+ResetGuildBid();
+ResetGuildGroup();
+CB_CreateGuild(NetObject* guild, NetObject* member);
+CB_GetGuilds(NetGroup* grp);
+CB_UpdateGuildList(NetGroup *newGroup);
+CB_DeleteGuildList();
+
+//guild member function
+nonblock:
+GetGuildMember(UInt32 guild_uid, UInt32 char_id);
+block:
+CreateGuildMember(UInt32 player_char_id, UInt32 guild_id, UInt8 guildPost);
+DeleteGuildMemberList(UInt32Vector player_ids);
+UpdateGuildMemberList(UInt32Vector player_ids, UInt32Vector guild_ids, NetGroup *grp, Boolean separated);
+CB_UpdateGuildMemberList(NetGroup *newGroup);
+CB_CreateGuildMember(NetObject *newData);
+CB_DeleteGuildMemberList();
+CB_GetGuildMembers(NetGroup * grp);
+
+//giftBox function
+nonblock:
+GetGiftBoxByAcctID(UInt32 acctID);
+UpdateGiftBoxByAcctID(UInt32 acctID);
+block:
+DeleteGiftBox(UInt32Vector giftBoxID);
+CB_GetGiftBoxByAcctID(NetGroup* grp);
+CB_DeleteGiftBox();
+
+//hawkerHistory function
+nonblock:
+GetHawkerHistory(UInt32 char_id);
+block:
+CB_GetHawkerHistory(NetGroup* grp);
+UpdateHawkerHistory(UInt32 char_id, NetGroup* grp);
+CB_UpdateHawkerHistory(NetGroup* grp);
+
+//relation
+RemoveRelation(UInt32 owner_id,UInt32 target_id,UInt32 relation);
+
+//partner collection function
+nonblock:
+GetPartnerCollection(UInt32 char_id);
+block:
+CB_GetPartnerCollection(NetGroup* grp);
+CreatePartnerCollection(UInt32 collection_id,UInt32 char_id);
+CB_CreatePartnerCollection(NetObject *newData);
+DeletePartnerCollection(UInt32 collection_uid);
+CB_DeletePartnerCollection();
+
+//sellyuanbao
+nonblock:
+GetAllSellYuanBao();
+block:
+AddSellYuanBao(UInt32 char_id, UInt8 sellType, UInt32 totalSell, UInt32 moneyPerUnit, ByteArray password);
+CB_GetSellYuanBao(NetGroup* grp, UInt8 msgIndex);
+BuySellYuanBao(UInt32 buyerAcct_id, UInt32 sellYuanBaoID, UInt32 YBT, ByteArray password);
+CB_BuySellYuanBao(UInt8 msgIndex);
+GetTempBank(UInt32 char_id, ByteArray password);
+CB_GetTempBank(UInt32Vector recordIDs, UInt32 totalYBT, UInt32 totalMoney);
+
+//sibling function
+nonblock:
+GetSibling(UInt32 sibling_id);
+block:
+CB_GetSibling(NetGroup* grp);
+CreateSibling(String sibling_title_prefix,UInt32 member_id1,String member_title_suffix1,UInt32 member_id2,String member_title_suffix2,UInt32 member_id3,String member_title_suffix3,UInt32 member_id4,String member_title_suffix4,UInt32 member_id5,String member_title_suffix5,UInt32 member_id6,String member_title_suffix6,UInt32 member_id7,String member_title_suffix7,UInt32 member_id8,String member_title_suffix8,UInt32 member_id9,String member_title_suffix9,UInt32 member_id10,String member_title_suffix10);
+CB_CreateSibling(NetGroup* grp);
+UpdateSibling(NetObject* netObject);
+CB_UpdateSibling(NetGroup* grp);
+DeleteSibling(UInt32 sibling_id);
+CB_DeleteSibling(Boolean result);
+
+//Wanted
+UpdateWantedReward(UInt32 targetId,UInt32 money);
+//generation function
+nonblock:
+GetGeneration(UInt32 uiCharId,BOOL bYoung);
+block:
+CB_GetGeneration(NetGroup* grp);
+CreateGeneration(NetObject* pNewGnt,String strSelfName);
+CB_CreateGeneration(NetObject* pGeneration);
+DeleteGeneration(UInt32 uiYoungId,UInt32 uiElderId,BOOL bYoung);
+CB_DeleteGeneration(UInt32 uiYoungId,UInt32 uiElderId,BOOL bSuccess);
+UpdateGeneration(NetGroup* pGeneration);
+CB_UpdateGeneration();
+
+//marriage function
+nonblock:
+GetMarriage(UInt32 husband_id,UInt32 wife_id);
+block:
+CB_GetMarriage(NetGroup* grp);
+CreateMarriage(UInt32 husband_id, UInt32 wife_id,time_t marriage_time,UInt32 state);
+CB_CreateMarriage(NetGroup* grp);
+UpdateMarriage(NetObject* netObject);
+CB_UpdateMarriage(NetGroup* grp);
+DeleteMarriage(UInt32 marriage_id);
+CB_DeleteMarriage(Boolean result);
+GetMarriageCount();
+CB_GetMarriageCount(UInt32 count);
+
+GetSingleMarriageLst();
+CB_GetSingleMarriageLst(NetGroup* grp);
+
+//npc flag
+nonblock:
+GetNpcFlagsByLineId(UInt16 line_id);
+block:
+CB_GetNpcFlagsByLineId(NetGroup* grp);
+UpdateNpcFlags(NetGroup* grpUpdate, NetGroup* grpDelete);
+CB_UpdateNpcFlags();
+

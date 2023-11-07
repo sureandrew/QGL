@@ -1,0 +1,249 @@
+<?xml version="1.0" ?>
+<!-- Our to do list data -->
+<UI>
+	<ID Name="BattleItemMenu" />
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+
+	<Panel Name="BattleItemMenuPanel" Image="Data\interface0019_Battle_A.tga" X="258" Y="147" 
+			Left="23" Top="22" Right="308" Bottom="249" LuaRButtonUp="CloseBattleItemMenu" LuaKeyChar="CloseBattleItemMenu"
+		Drag="1" DragLeft="0" DragTop="0" DragRight="285" DragBottom="227" DetectImage = "1">
+
+	
+		<Button Name="CloseBattleItem" Image="Data\interface0019_Battle_A.tga" X="250" Y="15" LuaLButtonUp="CloseBattleItemMenu">
+			<ButtonRect State="0" Left="311" Top="30" Right="335" Bottom="48" />
+			<ButtonRect State="1" Left="336" Top="30" Right="360" Bottom="48" />
+			<ButtonRect State="2" Left="361" Top="30" Right="385" Bottom="48" />
+		</Button>
+		
+		
+
+		<AniIcon Name="BIS000Icon" X="19" Y="39" Image="" Detect = "1" AutoDelete="0" 
+			LuaLButtonUp="BIUse"  LuaMouseMove="BattleItemOver" LuaMouseOut = "BattleItemDetailMouseOut" 
+			InsertToEventList = "1" />
+			
+		<StaticText Name="BIS000Stack" X="22" Y="64" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="BIS000Lvl" X="22" Y="41" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+
+		
+		<AniIcon Name="BIS001Icon" X="60" Y="39" Image="" Detect = "1" AutoDelete="0" 
+			LuaLButtonUp="BIUse"  LuaMouseMove="BattleItemOver" LuaMouseOut = "BattleItemDetailMouseOut" 
+			InsertToEventList = "1"/>
+		<StaticText Name="BIS001Stack" X="63" Y="64" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="BIS001Lvl" X="63" Y="41" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+
+		<AniIcon Name="BIS002Icon" X="101" Y="39" Image="" Detect = "1" AutoDelete="0" 
+			LuaLButtonUp="BIUse"  LuaMouseMove="BattleItemOver" LuaMouseOut = "BattleItemDetailMouseOut" 
+			InsertToEventList = "1"/>
+		<StaticText Name="BIS002Stack" X="104" Y="64" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="BIS002Lvl" X="104" Y="41" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+
+		<AniIcon Name="BIS003Icon" X="142" Y="39" Image="" Detect = "1" AutoDelete="0" 
+			LuaLButtonUp="BIUse"  LuaMouseMove="BattleItemOver" LuaMouseOut = "BattleItemDetailMouseOut" 
+			InsertToEventList = "1"/>
+		<StaticText Name="BIS003Stack" X="145" Y="64" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="BIS003Lvl" X="145" Y="41" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+
+		<AniIcon Name="BIS004Icon" X="183" Y="39" Image="" Detect = "1" AutoDelete="0" 
+			LuaLButtonUp="BIUse"  LuaMouseMove="BattleItemOver" LuaMouseOut = "BattleItemDetailMouseOut" 
+			InsertToEventList = "1"/>
+		<StaticText Name="BIS004Stack" X="186" Y="64" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="BIS004Lvl" X="186" Y="41" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		
+		<AniIcon Name="BIS005Icon" X="224" Y="39" Image="" Detect = "1" AutoDelete="0" 
+			LuaLButtonUp="BIUse"  LuaMouseMove="BattleItemOver" LuaMouseOut = "BattleItemDetailMouseOut" 
+			InsertToEventList = "1"/>
+		<StaticText Name="BIS005Stack" X="227" Y="64" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="BIS005Lvl" X="227" Y="41" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+
+		<!-- 2nd row -->
+		<AniIcon Name="BIS006Icon" X="19" Y="80" Image="" Detect = "1" AutoDelete="0" 
+			LuaLButtonUp="BIUse"  LuaMouseMove="BattleItemOver" LuaMouseOut = "BattleItemDetailMouseOut" 
+			InsertToEventList = "1"/>
+		<StaticText Name="BIS006Stack" X="22" Y="105" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="BIS006Lvl" X="22" Y="82" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+
+		<AniIcon Name="BIS007Icon" X="60" Y="80" Image="" Detect = "1" AutoDelete="0" 
+			LuaLButtonUp="BIUse"  LuaMouseMove="BattleItemOver" LuaMouseOut = "BattleItemDetailMouseOut" 
+			InsertToEventList = "1"/>
+		<StaticText Name="BIS007Stack" X="63" Y="105" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="BIS007Lvl" X="63" Y="82" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+
+		<AniIcon Name="BIS008Icon" X="101" Y="80" Image="" Detect = "1" AutoDelete="0" 
+			LuaLButtonUp="BIUse"  LuaMouseMove="BattleItemOver" LuaMouseOut = "BattleItemDetailMouseOut" 
+			InsertToEventList = "1"/>
+		<StaticText Name="BIS008Stack" X="104" Y="105" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="BIS008Lvl" X="104" Y="82" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+
+		<AniIcon Name="BIS009Icon" X="142" Y="80" Image="" Detect = "1" AutoDelete="0" 
+			LuaLButtonUp="BIUse"  LuaMouseMove="BattleItemOver" LuaMouseOut = "BattleItemDetailMouseOut" 
+			InsertToEventList = "1"/>
+		<StaticText Name="BIS009Stack" X="145" Y="105" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="BIS009Lvl" X="145" Y="82" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+
+		<AniIcon Name="BIS010Icon" X="183" Y="80" Image="" Detect = "1" AutoDelete="0" 
+			LuaLButtonUp="BIUse"  LuaMouseMove="BattleItemOver" LuaMouseOut = "BattleItemDetailMouseOut" 
+			InsertToEventList = "1"/>
+		<StaticText Name="BIS010Stack" X="186" Y="105" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="BIS010Lvl" X="186" Y="82" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+
+		<AniIcon Name="BIS011Icon" X="224" Y="80" Image="" Detect = "1" AutoDelete="0" 
+			LuaLButtonUp="BIUse"  LuaMouseMove="BattleItemOver" LuaMouseOut = "BattleItemDetailMouseOut" 
+			InsertToEventList = "1"/>
+		<StaticText Name="BIS011Stack" X="227" Y="105" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="BIS011Lvl" X="227" Y="82" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		
+		<!-- 3rd row -->
+		<AniIcon Name="BIS012Icon" X="19" Y="121" Image="" Detect = "1" AutoDelete="0" 
+			LuaLButtonUp="BIUse"  LuaMouseMove="BattleItemOver" LuaMouseOut = "BattleItemDetailMouseOut" 
+			InsertToEventList = "1"/>
+		<StaticText Name="BIS012Stack" X="22" Y="146" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="BIS012Lvl" X="22" Y="123" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+
+		<AniIcon Name="BIS013Icon" X="60" Y="121" Image="" Detect = "1" AutoDelete="0" 
+			LuaLButtonUp="BIUse"  LuaMouseMove="BattleItemOver" LuaMouseOut = "BattleItemDetailMouseOut" 
+			InsertToEventList = "1"/>
+		<StaticText Name="BIS013Stack" X="63" Y="146" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="BIS013Lvl" X="63" Y="123" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+
+		<AniIcon Name="BIS014Icon" X="101" Y="121" Image="" Detect = "1" AutoDelete="0" 
+			LuaLButtonUp="BIUse"  LuaMouseMove="BattleItemOver" LuaMouseOut = "BattleItemDetailMouseOut" 
+			InsertToEventList = "1"/>
+		<StaticText Name="BIS014Stack" X="104" Y="146" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="BIS014Lvl" X="104" Y="123" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+
+		<AniIcon Name="BIS015Icon" X="142" Y="121" Image="" Detect = "1" AutoDelete="0" 
+			LuaLButtonUp="BIUse"  LuaMouseMove="BattleItemOver" LuaMouseOut = "BattleItemDetailMouseOut" 
+			InsertToEventList = "1"/>
+		<StaticText Name="BIS015Stack" X="145" Y="146" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="BIS015Lvl" X="145" Y="123" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+
+		<AniIcon Name="BIS016Icon" X="183" Y="121" Image="" Detect = "1" AutoDelete="0" 
+			LuaLButtonUp="BIUse"  LuaMouseMove="BattleItemOver" LuaMouseOut = "BattleItemDetailMouseOut" 
+			InsertToEventList = "1"/>
+		<StaticText Name="BIS016Stack" X="186" Y="146" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="BIS016Lvl" X="186" Y="123" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+
+		<AniIcon Name="BIS017Icon" X="224" Y="121" Image="" Detect = "1" AutoDelete="0" 
+			LuaLButtonUp="BIUse"  LuaMouseMove="BattleItemOver" LuaMouseOut = "BattleItemDetailMouseOut" 
+			InsertToEventList = "1"/>
+		<StaticText Name="BIS017Stack" X="227" Y="146" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="BIS017Lvl" X="227" Y="123" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		
+		<!-- 4th row -->
+		<AniIcon Name="BIS018Icon" X="19" Y="162" Image="" Detect = "1" AutoDelete="0" 
+			LuaLButtonUp="BIUse"  LuaMouseMove="BattleItemOver" LuaMouseOut = "BattleItemDetailMouseOut" 
+			InsertToEventList = "1"/>
+		<StaticText Name="BIS018Stack" X="22" Y="187" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="BIS018Lvl" X="22" Y="164" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+
+		<AniIcon Name="BIS019Icon" X="60" Y="162" Image="" Detect = "1" AutoDelete="0" 
+			LuaLButtonUp="BIUse"  LuaMouseMove="BattleItemOver" LuaMouseOut = "BattleItemDetailMouseOut" 
+			InsertToEventList = "1"/>
+		<StaticText Name="BIS019Stack" X="63" Y="187" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="BIS019Lvl" X="63" Y="164" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+
+		<AniIcon Name="BIS020Icon" X="101" Y="162" Image="" Detect = "1" AutoDelete="0" 
+			LuaLButtonUp="BIUse"  LuaMouseMove="BattleItemOver" LuaMouseOut = "BattleItemDetailMouseOut" 
+			InsertToEventList = "1"/>
+		<StaticText Name="BIS020Stack" X="104" Y="187" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="BIS020Lvl" X="104" Y="164" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+
+		<AniIcon Name="BIS021Icon" X="142" Y="162" Image="" Detect = "1" AutoDelete="0" 
+			LuaLButtonUp="BIUse"  LuaMouseMove="BattleItemOver" LuaMouseOut = "BattleItemDetailMouseOut" 
+			InsertToEventList = "1"/>
+		<StaticText Name="BIS021Stack" X="145" Y="187" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="BIS021Lvl" X="145" Y="164" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+
+		<AniIcon Name="BIS022Icon" X="183" Y="162" Image="" Detect = "1" AutoDelete="0" 
+			LuaLButtonUp="BIUse"  LuaMouseMove="BattleItemOver" LuaMouseOut = "BattleItemDetailMouseOut" 
+			InsertToEventList = "1"/>
+		<StaticText Name="BIS022Stack" X="186" Y="187" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="BIS022Lvl" X="186" Y="164" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+
+		<AniIcon Name="BIS023Icon" X="224" Y="162" Image="" Detect = "1" AutoDelete="0" 
+			LuaLButtonUp="BIUse"  LuaMouseMove="BattleItemOver" LuaMouseOut = "BattleItemDetailMouseOut" 
+			InsertToEventList = "1"/>
+		<StaticText Name="BIS023Stack" X="227" Y="187" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="BIS023Lvl" X="227" Y="164" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		
+		<UIImage Name="BattleItemTimer" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" TimeOutCount="100" NotDetected="1" LuaTimeOut="ShowBattleItemDetail" Hide="1"/>
+	</Panel>
+
+	<Panel Name="BattleItemDragDrop" Image="Data\interface0019_Battle_A.tga" X="277" Y="186" 
+		Left="42" Top="61" Right="84" Bottom="103" Hide="1" AutoDelete="0"
+		DetectImage = "1" >
+
+		<AniIcon Name="BIMDragDropIcon" X="0" Y="0" Image="" Detect="0"/>
+
+		<StaticText Name="BIMDragDropStack" X="3" Y="25" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="BIMDragDropLvl" X="3" Y="2" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	
+	<!--
+	<Panel Name="BattleItemDragDrop" Image="Data\interface0019_Battle_A.tga" X="277" Y="186" 
+		Left="42" Top="61" Right="84" Bottom="103" Hide="1" AutoDelete="0"
+		Drag="2" DragLeft="0" DragTop="0" DragRight="42" DragBottom="42" DetectImage = "1"
+		LuaEndDrag="BattleItemMove" >
+
+		<UIImage Name="BIMDragDropIcon" X="0" Y="0" Image="" 
+			Left="1" Top="1" Right="40" Bottom="40" NotDetected="1"/>
+
+		<StaticText Name="BIMDragDropStack" X="3" Y="25" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="BIMDragDropLvl" X="3" Y="2" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	-->		
+
+	
+</UI>

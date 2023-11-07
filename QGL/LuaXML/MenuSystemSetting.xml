@@ -1,0 +1,222 @@
+<?xml version="1.0" ?>
+
+<UI>
+	<ID Name="MenuSystemSetting" />
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	
+	<Panel Name="SystemSettingPanel" Image="Data\interface0028_main_M.tga" X="200" Y="50" Left="32" Top="11" Right="333" Bottom="412"
+		DetectImage="1" LuaRButtonUp="CloseSystemSetting" LuaKeyChar="CloseSystemSetting">
+		
+		<Tips X="20" Y="53" Width="87" Height="20" Tips="点选后使用视窗模式进行游戏" TimeOutCount="500" />	
+		<CheckBox Name = "WindowModeSetting" Image="Data\interface0028_main_M.tga" X="20" Y="53"  Tips="点选后使用视窗模式进行游戏"
+		                     TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonDown="WindowModeLua">
+			<CheckBoxRect Index="0" Left="196" Top="64" Right="217" Bottom="83" />
+			<CheckBoxRect Index="1" Left="196" Top="64" Right="217" Bottom="83" />
+			<CheckBoxRect Index="2" Left="347" Top="31" Right="368" Bottom="50" />
+		</CheckBox>
+		
+		<Tips X="20" Y="83" Width="87" Height="20" Tips="点选后打开黑夜效果" TimeOutCount="500" />
+		<CheckBox Name = "NightModeSetting" Image="Data\interface0028_main_M.tga" X="20" Y="83" Tips="点选后打开黑夜效果"
+								TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonDown="NightModeLua">
+			<CheckBoxRect Index="0" Left="196" Top="64" Right="217" Bottom="83" />
+			<CheckBoxRect Index="1" Left="196" Top="64" Right="217" Bottom="83" />
+			<CheckBoxRect Index="2" Left="347" Top="31" Right="368" Bottom="50" />
+		</CheckBox>
+		
+		<Tips X="20" Y="132" Width="87" Height="20" Tips="点选后将不接受玩家给予" TimeOutCount="500" />	
+		<CheckBox Name = "GivenModeSetting" Image="Data\interface0028_main_M.tga" X="20" Y="132" Tips="点选后将不接受玩家给予"
+						TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonDown="GivenModeLua">
+			<CheckBoxRect Index="0" Left="196" Top="64" Right="217" Bottom="83" />
+			<CheckBoxRect Index="1" Left="196" Top="64" Right="217" Bottom="83" />
+			<CheckBoxRect Index="2" Left="347" Top="31" Right="368" Bottom="50" />
+		</CheckBox>
+		
+		<Tips X="20" Y="162" Width="87" Height="20" Tips="点选后将不接受组队申请或邀请" TimeOutCount="500" />
+		<CheckBox Name = "PartyModeSetting" Image="Data\interface0028_main_M.tga" X="20" Y="162"  Tips="点选后将不接受组队申请或邀请"
+						TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonDown="PartyModeLua">
+			<CheckBoxRect Index="0" Left="196" Top="64" Right="217" Bottom="83" />
+			<CheckBoxRect Index="1" Left="196" Top="64" Right="217" Bottom="83" />
+			<CheckBoxRect Index="2" Left="347" Top="31" Right="368" Bottom="50" />
+		</CheckBox>
+		
+		<Tips X="20" Y="193" Width="114" Height="20" Tips="点选后将拒绝陌生人消息" TimeOutCount="500" />
+		<CheckBox Name = "MessageModeSetting" Image="Data\interface0028_main_M.tga" X="20" Y="193" Tips="点选后将拒绝陌生人消息"
+						TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonDown="MessageModeLua">
+			<CheckBoxRect Index="0" Left="196" Top="64" Right="217" Bottom="83" />
+			<CheckBoxRect Index="1" Left="196" Top="64" Right="217" Bottom="83" />
+			<CheckBoxRect Index="2" Left="347" Top="31" Right="368" Bottom="50" />
+		</CheckBox>
+		
+		<Tips X="20" Y="243" Width="87" Height="20" Tips="点选后打开游戏音乐" TimeOutCount="500" />
+		<CheckBox Name = "MusicModeSetting" Image="Data\interface0028_main_M.tga" X="20" Y="243" Tips="点选后打开游戏音乐"
+						TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonDown="MusicModeLua">
+			<CheckBoxRect Index="0" Left="196" Top="64" Right="217" Bottom="83" />
+			<CheckBoxRect Index="1" Left="196" Top="64" Right="217" Bottom="83" />
+			<CheckBoxRect Index="2" Left="347" Top="31" Right="368" Bottom="50" />
+		</CheckBox>
+		
+		<Tips X="20" Y="289" Width="87" Height="20" Tips="点选后打开游戏音效" TimeOutCount="500" />
+		<CheckBox Name = "SoundEffectModeSetting" Image="Data\interface0028_main_M.tga" X="20" Y="289"  Tips="点选后打开游戏音效"
+						TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonDown="SoundEffectModeLua">
+			<CheckBoxRect Index="0" Left="196" Top="64" Right="217" Bottom="83" />
+			<CheckBoxRect Index="1" Left="196" Top="64" Right="217" Bottom="83" />
+			<CheckBoxRect Index="2" Left="347" Top="31" Right="368" Bottom="50" />
+		</CheckBox>
+		
+		<Tips X="164" Y="53" Width="87" Height="20" Tips="点选后打开动画效果" TimeOutCount="500" />
+		<CheckBox Name = "MapAnimeModeSetting" Image="Data\interface0028_main_M.tga" X="164" Y="53" Tips="点选后打开动画效果"
+						TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonDown="MapAnimeModeLua">
+			<CheckBoxRect Index="0" Left="196" Top="64" Right="217" Bottom="83" />
+			<CheckBoxRect Index="1" Left="196" Top="64" Right="217" Bottom="83" />
+			<CheckBoxRect Index="2" Left="347" Top="31" Right="368" Bottom="50" />
+		</CheckBox>
+		
+		
+		<Tips X="164" Y="83" Width="87" Height="20" Tips="点选后打开天气效果" TimeOutCount="500" />
+		<CheckBox Name = "WeatherModeSetting" Image="Data\interface0028_main_M.tga" X="164" Y="83"  Tips="点选后打开天气效果"
+							TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonDown="WeatherModeLua">
+			<CheckBoxRect Index="0" Left="196" Top="64" Right="217" Bottom="83" />
+			<CheckBoxRect Index="1" Left="196" Top="64" Right="217" Bottom="83" />
+			<CheckBoxRect Index="2" Left="347" Top="31" Right="368" Bottom="50" />
+		</CheckBox>
+		
+		<Tips X="164" Y="131" Width="87" Height="20" Tips="点选后将不接受交易" TimeOutCount="500" />
+		<CheckBox Name = "TradingModeSetting" Image="Data\interface0028_main_M.tga" X="164" Y="131" Tips="点选后将不接受交易"
+							TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonDown="ExchangeModeLua">
+			<CheckBoxRect Index="0" Left="196" Top="64" Right="217" Bottom="83" />
+			<CheckBoxRect Index="1" Left="196" Top="64" Right="217" Bottom="83" />
+			<CheckBoxRect Index="2" Left="347" Top="31" Right="368" Bottom="50" />
+		</CheckBox>
+		
+		<!--<Tips X="164" Y="161" Width="87" Height="20" Tips="点选后将不接受PK邀请" TimeOutCount="500" />
+		<CheckBox Name = "PKModeSetting" Image="Data\interface0028_main_M.tga" X="164" Y="161"  Tips="点选后将不接受PK邀请"
+							TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonDown="PKModeLua">
+			<CheckBoxRect Index="0" Left="196" Top="64" Right="217" Bottom="83" />
+			<CheckBoxRect Index="1" Left="196" Top="64" Right="217" Bottom="83" />
+			<CheckBoxRect Index="2" Left="347" Top="31" Right="368" Bottom="50" />
+		</CheckBox>-->
+		
+		<Tips X="164" Y="161" Width="87" Height="20" Tips="点选后将允许他人查看自己的装备" TimeOutCount="500" />
+		<CheckBox Name = "ShowEquipModeSetting" Image="Data\interface0028_main_M.tga" X="164" Y="161"  Tips="点选后将允许他人查看自己的装备"
+						TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonDown="ShowEquipModeLua">
+			<CheckBoxRect Index="0" Left="196" Top="64" Right="217" Bottom="83" />
+			<CheckBoxRect Index="1" Left="196" Top="64" Right="217" Bottom="83" />
+			<CheckBoxRect Index="2" Left="347" Top="31" Right="368" Bottom="50" />
+		</CheckBox>
+		
+		<Tips X="164" Y="193" Width="114" Height="20" Tips="点选后将拒绝他人把自己加为好友" TimeOutCount="500" />
+		<CheckBox Name = "MakeFriendModeSetting" Image="Data\interface0028_main_M.tga" X="164" Y="193"  Tips="点选后将拒绝他人把自己加为好友"
+						TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonDown="MakeFriendModeLua">
+			<CheckBoxRect Index="0" Left="196" Top="64" Right="217" Bottom="83" />
+			<CheckBoxRect Index="1" Left="196" Top="64" Right="217" Bottom="83" />
+			<CheckBoxRect Index="2" Left="347" Top="31" Right="368" Bottom="50" />
+		</CheckBox>
+		
+		<!--<Tips X="20" Y="218" Width="114" Height="20" Tips="点选后将允许他人查看自己的装备" TimeOutCount="500" />
+		<CheckBox Name = "ShowEquipModeSetting" Image="Data\interface0028_main_M.tga" X="20" Y="218"  Tips="点选后将允许他人查看自己的装备"
+						TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonDown="ShowEquipModeLua">
+			<CheckBoxRect Index="0" Left="196" Top="64" Right="217" Bottom="83" />
+			<CheckBoxRect Index="1" Left="196" Top="64" Right="217" Bottom="83" />
+			<CheckBoxRect Index="2" Left="347" Top="31" Right="368" Bottom="50" />
+		</CheckBox>-->
+		
+		<Button Name="MusicAdd" Image="Data\interface0028_main_M.tga" X="273" Y="264" LuaLButtonUp="AddMusicVolume">
+			<ButtonRect State="0" Left="343" Top="248" Right="363" Bottom="267" />	
+			<ButtonRect State="1" Left="366" Top="248" Right="386" Bottom="267" />
+			<ButtonRect State="2" Left="390" Top="248" Right="410" Bottom="267" />
+			<ButtonRect State="3" Left="413" Top="248" Right="433" Bottom="267" />
+		</Button>
+		
+		<Button Name="MusicSub" Image="Data\interface0028_main_M.tga" X="250" Y="264" LuaLButtonUp="SubMusicVolume">
+			<ButtonRect State="0" Left="343" Top="270" Right="363" Bottom="289" />	
+			<ButtonRect State="1" Left="366" Top="270" Right="386" Bottom="289" />
+			<ButtonRect State="2" Left="390" Top="270" Right="410" Bottom="289" />
+			<ButtonRect State="3" Left="413" Top="270" Right="433" Bottom="289" />
+		</Button>
+		
+		<UIImage Name="MusicVolume1" Image="Data\interface0028_main_M.tga" X="52" Y="270" 
+			Left="343" Top="149" Right="359" Bottom="156" LuaLButtonUp="" />
+		<UIImage Name="MusicVolume2" Image="Data\interface0028_main_M.tga" X="70" Y="270" 
+			Left="343" Top="149" Right="359" Bottom="156" LuaLButtonUp="" />
+		<UIImage Name="MusicVolume3" Image="Data\interface0028_main_M.tga" X="88" Y="270" 
+			Left="343" Top="149" Right="359" Bottom="156" LuaLButtonUp="" />
+		<UIImage Name="MusicVolume4" Image="Data\interface0028_main_M.tga" X="106" Y="270" 
+			Left="343" Top="149" Right="359" Bottom="156" LuaLButtonUp="" />
+		<UIImage Name="MusicVolume5" Image="Data\interface0028_main_M.tga" X="124" Y="270" 
+			Left="343" Top="149" Right="359" Bottom="156" LuaLButtonUp="" />
+		<UIImage Name="MusicVolume6" Image="Data\interface0028_main_M.tga" X="142" Y="270" 
+			Left="343" Top="149" Right="359" Bottom="156" LuaLButtonUp="" />
+		<UIImage Name="MusicVolume7" Image="Data\interface0028_main_M.tga" X="160" Y="270" 
+			Left="343" Top="149" Right="359" Bottom="156" LuaLButtonUp="" />
+		<UIImage Name="MusicVolume8" Image="Data\interface0028_main_M.tga" X="178" Y="270" 
+			Left="343" Top="149" Right="359" Bottom="156" LuaLButtonUp="" />
+		<UIImage Name="MusicVolume9" Image="Data\interface0028_main_M.tga" X="196" Y="270" 
+			Left="343" Top="149" Right="359" Bottom="156" LuaLButtonUp="" />
+		<UIImage Name="MusicVolume10" Image="Data\interface0028_main_M.tga" X="214" Y="270" 
+			Left="343" Top="149" Right="359" Bottom="156" LuaLButtonUp="" />
+			
+		<Button Name="SoundEffectAdd" Image="Data\interface0028_main_M.tga" X="273" Y="309" LuaLButtonUp="AddSoundEffectVolume">
+			<ButtonRect State="0" Left="343" Top="248" Right="363" Bottom="267" />	
+			<ButtonRect State="1" Left="366" Top="248" Right="386" Bottom="267" />
+			<ButtonRect State="2" Left="390" Top="248" Right="410" Bottom="267" />
+			<ButtonRect State="3" Left="413" Top="248" Right="433" Bottom="267" />
+		</Button>
+		
+		<Button Name="SoundEffectSub" Image="Data\interface0028_main_M.tga" X="250" Y="309" LuaLButtonUp="SubSoundEffectVolume">
+			<ButtonRect State="0" Left="343" Top="270" Right="363" Bottom="289" />	
+			<ButtonRect State="1" Left="366" Top="270" Right="386" Bottom="289" />
+			<ButtonRect State="2" Left="390" Top="270" Right="410" Bottom="289" />
+			<ButtonRect State="3" Left="413" Top="270" Right="433" Bottom="289" />
+		</Button>
+			
+		<UIImage Name="SoundEffectVolume1" Image="Data\interface0028_main_M.tga" X="52" Y="314" 
+			Left="343" Top="149" Right="359" Bottom="156" LuaLButtonUp="" />
+		<UIImage Name="SoundEffectVolume2" Image="Data\interface0028_main_M.tga" X="70" Y="314" 
+			Left="343" Top="149" Right="359" Bottom="156" LuaLButtonUp="" />
+		<UIImage Name="SoundEffectVolume3" Image="Data\interface0028_main_M.tga" X="88" Y="314" 
+			Left="343" Top="149" Right="359" Bottom="156" LuaLButtonUp="" />
+		<UIImage Name="SoundEffectVolume4" Image="Data\interface0028_main_M.tga" X="106" Y="314" 
+			Left="343" Top="149" Right="359" Bottom="156" LuaLButtonUp="" />
+		<UIImage Name="SoundEffectVolume5" Image="Data\interface0028_main_M.tga" X="124" Y="314" 
+			Left="343" Top="149" Right="359" Bottom="156" LuaLButtonUp="" />
+		<UIImage Name="SoundEffectVolume6" Image="Data\interface0028_main_M.tga" X="142" Y="314" 
+			Left="343" Top="149" Right="359" Bottom="156" LuaLButtonUp="" />
+		<UIImage Name="SoundEffectVolume7" Image="Data\interface0028_main_M.tga" X="160" Y="314" 
+			Left="343" Top="149" Right="359" Bottom="156" LuaLButtonUp="" />
+		<UIImage Name="SoundEffectVolume8" Image="Data\interface0028_main_M.tga" X="178" Y="314" 
+			Left="343" Top="149" Right="359" Bottom="156" LuaLButtonUp="" />
+		<UIImage Name="SoundEffectVolume9" Image="Data\interface0028_main_M.tga" X="196" Y="314" 
+			Left="343" Top="149" Right="359" Bottom="156" LuaLButtonUp="" />
+		<UIImage Name="SoundEffectVolume10" Image="Data\interface0028_main_M.tga" X="214" Y="314" 
+			Left="343" Top="149" Right="359" Bottom="156" LuaLButtonUp="" />
+				
+		<Button Name="SaveSetting" Image="Data\interface0028_main_M.tga" X="20" Y="353" Tips="保存当前设置"
+		              TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="SaveSystemSetting">
+			<ButtonRect State="0" Left="343" Top="60" Right="419" Bottom="81" />
+			<ButtonRect State="1" Left="425" Top="60" Right="501" Bottom="81" />
+			<ButtonRect State="2" Left="507" Top="60" Right="583" Bottom="81" />
+		</Button>
+		
+		<Button Name="ResetSetting" Image="Data\interface0028_main_M.tga" X="101" Y="353" Tips="恢复系统默认设置"
+		               TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="ResetSystemSetting">
+			<ButtonRect State="0" Left="343" Top="89" Right="419" Bottom="110" />
+			<ButtonRect State="1" Left="425" Top="89" Right="501" Bottom="110" />
+			<ButtonRect State="2" Left="507" Top="89" Right="583" Bottom="110" />
+		</Button>
+		
+		<Button Name="QuitGame" Image="Data\interface0028_main_M.tga" X="202" Y="353" LuaLButtonUp="OpenConfirmQuitGame">
+			<ButtonRect State="0" Left="343" Top="117" Right="419" Bottom="138" />
+			<ButtonRect State="1" Left="425" Top="117" Right="501" Bottom="138" />
+			<ButtonRect State="2" Left="507" Top="117" Right="583" Bottom="138" />
+		</Button>
+		
+		<Button Name="SystemSettingCross" Image="Data\interface0028_main_M.tga" X="268" Y="8" LuaLButtonUp="CloseSystemSetting">
+			<ButtonRect State="0" Left="380" Top="30" Right="404" Bottom="48" />
+			<ButtonRect State="1" Left="405" Top="30" Right="429" Bottom="48" />
+			<ButtonRect State="2" Left="430" Top="30" Right="454" Bottom="48" />
+		</Button>
+	
+	</Panel>	
+	
+	
+</UI>

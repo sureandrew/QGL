@@ -1,0 +1,466 @@
+﻿<?xml version="1.0" ?>
+<UI>
+	<ID Name="MenuPartner" />
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	<Panel Name="PartnerMainPanel" Image="Data\interface0012_main_F.tga" X="33" Y="73" 
+		Left="8" Top="6" Right="347" Bottom="464" LuaRButtonUp="ClosePartner" LuaKeyChar="ClosePartner" DetectImage = "1"
+		Drag="1" DragLeft="0" DragTop="0" DragRight="339" DragBottom="458" LuaMouseWheel="PartnerWheel">
+		
+		<ScrollBarV Name="PartnerScrollBar" X="310" Y="40" Width ="14" Height="127" Limit="0" BarColor="0" LuaLButtonDown="PartnerScroll">
+			<PrevButton Name="PartnerScrollUp" Image="Data\interface0012_main_F.tga" X="0" Y="0" LuaLButtonUp="PartnerScrollUp">
+				<ButtonRect State="0" Left="688" Top="126" Right="702" Bottom="140" />	
+				<ButtonRect State="1" Left="704" Top="126" Right="718" Bottom="140" />
+				<ButtonRect State="2" Left="720" Top="126" Right="734" Bottom="140" />
+			</PrevButton>
+			<NextButton Name="PartnerScrollDown" Image="Data\interface0012_main_F.tga" X="0" Y="114" LuaLButtonUp="PartnerScrollDown">
+				<ButtonRect State="0" Left="688" Top="143" Right="702" Bottom="156" />	
+				<ButtonRect State="1" Left="704" Top="143" Right="718" Bottom="156" />
+				<ButtonRect State="2" Left="720" Top="143" Right="734" Bottom="156" />
+			</NextButton>
+			<MoveButton Image="Data\interface0012_main_F.tga" X="0" Y="14"  LuaMouseMove="PartnerScroll">
+				<ButtonRect State="0" Left="737" Top="126" Right="751" Bottom="156" />
+				<ButtonRect State="1" Left="737" Top="126" Right="751" Bottom="156" />
+				<ButtonRect State="2" Left="737" Top="126" Right="751" Bottom="156" />
+			</MoveButton>
+		</ScrollBarV>
+
+		<Button Name="PartnerMainCross" Image="Data\interface0012_main_F.tga" X="306" Y="8" LuaLButtonUp="ClosePartner">
+			<ButtonRect State="0" Left="641" Top="7" Right="665" Bottom="25" />	
+			<ButtonRect State="1" Left="666" Top="7" Right="690" Bottom="25" />
+			<ButtonRect State="2" Left="691" Top="7" Right="715" Bottom="25" />
+		</Button>
+		
+		<Button Name="PartnerFight" Image="Data\interface0012_main_F.tga" X="21" Y="181" Tips="设置同伴出战"
+		              TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="SetPartnerFight">
+			<ButtonRect State="0" Left="643" Top="242" Right="683" Bottom="262" />	
+			<ButtonRect State="1" Left="685" Top="242" Right="725" Bottom="262" />
+			<ButtonRect State="2" Left="727" Top="242" Right="767" Bottom="262" />
+			<ButtonRect State="3" Left="769" Top="242" Right="809" Bottom="262" />
+		</Button>
+		
+		<AniIcon Name="MyPartnerFightSpark" X="20" Y="182" Image="MainButtonSZ.ent" Hide="0" AutoDelete="0" />
+		
+		<Button Name="PartnerStandBy" Image="Data\interface0012_main_F.tga" X="63" Y="181" Tips="设置同伴休息"
+		                TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="SetPartnerStandBy">
+			<ButtonRect State="0" Left="643" Top="264" Right="683" Bottom="284" />	
+			<ButtonRect State="1" Left="685" Top="264" Right="725" Bottom="284" />
+			<ButtonRect State="2" Left="727" Top="264" Right="767" Bottom="284" />
+			<ButtonRect State="3" Left="769" Top="264" Right="809" Bottom="284" />
+		</Button>
+		
+		<Button Name="PartnerFollow" Image="Data\interface0012_main_F.tga" X="105" Y="181" Tips="设置同伴跟随"
+		              TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="SetPartnerFollow">
+			<ButtonRect State="0" Left="643" Top="287" Right="683" Bottom="307" />	
+			<ButtonRect State="1" Left="685" Top="287" Right="725" Bottom="307" />
+			<ButtonRect State="2" Left="727" Top="287" Right="767" Bottom="307" />
+			<ButtonRect State="3" Left="769" Top="287" Right="809" Bottom="307" />
+		</Button>
+		
+		
+		
+		<Button Name="PartnerSkill" Image="Data\interface0012_main_F.tga" X="171" Y="173" Tips="查看同伴讯息" 
+		             TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="OpenPartnerSkillInt">
+			<ButtonRect State="0" Left="642" Top="162" Right="688" Bottom="186" />	
+			<ButtonRect State="1" Left="689" Top="162" Right="735" Bottom="186" />
+			<ButtonRect State="2" Left="736" Top="162" Right="782" Bottom="186" />
+			<ButtonRect State="3" Left="736" Top="162" Right="782" Bottom="186" />
+		</Button>
+		
+		<Button Name="PartnerChangeName" Image="Data\interface0012_main_F.tga" X="225" Y="173" Tips="修改同伴名称"
+                       TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="OpenChangePartnerName">
+			<ButtonRect State="0" Left="642" Top="188" Right="688" Bottom="212" />	
+			<ButtonRect State="1" Left="689" Top="188" Right="735" Bottom="212" />
+			<ButtonRect State="2" Left="736" Top="188" Right="782" Bottom="212" />
+			<ButtonRect State="3" Left="736" Top="188" Right="782" Bottom="212" />
+		</Button>
+		
+		<Button Name="PartnerGiveUp" Image="Data\interface0012_main_F.tga" X="279" Y="173" Tips="舍弃同伴"
+                 		TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="OpenConfirmDropPartner">
+			<ButtonRect State="0" Left="642" Top="214" Right="688" Bottom="238" />	
+			<ButtonRect State="1" Left="689" Top="214" Right="735" Bottom="238" />
+			<ButtonRect State="2" Left="736" Top="214" Right="782" Bottom="238" />
+			<ButtonRect State="3" Left="736" Top="214" Right="782" Bottom="238" />
+		</Button>
+		
+		<Button Name="PartnerCollection" Image="Data\interface0012_main_F.tga" X="147" Y="110" Tips="查看同伴录" 
+		             TimeOutCount="500" LuaTimeOut="DefaultTips" Hide = "0" LuaLButtonUp="OpenPartnerCollectionInt">
+			<ButtonRect State="0" Left="784" Top="122" Right="804" Bottom="174" />	
+			<ButtonRect State="1" Left="784" Top="185" Right="804" Bottom="236" />
+			<ButtonRect State="2" Left="812" Top="122" Right="831" Bottom="174" />
+			<ButtonRect State="3" Left="812" Top="185" Right="831" Bottom="236" />
+		</Button>
+		
+		
+		<Button Name="PartnerSTRAdd" Image="Data\interface0012_main_F.tga" X="286" Y="278" Tips="增加属性点"
+		               TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="PartnerSTRAdd">
+			<ButtonRect State="0" Left="643" Top="50" Right="663" Bottom="69" />	
+			<ButtonRect State="1" Left="666" Top="50" Right="686" Bottom="69" />
+			<ButtonRect State="2" Left="689" Top="50" Right="709" Bottom="69" />
+			<ButtonRect State="3" Left="712" Top="50" Right="732" Bottom="69" />
+		</Button>
+		
+		<Button Name="PartnerCONAdd" Image="Data\interface0012_main_F.tga" X="286" Y="301" Tips="增加属性点" 
+		                TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="PartnerCONAdd">
+			<ButtonRect State="0" Left="643" Top="50" Right="663" Bottom="69" />	
+			<ButtonRect State="1" Left="666" Top="50" Right="686" Bottom="69" />
+			<ButtonRect State="2" Left="689" Top="50" Right="709" Bottom="69" />
+			<ButtonRect State="3" Left="712" Top="50" Right="732" Bottom="69" />
+		</Button>
+		
+		<Button Name="PartnerSTAAdd" Image="Data\interface0012_main_F.tga" X="286" Y="324" Tips="增加属性点" 
+		               TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="PartnerSTAAdd">
+			<ButtonRect State="0" Left="643" Top="50" Right="663" Bottom="69" />	
+			<ButtonRect State="1" Left="666" Top="50" Right="686" Bottom="69" />
+			<ButtonRect State="2" Left="689" Top="50" Right="709" Bottom="69" />
+			<ButtonRect State="3" Left="712" Top="50" Right="732" Bottom="69" />
+		</Button>
+		
+		<Button Name="PartnerAGIAdd" Image="Data\interface0012_main_F.tga" X="286" Y="347" Tips="增加属性点"  
+		              TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="PartnerAGIAdd">
+			<ButtonRect State="0" Left="643" Top="50" Right="663" Bottom="69" />	
+			<ButtonRect State="1" Left="666" Top="50" Right="686" Bottom="69" />
+			<ButtonRect State="2" Left="689" Top="50" Right="709" Bottom="69" />
+			<ButtonRect State="3" Left="712" Top="50" Right="732" Bottom="69" />
+		</Button>
+		
+		<Button Name="PartnerSPRAdd" Image="Data\interface0012_main_F.tga" X="286" Y="370" Tips="增加属性点" 
+		              TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="PartnerSPRAdd">
+			<ButtonRect State="0" Left="643" Top="50" Right="663" Bottom="69" />	
+			<ButtonRect State="1" Left="666" Top="50" Right="686" Bottom="69" />
+			<ButtonRect State="2" Left="689" Top="50" Right="709" Bottom="69" />
+			<ButtonRect State="3" Left="712" Top="50" Right="732" Bottom="69" />
+		</Button>
+		
+		<Button Name="PartnerSTRSub" Image="Data\interface0012_main_F.tga" X="308" Y="278" Tips="减少属性点" 
+		                TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="PartnerSTRSub">
+			<ButtonRect State="0" Left="643" Top="72" Right="663" Bottom="91" />	
+			<ButtonRect State="1" Left="666" Top="72" Right="686" Bottom="91" />
+			<ButtonRect State="2" Left="689" Top="72" Right="709" Bottom="91" />
+			<ButtonRect State="3" Left="712" Top="72" Right="732" Bottom="91" />
+		</Button>
+		
+		<Button Name="PartnerCONSub" Image="Data\interface0012_main_F.tga" X="308" Y="301" Tips="减少属性点" 
+		                TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="PartnerCONSub">
+			<ButtonRect State="0" Left="643" Top="72" Right="663" Bottom="91" />	
+			<ButtonRect State="1" Left="666" Top="72" Right="686" Bottom="91" />
+			<ButtonRect State="2" Left="689" Top="72" Right="709" Bottom="91" />
+			<ButtonRect State="3" Left="712" Top="72" Right="732" Bottom="91" />
+		</Button>
+		
+		<Button Name="PartnerSTASub" Image="Data\interface0012_main_F.tga" X="308" Y="324" Tips="减少属性点"
+                        TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="PartnerSTASub">
+			<ButtonRect State="0" Left="643" Top="72" Right="663" Bottom="91" />	
+			<ButtonRect State="1" Left="666" Top="72" Right="686" Bottom="91" />
+			<ButtonRect State="2" Left="689" Top="72" Right="709" Bottom="91" />
+			<ButtonRect State="3" Left="712" Top="72" Right="732" Bottom="91" />
+		</Button>
+		
+		<Button Name="PartnerAGISub" Image="Data\interface0012_main_F.tga" X="308" Y="347" Tips="减少属性点" 
+		                TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="PartnerAGISub">
+			<ButtonRect State="0" Left="643" Top="72" Right="663" Bottom="91" />	
+			<ButtonRect State="1" Left="666" Top="72" Right="686" Bottom="91" />
+			<ButtonRect State="2" Left="689" Top="72" Right="709" Bottom="91" />
+			<ButtonRect State="3" Left="712" Top="72" Right="732" Bottom="91" />
+		</Button>
+		
+		<Button Name="PartnerSPRSub" Image="Data\interface0012_main_F.tga" X="308" Y="370" Tips="减少属性点" 
+		                TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="PartnerSPRSub">
+			<ButtonRect State="0" Left="643" Top="72" Right="663" Bottom="91" />	
+			<ButtonRect State="1" Left="666" Top="72" Right="686" Bottom="91" />
+			<ButtonRect State="2" Left="689" Top="72" Right="709" Bottom="91" />
+			<ButtonRect State="3" Left="712" Top="72" Right="732" Bottom="91" />
+		</Button>
+		
+		<Button Name="PartnerLearning" Image="Data\interface0012_main_F.tga" X="282" Y="393" Tips="点击确认分配潜能点"  
+		              TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="PartnerAddConfirm">
+			<ButtonRect State="0" Left="642" Top="94" Right="691" Bottom="115" />	
+			<ButtonRect State="1" Left="692" Top="94" Right="741" Bottom="115" />
+			<ButtonRect State="2" Left="744" Top="94" Right="793" Bottom="115" />
+			<ButtonRect State="3" Left="795" Top="94" Right="844" Bottom="115" />
+		</Button>
+		
+		<UIImage Name="PartnerIsBound" Image="Data\interface0012_main_F.tga" X="149" Y="65" Left="741" Top="342" Right="760" Bottom="376" Hide="1" />
+		<UIImage Name="PartnerNotBound" Image="Data\interface0012_main_F.tga" X="149" Y="65" Left="792" Top="342" Right="811" Bottom="376" Hide="1" />
+		<UIImage Name="PartnerIsUnique" Image="Data\interface0012_main_F.tga" X="149" Y="95" Left="716" Top="341" Right="735" Bottom="370" Hide="1" />
+		<UIImage Name="PartnerNotUnique" Image="Data\interface0012_main_F.tga" X="149" Y="95" Left="767" Top="341" Right="786" Bottom="370" Hide="1" />
+		
+		<AniIcon Name="PartnerModel"  X="-175" Y="-177" Rotation = "1" AnimationIndex = "0" Loop = "1" Align = "0" Hide="0" />
+		
+		
+		<UIImage Name="SelectPartner1" Image="Data\interface0012_main_F.tga" X="174" Y="39" Left="645" Top="383" Right="778" Bottom="408" Hide="1" LuaLButtonUp="SelectPartner1" />
+		<UIImage Name="SelectPartner2" Image="Data\interface0012_main_F.tga" X="174" Y="64" Left="645" Top="383" Right="778" Bottom="408" Hide="1" LuaLButtonUp="SelectPartner2" />
+		<UIImage Name="SelectPartner3" Image="Data\interface0012_main_F.tga" X="174" Y="89" Left="645" Top="383" Right="778" Bottom="408"  Hide="1" LuaLButtonUp="SelectPartner3" />
+		<UIImage Name="SelectPartner4" Image="Data\interface0012_main_F.tga" X="174" Y="114" Left="645" Top="383" Right="778" Bottom="408" Hide="1" LuaLButtonUp="SelectPartner4" />	
+		
+		<UIImage Name="PartnerState11" Image="Data\interface0012_main_F.tga" X="179" Y="41" Left="643" Top="310" Right="664" Bottom="330" Hide="1"/>
+		<UIImage Name="PartnerState12" Image="Data\interface0012_main_F.tga" X="179" Y="41" Left="643" Top="335" Right="664" Bottom="355" Hide="1"/>
+		<UIImage Name="PartnerState13" Image="Data\interface0012_main_F.tga" X="179" Y="41" Left="643" Top="359" Right="664" Bottom="379" Hide="1"/>
+		
+		<UIImage Name="PartnerState21" Image="Data\interface0012_main_F.tga" X="179" Y="66" Left="643" Top="310" Right="664" Bottom="330" Hide="1"/>
+		<UIImage Name="PartnerState22" Image="Data\interface0012_main_F.tga" X="179" Y="66" Left="643" Top="335" Right="664" Bottom="355" Hide="1"/>
+		<UIImage Name="PartnerState23" Image="Data\interface0012_main_F.tga" X="179" Y="66" Left="643" Top="359" Right="664" Bottom="379" Hide="1"/>
+		
+		<UIImage Name="PartnerState31" Image="Data\interface0012_main_F.tga" X="179" Y="91" Left="643" Top="310" Right="664" Bottom="330" Hide="1"/>
+		<UIImage Name="PartnerState32" Image="Data\interface0012_main_F.tga" X="179" Y="91" Left="643" Top="335" Right="664" Bottom="355" Hide="1"/>
+		<UIImage Name="PartnerState33" Image="Data\interface0012_main_F.tga" X="179" Y="91" Left="643" Top="359" Right="664" Bottom="379" Hide="1"/>
+		
+		<UIImage Name="PartnerState41" Image="Data\interface0012_main_F.tga" X="179" Y="116" Left="643" Top="310" Right="664" Bottom="330" Hide="1"/>
+		<UIImage Name="PartnerState42" Image="Data\interface0012_main_F.tga" X="179" Y="116" Left="643" Top="335" Right="664" Bottom="355" Hide="1"/>
+		<UIImage Name="PartnerState43" Image="Data\interface0012_main_F.tga" X="179" Y="116" Left="643" Top="359" Right="664" Bottom="379" Hide="1"/>
+				
+		<StaticText Name="Partner1Text" X="201" Y="46" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="107" Height="20" NotDetected="1" Align="Center">
+			
+		</StaticText>
+		
+		<StaticText Name="Partner2Text" X="201" Y="71" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="107" Height="20" NotDetected="1" Align="Center">
+			
+		</StaticText>
+		
+		<StaticText Name="Partner3Text" X="201" Y="96" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="107" Height="20" NotDetected="1" Align="Center">
+			
+		</StaticText>
+		
+		<StaticText Name="Partner4Text" X="201" Y="121" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="107" Height="20" NotDetected="1" Align="Center">
+			
+		</StaticText>
+		
+		<StaticText Name="Partner5Text" X="201" Y="146" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="107" Height="20" NotDetected="1" Align="Center">
+			
+		</StaticText>
+		
+		<UIImage Name="LockPartner1" Image="Data\interface0005_main_B.tga" X="297" Y="45" Left="461" Top="369" Right="471" Bottom="382" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="LockPartner2" Image="Data\interface0005_main_B.tga" X="297" Y="70" Left="461" Top="369" Right="471" Bottom="382" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="LockPartner3" Image="Data\interface0005_main_B.tga" X="297" Y="95" Left="461" Top="369" Right="471" Bottom="382" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="LockPartner4" Image="Data\interface0005_main_B.tga" X="297" Y="120" Left="461" Top="369" Right="471" Bottom="382" AutoDelete="0" NotDetected="1" Hide="1" />
+		
+		<UIImage Name="Partner1" Image="" X="174" Y="39" Left="0" Top="0" Right="133" Bottom="25" LuaLButtonUp="SelectPartner1" />
+		<UIImage Name="Partner2" Image="" X="174" Y="64" Left="0" Top="0" Right="133" Bottom="25" LuaLButtonUp="SelectPartner2" />
+		<UIImage Name="Partner3" Image="" X="174" Y="89" Left="0" Top="0" Right="133" Bottom="25" LuaLButtonUp="SelectPartner3" />
+		<UIImage Name="Partner4" Image="" X="174" Y="114" Left="0" Top="0" Right="133" Bottom="25" LuaLButtonUp="SelectPartner4" />
+				
+		
+		<LinerImage Name="PartnerHPBar" X="175" Y="232" Image="Data\interface0012_main_F.tga" Left="645" Top="120"
+			Right="651" Bottom="136" LineWidth="153" BaseWidth="153" Hide="0" Denumerator="100" Numerator="1" />
+		<LinerImage Name="PartnerSPBar" X="175" Y="255" Image="Data\interface0012_main_F.tga" Left="661" Top="120"
+			Right="667" Bottom="136" LineWidth="153" BaseWidth="153" Hide="0" Denumerator="100" Numerator="1" />
+		<LinerImage Name="PartnerExpBar" X="175" Y="209" Image="Data\interface0012_main_F.tga" Left="669" Top="120"
+			Right="675" Bottom="136" LineWidth="153" BaseWidth="153" Hide="0" Denumerator="100" Numerator="1" />
+		
+		<StaticText Name="PartnerHPText" X="175" Y="235" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="153" Height="20" NotDetected="1" Align="Center">
+		</StaticText>
+		
+		<StaticText Name="PartnerSPText" X="175" Y="258" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="153" Height="20" NotDetected="1" Align="Center">
+		</StaticText>
+	
+		
+		<StaticText Name="PartnerExpText" X="175" Y="210" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="153" Height="20" NotDetected="1" Align="Center">
+		</StaticText>
+		
+		
+		<StaticText Name="PartnerLevel" X="46" Y="210" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="87" Height="20" NotDetected="1" Align="Center">
+		</StaticText>
+		
+		<StaticText Name="PartnerGoodness" X="46" Y="233" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="87" Height="20" NotDetected="1" Align="Center">
+		</StaticText>
+		
+		<StaticText Name="PartnerLovely" X="46" Y="256" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="87" Height="20" NotDetected="1" Align="Center">
+		</StaticText>
+		
+		<StaticText Name="PartnerATK" X="46" Y="281" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="93" Height="20" NotDetected="1" Align="Center">
+		</StaticText>
+		<Tips X="7" Y="279" Width="133" Height="20" Tips="决定外功攻击的威力" TimeOutCount="500" />	
+		
+		<StaticText Name="PartnerDEF" X="46" Y="304" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="93" Height="20" NotDetected="1" Align="Center">
+		</StaticText>
+		<Tips X="7" Y="302" Width="133" Height="20" Tips="对外功攻击的防御力" TimeOutCount="500" />	
+		
+		<StaticText Name="PartnerHIT" X="46" Y="327" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="93" Height="20" NotDetected="1" Align="Center">
+		</StaticText>
+		<Tips X="7" Y="325" Width="133" Height="20" Tips="决定外功攻击和内功招式的命中率" TimeOutCount="500" />	
+		
+		<StaticText Name="PartnerEVA" X="46" Y="350" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="93" Height="20" NotDetected="1" Align="Center">
+		</StaticText>
+		<Tips X="7" Y="348" Width="133" Height="20" Tips="对外功攻击和内功招式的躲避几率" TimeOutCount="500" />	
+		
+		<StaticText Name="PartnerPWD" X="46" Y="373" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="93" Height="20" NotDetected="1" Align="Center">
+		</StaticText>
+		<Tips X="7" Y="371" Width="133" Height="20" Tips="决定内功攻击的威力" TimeOutCount="500" />	
+		
+		<StaticText Name="PartnerSPD" X="46" Y="396" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="93" Height="20" NotDetected="1" Align="Center">
+		</StaticText>
+		<Tips X="7" Y="394" Width="133" Height="20" Tips="决定战斗中人物出招的快慢" TimeOutCount="500" />		
+		
+		<StaticText Name="PartnerSTR" X="183" Y="281" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="93" Height="20" NotDetected="1" Align="Center">
+		</StaticText>
+		<Tips X="148" Y="279" Width="133" Height="20" Tips="增加攻击力" TimeOutCount="500" />
+		
+		<StaticText Name="PartnerCON" X="183" Y="304" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="93" Height="20" NotDetected="1" Align="Center">
+		</StaticText>
+		<Tips X="148" Y="302" Width="133" Height="20" Tips="增加防御力" TimeOutCount="500" />
+		
+		<StaticText Name="PartnerSTA" X="183" Y="327" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="93" Height="20" NotDetected="1" Align="Center">
+		</StaticText>
+		<Tips X="148" Y="325" Width="133" Height="20" Tips="增加生命上限" TimeOutCount="500" />
+		
+		<StaticText Name="PartnerAGI" X="183" Y="350" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="93" Height="20" NotDetected="1" Align="Center">
+		</StaticText>
+		<Tips X="148" Y="348" Width="133" Height="20" Tips="提升速度、闪避和命中" TimeOutCount="500" />	
+		
+		<StaticText Name="PartnerSPR" X="183" Y="373" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="93" Height="20" NotDetected="1" Align="Center">
+		</StaticText>
+		<Tips X="148" Y="371" Width="133" Height="20" Tips="提升内功及内力上限" TimeOutCount="500" />
+		
+		<StaticText Name="PartnerPOT" X="183" Y="396" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="93" Height="20" NotDetected="1" Align="Center">
+		</StaticText>
+		<Tips X="148" Y="394" Width="133" Height="20" Tips="可分配的属性点" TimeOutCount="500" />
+		
+		<StaticText Name="PartnerReqLevel" X="132" Y="419" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="66" Height="20" NotDetected="1" Align="Center">
+		</StaticText>
+		<Tips X="132" Y="417" Width="133" Height="20" Tips="可以使用此同伴之角色等级" TimeOutCount="500" />
+				
+		<StaticText Name="PartnerRemainDay" X="265" Y="419" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="60" Height="20" NotDetected="1" Align="Center">
+		</StaticText>
+		<Tips X="265" Y="417" Width="177" Height="20" Tips="此同伴可以使用的剩余天数" TimeOutCount="500" />	
+		
+		<UIImage Name="PartnerRaceType01" X="43" Y="419" Image="Data\interface0012_main_F.tga" Left="841" Top="57" Right="859" Bottom="78" Hide="1" 
+			Tips="野怪同伴" TimeOutCount="500"  LuaTimeOut="DefaultTips" />
+		<UIImage Name="PartnerRaceType02" X="43" Y="419" Image="Data\interface0012_main_F.tga" Left="816" Top="57" Right="834" Bottom="78" Hide="1"
+			Tips="普通同伴宝宝" TimeOutCount="500"  LuaTimeOut="DefaultTips" />
+		<UIImage Name="PartnerRaceType03" X="43" Y="419" Image="Data\interface0012_main_F.tga" Left="790" Top="57" Right="808" Bottom="78" Hide="1"
+			Tips="变异同伴宝宝" TimeOutCount="500"  LuaTimeOut="DefaultTips" />
+		<UIImage Name="PartnerRaceType04" X="43" Y="419" Image="Data\interface0012_main_F.tga" Left="764" Top="57" Right="782" Bottom="78" Hide="1"
+			Tips="稀有同伴宝宝" TimeOutCount="500"  LuaTimeOut="DefaultTips" />
+		<UIImage Name="PartnerRaceType05" X="43" Y="419" Image="Data\interface0012_main_F.tga" Left="738" Top="57" Right="756" Bottom="78" Hide="1"
+			Tips="极品同伴宝宝" TimeOutCount="500"  LuaTimeOut="DefaultTips" />
+		<UIImage Name="PartnerRaceType11" X="43" Y="419" Image="Data\interface0012_main_F.tga" Left="866" Top="57" Right="884" Bottom="78" Hide="1"
+			Tips="特殊同伴" TimeOutCount="500"  LuaTimeOut="DefaultTips" />
+		
+		<UIImage Name="PartnerRaceType06" X="43" Y="419" Image="Data\interface0012_main_F.tga" Left="841" Top="32" Right="859" Bottom="51" Hide="1"
+			Tips="野怪动物" TimeOutCount="500"  LuaTimeOut="DefaultTips" />
+		<UIImage Name="PartnerRaceType07" X="43" Y="419" Image="Data\interface0012_main_F.tga" Left="816" Top="32" Right="834" Bottom="51" Hide="1"
+			Tips="动物宝宝" TimeOutCount="500"  LuaTimeOut="DefaultTips" />
+		<UIImage Name="PartnerRaceType08" X="43" Y="419" Image="Data\interface0012_main_F.tga" Left="790" Top="32" Right="808" Bottom="51" Hide="1"
+			Tips="变异动物宝宝" TimeOutCount="500"  LuaTimeOut="DefaultTips" />
+		<UIImage Name="PartnerRaceType09" X="43" Y="419" Image="Data\interface0012_main_F.tga" Left="764" Top="32" Right="782" Bottom="51" Hide="1"
+			Tips="珍兽宝宝" TimeOutCount="500"  LuaTimeOut="DefaultTips" />
+		<UIImage Name="PartnerRaceType10" X="43" Y="419" Image="Data\interface0012_main_F.tga" Left="738" Top="32" Right="756" Bottom="51" Hide="1"
+			Tips="圣兽宝宝" TimeOutCount="500"  LuaTimeOut="DefaultTips" />
+		
+	</Panel>
+	
+	<Panel Name="PartnerDescPanel" Image="Data\interface0012_main_F.tga" X="345" Y="0" 
+		Left="351" Top="6" Right="637" Bottom="210" Hide="1"
+		Drag="1" DragLeft="0" DragTop="0" DragRight="286" DragBottom="206"
+		LuaRButtonUp="SwitchOffPartnerDesc"  LuaKeyChar="SwitchOffPartnerDesc">
+	
+		<Button Name="PartnerDescCross" Image="Data\interface0012_main_F.tga" X="253" Y="7" LuaLButtonUp="SwitchOffPartnerDesc">
+			<ButtonRect State="0" Left="641" Top="7" Right="665" Bottom="25" />	
+			<ButtonRect State="1" Left="666" Top="7" Right="690" Bottom="25" />
+			<ButtonRect State="2" Left="691" Top="7" Right="715" Bottom="25" />
+		</Button>
+		
+		<UIImage Name="PartnerFaceImage" Image="" X="3" Y="26" Left="0" Top="0" Right="110" Bottom="170"/>
+		<ChatPanel Name="PartnerDesc" X="120" Y="35" Width="160" Height="150" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" FillColor="7F0000FF" Hide="0" NotDetected = "1">
+			
+		</ChatPanel>	
+		
+	
+	</Panel>
+	
+	<Panel Name="PartnerSkillPanel"  Image="Data\interface0012_main_F.tga" X="345" Y="350" 
+		Left="351" Top="215" Right="637" Bottom="464" Hide="1" DetectImage="1"
+		Drag="1" DragLeft="0" DragTop="0" DragRight="286" DragBottom="249"
+		LuaTimeOut="PartnerSkillDetailPopupTimeOut" TimeOutCount="100" 
+		LuaRButtonUp="SwitchOffPartnerSkill"  LuaKeyChar="SwitchOffPartnerSkill">
+	
+		<Button Name="PartnerSkillCross" Image="Data\interface0012_main_F.tga" X="253" Y="8" LuaLButtonUp="SwitchOffPartnerSkill" >
+			<ButtonRect State="0" Left="641" Top="7" Right="665" Bottom="25" />	
+			<ButtonRect State="1" Left="666" Top="7" Right="690" Bottom="25" />
+			<ButtonRect State="2" Left="691" Top="7" Right="715" Bottom="25" />
+		</Button>	
+		
+		<StaticText Name="PartnerIntHP" X="220" Y="36" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="60" NotDetected="1" Align="Left">
+		</StaticText>
+		<Tips X="144" Y="36" Width="108" Height="20" Tips="决定同伴生命值高低" TimeOutCount="500" />
+		
+		<StaticText Name="PartnerIntSP" X="220" Y="57" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="60" NotDetected="1" Align="Left">
+		</StaticText>
+		<Tips X="144" Y="57" Width="108" Height="20" Tips="决定同伴内力值高低" TimeOutCount="500" />
+		
+		<StaticText Name="PartnerIntATK" X="220" Y="78" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="60" NotDetected="1" Align="Left">
+		</StaticText>
+		<Tips X="144" Y="78" Width="108" Height="20" Tips="决定同伴外功攻击力" TimeOutCount="500" />
+		
+		<StaticText Name="PartnerIntDEF" X="220" Y="99" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="60" NotDetected="1" Align="Left">
+		</StaticText>
+		<Tips X="144" Y="99" Width="108" Height="20" Tips="决定同伴对外功攻击的防御能力" TimeOutCount="500" />
+			
+		<StaticText Name="PartnerIntHIT" X="80" Y="36" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="60" NotDetected="1" Align="Left">
+		</StaticText>
+		<Tips X="15" Y="36" Width="105" Height="20" Tips="决定同伴外功攻击和内功招工的命中率" TimeOutCount="500" />
+			
+		<StaticText Name="PartnerIntEVA" X="80" Y="57" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="60" NotDetected="1" Align="Left">
+		</StaticText>
+		<Tips X="15" Y="57" Width="105" Height="20" Tips="决定同伴对外功攻击和内功招式的躲避几率" TimeOutCount="500" />
+		
+		<StaticText Name="PartnerIntPWD" X="80" Y="78" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="60" NotDetected="1" Align="Left">
+		</StaticText>
+		<Tips X="15" Y="78" Width="105" Height="20" Tips="决定同伴内功攻击力" TimeOutCount="500" />
+		
+		<StaticText Name="PartnerIntSPD" X="80" Y="99" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="60" NotDetected="1" Align="Left">
+		</StaticText>
+		<Tips X="15" Y="99" Width="105" Height="20" Tips="决定同伴出招速度" TimeOutCount="500" />
+		
+		<StaticText Name="PartnerIntHealth" X="80" Y="142" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="60" NotDetected="1" Align="Left">
+		</StaticText>
+		<Tips X="15" Y="142" Width="105" Height="20" Tips="同伴的健康值" TimeOutCount="500" />	
+		
+		<StaticText Name="PartnerIntGrow" X="220" Y="142" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="60" NotDetected="1" Align="Left">
+		</StaticText>
+		<Tips X="144" Y="142" Width="108" Height="20" Tips="影响同伴能力的提高" TimeOutCount="500" />	
+		
+		<StaticText Name="PartnerIntGrowLevel0" X="174" Y="142" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="60" NotDetected="1" Align="Left" Hide="1">
+		极品
+		</StaticText>
+		<StaticText Name="PartnerIntGrowLevel1" X="174" Y="142" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="60" NotDetected="1" Align="Left" Hide="1">
+		上品
+		</StaticText>
+		<StaticText Name="PartnerIntGrowLevel2" X="174" Y="142" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="60" NotDetected="1" Align="Left" Hide="1">
+		中品
+		</StaticText>
+		<StaticText Name="PartnerIntGrowLevel3" X="174" Y="142" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="60" NotDetected="1" Align="Left" Hide="1">
+		下品
+		</StaticText>
+		<StaticText Name="PartnerIntGrowLevel4" X="174" Y="142" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="60" NotDetected="1" Align="Left" Hide="1">
+		山寨
+		</StaticText>
+		
+		<StaticText Name="PartnerCultivation" X="80" Y="120" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="60" NotDetected="1" Align="Left">
+		</StaticText>
+		<Tips X="15" Y="120" Width="105" Height="20" Tips="同伴修为" TimeOutCount="500" />	
+		<StaticText Name="PartnerPractice" X="220" Y="120" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="60" NotDetected="1" Align="Left">
+		</StaticText>
+		<Tips X="144" Y="120" Width="105" Height="20" Tips="同伴历练" TimeOutCount="500" />	
+				
+		<AniIcon Name="PartnerNormalSkill00" X="16" Y="163" Image=""  AutoDelete="0" LuaLButtonUp="PartnerUseSkill" LuaMouseIn="PartnerSkillIconIn" LuaMouseOut="PartnerSkillIconOut" InsertToEventList = "1" Detect = "1" Hide="1"/>
+		<AniIcon Name="PartnerNormalSkill01" X="53" Y="163" Image=""  AutoDelete="0" LuaLButtonUp="PartnerUseSkill" LuaMouseIn="PartnerSkillIconIn" LuaMouseOut="PartnerSkillIconOut" InsertToEventList = "1" Detect = "1" Hide="1"/>
+		<AniIcon Name="PartnerNormalSkill02" X="90" Y="163" Image=""  AutoDelete="0" LuaLButtonUp="PartnerUseSkill" LuaMouseIn="PartnerSkillIconIn" LuaMouseOut="PartnerSkillIconOut" InsertToEventList = "1" Detect = "1" Hide="1"/>
+		<AniIcon Name="PartnerNormalSkill03" X="127" Y="163" Image=""  AutoDelete="0" LuaLButtonUp="PartnerUseSkill" LuaMouseIn="PartnerSkillIconIn" LuaMouseOut="PartnerSkillIconOut" InsertToEventList = "1" Detect = "1" Hide="1"/>
+		<AniIcon Name="PartnerNormalSkill04" X="164" Y="163" Image=""  AutoDelete="0" LuaLButtonUp="PartnerUseSkill" LuaMouseIn="PartnerSkillIconIn" LuaMouseOut="PartnerSkillIconOut" InsertToEventList = "1" Detect = "1" Hide="1"/>
+		<AniIcon Name="PartnerNormalSkill05" X="201" Y="163" Image=""  AutoDelete="0" LuaLButtonUp="PartnerUseSkill" LuaMouseIn="PartnerSkillIconIn" LuaMouseOut="PartnerSkillIconOut" InsertToEventList = "1" Detect = "1" Hide="1"/>
+		<AniIcon Name="PartnerNormalSkill06" X="238" Y="163" Image=""  AutoDelete="0" LuaLButtonUp="PartnerUseSkill" LuaMouseIn="PartnerSkillIconIn" LuaMouseOut="PartnerSkillIconOut" InsertToEventList = "1" Detect = "1" Hide="1"/>
+		<!--<AniIcon Name="PartnerNormalSkill07" X="83" Y="80" Image=""  AutoDelete="0" LuaLButtonUp="PartnerUseSkill" LuaMouseIn="PartnerSkillIconIn" LuaMouseOut="PartnerSkillIconOut" InsertToEventList = "1" Detect = "1" Hide="1"/>
+		<AniIcon Name="PartnerNormalSkill08" X="118" Y="80" Image=""  AutoDelete="0" LuaLButtonUp="PartnerUseSkill" LuaMouseIn="PartnerSkillIconIn" LuaMouseOut="PartnerSkillIconOut" InsertToEventList = "1" Detect = "1" Hide="1"/>
+		<AniIcon Name="PartnerNormalSkill09" X="153" Y="80" Image=""  AutoDelete="0" LuaLButtonUp="PartnerUseSkill" LuaMouseIn="PartnerSkillIconIn" LuaMouseOut="PartnerSkillIconOut" InsertToEventList = "1" Detect = "1" Hide="1"/>-->
+		
+		<AniIcon Name="PartnerSpecialSkill00" X="16" Y="205" Image=""  AutoDelete="0" LuaLButtonUp="PartnerUseSkill" LuaMouseIn="PartnerSkillIconIn" LuaMouseOut="PartnerSkillIconOut" InsertToEventList = "1" Detect = "1" Hide="1"/>
+		<AniIcon Name="PartnerSpecialSkill01" X="53" Y="205" Image=""  AutoDelete="0" LuaLButtonUp="PartnerUseSkill" LuaMouseIn="PartnerSkillIconIn" LuaMouseOut="PartnerSkillIconOut" InsertToEventList = "1" Detect = "1" Hide="1"/>
+		<AniIcon Name="PartnerSpecialSkill02" X="90" Y="205" Image=""  AutoDelete="0" LuaLButtonUp="PartnerUseSkill" LuaMouseIn="PartnerSkillIconIn" LuaMouseOut="PartnerSkillIconOut" InsertToEventList = "1" Detect = "1" Hide="1"/>
+		<AniIcon Name="PartnerSpecialSkill03" X="127" Y="205" Image=""  AutoDelete="0" LuaLButtonUp="PartnerUseSkill" LuaMouseIn="PartnerSkillIconIn" LuaMouseOut="PartnerSkillIconOut" InsertToEventList = "1" Detect = "1" Hide="1"/>
+		<AniIcon Name="PartnerSpecialSkill04" X="164" Y="205" Image=""  AutoDelete="0" LuaLButtonUp="PartnerUseSkill" LuaMouseIn="PartnerSkillIconIn" LuaMouseOut="PartnerSkillIconOut" InsertToEventList = "1" Detect = "1" Hide="1"/>
+		<AniIcon Name="PartnerSpecialSkill05" X="201" Y="205" Image=""  AutoDelete="0" LuaLButtonUp="PartnerUseSkill" LuaMouseIn="PartnerSkillIconIn" LuaMouseOut="PartnerSkillIconOut" InsertToEventList = "1" Detect = "1" Hide="1"/>
+		<AniIcon Name="PartnerSpecialSkill06" X="238" Y="205" Image=""  AutoDelete="0" LuaLButtonUp="PartnerUseSkill" LuaMouseIn="PartnerSkillIconIn" LuaMouseOut="PartnerSkillIconOut" InsertToEventList = "1" Detect = "1" Hide="1"/>
+	</Panel>
+	
+</UI>

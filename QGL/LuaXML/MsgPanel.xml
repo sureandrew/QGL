@@ -1,0 +1,1173 @@
+﻿<?xml version="1.0" ?>
+<!-- Our to do list data -->
+<UI>
+	<ID Name="Map" />
+	<Lua Filename="Data\MsgPanel.lua" />
+	<Image Name="Data\inerface0001_main.tga" />
+	<Image Name="Data\interface008_chat.tga" />
+	<Image Name="Data\face_0001.tga" />
+	<Image Name="Data\mapD0108_mini.tga" />
+	<KeyIn Item="EditLine" />
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	
+	<Panel Name="UIEffectPanel" Hide="0" X="0" Y="0" Image="" Left="0"
+		Top="0" Right="800" Bottom="600" NotRemove="1" DetectImage = "1" NotDetected = "1">
+	</Panel>
+	<!-- Partner -->
+	<Panel Name="Partner" Hide="0" X="25" Y="56" Image="Data\inerface0001_main.tga" Left="2"
+		Top="95" Right="142" Bottom="138" NotRemove="1" DetectImage = "1">
+		
+		<AniIcon Name="PartnerFace" Hide="0" X="17" Y="4" Image="" AutoDelete="0" 
+			LuaLButtonDown="PartnerFaceLButtonDown" LuaUnPickUp="PartnerFaceUnPickUp"
+			LuaLButtonUp="ClickPartnerSmallIcon" 
+			/>
+
+		<UIImage Name="MouseOnPartnerFace" X="17" Y="4" Image="Data\inerface0001_main.tga" 
+			Left="0" Top="0" Right="0" Bottom="0" NotDetected="1" Hide="1"/>
+		
+		<UIImage Name="PartnerFaceImage" X="17" Y="4" Image="" DetectImage = "1" Left="0" 
+			Top="0" Right="40" Bottom="40" AutoDelete="0" LuaLButtonUp="ClickPartnerSmallIcon"  
+			LuaLButtonDown="PartnerFaceLButtonDown" LuaUnPickUp="PartnerFaceUnPickUp"
+			InsertToEventList="1" LuaMouseIn="PartnerFaceEffectOn" LuaMouseOut="PartnerFaceEffectOff"
+			Tips="ALT+P 查看同伴状态" TimeOutCount="0" LuaTimeOut="DefaultTips" />
+		
+		<AniIcon Name="PartnerFaceSpark" X="2" Y="-10" Image="" Hide="0" AutoDelete="0" />
+		
+		<StaticText Name="MainPartnerName" X="53" Y="6" Width="85" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center"></StaticText>
+		<LinerImage Name="PartnerSHPBar" X="58" Y="22" Image="Data\inerface0001_main.tga" Left="70"
+			Top="140" Right="76" Bottom="147" LineWidth="56" BaseWidth="76" Hide="0" Denumerator="100"
+			Numerator="0"  LuaRButtonUp = "addParnerHP" 
+			Tips="生命:000/000" TimeOutCount="200" LuaTimeOut="DefaultTips"/>
+		<LinerImage Name="PartnerSSPBar" X="58" Y="30" Image="Data\inerface0001_main.tga" Left="77"
+			Top="140" Right="83" Bottom="147" LineWidth="56" BaseWidth="76" Hide="0" Denumerator="100"
+			Numerator="0" LuaRButtonUp = "addParnerSP" 
+			Tips="內力:000/000" TimeOutCount="200" LuaTimeOut="DefaultTips"/>
+	</Panel>
+	<!-- 人物 -->
+	<Panel Name="Char" X="0" Y="0" Image="Data\inerface0001_main.tga" Left="2" Top="32" Right="178"
+		Bottom="92" Hide="0" NotRemove="1">
+		
+		<AniIcon Name="MyFace" X="20" Y="6" Image="faceM00001a.ent" Hide="0" AutoDelete="0" LuaRButtonDown="Party_PopupMe"
+			LuaLButtonDown="MyFaceLButtonDown" LuaUnPickUp="MyFaceUnPickUp"
+			LuaLButtonUp="BBChar" Detect="1" InsertToEventList="1" LuaRButtonUp = "addCharHPandSP"
+			Tips="ALT+C 查看角色状态" TimeOutCount="1" LuaTimeOut="DefaultTips" 
+			LuaMouseIn="MyFaceEffectOn" LuaMouseOut="MyFaceEffectOff"/>
+			
+		<AniIcon Name="MyFaceSpark" X="13" Y="0" Image="" Hide="0" AutoDelete="0" />
+			
+		<UIImage Name="MouseOnMyFace" X="20" Y="6" Image="Data\inerface0001_main.tga" 
+			Left="0" Top="0" Right="0" Bottom="0" NotDetected="1" Hide="1"/>
+		
+		<LinerImage Name="HPBarLim" X="78" Y="29" Image="Data\inerface0001_main.tga" Left="70" Top="148"
+			Tips="生命:000/000/000" TimeOutCount="200" LuaTimeOut="DefaultTips" Right="76" Bottom="155"
+			LineWidth="83" BaseWidth="83" Hide="0" Denumerator="100" Numerator="66" />
+		<LinerImage Name="HPBar" X="78" Y="29" Image="Data\inerface0001_main.tga" Left="70" Top="140"
+			Tips="生命:000/000/000" TimeOutCount="200" LuaTimeOut="DefaultTips" Right="76" Bottom="147"
+			LineWidth="60" BaseWidth="83" Hide="0" Denumerator="100" Numerator="33" LuaRButtonUp = "addCharHP"/>
+		<LinerImage Name="SPBar" X="78" Y="37" Image="Data\inerface0001_main.tga" Left="77" Top="140"
+			Tips="內力:000/000" TimeOutCount="200" LuaTimeOut="DefaultTips" Right="83" Bottom="147"
+			LineWidth="60" BaseWidth="83" Hide="0" Denumerator="100" Numerator="33" LuaRButtonUp = "addCharSP" />
+		<LinerImage Name="DPBar" X="78" Y="45" Image="Data\inerface0001_main.tga" Left="84" Top="140"
+			Tips="酒意:000/000/000" TimeOutCount="200" LuaTimeOut="DefaultTips" Right="90" Bottom="147"
+			LineWidth="60" BaseWidth="83" Hide="0" Denumerator="100" Numerator="50" />
+		<StaticText Name="MainCharName" X="70" Y="7" Row="1" Width="85" Height="20" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		不败之娘
+		</StaticText>
+	</Panel>
+	<Panel Name="FriendLeaderMe" X="2" Y="32" Left="657" Top="286" Right="728" Bottom="327"
+		Hide="1" NotRemove="1">
+		<UIImage Name="FriendLeaderImageMe" X="1" Y="1" Image="Data\inerface0001_main.tga" Left="200"
+			Top="79" Right="219" Bottom="100" AutoDelete="0" LuaRButtonDown="Party_PopupMe" />
+	</Panel>
+	<Panel X="168" Y="2" Image="Data\inerface0001_main.tga" Left="3" Top="354" Right="125"
+		Bottom="404" Hide="1" Name="Enemy" NotRemove="1">
+		<StaticText X="60" Y="13" Row="1" Column="40" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		敌人
+		</StaticText>
+	</Panel>
+	<!-- Clock -->
+	<Panel Name="ClockPanel" Image="Data\inerface0001_main.tga" X="644" Y="47" Left="608" Top="54"
+		Right="748" Bottom="193" Hide="1" NotDetected="1" NotRemove="1">
+		<UIImage Name="Time0" Image="Data\inerface0001_main.tga" X="70" Y="70" Left="531" Top="374"
+			Right="545" Bottom="413" Hide="1" AutoDelete="0" />
+		<UIImage Name="Time1" Image="Data\inerface0001_main.tga" X="70" Y="70" Left="699" Top="416"
+			Right="726" Bottom="454" Hide="1" AutoDelete="0" />
+		<UIImage Name="Time2" Image="Data\inerface0001_main.tga" X="70" Y="70" Left="658" Top="417"
+			Right="696" Bottom="444" Hide="1" AutoDelete="0" />
+		<UIImage Name="Time3" Image="Data\inerface0001_main.tga" X="70" Y="70" Left="617" Top="416"
+			Right="656" Bottom="430" Hide="1" AutoDelete="0" />
+		<UIImage Name="Time4" Image="Data\inerface0001_main.tga" X="70" Y="70" Left="578" Top="417"
+			Right="616" Bottom="443" Hide="1" AutoDelete="0" />
+		<UIImage Name="Time5" Image="Data\inerface0001_main.tga" X="70" Y="70" Left="549" Top="417"
+			Right="576" Bottom="454" Hide="1" AutoDelete="0" />
+		<UIImage Name="Time6" Image="Data\inerface0001_main.tga" X="70" Y="70" Left="531" Top="416"
+			Right="545" Bottom="455" Hide="1" AutoDelete="0" />
+		<UIImage Name="Time7" Image="Data\inerface0001_main.tga" X="70" Y="70" Left="699" Top="374"
+			Right="726" Bottom="412" Hide="1" AutoDelete="0" />
+		<UIImage Name="Time8" Image="Data\inerface0001_main.tga" X="70" Y="70" Left="659" Top="374"
+			Right="696" Bottom="402" Hide="1" AutoDelete="0" />
+		<UIImage Name="Time9" Image="Data\inerface0001_main.tga" X="70" Y="70" Left="617" Top="374"
+			Right="656" Bottom="388" Hide="1" AutoDelete="0" />
+		<UIImage Name="Time10" Image="Data\inerface0001_main.tga" X="70" Y="70" Left="578" Top="374"
+			Right="615" Bottom="401" Hide="1" AutoDelete="0" />
+		<UIImage Name="Time11" Image="Data\inerface0001_main.tga" X="70" Y="70" Left="549" Top="374"
+			Right="576" Bottom="413" Hide="1" AutoDelete="0" />
+		<AniIcon Name="ClockUICenter_DAYICON" Hide="1" X="70" Y="69" Image="inerface0001_main_sunshine.ent"
+			Rotation="1" AnimationIndex="0" Loop="1" Align="1" Detect="1" AutoDelete="0" 
+			/>
+		<AniIcon Name="ClockUICenter_NIGHTICON" Hide="1" X="70" Y="69" Image="inerface0001_main_moonlight.ent"
+			Rotation="1" AnimationIndex="0" Loop="1" Align="1" Detect="1" AutoDelete="0" 
+			/>
+	</Panel>
+	<!-- Mini Map -->
+	<Panel Name="MiniMap" X="650" Y="55" Left="0" Top="0" Right="124" Bottom="124" Hide="0"
+		NotRemove="1">
+		<MiniMap Name="UseMap" X="0" Y="0" PlayerIcon="Data\interface0025_main_J.tga" PlayerIconLeft="364"
+			PlayerIconRight="379" PlayerIconTop="130" PlayerIconBottom="148" />
+	</Panel>
+	<Panel Name="Location" X="630" Y="46" Image="Data\inerface0001_main.tga" TWidth="160" Left="432"
+		Top="53" Right="600" Bottom="194" Hide="0" NotRemove="1">
+		<Button Name="Transactions" Image="Data\inerface0001_main.tga" X="15" Y="14" Tips="ALT+N 商城"
+			TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="AskForOnlineShop">
+			<ButtonRect State="0" Left="603" Top="195" Right="639" Bottom="231" />
+			<ButtonRect State="1" AniIcon="GoldButton.ent" AnimationIndex="0" Loop="1" Align="0" X="0" Y="-2"
+				LockResources="1" />
+			<ButtonRect State="2" Left="603" Top="195" Right="639" Bottom="231" />
+		</Button>
+		<Button Name="Mail" Image="Data\inerface0001_main.tga" X="17" Y="96" LuaLButtonUp="OpenQuestJournal"
+			Tips="ALT+D 每日可接任务" TimeOutCount="500" LuaTimeOut="DefaultTips">
+			<!-- Tips="邮件" TimeOutCount="500" LuaTimeOut="DefaultTips"  -->
+			<ButtonRect State="0" Left="660" Top="199" Right="685" Bottom="223" />
+			<ButtonRect State="1" Left="686" Top="199" Right="711" Bottom="223" />
+			<ButtonRect State="2" Left="712" Top="199" Right="737" Bottom="223" />
+			<ButtonRect State="3" AniIcon="QuestJournal.ent" AnimationIndex="0" Loop="1" Align="0" X="0"
+				Y="0" LockResources="1" />
+		</Button>
+		
+		<AniIcon Name="MailSpark" X="7" Y="87" Image="HeadIconQuestS.ent" Hide="0" AutoDelete="0" />
+		
+		<Button Name="BigMap" Image="Data\inerface0001_main.tga" X="136" Y="74" LuaLButtonUp="OpenBigMap"
+			Tips="ALT+M 世界地图" TimeOutCount="500" LuaTimeOut="DefaultTips">
+			<ButtonRect State="0" Left="660" Top="228" Right="685" Bottom="252" />
+			<ButtonRect State="1" Left="686" Top="228" Right="711" Bottom="252" />
+			<ButtonRect State="2" Left="712" Top="228" Right="737" Bottom="252" />
+		</Button>
+		<Button Name="MidMapKey" Image="Data\inerface0001_main.tga" X="126" Y="100" LuaLButtonUp="ShowMidMap"
+			Tips="TAB 中地图" TimeOutCount="500" LuaTimeOut="DefaultTips">
+			<ButtonRect State="0" Left="660" Top="257" Right="685" Bottom="281" />
+			<ButtonRect State="1" Left="686" Top="257" Right="711" Bottom="281" />
+			<ButtonRect State="2" Left="712" Top="257" Right="737" Bottom="281" />
+		</Button>
+		<Button Name="SeachNPCKey" Image="Data\inerface0001_main.tga" X="92" Y="117" LuaLButtonUp="ShowSearchNPC"
+			Tips="ALT+J 搜索NPC" TimeOutCount="500" LuaTimeOut="DefaultTips">
+			<ButtonRect State="0" Left="660" Top="343" Right="685" Bottom="368" />
+			<ButtonRect State="1" Left="686" Top="343" Right="711" Bottom="368" />
+			<ButtonRect State="2" Left="712" Top="343" Right="737" Bottom="368" />
+		</Button>
+		<Button Name="ChangeLineKey" Image="Data\inerface0001_main.tga" X="127" Y="25" LuaLButtonUp="OpenChangeLine"
+			Tips="ALT+Y 快速换线" TimeOutCount="500" LuaTimeOut="DefaultTips">
+			<ButtonRect State="0" Left="500" Top="195" Right="533" Bottom="228" />
+			<ButtonRect State="1" Left="568" Top="230" Right="601" Bottom="263" />
+			<ButtonRect State="2" Left="568" Top="266" Right="601" Bottom="299" />
+		</Button>
+		<Button Name="HelpKey" Image="Data\inerface0001_main.tga" X="42" Y="117" LuaLButtonUp="OpenHelperPanel"
+			Tips="ALT+H 新手帮助" TimeOutCount="500" LuaTimeOut="DefaultTips">
+			<ButtonRect State="0" Left="126" Top="460" Right="150" Bottom="484" />
+			<ButtonRect State="1" Left="126" Top="489" Right="150" Bottom="513" />
+			<ButtonRect State="2" Left="126" Top="519" Right="150" Bottom="543" />
+		</Button>
+		<Button Name="WebLink" Image="Data\inerface0001_main.tga" X="7" Y="61" LuaLButtonUp="BBOpenWebSite"
+			Tips="打开梦古知道" TimeOutCount="500" LuaTimeOut="DefaultTips">
+			<ButtonRect State="0" Left="6" Top="640" Right="30" Bottom="664" />
+			<ButtonRect State="1" Left="32" Top="640" Right="56" Bottom="665" />
+			<ButtonRect State="2" Left="58" Top="639" Right="83" Bottom="663" />
+		</Button>
+	</Panel>
+	<Panel Name="Time" X="750" Y="47" Image="Data\inerface0001_main.tga" Left="510" Top="3"
+		Right="559" Bottom="29" Hide="0" NotRemove="1">
+		<UIImage Name="MainUI_DAYICON" X="6" Y="7" Image="Data\inerface0001_main.tga" Left="463"
+			Top="8" Right="480" Bottom="22" Hide="1" AutoDelete="0" 
+			/>
+		<UIImage Name="MainUI_NIGHTICON" X="6" Y="7" Image="Data\inerface0001_main.tga" Left="484"
+			Top="8" Right="501" Bottom="22" Hide="1" AutoDelete="0" 
+			/>
+		<!--
+		<StaticText Name="ChineseCurrTime" X="8" Y="8" Row="1" Column="1" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="0" LuaLButtonUp="CallClockPanel"
+		FontName="Data\simsun.ttc" FontHeight="12" FontWidth="12">
+		午
+		</StaticText>
+		-->
+		<StaticText Name="TimerString" X="0" Y="0" Row="1" Column="8" Width="20" Height="20" Hide="1">
+		子丑寅卯辰巳午未申酉戍亥
+		</StaticText>
+		
+		<UIImage Name="ClockTransparentButton" X="8" Y="9" Image="" Left="0" Top="0" Right="14" Bottom="14"
+			Hide="0" AutoDelete="0" LuaLButtonUp="CallClockPanel" 
+			Tips="当前时辰:X" TimeOutCount="500" LuaTimeOut="DefaultTips"
+			/>
+		<UIImage Name="PlayerHeALThgood" Image="Data\inerface0001_main.tga" X="28" Y="8" Left="643" Top="199"
+			Right="656" Bottom="211" Hide="0" AutoDelete="0" 
+			Tips="健康游戏時間:健康" TimeOutCount="500" LuaTimeOut="DefaultTips"
+			/>
+		<UIImage Name="PlayerHeALThaverage" Image="Data\inerface0001_main.tga" X="28" Y="8" Left="643" Top="213"
+			Right="656" Bottom="225" Hide="1" AutoDelete="0" 
+			Tips="健康游戏時間:疲劳" TimeOutCount="500" LuaTimeOut="DefaultTips"
+			/>
+		<UIImage Name="PlayerHeALThpoor" Image="Data\inerface0001_main.tga" X="28" Y="8" Left="643" Top="227"
+			Right="656" Bottom="239" Hide="1" AutoDelete="0" 
+			Tips="健康游戏時間:过劳" TimeOutCount="500" LuaTimeOut="DefaultTips"
+			/>	
+	</Panel>
+	<Panel Name="Friend1" X="15" Y="100" Image="" Left="0" Top="0" Right="127" Bottom="42"
+		Hide="1" NotRemove="1">
+		<UIImage X="2" Y="2" Image="Data\inerface0001_main.tga" Left="659" Top="288" Right="728"
+			Bottom="328" AutoDelete="0" />
+		<!--<UIImage Name="FriendPhoto1" Hide="0" X="5" Y="5" Image="Data\faceS20016aa.tga" Left="0" Top="0"
+			Right="37" Bottom="37" AutoDelete="0" LuaRButtonDown="Party_Popup1"/>-->
+		<AniIcon Name="FriendPhoto1" Hide="0" X="5" Y="5" Image="faceS00004a.ent" Detect="1" AutoDelete="0"
+			Tips="Friend1" TimeOutCount="0" LuaTimeOut="DefaultTips"
+			LuaRButtonDown="Party_Popup1" />
+		<LinerImage Name="FriendHPBarLim1" X="43" Y="27" Image="Data\inerface0001_main.tga" Left="698"
+			Top="335" Right="703" Bottom="338" LineWidth="24" BaseWidth="24" Hide="0" Denumerator="100"
+			Numerator="100" />
+		<LinerImage Name="FriendHPBar1" X="43" Y="27" Image="Data\inerface0001_main.tga" Left="698"
+			Top="329" Right="703" Bottom="332" LineWidth="24" BaseWidth="24" Hide="0" Denumerator="100"
+			Numerator="50" />
+		<LinerImage Name="FriendSPBarLim1" X="42" Y="31" Image="Data\inerface0001_main.tga" Left="706"
+			Top="335" Right="711" Bottom="338" LineWidth="25" BaseWidth="25" Hide="0" Denumerator="100"
+			Numerator="100" />
+		<LinerImage Name="FriendSPBar1" X="42" Y="31" Image="Data\inerface0001_main.tga" Left="706"
+			Top="329" Right="711" Bottom="332" LineWidth="25" BaseWidth="25" Hide="0" Denumerator="100"
+			Numerator="50" />
+	</Panel>
+	<Panel Name="FriendLeader1" X="15" Y="100" Left="657" Top="286" Right="728" Bottom="327"
+		Hide="1" NotRemove="1">
+		<UIImage Name="FriendLeaderImage1" X="1" Y="1" Image="Data\inerface0001_main.tga" Left="200"
+			Top="79" Right="219" Bottom="100" AutoDelete="0" LuaRButtonDown="Party_Popup1" />
+	</Panel>
+	<Panel Name="Friend2" X="15" Y="150" Image="" Left="0" Top="0" Right="127" Bottom="42"
+		Hide="1" NotRemove="1">
+		<UIImage X="2" Y="2" Image="Data\inerface0001_main.tga" Left="659" Top="288" Right="728"
+			Bottom="328" AutoDelete="0"	/>
+		<AniIcon Name="FriendPhoto2" Hide="0" X="5" Y="5" Image="faceS00004a.ent" Detect="1" AutoDelete="0"
+			Tips="Friend2" TimeOutCount="500" LuaTimeOut="DefaultTips"
+			LuaRButtonDown="Party_Popup2" />
+		<LinerImage Name="FriendHPBarLim2" X="43" Y="27" Image="Data\inerface0001_main.tga" Left="698"
+			Top="335" Right="703" Bottom="338" LineWidth="24" BaseWidth="24" Hide="0" Denumerator="100"
+			Numerator="100" />
+		<LinerImage Name="FriendHPBar2" X="43" Y="27" Image="Data\inerface0001_main.tga" Left="698"
+			Top="329" Right="703" Bottom="332" LineWidth="24" BaseWidth="24" Hide="0" Denumerator="100"
+			Numerator="50" />
+		<LinerImage Name="FriendSPBarLim2" X="42" Y="31" Image="Data\inerface0001_main.tga" Left="706"
+			Top="335" Right="711" Bottom="338" LineWidth="25" BaseWidth="25" Hide="0" Denumerator="100"
+			Numerator="100" />
+		<LinerImage Name="FriendSPBar2" X="42" Y="31" Image="Data\inerface0001_main.tga" Left="706"
+			Top="329" Right="711" Bottom="332" LineWidth="25" BaseWidth="25" Hide="0" Denumerator="100"
+			Numerator="50" />
+	</Panel>
+	<Panel Name="FriendLeader2" X="15" Y="150" Left="657" Top="286" Right="728" Bottom="327"
+		Hide="1" NotRemove="1">
+		<UIImage Name="FriendLeaderImage2" X="1" Y="1" Image="Data\inerface0001_main.tga" Left="200"
+			Top="79" Right="219" Bottom="100" AutoDelete="0" LuaRButtonDown="Party_Popup2" />
+	</Panel>
+	<Panel Name="Friend3" X="15" Y="200" Image="" Left="0" Top="0" Right="127" Bottom="42"
+		Hide="1" NotRemove="1">
+		<UIImage X="2" Y="2" Image="Data\inerface0001_main.tga" Left="659" Top="288" Right="728"
+			Bottom="328" AutoDelete="0" />
+		<AniIcon Name="FriendPhoto3" Hide="0" X="5" Y="5" Image="faceS00004a.ent" Detect="1" AutoDelete="0"
+			Tips="Friend3" TimeOutCount="0" LuaTimeOut="DefaultTips"
+			LuaRButtonDown="Party_Popup3" />
+		<LinerImage Name="FriendHPBarLim3" X="43" Y="27" Image="Data\inerface0001_main.tga" Left="698"
+			Top="335" Right="703" Bottom="338" LineWidth="24" BaseWidth="24" Hide="0" Denumerator="100"
+			Numerator="100" />
+		<LinerImage Name="FriendHPBar3" X="43" Y="27" Image="Data\inerface0001_main.tga" Left="698"
+			Top="329" Right="703" Bottom="332" LineWidth="24" BaseWidth="24" Hide="0" Denumerator="100"
+			Numerator="50" />
+		<LinerImage Name="FriendSPBarLim3" X="42" Y="31" Image="Data\inerface0001_main.tga" Left="706"
+			Top="335" Right="711" Bottom="338" LineWidth="25" BaseWidth="25" Hide="0" Denumerator="100"
+			Numerator="100" />
+		<LinerImage Name="FriendSPBar3" X="42" Y="31" Image="Data\inerface0001_main.tga" Left="706"
+			Top="329" Right="711" Bottom="332" LineWidth="25" BaseWidth="25" Hide="0" Denumerator="100"
+			Numerator="50" />
+	</Panel>
+	<Panel Name="FriendLeader3" X="15" Y="200" Left="657" Top="286" Right="728" Bottom="327"
+		Hide="1" NotRemove="1">
+		<UIImage Name="FriendLeaderImage3" X="1" Y="1" Image="Data\inerface0001_main.tga" Left="200"
+			Top="79" Right="219" Bottom="100" AutoDelete="0" LuaRButtonDown="Party_Popup3" />
+	</Panel>
+	<Panel Name="Friend4" X="15" Y="250" Image="" Left="0" Top="0" Right="127" Bottom="42"
+		Hide="1" NotRemove="1">
+		<UIImage X="2" Y="2" Image="Data\inerface0001_main.tga" Left="659" Top="288" Right="728"
+			Bottom="328" AutoDelete="0" />
+		<AniIcon Name="FriendPhoto4" Hide="0" X="5" Y="5" Image="faceS00004a.ent" Detect="1" AutoDelete="0"
+			Tips="Friend4" TimeOutCount="0" LuaTimeOut="DefaultTips"
+			LuaRButtonDown="Party_Popup4" />
+		<LinerImage Name="FriendHPBarLim4" X="43" Y="27" Image="Data\inerface0001_main.tga" Left="698"
+			Top="335" Right="703" Bottom="338" LineWidth="24" BaseWidth="24" Hide="0" Denumerator="100"
+			Numerator="100" />
+		<LinerImage Name="FriendHPBar4" X="43" Y="27" Image="Data\inerface0001_main.tga" Left="698"
+			Top="329" Right="703" Bottom="332" LineWidth="24" BaseWidth="24" Hide="0" Denumerator="100"
+			Numerator="50" />
+		<LinerImage Name="FriendSPBarLim4" X="42" Y="31" Image="Data\inerface0001_main.tga" Left="706"
+			Top="335" Right="711" Bottom="338" LineWidth="25" BaseWidth="25" Hide="0" Denumerator="100"
+			Numerator="100" />
+		<LinerImage Name="FriendSPBar4" X="42" Y="31" Image="Data\inerface0001_main.tga" Left="706"
+			Top="329" Right="711" Bottom="332" LineWidth="25" BaseWidth="25" Hide="0" Denumerator="100"
+			Numerator="50" />
+	</Panel>
+	<Panel Name="FriendLeader4" X="15" Y="250" Left="657" Top="286" Right="728" Bottom="327"
+		Hide="1" NotRemove="1">
+		<UIImage Name="FriendLeaderImage4" X="1" Y="1" Image="Data\inerface0001_main.tga" Left="200"
+			Top="79" Right="219" Bottom="100" AutoDelete="0" LuaRButtonDown="Party_Popup4" />
+	</Panel>
+	<!-- 右上角地图信息 -->
+	<Panel Name="MapInfo" X="635" Y="0" Image="Data\inerface0001_main.tga" Left="563" Top="3"
+		Right="728" Bottom="50" Hide="0" NotRemove="1">
+		<StaticText Name="PlaceName" X="20" Y="7" Row="1" Column="8" Width="110" Height="20" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		泉水镇
+		</StaticText>
+		<StaticText Name="Position" X="20" Y="27" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000">
+		X: 999   Y: 888
+		</StaticText>
+		<Button Name="MapInfoButton" Image="Data\inerface0001_main.tga" X="132" Y="6" LuaLButtonUp="HideMiniMapPanel"
+			Tips="小地图" TimeOutCount="500" LuaTimeOut="DefaultTips">
+			<ButtonRect State="0" Left="731" Top="4" Right="751" Bottom="18" />
+			<ButtonRect State="1" Left="731" Top="20" Right="751" Bottom="34" />
+			<ButtonRect State="2" Left="731" Top="37" Right="751" Bottom="51" />
+		</Button>
+	</Panel>
+	<Panel X="0" Y="564" Image="Data\inerface0001_main.tga" Left="0" Top="564" Right="800"
+		Bottom="600" Hide="0" Name="Bottom" NotRemove="1">
+		<!--
+		<UIImage Name="ButtonBox01" Hide="0" X="291" Y="11" Image="Data\inerface0001_main.tga" Left="340" Top="450"
+			Right="373" Bottom="464" AutoDelete="0" />
+		-->
+		<Button Name="ChanelButton" Image="Data\inerface0001_main.tga" X="18" Y="9" LuaLButtonUp="PopChannelPanel">
+			<ButtonRect State="0" Left="438" Top="406" Right="481" Bottom="422" />
+			<ButtonRect State="1" Left="392" Top="406" Right="435" Bottom="422" />
+			<ButtonRect State="2" Left="484" Top="406" Right="527" Bottom="422" />
+		</Button>
+		<UIImage Name="ChannelFriendNameBk" X="18" Y="9" Image="Data\interface008_chat.tga" Left="263"
+			Top="137" Right="293" Bottom="153" Hide="1" />
+		<UIImage Name="ChannelMapNameBk" X="18" Y="9" Image="Data\interface008_chat.tga" Left="263"
+			Top="195" Right="293" Bottom="211" Hide="1" />
+		<UIImage Name="ChannelPartyNameBk" X="18" Y="9" Image="Data\interface008_chat.tga" Left="263"
+			Top="214" Right="293" Bottom="230" Hide="1" />
+		<UIImage Name="ChannelGangNameBk" X="18" Y="9" Image="Data\interface008_chat.tga" Left="263"
+			Top="233" Right="293" Bottom="249" Hide="1" />
+		<UIImage Name="ChannelGuildNameBk" X="18" Y="9" Image="Data\interface008_chat.tga" Left="263"
+			Top="252" Right="293" Bottom="268" Hide="1" />
+		<UIImage Name="ChannelPrivateNameBk" X="18" Y="9" Image="Data\interface008_chat.tga" Left="263"
+			Top="271" Right="293" Bottom="287" Hide="1" />
+		<UIImage Name="ChannelGlobalNameBk" X="18" Y="9" Image="Data\interface008_chat.tga" Left="263"
+			Top="290" Right="293" Bottom="306" Hide="1" />
+		<UIImage Name="ChannelCoupleNameBk" X="18" Y="9" Image="Data\interface008_chat.tga" Left="263"
+			Top="328" Right="293" Bottom="344" Hide="1" />
+		<UIImage Name="ChannelSystemNameBk" X="18" Y="9" Image="Data\interface008_chat.tga" Left="263"
+			Top="176" Right="293" Bottom="192" Hide="1" />
+		<UIImage Name="ChannelRumorNameBk" X="18" Y="9" Image="Data\interface008_chat.tga" Left="263"
+			Top="157" Right="293" Bottom="173" Hide="1" />
+		<UIImage Name="ChannelSpeakerNameBk" X="18" Y="9" Image="Data\interface008_chat.tga" Left="263"
+			Top="309" Right="293" Bottom="324" Hide="1" />
+			
+		<UIImage Name="ChannelFriendName" X="22" Y="9" Image="Data\interface008_chat.tga" Left="237"
+			Top="137" Right="260" Bottom="153" Hide="1" NotDetected="1" />
+		<UIImage Name="ChannelMapName" X="22" Y="9" Image="Data\interface008_chat.tga" Left="237"
+			Top="195" Right="260" Bottom="211" Hide="0" NotDetected="1" />
+		<UIImage Name="ChannelPartyName" X="22" Y="9" Image="Data\interface008_chat.tga" Left="237"
+			Top="214" Right="260" Bottom="230" Hide="1" NotDetected="1" />
+		<UIImage Name="ChannelGangName" X="22" Y="9" Image="Data\interface008_chat.tga" Left="237"
+			Top="233" Right="260" Bottom="249" Hide="1" NotDetected="1" />
+		<UIImage Name="ChannelGuildName" X="22" Y="9" Image="Data\interface008_chat.tga" Left="237"
+			Top="252" Right="260" Bottom="268" Hide="1" NotDetected="1" />
+		<UIImage Name="ChannelPrivateName" X="22" Y="9" Image="Data\interface008_chat.tga" Left="237"
+			Top="271" Right="260" Bottom="287" Hide="1" NotDetected="1" />
+		<UIImage Name="ChannelGlobalName" X="22" Y="9" Image="Data\interface008_chat.tga" Left="237"
+			Top="290" Right="260" Bottom="306" Hide="1" NotDetected="1" />
+		<UIImage Name="ChannelCoupleName" X="22" Y="9" Image="Data\interface008_chat.tga" Left="237"
+			Top="328" Right="260" Bottom="344" Hide="1" NotDetected="1" />
+		<UIImage Name="ChannelSystemName" X="22" Y="9" Image="Data\interface008_chat.tga" Left="237"
+			Top="176" Right="260" Bottom="192" Hide="1" NotDetected="1" />
+		<UIImage Name="ChannelRumorName" X="22" Y="9" Image="Data\interface008_chat.tga" Left="237"
+			Top="157" Right="260" Bottom="172" Hide="1" NotDetected="1" />
+		<UIImage Name="ChannelSpeakerName" X="22" Y="9" Image="Data\interface008_chat.tga" Left="237"
+			Top="309" Right="260" Bottom="324" Hide="1" NotDetected="1" />
+		<Button Name="PrePrivateListButton" Image="Data\inerface0001_main.tga" X="330" Y="10" LuaLButtonUp="OpenPrivateMsgPopPanel"
+			Tips="最近私聊列表" TimeOutCount="500" LuaTimeOut="DefaultTips">
+			<ButtonRect State="0" Left="88" Top="168" Right="104" Bottom="182" />
+			<ButtonRect State="1" Left="106" Top="168" Right="122" Bottom="182" />
+			<ButtonRect State="2" Left="125" Top="168" Right="141" Bottom="182" />
+		</Button>
+		<!--
+		<Button Name="FontColorButton" Image="Data\inerface0001_main.tga" X="292" Y="10" LuaLButtonUp="PopColorPanel"
+			Tips="字体颜色选择" TimeOutCount="500" LuaTimeOut="DefaultTips">
+			<ButtonRect State="0" Left="88" Top="298" Right="104" Bottom="312" />
+			<ButtonRect State="1" Left="106" Top="298" Right="122" Bottom="312" />
+			<ButtonRect State="2" Left="124" Top="298" Right="140" Bottom="312" />
+		</Button>
+		-->
+		<Button Name="FaceButton" Image="Data\inerface0001_main.tga" X="350" Y="10" LuaLButtonUp="PopChatIconPanel"
+			Tips="ALT+~ 聊天表情" TimeOutCount="500" LuaTimeOut="DefaultTips">
+			<ButtonRect State="0" Left="143" Top="298" Right="157" Bottom="312" />
+			<ButtonRect State="1" Left="143" Top="314" Right="157" Bottom="328" />
+			<ButtonRect State="2" Left="143" Top="331" Right="157" Bottom="345" />
+		</Button>
+		<EditBox Name="EditLine" X="76" Y="12" Row="1" Column="15" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" Limit="40" Width="228" Height="20" ReadPast = "1"
+			LuaKeyChar="EditLineOnChar" LuaLButtonUp="SetEditLineFocus"></EditBox>
+		<LinerImage Name="CharDownExp" X="19" Y="32" Image="Data\inerface0001_main.tga" Left="91" Top="140"
+			Right="97" Bottom="147" LineWidth="781" BaseWidth="781" Hide="0" Denumerator="100" Numerator="100" />
+	</Panel>
+	<!-- 跑马灯 -->
+	<Panel Name="HroseLight" X="290" Y="4" Image="Data\inerface0001_main.tga" Left="3" Top="4"
+		Right="343" Bottom="30" Hide="1" NotRemove="1">
+		<DynamicText Name="HroseLightText" X="10" Y="8" Row="1" Column="40" EdgeCode="LIGHT" Width="1200"
+			Height="20" FontColor="FF00FFFF" ShadowColor="FF000000" Speed="50" MoveWidth="330">
+		#A欢迎进入#R梦幻古龙#A之大地武侠世界
+		</DynamicText>
+	</Panel>
+	<Panel Name="HShortCutPanel" X="390" Y="503" Hide="0" Image="Data\inerface0001_main.tga"
+		DetectImage="1" Left="143" Top="361" Right="516" Bottom="400" NotRemove="1">
+		<Button Name="HShortCutBtn" Image="Data\inerface0001_main.tga" X="355" Y="6" LuaLButtonDown="EnableHideShortCut"
+			DetectImage="1">
+			<ButtonRect State="0" Left="498" Top="367" Right="515" Bottom="395" />
+			<ButtonRect State="1" Left="498" Top="367" Right="515" Bottom="395" />
+			<ButtonRect State="2" Left="498" Top="367" Right="515" Bottom="395" />
+		</Button>
+		<AniIcon Name="HShortCut0" X="3" Y="4" Image="" Detect="1" AutoDelete="0" LuaLButtonDown="MoveHShortCutSlot0"
+			LuaRButtonDown="UseHShortCutSlot0" Tips="ShortCut 1" TimeOutCount="100" LuaTimeOut="DefaultTips" />
+		<AniIcon Name="HShortCut1" X="38" Y="4" Image="" Detect="1" AutoDelete="0" LuaLButtonDown="MoveHShortCutSlot1"
+			LuaRButtonDown="UseHShortCutSlot1" Tips="ShortCut 2" TimeOutCount="100" LuaTimeOut="DefaultTips" />
+		<AniIcon Name="HShortCut2" X="73" Y="4" Image="" Detect="1" AutoDelete="0" LuaLButtonDown="MoveHShortCutSlot2"
+			LuaRButtonDown="UseHShortCutSlot2" Tips="ShortCut 3" TimeOutCount="100" LuaTimeOut="DefaultTips" />
+		<AniIcon Name="HShortCut3" X="108" Y="4" Image="" Detect="1" AutoDelete="0" LuaLButtonDown="MoveHShortCutSlot3"
+			LuaRButtonDown="UseHShortCutSlot3" Tips="ShortCut 4" TimeOutCount="100" LuaTimeOut="DefaultTips" />
+		<AniIcon Name="HShortCut4" X="143" Y="4" Image="" Detect="1" AutoDelete="0" LuaLButtonDown="MoveHShortCutSlot4"
+			LuaRButtonDown="UseHShortCutSlot4" Tips="ShortCut 5" TimeOutCount="100" LuaTimeOut="DefaultTips" />
+		<AniIcon Name="HShortCut5" X="178" Y="4" Image="" Detect="1" AutoDelete="0" LuaLButtonDown="MoveHShortCutSlot5"
+			LuaRButtonDown="UseHShortCutSlot5" Tips="ShortCut 6" TimeOutCount="100" LuaTimeOut="DefaultTips" />
+		<AniIcon Name="HShortCut6" X="213" Y="4" Image="" Detect="1" AutoDelete="0" LuaLButtonDown="MoveHShortCutSlot6"
+			LuaRButtonDown="UseHShortCutSlot6" Tips="ShortCut 7" TimeOutCount="100" LuaTimeOut="DefaultTips" />
+		<AniIcon Name="HShortCut7" X="248" Y="4" Image="" Detect="1" AutoDelete="0" LuaLButtonDown="MoveHShortCutSlot7"
+			LuaRButtonDown="UseHShortCutSlot7" Tips="ShortCut 8" TimeOutCount="100" LuaTimeOut="DefaultTips" />
+		<AniIcon Name="HShortCut8" X="283" Y="4" Image="" Detect="1" AutoDelete="0" LuaLButtonDown="MoveHShortCutSlot8"
+			LuaRButtonDown="UseHShortCutSlot8" Tips="ShortCut 9" TimeOutCount="100" LuaTimeOut="DefaultTips" />
+		<AniIcon Name="HShortCut9" X="318" Y="4" Image="" Detect="1" AutoDelete="0" LuaLButtonDown="MoveHShortCutSlot9"
+			LuaRButtonDown="UseHShortCutSlot9" Tips="ShortCut 10" TimeOutCount="100" LuaTimeOut="DefaultTips" />
+		<UIImage Name="ShortCutF1" X="3" Y="1" Image="Data\inerface0001_main.tga" Left="343" Top="654"
+			NotDetected="1" Right="363" Bottom="668" Hide="0" />
+		<UIImage Name="ShortCutF2" X="38" Y="1" Image="Data\inerface0001_main.tga" Left="366" Top="654"
+			NotDetected="1" Right="386" Bottom="668" Hide="0" />
+		<UIImage Name="ShortCutF3" X="73" Y="1" Image="Data\inerface0001_main.tga" Left="389" Top="654"
+			NotDetected="1" Right="409" Bottom="668" Hide="0" />
+		<UIImage Name="ShortCutF4" X="108" Y="1" Image="Data\inerface0001_main.tga" Left="412" Top="654"
+			NotDetected="1" Right="432" Bottom="668" Hide="0" />
+		<UIImage Name="ShortCutF5" X="143" Y="1" Image="Data\inerface0001_main.tga" Left="435" Top="654"
+			NotDetected="1" Right="455" Bottom="668" Hide="0" />
+		<UIImage Name="ShortCutF6" X="178" Y="1" Image="Data\inerface0001_main.tga" Left="458" Top="654"
+			NotDetected="1" Right="478" Bottom="668" Hide="0" />
+		<UIImage Name="ShortCutF7" X="213" Y="1" Image="Data\inerface0001_main.tga" Left="481" Top="654"
+			NotDetected="1" Right="501" Bottom="668" Hide="0" />
+		<UIImage Name="ShortCutF8" X="248" Y="1" Image="Data\inerface0001_main.tga" Left="504" Top="654"
+			NotDetected="1" Right="524" Bottom="668" Hide="0" />
+		<UIImage Name="ShortCutF9" X="283" Y="1" Image="Data\inerface0001_main.tga" Left="527" Top="654"
+			NotDetected="1" Right="547" Bottom="668" Hide="0" />
+		<UIImage Name="ShortCutF10" X="318" Y="1" Image="Data\inerface0001_main.tga" Left="550" Top="654"
+			NotDetected="1" Right="570" Bottom="668" Hide="0" />
+		<StaticText Name="HShortText0" X="3" Y="22" Row="1" Width="32" Height="20" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Right" />
+		<StaticText Name="HShortText1" X="38" Y="22" Row="1" Width="32" Height="20" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Right" />
+		<StaticText Name="HShortText2" X="73" Y="22" Row="1" Width="32" Height="20" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Right" />
+		<StaticText Name="HShortText3" X="108" Y="22" Row="1" Width="32" Height="20" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Right" />
+		<StaticText Name="HShortText4" X="143" Y="22" Row="1" Width="32" Height="20" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Right" />
+		<StaticText Name="HShortText5" X="178" Y="22" Row="1" Width="32" Height="20" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Right" />
+		<StaticText Name="HShortText6" X="213" Y="22" Row="1" Width="32" Height="20" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Right" />
+		<StaticText Name="HShortText7" X="248" Y="22" Row="1" Width="32" Height="20" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Right" />
+		<StaticText Name="HShortText8" X="283" Y="22" Row="1" Width="32" Height="20" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Right" />
+		<StaticText Name="HShortText9" X="318" Y="22" Row="1" Width="32" Height="20" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Right" />
+	</Panel>
+	<Panel Name="VShortCutPanel" X="747" Y="165" Hide="1" Image="Data\inerface0001_main.tga"
+		DetectImage="1" Left="753" Top="3" Right="794" Bottom="378" NotRemove="1">
+		<Button Name="VShortCutBtn" Image="Data\inerface0001_main.tga" X="6" Y="358" LuaLButtonDown="EnableHideShortCut"
+			DetectImage="1">
+			<ButtonRect State="0" Left="759" Top="361" Right="788" Bottom="377" />
+			<ButtonRect State="1" Left="759" Top="361" Right="788" Bottom="377" />
+			<ButtonRect State="2" Left="759" Top="361" Right="788" Bottom="377" />
+		</Button>
+	</Panel>
+	<Panel Name="HideShortCutPanel" X="743" Y="495" Hide="1" Image="Data\inerface0001_main.tga"
+		DetectImage="1" Left="194" Top="454" Right="212" Bottom="493" LuaLButtonDown="EnableHShortCut"
+		Drag="0" DragLeft="0" DragTop="5" DragRight="18" DragBottom="30" NotRemove="1">
+		<!--<Button Name="HelpButton" Image="Data\inerface0001_main.tga" X="0" Y="4" LuaLButtonUp="OpenHelperPanel"
+			DetectImage="1">
+			<ButtonRect State="0" Left="165" Top="458" Right="195" Bottom="493" />
+			<ButtonRect State="1" Left="221" Top="458" Right="251" Bottom="493" />
+			<ButtonRect State="2" Left="278" Top="458" Right="308" Bottom="493" />
+		</Button>-->
+	</Panel>
+	<!-- ShortCut Moving Panel-->
+	<Panel Name="ShortCutMovingPanel" Image="" X="0" Y="50" Left="0" Top="0" Right="40" Bottom="40"
+		NotRemove="1" Hide="1" Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40"
+		LuaEndDrag="ShortCutDragEnd" LuaRButtonDown="ResetShortCutDropItemPos">
+		<AniIcon Name="ShortCutMovingIcon" X="0" Y="0" Image="" AutoDelete="0" Detect="1" />
+	</Panel>
+	<Panel Expand="1" Name="SpeakerPanel" X="2" Y="335" Image="Data\interface0038_master.tga"
+		Hide="1" Left="10" Top="313" Right="398" Bottom="375" NotRemove="1">
+		<AniIcon Name="SpeakerBackground" Image ="SpeakerBackground.ent" X="0" Y="15" Rotation = "0" 
+			AnimationIndex = "0" Loop = "1" Align = "0" Hide="0"  Detect = "0"></AniIcon>
+		<UIImage Name="SpeakerScrollLeft" X="0" Y="10" Image="Data\interface0038_master.tga" 
+			Left="9" Top="378" Right="19" Bottom="430" NotDetected="1" Hide="0"/>
+		<AniIcon Name="SpeakerEnt" Image ="Speaker.ent" X="0" Y="-5" Rotation = "0" 
+			AnimationIndex = "0" Loop = "1" Align = "0" Hide="0"  Detect = "0"></AniIcon>
+		<ChatPanel Name="Speaker" X="15" Y="20" Width="350" Height="62" ContinueRun="1" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" FillColor="7F0000FF" LuaLButtonDown="SpeakerLinkProcess"
+			LuaRButtonDown="SpeakerLinkProcessR" LuaMouseWheel=""></ChatPanel>
+		<UIImage Name="SpeakerScrollRight" X="70" Y="10" Image="Data\interface0038_master.tga" 
+			Left="9" Top="378" Right="19" Bottom="430" NotDetected="1" Hide="0"/>
+	</Panel>
+	<Panel Expand="1" Name="ChatPanel" X="2" Y="395" Image="Data\inerface0001_main_A2.tga"
+		Hide="0" Left="4" Top="3" Right="392" Bottom="8" LineRectLeft="4" LineRectTop="9" LineRectRight="392"
+		LineRectBottom="26" LineCount="9" BottomRectLeft="4" BottomRectTop="170" BottomRectRight="392"
+		THeight="512" BottomRectBottom="179" NotRemove="1">
+		<ChatPanel Name="Chat" X="23" Y="5" Width="350" Height="165" ContinueRun="1" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" FillColor="7F0000FF" LuaLButtonDown="ChatLinkProcess"
+			LuaRButtonDown="ChatLinkProcessR" LuaMouseWheel="ChatWheelProcess"></ChatPanel>
+		<Button Name="ChatUpRow" Image="Data\inerface0001_main.tga" X="372" Y="0" LuaLButtonUp="ChatScrollUp"
+			DetectImage="1">
+			<ButtonRect State="0" Left="400" Top="233" Right="415" Bottom="247" />
+			<ButtonRect State="1" Left="417" Top="233" Right="432" Bottom="247" />
+			<ButtonRect State="2" Left="434" Top="233" Right="449" Bottom="247" />
+		</Button>
+	</Panel>
+	<Panel Name="ChatButtonArea" X="1" Y="395" Left="26" Top="407" Right="50" Bottom="587"
+		Hide="0" NotRemove="1">
+		<Button Name="AddChatRow" Image="Data\inerface0001_main.tga" X="0" Y="0" LuaLButtonUp="AddChatRow"
+			Tips="ALT+'+' 增加聊天窗高度" TimeOutCount="500" LuaTimeOut="DefaultTips">
+			<ButtonRect State="0" Left="11" Top="194" Right="34" Bottom="217" />
+			<ButtonRect State="1" Left="36" Top="194" Right="59" Bottom="217" />
+			<ButtonRect State="2" Left="61" Top="194" Right="84" Bottom="217" />
+		</Button>
+		<Button Name="CutChatRow" Image="Data\inerface0001_main.tga" X="0" Y="24" LuaLButtonUp="CutChatRow"
+			Tips="ALT+'-' 减少聊天窗高度" TimeOutCount="500" LuaTimeOut="DefaultTips">
+			<ButtonRect State="0" Left="11" Top="219" Right="34" Bottom="242" />
+			<ButtonRect State="1" Left="36" Top="219" Right="59" Bottom="242" />
+			<ButtonRect State="2" Left="61" Top="219" Right="84" Bottom="242" />
+		</Button>
+		<Button Name="SubWindow" Image="Data\inerface0001_main.tga" X="0" Y="48" LuaLButtonUp="OpenSubWindow"
+			Tips="ALT+>< 切换聊天视窗" TimeOutCount="500" LuaTimeOut="DefaultTips">
+			<ButtonRect State="0" Left="11" Top="244" Right="34" Bottom="267" />
+			<ButtonRect State="1" Left="36" Top="244" Right="59" Bottom="267" />
+			<ButtonRect State="2" Left="61" Top="244" Right="84" Bottom="267" />
+			<ButtonRect State="3" Left="11" Top="244" Right="34" Bottom="267" />
+		</Button>
+		<Button Image="Data\inerface0001_main.tga" X="0" Y="72" LuaLButtonUp="HideChatWindow" Tips="隐藏聊天窗"
+			TimeOutCount="500" LuaTimeOut="DefaultTips">
+			<ButtonRect State="0" Left="11" Top="269" Right="34" Bottom="292" />
+			<ButtonRect State="1" Left="36" Top="269" Right="59" Bottom="292" />
+			<ButtonRect State="2" Left="61" Top="269" Right="84" Bottom="292" />
+		</Button>
+		<Button Image="Data\inerface0001_main.tga" X="0" Y="96" LuaLButtonUp="OpenBlockLstWindow"
+			Tips="屏蔽玩家讯息" TimeOutCount="500" LuaTimeOut="DefaultTips">
+			<ButtonRect State="0" Left="11" Top="294" Right="34" Bottom="317" />
+			<ButtonRect State="1" Left="36" Top="294" Right="59" Bottom="317" />
+			<ButtonRect State="2" Left="61" Top="294" Right="84" Bottom="317" />
+		</Button>
+		<Button Image="Data\inerface0001_main.tga" X="0" Y="120" LuaLButtonUp="OpenChannelHistory"
+			Tips="聊天记录" TimeOutCount="500" LuaTimeOut="DefaultTips">
+			<ButtonRect State="0" Left="11" Top="319" Right="34" Bottom="342" />
+			<ButtonRect State="1" Left="36" Top="319" Right="59" Bottom="342" />
+			<ButtonRect State="2" Left="61" Top="319" Right="84" Bottom="342" />
+		</Button>
+		<Button Name="ClearMsg" Image="Data\inerface0001_main.tga" X="0" Y="144" LuaLButtonUp="ClearMsgDown"
+			DetectImage="1" Tips="ALT+L 清空聊天讯息" TimeOutCount="500" LuaTimeOut="DefaultTips">
+			<ButtonRect State="0" Left="11" Top="411" Right="34" Bottom="434" />
+			<ButtonRect State="1" Left="36" Top="411" Right="59" Bottom="434" />
+			<ButtonRect State="2" Left="61" Top="411" Right="84" Bottom="434" />
+		</Button>
+	</Panel>
+	<Panel Name="ChatRightButtonArea" X="374" Y="508" Left="26" Top="407" Right="46" Bottom="561"
+		Hide="0" NotRemove="1">
+		<Button Name="ChatDownRow" Image="Data\inerface0001_main.tga" X="0" Y="0" LuaLButtonUp="ChatScrollDown">
+			<ButtonRect State="0" Left="400" Top="250" Right="415" Bottom="264" />
+			<ButtonRect State="1" Left="417" Top="250" Right="432" Bottom="264" />
+			<ButtonRect State="2" Left="434" Top="250" Right="449" Bottom="264" />
+		</Button>
+		<Button Name="ScrollLockButton" Image="Data\inerface0001_main.tga" X="0" Y="20" LuaLButtonUp="EndRowDown"
+			DetectImage="1">
+			<ButtonRect State="0" Left="400" Top="203" Right="415" Bottom="215" />
+			<ButtonRect State="1" Left="417" Top="203" Right="432" Bottom="215" />
+			<ButtonRect State="2" Left="434" Top="203" Right="449" Bottom="215" />
+		</Button>
+	</Panel>
+<Panel X="320" Y="497" Left="0" Top="500" Right="800" Bottom="600" Hide="0" Name="BottomBar"
+		NotRemove="1">
+		<Button Name="DownBAttack" Image="Data\inerface0001_main.tga" X="55" Y="47" DetectImage="1"
+			LuaLButtonUp="BBAttack"
+			Tips="ALT+A 攻击" TimeOutCount="500" LuaTimeOut="DefaultTips">
+			<!--Attack-->
+			<ButtonRect State="0" Left="342" Top="514" Right="376" Bottom="560" />
+			<ButtonRect State="1" AniIcon="MainButtonA.ent" AnimationIndex="0" Loop="1" Align="0" X="-17"
+				Y="-14" LockResources="1" />
+			<ButtonRect State="2" Left="342" Top="465" Right="376" Bottom="511" />
+			<ButtonRect State="3" Left="342" Top="600" Right="376" Bottom="646" />
+			<ButtonRect State="4" AniIcon="MainButtonA2.ent" AnimationIndex="0" Loop="1" Align="0" X="-17"
+				Y="-14" LockResources="1"  />
+		</Button>
+		<Button Name="DownBTrade" Image="Data\inerface0001_main.tga" X="90" Y="47" DetectImage="1"
+			LuaLButtonUp="BBTrade"
+			Tips="ALT+X 交易" TimeOutCount="500" LuaTimeOut="DefaultTips">
+			<!--Trade-->
+			<ButtonRect State="0" Left="377" Top="514" Right="410" Bottom="560" />
+			<ButtonRect State="1" AniIcon="MainButtonB.ent" AnimationIndex="0" Loop="1" Align="0" X="-17"
+				Y="-14" LockResources="1" />
+			<ButtonRect State="2" Left="377" Top="464" Right="410" Bottom="511" />
+			<ButtonRect State="3" Left="377" Top="600" Right="410" Bottom="646" />
+			<ButtonRect State="4" AniIcon="MainButtonB2.ent" AnimationIndex="0" Loop="1" Align="0" X="-17"
+				Y="-14" LockResources="1"  />
+		</Button>
+		<Button Name="DownBGive" Image="Data\inerface0001_main.tga" X="125" Y="47" DetectImage="1"
+			LuaLButtonUp="BBGive"
+			Tips="ALT+G 给予" TimeOutCount="500" LuaTimeOut="DefaultTips">
+			<!--Give-->
+			<ButtonRect State="0" Left="412" Top="514" Right="446" Bottom="560" />
+			<ButtonRect State="1" AniIcon="MainButtonC.ent" AnimationIndex="0" Loop="1" Align="0" X="-17"
+				Y="-14" LockResources="1" />
+			<ButtonRect State="2" Left="412" Top="464" Right="446" Bottom="511" />
+			<ButtonRect State="3" Left="412" Top="600" Right="446" Bottom="646" />
+			<ButtonRect State="4" AniIcon="MainButtonC2.ent" AnimationIndex="0" Loop="1" Align="0" X="-17"
+				Y="-14" LockResources="1"  />
+		</Button>
+		<Button Name="DownBParty" Image="Data\inerface0001_main.tga" X="160" Y="47" DetectImage="1"
+			LuaLButtonUp="BBParty"
+			Tips="ALT+T 组队" TimeOutCount="500" LuaTimeOut="DefaultTips">
+			<!--Party-->
+			<ButtonRect State="0" Left="236" Top="79" Right="270" Bottom="126" />
+			<ButtonRect State="1" AniIcon="MainButtonD.ent" AnimationIndex="0" Loop="1" Align="0" X="-17"
+				Y="-14" LockResources="1" />
+			<ButtonRect State="2" Left="281" Top="79" Right="315" Bottom="126" />
+			<ButtonRect State="3" Left="337" Top="30" Right="371" Bottom="75" Y="2" />
+			<ButtonRect State="4" AniIcon="MainButtonD2.ent" AnimationIndex="0" Loop="1" Align="0" X="-17"
+				Y="-14" LockResources="1" />
+		</Button>
+		<!--Temp aniIcon, it will be deleted after the lock status function is created. -->
+		<!--<UIImage Name="PartyBlockImage" Image="" X = "108" Y = "0" Left="0" Top="0" Right="68" Bottom="75" NotDetect="0" LuaLButtonUp="BBParty" Hide="1"/>-->
+		<!--<Button Name="DownBChar" Image="Data\inerface0001_main.tga" X="160" Y="17" DetectImage="1"
+			LuaLButtonUp="BBChar">-->
+			<!--Character-->
+			<!--<ButtonRect State="0" Left="482" Top="514" Right="515" Bottom="560" />
+			<ButtonRect State="1" AniIcon="MainButtonE.ent" AnimationIndex="0" Loop="1" Align="0" X="-17"
+				Y="-14" LockResources="1" />
+			<ButtonRect State="2" Left="482" Top="464" Right="515" Bottom="511" />
+			<ButtonRect State="3" Left="482" Top="600" Right="515" Bottom="646" />
+		</Button>
+		<Button Name="DownBFriend" Image="Data\inerface0001_main.tga" X="195" Y="17" DetectImage="1"
+			LuaLButtonUp="BBFriend">-->
+			<!--Teammate-->
+			<!--<ButtonRect State="0" Left="517" Top="514" Right="550" Bottom="560" />
+			<ButtonRect State="1" AniIcon="MainButtonF.ent" AnimationIndex="0" Loop="1" Align="0" X="-17"
+				Y="-14" LockResources="1" />
+			<ButtonRect State="2" Left="517" Top="464" Right="550" Bottom="511" />
+			<ButtonRect State="3" Left="517" Top="600" Right="550" Bottom="646" />
+			<ButtonRect State="4" AniIcon="MainButtonF2.ent" AnimationIndex="0" Loop="1" Align="0" X="-17"
+				Y="-14" LockResources="1" />
+		</Button>-->
+		<Button Name="DownBSkill" Image="Data\inerface0001_main.tga" X="195" Y="47" DetectImage="1"
+			LuaLButtonUp="BBSkill" 
+			Tips="ALT+W 技能" TimeOutCount="500" LuaTimeOut="DefaultTips">
+			<!--Skill-->
+			<ButtonRect State="0" Left="587" Top="514" Right="620" Bottom="560" />
+			<ButtonRect State="1" AniIcon="MainButtonH.ent" AnimationIndex="0" Loop="1" Align="0" X="-17"
+				Y="-14" LockResources="1" />
+			<ButtonRect State="2" Left="587" Top="464" Right="620" Bottom="511" />
+			<ButtonRect State="3" Left="587" Top="600" Right="620" Bottom="646" />
+			<ButtonRect State="4" AniIcon="MainButtonH2.ent" AnimationIndex="0" Loop="1" Align="0" X="-17"
+				Y="-14" LockResources="1"  />
+		</Button>
+		<Button Name="DownBItem" Image="Data\inerface0001_main.tga" X="230" Y="47" DetectImage="1"
+			LuaLButtonUp="BBItem"
+			Tips="ALT+E 物品" TimeOutCount="500" LuaTimeOut="DefaultTips">
+			<!--Item-->
+			<ButtonRect State="0" Left="552" Top="514" Right="585" Bottom="560" />
+			<ButtonRect State="1" AniIcon="MainButtonG.ent" AnimationIndex="0" Loop="1" Align="0" X="-17"
+				Y="-14" LockResources="1" />
+			<ButtonRect State="2" Left="552" Top="464" Right="585" Bottom="511" />
+			<ButtonRect State="3" Left="552" Top="600" Right="585" Bottom="646" />
+			<ButtonRect State="4" AniIcon="MainButtonG2.ent" AnimationIndex="0" Loop="1" Align="0" X="-17"
+				Y="-14" LockResources="1"  />
+		</Button>	
+		
+		<Button Name="DownBPet" Image="Data\inerface0001_main.tga" X="265" Y="47" DetectImage="1"
+			LuaLButtonUp="BBPet" 
+			Tips="ALT+O 宠物" TimeOutCount="500" LuaTimeOut="DefaultTips">
+			<!--Pet-->
+			<ButtonRect State="0" Left="727" Top="514" Right="760" Bottom="560" />
+			<ButtonRect State="1" AniIcon="MainButtonL.ent" AnimationIndex="0" Loop="1" Align="0" X="-17"
+				Y="-14" LockResources="1" />
+			<ButtonRect State="2" Left="727" Top="464" Right="760" Bottom="511" />
+			<ButtonRect State="3" Left="727" Top="600" Right="760" Bottom="646" />
+			<ButtonRect State="4" AniIcon="MainButtonL2.ent" AnimationIndex="0" Loop="1" Align="0" X="-17"
+				Y="-14" LockResources="1"  />
+		</Button>
+		<Button Name="DownBMission" Image="Data\inerface0001_main.tga" X="300" Y="47" DetectImage="1"
+			LuaLButtonUp="BBMission"
+			Tips="ALT+Q 任务" TimeOutCount="500" LuaTimeOut="DefaultTips">
+			<!--Quest-->
+			<ButtonRect State="0" Left="657" Top="514" Right="690" Bottom="560" />
+			<ButtonRect State="1" AniIcon="MainButtonJ.ent" AnimationIndex="0" Loop="1" Align="0" X="-17"
+				Y="-14" LockResources="1" />
+			<ButtonRect State="2" Left="657" Top="464" Right="690" Bottom="511" />
+			<ButtonRect State="3" Left="657" Top="600" Right="690" Bottom="646" />
+			<ButtonRect State="4" AniIcon="MainButtonJ2.ent" AnimationIndex="0" Loop="1" Align="0" X="-17"
+				Y="-14" LockResources="1" />
+		</Button>
+		<Button Name="DownBHousen" Image="Data\inerface0001_main.tga" X="335" Y="46" DetectImage="1"
+			LuaLButtonUp="BBHousen"
+			Tips="ALT+B 帮派" TimeOutCount="500" LuaTimeOut="DefaultTips">
+			<!--Guild-->
+			<ButtonRect State="0" Left="327" Top="78" Right="361" Bottom="126" />
+			<ButtonRect State="1" AniIcon="MainButtonI.ent" AnimationIndex="0" Loop="1" Align="0" X="-17"
+				Y="-14" LockResources="1" />
+			<ButtonRect State="2" Left="370" Top="78" Right="404" Bottom="126" />
+			<ButtonRect State="3" Left="380" Top="27" Right="414" Bottom="75" />
+			<ButtonRect State="4" AniIcon="MainButtonI2.ent" AnimationIndex="0" Loop="1" Align="0" X="-17"
+				Y="-14" LockResources="1"  />
+		</Button>
+		<Button Name="DownBFriendShip" Image="Data\inerface0001_main.tga" X="370" Y="47" DetectImage="1"
+			LuaLButtonUp="BBFriendShip"
+			Tips="ALT+F 好友" TimeOutCount="500" LuaTimeOut="DefaultTips">
+			<!--Friend-->
+			<ButtonRect State="0" Left="692" Top="514" Right="725" Bottom="560" />
+			<ButtonRect State="1" AniIcon="MainButtonK.ent" AnimationIndex="0" Loop="1" Align="0" X="-17"
+				Y="-14" LockResources="1" />
+			<ButtonRect State="2" Left="692" Top="464" Right="725" Bottom="511" />
+			<ButtonRect State="3" Left="692" Top="600" Right="725" Bottom="646" />
+			<ButtonRect State="4" AniIcon="MainButtonK2.ent" AnimationIndex="0" Loop="1" Align="0" X="-17"
+				Y="-14" LockResources="1" />
+		</Button>
+		<Button Name="DownBChargeShop" Image="Data\inerface0001_main.tga" X="405" Y="47" DetectImage="1"
+			LuaLButtonUp="AskForOnlineShop" 
+			Tips="ALT+N 游戏商城" TimeOutCount="500" LuaTimeOut="DefaultTips">
+			<!--ChargeShop-->
+			<ButtonRect State="0" Left="482" Top="514" Right="516" Bottom="560" />
+			<ButtonRect State="1" AniIcon="MainButtonP.ent" AnimationIndex="0" Loop="1" Align="0" X="-17"
+				Y="-14" LockResources="1" />
+			<ButtonRect State="2" Left="482" Top="464" Right="516" Bottom="511" />
+			<ButtonRect State="3" Left="482" Top="600" Right="516" Bottom="646" />
+			<ButtonRect State="4" AniIcon="MainButtonP2.ent" AnimationIndex="0" Loop="1" Align="0" X="-17"
+				Y="-14" LockResources="1" />
+		</Button>
+		<Button Name="DownBSystem" Image="Data\inerface0001_main.tga" X="440" Y="47" DetectImage="1"
+			LuaLButtonUp="BBSystem"
+			Tips="ALT+S 系統" TimeOutCount="500" LuaTimeOut="DefaultTips">
+			<!--System-->
+			<ButtonRect State="0" Left="762" Top="514" Right="795" Bottom="560" />
+			<ButtonRect State="1" AniIcon="MainButtonM.ent" AnimationIndex="0" Loop="1" Align="0" X="-17"
+				Y="-14" LockResources="1" />
+			<ButtonRect State="2" Left="762" Top="464" Right="795" Bottom="511" />
+			<ButtonRect State="3" Left="762" Top="600" Right="795" Bottom="646" />
+			<ButtonRect State="4" AniIcon="MainButtonM2.ent" AnimationIndex="0" Loop="1" Align="0" X="-17"
+				Y="-14" LockResources="1"  />
+		</Button>
+		<Button Name="DownAutoWalk" Image="Data\inerface0001_main.tga" X="440" Y="8" DetectImage="1"
+			LuaLButtonUp="BBAutoWalk" 
+			Tips="自动遇敌" TimeOutCount="500" LuaTimeOut="DefaultTips">
+			<!--System-->
+			<ButtonRect State="0" Left="810" Top="561" Right="847" Bottom="595" />
+			<ButtonRect State="1" AniIcon="MainButtonZ.ent" AnimationIndex="0" Loop="1" Align="0" X="0"
+				Y="0" LockResources="1" />
+			<ButtonRect State="2" Left="810" Top="521" Right="847" Bottom="555" />
+			<ButtonRect State="3" Left="810" Top="599" Right="847" Bottom="633" />
+		</Button>
+		<AniIcon Name="RunningAuto" X="440" Y="8" Image="" AutoDelete="0"  Detect = "1" Hide="0" 
+			 InsertToEventList = "1"  LuaLButtonUp="BBAutoWalk" Tips="" TimeOutCount="500" 
+			 LuaTimeOut="DefaultTips"  LuaMouseIn="ShowTime"/>
+	</Panel>
+	<Panel Name="BattleWatchPanel" X="725" Y="160" Image="Data\inerface0001_main.tga" Left="495"
+		Top="232" Right="559" Bottom="294" Hide="1" NotRemove="1">
+		<Button Name="BattleJoinB" Image="Data\inerface0001_main.tga" X="8" Y="11" LuaLButtonUp="BattleJoin">
+			<ButtonRect State="0" Left="494" Top="313" Right="546" Bottom="333" />
+			<ButtonRect State="1" Left="547" Top="313" Right="599" Bottom="333" />
+			<ButtonRect State="2" Left="600" Top="313" Right="652" Bottom="333" />
+			<ButtonRect State="3" Left="806" Top="439" Right="858" Bottom="459" />
+		</Button>
+		<Button Name="BattleWatchLeaveB" Image="Data\inerface0001_main.tga" X="8" Y="30" LuaLButtonUp="BattleWatchLeave">
+			<ButtonRect State="0" Left="494" Top="334" Right="546" Bottom="354" />
+			<ButtonRect State="1" Left="547" Top="334" Right="599" Bottom="354" />
+			<ButtonRect State="2" Left="600" Top="334" Right="652" Bottom="354" />
+		</Button>
+	</Panel>
+	<Panel Name="BattlePanel" X="725" Y="160" Image="Data\inerface0001_main.tga" Left="162"
+		Top="120" Right="226" Bottom="355" Hide="1" NotRemove="1"
+		Drag="1" DragLeft="0" DragTop="0" DragRight="64" DragBottom="233">
+		<Button Name="BattleSkillB" Image="Data\inerface0001_main.tga" X="6" Y="7" LuaLButtonUp="BattleSkill"
+			Tips="ALT+W" TimeOutCount="500" LuaTimeOut="DefaultTips">
+			<ButtonRect State="0" Left="235" Top="134" Right="287" Bottom="156" />
+			<ButtonRect State="1" Left="289" Top="134" Right="341" Bottom="156" />
+			<ButtonRect State="2" Left="343" Top="134" Right="396" Bottom="156" />
+			<ButtonRect State="3" Left="805" Top="143" Right="856" Bottom="165" />
+		</Button>
+		
+		<Button Name="BattleSpecialB" Image="Data\inerface0001_main.tga" X="6" Y="29" LuaLButtonUp="BattleSpecial"
+			Tips="ALT+R" TimeOutCount="500" LuaTimeOut="DefaultTips">
+			<ButtonRect State="0" Left="2" Top="606" Right="54" Bottom="629" />
+			<ButtonRect State="1" Left="56" Top="606" Right="108" Bottom="629" />
+			<ButtonRect State="2" Left="110" Top="606" Right="162" Bottom="629" />
+			<ButtonRect State="3" Left="806" Top="488" Right="858" Bottom="511" />
+		</Button>
+		
+		<Button Name="OpenBattleItemMenuB" Image="Data\inerface0001_main.tga" X="6" Y="51" LuaLButtonUp="OpenBattleItemMenu"
+			Tips="ALT+E" TimeOutCount="500" LuaTimeOut="DefaultTips">
+			<ButtonRect State="0" Left="235" Top="158" Right="287" Bottom="180" />
+			<ButtonRect State="1" Left="289" Top="158" Right="341" Bottom="180" />
+			<ButtonRect State="2" Left="343" Top="158" Right="396" Bottom="180" />
+			<ButtonRect State="3" Left="805" Top="167" Right="856" Bottom="189" />
+		</Button>
+		<Button Name="BattleDefenceB" Image="Data\inerface0001_main.tga" X="6" Y="73" LuaLButtonUp="BattleDefence"
+			Tips="ALT+D" TimeOutCount="500" LuaTimeOut="DefaultTips">
+			<ButtonRect State="0" Left="235" Top="182" Right="287" Bottom="204" />
+			<ButtonRect State="1" Left="289" Top="182" Right="341" Bottom="204" />
+			<ButtonRect State="2" Left="343" Top="182" Right="396" Bottom="204" />
+			<ButtonRect State="3" Left="805" Top="191" Right="856" Bottom="213" />
+		</Button>
+		<Button Name="BattleFriendB" Image="Data\inerface0001_main.tga" X="6" Y="95" LuaLButtonUp="BattleFriend"
+			Tips="ALT+P" TimeOutCount="500" LuaTimeOut="DefaultTips">
+			<ButtonRect State="0" Left="235" Top="206" Right="287" Bottom="228" />
+			<ButtonRect State="1" Left="289" Top="206" Right="341" Bottom="228" />
+			<ButtonRect State="2" Left="343" Top="206" Right="396" Bottom="228" />
+			<ButtonRect State="3" Left="805" Top="215" Right="856" Bottom="237" />
+		</Button>
+		<Button Name="BattleProtectB" Image="Data\inerface0001_main.tga" X="6" Y="117" LuaLButtonUp="BattleProtect"
+			Tips="ALT+T" TimeOutCount="500" LuaTimeOut="DefaultTips">
+			<ButtonRect State="0" Left="235" Top="230" Right="287" Bottom="252" />
+			<ButtonRect State="1" Left="289" Top="230" Right="341" Bottom="252" />
+			<ButtonRect State="2" Left="343" Top="230" Right="396" Bottom="252" />
+			<ButtonRect State="3" Left="805" Top="239" Right="856" Bottom="261" />
+		</Button>
+		<Button Name="BattleCatchB" Image="Data\inerface0001_main.tga" X="6" Y="139" LuaLButtonUp="BattleCatch"
+			Tips="ALT+G" TimeOutCount="500" LuaTimeOut="DefaultTips">
+			<ButtonRect State="0" Left="235" Top="254" Right="287" Bottom="276" />
+			<ButtonRect State="1" Left="289" Top="254" Right="341" Bottom="276" />
+			<ButtonRect State="2" Left="343" Top="254" Right="396" Bottom="276" />
+			<ButtonRect State="3" Left="805" Top="263" Right="856" Bottom="285" />
+		</Button>
+		<Button Name="BattleAutoB" Image="Data\inerface0001_main.tga" X="6" Y="161" LuaLButtonUp="BattleAuto"
+			Tips="ALT+Z" TimeOutCount="500" LuaTimeOut="DefaultTips">
+			<ButtonRect State="0" Left="235" Top="278" Right="287" Bottom="300" />
+			<ButtonRect State="1" Left="289" Top="278" Right="341" Bottom="300" />
+			<ButtonRect State="2" Left="343" Top="278" Right="396" Bottom="300" />
+			<ButtonRect State="3" Left="805" Top="287" Right="856" Bottom="309" />
+		</Button>
+		
+		<Button Name="BattleHelpB" Image="Data\inerface0001_main.tga" X="6" Y="183" LuaLButtonUp="BattleHelp"
+			Tips="ALT+H" TimeOutCount="500" LuaTimeOut="DefaultTips">
+			<ButtonRect State="0" Left="235" Top="302" Right="287" Bottom="324" />
+			<ButtonRect State="1" Left="289" Top="302" Right="341" Bottom="324" />
+			<ButtonRect State="2" Left="343" Top="302" Right="396" Bottom="324" />
+			<ButtonRect State="3" Left="805" Top="311" Right="857" Bottom="333" />
+		</Button>
+		
+		<Button Name="BattleEscapeB" Image="Data\inerface0001_main.tga" X="6" Y="205" LuaLButtonUp="BattleEscape">
+			<ButtonRect State="0" Left="235" Top="326" Right="287" Bottom="348" />
+			<ButtonRect State="1" Left="289" Top="326" Right="341" Bottom="348" />
+			<ButtonRect State="2" Left="343" Top="326" Right="396" Bottom="348" />
+			<ButtonRect State="3" Left="805" Top="336" Right="856" Bottom="358" />
+		</Button>
+		
+	</Panel>
+	
+	<Panel Name="BattleWinePanel" X="725" Y="339" Image="Data\inerface0001_main.tga" Left="166"
+		Top="609" Right="222" Bottom="671" Hide="1" NotRemove="1">
+	<Button Name="BattleWineB" Image="Data\inerface0001_main.tga" X="0" Y="0" LuaLButtonUp="OpenWineItemMenu">
+			<ButtonRect State="0" Left="166" Top="609" Right="222" Bottom="671" />
+			<ButtonRect State="1" Left="227" Top="609" Right="283" Bottom="671" />
+			<ButtonRect State="2" Left="284" Top="609" Right="339" Bottom="671" />
+			<ButtonRect State="3" Left="284" Top="609" Right="339" Bottom="671" />
+	</Button>
+	</Panel>
+	<Panel Name="BattlePartnerPanel" X="725" Y="160" Image="Data\inerface0001_main.tga" Left="798"
+		Top="3" Right="862" Bottom="125" Hide="1" NotRemove="1"
+		Drag="1" DragLeft="0" DragTop="0" DragRight="64" DragBottom="122">
+		<Button Name="BattlePartnerSkill" Image="Data\inerface0001_main.tga" X="8" Y="11" LuaLButtonUp="OpenBattlePartnerSkillMenu">
+			<ButtonRect State="0" Left="235" Top="134" Right="287" Bottom="156" />
+			<ButtonRect State="1" Left="289" Top="134" Right="341" Bottom="156" />
+			<ButtonRect State="2" Left="343" Top="134" Right="396" Bottom="156" />
+			<ButtonRect State="3" Left="805" Top="143" Right="856" Bottom="165" />
+		</Button>
+		<Button Name="BattlePartnerItem" Image="Data\inerface0001_main.tga" X="8" Y="30" LuaLButtonUp="OpenBattleItemMenu">
+			<ButtonRect State="0" Left="235" Top="158" Right="287" Bottom="180" />
+			<ButtonRect State="1" Left="289" Top="158" Right="341" Bottom="180" />
+			<ButtonRect State="2" Left="343" Top="158" Right="396" Bottom="180" />
+			<ButtonRect State="3" Left="805" Top="167" Right="856" Bottom="189" />
+		</Button>
+		<Button Name="BattlePartnerDefence" Image="Data\inerface0001_main.tga" X="8" Y="49" LuaLButtonUp="BattleDefence">
+			<ButtonRect State="0" Left="235" Top="182" Right="287" Bottom="204" />
+			<ButtonRect State="1" Left="289" Top="182" Right="341" Bottom="204" />
+			<ButtonRect State="2" Left="343" Top="182" Right="396" Bottom="204" />
+			<ButtonRect State="3" Left="805" Top="191" Right="856" Bottom="213" />
+		</Button>
+		<Button Name="BattlePartnerProtect" Image="Data\inerface0001_main.tga" X="8" Y="68" LuaLButtonUp="BattleProtect">
+			<ButtonRect State="0" Left="235" Top="230" Right="287" Bottom="252" />
+			<ButtonRect State="1" Left="289" Top="230" Right="341" Bottom="252" />
+			<ButtonRect State="2" Left="343" Top="230" Right="396" Bottom="252" />
+			<ButtonRect State="3" Left="805" Top="239" Right="856" Bottom="261" />
+		</Button>
+		<Button Name="BattlePartnerEscapeB" Image="Data\inerface0001_main.tga" X="8" Y="87" LuaLButtonUp="BattlePartnerEscape">
+			<ButtonRect State="0" Left="235" Top="326" Right="287" Bottom="348" />
+			<ButtonRect State="1" Left="289" Top="326" Right="341" Bottom="348" />
+			<ButtonRect State="2" Left="343" Top="326" Right="396" Bottom="348" />
+			<ButtonRect State="3" Left="805" Top="326" Right="856" Bottom="348" />
+		</Button>
+	</Panel>
+	<Panel Name="BattleMsgPanel" X="413" Y="460" Image=""
+		Left="0" Top="0" Right="383" Bottom="400" Hide="1" NotRemove="0">
+		<StaticText Name="BattleMsg1" X="5" Y="2" Row="1" Column="8" Width="373" Height="20" EdgeCode="SHADOW"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="1">
+			戰鬥訊息戰鬥訊息戰鬥訊息戰鬥訊息戰鬥訊息戰鬥訊息戰鬥訊息戰鬥訊息戰鬥訊息戰鬥訊息
+		</StaticText>
+		<StaticText Name="BattleMsg2" X="5" Y="16" Row="1" Column="8" Width="373" Height="20" EdgeCode="SHADOW"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="1">
+			戰鬥訊息戰鬥訊息戰鬥訊息戰鬥訊息戰鬥訊息戰鬥訊息戰鬥訊息戰鬥訊息戰鬥訊息戰鬥訊息
+		</StaticText>
+		<StaticText Name="BattleMsg3" X="5" Y="30" Row="1" Column="8" Width="373" Height="20" EdgeCode="SHADOW"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="1">
+			戰鬥訊息戰鬥訊息戰鬥訊息戰鬥訊息戰鬥訊息戰鬥訊息戰鬥訊息戰鬥訊息戰鬥訊息戰鬥訊息
+		</StaticText>
+	</Panel>
+	<Panel Name="TargetInfo" X="240" Y="0" Image="Data\inerface0001_main.tga" Left="5" Top="356"
+		Right="139" Bottom="404" Hide="1" LuaRButtonUp="OpenTargetPopUp" DetectImage="1" NotRemove="1">
+		<AniIcon Name="TargetInfoFace" X="3" Y="3" Image="faceS00001a.ent" AutoDelete="0" Detect="1"
+			NotDetected="1" />
+		<StaticText Name="TargetInfoName" X="41" Y="11" Row="1" Width="85" Height="20" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		不败之娘不败
+		</StaticText>
+		<StaticText Name="TargetInfoUID" X="41" Y="29" Row="1" Width="85" Height="20" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center" NotDetected="1">
+		123456789
+		</StaticText>
+		<UIImage Name="TargetInfoPK" Image="Data\inerface0001_main.tga" X="0" Y="25" Left="400" Top="134"
+			Right="419" Bottom="153" AutoDelete="0" NotDetected="1" />
+	</Panel>
+	<Panel Name="HelpPanel" X="768" Y="200" Left="0" Top="0" Right="40" Bottom="270" Hide="1"
+		NotRemove="1">
+		<Button Name="HelpIcon1" Image="Data\inerface0001_main.tga" X="0" Y="0">
+			<!--Pet-->
+			<ButtonRect State="0" AniIcon="MainButtonP.ent" AnimationIndex="0" Loop="1" Align="0" />
+			<ButtonRect State="1" Left="124" Top="411" Right="154" Bottom="441" />
+			<ButtonRect State="2" Left="157" Top="411" Right="187" Bottom="441" />
+		</Button>
+		<Button Name="HelpIcon2" Image="Data\inerface0001_main.tga" X="0" Y="32">
+			<!--Pet-->
+			<ButtonRect State="0" AniIcon="MainButtonP.ent" AnimationIndex="0" Loop="1" Align="0" />
+			<ButtonRect State="1" Left="124" Top="411" Right="154" Bottom="441" />
+			<ButtonRect State="2" Left="157" Top="411" Right="187" Bottom="441" />
+		</Button>
+		<Button Name="HelpIcon3" Image="Data\inerface0001_main.tga" X="0" Y="64">
+			<!--Pet-->
+			<ButtonRect State="0" AniIcon="MainButtonP.ent" AnimationIndex="0" Loop="1" Align="0" />
+			<ButtonRect State="1" Left="124" Top="411" Right="154" Bottom="441" />
+			<ButtonRect State="2" Left="157" Top="411" Right="187" Bottom="441" />
+		</Button>
+		<Button Name="HelpIcon4" Image="Data\inerface0001_main.tga" X="0" Y="96">
+			<!--Pet-->
+			<ButtonRect State="0" AniIcon="MainButtonP.ent" AnimationIndex="0" Loop="1" Align="0" />
+			<ButtonRect State="1" Left="124" Top="411" Right="154" Bottom="441" />
+			<ButtonRect State="2" Left="157" Top="411" Right="187" Bottom="441" />
+		</Button>
+		<Button Name="HelpIcon5" Image="Data\inerface0001_main.tga" X="0" Y="128">
+			<!--Pet-->
+			<ButtonRect State="0" AniIcon="MainButtonP.ent" AnimationIndex="0" Loop="1" Align="0" />
+			<ButtonRect State="1" Left="124" Top="411" Right="154" Bottom="441" />
+			<ButtonRect State="2" Left="157" Top="411" Right="187" Bottom="441" />
+		</Button>
+		<Button Name="HelpIcon6" Image="Data\inerface0001_main.tga" X="0" Y="160">
+			<!--Pet-->
+			<ButtonRect State="0" AniIcon="MainButtonP.ent" AnimationIndex="0" Loop="1" Align="0" />
+			<ButtonRect State="1" Left="124" Top="411" Right="154" Bottom="441" />
+			<ButtonRect State="2" Left="157" Top="411" Right="187" Bottom="441" />
+		</Button>
+		<Button Name="HelpIcon7" Image="Data\inerface0001_main.tga" X="0" Y="192">
+			<!--Pet-->
+			<ButtonRect State="0" AniIcon="MainButtonP.ent" AnimationIndex="0" Loop="1" Align="0" />
+			<ButtonRect State="1" Left="124" Top="411" Right="154" Bottom="441" />
+			<ButtonRect State="2" Left="157" Top="411" Right="187" Bottom="441" />
+		</Button>
+		<Button Name="HelpIcon8" Image="Data\inerface0001_main.tga" X="0" Y="224">
+			<!--Pet-->
+			<ButtonRect State="0" AniIcon="MainButtonP.ent" AnimationIndex="0" Loop="1" Align="0" />
+			<ButtonRect State="1" Left="124" Top="411" Right="154" Bottom="441" />
+			<ButtonRect State="2" Left="157" Top="411" Right="187" Bottom="441" />
+		</Button>
+	</Panel>
+	<Panel Name="BattleWait" X="300" Y="250" Image="Data\interface0019_Battle_A.tga" Left="19"
+		Top="253" Right="211" Bottom="322" Hide="1" NotRemove="1"></Panel>
+	<Panel Expand="1" Name="PartyPanel" Image="Data\inerface0001_main.tga" X="300" Y="100"
+		Left="89" Top="205" Right="159" Bottom="212" LineRectLeft="89" LineRectTop="230" LineRectRight="159"
+		LineRectBottom="243" LineCount="8" BottomRectLeft="89" BottomRectTop="279" BottomRectRight="159"
+		BottomRectBottom="289" Hide="1" LuaTimeOut="PartyPopupTimeOut" TimeOutCount="5000"
+		LuaMouseOut="StartCount" InsertToEventList="1" LuaMouseIn="HoldPopup" NotRemove="1">
+		<PopUpMenu Name="PartyPopup" X="5" Y="7" BarWidth="53" Row="5" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" SelBarColor="FFFF0000" LuaLButtonDown="PartyPopup"
+			LuaRButtonDown="PartyPopupClose" FontName="Data\simsun.ttc" FontHeight="13" FontWidth="13">
+			<!--<PopUpMenuString Code="0">　密语　</PopUpMenuString>
+			<PopUpMenuString Code="1">请出队伍</PopUpMenuString>
+			<PopUpMenuString Code="2">提升队长</PopUpMenuString>
+			<PopUpMenuString Code="3">离开队伍</PopUpMenuString>-->
+		</PopUpMenu>
+	</Panel>
+	<Panel Expand="1" Name="TargetPopUpPanel" Image="Data\inerface0001_main.tga" X="250" Y="20"
+		Left="89" Top="205" Right="159" Bottom="212" LineRectLeft="89" LineRectTop="230" LineRectRight="159"
+		LineRectBottom="242" LineCount="8" BottomRectLeft="89" BottomRectTop="279" BottomRectRight="159"
+		BottomRectBottom="289" Hide="1" NotRemove="1">
+		<PopUpMenu Name="TargetPopup" X="8" Y="4" BarWidth="53" Row="8" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" SelBarColor="FFFF0000" LuaLButtonDown="TargetPopUpPanelClk"
+			LuaRButtonDown="CloseTargetPopUpPanel" FontName="Data\simsun.ttc" FontHeight="13" FontWidth="13"></PopUpMenu>
+	</Panel>
+	<Panel Name="BuffIconPanel" X="178" Y="0" Image="" Left="0" NotRemove="1" Top="0" Right="100"
+		Bottom="100" LuaTimeOut="BuffDetailPopupTimeOut" TimeOutCount="500" LuaMouseIn="BuffIconIn"
+		LuaMouseOut="BuffIconOut" InsertToEventList="1">
+		<AniIcon Name="BuffIcon1" Hide="1" X="0" Y="0" Image="bufficon001.ent" AutoDelete="0" AnimationIndex="0"
+			Loop="1" Align="0" EquipType="6" Detect="1" />
+		<AniIcon Name="BuffIcon2" Hide="1" X="19" Y="0" Image="bufficon001.ent" AutoDelete="0" AnimationIndex="0"
+			Loop="1" Align="0" EquipType="6" Detect="1" />
+		<AniIcon Name="BuffIcon3" Hide="1" X="38" Y="0" Image="bufficon001.ent" AutoDelete="0" AnimationIndex="0"
+			Loop="1" Align="0" EquipType="6" Detect="1" />
+		<AniIcon Name="BuffIcon4" Hide="1" X="57" Y="0" Image="bufficon001.ent" AutoDelete="0" AnimationIndex="0"
+			Loop="1" Align="0" EquipType="6" Detect="1" />
+		<AniIcon Name="BuffIcon5" Hide="1" X="76" Y="0" Image="bufficon001.ent" AutoDelete="0" AnimationIndex="0"
+			Loop="1" Align="0" EquipType="6" Detect="1" />
+		<AniIcon Name="BuffIcon6" Hide="1" X="0" Y="19" Image="bufficon001.ent" AutoDelete="0" AnimationIndex="0"
+			Loop="1" Align="0" EquipType="6" Detect="1" />
+		<AniIcon Name="BuffIcon7" Hide="1" X="19" Y="19" Image="bufficon001.ent" AutoDelete="0" AnimationIndex="0"
+			Loop="1" Align="0" EquipType="6" Detect="1" />
+		<AniIcon Name="BuffIcon8" Hide="1" X="38" Y="19" Image="bufficon001.ent" AutoDelete="0" AnimationIndex="0"
+			Loop="1" Align="0" EquipType="6" Detect="1" />
+		<AniIcon Name="BuffIcon9" Hide="1" X="57" Y="19" Image="bufficon001.ent" AutoDelete="0" AnimationIndex="0"
+			Loop="1" Align="0" EquipType="6" Detect="1" />
+		<AniIcon Name="BuffIcon10" Hide="1" X="76" Y="19" Image="bufficon001.ent" AutoDelete="0" AnimationIndex="0"
+			Loop="1" Align="0" EquipType="6" Detect="1" />
+		<AniIcon Name="BuffIcon11" Hide="1" X="0" Y="38" Image="bufficon001.ent" AutoDelete="0" AnimationIndex="0"
+			Loop="1" Align="0" EquipType="6" Detect="1" />
+		<AniIcon Name="BuffIcon12" Hide="1" X="19" Y="38" Image="bufficon001.ent" AutoDelete="0" AnimationIndex="0"
+			Loop="1" Align="0" EquipType="6" Detect="1" />
+		<AniIcon Name="BuffIcon13" Hide="1" X="38" Y="38" Image="bufficon001.ent" AutoDelete="0" AnimationIndex="0"
+			Loop="1" Align="0" EquipType="6" Detect="1" />
+		<AniIcon Name="BuffIcon14" Hide="1" X="57" Y="38" Image="bufficon001.ent" AutoDelete="0" AnimationIndex="0"
+			Loop="1" Align="0" EquipType="6" Detect="1" />
+		<AniIcon Name="BuffIcon15" Hide="1" X="76" Y="38" Image="bufficon001.ent" AutoDelete="0" AnimationIndex="0"
+			Loop="1" Align="0" EquipType="6" Detect="1" />
+		<AniIcon Name="BuffIcon16" Hide="1" X="0" Y="57" Image="bufficon001.ent" AutoDelete="0" AnimationIndex="0"
+			Loop="1" Align="0" EquipType="6" Detect="1" />
+		<AniIcon Name="BuffIcon17" Hide="1" X="19" Y="57" Image="bufficon001.ent" AutoDelete="0" AnimationIndex="0"
+			Loop="1" Align="0" EquipType="6" Detect="1" />
+		<AniIcon Name="BuffIcon18" Hide="1" X="38" Y="57" Image="bufficon001.ent" AutoDelete="0" AnimationIndex="0"
+			Loop="1" Align="0" EquipType="6" Detect="1" />
+		<AniIcon Name="BuffIcon19" Hide="1" X="57" Y="57" Image="bufficon001.ent" AutoDelete="0" AnimationIndex="0"
+			Loop="1" Align="0" EquipType="6" Detect="1" />
+		<AniIcon Name="BuffIcon20" Hide="1" X="76" Y="57" Image="bufficon001.ent" AutoDelete="0" AnimationIndex="0"
+			Loop="1" Align="0" EquipType="6" Detect="1" />
+		<AniIcon Name="BuffIcon21" Hide="1" X="0" Y="76" Image="bufficon001.ent" AutoDelete="0" AnimationIndex="0"
+			Loop="1" Align="0" EquipType="6" Detect="1" />
+		<AniIcon Name="BuffIcon22" Hide="1" X="19" Y="76" Image="bufficon001.ent" AutoDelete="0" AnimationIndex="0"
+			Loop="1" Align="0" EquipType="6" Detect="1" />
+		<AniIcon Name="BuffIcon23" Hide="1" X="38" Y="76" Image="bufficon001.ent" AutoDelete="0" AnimationIndex="0"
+			Loop="1" Align="0" EquipType="6" Detect="1" />
+		<AniIcon Name="BuffIcon24" Hide="1" X="57" Y="76" Image="bufficon001.ent" AutoDelete="0" AnimationIndex="0"
+			Loop="1" Align="0" EquipType="6" Detect="1" />
+		<AniIcon Name="BuffIcon25" Hide="1" X="76" Y="76" Image="bufficon001.ent" AutoDelete="0" AnimationIndex="0"
+			Loop="1" Align="0" EquipType="6" Detect="1" />
+		
+		<AniIcon Name="BuffFlashIcon1" Hide="1" X="0" Y="0" Image="bufficon000.ent" AutoDelete="0"
+			AnimationIndex="0" Loop="1" Align="0" EquipType="6" Detect="1" />
+		<AniIcon Name="BuffFlashIcon2" Hide="1" X="19" Y="0" Image="bufficon000.ent" AutoDelete="0"
+			AnimationIndex="0" Loop="1" Align="0" EquipType="6" Detect="1" />
+		<AniIcon Name="BuffFlashIcon3" Hide="1" X="38" Y="0" Image="bufficon000.ent" AutoDelete="0"
+			AnimationIndex="0" Loop="1" Align="0" EquipType="6" Detect="1" />
+		<AniIcon Name="BuffFlashIcon4" Hide="1" X="57" Y="0" Image="bufficon000.ent" AutoDelete="0"
+			AnimationIndex="0" Loop="1" Align="0" EquipType="6" Detect="1" />
+		<AniIcon Name="BuffFlashIcon5" Hide="1" X="76" Y="0" Image="bufficon000.ent" AutoDelete="0"
+			AnimationIndex="0" Loop="1" Align="0" EquipType="6" Detect="1" />
+		<AniIcon Name="BuffFlashIcon6" Hide="1" X="0" Y="19" Image="bufficon000.ent" AutoDelete="0"
+			AnimationIndex="0" Loop="1" Align="0" EquipType="6" Detect="1" />
+		<AniIcon Name="BuffFlashIcon7" Hide="1" X="19" Y="19" Image="bufficon000.ent" AutoDelete="0"
+			AnimationIndex="0" Loop="1" Align="0" EquipType="6" Detect="1" />
+		<AniIcon Name="BuffFlashIcon8" Hide="1" X="38" Y="19" Image="bufficon000.ent" AutoDelete="0"
+			AnimationIndex="0" Loop="1" Align="0" EquipType="6" Detect="1" />
+		<AniIcon Name="BuffFlashIcon9" Hide="1" X="57" Y="19" Image="bufficon000.ent" AutoDelete="0"
+			AnimationIndex="0" Loop="1" Align="0" EquipType="6" Detect="1" />
+		<AniIcon Name="BuffFlashIcon10" Hide="1" X="76" Y="19" Image="bufficon000.ent" AutoDelete="0"
+			AnimationIndex="0" Loop="1" Align="0" EquipType="6" Detect="1" />
+		<AniIcon Name="BuffFlashIcon11" Hide="1" X="0" Y="38" Image="bufficon000.ent" AutoDelete="0"
+			AnimationIndex="0" Loop="1" Align="0" EquipType="6" Detect="1" />
+		<AniIcon Name="BuffFlashIcon12" Hide="1" X="19" Y="38" Image="bufficon000.ent" AutoDelete="0"
+			AnimationIndex="0" Loop="1" Align="0" EquipType="6" Detect="1" />
+		<AniIcon Name="BuffFlashIcon13" Hide="1" X="38" Y="38" Image="bufficon000.ent" AutoDelete="0"
+			AnimationIndex="0" Loop="1" Align="0" EquipType="6" Detect="1" />
+		<AniIcon Name="BuffFlashIcon14" Hide="1" X="57" Y="38" Image="bufficon000.ent" AutoDelete="0"
+			AnimationIndex="0" Loop="1" Align="0" EquipType="6" Detect="1" />
+		<AniIcon Name="BuffFlashIcon15" Hide="1" X="76" Y="38" Image="bufficon000.ent" AutoDelete="0"
+			AnimationIndex="0" Loop="1" Align="0" EquipType="6" Detect="1" />
+		<AniIcon Name="BuffFlashIcon16" Hide="1" X="0" Y="57" Image="bufficon000.ent" AutoDelete="0"
+			AnimationIndex="0" Loop="1" Align="0" EquipType="6" Detect="1" />
+		<AniIcon Name="BuffFlashIcon17" Hide="1" X="19" Y="57" Image="bufficon000.ent" AutoDelete="0"
+			AnimationIndex="0" Loop="1" Align="0" EquipType="6" Detect="1" />
+		<AniIcon Name="BuffFlashIcon18" Hide="1" X="38" Y="57" Image="bufficon000.ent" AutoDelete="0"
+			AnimationIndex="0" Loop="1" Align="0" EquipType="6" Detect="1" />
+		<AniIcon Name="BuffFlashIcon19" Hide="1" X="57" Y="57" Image="bufficon000.ent" AutoDelete="0"
+			AnimationIndex="0" Loop="1" Align="0" EquipType="6" Detect="1" />
+		<AniIcon Name="BuffFlashIcon20" Hide="1" X="76" Y="57" Image="bufficon000.ent" AutoDelete="0"
+			AnimationIndex="0" Loop="1" Align="0" EquipType="6" Detect="1" />
+		<AniIcon Name="BuffFlashIcon21" Hide="1" X="0" Y="76" Image="bufficon000.ent" AutoDelete="0"
+			AnimationIndex="0" Loop="1" Align="0" EquipType="6" Detect="1" />
+		<AniIcon Name="BuffFlashIcon22" Hide="1" X="19" Y="76" Image="bufficon000.ent" AutoDelete="0"
+			AnimationIndex="0" Loop="1" Align="0" EquipType="6" Detect="1" />
+		<AniIcon Name="BuffFlashIcon23" Hide="1" X="38" Y="76" Image="bufficon000.ent" AutoDelete="0"
+			AnimationIndex="0" Loop="1" Align="0" EquipType="6" Detect="1" />
+		<AniIcon Name="BuffFlashIcon24" Hide="1" X="57" Y="76" Image="bufficon000.ent" AutoDelete="0"
+			AnimationIndex="0" Loop="1" Align="0" EquipType="6" Detect="1" />
+		<AniIcon Name="BuffFlashIcon25" Hide="1" X="76" Y="76" Image="bufficon000.ent" AutoDelete="0"
+			AnimationIndex="0" Loop="1" Align="0" EquipType="6" Detect="1" />
+	</Panel>
+	<Panel Expand="1" Name="BuffDetailMenuPanel" X="100" Y="200" Image="Data\interface0005_main_B.tga"
+		Hide="1" Left="9" Top="475" Right="297" Bottom="487" NotRemove="1" LineRectLeft="9"
+		LineRectTop="489" LineRectRight="297" LineRectBottom="492" LineCount="120" BottomRectLeft="9"
+		BottomRectTop="504" BottomRectRight="297" BottomRectBottom="518" NotDetected="1">
+		<ChatPanel Name="BuffDetailChat" X="10" Y="13" Width="270" Height="250" ContinueRun="1" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" FillColor="7F0000FF" DisableScroll="1">
+			不败之娘
+		</ChatPanel>
+	</Panel>
+	<Panel Name="TipsPanel" X="100" Y="100" BackColor="FF000000" BoxColor="FFFFFFFF" Left="0"
+		Top="4" Right="274" Bottom="30" Hide="1" NotRemove="1">
+		<ChatPanel Name="TipsChat" X="4" Y="5" Width="270" Height="20" ContinueRun="1" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" FillColor="7F0000FF" DisableScroll="1"></ChatPanel>
+	</Panel>
+	<Panel Name="FloatNamePanel" X="100" Y="100" BackColor="FF000000" BoxColor="FFFFFFFF" Left="0"
+		Top="0" Right="120" Bottom="20" Hide="1" NotRemove="1" Drag="2" DragLeft="0" DragTop="0"
+		DragRight="120" DragBottom="20" LuaEndDrag="FloatNameDragEnd" LuaRButtonDown="FloatNameReset">
+		<ChatPanel Name="FloatNameStr" X="1" Y="1" Width="120" Height="20" ContinueRun="1" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" FillColor="7F0000FF" DisableScroll="1"></ChatPanel>
+	</Panel>
+	<!--
+	<Panel Expand="1" Name="TipsPanel" X="100" Y="100" Image="Data\interface0005_main_B.tga" Hide="1"
+		Left="9" Top="475" Right="297" Bottom="487"
+		LineRectLeft="9" LineRectTop="489" LineRectRight="297"	LineRectBottom="502" LineCount="1"
+		BottomRectLeft="9" BottomRectTop="504" BottomRectRight="297" BottomRectBottom="518"
+		NotDetected="1" 
+		>-->
+	<Panel NotRemove="1"></Panel>
+	
+</UI>

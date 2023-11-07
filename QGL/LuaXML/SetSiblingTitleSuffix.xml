@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" ?>
+<UI>
+	<ID Name="SetSiblingTitleSuffix" />
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	<Panel Name="SetSiblingTitleSuffixPanel" Image="Data\interface0039_sibling.tga" X="280" Y="210" 
+			Left="10" Top="310" Right="230" Bottom="444" LuaRButtonUp="CloseSetSiblingTitleSuffixPanel"  DetectImage = "1"
+			Drag="1" DragLeft="0" DragTop="0" DragRight="699" DragBottom="404" >
+			
+		<Button Name="SetSiblingTitleSuffixClose" Image="Data\interface0039_sibling.tga" X="189" Y="8" LuaLButtonDown="CloseSetSiblingTitleSuffixPanel">
+			<ButtonRect State="0" Left="10" Top="268" Right="34" Bottom="285" />
+			<ButtonRect State="1" Left="35" Top="268" Right="59" Bottom="285" />
+			<ButtonRect State="2" Left="60" Top="268" Right="84" Bottom="285" />
+		</Button>
+		
+		<StaticText Name="SetSiblingTitlePrefixText" X="10" Y="52" Width="100" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		梦古双娇
+		</StaticText>
+		
+		<EditBox Name="SetSiblingTitleSuffixText" X="121" Y="52" Row="1" Column="4" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" LuaLButtonUp="" Limit="4" >
+		</EditBox>
+
+		<Button Name="SetSiblingTitleSuffixOK" Image="Data\interface0039_sibling.tga" X="26" Y="96" LuaLButtonUp="SetSiblingTitleSuffixOK">
+			<ButtonRect State="0" Left="10" Top="191" Right="88" Bottom="211" />
+			<ButtonRect State="1" Left="10" Top="214" Right="88" Bottom="234" />
+			<ButtonRect State="2" Left="10" Top="237" Right="88" Bottom="257" />
+		</Button>
+		
+		<Button Name="SetSiblingTitleSuffixCancel" Image="Data\interface0039_sibling.tga" X="112" Y="96" LuaLButtonUp="SetSiblingTitleSuffixCancel">
+			<ButtonRect State="0" Left="95" Top="191" Right="173" Bottom="211" />
+			<ButtonRect State="1" Left="95" Top="214" Right="173" Bottom="234" />
+			<ButtonRect State="2" Left="95" Top="237" Right="173" Bottom="257" />
+		</Button>
+			
+	</Panel>
+	
+</UI>

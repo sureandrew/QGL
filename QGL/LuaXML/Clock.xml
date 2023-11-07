@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+<!-- Our to do list data -->
+<UI>
+	<ID Name = "Clock" />
+	<Panel Name = "ClockPanel" Image = "Data\inerface0001_main.tga" X="640" Y="47"
+		Left="608" Top="54" Right="748" Bottom="193">
+		<UIImage Name="Time0" Image="Data\inerface0001_main.tga" X="70" Y="70"
+		Left="542" Top="430" Right="549" Bottom="465" Hide="1" AutoDelete="0"/>
+
+		<UIImage Name="Time1" Image="Data\inerface0001_main.tga" X="70" Y="70"
+		Left="558" Top="432" Right="578" Bottom="463" Hide="1" AutoDelete="0"/>
+
+		<UIImage Name="Time2" Image="Data\inerface0001_main.tga" X="70" Y="70"
+		Left="583" Top="440" Right="614" Bottom="463" Hide="1" AutoDelete="0"/>
+
+		<UIImage Name="Time3" Image="Data\inerface0001_main.tga" X="70" Y="70"
+		Left="617" Top="452" Right="651" Bottom="458" Hide="1" AutoDelete="0"/>
+
+		<UIImage Name="Time4" Image="Data\inerface0001_main.tga" X="70" Y="70"
+		Left="653" Top="442" Right="685" Bottom="463" Hide="1" AutoDelete="0"/>
+		
+		<UIImage Name="Time5" Image="Data\inerface0001_main.tga" X="70" Y="70"
+		Left="683" Top="432" Right="705" Bottom="464" Hide="1" AutoDelete="0"/>
+
+		<UIImage Name="Time6" Image="Data\inerface0001_main.tga" X="70" Y="70"
+		Left="718" Top="430" Right="724" Bottom="464" Hide="1" AutoDelete="0"/>
+		
+		<UIImage Name="Time7" Image="Data\inerface0001_main.tga" X="70" Y="70"
+		Left="561" Top="392" Right="583" Bottom="424" Hide="1" AutoDelete="0"/>
+
+		<UIImage Name="Time8" Image="Data\inerface0001_main.tga" X="70" Y="70"
+		Left="581" Top="402" Right="613" Bottom="423" Hide="1" AutoDelete="0"/>
+	
+		<UIImage Name="Time9" Image="Data\inerface0001_main.tga" X="70" Y="70"
+		Left="615" Top="412" Right="649" Bottom="418" Hide="1" AutoDelete="0"/>
+
+		<UIImage Name="Time10" Image="Data\inerface0001_main.tga" X="70" Y="70"
+		Left="652" Top="401" Right="683" Bottom="424" Hide="1" AutoDelete="0"/>
+
+		<UIImage Name="Time11" Image="Data\inerface0001_main.tga" X="70" Y="70"
+		Left="687" Top="392" Right="709" Bottom="424" Hide="1" AutoDelete="0"/>
+
+
+	</Panel>
+</UI>

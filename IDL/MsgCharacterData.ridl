@@ -1,0 +1,78 @@
+//-- Config
+config
+{
+	SubPath="Data/";
+	ClassID=10140;
+	StartID=10140;
+	EndID  =10149;
+	TwoDirect=1;
+}
+
+//-- include
+
+//-- object class
+class CharacterData : NetObject
+{
+	//-- object attributes
+	id { 		UInt32 char_id; 		};
+
+	info { 		String nickName;
+				UInt8 sex;
+				UInt8 cclass;
+				UInt8 faction; 			};
+				
+	level {		UInt16 level;			};
+	
+	title {		String title;			};
+	
+	style {		UInt16 photo_id;
+				UInt16 hairStyle1;
+				UInt16 hairStyle2;
+				UInt16 hairColor;		};
+
+	eqWeapon {	UInt32 eq_weapon;	
+				UInt16 eq_weaponColor;	};
+	eqHead {	UInt32 eq_headBand;	
+				UInt16 eq_headColor;	};
+	eqCloth {	UInt32 eq_cloth;	
+				UInt16 eq_clothColor;	};
+
+	orgHairStyle {		UInt16 org_hairStyle1;
+				UInt16 org_hairColor;		};
+	orgEqCloth {	UInt32 org_eq_cloth;	
+				UInt16 org_eq_clothColor;	};
+		friend_status {	UInt8 friend_status;};
+	friend_icon {
+			UInt16 friend_icon;
+			};
+	friend_about {
+			String friend_about;
+			};
+	friend_reply{
+			String friend_onlineAutoReply;
+			String friend_offlineAutoReply;	};
+			
+	line {
+		UInt8 line_id;
+	};
+	
+	speakCount {
+		UInt16	globalSpeakCount;
+	};
+	
+	speakBlock {	UInt32	speakBlock; };
+	
+	offlineTime { 	UInt32	offlineTime; 		};
+	
+	BattleInfo{	Boolean EnablePK;};
+	SettingInfo{	
+			Boolean EnableBlockMakeFriend;	
+			Boolean EnableBlockMsg; 			};
+	guild_uid {		UInt32 guild_uid;			};
+	inactive {		Boolean inactive;			};
+	money {		UInt32	money;			};
+	GenerationAcc { UInt32 uiHisGenAcc;             };
+
+	//--- RPC method
+	
+}

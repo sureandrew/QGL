@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<UI xmlns="http://tempuri.org/LoginUI.xsd">
+	<ID Name="ForceLogOut" />
+	<Font Name="Data\DFFN_M3.ttc" Width="16" Height="20" />
+	<Panel Name="ForceLogoutPanel" X="253" Y="267" Image="Data\interface0016_begin_B.tga" Left="6" Top="433" Right="314" Bottom="569">
+		
+		<StaticText Name="ForeLogoutText" X="17" Y="94" Row="1" Column="6" EdgeCode="SHADOW" FontColor="FFEDD97A" ShadowColor="FF000000">
+		是否強制登出
+		</StaticText>
+		
+		<Button Name="LogOutYes" Image="Data\interface0016_begin_B.tga" X="128" Y="94" LuaLButtonUp="ForceLogout">
+			<ButtonRect State="0" Left="6" Top="575" Right="85" Bottom="596" />
+			<ButtonRect State="1" Left="6" Top="598" Right="85" Bottom="619" />
+			<ButtonRect State="2" Left="6" Top="621" Right="85" Bottom="642" />
+		</Button>
+		
+		
+		<Button Name="LogOutNo" Image="Data\interface0016_begin_B.tga" X="213" Y="94" LuaLButtonUp="CancelLogout">
+			<ButtonRect State="0" Left="92" Top="575" Right="171" Bottom="596" />
+			<ButtonRect State="1" Left="92" Top="598" Right="171" Bottom="619" />
+			<ButtonRect State="2" Left="92" Top="621" Right="171" Bottom="642" />
+		</Button>
+	</Panel>
+</UI>

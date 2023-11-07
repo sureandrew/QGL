@@ -1,0 +1,81 @@
+<?xml version="1.0" ?>
+<UI>
+	<ID Name="MenuPartnerSkill" />
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	
+	<Panel Name="PartnerBattleSkillPanel"  Image="Data\interface0019_Battle_A.tga" X="345" Y="240" 
+		Left="23" Top="341" Right="309" Bottom="474" Hide="1" DetectImage="1"
+		Drag="1" DragLeft="0" DragTop="0" DragRight="286" DragBottom="133"
+		LuaTimeOut="PartnerSkillDetailPopupTimeOut" TimeOutCount="500" LuaRButtonUp="ClosePartnerBattleSkill"
+		LuaKeyChar="ClosePartnerBattleSkill">
+	
+		<Button Name="PartnerBattleSkillCross" Image="Data\interface0019_Battle_A.tga" X="253" Y="8" LuaLButtonUp="ClosePartnerBattleSkill" >
+			<ButtonRect State="0" Left="311" Top="30" Right="335" Bottom="48" />	
+			<ButtonRect State="1" Left="336" Top="30" Right="360" Bottom="48" />
+			<ButtonRect State="2" Left="361" Top="30" Right="385" Bottom="48" />
+		</Button>	
+		
+		<AniIcon Name="PartnerBattleNormalSkill00" X="16" Y="40" Image=""  AutoDelete="0" LuaLButtonUp="PartnerUseSkill" LuaMouseIn="PartnerSkillIconIn" LuaMouseOut="PartnerSkillIconOut" InsertToEventList = "1" Detect = "1" Hide="1"/>
+		<AniIcon Name="PartnerBattleNormalSkill01" X="53" Y="40" Image=""  AutoDelete="0" LuaLButtonUp="PartnerUseSkill" LuaMouseIn="PartnerSkillIconIn" LuaMouseOut="PartnerSkillIconOut" InsertToEventList = "1" Detect = "1" Hide="1"/>
+		<AniIcon Name="PartnerBattleNormalSkill02" X="90" Y="40" Image=""  AutoDelete="0" LuaLButtonUp="PartnerUseSkill" LuaMouseIn="PartnerSkillIconIn" LuaMouseOut="PartnerSkillIconOut" InsertToEventList = "1" Detect = "1" Hide="1"/>
+		<AniIcon Name="PartnerBattleNormalSkill03" X="127" Y="40" Image=""  AutoDelete="0" LuaLButtonUp="PartnerUseSkill" LuaMouseIn="PartnerSkillIconIn" LuaMouseOut="PartnerSkillIconOut" InsertToEventList = "1" Detect = "1" Hide="1"/>
+		<AniIcon Name="PartnerBattleNormalSkill04" X="164" Y="40" Image=""  AutoDelete="0" LuaLButtonUp="PartnerUseSkill" LuaMouseIn="PartnerSkillIconIn" LuaMouseOut="PartnerSkillIconOut" InsertToEventList = "1" Detect = "1" Hide="1"/>
+		<AniIcon Name="PartnerBattleNormalSkill05" X="201" Y="40" Image=""  AutoDelete="0" LuaLButtonUp="PartnerUseSkill" LuaMouseIn="PartnerSkillIconIn" LuaMouseOut="PartnerSkillIconOut" InsertToEventList = "1" Detect = "1" Hide="1"/>
+		<AniIcon Name="PartnerBattleNormalSkill06" X="238" Y="40" Image=""  AutoDelete="0" LuaLButtonUp="PartnerUseSkill" LuaMouseIn="PartnerSkillIconIn" LuaMouseOut="PartnerSkillIconOut" InsertToEventList = "1" Detect = "1" Hide="1"/>
+		<!--<AniIcon Name="PartnerNormalSkill07" X="83" Y="80" Image=""  AutoDelete="0" LuaLButtonUp="PartnerUseSkill" LuaMouseIn="PartnerSkillIconIn" LuaMouseOut="PartnerSkillIconOut" InsertToEventList = "1" Detect = "1" Hide="1"/>
+		<AniIcon Name="PartnerNormalSkill08" X="118" Y="80" Image=""  AutoDelete="0" LuaLButtonUp="PartnerUseSkill" LuaMouseIn="PartnerSkillIconIn" LuaMouseOut="PartnerSkillIconOut" InsertToEventList = "1" Detect = "1" Hide="1"/>
+		<AniIcon Name="PartnerNormalSkill09" X="153" Y="80" Image=""  AutoDelete="0" LuaLButtonUp="PartnerUseSkill" LuaMouseIn="PartnerSkillIconIn" LuaMouseOut="PartnerSkillIconOut" InsertToEventList = "1" Detect = "1" Hide="1"/>-->
+		
+		<AniIcon Name="PartnerBattleSpecialSkill00" X="16" Y="82" Image=""  AutoDelete="0" LuaLButtonUp="PartnerUseSkill" LuaMouseIn="PartnerSkillIconIn" LuaMouseOut="PartnerSkillIconOut" InsertToEventList = "1" Detect = "1" Hide="1"/>
+		<AniIcon Name="PartnerBattleSpecialSkill01" X="53" Y="82" Image=""  AutoDelete="0" LuaLButtonUp="PartnerUseSkill" LuaMouseIn="PartnerSkillIconIn" LuaMouseOut="PartnerSkillIconOut" InsertToEventList = "1" Detect = "1" Hide="1"/>
+		<AniIcon Name="PartnerBattleSpecialSkill02" X="90" Y="82" Image=""  AutoDelete="0" LuaLButtonUp="PartnerUseSkill" LuaMouseIn="PartnerSkillIconIn" LuaMouseOut="PartnerSkillIconOut" InsertToEventList = "1" Detect = "1" Hide="1"/>
+		<AniIcon Name="PartnerBattleSpecialSkill03" X="127" Y="82" Image=""  AutoDelete="0" LuaLButtonUp="PartnerUseSkill" LuaMouseIn="PartnerSkillIconIn" LuaMouseOut="PartnerSkillIconOut" InsertToEventList = "1" Detect = "1" Hide="1"/>
+		<AniIcon Name="PartnerBattleSpecialSkill04" X="164" Y="82" Image=""  AutoDelete="0" LuaLButtonUp="PartnerUseSkill" LuaMouseIn="PartnerSkillIconIn" LuaMouseOut="PartnerSkillIconOut" InsertToEventList = "1" Detect = "1" Hide="1"/>
+		<AniIcon Name="PartnerBattleSpecialSkill05" X="201" Y="82" Image=""  AutoDelete="0" LuaLButtonUp="PartnerUseSkill" LuaMouseIn="PartnerSkillIconIn" LuaMouseOut="PartnerSkillIconOut" InsertToEventList = "1" Detect = "1" Hide="1"/>
+		<AniIcon Name="PartnerBattleSpecialSkill06" X="238" Y="82" Image=""  AutoDelete="0" LuaLButtonUp="PartnerUseSkill" LuaMouseIn="PartnerSkillIconIn" LuaMouseOut="PartnerSkillIconOut" InsertToEventList = "1" Detect = "1" Hide="1"/>
+	
+	</Panel>
+	
+	<Panel Name="PartnerBattleSkillShortCut"  
+		Image="Data\inerface0001_main.tga" X="413" Y="503" Hide="1"
+		Left="143" Top="361" Right="516" Bottom="400" NotRemove="1" DetectImage="1"
+		Drag="1" DragLeft="0" DragTop="0" DragRight="286" DragBottom="133"
+		LuaTimeOut="PartnerSkillDetailPopupTimeOut" TimeOutCount="100" LuaRButtonUp="ClosePartnerBattleSkill"
+		LuaKeyChar="ClosePartnerBattleSkill">
+		
+		<AniIcon Name="SPBSkill00" X="3"   Y="4" Image=""  AutoDelete="0" LuaLButtonUp="SCPartnerUseSkill0" Tips="ShortCut 1" TimeOutCount="500" LuaTimeOut="DefaultTips" InsertToEventList = "1" Detect = "1" Hide="1"/>
+		<AniIcon Name="SPBSkill01" X="38"  Y="4" Image=""  AutoDelete="0" LuaLButtonUp="SCPartnerUseSkill1" Tips="ShortCut 1" TimeOutCount="500" LuaTimeOut="DefaultTips" InsertToEventList = "1" Detect = "1" Hide="1"/>
+		<AniIcon Name="SPBSkill02" X="73"  Y="4" Image=""  AutoDelete="0" LuaLButtonUp="SCPartnerUseSkill2" Tips="ShortCut 1" TimeOutCount="500" LuaTimeOut="DefaultTips" InsertToEventList = "1" Detect = "1" Hide="1"/>
+		<AniIcon Name="SPBSkill03" X="108" Y="4" Image=""  AutoDelete="0" LuaLButtonUp="SCPartnerUseSkill3" Tips="ShortCut 1" TimeOutCount="500" LuaTimeOut="DefaultTips" InsertToEventList = "1" Detect = "1" Hide="1"/>
+		<AniIcon Name="SPBSkill04" X="143" Y="4" Image=""  AutoDelete="0" LuaLButtonUp="SCPartnerUseSkill4" Tips="ShortCut 1" TimeOutCount="500" LuaTimeOut="DefaultTips" InsertToEventList = "1" Detect = "1" Hide="1"/>
+		<AniIcon Name="SPBSkill05" X="178" Y="4" Image=""  AutoDelete="0" LuaLButtonUp="SCPartnerUseSkill5" Tips="ShortCut 1" TimeOutCount="500" LuaTimeOut="DefaultTips" InsertToEventList = "1" Detect = "1" Hide="1"/>
+		<AniIcon Name="SPBSkill06" X="213" Y="4" Image=""  AutoDelete="0" LuaLButtonUp="SCPartnerUseSkill6" Tips="ShortCut 1" TimeOutCount="500" LuaTimeOut="DefaultTips" InsertToEventList = "1" Detect = "1" Hide="1"/>
+		<AniIcon Name="SPBSkill07" X="248" Y="4" Image=""  AutoDelete="0" LuaLButtonUp="SCPartnerUseSkill7" Tips="ShortCut 1" TimeOutCount="500" LuaTimeOut="DefaultTips" InsertToEventList = "1" Detect = "1" Hide="1"/>
+		<AniIcon Name="SPBSkill08" X="283" Y="4" Image=""  AutoDelete="0" LuaLButtonUp="SCPartnerUseSkill8" Tips="ShortCut 1" TimeOutCount="500" LuaTimeOut="DefaultTips" InsertToEventList = "1" Detect = "1" Hide="1"/>
+		<AniIcon Name="SPBSkill09" X="318" Y="4" Image=""  AutoDelete="0" LuaLButtonUp="SCPartnerUseSkill9" Tips="ShortCut 1" TimeOutCount="500" LuaTimeOut="DefaultTips" InsertToEventList = "1" Detect = "1" Hide="1"/>
+		
+		<UIImage Name="PShortCutF1" X="3" Y="1" Image="Data\inerface0001_main.tga" Left="343" Top="654"
+			NotDetected="1" Right="363" Bottom="668" Hide="0" />
+		<UIImage Name="PShortCutF2" X="38" Y="1" Image="Data\inerface0001_main.tga" Left="366" Top="654"
+			NotDetected="1" Right="386" Bottom="668" Hide="0" />
+		<UIImage Name="PShortCutF3" X="73" Y="1" Image="Data\inerface0001_main.tga" Left="389" Top="654"
+			NotDetected="1" Right="409" Bottom="668" Hide="0" />
+		<UIImage Name="PShortCutF4" X="108" Y="1" Image="Data\inerface0001_main.tga" Left="412" Top="654"
+			NotDetected="1" Right="432" Bottom="668" Hide="0" />
+		<UIImage Name="PShortCutF5" X="143" Y="1" Image="Data\inerface0001_main.tga" Left="435" Top="654"
+			NotDetected="1" Right="455" Bottom="668" Hide="0" />
+		<UIImage Name="PShortCutF6" X="178" Y="1" Image="Data\inerface0001_main.tga" Left="458" Top="654"
+			NotDetected="1" Right="478" Bottom="668" Hide="0" />
+		<UIImage Name="PShortCutF7" X="213" Y="1" Image="Data\inerface0001_main.tga" Left="481" Top="654"
+			NotDetected="1" Right="501" Bottom="668" Hide="0" />
+		<UIImage Name="PShortCutF8" X="248" Y="1" Image="Data\inerface0001_main.tga" Left="504" Top="654"
+			NotDetected="1" Right="524" Bottom="668" Hide="0" />
+		<UIImage Name="PShortCutF9" X="283" Y="1" Image="Data\inerface0001_main.tga" Left="527" Top="654"
+			NotDetected="1" Right="547" Bottom="668" Hide="0" />
+		<UIImage Name="PShortCutF10" X="318" Y="1" Image="Data\inerface0001_main.tga" Left="550" Top="654"
+			NotDetected="1" Right="570" Bottom="668" Hide="0" />
+	
+	</Panel>
+	
+	
+</UI>

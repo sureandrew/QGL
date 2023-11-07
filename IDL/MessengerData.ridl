@@ -1,0 +1,37 @@
+//-- Config	
+config
+{
+	SubPath="Data/";
+	ClassID=10100;
+	StartID=10100;
+	EndID  =10109;
+	TwoDirect=1;
+}
+
+//-- include
+
+//-- object class
+class MessengerData : NetObject
+{
+	//-- object state
+	key {
+		UInt32 player_char_id;
+		UInt32 friend_char_id;
+	};
+	
+	relation
+	{
+		UInt16 friend_relation;
+	};
+	
+	group
+	{
+		UInt8	friend_group;
+	};
+	
+	friendly
+	{
+		UInt16	friend_friendly;
+	};
+	//-- command to RPC server
+}

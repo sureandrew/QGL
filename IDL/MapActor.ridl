@@ -1,0 +1,46 @@
+//-- Config
+config
+{
+	SubPath="Logic/";
+	ClassID=14000;
+	StartID=14000;
+	EndID  =14999;
+	ModifyMask=1;
+	ViewMask=1;
+}
+
+//-- include
+
+//-- object class
+class MapActor : NetObject
+{
+	//-- object attributes
+	info { 			String nickName;
+					UInt8 sex;
+					UInt8 cclass;
+					UInt8 sexClass;
+					UInt8 faction; 		};
+	state { 		UInt8 state; 		};
+	map {			UInt16 map_id;
+					UInt16 map_x;
+					UInt16 map_y;
+					UInt8 direction;
+					UInt32 map_ownerId; };
+	reborn { 		UInt16 reborn_map;
+					UInt16 reborn_x;
+					UInt16 reborn_y; 	};
+
+	//-- real-time attributes
+	curPos { 		UInt16 curPosX;
+					UInt16 curPosY; 	};
+	dstPos { 		UInt16 dstPosX;
+					UInt16 dstPosY; 	};
+	action { 		UInt16 action;
+					UInt32 actionTime; 	};
+	speed { 		UInt32 speed; 		};
+	followId {		UInt32 followId;
+					UInt8  followOrder;	};
+	appeared {		Boolean appeared;	};
+
+	//-- command in Map service
+}

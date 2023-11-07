@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" ?>
+<UI xmlns="http://tempuri.org/LoginUI.xsd">
+	<ID Name="CharacterChosen" />
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	<Panel Name="LoginBackground" X="0" Y="0" Image="Data\login_background.tga" Left="0" Top="0" Right="800" Bottom="600" Hide="1">
+	</Panel>
+	<Panel Name="CharacterChosenPanel" X="0" Y="0" Image="" Left="0" Top="0" Right="800" Bottom="600" Hide="1">
+	
+		<UIImage Name="CharChosenLImage1" Image="Data\NPCFACE\ImgL00001a.tga" X="0" Y="0" Left="100" Top="0" 
+			Right="431"	Bottom="576" AutoDelete="0" Hide="1" NotDetected="1" />
+		<UIImage Name="CharChosenLImage2" Image="Data\NPCFACE\ImgL00002b.tga" X="0" Y="0" Left="100" Top="0" 
+			Right="431"	Bottom="576" AutoDelete="0" Hide="1" NotDetected="1"/>
+		<UIImage Name="CharChosenLImage3" Image="Data\NPCFACE\ImgL00003a.tga" X="0" Y="0" Left="100" Top="0" 
+			Right="431"	Bottom="576" AutoDelete="0" Hide="1" NotDetected="1"/>
+		<UIImage Name="CharChosenLImage4" Image="Data\NPCFACE\ImgL00004c.tga" X="0" Y="0" Left="100" Top="0" 
+			Right="431"	Bottom="576" AutoDelete="0" Hide="1" NotDetected="1"/>
+		<UIImage Name="CharChosenLImage5" Image="Data\NPCFACE\ImgL00005b.tga" X="0" Y="0" Left="100" Top="0" 
+			Right="431"	Bottom="576" AutoDelete="0" Hide="1" NotDetected="1"/>
+		<UIImage Name="CharChosenLImage6" Image="Data\NPCFACE\ImgL00006a.tga" X="0" Y="0" Left="100" Top="0" 
+			Right="431"	Bottom="576" AutoDelete="0" Hide="1" NotDetected="1"/>
+		<UIImage Name="CharChosenLImage7" Image="Data\NPCFACE\ImgL00007a.tga" X="0" Y="0" Left="100" Top="0" 
+			Right="431"	Bottom="576" AutoDelete="0" Hide="1" NotDetected="1"/>
+		<UIImage Name="CharChosenLImage8" Image="Data\NPCFACE\ImgL00008a.tga" X="0" Y="0" Left="100" Top="0" 
+			Right="431"	Bottom="576" AutoDelete="0" Hide="1" NotDetected="1"/>
+			
+		<UIImage Name="" X="25" Y="20" Image="Data\interface0016_begin_B.tga" Left="438" Top="345"
+			Right="520" Bottom="367" AutoDelete="0" Hide="0"/>
+		
+
+			
+		<Button Name="CharacterSelected1" Image="Data\interface0016_begin_B.tga" X="265" Y="60"  LuaLButtonUp="SelectCharacter1" LuaMouseMove="SelectCharHighLight1">
+			<ButtonRect State="0" Left="177" Top="1" Right="336" Bottom="330" />
+			<ButtonRect State="1" Left="350" Top="1" Right="509" Bottom="330" />
+			<ButtonRect State="2" Left="4" Top="0" Right="163" Bottom="329" />
+			<ButtonRect State="3" Left="4" Top="0" Right="163" Bottom="329" />
+		</Button>
+		
+		<UIImage Name="CharacterSelectedHighLight1" Image="Data\interface0016_begin_B.tga" X="265" Y="60"
+			Left="432" Top="426" Right="591" Bottom="755" Hide="1" LuaMouseOut="ReturnOrg1" InsertToEventList = "1" LuaLButtonDBLCLK="DblClickCharacter1"/>
+		
+		<UIImage Name="CharacterBanHighlight1" Image="Data\interface0016_begin_B.tga" X="265" Y="60"
+			Left="856" Top="425" Right="1015" Bottom="755" Hide="1"/>	
+			
+		<UIImage Name="MHeadPic1" Image="Data\faceL00001a.tga" X="285" Y="96" Left="0" Top="0" Right="120"
+			Bottom="120" AutoDelete="0" NotDetected="1"/>
+		
+		<AniIcon Name="CharModel1"  X="345" Y="255" Rotation="1" AnimationIndex="0" Loop="1" Align="1" Hide="0" NotDetected="1"/>
+		<AniIcon Name="ModelShadow1" Image="Shadow.ent"  X="345" Y="255" Rotation="0" AnimationIndex="0" Loop="0" Align="1" Hide="0" NotDetected="1"/>
+		
+		
+		<StaticText Name="CharacterName1" X="265" Y="352" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			Width="155" Height="20" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			上天下地唯我獨專
+		</StaticText>
+		
+		<UIImage Name="CharacterBan1" Image="Data\interface0016_begin_B.tga" X="291" Y="229"
+			Left="670" Top="511" Right="778" Bottom="619" Hide="1"/>
+	
+		<StaticText Name="CharacterLifeRemain1" X="265" Y="77" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFF0000"
+			Width="155" Height="20" ShadowColor="FF000000" NotDetected="1" Align="Center">
+		</StaticText>
+
+		<Button Name="CharacterRecovery1" Image="Data\interface0016_begin_B.tga" X="316" Y="314" LuaLButtonUp="RecoverCharacter1">
+			<ButtonRect State="0" Left="601" Top="512" Right="661" Bottom="543" />
+			<ButtonRect State="1" Left="601" Top="547" Right="661" Bottom="578" />
+			<ButtonRect State="2" Left="601" Top="582" Right="661" Bottom="613" />
+		</Button>	
+
+	
+
+			
+		<Button Name="CharacterSelected2" Image="Data\interface0016_begin_B.tga" X="435" Y="60"  LuaLButtonUp="SelectCharacter2" LuaMouseMove="SelectCharHighLight2">
+			<ButtonRect State="0" Left="177" Top="1" Right="336" Bottom="330" />
+			<ButtonRect State="1" Left="350" Top="1" Right="509" Bottom="330" />
+			<ButtonRect State="2" Left="4" Top="0" Right="163" Bottom="329" />
+			<ButtonRect State="3" Left="4" Top="0" Right="163" Bottom="329" />
+		</Button>
+		
+		<UIImage Name="CharacterSelectedHighLight2" Image="Data\interface0016_begin_B.tga" X="435" Y="60"
+			Left="432" Top="426" Right="591" Bottom="755" Hide="1" LuaMouseOut="ReturnOrg2" InsertToEventList = "1" LuaLButtonDBLCLK="DblClickCharacter2" />	
+
+		<UIImage Name="CharacterBanHighlight2" Image="Data\interface0016_begin_B.tga" X="436" Y="60"
+			Left="856" Top="425" Right="1015" Bottom="755" Hide="1"/>
+			
+		<UIImage Name="MHeadPic2" Image="Data\faceL00001a.tga" X="455" Y="96" Left="0" Top="0" Right="120"
+			Bottom="120" AutoDelete="0" NotDetected="1"/>
+			
+		<AniIcon Name="CharModel2"  X="520" Y="255" Rotation="1" AnimationIndex="0" Loop="1" Align="1" Hide="0" NotDetected="1"/>
+		<AniIcon Name="ModelShadow2" Image="Shadow.ent"  X="520" Y="255" Rotation="0" AnimationIndex="0" Loop="0" Align="1" Hide="0" NotDetected="1"/>
+		
+		<StaticText Name="CharacterName2" X="440" Y="352" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			Width="155" Height="20" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			上天下地唯我獨專
+		</StaticText>
+		
+
+		
+		<StaticText Name="CharacterLifeRemain2" X="440" Y="77" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFF0000"
+			Width="155" Height="20" ShadowColor="FF000000" NotDetected="1" Align="Center">
+		</StaticText>
+		
+		<UIImage Name="CharacterBan2" Image="Data\interface0016_begin_B.tga" X="462" Y="229"
+			Left="670" Top="511" Right="778" Bottom="619" Hide="1"/>
+			
+		<Button Name="CharacterRecovery2" Image="Data\interface0016_begin_B.tga" X="485" Y="314" LuaLButtonUp="RecoverCharacter2">
+			<ButtonRect State="0" Left="601" Top="512" Right="661" Bottom="543" />
+			<ButtonRect State="1" Left="601" Top="547" Right="661" Bottom="578" />
+			<ButtonRect State="2" Left="601" Top="582" Right="661" Bottom="613" />
+		</Button>
+		
+
+		
+
+					
+		<Button Name="CharacterSelected3" Image="Data\interface0016_begin_B.tga" X="610" Y="60"  LuaLButtonUp="SelectCharacter3" LuaMouseMove="SelectCharHighLight3">
+			<ButtonRect State="0" Left="177" Top="1" Right="336" Bottom="330" />
+			<ButtonRect State="1" Left="350" Top="1" Right="509" Bottom="330" />
+			<ButtonRect State="2" Left="4" Top="0" Right="163" Bottom="329" />
+			<ButtonRect State="3" Left="4" Top="0" Right="163" Bottom="329" />
+		</Button>
+		
+		<UIImage Name="CharacterSelectedHighLight3" Image="Data\interface0016_begin_B.tga" X="610" Y="60"
+			Left="432" Top="426" Right="591" Bottom="755" Hide="1" LuaMouseOut="ReturnOrg3" InsertToEventList = "1" LuaLButtonDBLCLK="DblClickCharacter3"/>
+		
+		<UIImage Name="CharacterBanHighlight3" Image="Data\interface0016_begin_B.tga" X="612" Y="62"
+			Left="856" Top="425" Right="1015" Bottom="755" Hide="1"/>
+		
+		<UIImage Name="MHeadPic3" Image="Data\faceL00001a.tga" X="630" Y="96" Left="0" Top="0" Right="120"
+			Bottom="120" AutoDelete="0" NotDetected="1"/>
+		
+		<AniIcon Name="CharModel3"  X="697" Y="255" Rotation="1" AnimationIndex="0" Loop="1" Align="1" Hide="0" NotDetected="1"/>
+		<AniIcon Name="ModelShadow3" Image="Shadow.ent"  X="697" Y="255" Rotation="0" AnimationIndex="0" Loop="0" Align="1" Hide="0" NotDetected="1"/>
+		
+		<StaticText Name="CharacterName3" X="613" Y="352" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			Width="155" Height="20" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			上天下地唯我獨專
+		</StaticText>
+
+		<StaticText Name="CharacterLifeRemain3" X="613" Y="77" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFF0000"
+			Width="155" Height="20" ShadowColor="FF000000" NotDetected="1" Align="Center">
+		</StaticText>
+
+		<UIImage Name="CharacterBan3" Image="Data\interface0016_begin_B.tga" X="637" Y="229"
+			Left="670" Top="511" Right="778" Bottom="619" Hide="1"/>	
+		
+		<Button Name="CharacterRecovery3" Image="Data\interface0016_begin_B.tga" X="662" Y="314" LuaLButtonUp="RecoverCharacter3">
+			<ButtonRect State="0" Left="601" Top="512" Right="661" Bottom="543" />
+			<ButtonRect State="1" Left="601" Top="547" Right="661" Bottom="578" />
+			<ButtonRect State="2" Left="601" Top="582" Right="661" Bottom="613" />
+		</Button>	
+		
+
+		
+		<UIImage Name="CharacterInfo" X="265" Y="418" Image="Data\interface0016_begin_B.tga" Left="9" Top="346"
+			Right="419" Bottom="413" AutoDelete="0" Hide="0"/>
+		<StaticText Name="ChosenCharName" X="324" Y="425" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			Width="136" Height="20" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			上天下地唯我獨專
+		</StaticText>
+		<StaticText Name="ChosenCharCareer" X="538" Y="425" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			Width="136" Height="20" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			咩職位都得
+		</StaticText> 
+		<StaticText Name="ChosenCharLevel" X="324" Y="467" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			 Width="136" Height="20" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			9999
+		</StaticText>
+		<StaticText Name="ChosenCharRing" X="538" Y="467" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			Width="136" Height="20" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			唔理
+		</StaticText>
+			
+		
+			
+			
+		<Button Name="CreateCharacter" Image="Data\interface0016_begin_B.tga" X="357" Y="517" LuaLButtonUp="CreateCharacterShowUp" >
+			<ButtonRect State="0" Left="7" Top="645" Right="99" Bottom="666" />
+			<ButtonRect State="1" Left="7" Top="668" Right="99" Bottom="689" />
+			<ButtonRect State="2" Left="7" Top="692" Right="99" Bottom="713" />
+		</Button>
+		<Button Name="DeleteCharacter" Image="Data\interface0016_begin_B.tga" X="465" Y="517" LuaLButtonUp="OpenDeleteCharacter">
+			<ButtonRect State="0" Left="115" Top="645" Right="207" Bottom="666" />
+			<ButtonRect State="1" Left="115" Top="668" Right="207" Bottom="689" />
+			<ButtonRect State="2" Left="115" Top="692" Right="207" Bottom="713" />
+			<ButtonRect State="3" Left="115" Top="692" Right="207" Bottom="713" />
+		</Button>
+		<Button Name="CharacterChosenPrev" Image="Data\interface0016_begin_B.tga" X="570" Y="517" LuaLButtonUp="GoBackLogin">
+			<ButtonRect State="0" Left="219" Top="645" Right="311" Bottom="666" />
+			<ButtonRect State="1" Left="219" Top="668" Right="311" Bottom="689" />
+			<ButtonRect State="2" Left="219" Top="692" Right="311" Bottom="713" />
+		</Button>
+		<Button Name="CharacterChosenNext" Image="Data\interface0016_begin_B.tga" X="675" Y="517" LuaLButtonUp="GoToLine">
+			<ButtonRect State="0" Left="269" Top="574" Right="361" Bottom="595" />
+			<ButtonRect State="1" Left="269" Top="597" Right="361" Bottom="618" />
+			<ButtonRect State="2" Left="269" Top="621" Right="361" Bottom="642" />
+		</Button>
+		
+	</Panel>
+	<!--
+	<Panel Name="CharacterChosenPanel" X="113" Y="88" Image="Data\interface0016_begin_B.tga" Left="5" Top="5" Right="584" Bottom="431" Hide="1">
+		<Button Name="CreateCharacter" Image="Data\interface0016_begin_B.tga" X="145" Y="389" LuaLButtonUp="CreateCharacterShowUp" >
+			<ButtonRect State="0" Left="7" Top="645" Right="99" Bottom="666" />
+			<ButtonRect State="1" Left="7" Top="668" Right="99" Bottom="689" />
+			<ButtonRect State="2" Left="7" Top="692" Right="99" Bottom="713" />
+		</Button>
+		<Button Name="DeleteCharacter" Image="Data\interface0016_begin_B.tga" X="253" Y="389" LuaLButtonUp="DeleteCharacter">
+			<ButtonRect State="0" Left="115" Top="645" Right="207" Bottom="666" />
+			<ButtonRect State="1" Left="115" Top="668" Right="207" Bottom="689" />
+			<ButtonRect State="2" Left="115" Top="692" Right="207" Bottom="713" />
+		</Button>
+		<Button Name="CharacterChosenPrev" Image="Data\interface0016_begin_B.tga" X="358" Y="389" LuaLButtonUp="GoBackLogin">
+			<ButtonRect State="0" Left="219" Top="645" Right="311" Bottom="666" />
+			<ButtonRect State="1" Left="219" Top="668" Right="311" Bottom="689" />
+			<ButtonRect State="2" Left="219" Top="692" Right="311" Bottom="713" />
+		</Button>
+		<Button Name="CharacterChosenNext" Image="Data\interface0016_begin_B.tga" X="461" Y="389" LuaLButtonUp="GoToLine">
+			<ButtonRect State="0" Left="269" Top="574" Right="361" Bottom="595" />
+			<ButtonRect State="1" Left="269" Top="597" Right="361" Bottom="618" />
+			<ButtonRect State="2" Left="269" Top="621" Right="361" Bottom="642" />
+		</Button>
+		
+		<UIImage Name="CharacterMouseOn1" X="29" Y="48" Image="Data\interface0016_begin_B.tga" Left="647" Top="435"
+			Right="798" Bottom="759" AutoDelete="0" Hide="1" LuaMouseOut="ReturnOrg1" LuaMouseIn="ChangeSelectImage1" InsertToEventList = "1"/>
+		<UIImage Name="CharacterSelected1" X="29" Y="48" Image="Data\interface0016_begin_B.tga" Left="849" Top="435" 
+			Right="1000" Bottom="759" AutoDelete="0" Hide="1" LuaMouseOut="ReturnOrg1" LuaMouseIn="ChangeSelectImage1" InsertToEventList = "1"/>
+		<Button Name="Character1" Image="Data\interface0016_begin_B.tga" X="29" Y="48" LuaLButtonUp="SelectCharacter1" LuaMouseIn="HighLight1" LuaMouseOut="ResetHighLight1">
+			<ButtonRect State="0" Left="445" Top="435" Right="596" Bottom="759" />
+			<ButtonRect State="1" Left="647" Top="435" Right="798" Bottom="759" />
+			<ButtonRect State="2" Left="849" Top="435" Right="1000" Bottom="759" />
+		</Button>
+		
+		
+		
+		<StaticText Name="CharacterName1" X="38" Y="235" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" NotDetected="1" Align="Center">
+			上天下地唯我獨專
+		</StaticText>
+		<StaticText Name="CharacterCareer1" X="38" Y="274" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" NotDetected="1" Align="Center">
+			咩職位都得
+		</StaticText> 
+		<StaticText Name="CharacterLevel1" X="38" Y="311" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" NotDetected="1" Align="Center">
+			9999
+		</StaticText>
+		<StaticText Name="CharacterRing1" X="38" Y="351" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" NotDetected="1" Align="Center">
+			唔理
+		</StaticText>
+		<AniIcon Name="ItemModel1"  X="104" Y="105" Rotation="1" AnimationIndex="0" Loop="1" Align="1" Hide="0" NotDetected="1"/>
+		<AniIcon Name="ModelShadow1" Image="Shadow.ent"  X="104" Y="105" Rotation="0" AnimationIndex="0" Loop="0" Align="1" Hide="0" NotDetected="1"/>
+		
+		<UIImage Name="CharacterMouseOn2" X="213" Y="48" Image="Data\interface0016_begin_B.tga" Left="647" Top="435"
+			Right="798" Bottom="759" AutoDelete="0" Hide="1" LuaMouseOut="ReturnOrg2" LuaMouseIn="ChangeSelectImage2" InsertToEventList = "1"/>
+		<UIImage Name="CharacterSelected2" X="213" Y="48" Image="Data\interface0016_begin_B.tga" Left="849" Top="435" 
+			Right="1000" Bottom="759" AutoDelete="0" Hide="1" LuaMouseOut="ReturnOrg2" LuaMouseIn="ChangeSelectImage2" InsertToEventList = "1"/>
+		<Button Name="Character2" Image="Data\interface0016_begin_B.tga" X="213" Y="48" LuaLButtonUp="SelectCharacter2"">
+			<ButtonRect State="0" Left="445" Top="435" Right="596" Bottom="759" />			
+			<ButtonRect State="1" Left="647" Top="435" Right="798" Bottom="759" />
+			<ButtonRect State="2" Left="849" Top="435" Right="1000" Bottom="759" />
+		</Button>
+		
+		
+		
+		<StaticText Name="CharacterName2" X="222" Y="235" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" NotDetected="1" Align="Center">
+			上天下地唯我獨專
+		</StaticText>
+		<StaticText Name="CharacterCareer2" X="222" Y="274" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" NotDetected="1" Align="Center">
+			咩職位都得
+		</StaticText> 
+		<StaticText Name="CharacterLevel2" X="222" Y="311" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" NotDetected="1" Align="Center">
+			9999
+		</StaticText>
+		<StaticText Name="CharacterRing2" X="222" Y="351" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" NotDetected="1" Align="Center">
+			唔理
+		</StaticText>
+		<AniIcon Name="ItemModel2"  X="288" Y="105" Detect="0" Rotation="1" AnimationIndex="0" Loop="1" Align="1" Hide="0" NotDetected="1"/>
+		<AniIcon Name="ModelShadow2" Image="Shadow.ent"  X="288" Y="105" Rotation="0" AnimationIndex="0" Loop="0" Align="1" Hide="0" NotDetected="1"/>
+		
+		<UIImage Name="CharacterMouseOn3" X="401" Y="48" Image="Data\interface0016_begin_B.tga" Left="647" Top="435"
+			Right="798" Bottom="759" AutoDelete="0" Hide="1" LuaMouseOut="ReturnOrg3" LuaMouseIn="ChangeSelectImage3" InsertToEventList = "1"/>
+		<UIImage Name="CharacterSelected3" X="401" Y="48" Image="Data\interface0016_begin_B.tga" Left="849" Top="435" 
+			Right="1000" Bottom="759" AutoDelete="0" Hide="1" LuaMouseOut="ReturnOrg3" LuaMouseIn="ChangeSelectImage3" InsertToEventList = "1"/>
+		<Button Name="Character3" Image="Data\interface0016_begin_B.tga" X="401" Y="48" LuaLButtonUp="SelectCharacter3">
+			<ButtonRect State="0" Left="445" Top="435" Right="596" Bottom="759" />
+			<ButtonRect State="1" Left="647" Top="435" Right="798" Bottom="759" />
+			<ButtonRect State="2" Left="849" Top="435" Right="1000" Bottom="759" />
+		</Button>
+		
+		
+		
+		<StaticText Name="CharacterName3" X="410" Y="235" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" NotDetected="1" Align="Center">
+			上天下地唯我獨專
+		</StaticText>
+		<StaticText Name="CharacterCareer3" X="410" Y="274" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" NotDetected="1" Align="Center">
+			咩職位都得
+		</StaticText> 
+		<StaticText Name="CharacterLevel3" X="410" Y="311" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" NotDetected="1" Align="Center">
+			9999
+		</StaticText>
+		<StaticText Name="CharacterRing3" X="410" Y="351" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" NotDetected="1" Align="Center">
+			唔理
+		</StaticText>		
+		<AniIcon Name="ItemModel3"  X="476" Y="105" Rotation="1" AnimationIndex="0" Loop="1" Align="1" Hide="0" NotDetected="1"/>	
+		<AniIcon Name="ModelShadow3" Image="Shadow.ent"  X="476" Y="105" Rotation="0" AnimationIndex="0" Loop="0" Align="1" Hide="0" NotDetected="1"/>
+		
+	</Panel>
+	-->
+</UI>
+		

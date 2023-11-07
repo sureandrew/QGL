@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" ?>
+<!-- Our to do list data -->
+<UI>
+	<Font Name="Data\DFGB5_Y9.TTC" Width="12" Height="12" />
+	<Panel Name="TalkPanel" Image="Data\interface008_chat.tga" X="210" Y="220" 
+			Left="410" Top="8" Right="790" Bottom="132" >
+		<StaticText Name="TalkMessage" X="20" Y="12" Row="1" Column="40" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		
+		今天的一次測試，真Happy!！
+		
+		</StaticText>
+		<Button Name="CloseTestDebug" Image="Data\inerface0001_main.tga" X="20" Y="80" LuaLButtonUp="RemoveTestDebug">
+			<ButtonRect State="0" Left="11" Top="244" Right="34" Bottom="267" />
+			<ButtonRect State="1" Left="36" Top="244" Right="59" Bottom="267" />
+			<ButtonRect State="2" Left="61" Top="244" Right="84" Bottom="267" />
+			<ButtonRect State="3" Left="11" Top="244" Right="34" Bottom="267" />
+		</Button>
+	</Panel>
+</UI>

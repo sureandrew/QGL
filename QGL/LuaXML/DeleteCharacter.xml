@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" ?>
+
+<UI>
+	<ID Name="ConfirmDeleteCharacter" />
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	<Panel Name="ConfirmDeleteCharacterPanel" Image="Data\inerface0004_main_A.tga" X="286" Y="251" Left="314" Top="293" Right="542" Bottom="391"
+		Drag="1" DragLeft="0" DragTop="0" DragRight="228"	DragBottom="98">
+		<StaticText Name="ConfirmDeleteCharacterText" X="0" Y="20" Height="20" Width="228" Row="1" Column="6" EdgeCode="LIGHT" FontColor="FFEDD97A" ShadowColor="FF000000" Align="CENTER">
+			请输入新名字
+		</StaticText>
+		
+		<UIImage Name="DeleteCharacterTextBg" Image="Data\inerface0004_main_A.tga" X="49" Y="39" Left="417" Top="416" Right="548" Bottom="438" />
+		
+		<EditBox Name="DeleteCharacterEditBox" X="56" Y="45" Row="1" Column="13" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" Limit="13">
+		</EditBox>
+		
+		<Button Name="DeleteCharacterOK" Image="Data\inerface0004_main_A.tga" X="46" Y="65" LuaLButtonUp="ConfirmDeleteCharacter">
+			<ButtonRect State="0" Left="4" Top="511" Right="68" Bottom="528" />
+			<ButtonRect State="1" Left="70" Top="511" Right="134" Bottom="528" />
+			<ButtonRect State="2" Left="136" Top="511" Right="200" Bottom="528" />
+		</Button>
+		
+		<Button Name="DeleteCharacterNO" Image="Data\inerface0004_main_A.tga" X="118" Y="65" LuaLButtonUp="CloseConfirmDeleteCharacter">
+			<ButtonRect State="0" Left="4" Top="530" Right="68" Bottom="547" />
+			<ButtonRect State="1" Left="70" Top="530" Right="134" Bottom="547" />
+			<ButtonRect State="2" Left="136" Top="530" Right="200" Bottom="547" />
+		</Button>
+	
+	</Panel>	
+</UI>
+

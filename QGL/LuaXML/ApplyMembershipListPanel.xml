@@ -1,0 +1,229 @@
+<?xml version="1.0" ?>
+<UI>
+	<ID Name="ApplyMembershipList" />
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	<Panel Name="ApplyMembershipListPanel" Image="Data\interface0015_main_I.tga" X="231" Y="71" 
+			Left="4" Top="4" Right="445" Bottom="245" DetectImage = "1" LuaRButtonUp="CloseApplyMembershipListPanel"
+			LuaKeyChar="CloseApplyMembershipListPanel"
+			Drag="1" DragLeft="0" DragTop="0" DragRight="441" DragBottom="241" LuaStartDrag="CloseApplicantPopup"
+			 LuaMouseWheel="ApplyMembershipListWheel">
+			<Button Name="ClearAllRequest" Image="Data\interface0015_main_I.tga" X="342" Y="210" LuaLButtonUp="ClearAllRequest">
+				<ButtonRect State="0" Left="4" Top="297" Right="96" Bottom="318"/>
+				<ButtonRect State="1" Left="102" Top="297" Right="194" Bottom="318"/>
+				<ButtonRect State="2" Left="200" Top="297" Right="292" Bottom="318"/>
+			</Button>
+			
+			<Button Name="RequestAccept" Image="Data\interface0015_main_I.tga" X="112" Y="210" LuaLButtonUp="JoinAcceptButton">
+				<ButtonRect State="0" Left="4" Top="369" Right="96" Bottom="390"/>
+				<ButtonRect State="1" Left="102" Top="369" Right="194" Bottom="390"/>
+				<ButtonRect State="2" Left="200" Top="369" Right="292" Bottom="390"/>
+			</Button>
+			<Button Name="RequestReject" Image="Data\interface0015_main_I.tga" X="224" Y="210" LuaLButtonUp="JoinRejectButton">
+				<ButtonRect State="0" Left="4" Top="345" Right="96" Bottom="366"/>
+				<ButtonRect State="1" Left="102" Top="345" Right="194" Bottom="366"/>
+				<ButtonRect State="2" Left="200" Top="345" Right="292" Bottom="366"/>
+			</Button>
+			
+		<ScrollBarV Name="ApplicantScrollBar" X="422" Y="55" Width ="14" Height="147" Limit="0" BarColor="0" LuaLButtonDown="ApplyScroll">
+			<PrevButton Name="ApplyMembershipListUp" Image="Data\interface0015_main_I.tga" X="0" Y="0"  LuaLButtonUp="ApplyScrollUp">
+				<ButtonRect State="0" Left="449" Top="50" Right="463" Bottom="64" />
+				<ButtonRect State="1" Left="465" Top="50" Right="479" Bottom="64" />
+				<ButtonRect State="2" Left="481" Top="50" Right="495" Bottom="64" />
+			</PrevButton>
+			<NextButton Name="ApplyMembershipListDown" Image="Data\interface0015_main_I.tga" X="422" Y="188"  LuaLButtonUp="ApplyScrollDown">
+				<ButtonRect State="0" Left="449" Top="67" Right="463" Bottom="81"/>
+				<ButtonRect State="1" Left="465" Top="67" Right="479" Bottom="81"/>
+				<ButtonRect State="2" Left="481" Top="67" Right="495" Bottom="81"/>
+			</NextButton>
+			<MoveButton Image="Data\interface0015_main_I.tga" X="0" Y="14"  LuaMouseMove="ApplyScroll">
+				<ButtonRect State="0" Left="498" Top="50" Right="512" Bottom="80" />
+				<ButtonRect State="1" Left="498" Top="50" Right="512" Bottom="80" />
+				<ButtonRect State="2" Left="498" Top="50" Right="512" Bottom="80" />
+			</MoveButton>
+		</ScrollBarV>
+		
+			<Button Name="ApplyMembershipListPanelClose" Image="Data\interface0015_main_I.tga" X="404" Y="11" LuaLButtonUp="CloseApplyMembershipListPanel">
+				<ButtonRect State="0" Left="447" Top="28" Right="471" Bottom="46" />
+				<ButtonRect State="1" Left="472" Top="28" Right="496" Bottom="46" />
+				<ButtonRect State="2" Left="497" Top="28" Right="521" Bottom="46" />
+			</Button>
+		
+			
+			<UIImage Name="SelectedApplicant" X="3" Y="55" Image="Data\interface0015_main_I.tga" Left="8" Top="271" Right="424" Bottom="287" AutoDelete="0" NotDetected="1" Hide="1"/>
+			
+			<UIImage Name="Applicant1" X="3" Y="55" Image="" Left="0" Top="0" Right="405" Bottom="15" AutoDelete="0" LuaLButtonDown="SetApplicant" LuaRButtonDown="Applicant_Popup"	/>
+			<StaticText Name="ApplicantName1" X="1" Y="55" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			上天下地無人能敵
+			</StaticText>
+			<StaticText Name="ApplicantLevel1" X="113" Y="55" Row="1" Column="4" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			9999
+			</StaticText>
+			<StaticText Name="ApplicantClass1" X="165" Y="55" Row="1" Column="6" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			任何職業
+			</StaticText>
+			<StaticText Name="ApplicantFaction1" X="230" Y="55" Row="1" Column="6" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			任何幫派
+			</StaticText>
+			<StaticText Name="ApplicantManor1" X="297" Y="55" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			</StaticText>
+			
+			<UIImage Name="Applicant2" X="3" Y="70" Image="" Left="0" Top="0" Right="405" Bottom="15" AutoDelete="0" LuaLButtonDown="SetApplicant" LuaRButtonDown="Applicant_Popup"	/>
+			<StaticText Name="ApplicantName2" X="1" Y="70" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			上天下地無人能敵
+			</StaticText>
+			<StaticText Name="ApplicantLevel2" X="113" Y="70" Row="1" Column="4" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			9999
+			</StaticText>
+			<StaticText Name="ApplicantClass2" X="165" Y="70" Row="1" Column="6" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			任何職業
+			</StaticText>
+			<StaticText Name="ApplicantFaction2" X="230" Y="70" Row="1" Column="6" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			任何幫派
+			</StaticText>
+			<StaticText Name="ApplicantManor2" X="297" Y="70" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			</StaticText>
+			
+			<UIImage Name="Applicant3" X="3" Y="85" Image="" Left="0" Top="0" Right="405" Bottom="15" AutoDelete="0" LuaLButtonDown="SetApplicant" LuaRButtonDown="Applicant_Popup"	/>
+			<StaticText Name="ApplicantName3" X="1" Y="85" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			上天下地無人能敵
+			</StaticText>
+			<StaticText Name="ApplicantLevel3" X="113" Y="85" Row="1" Column="4" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			9999
+			</StaticText>
+			<StaticText Name="ApplicantClass3" X="165" Y="85" Row="1" Column="6" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			任何職業
+			</StaticText>
+			<StaticText Name="ApplicantFaction3" X="230" Y="85" Row="1" Column="6" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			任何幫派
+			</StaticText>
+			<StaticText Name="ApplicantManor3" X="297" Y="85" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			</StaticText>
+			
+			<UIImage Name="Applicant4" X="3" Y="100" Image="" Left="0" Top="0" Right="405" Bottom="15" AutoDelete="0" LuaLButtonDown="SetApplicant" LuaRButtonDown="Applicant_Popup"	/>
+			<StaticText Name="ApplicantName4" X="1" Y="100" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			上天下地無人能敵
+			</StaticText>
+			<StaticText Name="ApplicantLevel4" X="113" Y="100" Row="1" Column="4" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			9999
+			</StaticText>
+			<StaticText Name="ApplicantClass4" X="165" Y="100" Row="1" Column="6" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			任何職業
+			</StaticText>
+			<StaticText Name="ApplicantFaction4" X="230" Y="100" Row="1" Column="6" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			任何幫派
+			</StaticText>
+			<StaticText Name="ApplicantManor4" X="297" Y="100" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			</StaticText>
+			
+			<UIImage Name="Applicant5" X="3" Y="115" Image="" Left="0" Top="0" Right="405" Bottom="15" AutoDelete="0" LuaLButtonDown="SetApplicant" LuaRButtonDown="Applicant_Popup"	/>
+			<StaticText Name="ApplicantName5" X="1" Y="115" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			上天下地無人能敵
+			</StaticText>
+			<StaticText Name="ApplicantLevel5" X="113" Y="115" Row="1" Column="4" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			9999
+			</StaticText>
+			<StaticText Name="ApplicantClass5" X="165" Y="115" Row="1" Column="6" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			任何職業
+			</StaticText>
+			<StaticText Name="ApplicantFaction5" X="230" Y="115" Row="1" Column="6" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			任何幫派
+			</StaticText>
+			<StaticText Name="ApplicantManor5" X="297" Y="115" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			</StaticText>
+			
+			<UIImage Name="Applicant6" X="3" Y="130" Image="" Left="0" Top="0" Right="405" Bottom="15" AutoDelete="0" LuaLButtonDown="SetApplicant" LuaRButtonDown="Applicant_Popup"	/>
+			<StaticText Name="ApplicantName6" X="1" Y="130" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			上天下地無人能敵
+			</StaticText>
+			<StaticText Name="ApplicantLevel6" X="113" Y="130" Row="1" Column="4" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			9999
+			</StaticText>
+			<StaticText Name="ApplicantClass6" X="165" Y="130" Row="1" Column="6" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			任何職業
+			</StaticText>
+			<StaticText Name="ApplicantFaction6" X="230" Y="130" Row="1" Column="6" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			任何幫派
+			</StaticText>
+			<StaticText Name="ApplicantManor6" X="297" Y="130" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			</StaticText>
+			
+			<UIImage Name="Applicant7" X="3" Y="145" Image="" Left="0" Top="0" Right="405" Bottom="15" AutoDelete="0" LuaLButtonDown="SetApplicant" LuaRButtonDown="Applicant_Popup"	/>
+			<StaticText Name="ApplicantName7" X="1" Y="145" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			上天下地無人能敵
+			</StaticText>
+			<StaticText Name="ApplicantLevel7" X="113" Y="145" Row="1" Column="4" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			9999
+			</StaticText>
+			<StaticText Name="ApplicantClass7" X="165" Y="145" Row="1" Column="6" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			任何職業
+			</StaticText>
+			<StaticText Name="ApplicantFaction7" X="230" Y="145" Row="1" Column="6" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			任何幫派
+			</StaticText>
+			<StaticText Name="ApplicantManor7" X="297" Y="145" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			</StaticText>
+			
+			<UIImage Name="Applicant8" X="3" Y="160" Image="" Left="0" Top="0" Right="405" Bottom="15" AutoDelete="0" LuaLButtonDown="SetApplicant" LuaRButtonDown="Applicant_Popup"	/>
+			<StaticText Name="ApplicantName8" X="1" Y="160" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			上天下地無人能敵
+			</StaticText>
+			<StaticText Name="ApplicantLevel8" X="113" Y="160" Row="1" Column="4" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			9999
+			</StaticText>
+			<StaticText Name="ApplicantClass8" X="165" Y="160" Row="1" Column="6" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			任何職業
+			</StaticText>
+			<StaticText Name="ApplicantFaction8" X="230" Y="160" Row="1" Column="6" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			任何幫派
+			</StaticText>
+			<StaticText Name="ApplicantManor8" X="297" Y="160" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			</StaticText>
+			
+			<UIImage Name="Applicant9" X="3" Y="175" Image="" Left="0" Top="0" Right="405" Bottom="15" AutoDelete="0" LuaLButtonDown="SetApplicant" LuaRButtonDown="Applicant_Popup"	/>
+			<StaticText Name="ApplicantName9" X="1" Y="175" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			上天下地無人能敵
+			</StaticText>
+			<StaticText Name="ApplicantLevel9" X="113" Y="175" Row="1" Column="4" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			9999
+			</StaticText>
+			<StaticText Name="ApplicantClass9" X="165" Y="175" Row="1" Column="6" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			任何職業
+			</StaticText>
+			<StaticText Name="ApplicantFaction9" X="230" Y="175" Row="1" Column="6" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			任何幫派
+			</StaticText>
+			<StaticText Name="ApplicantManor9" X="297" Y="175" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			</StaticText>
+			
+			<UIImage Name="Applicant10" X="3" Y="190" Image="" Left="0" Top="0" Right="405" Bottom="15" AutoDelete="0" LuaLButtonDown="SetApplicant" LuaRButtonDown="Applicant_Popup"	/>
+			<StaticText Name="ApplicantName10" X="1" Y="190" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			上天下地無人能敵
+			</StaticText>
+			<StaticText Name="ApplicantLevel10" X="113" Y="190" Row="1" Column="4" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			9999
+			</StaticText>
+			<StaticText Name="ApplicantClass10" X="165" Y="190" Row="1" Column="6" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			任何職業
+			</StaticText>
+			<StaticText Name="ApplicantFaction10" X="230" Y="190" Row="1" Column="6" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			任何幫派
+			</StaticText>
+			<StaticText Name="ApplicantManor10" X="297" Y="190" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			</StaticText>
+						
+	</Panel>
+	<Panel Expand="1" Name="ApplicantPopupPanel" Image="Data\inerface0001_main.tga" X="300" Y="100" 
+			Left          ="88" Top          ="205" Right          ="158" Bottom          ="212"
+			LineRectLeft  ="88" LineRectTop  ="230" LineRectRight  ="158" LineRectBottom  ="242" LineCount="3"
+			BottomRectLeft="88" BottomRectTop="279" BottomRectRight="158" BottomRectBottom="289"
+			Hide="1" LuaTimeOut="ApplicantPopupTimeOut" TimeOutCount="5000" 
+			LuaMouseOut="StartApplicantCount" InsertToEventList="1" LuaMouseIn="HoldApplicantPopup"
+		>
+		<PopUpMenu Name="ApplicantPopup" X="5" Y="7" BarWidth="53" Row="5" Column="6" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000"
+			SelBarColor="FFFF0000" LuaLButtonDown="ApplicantPopup" LuaRButtonDown="CloseApplicantPopup" FontName="Data\simsun.ttc" FontHeight="13" FontWidth="13">
+			<PopUpMenuString Code="0">　密语　</PopUpMenuString>
+			<PopUpMenuString Code="1">接受加入</PopUpMenuString>
+			<PopUpMenuString Code="2">拒绝加入</PopUpMenuString>
+		</PopUpMenu>
+	</Panel>
+</UI>

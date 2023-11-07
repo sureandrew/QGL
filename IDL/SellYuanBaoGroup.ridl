@@ -1,0 +1,28 @@
+//-- Config
+config
+{
+	SubPath="Logic/";
+	ClassID=60600;
+	StartID=60600;
+	EndID  =60999;
+	ModifyMask=1;
+}
+
+//-- include
+#include "Reuben/Network/NetGroup.h"
+
+//-- object class
+class SellYuanBaoGroup : NetGroup
+{
+public:	
+	
+	GetTempBank();
+	//GetAllYBTAndGMoney();	
+	CloseSellYuanBao();
+
+	CB_AddSellYuanBao(NetGroup* sellYuanBaoGrp, UInt8 msgIndex);
+	CB_GetAllYBTAndGMoney(UInt8 msgIndex, UInt32 yuanbaoTicket, UInt32 gmoney);
+	CB_BuyYuanBao(UInt32 msgIndex, UInt32 num);
+	CB_RemoveSellYuanBao(UInt32 sellYuanBaoID);
+	CB_GetTempBank(UInt32 YBT, UInt32 money);
+}

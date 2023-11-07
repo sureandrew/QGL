@@ -1,0 +1,980 @@
+<?xml version="1.0" ?>
+<!-- Our to do list data -->
+<UI>
+	<ID Name="HawkerOwner" />
+	<!--<Font Name="Data\mingliu.ttc" Width="12" Height="12" />-->
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	<Panel Name="HawkerOwnerPanel" Image="Data\interface0033_Hawker.tga" X="70" Y="80" 
+			Left="4" Top="3" Right="681" Bottom="461" LuaRButtonUp="CloseHawkerOwner" LuaKeyChar="CloseHawkerOwner" DetectImage = "1"
+			Drag="1" DragLeft="0" DragTop="0" DragRight="677" DragBottom="458" >
+			
+		<UIImage Name="HawkerOwnerImage" Image="Data\interface0033_Hawker.tga" X="321" Y="5" Left="164" Top="470" Right="196" Bottom="487" NotDetected="1" />			
+			
+		<CheckBox Name = "HawkerOwnerSellItem" Image="Data\interface0033_Hawker.tga" X="6" Y="34"  LuaLButtonDown="SelectHawkerOwnerSellItem">
+			<CheckBoxRect Index="0" Left="688" Top="57" Right="753" Bottom="77" />
+			<CheckBoxRect Index="1" Left="688" Top="57" Right="753" Bottom="77" />
+			<CheckBoxRect Index="2" Left="772" Top="57" Right="841" Bottom="77" />
+		</CheckBox>
+			
+		<CheckBox Name = "HawkerOwnerSellPartner" Image="Data\interface0033_Hawker.tga" X="71" Y="34"  LuaLButtonDown="SelectHawkerOwnerSellPartner">
+			<CheckBoxRect Index="0" Left="688" Top="81" Right="753" Bottom="101" />
+			<CheckBoxRect Index="1" Left="688" Top="81" Right="753" Bottom="101" />
+			<CheckBoxRect Index="2" Left="772" Top="81" Right="841" Bottom="101" />
+		</CheckBox>
+			
+		<CheckBox Name = "HawkerOwnerSellPet" Image="Data\interface0033_Hawker.tga" X="136" Y="34"  LuaLButtonDown="SelectHawkerOwnerSellPet">
+			<CheckBoxRect Index="0" Left="688" Top="105" Right="753" Bottom="125" />
+			<CheckBoxRect Index="1" Left="688" Top="105" Right="753" Bottom="125" />
+			<CheckBoxRect Index="2" Left="772" Top="105" Right="841" Bottom="125" />
+		</CheckBox>	
+			
+		<CheckBox Name = "HawkerOwnerSellLog" Image="Data\interface0033_Hawker.tga" X="201" Y="34"  LuaLButtonDown="SelectHawkerOwnerSellLog">
+			<CheckBoxRect Index="0" Left="688" Top="154" Right="767" Bottom="174" />
+			<CheckBoxRect Index="1" Left="688" Top="154" Right="767" Bottom="174" />
+			<CheckBoxRect Index="2" Left="772" Top="154" Right="851" Bottom="174" />
+		</CheckBox>
+		
+		<LinerImage Name="HawkerOwnerTopBorder" X="6" Y="54" Image="Data\interface0033_Hawker.tga" Left="706" Top="17"
+			Right="710" Bottom="19" LineWidth="333" BaseWidth="333" Hide="0" Denumerator="100" Numerator="100" />
+		<LinerImageV Name="HawkerOwnerLeftBorder" X="6" Y="55" Image="Data\interface0033_Hawker.tga" Left="691" Top="32"
+			Right="693" Bottom="38" LineHeight="336" BaseHeight="336" Hide="0" Denumerator="100" Numerator="100" />
+		<LinerImage Name="HawkerOwnerBottomBorder" X="6" Y="390" Image="Data\interface0033_Hawker.tga" Left="706" Top="51"
+			Right="710" Bottom="53" LineWidth="333" BaseWidth="333" Hide="0" Denumerator="100" Numerator="100" />
+		<LinerImageV Name="HawkerOwnerRightBorder" X="337" Y="55" Image="Data\interface0033_Hawker.tga" Left="723" Top="32"
+			Right="725" Bottom="38" LineHeight="336" BaseHeight="336" Hide="0" Denumerator="100" Numerator="100" />
+			
+		<Button Name="HawkerOwnerPrevPage" Image="Data\interface0033_Hawker.tga" X="123" Y="365" LuaLButtonDown="SelectHawkerOwnerPrevPage">
+			<ButtonRect State="0" Left="858" Top="101" Right="884" Bottom="125" />
+			<ButtonRect State="1" Left="858" Top="126" Right="884" Bottom="150" />
+			<ButtonRect State="2" Left="858" Top="151" Right="884" Bottom="175" />
+		</Button>
+		
+		<StaticText Name="HawkerOwnerPageNo" X="150" Y="370" Width="49" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center" NotDetected="1">
+		</StaticText>
+		
+		<Button Name="HawkerOwnerNextPage" Image="Data\interface0033_Hawker.tga" X="199" Y="365" LuaLButtonDown="SelectHawkerOwnerNextPage">
+			<ButtonRect State="0" Left="894" Top="101" Right="920" Bottom="125" />
+			<ButtonRect State="1" Left="894" Top="126" Right="920" Bottom="150" />
+			<ButtonRect State="2" Left="894" Top="151" Right="920" Bottom="175" />
+		</Button>
+		
+		<Button Name="HawkerOwnerSellSlot00" Image="Data\interface0033_Hawker.tga" X="11" Y="60" LuaLButtonDown="">
+			<ButtonRect State="0" Left="688" Top="180" Right="848" Bottom="230" />
+			<ButtonRect State="1" Left="852" Top="41" Right="1012" Bottom="91" />
+			<ButtonRect State="2" Left="852" Top="180" Right="1012" Bottom="230" />
+		</Button>
+		<UIImage Name="HawkerOwnerSell000Bg" X="16" Y="65" Image="Data\interface0033_Hawker.tga" Left="739" Top="11" Right="778" Bottom="50" NotDetected="1" Hide="1" />
+		<AniIcon Name="HawkerOwnerSell000Icon" X="16" Y="65" Image="" AutoDelete="0" LuaLButtonUp="DragHawkerSellItem000" LuaRButtonUp="TakeOffHawkerSellItem000" Detect = "1" Hide="1" />
+		<StaticText Name="HawkerOwnerSell000Name" X="60" Y="67" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkerOwnerSell000PriceTitle" X="60" Y="86" Row="1" Column="12" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+			单价：
+		</StaticText>
+		<StaticText Name="HawkerOwnerSell000Price" X="90" Y="86" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkerOwnerSell000Stack" X="19" Y="91" Row="1" Column="12" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<Button Name="HawkerOwnerSellSlot01" Image="Data\interface0033_Hawker.tga" X="174" Y="60" LuaLButtonDown="">
+			<ButtonRect State="0" Left="688" Top="180" Right="848" Bottom="230" />
+			<ButtonRect State="1" Left="852" Top="41" Right="1012" Bottom="91" />
+			<ButtonRect State="2" Left="852" Top="180" Right="1012" Bottom="230" />
+		</Button>
+		<UIImage Name="HawkerOwnerSell001Bg" X="179" Y="65" Image="Data\interface0033_Hawker.tga" Left="739" Top="11" Right="778" Bottom="50" NotDetected="1" Hide="1" />
+		<AniIcon Name="HawkerOwnerSell001Icon" X="179" Y="65" Image="" AutoDelete="0" LuaLButtonUp="DragHawkerSellItem001" LuaRButtonUp="TakeOffHawkerSellItem001" Detect = "1" Hide="1" />
+		<StaticText Name="HawkerOwnerSell001Name" X="223" Y="67" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkerOwnerSell001PriceTitle" X="223" Y="86" Row="1" Column="12" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+			单价：
+		</StaticText>
+		<StaticText Name="HawkerOwnerSell001Price" X="253" Y="86" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkerOwnerSell001Stack" X="182" Y="91" Row="1" Column="12" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<Button Name="HawkerOwnerSellSlot02" Image="Data\interface0033_Hawker.tga" X="11" Y="111" LuaLButtonDown="">
+			<ButtonRect State="0" Left="688" Top="180" Right="848" Bottom="230" />
+			<ButtonRect State="1" Left="852" Top="41" Right="1012" Bottom="91" />
+			<ButtonRect State="2" Left="852" Top="180" Right="1012" Bottom="230" />
+		</Button>
+		<UIImage Name="HawkerOwnerSell002Bg" X="16" Y="115" Image="Data\interface0033_Hawker.tga" Left="739" Top="11" Right="778" Bottom="50" NotDetected="1" Hide="1" />
+		<AniIcon Name="HawkerOwnerSell002Icon" X="16" Y="115" Image="" AutoDelete="0" LuaLButtonUp="DragHawkerSellItem002" LuaRButtonUp="TakeOffHawkerSellItem002" Detect = "1" Hide="1" />
+		<StaticText Name="HawkerOwnerSell002Name" X="60" Y="117" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkerOwnerSell002PriceTitle" X="60" Y="136" Row="1" Column="12" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+			单价：
+		</StaticText>
+		<StaticText Name="HawkerOwnerSell002Price" X="90" Y="136" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkerOwnerSell002Stack" X="19" Y="141" Row="1" Column="12" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<Button Name="HawkerOwnerSellSlot03" Image="Data\interface0033_Hawker.tga" X="174" Y="111" LuaLButtonDown="">
+			<ButtonRect State="0" Left="688" Top="180" Right="848" Bottom="230" />
+			<ButtonRect State="1" Left="852" Top="41" Right="1012" Bottom="91" />
+			<ButtonRect State="2" Left="852" Top="180" Right="1012" Bottom="230" />
+		</Button>
+		<UIImage Name="HawkerOwnerSell003Bg" X="179" Y="115" Image="Data\interface0033_Hawker.tga" Left="739" Top="11" Right="778" Bottom="50" NotDetected="1" Hide="1" />
+		<AniIcon Name="HawkerOwnerSell003Icon" X="179" Y="115" Image="" AutoDelete="0" LuaLButtonUp="DragHawkerSellItem003" LuaRButtonUp="TakeOffHawkerSellItem003" Detect = "1" Hide="1" />
+		<StaticText Name="HawkerOwnerSell003Name" X="223" Y="117" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkerOwnerSell003PriceTitle" X="223" Y="136" Row="1" Column="12" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+			单价：
+		</StaticText>
+		<StaticText Name="HawkerOwnerSell003Price" X="253" Y="136" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkerOwnerSell003Stack" X="182" Y="141" Row="1" Column="12" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<Button Name="HawkerOwnerSellSlot04" Image="Data\interface0033_Hawker.tga" X="11" Y="161" LuaLButtonDown="">
+			<ButtonRect State="0" Left="688" Top="180" Right="848" Bottom="230" />
+			<ButtonRect State="1" Left="852" Top="41" Right="1012" Bottom="91" />
+			<ButtonRect State="2" Left="852" Top="180" Right="1012" Bottom="230" />
+		</Button>
+		<UIImage Name="HawkerOwnerSell004Bg" X="16" Y="165" Image="Data\interface0033_Hawker.tga" Left="739" Top="11" Right="778" Bottom="50" NotDetected="1" Hide="1" />
+		<AniIcon Name="HawkerOwnerSell004Icon" X="16" Y="165" Image="" AutoDelete="0" LuaRButtonUp="TakeOffHawkerSellItem004" LuaLButtonUp="DragHawkerSellItem004" Detect = "1" Hide="1" />
+		<StaticText Name="HawkerOwnerSell004Name" X="60" Y="167" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkerOwnerSell004PriceTitle" X="60" Y="186" Row="1" Column="12" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+			单价：
+		</StaticText>
+		<StaticText Name="HawkerOwnerSell004Price" X="90" Y="186" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkerOwnerSell004Stack" X="19" Y="191" Row="1" Column="12" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<Button Name="HawkerOwnerSellSlot05" Image="Data\interface0033_Hawker.tga" X="174" Y="161" LuaLButtonDown="">
+			<ButtonRect State="0" Left="688" Top="180" Right="848" Bottom="230" />
+			<ButtonRect State="1" Left="852" Top="41" Right="1012" Bottom="91" />
+			<ButtonRect State="2" Left="852" Top="180" Right="1012" Bottom="230" />
+		</Button>
+		<UIImage Name="HawkerOwnerSell005Bg" X="179" Y="165" Image="Data\interface0033_Hawker.tga" Left="739" Top="11" Right="778" Bottom="50" NotDetected="1" Hide="1" />
+		<AniIcon Name="HawkerOwnerSell005Icon" X="179" Y="165" Image="" AutoDelete="0" LuaRButtonUp="TakeOffHawkerSellItem005" LuaLButtonUp="DragHawkerSellItem005" Detect = "1" Hide="1" />
+		<StaticText Name="HawkerOwnerSell005Name" X="223" Y="167" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkerOwnerSell005PriceTitle" X="223" Y="186" Row="1" Column="12" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+			单价：
+		</StaticText>
+		<StaticText Name="HawkerOwnerSell005Price" X="253" Y="186" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkerOwnerSell005Stack" X="182" Y="191" Row="1" Column="12" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<Button Name="HawkerOwnerSellSlot06" Image="Data\interface0033_Hawker.tga" X="11" Y="211" LuaLButtonDown="">
+			<ButtonRect State="0" Left="688" Top="180" Right="848" Bottom="230" />
+			<ButtonRect State="1" Left="852" Top="41" Right="1012" Bottom="91" />
+			<ButtonRect State="2" Left="852" Top="180" Right="1012" Bottom="230" />
+		</Button>
+		<UIImage Name="HawkerOwnerSell006Bg" X="16" Y="215" Image="Data\interface0033_Hawker.tga" Left="739" Top="11" Right="778" Bottom="50" NotDetected="1" Hide="1" />
+		<AniIcon Name="HawkerOwnerSell006Icon" X="16" Y="215" Image="" AutoDelete="0" LuaRButtonUp="TakeOffHawkerSellItem006" LuaLButtonUp="DragHawkerSellItem006" Detect = "1" Hide="1" />
+		<StaticText Name="HawkerOwnerSell006Name" X="60" Y="217" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkerOwnerSell006PriceTitle" X="60" Y="236" Row="1" Column="12" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+			单价：
+		</StaticText>
+		<StaticText Name="HawkerOwnerSell006Price" X="90" Y="236" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkerOwnerSell006Stack" X="19" Y="241" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<Button Name="HawkerOwnerSellSlot07" Image="Data\interface0033_Hawker.tga" X="174" Y="211" LuaLButtonDown="">
+			<ButtonRect State="0" Left="688" Top="180" Right="848" Bottom="230" />
+			<ButtonRect State="1" Left="852" Top="41" Right="1012" Bottom="91" />
+			<ButtonRect State="2" Left="852" Top="180" Right="1012" Bottom="230" />
+		</Button>
+		<UIImage Name="HawkerOwnerSell007Bg" X="179" Y="215" Image="Data\interface0033_Hawker.tga" Left="739" Top="11" Right="778" Bottom="50" NotDetected="1" Hide="1" />
+		<AniIcon Name="HawkerOwnerSell007Icon" X="179" Y="215" Image="" AutoDelete="0" LuaRButtonUp="TakeOffHawkerSellItem007" LuaLButtonUp="DragHawkerSellItem007" Detect = "1" Hide="1" />
+		<StaticText Name="HawkerOwnerSell007Name" X="223" Y="217" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkerOwnerSell007PriceTitle" X="223" Y="236" Row="1" Column="12" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+			单价：
+		</StaticText>
+		<StaticText Name="HawkerOwnerSell007Price" X="253" Y="236" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkerOwnerSell007Stack" X="182" Y="241" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<Button Name="HawkerOwnerSellSlot08" Image="Data\interface0033_Hawker.tga" X="11" Y="261" LuaLButtonDown="">
+			<ButtonRect State="0" Left="688" Top="180" Right="848" Bottom="230" />
+			<ButtonRect State="1" Left="852" Top="41" Right="1012" Bottom="91" />
+			<ButtonRect State="2" Left="852" Top="180" Right="1012" Bottom="230" />
+		</Button>
+		<UIImage Name="HawkerOwnerSell008Bg" X="16" Y="265" Image="Data\interface0033_Hawker.tga" Left="739" Top="11" Right="778" Bottom="50" NotDetected="1" Hide="1" />
+		<AniIcon Name="HawkerOwnerSell008Icon" X="16" Y="265" Image="" AutoDelete="0" LuaRButtonUp="TakeOffHawkerSellItem008" LuaLButtonUp="DragHawkerSellItem008" Detect = "1" Hide="1" />
+		<StaticText Name="HawkerOwnerSell008Name" X="60" Y="267" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkerOwnerSell008PriceTitle" X="60" Y="286" Row="1" Column="12" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+			单价：
+		</StaticText>
+		<StaticText Name="HawkerOwnerSell008Price" X="90" Y="286" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkerOwnerSell008Stack" X="19" Y="291" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<Button Name="HawkerOwnerSellSlot09" Image="Data\interface0033_Hawker.tga" X="174" Y="261" LuaLButtonDown="">
+			<ButtonRect State="0" Left="688" Top="180" Right="848" Bottom="230" />
+			<ButtonRect State="1" Left="852" Top="41" Right="1012" Bottom="91" />
+			<ButtonRect State="2" Left="852" Top="180" Right="1012" Bottom="230" />
+		</Button>
+		<UIImage Name="HawkerOwnerSell009Bg" X="179" Y="265" Image="Data\interface0033_Hawker.tga" Left="739" Top="11" Right="778" Bottom="50" NotDetected="1" Hide="1" />
+		<AniIcon Name="HawkerOwnerSell009Icon" X="179" Y="265" Image="" AutoDelete="0" LuaRButtonUp="TakeOffHawkerSellItem009" LuaLButtonUp="DragHawkerSellItem009" Detect = "1" Hide="1" />
+		<StaticText Name="HawkerOwnerSell009Name" X="223" Y="267" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkerOwnerSell009PriceTitle" X="223" Y="286" Row="1" Column="12" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+			单价：
+		</StaticText>
+		<StaticText Name="HawkerOwnerSell009Price" X="253" Y="286" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkerOwnerSell009Stack" X="182" Y="291" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<Button Name="HawkerOwnerSellSlot10" Image="Data\interface0033_Hawker.tga" X="11" Y="311" LuaLButtonDown="">
+			<ButtonRect State="0" Left="688" Top="180" Right="848" Bottom="230" />
+			<ButtonRect State="1" Left="852" Top="41" Right="1012" Bottom="91" />
+			<ButtonRect State="2" Left="852" Top="180" Right="1012" Bottom="230" />
+		</Button>
+		<UIImage Name="HawkerOwnerSell010Bg" X="16" Y="315" Image="Data\interface0033_Hawker.tga" Left="739" Top="11" Right="778" Bottom="50" NotDetected="1" Hide="1" />
+		<AniIcon Name="HawkerOwnerSell010Icon" X="16" Y="315" Image="" AutoDelete="0" LuaRButtonUp="TakeOffHawkerSellItem010" LuaLButtonUp="DragHawkerSellItem010" Detect = "1" Hide="1" />
+		<StaticText Name="HawkerOwnerSell010Name" X="60" Y="317" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkerOwnerSell010PriceTitle" X="60" Y="336" Row="1" Column="12" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+			单价：
+		</StaticText>
+		<StaticText Name="HawkerOwnerSell010Price" X="90" Y="336" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkerOwnerSell010Stack" X="19" Y="341" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<Button Name="HawkerOwnerSellSlot11" Image="Data\interface0033_Hawker.tga" X="174" Y="311" LuaLButtonDown="">
+			<ButtonRect State="0" Left="688" Top="180" Right="848" Bottom="230" />
+			<ButtonRect State="1" Left="852" Top="41" Right="1012" Bottom="91" />
+			<ButtonRect State="2" Left="852" Top="180" Right="1012" Bottom="230" />
+		</Button>
+		<UIImage Name="HawkerOwnerSell011Bg" X="179" Y="315" Image="Data\interface0033_Hawker.tga" Left="739" Top="11" Right="778" Bottom="50" NotDetected="1" Hide="1" />
+		<AniIcon Name="HawkerOwnerSell011Icon" X="179" Y="315" Image="" AutoDelete="0" LuaRButtonUp="TakeOffHawkerSellItem011" LuaLButtonUp="DragHawkerSellItem011" Detect = "1" Hide="1" />
+		<StaticText Name="HawkerOwnerSell011Name" X="223" Y="317" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkerOwnerSell011PriceTitle" X="223" Y="336" Row="1" Column="12" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+			单价：
+		</StaticText>
+		<StaticText Name="HawkerOwnerSell011Price" X="253" Y="336" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkerOwnerSell011Stack" X="182" Y="341" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<StaticText Name="HawkerOwnerRecordDate000" X="16" Y="65" Width="300" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkerOwnerRecord000" X="16" Y="81" Width="300" Height="32" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<StaticText Name="HawkerOwnerRecordDate001" X="16" Y="112" Width="300" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkerOwnerRecord001" X="16" Y="128" Width="300" Height="32" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<StaticText Name="HawkerOwnerRecordDate002" X="16" Y="160" Width="300" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkerOwnerRecord002" X="16" Y="176" Width="300" Height="32" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<StaticText Name="HawkerOwnerRecordDate003" X="16" Y="208" Width="300" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkerOwnerRecord003" X="16" Y="224" Width="300" Height="32" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<StaticText Name="HawkerOwnerRecordDate004" X="16" Y="256" Width="300" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkerOwnerRecord004" X="16" Y="272" Width="300" Height="32" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<StaticText Name="HawkerOwnerRecordDate005" X="16" Y="304" Width="300" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkerOwnerRecord005" X="16" Y="320" Width="300" Height="32" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+				
+		<Button Name="HawkerOwnerHawk" Image="Data\interface0033_Hawker.tga" X="142" Y="422" LuaLButtonDown="HawkerOwnerStartHawk">
+			<ButtonRect State="0" Left="689" Top="345" Right="781" Bottom="366" />
+			<ButtonRect State="1" Left="689" Top="370" Right="781" Bottom="391" />
+			<ButtonRect State="2" Left="689" Top="395" Right="781" Bottom="416" />
+		</Button>
+		
+		<Button Name="HawkerOwnerStopHawk" Image="Data\interface0033_Hawker.tga" X="142" Y="422" LuaLButtonDown="HawkerOwnerStopHawk" Hide="1">
+			<ButtonRect State="0" Left="689" Top="472" Right="781" Bottom="493" />
+			<ButtonRect State="1" Left="689" Top="497" Right="781" Bottom="518" />
+			<ButtonRect State="2" Left="689" Top="522" Right="781" Bottom="543" />
+		</Button>
+		
+		<StaticText Name="HawkerOwnerHawkTime" X="242" Y="404" Width="130" Height="32" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0" Align="CENTER">
+		</StaticText>
+		
+		<UIImage Name="HawkerOwnerEnterNameImage" Image="Data\interface0033_Hawker.tga" X="10" Y="397" Left="15" Top="469" Right="74" Bottom="486" />
+		<UIImage Name="HawkerOwnerNameBoxImage" Image="Data\interface0033_Hawker.tga" X="78" Y="395" Left="14" Top="496" Right="159" Bottom="518" />
+		<EditBox Name="HawkerOwnerNameBox" X="83" Y="399" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" Limit="8" LuaLButtonDown="SetHawkNameKeyIn" >
+		</EditBox>
+		
+		<Button Name="HawkerOwnerChangeName" Image="Data\interface0033_Hawker.tga" X="42" Y="422" LuaLButtonDown="ChangeHawkName">
+			<ButtonRect State="0" Left="884" Top="345" Right="976" Bottom="366" />
+			<ButtonRect State="1" Left="884" Top="370" Right="976" Bottom="391" />
+			<ButtonRect State="2" Left="884" Top="395" Right="976" Bottom="416" />
+			<ButtonRect State="3" Left="884" Top="395" Right="976" Bottom="416" />
+		</Button>
+			
+		<Button Name="HawkerOwnerPanelCross" Image="Data\interface0033_Hawker.tga" X="643" Y="8" LuaLButtonDown="CloseHawkerOwner">
+			<ButtonRect State="0" Left="788" Top="15" Right="812" Bottom="33" />
+			<ButtonRect State="1" Left="813" Top="15" Right="837" Bottom="33" />
+			<ButtonRect State="2" Left="838" Top="15" Right="862" Bottom="33" />
+		</Button>
+		
+		
+		
+		<!--Item Menu-->
+		<Button Name="HawkerOwnerCharacter" Image="Data\interface0005_main_B.tga" X="369" Y="190" LuaLButtonUp="SelectHawkerOwnerCharacter">
+			<ButtonRect State="0" Left="363" Top="37" Right="403" Bottom="57" />
+			<ButtonRect State="1" Left="405" Top="37" Right="445" Bottom="57" />
+			<ButtonRect State="2" Left="447" Top="37" Right="487" Bottom="57" />
+			<ButtonRect State="3" Left="447" Top="37" Right="487" Bottom="57" />
+		</Button>
+		<Button Name="HawkerOwnerPartner" Image="Data\interface0005_main_B.tga" X="415" Y="190" LuaLButtonUp="SelectHawkerOwnerPartner">
+			<ButtonRect State="0" Left="363" Top="58" Right="403" Bottom="78" />
+			<ButtonRect State="1" Left="405" Top="58" Right="445" Bottom="78" />
+			<ButtonRect State="2" Left="447" Top="58" Right="487" Bottom="78" />
+			<ButtonRect State="3" Left="447" Top="58" Right="487" Bottom="78" />
+		</Button>
+		<Button Name="HawkerOwnerPet" Image="Data\interface0005_main_B.tga" X="460" Y="190" LuaLButtonUp="SelectHawkerOwnerPet">
+			<ButtonRect State="0" Left="363" Top="16" Right="403" Bottom="36" />
+			<ButtonRect State="1" Left="405" Top="16" Right="445" Bottom="36" />
+			<ButtonRect State="2" Left="447" Top="16" Right="487" Bottom="36" />
+			<ButtonRect State="3" Left="447" Top="16" Right="487" Bottom="36" />
+		</Button>
+		<Button Name="HawkerOwnerCurrentBag" Image="Data\interface0005_main_B.tga" X="367" Y="252" LuaLButtonUp="SelectHawkerOwnerCurrentBag">
+			<ButtonRect State="0" Left="359" Top="81" Right="405" Bottom="105" />
+			<ButtonRect State="1" Left="406" Top="81" Right="452" Bottom="105" />
+			<ButtonRect State="2" Left="453" Top="81" Right="499" Bottom="105" />
+			<ButtonRect State="3" Left="453" Top="81" Right="499" Bottom="105" />
+		</Button>
+		<Button Name="HawkerOwnerSideBag" Image="Data\interface0005_main_B.tga" X="413" Y="252" LuaLButtonUp="SelectHawkerOwnerSideBag">
+			<ButtonRect State="0" Left="359" Top="106" Right="405" Bottom="130" />
+			<ButtonRect State="1" Left="406" Top="106" Right="452" Bottom="130" />
+			<ButtonRect State="2" Left="453" Top="106" Right="499" Bottom="130" />
+			<ButtonRect State="3" Left="453" Top="106" Right="499" Bottom="130" />
+		</Button>
+		<Button Name="HawkerOwnerBagExtra01" Image="Data\interface0005_main_B.tga" X="459" Y="252" LuaLButtonUp="SelectHawkerOwnerBagExtra1">
+			<ButtonRect State="0" Left="359" Top="131" Right="405" Bottom="155" />
+			<ButtonRect State="1" Left="406" Top="131" Right="452" Bottom="155" />
+			<ButtonRect State="2" Left="453" Top="131" Right="499" Bottom="155" />
+			<ButtonRect State="3" Left="453" Top="131" Right="499" Bottom="155" />
+		</Button>
+		<Button Name="HawkerOwnerBagExtra02" Image="Data\interface0005_main_B.tga" X="505" Y="252" LuaLButtonUp="SelectHawkerOwnerBagExtra2">
+			<ButtonRect State="0" Left="359" Top="131" Right="405" Bottom="155" />
+			<ButtonRect State="1" Left="406" Top="131" Right="452" Bottom="155" />
+			<ButtonRect State="2" Left="453" Top="131" Right="499" Bottom="155" />
+			<ButtonRect State="3" Left="453" Top="131" Right="499" Bottom="155" />
+		</Button>
+		<Button Name="HawkerOwnerBagExtra03" Image="Data\interface0005_main_B.tga" X="551" Y="252" LuaLButtonUp="SelectHawkerOwnerBagExtra3">
+			<ButtonRect State="0" Left="359" Top="131" Right="405" Bottom="155" />
+			<ButtonRect State="1" Left="406" Top="131" Right="452" Bottom="155" />
+			<ButtonRect State="2" Left="453" Top="131" Right="499" Bottom="155" />
+			<ButtonRect State="3" Left="453" Top="131" Right="499" Bottom="155" />
+		</Button>
+		<Button Name="HawkerOwnerLock" Image="Data\interface0005_main_B.tga" X="608" Y="249" LuaLButtonUp="">
+			<ButtonRect State="0" Left="354" Top="159" Right="397" Bottom="183" />
+			<ButtonRect State="1" Left="402" Top="159" Right="445" Bottom="183" />
+			<ButtonRect State="2" Left="450" Top="159" Right="493" Bottom="183" />
+			<ButtonRect State="3" Left="498" Top="159" Right="541" Bottom="183" />
+		</Button>
+		<!--
+		<Button Name="HawkerOwnerTheBox" Image="Data\interface0005_main_B.tga" X="625" Y="287" LuaLButtonUp="">
+			<ButtonRect State="0" Left="362" Top="217" Right="392" Bottom="273" />
+			<ButtonRect State="1" Left="393" Top="217" Right="423" Bottom="273" />
+			<ButtonRect State="2" Left="424" Top="217" Right="454" Bottom="273" />
+			<ButtonRect State="3" Left="455" Top="217" Right="485" Bottom="273" />
+		</Button>
+		<Button Name="HawkerOwnerDiamondInlay" Image="Data\interface0005_main_B.tga" X="625" Y="349" LuaLButtonUp="">
+			<ButtonRect State="0" Left="363" Top="279" Right="391" Bottom="335" />
+			<ButtonRect State="1" Left="394" Top="279" Right="422" Bottom="335" />
+			<ButtonRect State="2" Left="425" Top="279" Right="453" Bottom="335" />
+			<ButtonRect State="3" Left="456" Top="279" Right="484" Bottom="335" />
+		</Button>
+		-->
+		
+		<Button Name="ItemDiamondInlay" Image="Data\interface0005_main_B.tga" X="615" Y="349" Tips="点击整理当前背包"
+						TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="OnJpackItem">
+			<ButtonRect State="0" Left="503" Top="434" Right="560" Bottom="471" />
+			<ButtonRect State="1" Left="564" Top="434" Right="621" Bottom="471" />
+			<ButtonRect State="2" Left="675" Top="520" Right="731" Bottom="559" />
+			<ButtonRect State="3" Left="734" Top="520" Right="790" Bottom="559" />
+		</Button>
+		
+		<UIImage Name="HawkerOwnerModelBg" X="365" Y="36" Image="Data\interface0005_main_B.tga" Left="35" Top="47" Right="170" Bottom="198" NotDetected="1" />
+		<AniIcon Name="HawkerOwnerModel"  X="434" Y="90" Rotation = "1" 
+		AnimationIndex = "0" Loop = "1" Align = "1" Hide="0" />
+		
+	
+		<!-- Equip UI -->
+		<UIImage Name="HawkerOwnerEquipPanel" Image="Data\interface0005_main_B.tga" X="519" Y="39" 
+				Left="642" Top="17" Right="768" Bottom="143" Hide="0" AutoDelete="0"/>
+				
+		<!-- Character UI -->
+		<UIImage Name="HawkerOwnerMoneyInterface1" X="356" Y="228" Image="Data\interface0005_main_B.tga" 
+				Left="478" Top="487" Right="632" Bottom="512" AutoDelete="0" Hide="0"/>
+		<UIImage Name="HawkerOwnerMoneyInterface2" X="512" Y="170" Image="Data\interface0005_main_B.tga" 
+				Left="634" Top="429" Right="792" Bottom="512" AutoDelete="0" Hide="0"/>
+		<StaticText Name="HawkerOwnerSCashDollar" X="583" Y="180" Row="1" Column="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0">
+		00000
+		</StaticText>
+		<StaticText Name="HawkerOwnerCashDollar" X="583" Y="205" Row="1" Column="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0">
+	
+		</StaticText>
+		<StaticText Name="HawkerOwnerBankDollar" X="583" Y="231" Row="1" Column="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0">
+	
+		</StaticText>
+		<StaticText Name="HawkerOwnerGoldDollar" X="423" Y="231" Row="1" Column="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0">
+	
+		</StaticText>
+	<!--</Panel>-->
+
+		<!-- Partner+Pet UI -->
+		<UIImage Name="HawkerOwnerNameListPanel" Image="Data\interface0005_main_B.tga" X="516" Y="38" 
+			Left="633" Top="166" Right="788" Bottom="322" Hide="1" AutoDelete="0" NotDetected="1" />
+			
+		<UIImage Name="HawkerOwnerNameSelected1" Image="Data\interface0005_main_B.tga" X="521" Y="41" Left="488" Top="250" Right="621" Bottom="274" Hide="1" LuaLButtonUp="SelectedHawkerOwnerPPDrag" LuaRButtonUp="HawkerOwnerHawkPP"/>
+		<UIImage Name="HawkerOwnerNameSelected2" Image="Data\interface0005_main_B.tga" X="521" Y="66" Left="488" Top="250" Right="621" Bottom="274" Hide="1" LuaLButtonUp="SelectedHawkerOwnerPPDrag" LuaRButtonUp="HawkerOwnerHawkPP"/>
+		<UIImage Name="HawkerOwnerNameSelected3" Image="Data\interface0005_main_B.tga" X="521" Y="91" Left="488" Top="250" Right="621" Bottom="274"  Hide="1" LuaLButtonUp="SelectedHawkerOwnerPPDrag" LuaRButtonUp="HawkerOwnerHawkPP"/>
+		<UIImage Name="HawkerOwnerNameSelected4" Image="Data\interface0005_main_B.tga" X="521" Y="116" Left="488" Top="250" Right="621" Bottom="274" Hide="1" LuaLButtonUp="SelectedHawkerOwnerPPDrag" LuaRButtonUp="HawkerOwnerHawkPP"/>
+		<UIImage Name="HawkerOwnerNameSelected5" Image="Data\interface0005_main_B.tga" X="521" Y="141" Left="488" Top="250" Right="621" Bottom="274" Hide="1" LuaLButtonUp="SelectedHawkerOwnerPPDrag" LuaRButtonUp="HawkerOwnerHawkPP"/>
+		<UIImage Name="HawkerOwnerNameSelected6" Image="Data\interface0005_main_B.tga" X="521" Y="166" Left="488" Top="250" Right="621" Bottom="274" Hide="1" LuaLButtonUp="SelectedHawkerOwnerPPDrag" LuaRButtonUp="HawkerOwnerHawkPP"/>
+		
+		<UIImage Name="HawkerPetPartnerLock1" Image="Data\interface0005_main_B.tga" X="642" Y="48" 
+			Left="461" Top="369" Right="471" Bottom="382" Hide="1" DetectImage = "0"/>
+		<UIImage Name="HawkerPetPartnerLock2" Image="Data\interface0005_main_B.tga" X="642" Y="73" 
+			Left="461" Top="369" Right="471" Bottom="382" Hide="1" DetectImage = "0"/>
+		<UIImage Name="HawkerPetPartnerLock3" Image="Data\interface0005_main_B.tga" X="642" Y="98" 
+			Left="461" Top="369" Right="471" Bottom="382" Hide="1" DetectImage = "0"/>
+		<UIImage Name="HawkerPetPartnerLock4" Image="Data\interface0005_main_B.tga" X="642" Y="123" 
+			Left="461" Top="369" Right="471" Bottom="382" Hide="1" DetectImage = "0"/>
+		<UIImage Name="HawkerPetPartnerLock5" Image="Data\interface0005_main_B.tga" X="642" Y="148" 
+			Left="461" Top="369" Right="471" Bottom="382" Hide="1" DetectImage = "0"/>	
+		<UIImage Name="HawkerPetPartnerLock6" Image="Data\interface0005_main_B.tga" X="642" Y="173" 
+			Left="461" Top="369" Right="471" Bottom="382" Hide="1" DetectImage = "0"/>
+			
+			
+		<StaticText Name="HawkerOwnerNameListLine1" X="521" Y="48" Width="133" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="1" Align="Center">
+		</StaticText>
+		<StaticText Name="HawkerOwnerNameListLine2" X="521" Y="73" Width="133" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="1" Align="Center">
+		</StaticText>
+		<StaticText Name="HawkerOwnerNameListLine3" X="521" Y="98" Width="133" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="1" Align="Center">
+		</StaticText>
+		<StaticText Name="HawkerOwnerNameListLine4" X="521" Y="123" Width="133" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="1" Align="Center">
+		</StaticText>
+		<StaticText Name="HawkerOwnerNameListLine5" X="521" Y="148" Width="133" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="1" Align="Center">
+		</StaticText>
+		<StaticText Name="HawkerOwnerNameListLine6" X="521" Y="173" Width="133" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="1" Align="Center">
+		</StaticText>
+		
+				
+		<UIImage Name="HawkerOwnerNameImage1" Image="" X="521" Y="41" Left="0" Top="0" Right="133" Bottom="25" LuaLButtonUp="SelectHawkerOwnerPPName1" />
+		<UIImage Name="HawkerOwnerNameImage2" Image="" X="521" Y="66" Left="0" Top="0" Right="133" Bottom="25" LuaLButtonUp="SelectHawkerOwnerPPName2" />
+		<UIImage Name="HawkerOwnerNameImage3" Image="" X="521" Y="91" Left="0" Top="0" Right="133" Bottom="25" LuaLButtonUp="SelectHawkerOwnerPPName3" />
+		<UIImage Name="HawkerOwnerNameImage4" Image="" X="521" Y="116" Left="0" Top="0" Right="133" Bottom="25" LuaLButtonUp="SelectHawkerOwnerPPName4" />
+		<UIImage Name="HawkerOwnerNameImage5" Image="" X="521" Y="141" Left="0" Top="0" Right="133" Bottom="25" LuaLButtonUp="SelectHawkerOwnerPPName5" />
+		<UIImage Name="HawkerOwnerNameImage6" Image="" X="521" Y="166" Left="0" Top="0" Right="133" Bottom="25" LuaLButtonUp="SelectHawkerOwnerPPName6" />
+		
+		<ScrollBarV Name="HawkerOwnerNameListScroll" X="655" Y="42" Width ="14" Height="151" Limit="0" BarColor="0" LuaLButtonDown="HawkerOwnerNameListScroll" Hide="1">
+			<PrevButton Name="HawkerOwnerNameListUp" Image="Data\interface0005_main_B.tga" X="0" Y="0" LuaLButtonUp="HawkerOwnerNameListScrollUp">
+				<ButtonRect State="0" Left="488" Top="217" Right="502" Bottom="231" />
+				<ButtonRect State="1" Left="504" Top="217" Right="518" Bottom="231" />
+				<ButtonRect State="2" Left="520" Top="217" Right="534" Bottom="231" />
+			</PrevButton>
+			<NextButton Name="HawkerOwnerNameListDown" Image="Data\interface0005_main_B.tga" X="0" Y="138" LuaLButtonUp="HawkerOwnerNameListScrollDown">
+				<ButtonRect State="0" Left="488" Top="234" Right="502" Bottom="247" />
+				<ButtonRect State="1" Left="504" Top="234" Right="518" Bottom="247" />
+				<ButtonRect State="2" Left="520" Top="234" Right="534" Bottom="247" />
+			</NextButton>
+			<MoveButton Image="Data\interface0005_main_B.tga" X="0" Y="14"  LuaMouseMove="HawkerOwnerNameListScroll">
+				<ButtonRect State="0" Left="537" Top="217" Right="551" Bottom="247" />
+				<ButtonRect State="1" Left="537" Top="217" Right="551" Bottom="247" />
+				<ButtonRect State="2" Left="537" Top="217" Right="551" Bottom="247" />
+			</MoveButton>
+		</ScrollBarV>
+
+		
+	<!-- Partner UI -->
+		<UIImage Name="HawkerOwnerPartnerPanelImage1" X="373" Y="221" Image="Data\interface0005_main_B.tga" 
+				Left="501" Top="397" Right="634" Bottom="420" AutoDelete="0" Hide="1"/>
+		<UIImage Name="HawkerOwnerPartnerPanelImage2" X="509" Y="201" Image="Data\interface0005_main_B.tga" 
+				Left="638" Top="376" Right="793" Bottom="420" AutoDelete="0" Hide="1"/>
+		<LinerImage Name="HawkerOwnerPartnerHPBar" X="569" Y="206" Image="Data\interface0005_main_B.tga" Left="388" Top="341"
+			Right="394" Bottom="351" LineWidth="90" BaseWidth="90" Denumerator="100" Numerator="0"  Hide="1"/>
+		<LinerImage Name="HawkerOwnerPartnerSPBar" X="569" Y="229" Image="Data\interface0005_main_B.tga" Left="404" Top="341"
+			Right="410" Bottom="351" LineWidth="90" BaseWidth="90" Denumerator="100" Numerator="0"  Hide="1"/>
+		<StaticText Name="HawkerOwnerPartnerLikeText" Width="72" Height="20" X="433" Y="224" Row="1" Column="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="1" Align="Center">
+		</StaticText>
+		<StaticText Name="HawkerOwnerPartnerHPText" Width="92" Height="20" X="571" Y="204" Row="1" Column="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="1" Align="Center">
+		</StaticText>
+		<StaticText Name="HawkerOwnerPartnerSPText" Width="92" Height="20" X="571" Y="225" Row="1" Column="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="1" Align="Center">
+		</StaticText>
+		
+		<UIImage Name="HawkerOwnerPartnerState11" Image="Data\interface0005_main_B.tga" X="523" Y="43" Left="362" Top="341" Right="383" Bottom="361" Hide="1"/>
+		<UIImage Name="HawkerOwnerPartnerState12" Image="Data\interface0005_main_B.tga" X="523" Y="43" Left="362" Top="366" Right="383" Bottom="386" Hide="1"/>
+		
+		<UIImage Name="HawkerOwnerPartnerState21" Image="Data\interface0005_main_B.tga" X="523" Y="68" Left="362" Top="341" Right="383" Bottom="361" Hide="1"/>
+		<UIImage Name="HawkerOwnerPartnerState22" Image="Data\interface0005_main_B.tga" X="523" Y="68" Left="362" Top="366" Right="383" Bottom="386" Hide="1"/>
+		
+		<UIImage Name="HawkerOwnerPartnerState31" Image="Data\interface0005_main_B.tga" X="523" Y="93" Left="362" Top="341" Right="383" Bottom="361" Hide="1"/>
+		<UIImage Name="HawkerOwnerPartnerState32" Image="Data\interface0005_main_B.tga" X="523" Y="93" Left="362" Top="366" Right="383" Bottom="386" Hide="1"/>
+		
+		<UIImage Name="HawkerOwnerPartnerState41" Image="Data\interface0005_main_B.tga" X="523" Y="118" Left="362" Top="341" Right="383" Bottom="361" Hide="1"/>
+		<UIImage Name="HawkerOwnerPartnerState42" Image="Data\interface0005_main_B.tga" X="523" Y="118" Left="362" Top="366" Right="383" Bottom="386" Hide="1"/>
+		
+		<UIImage Name="HawkerOwnerPartnerState51" Image="Data\interface0005_main_B.tga" X="523" Y="143" Left="362" Top="341" Right="383" Bottom="361" Hide="1"/>
+		<UIImage Name="HawkerOwnerPartnerState52" Image="Data\interface0005_main_B.tga" X="523" Y="143" Left="362" Top="366" Right="383" Bottom="386" Hide="1"/>
+		
+		<UIImage Name="HawkerOwnerPartnerState61" Image="Data\interface0005_main_B.tga" X="523" Y="168" Left="362" Top="341" Right="383" Bottom="361" Hide="1"/>
+		<UIImage Name="HawkerOwnerPartnerState62" Image="Data\interface0005_main_B.tga" X="523" Y="168" Left="362" Top="366" Right="383" Bottom="386" Hide="1"/>
+	<!--</Panel>-->
+		<UIImage Name="HawkerOwnerPartnerSell1" Image="Data\interface0033_Hawker.tga" X="521" Y="43" Left="688" Top="586" Right="710" Bottom="607"  Hide="1"/>
+		
+		<UIImage Name="HawkerOwnerPartnerSell2" Image="Data\interface0033_Hawker.tga" X="521" Y="68" Left="688" Top="586" Right="710" Bottom="607" Hide="1"/>
+		
+		<UIImage Name="HawkerOwnerPartnerSell3" Image="Data\interface0033_Hawker.tga" X="521" Y="93" Left="688" Top="586" Right="710" Bottom="607" Hide="1"/>
+		
+		<UIImage Name="HawkerOwnerPartnerSell4" Image="Data\interface0033_Hawker.tga" X="521" Y="118" Left="688" Top="586" Right="710" Bottom="607" Hide="1"/>
+		
+		<UIImage Name="HawkerOwnerPartnerSell5" Image="Data\interface0033_Hawker.tga" X="521" Y="143" Left="688" Top="586" Right="710" Bottom="607" Hide="1"/>
+		
+		<UIImage Name="HawkerOwnerPartnerSell6" Image="Data\interface0033_Hawker.tga" X="521" Y="168" Left="688" Top="586" Right="710" Bottom="607" Hide="1"/>
+	
+	<!-- Pet UI -->
+	<!--<Panel Name="HawkerOwnerPetPanel" Image="" X="29" Y="201" 
+			Left="0" Top="0" Right="40" Bottom="40" Hide="1">-->
+		<UIImage Name="HawkerOwnerPetPanelImage1" X="373" Y="221" Image="Data\interface0005_main_B.tga" 
+				Left="500" Top="350" Right="633" Bottom="373" AutoDelete="0" Hide="1"/>
+		<UIImage Name="HawkerOwnerPetPanelImage2" X="509" Y="201" Image="Data\interface0005_main_B.tga" 
+				Left="637" Top="329" Right="793" Bottom="372" AutoDelete="0" Hide="1"/>
+		<LinerImage Name="HawkerOwnerPetHappyBar" X="569" Y="205" Image="Data\interface0005_main_B.tga" Left="420" Top="341"
+			Right="425" Bottom="351" LineWidth="90" BaseWidth="90" Denumerator="50" Numerator="100"  Hide="1"/>
+		<LinerImage Name="HawkerOwnerPetVPBar" X="569" Y="228" Image="Data\interface0005_main_B.tga" Left="388" Top="341"
+			Right="394" Bottom="351" LineWidth="90" BaseWidth="90" Denumerator="50" Numerator="100"  Hide="1"/>
+		<StaticText Name="HawkerOwnerPetLVText" X="429" Y="226" Width="72" Height="20" Row="1" Column="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="1" Align="Center">
+		</StaticText>
+		
+		<StaticText Name="HawkerOwnerPetHappyText" X="571" Y="206" Row="1" Column="20" Width="92"  Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="1" Align="Center">
+		</StaticText>
+		<StaticText Name="HawkerOwnerPetVPText" X="571" Y="227" Row="1" Column="20" Width="92"  Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="1" Align="Center">
+		</StaticText>
+	<!--</Panel>-->
+	
+	<!-- Equip HawkerOwner -->
+	
+		<UIImage Name="HawkerOwnerEquip006Color1" X="521" Y="41" Image="Data\interface0005_main_B.tga" Left="59" Top="525" Right="99" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="HawkerOwnerEquip006Color2" X="521" Y="41" Image="Data\interface0005_main_B.tga" Left="106" Top="525" Right="146" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="HawkerOwnerEquip006Color3" X="521" Y="41" Image="Data\interface0005_main_B.tga" Left="200" Top="525" Right="240" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="HawkerOwnerEquip006Color4" X="521" Y="41" Image="Data\interface0005_main_B.tga" Left="153" Top="525" Right="193" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="HawkerOwnerEquip006Color5" X="521" Y="41" Image="Data\interface0005_main_B.tga" Left="11" Top="525" Right="51" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<AniIcon Name="HawkerOwnerEquip006Icon" X="521" Y="41" Image="" AutoDelete="0" LuaRButtonUp="HawkerOwnerEquip006"
+			LuaLButtonUp="EquipHawkerOwnerMove006" LuaMouseMove="EquipHawkerOwnerOver006" LuaMouseOut = "HawkerOwnerDetailMouseOut" InsertToEventList = "1" Detect = "1"/>
+		<StaticText Name="HawkerOwnerEquip006Stack" X="525" Y="67" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="HawkerOwnerEquip006Lvl" X="525" Y="44" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	
+		<UIImage Name="HawkerOwnerEquip001Color1" X="562" Y="41" Image="Data\interface0005_main_B.tga" Left="59" Top="525" Right="99" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="HawkerOwnerEquip001Color2" X="562" Y="41" Image="Data\interface0005_main_B.tga" Left="106" Top="525" Right="146" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="HawkerOwnerEquip001Color3" X="562" Y="41" Image="Data\interface0005_main_B.tga" Left="200" Top="525" Right="240" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="HawkerOwnerEquip001Color4" X="562" Y="41" Image="Data\interface0005_main_B.tga" Left="153" Top="525" Right="193" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="HawkerOwnerEquip001Color5" X="562" Y="41" Image="Data\interface0005_main_B.tga" Left="11" Top="525" Right="51" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<AniIcon Name="HawkerOwnerEquip001Icon" X="562" Y="41" Image=""  AutoDelete="0" LuaRButtonUp="HawkerOwnerEquip001"
+			LuaLButtonUp="EquipHawkerOwnerMove001" LuaMouseMove="EquipHawkerOwnerOver001" LuaMouseOut = "HawkerOwnerDetailMouseOut" InsertToEventList = "1" Detect = "1"/>
+		<StaticText Name="HawkerOwnerEquip001Stack" X="573" Y="67" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="HawkerOwnerEquip001Lvl" X="573" Y="44" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	
+		<UIImage Name="HawkerOwnerEquip007Color1" X="603" Y="41" Image="Data\interface0005_main_B.tga" Left="59" Top="525" Right="99" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="HawkerOwnerEquip007Color2" X="603" Y="41" Image="Data\interface0005_main_B.tga" Left="106" Top="525" Right="146" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="HawkerOwnerEquip007Color3" X="603" Y="41" Image="Data\interface0005_main_B.tga" Left="200" Top="525" Right="240" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="HawkerOwnerEquip007Color4" X="603" Y="41" Image="Data\interface0005_main_B.tga" Left="153" Top="525" Right="193" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="HawkerOwnerEquip007Color5" X="603" Y="41" Image="Data\interface0005_main_B.tga" Left="11" Top="525" Right="51" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<AniIcon Name="HawkerOwnerEquip007Icon" X="603" Y="41" Image=""  AutoDelete="0" LuaRButtonUp="HawkerOwnerEquip007"
+			LuaLButtonUp="EquipHawkerOwnerMove007" LuaMouseMove="EquipHawkerOwnerOver007" LuaMouseOut = "HawkerOwnerDetailMouseOut" InsertToEventList = "1" Detect = "1"/>
+		<StaticText Name="HawkerOwnerEquip007Stack" X="621" Y="67" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="HawkerOwnerEquip007Lvl" X="621" Y="44" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	
+		<UIImage Name="HawkerOwnerEquip000Color1" X="521" Y="82" Image="Data\interface0005_main_B.tga" Left="59" Top="525" Right="99" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="HawkerOwnerEquip000Color2" X="521" Y="82" Image="Data\interface0005_main_B.tga" Left="106" Top="525" Right="146" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="HawkerOwnerEquip000Color3" X="521" Y="82" Image="Data\interface0005_main_B.tga" Left="200" Top="525" Right="240" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="HawkerOwnerEquip000Color4" X="521" Y="82" Image="Data\interface0005_main_B.tga" Left="153" Top="525" Right="193" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="HawkerOwnerEquip000Color5" X="521" Y="82" Image="Data\interface0005_main_B.tga" Left="11" Top="525" Right="51" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<AniIcon Name="HawkerOwnerEquip000Icon" X="521" Y="82" Image=""  AutoDelete="0" LuaRButtonUp="HawkerOwnerEquip000"
+			LuaLButtonUp="EquipHawkerOwnerMove000" LuaMouseMove="EquipHawkerOwnerOver000" LuaMouseOut = "HawkerOwnerDetailMouseOut" InsertToEventList = "1" Detect = "1"/>
+		<StaticText Name="HawkerOwnerEquip000Stack" X="525" Y="115" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="HawkerOwnerEquip000Lvl" X="525" Y="92" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	
+		<UIImage Name="HawkerOwnerEquip002Color1" X="562" Y="82" Image="Data\interface0005_main_B.tga" Left="59" Top="525" Right="99" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="HawkerOwnerEquip002Color2" X="562" Y="82" Image="Data\interface0005_main_B.tga" Left="106" Top="525" Right="146" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="HawkerOwnerEquip002Color3" X="562" Y="82" Image="Data\interface0005_main_B.tga" Left="200" Top="525" Right="240" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="HawkerOwnerEquip002Color4" X="562" Y="82" Image="Data\interface0005_main_B.tga" Left="153" Top="525" Right="193" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="HawkerOwnerEquip002Color5" X="562" Y="82" Image="Data\interface0005_main_B.tga" Left="11" Top="525" Right="51" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<AniIcon Name="HawkerOwnerEquip002Icon" X="562" Y="82" Image=""  AutoDelete="0" LuaRButtonUp="HawkerOwnerEquip002"
+			LuaLButtonUp="EquipHawkerOwnerMove002" LuaMouseMove="EquipHawkerOwnerOver002" LuaMouseOut = "HawkerOwnerDetailMouseOut" InsertToEventList = "1" Detect = "1"/>
+		<StaticText Name="HawkerOwnerEquip002Stack" X="573" Y="115" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="HawkerOwnerEquip002Lvl" X="573" Y="92" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	
+		<UIImage Name="HawkerOwnerEquip008Color1" X="603" Y="82" Image="Data\interface0005_main_B.tga" Left="59" Top="525" Right="99" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="HawkerOwnerEquip008Color2" X="603" Y="82" Image="Data\interface0005_main_B.tga" Left="106" Top="525" Right="146" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="HawkerOwnerEquip008Color3" X="603" Y="82" Image="Data\interface0005_main_B.tga" Left="200" Top="525" Right="240" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="HawkerOwnerEquip008Color4" X="603" Y="82" Image="Data\interface0005_main_B.tga" Left="153" Top="525" Right="193" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="HawkerOwnerEquip008Color5" X="603" Y="82" Image="Data\interface0005_main_B.tga" Left="11" Top="525" Right="51" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<AniIcon Name="HawkerOwnerEquip008Icon" X="603" Y="82" Image=""  AutoDelete="0" LuaRButtonUp="HawkerOwnerEquip008"
+			LuaLButtonUp="EquipHawkerOwnerMove008" LuaMouseMove="EquipHawkerOwnerOver008" LuaMouseOut = "HawkerOwnerDetailMouseOut" InsertToEventList = "1" Detect = "1"/>
+		<StaticText Name="HawkerOwnerEquip008Stack" X="621" Y="67" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="HawkerOwnerEquip008Lvl" X="621" Y="44" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	
+		<UIImage Name="HawkerOwner005Color1" X="521" Y="123" Image="Data\interface0005_main_B.tga" Left="59" Top="525" Right="99" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="HawkerOwner005Color2" X="521" Y="123" Image="Data\interface0005_main_B.tga" Left="106" Top="525" Right="146" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="HawkerOwner005Color3" X="521" Y="123" Image="Data\interface0005_main_B.tga" Left="200" Top="525" Right="240" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="HawkerOwner005Color4" X="521" Y="123" Image="Data\interface0005_main_B.tga" Left="153" Top="525" Right="193" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="HawkerOwner005Color5" X="521" Y="123" Image="Data\interface0005_main_B.tga" Left="11" Top="525" Right="51" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<AniIcon Name="HawkerOwnerEquip005Icon" X="521" Y="123" Image=""  AutoDelete="0" LuaRButtonUp="HawkerOwnerEquip005"
+			LuaLButtonUp="EquipHawkerOwnerMove005" LuaMouseMove="EquipHawkerOwnerOver005" LuaMouseOut = "HawkerOwnerDetailMouseOut" InsertToEventList = "1" Detect = "1"/>
+		<StaticText Name="HawkerOwnerEquip005Stack" X="525" Y="163" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="HawkerOwnerEquip005Lvl" X="525" Y="140" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		
+		<UIImage Name="HawkerOwnerEquip003Color1" X="562" Y="123" Image="Data\interface0005_main_B.tga" Left="59" Top="525" Right="99" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="HawkerOwnerEquip003Color2" X="562" Y="123" Image="Data\interface0005_main_B.tga" Left="106" Top="525" Right="146" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="HawkerOwnerEquip003Color3" X="562" Y="123" Image="Data\interface0005_main_B.tga" Left="200" Top="525" Right="240" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="HawkerOwnerEquip003Color4" X="562" Y="123" Image="Data\interface0005_main_B.tga" Left="153" Top="525" Right="193" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="HawkerOwnerEquip003Color5" X="562" Y="123" Image="Data\interface0005_main_B.tga" Left="11" Top="525" Right="51" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<AniIcon Name="HawkerOwnerEquip003Icon" X="562" Y="123" Image=""  AutoDelete="0" LuaRButtonUp="HawkerOwnerEquip003"
+			LuaLButtonUp="EquipHawkerOwnerMove003" LuaMouseMove="EquipHawkerOwnerOver003" LuaMouseOut = "HawkerOwnerDetailMouseOut" InsertToEventList = "1" Detect = "1"/>
+		<StaticText Name="HawkerOwnerEquip003Stack" X="573" Y="163" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="HawkerOwnerEquip003Lvl" X="573" Y="140" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	
+		<UIImage Name="HawkerOwnerEquip004Color1" X="603" Y="123" Image="Data\interface0005_main_B.tga" Left="59" Top="525" Right="99" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="HawkerOwnerEquip004Color2" X="603" Y="123" Image="Data\interface0005_main_B.tga" Left="106" Top="525" Right="146" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="HawkerOwnerEquip004Color3" X="603" Y="123" Image="Data\interface0005_main_B.tga" Left="200" Top="525" Right="240" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="HawkerOwnerEquip004Color4" X="603" Y="123" Image="Data\interface0005_main_B.tga" Left="153" Top="525" Right="193" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="HawkerOwnerEquip004Color5" X="603" Y="123" Image="Data\interface0005_main_B.tga" Left="11" Top="525" Right="51" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<AniIcon Name="HawkerOwnerEquip004Icon" X="603" Y="123" Image=""  AutoDelete="0" LuaRButtonUp="HawkerOwnerEquip004"
+			LuaLButtonUp="EquipHawkerOwnerMove004" LuaMouseMove="EquipHawkerOwnerOver004" LuaMouseOut = "HawkerOwnerDetailMouseOut" InsertToEventList = "1" Detect = "1"/>
+		<StaticText Name="HawkerOwnerEquip004Stack" X="621" Y="163" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="HawkerOwnerEquip004Lvl" X="621" Y="140" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	
+	<!-- Normal HawkerOwner Page 1 -->
+	
+		<UIImage Name="HawkerOwnerSlotBg" X="369" Y="282" Image="Data\interface0005_main_B.tga" Left="37" Top="292" Right="284" Bottom="457" />
+	
+		<AniIcon Name="HawkerOwnerSlot000Icon" X="370" Y="282" Image=""  AutoDelete="0" LuaRButtonUp="HawkerOwnerHawk000"
+			LuaLButtonUp="HawkerOwnerItemMove000" LuaMouseMove="HawkerOwnerItemOver000" LuaMouseOut = "HawkerOwnerDetailMouseOut" 
+			InsertToEventList = "1" Detect = "1" Hide="0"/>
+		<StaticText Name="HawkerOwnerSlot000Stack" X="373" Y="308" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<StaticText Name="HawkerOwnerSlot000Lvl" X="373" Y="285" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<UIImage Name="HawkerSlot000Lock" X="370" Y="283" Image="Data\interface0005_main_B.tga" Left="461" Top="369" Right="471" Bottom="382" AutoDelete="0"  NotDetected="1" Hide="1" />
+		<UIImage Name="HawkerOwnerSlot000Red" X="370" Y="283" Image="Data\interface0005_main_B.tga" Left="362" Top="417" Right="402" Bottom="457" AutoDelete="0" NotDetected="1" Hide="1" />
+	
+		<AniIcon Name="HawkerOwnerSlot001Icon" X="411" Y="282" Image=""  AutoDelete="0" LuaRButtonUp="HawkerOwnerHawk001" 
+			LuaLButtonUp="HawkerOwnerItemMove001" LuaMouseMove="HawkerOwnerItemOver001" LuaMouseOut = "HawkerOwnerDetailMouseOut" InsertToEventList = "1" Detect = "1" Hide="0"/>
+		<StaticText Name="HawkerOwnerSlot001Stack" X="414" Y="308" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<StaticText Name="HawkerOwnerSlot001Lvl" X="414" Y="285" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<UIImage Name="HawkerSlot001Lock" X="411" Y="283" Image="Data\interface0005_main_B.tga" Left="461" Top="369" Right="471" Bottom="382" AutoDelete="0"  NotDetected="1" Hide="1" />
+		<UIImage Name="HawkerOwnerSlot001Red" X="411" Y="283" Image="Data\interface0005_main_B.tga" Left="362" Top="417" Right="402" Bottom="457" AutoDelete="0" NotDetected="1" Hide="1" />
+		
+		<AniIcon Name="HawkerOwnerSlot002Icon" X="452" Y="282" Image=""  AutoDelete="0" LuaRButtonUp="HawkerOwnerHawk002"
+			LuaLButtonUp="HawkerOwnerItemMove002" LuaMouseMove="HawkerOwnerItemOver002" LuaMouseOut = "HawkerOwnerDetailMouseOut" InsertToEventList = "1" Detect = "1" Hide="0"/>
+		<StaticText Name="HawkerOwnerSlot002Stack" X="455" Y="308" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<StaticText Name="HawkerOwnerSlot002Lvl" X="455" Y="285" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<UIImage Name="HawkerSlot002Lock" X="452" Y="283" Image="Data\interface0005_main_B.tga" Left="461" Top="369" Right="471" Bottom="382" AutoDelete="0"  NotDetected="1" Hide="1" />	
+		<UIImage Name="HawkerOwnerSlot002Red" X="452" Y="283" Image="Data\interface0005_main_B.tga" Left="362" Top="417" Right="402" Bottom="457" AutoDelete="0" NotDetected="1" Hide="1" />	
+	
+		<AniIcon Name="HawkerOwnerSlot003Icon" X="493" Y="282" Image=""  AutoDelete="0" LuaRButtonUp="HawkerOwnerHawk003"
+			LuaLButtonUp="HawkerOwnerItemMove003" LuaMouseMove="HawkerOwnerItemOver003" LuaMouseOut = "HawkerOwnerDetailMouseOut" InsertToEventList = "1" Detect = "1" Hide="0"/>
+		<StaticText Name="HawkerOwnerSlot003Stack" X="496" Y="308" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<StaticText Name="HawkerOwnerSlot003Lvl" X="496" Y="285" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<UIImage Name="HawkerSlot003Lock" X="493" Y="283" Image="Data\interface0005_main_B.tga" Left="461" Top="369" Right="471" Bottom="382" AutoDelete="0"  NotDetected="1" Hide="1" />	
+		<UIImage Name="HawkerOwnerSlot003Red" X="493" Y="283" Image="Data\interface0005_main_B.tga" Left="362" Top="417" Right="402" Bottom="457" AutoDelete="0" NotDetected="1" Hide="1" />		
+	
+		<AniIcon Name="HawkerOwnerSlot004Icon" X="534" Y="282" Image=""  AutoDelete="0" LuaRButtonUp="HawkerOwnerHawk004"
+			LuaLButtonUp="HawkerOwnerItemMove004" LuaMouseMove="HawkerOwnerItemOver004" LuaMouseOut = "HawkerOwnerDetailMouseOut" InsertToEventList = "1" Detect = "1" Hide="0"/>
+		<StaticText Name="HawkerOwnerSlot004Stack" X="537" Y="308" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<StaticText Name="HawkerOwnerSlot004Lvl" X="537" Y="285" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<UIImage Name="HawkerSlot004Lock" X="534" Y="283" Image="Data\interface0005_main_B.tga" Left="461" Top="369" Right="471" Bottom="382" AutoDelete="0"  NotDetected="1" Hide="1" />	
+		<UIImage Name="HawkerOwnerSlot004Red" X="534" Y="283" Image="Data\interface0005_main_B.tga" Left="362" Top="417" Right="402" Bottom="457" AutoDelete="0" NotDetected="1" Hide="1" />	
+	
+		<AniIcon Name="HawkerOwnerSlot005Icon" X="575" Y="282" Image=""  AutoDelete="0" LuaRButtonUp="HawkerOwnerHawk005"
+			LuaLButtonUp="HawkerOwnerItemMove005" LuaMouseMove="HawkerOwnerItemOver005" LuaMouseOut = "HawkerOwnerDetailMouseOut" InsertToEventList = "1" Detect = "1" Hide="0"/>
+		<StaticText Name="HawkerOwnerSlot005Stack" X="578" Y="308" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<StaticText Name="HawkerOwnerSlot005Lvl" X="578" Y="285" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<UIImage Name="HawkerSlot005Lock" X="575" Y="283" Image="Data\interface0005_main_B.tga" Left="461" Top="369" Right="471" Bottom="382" AutoDelete="0"  NotDetected="1" Hide="1" />	
+		<UIImage Name="HawkerOwnerSlot005Red" X="575" Y="283" Image="Data\interface0005_main_B.tga" Left="362" Top="417" Right="402" Bottom="457" AutoDelete="0" NotDetected="1" Hide="1" />	
+	
+		<AniIcon Name="HawkerOwnerSlot006Icon" X="370" Y="323" Image=""  AutoDelete="0" LuaRButtonUp="HawkerOwnerHawk006"
+			LuaLButtonUp="HawkerOwnerItemMove006" LuaMouseMove="HawkerOwnerItemOver006" LuaMouseOut = "HawkerOwnerDetailMouseOut" InsertToEventList = "1" Detect = "1" Hide="0"/>
+		<StaticText Name="HawkerOwnerSlot006Stack" X="373" Y="349" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1"  Hide="0">
+		</StaticText>
+		<StaticText Name="HawkerOwnerSlot006Lvl" X="373" Y="326" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<UIImage Name="HawkerSlot006Lock" X="370" Y="324" Image="Data\interface0005_main_B.tga" Left="461" Top="369" Right="471" Bottom="382" AutoDelete="0"  NotDetected="1" Hide="1" />	
+		<UIImage Name="HawkerOwnerSlot006Red" X="370" Y="324" Image="Data\interface0005_main_B.tga" Left="362" Top="417" Right="402" Bottom="457" AutoDelete="0" NotDetected="1" Hide="1" />	
+	
+		<AniIcon Name="HawkerOwnerSlot007Icon" X="411" Y="323" Image=""  AutoDelete="0" LuaRButtonUp="HawkerOwnerHawk007"
+			LuaLButtonUp="HawkerOwnerItemMove007" LuaMouseMove="HawkerOwnerItemOver007" LuaMouseOut = "HawkerOwnerDetailMouseOut" InsertToEventList = "1" Detect = "1" Hide="0"/>
+		<StaticText Name="HawkerOwnerSlot007Stack" X="414" Y="349" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<StaticText Name="HawkerOwnerSlot007Lvl" X="414" Y="326" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<UIImage Name="HawkerSlot007Lock" X="411" Y="324" Image="Data\interface0005_main_B.tga" Left="461" Top="369" Right="471" Bottom="382" AutoDelete="0"  NotDetected="1" Hide="1" />	
+		<UIImage Name="HawkerOwnerSlot007Red" X="411" Y="324" Image="Data\interface0005_main_B.tga" Left="362" Top="417" Right="402" Bottom="457" AutoDelete="0" NotDetected="1" Hide="1" />		
+	
+		<AniIcon Name="HawkerOwnerSlot008Icon" X="452" Y="323" Image=""  AutoDelete="0" LuaRButtonUp="HawkerOwnerHawk008"
+			LuaLButtonUp="HawkerOwnerItemMove008" LuaMouseMove="HawkerOwnerItemOver008" LuaMouseOut = "HawkerOwnerDetailMouseOut" InsertToEventList = "1" Detect = "1" Hide="0"/>
+		<StaticText Name="HawkerOwnerSlot008Stack" X="455" Y="349" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<StaticText Name="HawkerOwnerSlot008Lvl" X="455" Y="326" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<UIImage Name="HawkerSlot008Lock" X="452" Y="324" Image="Data\interface0005_main_B.tga" Left="461" Top="369" Right="471" Bottom="382" AutoDelete="0"  NotDetected="1" Hide="1" />	
+		<UIImage Name="HawkerOwnerSlot008Red" X="452" Y="324" Image="Data\interface0005_main_B.tga" Left="362" Top="417" Right="402" Bottom="457" AutoDelete="0" NotDetected="1" Hide="1" />	
+	
+		<AniIcon Name="HawkerOwnerSlot009Icon" X="493" Y="323" Image=""  AutoDelete="0" LuaRButtonUp="HawkerOwnerHawk009" 
+			LuaLButtonUp="HawkerOwnerItemMove009" LuaMouseMove="HawkerOwnerItemOver009" LuaMouseOut = "HawkerOwnerDetailMouseOut" InsertToEventList = "1" Detect = "1" Hide="0"/>
+		<StaticText Name="HawkerOwnerSlot009Stack" X="496" Y="349" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<StaticText Name="HawkerOwnerSlot009Lvl" X="496" Y="326" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<UIImage Name="HawkerSlot009Lock" X="493" Y="324" Image="Data\interface0005_main_B.tga" Left="461" Top="369" Right="471" Bottom="382" AutoDelete="0"  NotDetected="1" Hide="1" />	
+		<UIImage Name="HawkerOwnerSlot009Red" X="493" Y="324" Image="Data\interface0005_main_B.tga" Left="362" Top="417" Right="402" Bottom="457" AutoDelete="0" NotDetected="1" Hide="1" />	
+	
+		<AniIcon Name="HawkerOwnerSlot010Icon" X="534" Y="323" Image=""  AutoDelete="0" LuaRButtonUp="HawkerOwnerHawk010"
+			LuaLButtonUp="HawkerOwnerItemMove010" LuaMouseMove="HawkerOwnerItemOver010" LuaMouseOut = "HawkerOwnerDetailMouseOut" InsertToEventList = "1" Detect = "1" Hide="0"/>
+		<StaticText Name="HawkerOwnerSlot010Stack" X="537" Y="349" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<StaticText Name="HawkerOwnerSlot010Lvl" X="537" Y="326" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<UIImage Name="HawkerSlot010Lock" X="534" Y="324" Image="Data\interface0005_main_B.tga" Left="461" Top="369" Right="471" Bottom="382" AutoDelete="0"  NotDetected="1" Hide="1" />	
+		<UIImage Name="HawkerOwnerSlot010Red" X="534" Y="324" Image="Data\interface0005_main_B.tga" Left="362" Top="417" Right="402" Bottom="457" AutoDelete="0" NotDetected="1" Hide="1" />	
+	
+		<AniIcon Name="HawkerOwnerSlot011Icon" X="575" Y="323" Image=""  AutoDelete="0" LuaRButtonUp="HawkerOwnerHawk011"
+			LuaLButtonUp="HawkerOwnerItemMove011" LuaMouseMove="HawkerOwnerItemOver011" LuaMouseOut = "HawkerOwnerDetailMouseOut" InsertToEventList = "1" Detect = "1" Hide="0"/>
+		<StaticText Name="HawkerOwnerSlot011Stack" X="578" Y="349" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<StaticText Name="HawkerOwnerSlot011Lvl" X="578" Y="326" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<UIImage Name="HawkerSlot011Lock" X="575" Y="324" Image="Data\interface0005_main_B.tga" Left="461" Top="369" Right="471" Bottom="382" AutoDelete="0"  NotDetected="1" Hide="1" />	
+		<UIImage Name="HawkerOwnerSlot011Red" X="575" Y="324" Image="Data\interface0005_main_B.tga" Left="362" Top="417" Right="402" Bottom="457" AutoDelete="0" NotDetected="1" Hide="1" />	
+	
+		<AniIcon Name="HawkerOwnerSlot012Icon" X="370" Y="364" Image=""  AutoDelete="0" LuaRButtonUp="HawkerOwnerHawk012"
+			LuaLButtonUp="HawkerOwnerItemMove012" LuaMouseMove="HawkerOwnerItemOver012" LuaMouseOut = "HawkerOwnerDetailMouseOut" InsertToEventList = "1" Detect = "1" Hide="0"/>
+		<StaticText Name="HawkerOwnerSlot012Stack" X="373" Y="390" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<StaticText Name="HawkerOwnerSlot012Lvl" X="373" Y="367" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<UIImage Name="HawkerSlot012Lock" X="370" Y="365" Image="Data\interface0005_main_B.tga" Left="461" Top="369" Right="471" Bottom="382" AutoDelete="0"  NotDetected="1" Hide="1" />	
+		<UIImage Name="HawkerOwnerSlot012Red" X="370" Y="365" Image="Data\interface0005_main_B.tga" Left="362" Top="417" Right="402" Bottom="457" AutoDelete="0" NotDetected="1" Hide="1" />	
+	
+		<AniIcon Name="HawkerOwnerSlot013Icon" X="411" Y="364" Image=""  AutoDelete="0" LuaRButtonUp="HawkerOwnerHawk013"
+			LuaLButtonUp="HawkerOwnerItemMove013" LuaMouseMove="HawkerOwnerItemOver013" LuaMouseOut = "HawkerOwnerDetailMouseOut" InsertToEventList = "1" Detect = "1" Hide="0"/>
+		<StaticText Name="HawkerOwnerSlot013Stack" X="414" Y="390" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<StaticText Name="HawkerOwnerSlot013Lvl" X="414" Y="367" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<UIImage Name="HawkerSlot013Lock" X="411" Y="365" Image="Data\interface0005_main_B.tga" Left="461" Top="369" Right="471" Bottom="382" AutoDelete="0"  NotDetected="1" Hide="1" />	
+		<UIImage Name="HawkerOwnerSlot013Red" X="411" Y="365" Image="Data\interface0005_main_B.tga" Left="362" Top="417" Right="402" Bottom="457" AutoDelete="0" NotDetected="1" Hide="1" />	
+	
+		<AniIcon Name="HawkerOwnerSlot014Icon" X="452" Y="364" Image=""  AutoDelete="0" LuaRButtonUp="HawkerOwnerHawk014"
+			LuaLButtonUp="HawkerOwnerItemMove014" LuaMouseMove="HawkerOwnerItemOver014" LuaMouseOut = "HawkerOwnerDetailMouseOut" InsertToEventList = "1" Detect = "1" Hide="0"/>
+		<StaticText Name="HawkerOwnerSlot014Stack" X="455" Y="390" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<StaticText Name="HawkerOwnerSlot014Lvl" X="455" Y="367" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<UIImage Name="HawkerSlot014Lock" X="452" Y="365" Image="Data\interface0005_main_B.tga" Left="461" Top="369" Right="471" Bottom="382" AutoDelete="0"  NotDetected="1" Hide="1" />	
+		<UIImage Name="HawkerOwnerSlot014Red" X="452" Y="365" Image="Data\interface0005_main_B.tga" Left="362" Top="417" Right="402" Bottom="457" AutoDelete="0" NotDetected="1" Hide="1" />	
+	
+		<AniIcon Name="HawkerOwnerSlot015Icon" X="493" Y="364" Image=""  AutoDelete="0" LuaRButtonUp="HawkerOwnerHawk015"
+			LuaLButtonUp="HawkerOwnerItemMove015" LuaMouseMove="HawkerOwnerItemOver015" LuaMouseOut = "HawkerOwnerDetailMouseOut" InsertToEventList = "1" Detect = "1" Hide="0"/>
+		<StaticText Name="HawkerOwnerSlot015Stack" X="496" Y="390" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<StaticText Name="HawkerOwnerSlot015Lvl" X="496" Y="367" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<UIImage Name="HawkerSlot015Lock" X="493" Y="365" Image="Data\interface0005_main_B.tga" Left="461" Top="369" Right="471" Bottom="382" AutoDelete="0"  NotDetected="1" Hide="1" />	
+		<UIImage Name="HawkerOwnerSlot015Red" X="493" Y="365" Image="Data\interface0005_main_B.tga" Left="362" Top="417" Right="402" Bottom="457" AutoDelete="0" NotDetected="1" Hide="1" />	
+	
+		<AniIcon Name="HawkerOwnerSlot016Icon" X="534" Y="364" Image=""  AutoDelete="0" LuaRButtonUp="HawkerOwnerHawk016"
+			LuaLButtonUp="HawkerOwnerItemMove016" LuaMouseMove="HawkerOwnerItemOver016" LuaMouseOut = "HawkerOwnerDetailMouseOut" InsertToEventList = "1" Detect = "1" Hide="0"/>
+		<StaticText Name="HawkerOwnerSlot016Stack" X="537" Y="390" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<StaticText Name="HawkerOwnerSlot016Lvl" X="537" Y="367" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<UIImage Name="HawkerSlot016Lock" X="534" Y="365" Image="Data\interface0005_main_B.tga" Left="461" Top="369" Right="471" Bottom="382" AutoDelete="0"  NotDetected="1" Hide="1" />	
+		<UIImage Name="HawkerOwnerSlot016Red" X="534" Y="365" Image="Data\interface0005_main_B.tga" Left="362" Top="417" Right="402" Bottom="457" AutoDelete="0" NotDetected="1" Hide="1" />	
+	
+		<AniIcon Name="HawkerOwnerSlot017Icon" X="575" Y="364" Image=""  AutoDelete="0" LuaRButtonUp="HawkerOwnerHawk017"	
+			LuaLButtonUp="HawkerOwnerItemMove017" LuaMouseMove="HawkerOwnerItemOver017" LuaMouseOut = "HawkerOwnerDetailMouseOut" InsertToEventList = "1" Detect = "1" Hide="0"/>
+		<StaticText Name="HawkerOwnerSlot017Stack" X="578" Y="390" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<StaticText Name="HawkerOwnerSlot017Lvl" X="578" Y="367" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<UIImage Name="HawkerSlot017Lock" X="575" Y="365" Image="Data\interface0005_main_B.tga" Left="461" Top="369" Right="471" Bottom="382" AutoDelete="0"  NotDetected="1" Hide="1" />	
+		<UIImage Name="HawkerOwnerSlot017Red" X="575" Y="365" Image="Data\interface0005_main_B.tga" Left="362" Top="417" Right="402" Bottom="457" AutoDelete="0" NotDetected="1" Hide="1" />	
+	
+		<AniIcon Name="HawkerOwnerSlot018Icon" X="370" Y="405" Image=""  AutoDelete="0" LuaRButtonUp="HawkerOwnerHawk018"
+			LuaLButtonUp="HawkerOwnerItemMove018" LuaMouseMove="HawkerOwnerItemOver018" LuaMouseOut = "HawkerOwnerDetailMouseOut" InsertToEventList = "1" Detect = "1" Hide="0"/>
+		<StaticText Name="HawkerOwnerSlot018Stack" X="373" Y="431" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<StaticText Name="HawkerOwnerSlot018Lvl" X="373" Y="408" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<UIImage Name="HawkerSlot018Lock" X="370" Y="406" Image="Data\interface0005_main_B.tga" Left="461" Top="369" Right="471" Bottom="382" AutoDelete="0"  NotDetected="1" Hide="1" />	
+		<UIImage Name="HawkerOwnerSlot018Red" X="370" Y="406" Image="Data\interface0005_main_B.tga" Left="362" Top="417" Right="402" Bottom="457" AutoDelete="0" NotDetected="1" Hide="1" />	
+	
+		<AniIcon Name="HawkerOwnerSlot019Icon" X="411" Y="405" Image=""  AutoDelete="0" LuaRButtonUp="HawkerOwnerHawk019"
+			LuaLButtonUp="HawkerOwnerItemMove019" LuaMouseMove="HawkerOwnerItemOver019" LuaMouseOut = "HawkerOwnerDetailMouseOut" InsertToEventList = "1" Detect = "1" Hide="0"/>
+		<StaticText Name="HawkerOwnerSlot019Stack" X="414" Y="431" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<StaticText Name="HawkerOwnerSlot019Lvl" X="414" Y="408" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<UIImage Name="HawkerSlot019Lock" X="411" Y="406" Image="Data\interface0005_main_B.tga" Left="461" Top="369" Right="471" Bottom="382" AutoDelete="0"  NotDetected="1" Hide="1" />	
+		<UIImage Name="HawkerOwnerSlot019Red" X="411" Y="406" Image="Data\interface0005_main_B.tga" Left="362" Top="417" Right="402" Bottom="457" AutoDelete="0" NotDetected="1" Hide="1" />	
+	
+		<AniIcon Name="HawkerOwnerSlot020Icon" X="452" Y="405" Image=""  AutoDelete="0" LuaRButtonUp="HawkerOwnerHawk020"
+			LuaLButtonUp="HawkerOwnerItemMove020" LuaMouseMove="HawkerOwnerItemOver020" LuaMouseOut = "HawkerOwnerDetailMouseOut" InsertToEventList = "1" Detect = "1" Hide="0"/>
+		<StaticText Name="HawkerOwnerSlot020Stack" X="455" Y="431" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<StaticText Name="HawkerOwnerSlot020Lvl" X="455" Y="408" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<UIImage Name="HawkerSlot020Lock" X="452" Y="406" Image="Data\interface0005_main_B.tga" Left="461" Top="369" Right="471" Bottom="382" AutoDelete="0"  NotDetected="1" Hide="1" />	
+		<UIImage Name="HawkerOwnerSlot020Red" X="452" Y="406" Image="Data\interface0005_main_B.tga" Left="362" Top="417" Right="402" Bottom="457" AutoDelete="0" NotDetected="1" Hide="1" />	
+	
+		<AniIcon Name="HawkerOwnerSlot021Icon" X="493" Y="405" Image=""  AutoDelete="0" LuaRButtonUp="HawkerOwnerHawk021"
+			LuaLButtonUp="HawkerOwnerItemMove021" LuaMouseMove="HawkerOwnerItemOver021" LuaMouseOut = "HawkerOwnerDetailMouseOut" InsertToEventList = "1" Detect = "1" Hide="0"/>
+		<StaticText Name="HawkerOwnerSlot021Stack" X="496" Y="431" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<StaticText Name="HawkerOwnerSlot021Lvl" X="496" Y="408" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<UIImage Name="HawkerSlot021Lock" X="493" Y="406" Image="Data\interface0005_main_B.tga" Left="461" Top="369" Right="471" Bottom="382" AutoDelete="0"  NotDetected="1" Hide="1" />	
+		<UIImage Name="HawkerOwnerSlot021Red" X="493" Y="406" Image="Data\interface0005_main_B.tga" Left="362" Top="417" Right="402" Bottom="457" AutoDelete="0" NotDetected="1" Hide="1" />	
+	
+		<AniIcon Name="HawkerOwnerSlot022Icon" X="534" Y="405" Image=""  AutoDelete="0" LuaRButtonUp="HawkerOwnerHawk022"
+			LuaLButtonUp="HawkerOwnerItemMove022" LuaMouseMove="HawkerOwnerItemOver022" LuaMouseOut = "HawkerOwnerDetailMouseOut" InsertToEventList = "1" Detect = "1" Hide="0"/>
+		<StaticText Name="HawkerOwnerSlot022Stack" X="537" Y="431" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<StaticText Name="HawkerOwnerSlot022Lvl" X="537" Y="408" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<UIImage Name="HawkerSlot022Lock" X="534" Y="406" Image="Data\interface0005_main_B.tga" Left="461" Top="369" Right="471" Bottom="382" AutoDelete="0"  NotDetected="1" Hide="1" />	
+		<UIImage Name="HawkerOwnerSlot022Red" X="534" Y="406" Image="Data\interface0005_main_B.tga" Left="362" Top="417" Right="402" Bottom="457" AutoDelete="0" NotDetected="1" Hide="1" />	
+	
+		<AniIcon Name="HawkerOwnerSlot023Icon" X="575" Y="405" Image=""  AutoDelete="0" LuaRButtonUp="HawkerOwnerHawk023"
+			LuaLButtonUp="HawkerOwnerItemMove023" LuaMouseMove="HawkerOwnerItemOver023" LuaMouseOut = "HawkerOwnerDetailMouseOut" InsertToEventList = "1" Detect = "1" Hide="0"/>
+		<StaticText Name="HawkerOwnerSlot023Stack" X="578" Y="431" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<StaticText Name="HawkerOwnerSlot023Lvl" X="578" Y="408" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<UIImage Name="HawkerSlot023Lock" X="575" Y="406" Image="Data\interface0005_main_B.tga" Left="461" Top="369" Right="471" Bottom="382" AutoDelete="0"  NotDetected="1" Hide="1" />	
+		<UIImage Name="HawkerOwnerSlot023Red" X="575" Y="406" Image="Data\interface0005_main_B.tga" Left="362" Top="417" Right="402" Bottom="457" AutoDelete="0" NotDetected="1" Hide="1" />	
+		
+		<UIImage Name="HawkerOwnerBoard" X="0" Y="0" Image="Data\interface0005_main_B.tga" Left="388" Top="366" Right="430" Bottom="408" AutoDelete="0" NotDetected="1" Hide="1"
+		 TimeOutCount="200" LuaTimeOut="ShowHawkerOwnerBoard"/>
+	
+	</Panel>
+	
+	<!-- HawkerOwnerItemCount -->
+	<Panel Name="HawkerOwnerItemCountPanel" X="253" Y="267" Image="Data\interface0033_Hawker.tga" Left="204" Top="463" Right="462" Bottom="584" 
+		Drag="1" DragLeft="0" DragTop="0" DragRight="258" DragBottom="121"  Hide="1"
+		LuaRButtonUp="CloseHawkerOwnerCount"  LuaKeyChar="CloseHawkerOwnerCount">
+		
+	
+		<StaticText Name="HawkerText" X="12" Y="18" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFEDD97A" ShadowColor="FF000000">
+			请输入单价, 数量
+		</StaticText>
+		<UIImage X="47" Y="40" Name="PriceOfHawkerItemBg" Image="Data\interface0033_Hawker.tga" Left="306" Top="588" Right="409" Bottom="606"/>
+		<UIImage X="47" Y="64" Name="NumberOfHawkerItemBg" Image="Data\interface0033_Hawker.tga" Left="306" Top="588" Right="409" Bottom="606"/>
+		
+		<StaticText Name="HawkerPriceText" X="12" Y="43" Row="1" Column="3" EdgeCode="LIGHT" FontColor="FFEDD97A" ShadowColor="FF000000">
+			单价：
+		</StaticText>
+		<EditBox Name="PriceOfHawkerItem" X="52" Y="43" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" Limit="8" NumOnly="1" LuaLButtonUp="SetKeyInPriceHawkerItem" LuaKeyUp="SetPutItemMoneyColour">
+			1 
+		</EditBox>
+		<StaticText Name="HawkerItemCountText" X="12" Y="67" Row="1" Column="3" EdgeCode="LIGHT" FontColor="FFEDD97A" ShadowColor="FF000000">
+			数量：
+		</StaticText>
+		<EditBox Name="NumberOfHawkerItem" X="52" Y="67" Row="1" Column="3" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" Limit="2" NumOnly="1" LuaKeyUp="NumberOfHawkerItemKeyUp" LuaLButtonUp="SetKeyInNumHawkerItem">
+			1 
+		</EditBox>
+		
+		<Button Name="ConfirmHawkerOwnerYes" Image="Data\inerface0004_main_A.tga" X="117" Y="92" LuaLButtonUp="ConfirmHawkerOwnerNum">
+			<ButtonRect State="0" Left="4" Top="511" Right="68" Bottom="528" />
+			<ButtonRect State="1" Left="70" Top="511" Right="134" Bottom="528" />
+			<ButtonRect State="2" Left="136" Top="511" Right="200" Bottom="528" />
+		</Button>
+		
+		
+		<Button Name="ConfirmHawkerOwnerNo" Image="Data\inerface0004_main_A.tga" X="184" Y="92" LuaLButtonUp="CloseHawkerOwnerCount">
+			<ButtonRect State="0" Left="4" Top="530" Right="68" Bottom="547" />
+			<ButtonRect State="1" Left="70" Top="530" Right="134" Bottom="547" />
+			<ButtonRect State="2" Left="136" Top="530" Right="200" Bottom="547" />
+		</Button>
+		
+		<Button Name="HawkerOwnerMaxStack" Image="Data\interface0033_Hawker.tga" X="186" Y="65" LuaLButtonUp="HawkerOwnerMaxStack">
+			<ButtonRect State="0" Left="274" Top="588" Right="304" Bottom="604" />
+			<ButtonRect State="1" Left="274" Top="605" Right="304" Bottom="621" />
+			<ButtonRect State="2" Left="274" Top="622" Right="304" Bottom="638" />
+		</Button>
+		
+		<Button Name="HawkerOwnerSetMin" Image="Data\interface0033_Hawker.tga" X="216" Y="65" LuaLButtonUp="HawkerOwnerSetMin">
+			<ButtonRect State="0" Left="242" Top="588" Right="272" Bottom="604" />
+			<ButtonRect State="1" Left="242" Top="605" Right="272" Bottom="621" />
+			<ButtonRect State="2" Left="242" Top="622" Right="272" Bottom="638" />
+		</Button>
+		
+		<Button Name="AddOneHawkerOwnerStack" Image="Data\interface0033_Hawker.tga" X="150" Y="65" LuaLButtonUp="HawkerOwnerAddOne">
+			<ButtonRect State="0" Left="204" Top="588" Right="221" Bottom="604" />
+			<ButtonRect State="1" Left="204" Top="605" Right="221" Bottom="621" />
+			<ButtonRect State="2" Left="204" Top="622" Right="221" Bottom="638" />
+		</Button>
+		
+		<Button Name="DiffOneHawkerOwnerStack" Image="Data\interface0033_Hawker.tga" X="168" Y="65" LuaLButtonUp="HawkerOwnerDiffOne">
+			<ButtonRect State="0" Left="223" Top="588" Right="240" Bottom="604" />
+			<ButtonRect State="1" Left="223" Top="605" Right="240" Bottom="621" />
+			<ButtonRect State="2" Left="223" Top="622" Right="240" Bottom="638" />
+		</Button>
+	</Panel>
+	
+	<!-- Moving Panel-->
+	<Panel Name="HawkerOwnerMovingPanel" Image="" X="0" Y="50" Left="0" Top="0" Right="40" Bottom="40"
+		 Hide="1" Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="HawkerOwnerDragEnd" LuaRButtonDown="ResetHawkerOwnerDrag" >
+		<AniIcon Name="HawkerOwnerMovingIcon" X="0" Y="0" Image=""  AutoDelete="0" Detect = "1" />
+	</Panel>
+	
+	<Panel Name="HawkerOwnerMovingPanel2" Image="" X="0" Y="50" Left="0" Top="0" Right="40" Bottom="40"
+		 Hide="1" Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="HawkerOwnerDragEnd2" LuaRButtonDown="ResetHawkerOwnerDrag" >
+		<AniIcon Name="HawkerOwnerMovingIcon2" X="0" Y="0" Image=""  AutoDelete="0" Detect = "1" />
+	</Panel>
+</UI>

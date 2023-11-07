@@ -1,0 +1,186 @@
+<?xml version="1.0" ?>
+<!-- Our to do list data -->
+<UI>
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+		
+	<Panel Name="MenuGuildApply" X="200" Y="100"  Left="4"
+		Top="3" Right="568" Bottom="280" Hide="0" Image="Data\interface0035_Guild.tga" 
+		Drag="1" DragLeft="0" DragTop="0" DragRight="564" DragBottom="277" LuaRButtonUp="CloseGuildApplyPanel"
+		LuaMouseWheel="MenuGuildApplyWheel">
+		
+		<UIImage Name="GuildApplyHighLightBg" X="3" Y="56" Image ="" Left="8" Top="58" Right="424" Bottom="241" 
+		LuaLButtonUp = "SelectGuildApplyItem"/>
+		
+		<UIImage Name="GuildApplyHighLightBar" X="3" Y="56" Image ="Data\interface0035_Guild.tga" Left="8" Top="399" Right="424" Bottom="416" Hide = "1"/>
+		
+		<Button Name="GuildApplyClose" Image="Data\interface0035_Guild2.tga" X="532" Y="13" LuaLButtonUp="CloseGuildApplyPanel">
+			<ButtonRect State="0" Left="590" Top="14" Right="612" Bottom="30" />	
+			<ButtonRect State="1" Left="615" Top="14" Right="638" Bottom="30" />
+			<ButtonRect State="2" Left="640" Top="14" Right="662" Bottom="30" />
+			<ButtonRect State="3" Left="640" Top="14" Right="662" Bottom="30" />
+			<ButtonRect State="4" Left="640" Top="14" Right="662" Bottom="30" />
+		</Button>
+		
+		<Button Name="GuildApplyJoinBtn" Image="Data\interface0035_Guild.tga" X="330" Y="245" LuaLButtonUp="GuildApplyConfirmJoin">
+			<ButtonRect State="0" Left="4" Top="345" Right="96" Bottom="366" />
+			<ButtonRect State="1" Left="102" Top="345" Right="194" Bottom="366" />
+			<ButtonRect State="2" Left="200" Top="345" Right="292" Bottom="366" />
+		</Button>
+		
+		<Button Name="GuildApplyCancelBtn" Image="Data\interface0035_Guild.tga" X="440" Y="245" LuaLButtonUp="CloseGuildApplyPanel">
+			<ButtonRect State="0" Left="4" Top="369" Right="96" Bottom="390" />
+			<ButtonRect State="1" Left="102" Top="369" Right="194" Bottom="390" />
+			<ButtonRect State="2" Left="200" Top="369" Right="292" Bottom="390" />
+		</Button>
+		
+		<ScrollBarV Name="GuildApplyScrollBar" X="422" Y="56" Width ="14" Height="183" Limit="0" BarColor="0" LuaLButtonDown="GuildApplyScrollLua">
+			
+			<PrevButton Name="GuildApplyButtonUp" Image="Data\interface0035_Guild.tga" X="0" Y="90"  LuaLButtonDown="GuildApplyButtonUpLua">
+			
+				<ButtonRect State="0" Left="306" Top="320" Right="320" Bottom="334" />
+				<ButtonRect State="1" Left="322" Top="320" Right="336" Bottom="334" />
+				<ButtonRect State="2" Left="338" Top="320" Right="352" Bottom="334" />
+				<ButtonRect State="3" Left="338" Top="320" Right="352" Bottom="334" />
+			</PrevButton>
+			<NextButton Name="GuildApplyButtonDown" Image="Data\interface0035_Guild.tga" X="0" Y="200"  LuaLButtonDown="GuildApplyDownLua">
+				<ButtonRect State="0" Left="306" Top="336" Right="320" Bottom="350" />
+				<ButtonRect State="1" Left="322" Top="336" Right="336" Bottom="350" />
+				<ButtonRect State="2" Left="338" Top="336" Right="352" Bottom="350" />
+				<ButtonRect State="3" Left="338" Top="336" Right="352" Bottom="350" />
+			</NextButton>
+			<MoveButton Name="GuildApplyScroll" Image="Data\interface0035_Guild.tga" X="0" Y="15"  LuaMouseMove="GuildApplyScrollLua">
+				<ButtonRect State="0" Left="355" Top="320" Right="369" Bottom="350" />
+				<ButtonRect State="1" Left="355" Top="320" Right="369" Bottom="350" />
+				<ButtonRect State="2" Left="355" Top="320" Right="369" Bottom="350" />
+			</MoveButton>
+		</ScrollBarV>
+			
+			<StaticText Name="GuildApplyName1" X="20" Y="60" Width="85" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">一個幫派</StaticText>
+			
+			<StaticText Name="GuildApplyID1" X="130" Y="60" Width="85" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">123</StaticText>
+			
+			<StaticText Name="GuildApplyMaster1" X="234" Y="60" Width="85" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">我係幫主</StaticText>
+			
+			<StaticText Name="GuildApplyMemberNum1" X="344" Y="60" Width="85" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">1/60</StaticText>
+			
+			<StaticText Name="GuildApplyAim" X="443" Y="60" Width="115" Height="100" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" >加油加油加油加油加油加油加油加油加油加油加油加油加油加油加油</StaticText>
+			
+			<StaticText Name="GuildApplyName2" X="20" Y="78" Width="85" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">一個幫派</StaticText>
+			
+			<StaticText Name="GuildApplyID2" X="130" Y="78" Width="85" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">123</StaticText>
+			
+			<StaticText Name="GuildApplyMaster2" X="234" Y="78" Width="85" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">我係幫主</StaticText>
+			
+			<StaticText Name="GuildApplyMemberNum2" X="344" Y="78" Width="85" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">1/60</StaticText>
+			
+			<StaticText Name="GuildApplyName3" X="20" Y="96" Width="85" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">一個幫派</StaticText>
+			
+			<StaticText Name="GuildApplyID3" X="130" Y="96" Width="85" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">123</StaticText>
+			
+			<StaticText Name="GuildApplyMaster3" X="234" Y="96" Width="85" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">我係幫主</StaticText>
+			
+			<StaticText Name="GuildApplyMemberNum3" X="344" Y="96" Width="85" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">1/60</StaticText>
+			
+			<StaticText Name="GuildApplyName4" X="20" Y="114" Width="85" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">一個幫派</StaticText>
+			
+			<StaticText Name="GuildApplyID4" X="130" Y="114" Width="85" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">123</StaticText>
+			
+			<StaticText Name="GuildApplyMaster4" X="234" Y="114" Width="85" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">我係幫主</StaticText>
+			
+			<StaticText Name="GuildApplyMemberNum4" X="344" Y="114" Width="85" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">1/60</StaticText>
+			
+			<StaticText Name="GuildApplyName5" X="20" Y="132" Width="85" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">一個幫派</StaticText>
+			
+			<StaticText Name="GuildApplyID5" X="130" Y="132" Width="85" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">123</StaticText>
+			
+			<StaticText Name="GuildApplyMaster5" X="234" Y="132" Width="85" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">我係幫主</StaticText>
+			
+			<StaticText Name="GuildApplyMemberNum5" X="344" Y="132" Width="85" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">1/60</StaticText>
+			
+			<StaticText Name="GuildApplyName6" X="20" Y="150" Width="85" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">一個幫派</StaticText>
+			
+			<StaticText Name="GuildApplyID6" X="130" Y="150" Width="85" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">123</StaticText>
+			
+			<StaticText Name="GuildApplyMaster6" X="234" Y="150" Width="85" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">我係幫主</StaticText>
+			
+			<StaticText Name="GuildApplyMemberNum6" X="344" Y="150" Width="85" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">1/60</StaticText>
+			
+			<StaticText Name="GuildApplyName7" X="20" Y="168" Width="85" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">一個幫派</StaticText>
+			
+			<StaticText Name="GuildApplyID7" X="130" Y="168" Width="85" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">123</StaticText>
+			
+			<StaticText Name="GuildApplyMaster7" X="234" Y="168" Width="85" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">我係幫主</StaticText>
+			
+			<StaticText Name="GuildApplyMemberNum7" X="344" Y="168" Width="85" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">1/60</StaticText>
+			
+			<StaticText Name="GuildApplyName8" X="20" Y="186" Width="85" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">一個幫派</StaticText>
+			
+			<StaticText Name="GuildApplyID8" X="130" Y="186" Width="85" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">123</StaticText>
+			
+			<StaticText Name="GuildApplyMaster8" X="234" Y="186" Width="85" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">我係幫主</StaticText>
+			
+			<StaticText Name="GuildApplyMemberNum8" X="344" Y="186" Width="85" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">1/60</StaticText>
+			
+			<StaticText Name="GuildApplyName9" X="20" Y="204" Width="85" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">一個幫派</StaticText>
+			
+			<StaticText Name="GuildApplyID9" X="130" Y="204" Width="85" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">123</StaticText>
+			
+			<StaticText Name="GuildApplyMaster9" X="234" Y="204" Width="85" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">我係幫主</StaticText>
+			
+			<StaticText Name="GuildApplyMemberNum9" X="344" Y="204" Width="85" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">1/60</StaticText>
+			
+			<StaticText Name="GuildApplyName10" X="20" Y="222" Width="85" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">一個幫派</StaticText>
+			
+			<StaticText Name="GuildApplyID10" X="130" Y="222" Width="85" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">123</StaticText>
+			
+			<StaticText Name="GuildApplyMaster10" X="234" Y="222" Width="85" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">我係幫主</StaticText>
+			
+			<StaticText Name="GuildApplyMemberNum10" X="344" Y="222" Width="85" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">1/60</StaticText>
+			
+			
+			
+			
+	</Panel>
+</UI>
+

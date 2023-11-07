@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<!-- Our to do list data -->
+<UI>
+	<Font Name="Data\simsun.ttc" Width="16" Height="20" />
+		
+	<Panel Name="RumorMessage" X="50" Y="100" Image="" Left="0"
+		Top="0" Right="800" Bottom="300" Hide="0" NotDetected="1"  NotRemove="1">
+		<StaticText Name="RumorMessageContent2" X="105" Y="0" Row="2" Column="10" Width="500" Height="200" EdgeCode="SHADOW" FontColor="FFFFFF00" ShadowColor="FF000000" 
+			FontName="Data\DFFN_K4.ttc" FontHeight="23" FontWidth="23"NotDetected="1" Align="Center" Hide="1">
+			欢迎进入梦幻古龙之大地武侠世界
+		</StaticText>
+		
+		<StaticText Name="RumorMessageContent1" X="105" Y="24" Row="2" Column="10" Width="500" Height="200" EdgeCode="SHADOW" FontColor="FFFFFF00" ShadowColor="FF000000" 
+			FontName="Data\DFFN_K4.ttc" FontHeight="23" FontWidth="23"NotDetected="1" Align="Center" Hide="1">
+			欢迎进入梦幻古龙之大地武侠世界
+		</StaticText>
+		
+		<StaticText Name="RumorMessageContent0" X="105" Y="48" Row="2" Column="10" Width="500" Height="200" EdgeCode="SHADOW" FontColor="FFFFFF00" ShadowColor="FF000000" 
+			FontName="Data\DFFN_K4.ttc" FontHeight="23" FontWidth="23"NotDetected="1" Align="Center" Hide="1">
+			欢迎进入梦幻古龙之大地武侠世界
+		</StaticText>
+		
+		<ChatPanel Name="RumorMessageChat" X="5" Y="6" Width="800" Height="60" ContinueRun = "1" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" FillColor="7F0000FF" NotDetected = "1" Hide="1">
+		</ChatPanel>
+	</Panel>
+</UI>
+

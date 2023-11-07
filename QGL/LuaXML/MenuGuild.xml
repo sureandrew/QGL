@@ -1,0 +1,778 @@
+<?xml version="1.0" ?>
+<!-- Our to do list data -->
+<UI>
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+		
+	<Panel Name="MenuGuild" X="200" Y="100"  Left="5"
+		Top="3" Right="574" Bottom="466" Hide="0" Image="Data\interface0035_Guild2.tga" 
+		Drag="1" DragLeft="0" DragTop="0" DragRight="569" DragBottom="463" LuaRButtonUp="CloseGuildPanel" DetectImage = "1"
+		LuaMouseWheel="MenuGuildWheel">
+		
+		
+		<UIImage Name="GuildHighLightBg" X="8" Y="89" Image ="" Left="30" Top="102" Right="486" Bottom="373" LuaLButtonUp = "SelectGuildItem"
+		LuaRButtonUp = "ShowMemberInfo"/>
+		
+		<Button Name="GuildClose" Image="Data\interface0035_Guild2.tga" X="537" Y="8" LuaLButtonUp="CloseGuildPanel">
+			<ButtonRect State="0" Left="590" Top="14" Right="612" Bottom="30" />	
+			<ButtonRect State="1" Left="615" Top="14" Right="638" Bottom="30" />
+			<ButtonRect State="2" Left="640" Top="14" Right="662" Bottom="30" />
+			<ButtonRect State="3" Left="640" Top="14" Right="662" Bottom="30" />
+			<ButtonRect State="4" Left="640" Top="14" Right="662" Bottom="30" />
+		</Button>
+		
+		<CheckBox Name = "GuildManorCheck" Image="Data\interface0035_Guild2.tga" X="390" Y="41" LuaLButtonDown="GuildManorCheckLua">
+			<CheckBoxRect Index="0" Left="581" Top="459" Right="675" Bottom="479" />
+			<CheckBoxRect Index="1" Left="581" Top="459" Right="675" Bottom="479" />
+			<CheckBoxRect Index="2" Left="581" Top="336" Right="675" Bottom="356" />
+		</CheckBox>
+		
+		<CheckBox Name = "GuildApplicantCheck" Image="Data\interface0035_Guild2.tga" X="300" Y="41" LuaLButtonDown="GuildApplicantCheckLua">
+			<CheckBoxRect Index="0" Left="581" Top="435" Right="675" Bottom="455" />
+			<CheckBoxRect Index="1" Left="581" Top="435" Right="675" Bottom="455" />
+			<CheckBoxRect Index="2" Left="581" Top="312" Right="675" Bottom="332" />
+		</CheckBox>
+		
+		<CheckBox Name = "GuildRuleCheck" Image="Data\interface0035_Guild2.tga" X="210" Y="41" LuaLButtonDown="GuildRuleCheckLua">
+			<CheckBoxRect Index="0" Left="581" Top="411" Right="675" Bottom="431" />
+			<CheckBoxRect Index="1" Left="581" Top="411" Right="675" Bottom="431" />
+			<CheckBoxRect Index="2" Left="581" Top="288" Right="675" Bottom="308" />
+		</CheckBox>
+		
+		<CheckBox Name = "GuildMemberCheck" Image="Data\interface0035_Guild2.tga" X="120" Y="41" LuaLButtonDown="GuildMemberCheckLua">
+			<CheckBoxRect Index="0" Left="581" Top="387" Right="675" Bottom="407" />
+			<CheckBoxRect Index="1" Left="581" Top="387" Right="675" Bottom="407" />
+			<CheckBoxRect Index="2" Left="581" Top="264" Right="675" Bottom="284" />
+		</CheckBox>
+		
+		<CheckBox Name = "GuildInfoCheck" Image="Data\interface0035_Guild2.tga" X="30" Y="41" LuaLButtonDown="GuildInfoCheckLua">
+			<CheckBoxRect Index="0" Left="581" Top="363" Right="675" Bottom="383" />
+			<CheckBoxRect Index="1" Left="581" Top="363" Right="675" Bottom="383" />
+			<CheckBoxRect Index="2" Left="581" Top="240" Right="675" Bottom="260" />
+		</CheckBox>
+		
+		<UIImage Name="GuildInfoIm" Image="Data\interface0035_Guild2.tga" X="35" Y="90" Left="35" Top="486"
+			Right="537" Bottom="770" AutoDelete="0" NotDetected="1" />
+			
+		<StaticText Name="GuildInfoName" X="140" Y="114" Width="85" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			幫派名稱
+			</StaticText>
+			
+		<StaticText Name="GuildInfoFirstMaster" X="140" Y="141" Width="85" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">等一個主人</StaticText>
+		
+		<StaticText Name="GuildInfoCurMaster" X="140" Y="168" Width="85" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">現在的主人</StaticText>
+			
+		<StaticText Name="GuildInfoVice" X="140" Y="195" Width="85" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">現在的副主人</StaticText>
+			
+		<StaticText Name="GuildInfoNum" X="140" Y="222" Width="85" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">99999</StaticText>
+			
+		<StaticText Name="GuildInfoBid" X="140" Y="249" Width="85" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">金額</StaticText>
+			
+		<StaticText Name="GuildInfoGroup" X="140" Y="276" Width="85" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">分組</StaticText>
+			
+		<StaticText Name="GuildInfoPerName" X="140" Y="322" Width="85" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">你的名字</StaticText>
+		
+		<StaticText Name="GuildInfoPerLevel" X="140" Y="349" Width="85" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">你的等級</StaticText>
+			
+		<StaticText Name="GuildInfoMoney" X="355" Y="114" Width="200" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">9922</StaticText>
+			
+		<StaticText Name="GuildInfoRich" X="355" Y="141" Width="200" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">11111</StaticText>
+		
+		<StaticText Name="GuildInfoMemNum" X="355" Y="168" Width="200" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">222222</StaticText>
+			
+		<StaticText Name="GuildInfoAlly" X="416" Y="195" Width="85" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center"></StaticText>
+			
+		<StaticText Name="GuildInfoEnemy" X="416" Y="222" Width="85" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center"></StaticText>
+		
+		<StaticText Name="GuildInfoPvPScore" X="416" Y="249" Width="85" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">積分</StaticText>
+			
+		<StaticText Name="GuildInfoJob" X="416" Y="322" Width="85" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">你的位置</StaticText>
+			
+		<StaticText Name="GuildInfoDonation" X="260" Y="349" Width="400" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">20120</StaticText>
+			
+		<StaticText Name="GuildInfoGroupVSGuild" X="416" Y="276" Width="85" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">20001</StaticText>
+			
+		<UIImage Name="GuildManorIm" Image="Data\interface0035_Guild2.tga" X="35" Y="80" Left="713" Top="348"
+			Right="1199" Bottom="639" AutoDelete="0" NotDetected="1" />	
+			
+		<StaticText Name="GuildManorScale" X="160" Y="113" Width="85" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center"></StaticText>
+			
+		<StaticText Name="GuildManorAura" X="160" Y="141" Width="85" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center"></StaticText>	
+			
+		<StaticText Name="GuildSitIndex" X="160" Y="167" Width="85" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center"></StaticText>
+			
+		<StaticText Name="GuildMaintainSuccess" X="160" Y="328" Width="85" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center"></StaticText>
+		
+		<StaticText Name="GuildMaintainFee" X="200" Y="354" Width="200" Height="20" Row="1" Column="16" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center"></StaticText>
+			
+		<StaticText Name="GuildManorRoom" X="408" Y="300" Width="85" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center"></StaticText>
+			
+		<StaticText Name="GuildManorGuard" X="408" Y="141" Width="85" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center"></StaticText>
+			
+		<StaticText Name="GuildTigerLevel" X="408" Y="167" Width="85" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center"></StaticText>
+			
+		<StaticText Name="GuildMaintainFail" X="408" Y="328" Width="85" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center"></StaticText>
+			
+		
+		
+		<StaticText Name="ManorCharExPow" X="160" Y="194" Width="85" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center"></StaticText>
+
+		<StaticText Name="ManorCharInPow" X="408" Y="194" Width="85" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center"></StaticText>
+
+		<StaticText Name="ManorPartnerExPow" X="160" Y="221" Width="85" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center"></StaticText>
+
+		<StaticText Name="ManorPartnerInPow" X="408" Y="221" Width="85" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center"></StaticText>	
+
+		<StaticText Name="ManorHP" X="160" Y="247" Width="85" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center"></StaticText>
+
+		<StaticText Name="ManorSP" X="408" Y="247" Width="85" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center"></StaticText>	
+
+		<StaticText Name="ManorDrug" X="160" Y="274" Width="85" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center"></StaticText>
+
+		<StaticText Name="ManorCook" X="408" Y="274" Width="85" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center"></StaticText>	
+
+		<StaticText Name="ManorWine" X="160" Y="300" Width="85" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center"></StaticText>
+
+		<StaticText Name="GuildMaterial" X="408" Y="113" Width="85" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center"></StaticText>
+
+			
+			
+			
+		
+			
+		<StaticText Name="GuildNoManor" X="180" Y="200" Width="200" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center"></StaticText>
+			
+		<Button Name="GuildUpgradeBtn" Image="Data\interface0035_Guild2.tga" X="100" Y="400">
+			<ButtonRect State="0" Left="774" Top="87" Right="864" Bottom="106" />
+			<ButtonRect State="1" Left="774" Top="112" Right="864" Bottom="131" />
+			<ButtonRect State="2" Left="774" Top="137" Right="864" Bottom="156" />
+			<ButtonRect State="3" Left="774" Top="137" Right="864" Bottom="156" />
+		</Button>
+		
+		<Button Name="GuildMovePositionBtn" Image="Data\interface0035_Guild2.tga" X="195" Y="400" LuaLButtonUp="OpenGuildPost">
+			<ButtonRect State="0" Left="774" Top="238" Right="864" Bottom="257" />
+			<ButtonRect State="1" Left="774" Top="263" Right="864" Bottom="282" />
+			<ButtonRect State="2" Left="774" Top="288" Right="864" Bottom="307" />
+			<ButtonRect State="3" Left="774" Top="288" Right="864" Bottom="307" />
+		</Button>
+		
+		<Button Name="GuildDonationBtn" Image="Data\interface0035_Guild2.tga" X="290" Y="400" LuaLButtonUp="OpenGuildDonation">
+			<ButtonRect State="0" Left="678" Top="87" Right="768" Bottom="106" />
+			<ButtonRect State="1" Left="678" Top="112" Right="768" Bottom="131" />
+			<ButtonRect State="2" Left="678" Top="137" Right="768" Bottom="156" />
+			<ButtonRect State="3" Left="678" Top="137" Right="768" Bottom="156" />
+		</Button>
+		
+		<Button Name="GuildAimBtn" Image="Data\interface0035_Guild2.tga" X="385" Y="400" LuaLButtonUp="OpenGuildAimPanel">
+			<ButtonRect State="0" Left="774" Top="162" Right="864" Bottom="181" />
+			<ButtonRect State="1" Left="774" Top="187" Right="864" Bottom="206" />
+			<ButtonRect State="2" Left="774" Top="212" Right="864" Bottom="231" />
+			<ButtonRect State="3" Left="774" Top="212" Right="864" Bottom="231" />
+		</Button>
+		
+		<Button Name="GuildAddMemBtn" Image="Data\interface0035_Guild2.tga" X="100" Y="425" LuaLButtonUp="AddGuildMemberLua">
+			<ButtonRect State="0" Left="581" Top="87" Right="671" Bottom="106" />
+			<ButtonRect State="1" Left="581" Top="112" Right="671" Bottom="131" />
+			<ButtonRect State="2" Left="581" Top="137" Right="671" Bottom="156" />
+			<ButtonRect State="3" Left="581" Top="137" Right="671" Bottom="156" />
+		</Button>
+		
+		<Button Name="GuildKickMemBtn" Image="Data\interface0035_Guild2.tga" X="195" Y="425" LuaLButtonUp="OpenMenuGuildDeleteBox">
+			<ButtonRect State="0" Left="581" Top="162" Right="671" Bottom="181" />
+			<ButtonRect State="1" Left="581" Top="187" Right="671" Bottom="206" />
+			<ButtonRect State="2" Left="581" Top="212" Right="671" Bottom="231" />
+			<ButtonRect State="3" Left="581" Top="212" Right="671" Bottom="231" />
+		</Button>
+		
+		<Button Name="GuildLeaveBtn" Image="Data\interface0035_Guild2.tga" X="290" Y="425" LuaLButtonUp="LeaveGuildLua">
+			<ButtonRect State="0" Left="678" Top="238" Right="768" Bottom="257" />
+			<ButtonRect State="1" Left="678" Top="263" Right="768" Bottom="282" />
+			<ButtonRect State="2" Left="678" Top="288" Right="768" Bottom="307" />
+			<ButtonRect State="3" Left="678" Top="288" Right="768" Bottom="307" />
+		</Button>
+		
+		<Button Name="GuildRuleBtn" Image="Data\interface0035_Guild2.tga" X="385" Y="425"  LuaLButtonUp="OpenGuildRulePanel">
+			<ButtonRect State="0" Left="678" Top="162" Right="768" Bottom="181" />
+			<ButtonRect State="1" Left="678" Top="187" Right="768" Bottom="206" />
+			<ButtonRect State="2" Left="678" Top="212" Right="768" Bottom="231" />
+			<ButtonRect State="3" Left="678" Top="212" Right="768" Bottom="231" />
+		</Button>
+		
+		<UIImage Name="GuildMemInfoIm" Image="Data\interface0035_Guild2.tga" X="30" Y="74" Left="30" Top="780"
+			Right="534" Bottom="807" AutoDelete="0" LuaLButtonUp="GuildSorintLua" />
+			
+		<UIImage Name="GuildMemInfoBar1Im" Image="Data\interface0035_Guild2.tga" X="23" Y="100" Left="702" Top="1038"
+			Right="1225" Bottom="1040" AutoDelete="0" NotDetected="1" />
+		
+		<UIImage Name="GuildMemInfoBar2Im" Image="Data\interface0035_Guild2.tga" X="23" Y="366" Left="702" Top="1038"
+			Right="1225" Bottom="1040" AutoDelete="0" NotDetected="1" />
+			
+		<UIImage Name="GuildHighLightIm" Image="Data\interface0035_Guild2.tga" X="24" Y="106" Left="29" Top="839"
+			Right="534" Bottom="856" AutoDelete="0" NotDetected="1"  />
+		<StaticText Name="GuildMem1Name" X="20" Y="113" Width="100" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			求其一個名
+		</StaticText>
+		
+		<StaticText Name="GuildMem1Level" X="106" Y="113" Width="50" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			100
+		</StaticText>
+		
+		<StaticText Name="GuildMem1Class" X="140" Y="113" Width="80" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			職業
+		</StaticText>
+		
+		<StaticText Name="GuildMem1Position" X="180" Y="113" Width="100" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			位置
+		</StaticText>
+		
+		<StaticText Name="GuildMem1Donation" X="112" Y="113" Width="400" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			10000
+		</StaticText>
+		
+		<StaticText Name="GuildMem1JoinTime" X="377" Y="113" Width="100" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			2007/10/2
+		</StaticText>
+		
+		<StaticText Name="GuildMem1OfflineTime" X="455" Y="113" Width="100" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			一日
+		</StaticText>
+		
+		<StaticText Name="GuildMem2Name" X="20" Y="138" Width="100" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			求其一個名
+		</StaticText>
+		
+		<StaticText Name="GuildMem2Level" X="106" Y="138" Width="50" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			100
+		</StaticText>
+		
+		<StaticText Name="GuildMem2Class" X="140" Y="138" Width="80" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			職業
+		</StaticText>
+		
+		<StaticText Name="GuildMem2Position" X="180" Y="138" Width="100" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			位置
+		</StaticText>
+		
+		<StaticText Name="GuildMem2Donation" X="112" Y="138" Width="400" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			10000
+		</StaticText>
+		
+		<StaticText Name="GuildMem2JoinTime" X="377" Y="138" Width="100" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			2007/10/2
+		</StaticText>
+		
+		<StaticText Name="GuildMem2OfflineTime" X="455" Y="138" Width="100" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			一日
+		</StaticText>
+		
+		<StaticText Name="GuildMem3Name" X="20" Y="163" Width="100" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			求其一個名
+		</StaticText>
+		
+		<StaticText Name="GuildMem3Level" X="106" Y="163" Width="50" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			100
+		</StaticText>
+		
+		<StaticText Name="GuildMem3Class" X="140" Y="163" Width="80" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			職業
+		</StaticText>
+		
+		<StaticText Name="GuildMem3Position" X="180" Y="163" Width="100" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			位置
+		</StaticText>
+		
+		<StaticText Name="GuildMem3Donation" X="112" Y="163" Width="400" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			10000
+		</StaticText>
+		
+		<StaticText Name="GuildMem3JoinTime" X="377" Y="163" Width="100" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			2007/10/2
+		</StaticText>
+		
+		<StaticText Name="GuildMem3OfflineTime" X="455" Y="163" Width="100" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			一日
+		</StaticText>
+		
+		<StaticText Name="GuildMem4Name" X="20" Y="188" Width="100" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			求其一個名
+		</StaticText>
+		
+		<StaticText Name="GuildMem4Level" X="106" Y="188" Width="50" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			100
+		</StaticText>
+		
+		<StaticText Name="GuildMem4Class" X="140" Y="188" Width="80" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			職業
+		</StaticText>
+		
+		<StaticText Name="GuildMem4Position" X="180" Y="188" Width="100" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			位置
+		</StaticText>
+		
+		<StaticText Name="GuildMem4Donation" X="112" Y="188" Width="400" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			10000
+		</StaticText>
+		
+		<StaticText Name="GuildMem4JoinTime" X="377" Y="188" Width="100" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			2007/10/2
+		</StaticText>
+		
+		<StaticText Name="GuildMem4OfflineTime" X="455" Y="188" Width="100" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			一日
+		</StaticText>
+		
+		<StaticText Name="GuildMem5Name" X="20" Y="213" Width="100" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			求其一個名
+		</StaticText>
+		
+		<StaticText Name="GuildMem5Level" X="106" Y="213" Width="50" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			100
+		</StaticText>
+		
+		<StaticText Name="GuildMem5Class" X="140" Y="213" Width="80" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			職業
+		</StaticText>
+		
+		<StaticText Name="GuildMem5Position" X="180" Y="213" Width="100" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			位置
+		</StaticText>
+		
+		<StaticText Name="GuildMem5Donation" X="112" Y="213" Width="400" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			10000
+		</StaticText>
+		
+		<StaticText Name="GuildMem5JoinTime" X="377" Y="213" Width="100" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			2007/10/2
+		</StaticText>
+		
+		<StaticText Name="GuildMem5OfflineTime" X="455" Y="213" Width="100" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			一日
+		</StaticText>
+			
+		<StaticText Name="GuildMem6Name" X="20" Y="238" Width="100" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			求其一個名
+		</StaticText>
+		
+		<StaticText Name="GuildMem6Level" X="106" Y="238" Width="50" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			100
+		</StaticText>
+		
+		<StaticText Name="GuildMem6Class" X="140" Y="238" Width="80" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			職業
+		</StaticText>
+		
+		<StaticText Name="GuildMem6Position" X="180" Y="238" Width="100" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			位置
+		</StaticText>
+		
+		<StaticText Name="GuildMem6Donation" X="112" Y="238" Width="400" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			10000
+		</StaticText>
+		
+		<StaticText Name="GuildMem6JoinTime" X="377" Y="238" Width="100" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			2007/10/2
+		</StaticText>
+		
+		<StaticText Name="GuildMem6OfflineTime" X="455" Y="238" Width="100" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			一日
+		</StaticText>
+		
+		<StaticText Name="GuildMem7Name" X="20" Y="263" Width="100" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			求其一個名
+		</StaticText>
+		
+		<StaticText Name="GuildMem7Level" X="106" Y="263" Width="50" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			100
+		</StaticText>
+		
+		<StaticText Name="GuildMem7Class" X="140" Y="263" Width="80" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			職業
+		</StaticText>
+		
+		<StaticText Name="GuildMem7Position" X="180" Y="263" Width="100" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			位置
+		</StaticText>
+		
+		<StaticText Name="GuildMem7Donation" X="112" Y="263" Width="400" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			10000
+		</StaticText>
+		
+		<StaticText Name="GuildMem7JoinTime" X="377" Y="263" Width="100" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			2007/10/2
+		</StaticText>
+		
+		<StaticText Name="GuildMem7OfflineTime" X="455" Y="263" Width="100" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			一日
+		</StaticText>
+		
+		<StaticText Name="GuildMem8Name" X="20" Y="288" Width="100" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			求其一個名
+		</StaticText>
+		
+		<StaticText Name="GuildMem8Level" X="106" Y="288" Width="50" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			100
+		</StaticText>
+		
+		<StaticText Name="GuildMem8Class" X="140" Y="288" Width="80" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			職業
+		</StaticText>
+		
+		<StaticText Name="GuildMem8Position" X="180" Y="288" Width="100" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			位置
+		</StaticText>
+		
+		<StaticText Name="GuildMem8Donation" X="112" Y="288" Width="400" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			10000
+		</StaticText>
+		
+		<StaticText Name="GuildMem8JoinTime" X="377" Y="288" Width="100" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			2007/10/2
+		</StaticText>
+		
+		<StaticText Name="GuildMem8OfflineTime" X="455" Y="288" Width="100" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			一日
+		</StaticText>
+		
+		<StaticText Name="GuildMem9Name" X="20" Y="313" Width="100" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			求其一個名
+		</StaticText>
+		
+		<StaticText Name="GuildMem9Level" X="106" Y="313" Width="50" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			100
+		</StaticText>
+		
+		<StaticText Name="GuildMem9Class" X="140" Y="313" Width="80" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			職業
+		</StaticText>
+		
+		<StaticText Name="GuildMem9Position" X="180" Y="313" Width="100" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			位置
+		</StaticText>
+		
+		<StaticText Name="GuildMem9Donation" X="112" Y="313" Width="400" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			10000
+		</StaticText>
+		
+		<StaticText Name="GuildMem9JoinTime" X="377" Y="313" Width="100" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			2007/10/2
+		</StaticText>
+		
+		<StaticText Name="GuildMem9OfflineTime" X="455" Y="313" Width="100" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			一日
+		</StaticText>
+		
+		<StaticText Name="GuildMem10Name" X="20" Y="338" Width="100" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			求其一個名
+		</StaticText>
+		
+		<StaticText Name="GuildMem10Level" X="106" Y="338" Width="50" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			100
+		</StaticText>
+		
+		<StaticText Name="GuildMem10Class" X="140" Y="338" Width="80" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			職業
+		</StaticText>
+		
+		<StaticText Name="GuildMem10Position" X="180" Y="338" Width="100" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			位置
+		</StaticText>
+		
+		<StaticText Name="GuildMem10Donation" X="112" Y="338" Width="400" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			10000
+		</StaticText>
+		
+		<StaticText Name="GuildMem10JoinTime" X="377" Y="338" Width="100" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			2007/10/2
+		</StaticText>
+		
+		<StaticText Name="GuildMem10OfflineTime" X="455" Y="338" Width="100" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			一日
+		</StaticText>
+		
+		<UIImage Name="GuildMemInfoScrollBarIm" Image="Data\interface0035_Guild2.tga" X="530" Y="100" Left="631" Top="669"
+			Right="647" Bottom="935" AutoDelete="0" NotDetected="1"/>
+			
+		<ScrollBarV Name="GuildMemInfoScrollBar" X="531" Y="102" Width ="14" Height="262" Limit="0" BarColor="0" LuaLButtonDown="GuildMemInfoScrollLua">
+			
+			<PrevButton Name="GuildMemInfoButtonUp" Image="Data\interface0035_Guild2.tga" X="0" Y="90"  LuaLButtonDown="GuildMemInfoButtonUpLua">
+			
+				<ButtonRect State="0" Left="702" Top="52" Right="717" Bottom="66" />
+				<ButtonRect State="1" Left="718" Top="52" Right="732" Bottom="66" />
+				<ButtonRect State="2" Left="734" Top="52" Right="748" Bottom="66" />
+				<ButtonRect State="3" Left="734" Top="52" Right="748" Bottom="66" />
+			</PrevButton>
+			<NextButton Name="GuildMemInfoButtonDown" Image="Data\interface0035_Guild2.tga" X="0" Y="200"  LuaLButtonDown="GuildMemInfoDownLua">
+				<ButtonRect State="0" Left="702" Top="69" Right="717" Bottom="82" />
+				<ButtonRect State="1" Left="718" Top="69" Right="732" Bottom="82" />
+				<ButtonRect State="2" Left="734" Top="69" Right="748" Bottom="82" />
+				<ButtonRect State="3" Left="734" Top="69" Right="748" Bottom="82" />
+			</NextButton>
+			<MoveButton Name="GuildMemInfoScroll" Image="Data\interface0035_Guild2.tga" X="0" Y="15"  LuaMouseMove="GuildMemInfoScrollLua">
+				<ButtonRect State="0" Left="751" Top="52" Right="765" Bottom="82" />
+				<ButtonRect State="1" Left="751" Top="52" Right="765" Bottom="82" />
+				<ButtonRect State="2" Left="751" Top="52" Right="765" Bottom="82" />
+			</MoveButton>
+		</ScrollBarV>
+			
+		<UIImage Name="GuildRuleBar1Im" Image="Data\interface0035_Guild2.tga" X="23" Y="69" Left="702" Top="1038"
+			Right="1225" Bottom="1040" AutoDelete="0" NotDetected="1" />
+		<UIImage Name="GuildRuleBar2Im" Image="Data\interface0035_Guild2.tga" X="23" Y="329" Left="702" Top="1053"
+			Right="1225" Bottom="1118" AutoDelete="0" NotDetected="1" />
+			
+		<!--<UIImage Name="GuildRuleScrollBarIm" Image="Data\interface0035_Guild2.tga" X="530" Y="70" Left="608" Top="675"
+			Right="624" Bottom="935" AutoDelete="0" NotDetected="1"/>
+		<ScrollBarV Name="GuildRuleScrollBar" X="531" Y="70" Width ="14" Height="258" Limit="0" BarColor="0" LuaLButtonDown="GuildRuleScrollLua">
+			
+			<PrevButton Name="GuildRuleButtonUp" Image="Data\interface0035_Guild2.tga" X="0" Y="75"  LuaLButtonDown="GuildRuleButtonUpLua">
+			
+				<ButtonRect State="0" Left="702" Top="52" Right="717" Bottom="66" />
+				<ButtonRect State="1" Left="718" Top="52" Right="732" Bottom="66" />
+				<ButtonRect State="2" Left="734" Top="52" Right="748" Bottom="66" />
+				<ButtonRect State="3" Left="734" Top="52" Right="748" Bottom="66" />
+			</PrevButton>
+			<NextButton Name="GuildRuleButtonDown" Image="Data\interface0035_Guild2.tga" X="0" Y="200"  LuaLButtonDown="GuildRuleDownLua">
+				<ButtonRect State="0" Left="702" Top="69" Right="717" Bottom="82" />
+				<ButtonRect State="1" Left="718" Top="69" Right="732" Bottom="82" />
+				<ButtonRect State="2" Left="734" Top="69" Right="748" Bottom="82" />
+				<ButtonRect State="3" Left="734" Top="69" Right="748" Bottom="82" />
+			</NextButton>
+			<MoveButton Name="GuildRuleScroll" Image="Data\interface0035_Guild2.tga" X="0" Y="15"  LuaMouseMove="GuildRuleScrollLua">
+				<ButtonRect State="0" Left="751" Top="52" Right="765" Bottom="82" />
+				<ButtonRect State="1" Left="751" Top="52" Right="765" Bottom="82" />
+				<ButtonRect State="2" Left="751" Top="52" Right="765" Bottom="82" />
+			</MoveButton>
+		</ScrollBarV>
+		-->
+		
+		<!--
+		<StaticText Name="GuildRuleChat" X="28" Y="74" Width="520" Height="400" ContinueRun="0" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" FillColor="7F0000FF" NotDetected="1"></StaticText>
+		-->
+			
+		<ChatPanel Name="GuildRuleChat" X="28" Y="74" Width="520" Height="400" ContinueRun="0" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" FillColor="7F0000FF" NotDetected="1">
+		</ChatPanel>
+		
+		<!--
+		<StaticText Name="GuildAimChat" X="120" Y="332" Width="420" Height="400" ContinueRun="0" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" FillColor="7F0000FF" NotDetected="1"></StaticText>
+		-->
+		<ChatPanel Name="GuildAimChat" X="120" Y="332" Width="420" Height="60" ContinueRun="0" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" FillColor="7F0000FF" NotDetected="1">
+		</ChatPanel>
+		
+		<Button Name="GuildAimChatUpRow" Image="Data\inerface0001_main.tga" X="520" Y="332" LuaLButtonUp="GuildAimChatScrollUp"
+			DetectImage="1">
+			<ButtonRect State="0" Left="400" Top="233" Right="415" Bottom="247" />
+			<ButtonRect State="1" Left="417" Top="233" Right="432" Bottom="247" />
+			<ButtonRect State="2" Left="434" Top="233" Right="449" Bottom="247" />
+		</Button>
+		
+		<Button Name="GuildAimChatDownRow" Image="Data\inerface0001_main.tga" X="520" Y="370" LuaLButtonUp="GuildAimChatScrollDown">
+			<ButtonRect State="0" Left="400" Top="250" Right="415" Bottom="264" />
+			<ButtonRect State="1" Left="417" Top="250" Right="432" Bottom="264" />
+			<ButtonRect State="2" Left="434" Top="250" Right="449" Bottom="264" />
+		</Button>
+		
+		<UIImage Name="GuildApplyInfoIm" Image="Data\interface0035_Guild2.tga" X="30" Y="74" Left="29" Top="814"
+			Right="534" Bottom="829" AutoDelete="0" NotDetected="1" />
+			
+		<StaticText Name="GuildApply1Name" X="20" Y="113" Width="100" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			求其一個名
+		</StaticText>
+		
+		<StaticText Name="GuildApply1ID" X="156" Y="113" Width="100" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			8565
+		</StaticText>
+		
+		<StaticText Name="GuildApply1Level" X="230" Y="113" Width="80" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			100
+		</StaticText>
+		
+		<StaticText Name="GuildApply1Date" X="364" Y="113" Width="100" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			2007/10/10
+		</StaticText>
+		
+		<StaticText Name="GuildApply2Name" X="20" Y="138" Width="100" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			求其一個名
+		</StaticText>
+		
+		<StaticText Name="GuildApply2ID" X="156" Y="138" Width="100" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			8565
+		</StaticText>
+		
+		<StaticText Name="GuildApply2Level" X="230" Y="138" Width="80" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			100
+		</StaticText>
+		
+		<StaticText Name="GuildApply2Date" X="364" Y="138" Width="100" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			2007/10/10
+		</StaticText>
+		
+		<StaticText Name="GuildApply3Name" X="20" Y="163" Width="100" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			求其一個名
+		</StaticText>
+		
+		<StaticText Name="GuildApply3ID" X="156" Y="163" Width="100" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			8565
+		</StaticText>
+		
+		<StaticText Name="GuildApply3Level" X="230" Y="163" Width="80" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			100
+		</StaticText>
+		
+		<StaticText Name="GuildApply3Date" X="364" Y="163" Width="100" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			2007/10/10
+		</StaticText>
+		
+		<StaticText Name="GuildApply4Name" X="20" Y="188" Width="100" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			求其一個名
+		</StaticText>
+		
+		<StaticText Name="GuildApply4ID" X="156" Y="188" Width="100" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			8565
+		</StaticText>
+		
+		<StaticText Name="GuildApply4Level" X="230" Y="188" Width="80" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			100
+		</StaticText>
+		
+		<StaticText Name="GuildApply4Date" X="364" Y="188" Width="100" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			2007/10/10
+		</StaticText>
+		
+		<StaticText Name="GuildApply5Name" X="20" Y="213" Width="100" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			求其一個名
+		</StaticText>
+		
+		<StaticText Name="GuildApply5ID" X="156" Y="213" Width="100" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			8565
+		</StaticText>
+		
+		<StaticText Name="GuildApply5Level" X="230" Y="213" Width="80" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			100
+		</StaticText>
+		
+		<StaticText Name="GuildApply5Date" X="364" Y="213" Width="100" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			2007/10/10
+		</StaticText>
+		
+		<StaticText Name="GuildApply6Name" X="20" Y="238" Width="100" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			求其一個名
+		</StaticText>
+		
+		<StaticText Name="GuildApply6ID" X="156" Y="238" Width="100" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			8565
+		</StaticText>
+		
+		<StaticText Name="GuildApply6Level" X="230" Y="238" Width="80" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			100
+		</StaticText>
+		
+		<StaticText Name="GuildApply6Date" X="364" Y="238" Width="100" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			2007/10/10
+		</StaticText>
+		
+		<StaticText Name="GuildApply7Name" X="20" Y="263" Width="100" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			求其一個名
+		</StaticText>
+		
+		<StaticText Name="GuildApply7ID" X="156" Y="263" Width="100" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			8565
+		</StaticText>
+		
+		<StaticText Name="GuildApply7Level" X="230" Y="263" Width="80" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			100
+		</StaticText>
+		
+		<StaticText Name="GuildApply7Date" X="364" Y="263" Width="100" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			2007/10/10
+		</StaticText>
+		
+		<StaticText Name="GuildApply8Name" X="20" Y="288" Width="100" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			求其一個名
+		</StaticText>
+		
+		<StaticText Name="GuildApply8ID" X="156" Y="288" Width="100" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			8565
+		</StaticText>
+		
+		<StaticText Name="GuildApply8Level" X="230" Y="288" Width="80" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			100
+		</StaticText>
+		
+		<StaticText Name="GuildApply8Date" X="364" Y="288" Width="100" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			2007/10/10
+		</StaticText>
+		
+		<StaticText Name="GuildApply9Name" X="20" Y="313" Width="100" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			求其一個名
+		</StaticText>
+		
+		<StaticText Name="GuildApply9ID" X="156" Y="313" Width="100" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			8565
+		</StaticText>
+		
+		<StaticText Name="GuildApply9Level" X="230" Y="313" Width="80" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			100
+		</StaticText>
+		
+		<StaticText Name="GuildApply9Date" X="364" Y="313" Width="100" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			2007/10/10
+		</StaticText>
+		
+		<StaticText Name="GuildApply10Name" X="20" Y="338" Width="100" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			求其一個名
+		</StaticText>
+		
+		<StaticText Name="GuildApply10ID" X="156" Y="338" Width="100" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			8565
+		</StaticText>
+		
+		<StaticText Name="GuildApply10Level" X="230" Y="338" Width="80" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			100
+		</StaticText>
+		
+		<StaticText Name="GuildApply10Date" X="364" Y="338" Width="100" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			2007/10/10
+		</StaticText>
+	</Panel>
+</UI>
+

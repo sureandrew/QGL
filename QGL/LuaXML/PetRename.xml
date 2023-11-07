@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+
+<UI>
+	<ID Name="PetRename" />
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	<KeyIn Item="PetNewName" />
+	<Panel Name="PetRenamePanel" Image="Data\inerface0004_main_A.tga" X="0" Y="0" Left="314" Top="293" Right="542" Bottom="391"
+		Drag="1" DragLeft="0" DragTop="0" DragRight="228"	DragBottom="98"
+		LuaRButtonUp="CloseChangePetName"  LuaKeyChar="CloseChangePetName" 
+		>
+		<StaticText Name="PetRenameText" X="20" Y="20" Row="1" Column="6" EdgeCode="LIGHT" FontColor="FFEDD97A" ShadowColor="FF000000">
+			请输入新名字
+		</StaticText>
+		<UIImage Name="PetRenameBox" Image="Data\inerface0004_main_A.tga" X="20" Y="35" Left="417" Top="416" Right="548" Bottom="438" />
+		<EditBox Name="PetNewName" X="25" Y="40" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" LuaLButtonUp="" Limit="8" >
+		</EditBox>
+		<Button Name="PetRenameOK" Image="Data\inerface0004_main_A.tga" X="86" Y="60" LuaLButtonUp="ChanegPetName">
+			<ButtonRect State="0" Left="4" Top="511" Right="68" Bottom="528" />
+			<ButtonRect State="1" Left="70" Top="511" Right="134" Bottom="528" />
+			<ButtonRect State="2" Left="136" Top="511" Right="200" Bottom="528" />
+		</Button>
+		
+		<Button Name="PetRenameNO" Image="Data\inerface0004_main_A.tga" X="153" Y="60" LuaLButtonUp="CloseChangePetName">
+			<ButtonRect State="0" Left="4" Top="530" Right="68" Bottom="547" />
+			<ButtonRect State="1" Left="70" Top="530" Right="134" Bottom="547" />
+			<ButtonRect State="2" Left="136" Top="530" Right="200" Bottom="547" />
+		</Button>
+	
+	</Panel>	
+</UI>

@@ -1,0 +1,94 @@
+<?xml version="1.0" ?>
+<!-- Our to do list data -->
+<UI>
+	<ID Name="AntiHack" />
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	<Panel Name="AntiHackPanel" Image="Data\interface0003_popup.tga" X="96" Y="151" 
+		Left="172" Top="423" Right="777" Bottom="718" Hide="0" NotDetected = "0">	
+		
+		<EditBox Name="AntiHackDummyEditBox" X="40" Y="305" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" Limit="8" NumOnly="1">
+		</EditBox>
+		<UIImage Name="AntiHackImage" Image="" X="30" Y="47" 
+				Left="0" Top="0" Right="200" Bottom="200" Hide="1" AutoDelete="0" NotDetected = "1"/>
+		
+		<AniIcon Name="AntiHackDummyIcon1"  X="-218" Y="-233" Rotation = "1" AnimationIndex = "0" Loop = "1" Align = "0" Hide="1" />		
+		<AniIcon Name="AntiHackDummyIcon2"  X="-218" Y="-233" Rotation = "1" AnimationIndex = "0" Loop = "1" Align = "0" Hide="1" />
+		<UIImage Name="AntiHackUI1" Image="" X="19" Y="10" 
+				Left="0" Top="0" Right="500" Bottom="500" Hide="0" AutoDelete="0" NotDetected = "1"/>
+		<UIImage Name="AntiHackUI2" Image="" X="185" Y="10" 
+				Left="0" Top="0" Right="500" Bottom="500" Hide="0" AutoDelete="0" NotDetected = "1"/>	
+		<UIImage Name="AntiHackUI3" Image="" X="100" Y="60" 
+				Left="0" Top="0" Right="500" Bottom="500" Hide="0" AutoDelete="0" NotDetected = "1"/>	
+		<UIImage Name="AntiHackUI4" Image="" X="19" Y="148" 
+				Left="0" Top="0" Right="500" Bottom="500" Hide="0" AutoDelete="0" NotDetected = "1"/>
+		<UIImage Name="AntiHackUI5" Image="" X="185" Y="148" 
+				Left="0" Top="0" Right="500" Bottom="500" Hide="0" AutoDelete="0" NotDetected = "1"/>		
+		
+		<StaticText Name="HackImageIndex1" X="50" Y="119" Width="20" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="1" > 1
+		</StaticText>
+		<StaticText Name="HackImageIndex2" X="218" Y="119" Width="20" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="1"> 2
+		</StaticText>	
+		<StaticText Name="HackImageIndex3" X="135" Y="170" Width="20" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="1"> 3
+		</StaticText>
+		<StaticText Name="HackImageIndex4" X="50" Y="260" Width="20" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="1" > 4
+		</StaticText>
+		<StaticText Name="HackImageIndex5" X="218" Y="260" Width="20" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="1"> 5
+		</StaticText>
+		
+		<StaticText Name="AntiHackQuestion" Width="250" Height="20" X="310" Y="40" Row="1" Column="20" EdgeCode="LIGHT" 
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" NotDetected = "1">
+		</StaticText>
+		<StaticText Name="AntiHackSubQuestion" Width="250" Height="30" X="310" Y="60" Row="1" Column="20" EdgeCode="LIGHT" 
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" NotDetected = "1">
+		</StaticText>	
+		
+		<Button Name="AntiHackAnswerOption0" Image="Data\interface0003_popup.tga" X="310" Y="100" LuaLButtonUp="SelectHackAnswer0">
+			<ButtonRect State="0" Left="466" Top="161" Right="663" Bottom="177" />	
+			<ButtonRect State="1" Left="466" Top="211" Right="663" Bottom="227" />
+			<ButtonRect State="2" Left="466" Top="161" Right="663" Bottom="177" />
+		</Button>	
+		<ChatPanel Name="AntiHackAnswer0" X="310" Y="100" Width="200" Height="80" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" FillColor="7F0000FF" Hide="0" NotDetected = "1">
+		</ChatPanel>
+		<Button Name="AntiHackAnswerOption1" Image="Data\interface0003_popup.tga" X="310" Y="120" LuaLButtonUp="SelectHackAnswer1">
+			<ButtonRect State="0" Left="466" Top="161" Right="663" Bottom="177" />	
+			<ButtonRect State="1" Left="466" Top="211" Right="663" Bottom="227" />
+			<ButtonRect State="2" Left="466" Top="161" Right="663" Bottom="177" />
+		</Button>
+		<ChatPanel Name="AntiHackAnswer1" X="310" Y="120" Width="200" Height="80" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" FillColor="7F0000FF" Hide="0" NotDetected = "1">
+		</ChatPanel>
+		<Button Name="AntiHackAnswerOption2" Image="Data\interface0003_popup.tga" X="310" Y="140" LuaLButtonUp="SelectHackAnswer2">
+			<ButtonRect State="0" Left="466" Top="161" Right="663" Bottom="177" />	
+			<ButtonRect State="1" Left="466" Top="211" Right="663" Bottom="227" />
+			<ButtonRect State="2" Left="466" Top="161" Right="663" Bottom="177" />
+		</Button>
+		<ChatPanel Name="AntiHackAnswer2" X="310" Y="140" Width="200" Height="80" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" FillColor="7F0000FF" Hide="0" NotDetected = "1">
+		</ChatPanel>
+		<Button Name="AntiHackAnswerOption3" Image="Data\interface0003_popup.tga" X="310" Y="160" LuaLButtonUp="SelectHackAnswer3">
+			<ButtonRect State="0" Left="466" Top="161" Right="663" Bottom="177" />	
+			<ButtonRect State="1" Left="466" Top="211" Right="663" Bottom="227" />
+			<ButtonRect State="2" Left="466" Top="161" Right="663" Bottom="177" />
+		</Button>
+		<ChatPanel Name="AntiHackAnswer3" X="310" Y="160" Width="200" Height="80" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" FillColor="7F0000FF" Hide="0" NotDetected = "1">
+		</ChatPanel>
+		<Button Name="AntiHackAnswerOption4" Image="Data\interface0003_popup.tga" X="310" Y="180" LuaLButtonUp="SelectHackAnswer4">
+			<ButtonRect State="0" Left="466" Top="161" Right="663" Bottom="177" />	
+			<ButtonRect State="1" Left="466" Top="211" Right="663" Bottom="227" />
+			<ButtonRect State="2" Left="466" Top="161" Right="663" Bottom="177" />
+		</Button>
+		<ChatPanel Name="AntiHackAnswer4" X="310" Y="180" Width="200" Height="80" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" FillColor="7F0000FF" Hide="0" NotDetected = "1">
+		</ChatPanel>
+
+	</Panel>
+		
+</UI>

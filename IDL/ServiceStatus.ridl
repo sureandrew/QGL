@@ -1,0 +1,16 @@
+//-- Config
+config
+{
+	SubPath="Service/";
+	StartID=7500;
+	EndID=7999;
+}
+
+//-- Include header
+
+//-- RPC functions
+private:
+UpdateStatus(ServiceID serviceId, UInt32 status, UInt32 state);
+CB_CheckService();
+CB_ShutdownAt(UInt32 downTime);
+CB_StopService(UInt32 stopTime);

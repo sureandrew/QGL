@@ -1,0 +1,31 @@
+//-- Config
+config
+{
+	SubPath="Logic/";
+	ClassID=31020;
+	StartID=31020;
+	EndID  =31029;
+}
+
+//-- include
+
+//-- object class
+class QuestJournal
+{
+	//-- object attributes
+	id { 				UInt32 journal_id; 			};
+	name { 				String name; 				};
+	level { 			UInt16 minLv; 			
+						UInt16 maxLv;				};
+	descript { 			String descript; 			};
+	teamDescript { 		String teamDescript; 		};
+	timeStr {	 		String timeStr;				};
+	npc { 				String npcName;
+						String mapName; 			};
+	round { 			UInt16 Type_id;
+						UInt16 limitRound;			};
+	enable { 			Boolean enable;				};
+
+	DBClickScript{ 			String DBClickScript;				};
+	//-- method
+}

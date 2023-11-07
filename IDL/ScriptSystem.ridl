@@ -1,0 +1,35 @@
+//-- Config
+config
+{
+	SubPath="Logic/";
+	ClassID=32000;
+	StartID=32000;
+	EndID  =32999;
+}
+
+//-- include
+
+//-- object class
+class ScriptSystem : NetObject
+{
+public:
+	ReplyAnswer(UInt8 answer);
+	ReplyAnswerString(String answerStr);
+	ReplyGiven(UInt8Vector gtypes, UInt32Vector uids);
+	StopTalk(Boolean bForce);
+
+	CB_TalkEnd(Boolean bWait);
+	CB_TalkNext();
+	CB_Choose(UInt8 askerType, UInt32 askerId, UInt8 total, Boolean waitOther, 
+				UInt16 timeout, StringVector msgList);
+	CB_Say(String msg, int imageType, Boolean bLeft, UInt32 npc_id);
+	CB_OpenInterface(StringA menu, Int32 param1);
+	CB_OpenShopMenu(UInt32 shopId, UInt8 title, UInt8 enable, UInt16 buyDc, 
+					UInt16 sellDc, UInt16 repairDc, UInt16 uiShopType, UInt32Vector itemLst);
+	CB_ShowHint(String hint);
+	CB_OnPlaySound(StringA Name);
+	CB_AskGiven(String msg, UInt32 npc_id, UInt8Vector gtypes, 
+				UInt32Vector gids);
+	CB_GivenFinish();
+	CB_AskString(String text, String defAns, Boolean bLeft, UInt8 askerType, UInt32 askerId);
+}

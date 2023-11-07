@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+<!-- Our to do list data -->
+<UI>
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+
+	<Panel Expand="1" Name="PlayerMessage1" X="220" Y="280" Image="Data\interface008_chat.tga" Hide="1"
+		NotDetected = "1"	
+		Left="5" Top="5" Right="351" Bottom="17" LineRectLeft="5" LineRectTop="19" LineRectRight="351"
+		LineRectBottom="22" LineCount="50" BottomRectLeft="5" BottomRectTop="33" BottomRectRight="351"
+		BottomRectBottom="45" LuaTimeOut="PlayerMessageTimeout1" TimeOutCount="3000" >
+		<ChatPanel Name="PlayerMessageContext1" X="5" Y="6" Width="325" Height="80" ContinueRun = "1" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" FillColor="7F0000FF" NotDetected = "1">
+		</ChatPanel>
+	</Panel>
+	
+	<Panel Expand="1" Name="PlayerMessage2" X="190" Y="250" Image="Data\interface008_chat.tga" Hide="1"
+		NotDetected = "1"
+		Left="5" Top="5" Right="351" Bottom="17" LineRectLeft="5" LineRectTop="19" LineRectRight="351"
+		LineRectBottom="22" LineCount="50" BottomRectLeft="5" BottomRectTop="33" BottomRectRight="351"
+		BottomRectBottom="45" LuaTimeOut="PlayerMessageTimeout2" TimeOutCount="3000">
+		<ChatPanel Name="PlayerMessageContext2" X="5" Y="6" Width="325" Height="80" ContinueRun = "1" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" FillColor="7F0000FF" NotDetected = "1">
+		</ChatPanel>
+	</Panel>
+	
+	<Panel Expand="1" Name="PlayerMessage3" X="160" Y="220" Image="Data\interface008_chat.tga" Hide="1"
+		NotDetected = "1"
+		Left="5" Top="5" Right="351" Bottom="17" LineRectLeft="5" LineRectTop="19" LineRectRight="351"
+		LineRectBottom="22" LineCount="50" BottomRectLeft="5" BottomRectTop="33" BottomRectRight="351"
+		BottomRectBottom="45" LuaTimeOut="PlayerMessageTimeout3" TimeOutCount="3000">
+		<ChatPanel Name="PlayerMessageContext3" X="5" Y="6" Width="325" Height="80" ContinueRun = "1" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" FillColor="7F0000FF" NotDetected = "1">
+		</ChatPanel>
+	</Panel>
+</UI>
+

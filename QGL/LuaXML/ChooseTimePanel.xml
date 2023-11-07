@@ -1,0 +1,66 @@
+<?xml version="1.0" ?>
+<UI>
+	<ID Name="ChooseTimeMenu" />
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	<Panel Name="ChooseTimePanel" Image="Data\interface0038_master.tga" X="200" Y="200" 
+		Left="273" Top="6" Right="517" Bottom="185" NotDetected="0" DetectImage="2"
+		  Drag="1"
+		DragLeft="0" DragTop="0" DragRight="316" DragBottom="481" LuaRButtonUp="CloseChooseTimePanel" LuaKeyChar="CloseChooseTimePanel">
+		
+		<UIImage Name="ChooseTimeSelected" X="9" Y="119"  Image="Data\interface0038_master.tga"  Left="9" Top="293" Right="222" Bottom="310" Hide="1" NotDetected="1"/>
+
+		<StaticText Name="ChooseTime00" X="9" Y="56" Width="211" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="ChooseTime01" X="9" Y="77" Width="211" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="ChooseTime02" X="9" Y="98" Width="211" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="ChooseTime03" X="9" Y="119" Width="211" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+	
+		<UIImage Name="ChooseTimeSelect00" Image="" X="9" Y="56" Left="0" Top="0" Right="213" Bottom="20" Detect="1" LuaLButtonUp="SelectChooseTime00" />
+		<UIImage Name="ChooseTimeSelect01" Image="" X="9" Y="77" Left="0" Top="0" Right="213" Bottom="20" Detect="1" LuaLButtonUp="SelectChooseTime01" />
+		<UIImage Name="ChooseTimeSelect02" Image="" X="9" Y="98" Left="0" Top="0" Right="213" Bottom="20" Detect="1" LuaLButtonUp="SelectChooseTime02" />
+		<UIImage Name="ChooseTimeSelect03" Image="" X="9" Y="119" Left="0" Top="0" Right="213" Bottom="20" Detect="1" LuaLButtonUp="SelectChooseTime03"/>
+			
+		<ScrollBarV Name="ChooseTimeListScroll" X="223" Y="55" Width ="11" Height="86" Limit="0" BarColor="0" LuaLButtonDown="ChooseTimeListScroll" Hide="0">
+			<PrevButton Name="ChooseTimeListUp" Image="Data\interface0038_master.tga" X="0" Y="0" LuaLButtonUp="ChooseTimeListScrollUp">
+				<ButtonRect State="0" Left="87" Top="240" Right="97" Bottom="255" />
+				<ButtonRect State="1" Left="100" Top="240" Right="110" Bottom="255" />
+				<ButtonRect State="2" Left="113" Top="240" Right="123" Bottom="255" />
+			</PrevButton>
+			<NextButton Name="ChooseTimeDown" Image="Data\interface0038_master.tga" X="0" Y="72" LuaLButtonUp="ChooseTimeListScrollDown">
+				<ButtonRect State="0" Left="87" Top="258" Right="97" Bottom="270" />
+				<ButtonRect State="1" Left="100" Top="258" Right="110" Bottom="270" />
+				<ButtonRect State="2" Left="113" Top="258" Right="123" Bottom="270" />
+			</NextButton>
+			<MoveButton Image="Data\interface0038_master.tga" X="0" Y="14"  LuaMouseMove="ChooseTimeListScroll">
+				<ButtonRect State="0" Left="129" Top="240" Right="140" Bottom="270" />
+				<ButtonRect State="1" Left="129" Top="240" Right="140" Bottom="270" />
+				<ButtonRect State="2" Left="129" Top="240" Right="140" Bottom="270" />
+			</MoveButton>
+		</ScrollBarV>
+		
+		<Button Name="CloseChooseTime" Image="Data\interface0038_master.tga" X="209" Y="9" LuaLButtonUp="CloseChooseTimePanel">
+			<ButtonRect State="0" Left="10" Top="240" Right="33" Bottom="256" />
+			<ButtonRect State="1" Left="34" Top="240" Right="60" Bottom="256" />
+			<ButtonRect State="2" Left="60" Top="240" Right="84" Bottom="256" />
+		</Button>
+		
+		<Button Name="ChooseTimeOK" Image="Data\interface0038_master.tga" X="24" Y="151" LuaLButtonUp="ChooseTimeOK">
+			<ButtonRect State="0" Left="9" Top="193" Right="73" Bottom="211" />
+			<ButtonRect State="1" Left="74" Top="193" Right="140" Bottom="211" />
+			<ButtonRect State="2" Left="141" Top="193" Right="205" Bottom="211" />
+		</Button>
+		
+		<Button Name="CancleChooseTime" Image="Data\interface0038_master.tga" X="146" Y="151" LuaLButtonUp="CloseChooseTimePanel">
+			<ButtonRect State="0" Left="9" Top="212" Right="73" Bottom="232" />
+			<ButtonRect State="1" Left="74" Top="212" Right="140" Bottom="232" />
+			<ButtonRect State="2" Left="141" Top="212" Right="205" Bottom="232" />
+		</Button>
+	
+		
+	</Panel>
+	
+	
+</UI>

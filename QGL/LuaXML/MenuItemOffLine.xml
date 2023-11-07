@@ -1,0 +1,1252 @@
+<?xml version="1.0" ?>
+<!-- Our to do list data -->
+<UI>
+	<ID Name="Item" />
+	<Font Name="Data\mingliu.ttc" Width="12" Height="12" />
+	<Panel Name="ItemMenuPanel" Image="Data\interface0005_main_B.tga" X="231" Y="71" 
+			Left="12" Top="10" Right="351" Bottom="469" LuaKeyChar="CloseItemMenu">
+		<Button Name="ItemMenuPanelClose" Image="Data\interface0005_main_B.tga" X="312" Y="6" LuaLButtonDown="CloseItemMenu">
+			<ButtonRect State="0" Left="356" Top="188" Right="376" Bottom="207" />
+			<ButtonRect State="1" Left="379" Top="188" Right="399" Bottom="207" />
+			<ButtonRect State="2" Left="402" Top="188" Right="422" Bottom="207" />
+		</Button>
+		<Button Name="ItemCharacter" Image="Data\interface0005_main_B.tga" X="25" Y="190" LuaLButtonUp="ItemCharacter">
+			<ButtonRect State="0" Left="363" Top="37" Right="403" Bottom="57" />
+			<ButtonRect State="1" Left="405" Top="37" Right="445" Bottom="57" />
+			<ButtonRect State="2" Left="447" Top="37" Right="487" Bottom="57" />
+			<ButtonRect State="3" Left="489" Top="37" Right="529" Bottom="57" />
+		</Button>
+		<Button Name="ItemPartyMember" Image="Data\interface0005_main_B.tga" X="71" Y="190" LuaLButtonUp="ItemPartyMember">
+			<ButtonRect State="0" Left="363" Top="58" Right="403" Bottom="78" />
+			<ButtonRect State="1" Left="405" Top="58" Right="445" Bottom="78" />
+			<ButtonRect State="2" Left="447" Top="58" Right="487" Bottom="78" />
+			<ButtonRect State="3" Left="489" Top="58" Right="529" Bottom="78" />
+		</Button>
+		<Button Name="ItemPet" Image="Data\interface0005_main_B.tga" X="116" Y="190" LuaLButtonUp="ItemPet">
+			<ButtonRect State="0" Left="363" Top="16" Right="403" Bottom="36" />
+			<ButtonRect State="1" Left="405" Top="16" Right="445" Bottom="36" />
+			<ButtonRect State="2" Left="447" Top="16" Right="487" Bottom="36" />
+			<ButtonRect State="3" Left="489" Top="16" Right="529" Bottom="36" />
+		</Button>
+		<Button Name="ItemCurrentBag" Image="Data\interface0005_main_B.tga" X="23" Y="252" LuaLButtonUp="ItemCurrentBag">
+			<ButtonRect State="0" Left="359" Top="81" Right="405" Bottom="105" />
+			<ButtonRect State="1" Left="406" Top="81" Right="452" Bottom="105" />
+			<ButtonRect State="2" Left="453" Top="81" Right="499" Bottom="105" />
+			<ButtonRect State="3" Left="500" Top="81" Right="546" Bottom="105" />
+		</Button>
+		<Button Name="ItemSideBag" Image="Data\interface0005_main_B.tga" X="69" Y="252" LuaLButtonUp="ItemSideBag">
+			<ButtonRect State="0" Left="359" Top="106" Right="405" Bottom="130" />
+			<ButtonRect State="1" Left="406" Top="106" Right="452" Bottom="130" />
+			<ButtonRect State="2" Left="453" Top="106" Right="499" Bottom="130" />
+			<ButtonRect State="3" Left="500" Top="106" Right="546" Bottom="130" />
+		</Button>
+		<Button Name="ItemBagExtra01" Image="Data\interface0005_main_B.tga" X="115" Y="252" LuaLButtonUp="ItemBagExtra01">
+			<ButtonRect State="0" Left="359" Top="131" Right="405" Bottom="155" />
+			<ButtonRect State="1" Left="406" Top="131" Right="452" Bottom="155" />
+			<ButtonRect State="2" Left="453" Top="131" Right="499" Bottom="155" />
+			<ButtonRect State="3" Left="500" Top="131" Right="546" Bottom="155" />
+		</Button>
+		<Button Name="ItemBagExtra02" Image="Data\interface0005_main_B.tga" X="161" Y="252" LuaLButtonUp="ItemBagExtra02">
+			<ButtonRect State="0" Left="359" Top="131" Right="405" Bottom="155" />
+			<ButtonRect State="1" Left="406" Top="131" Right="452" Bottom="155" />
+			<ButtonRect State="2" Left="453" Top="131" Right="499" Bottom="155" />
+			<ButtonRect State="3" Left="500" Top="131" Right="546" Bottom="155" />
+		</Button>
+		<Button Name="ItemBagExtra03" Image="Data\interface0005_main_B.tga" X="207" Y="252" LuaLButtonUp="ItemBagExtra03">
+			<ButtonRect State="0" Left="359" Top="131" Right="405" Bottom="155" />
+			<ButtonRect State="1" Left="406" Top="131" Right="452" Bottom="155" />
+			<ButtonRect State="2" Left="453" Top="131" Right="499" Bottom="155" />
+			<ButtonRect State="3" Left="500" Top="131" Right="546" Bottom="155" />
+		</Button>
+		<Button Name="ItemLock" Image="Data\interface0005_main_B.tga" X="264" Y="249" LuaLButtonUp="ItemLock">
+			<ButtonRect State="0" Left="354" Top="159" Right="397" Bottom="183" />
+			<ButtonRect State="1" Left="402" Top="159" Right="445" Bottom="183" />
+			<ButtonRect State="2" Left="450" Top="159" Right="493" Bottom="183" />
+			<ButtonRect State="3" Left="498" Top="159" Right="541" Bottom="183" />
+		</Button>
+		<Button Name="ItemTheBox" Image="Data\interface0005_main_B.tga" X="281" Y="287" LuaLButtonUp="ItemTheBox">
+			<ButtonRect State="0" Left="362" Top="217" Right="392" Bottom="273" />
+			<ButtonRect State="1" Left="393" Top="217" Right="423" Bottom="273" />
+			<ButtonRect State="2" Left="424" Top="217" Right="454" Bottom="273" />
+			<ButtonRect State="3" Left="455" Top="217" Right="485" Bottom="273" />
+		</Button>
+		<Button Name="ItemDiamondInlay" Image="Data\interface0005_main_B.tga" X="281" Y="349" LuaLButtonUp="ItemDiamondInlay">
+			<ButtonRect State="0" Left="363" Top="279" Right="391" Bottom="335" />
+			<ButtonRect State="1" Left="394" Top="279" Right="422" Bottom="335" />
+			<ButtonRect State="2" Left="425" Top="279" Right="453" Bottom="335" />
+			<ButtonRect State="3" Left="456" Top="279" Right="484" Bottom="335" />
+		</Button>
+		<AniIcon Name="ItemModelDummy"  X="90" Y="90" Rotation = "1" 
+		AnimationIndex = "0" Loop = "1" Align = "1" Hide="0" />
+		<UIImage Name="ItemCharacterCover" X="25" Y="190" Hide="0" Image="Data\interface0005_main_B.tga" 
+				Left="405" Top="37" Right="445" Bottom="57" AutoDelete="0"/>
+		<UIImage Name="ItemPartyMemberCover" X="71" Y="190" Hide="1" Image="Data\interface0005_main_B.tga" 
+				Left="405" Top="58" Right="445" Bottom="78" AutoDelete="0"/>
+		<UIImage Name="ItemPetCover" X="116" Y="190" Hide="1" Image="Data\interface0005_main_B.tga" 
+				Left="405" Top="16" Right="445" Bottom="36" AutoDelete="0"/>
+		<UIImage Name="ItemCurrentBagCover" X="23" Y="252" Hide="0" Image="Data\interface0005_main_B.tga" 
+				Left="406" Top="81" Right="452" Bottom="105" AutoDelete="0"/>
+		<UIImage Name="ItemSideBagCover" X="69" Y="252" Hide="1" Image="Data\interface0005_main_B.tga" 
+				Left="406" Top="106" Right="452" Bottom="130" AutoDelete="0"/>
+		<UIImage Name="ItemBagExtra01Cover" X="115" Y="252" Hide="1" Image="Data\interface0005_main_B.tga" 
+				Left="406" Top="131" Right="452" Bottom="155" AutoDelete="0"/>
+		<UIImage Name="ItemBagExtra02Cover" X="161" Y="252" Hide="1" Image="Data\interface0005_main_B.tga" 
+				Left="406" Top="131" Right="452" Bottom="155" AutoDelete="0"/>
+		<UIImage Name="ItemBagExtra03Cover" X="207" Y="252" Hide="1" Image="Data\interface0005_main_B.tga" 
+				Left="406" Top="131" Right="452" Bottom="155" AutoDelete="0"/>
+	</Panel>
+	<!-- Equip UI -->
+	<Panel Name="ItemEquipPanel" Image="Data\interface0005_main_B.tga" X="406" Y="110" 
+			Left="641" Top="16" Right="783" Bottom="158" Hide="0">
+	</Panel>
+	<!-- Party+Pet UI -->
+	<Panel Name="ItemNameListPanel" Image="Data\interface0005_main_B.tga" X="403" Y="109" 
+			Left="633" Top="166" Right="788" Bottom="322" Hide="1">
+		<StaticText Name="ItemNameListLine1" X="5" Y="10" Row="1" Column="10" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		Z????
+		</StaticText>
+		<StaticText Name="ItemNameListLine2" X="5" Y="35" Row="1" Column="10" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		Z????
+		</StaticText>
+		<StaticText Name="ItemNameListLine3" X="5" Y="60" Row="1" Column="10" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		Z????
+		</StaticText>
+		<StaticText Name="ItemNameListLine4" X="5" Y="85" Row="1" Column="10" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		Z????
+		</StaticText>
+		<StaticText Name="ItemNameListLine5" X="5" Y="110" Row="1" Column="10" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		Z????
+		</StaticText>
+		<StaticText Name="ItemNameListLine6" X="5" Y="135" Row="1" Column="10" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		Z????
+		</StaticText>
+		<Button Name="ItemNameListUp" Image="Data\interface0005_main_B.tga" X="139" Y="4" LuaLButtonUp="ItemNameListUp">
+			<ButtonRect State="0" Left="425" Top="186" Right="436" Bottom="196" />
+			<ButtonRect State="1" Left="425" Top="186" Right="436" Bottom="196" />
+			<ButtonRect State="2" Left="425" Top="186" Right="436" Bottom="196" />
+		</Button>
+		<Button Name="ItemNameListDown" Image="Data\interface0005_main_B.tga" X="139" Y="142" LuaLButtonUp="ItemNameListDown">
+			<ButtonRect State="0" Left="425" Top="199" Right="436" Bottom="208" />
+			<ButtonRect State="1" Left="425" Top="199" Right="436" Bottom="208" />
+			<ButtonRect State="2" Left="425" Top="199" Right="436" Bottom="208" />
+		</Button>
+		<Button Name="ItemNameListScroll" Image="Data\interface0005_main_B.tga" X="137" Y="16" LuaLButtonUp="ItemNameListScroll">
+			<ButtonRect State="0" Left="439" Top="193" Right="454" Bottom="206" />
+			<ButtonRect State="1" Left="439" Top="193" Right="454" Bottom="206" />
+			<ButtonRect State="2" Left="439" Top="193" Right="454" Bottom="206" />
+		</Button>
+	</Panel>
+	<!-- Character UI -->
+	<Panel Name="ItemCharPanel" Image="" X="243" Y="263" 
+			Left="478" Top="428" Right="792" Bottom="484" Hide="0">
+		<UIImage X="0" Y="28" Image="Data\interface0005_main_B.tga" 
+				Left="478" Top="458" Right="632" Bottom="480" AutoDelete="0"/>
+		<UIImage X="156" Y="0" Image="Data\interface0005_main_B.tga" 
+				Left="634" Top="430" Right="792" Bottom="485" AutoDelete="0"/>
+		<StaticText Name="ItemCashDollar" X="227" Y="7" Row="1" Column="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		???M?
+		</StaticText>
+		<StaticText Name="ItemBankDollar" X="227" Y="32" Row="1" Column="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		n9?M?
+		</StaticText>
+		<StaticText Name="ItemGoldDollar" X="67" Y="34" Row="1" Column="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		]M??M?
+		</StaticText>
+	</Panel>
+	<!-- Party UI -->
+	<Panel Name="ItemPartyPanel" Image="" X="260" Y="272" 
+			Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage X="0" Y="20" Image="Data\interface0005_main_B.tga" 
+				Left="501" Top="397" Right="634" Bottom="420" AutoDelete="0"/>
+		<UIImage X="136" Y="0" Image="Data\interface0005_main_B.tga" 
+				Left="638" Top="376" Right="793" Bottom="420" AutoDelete="0"/>
+		<LinerImage Name="ItemPartyHPBarLim" X="196" Y="3" Image="Data\interface0005_main_B.tga" Left="388" Top="352"
+			Right="394" Bottom="362" LineWidth="90" BaseWidth="90" Denumerator="100" Numerator="100" />
+		<LinerImage Name="ItemPartyHPBar" X="196" Y="3" Image="Data\interface0005_main_B.tga" Left="388" Top="341"
+			Right="394" Bottom="351" LineWidth="90" BaseWidth="90" Denumerator="100" Numerator="50" />
+		<LinerImage Name="ItemPartySPBarLim" X="196" Y="26" Image="Data\interface0005_main_B.tga" Left="404" Top="352"
+			Right="410" Bottom="362" LineWidth="90" BaseWidth="90" Denumerator="100" Numerator="100" />
+		<LinerImage Name="ItemPartySPBar" X="196" Y="26" Image="Data\interface0005_main_B.tga" Left="404" Top="341"
+			Right="410" Bottom="351" LineWidth="90" BaseWidth="90" Denumerator="100" Numerator="50" />
+		<StaticText Name="ItemPartyLikeText" X="60" Y="25" Row="1" Column="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		??h
+		</StaticText>
+		<StaticText Name="ItemPartyHPText" X="198" Y="5" Row="1" Column="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		??C?
+		</StaticText>
+		<StaticText Name="ItemPartySPText" X="198" Y="26" Row="1" Column="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		??y??
+		</StaticText>
+	</Panel>
+	<!-- Pet UI -->
+	<Panel Name="ItemPetPanel" Image="" X="260" Y="272" 
+			Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage X="0" Y="20" Image="Data\interface0005_main_B.tga" 
+				Left="500" Top="350" Right="633" Bottom="373" AutoDelete="0"/>
+		<UIImage X="136" Y="0" Image="Data\interface0005_main_B.tga" 
+				Left="637" Top="329" Right="793" Bottom="372" AutoDelete="0"/>
+		<LinerImage Name="ItemPetSPDBar" X="196" Y="3" Image="Data\interface0005_main_B.tga" Left="396" Top="341"
+			Right="402" Bottom="351" LineWidth="90" BaseWidth="90" Denumerator="100" Numerator="100" />
+		<LinerImage Name="ItemPetTrainBar" X="196" Y="26" Image="Data\interface0005_main_B.tga" Left="412" Top="341"
+			Right="418" Bottom="351" LineWidth="90" BaseWidth="90" Denumerator="100" Numerator="100" />
+		<StaticText Name="ItemPetLVText" X="60" Y="25" Row="1" Column="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		Q?
+		</StaticText>
+		<StaticText Name="ItemPetSPDText" X="198" Y="5" Row="1" Column="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		??
+		</StaticText>
+		<StaticText Name="ItemPetTrainText" X="198" Y="26" Row="1" Column="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		箶h
+		</StaticText>
+	</Panel>
+	<!-- Equip Item -->
+	<Panel Name="ItemEquip004" Image="" X="409" Y="113" Left="0" Top="0" Right="1" Bottom="1" Hide="0">
+		<UIImage Name="ItemEquip004Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemEquip004"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40"  LuaEndDrag="EquipItemMove004" DetectImage = "1"/>
+		<StaticText Name="ItemEquip004Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemEquip004Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemEquip001" Image="" X="457" Y="113" Left="0" Top="0" Right="1" Bottom="1" Hide="0">
+		<UIImage Name="ItemEquip001Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemEquip001"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40"  LuaEndDrag="EquipItemMove001" DetectImage = "1"/>
+		<StaticText Name="ItemEquip001Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemEquip001Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemEquip005" Image="" X="505" Y="113" Left="0" Top="0" Right="1" Bottom="1" Hide="0">
+		<UIImage Name="ItemEquip005Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemEquip005"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40"  LuaEndDrag="EquipItemMove005" DetectImage = "1"/>
+		<StaticText Name="ItemEquip005Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemEquip005Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemEquip000" Image="" X="409" Y="161" Left="0" Top="0" Right="1" Bottom="1" Hide="0">
+		<UIImage Name="ItemEquip000Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemEquip000"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40"  LuaEndDrag="EquipItemMove000" DetectImage = "1"/>
+		<StaticText Name="ItemEquip000Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemEquip000Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemEquip002" Image="" X="457" Y="161" Left="0" Top="0" Right="1" Bottom="1" Hide="0">
+		<UIImage Name="ItemEquip002Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemEquip002"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40"  LuaEndDrag="EquipItemMove002" DetectImage = "1"/>
+		<StaticText Name="ItemEquip002Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemEquip002Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemEquip007" Image="" X="505" Y="161" Left="0" Top="0" Right="1" Bottom="1" Hide="0">
+		<UIImage Name="ItemEquip007Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemEquip007"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40"  LuaEndDrag="EquipItemMove007" DetectImage = "1"/>
+		<StaticText Name="ItemEquip007Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemEquip007Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemEquip006" Image="" X="409" Y="209" Left="0" Top="0" Right="1" Bottom="1" Hide="0">
+		<UIImage Name="ItemEquip006Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemEquip006"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40"  LuaEndDrag="EquipItemMove006" DetectImage = "1"/>
+		<StaticText Name="ItemEquip006Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemEquip006Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemEquip003" Image="" X="457" Y="209" Left="0" Top="0" Right="1" Bottom="1" Hide="0">
+		<UIImage Name="ItemEquip003Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemEquip003"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40"  LuaEndDrag="EquipItemMove003" DetectImage = "1"/>
+		<StaticText Name="ItemEquip003Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemEquip003Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemEquip008" Image="" X="505" Y="209" Left="0" Top="0" Right="1" Bottom="1" Hide="0">
+		<UIImage Name="ItemEquip008Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemEquip008"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40"  LuaEndDrag="EquipItemMove008" DetectImage = "1"/>
+		<StaticText Name="ItemEquip008Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemEquip008Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<!-- Normal Item Page 1 -->
+	<Panel Name="ItemSlot000" Image="" X="257" Y="354" Left="0" Top="0" Right="1" Bottom="1" Hide="0" >
+		<UIImage Name="ItemSlot000Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse000"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40"  LuaEndDrag="ItemMove000" DetectImage = "1"/>
+		<!--<AniIcon Image="itemW0406_a.ent" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse000"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40"  LuaEndDrag="ItemMove000" DetectImage = "1"/>-->
+		<StaticText Name="ItemSlot000Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot000Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot001" Image="" X="298" Y="354" Left="0" Top="0" Right="1" Bottom="1" Hide="0">
+		<UIImage Name="ItemSlot001Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse001"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove001" DetectImage = "1"/>
+		<AniIcon X="0" Y="0" Image="itemW0406_b.ent" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse001"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove001" DetectImage = "1"/>
+		<StaticText Name="ItemSlot001Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot001Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot002" Image="" X="339" Y="354" Left="0" Top="0" Right="1" Bottom="1" Hide="0">
+		<UIImage Name="ItemSlot002Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse002"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove002" DetectImage = "1"/>
+		<!--<AniIcon X="0" Y="0" Image="itemW0502_a.ent" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse001"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove001" DetectImage = "1"/>-->
+		<StaticText Name="ItemSlot002Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot002Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot003" Image="" X="380" Y="354" Left="0" Top="0" Right="1" Bottom="1" Hide="0">
+		<UIImage Name="ItemSlot003Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse003"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove003" DetectImage = "1"/>
+		<AniIcon X="0" Y="0" Image="itemW0502_b.ent" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse001"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove001" DetectImage = "1"/>
+		<StaticText Name="ItemSlot003Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot003Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot004" Image="" X="421" Y="354" Left="0" Top="0" Right="1" Bottom="1" Hide="0">
+		<UIImage Name="ItemSlot004Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse004"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove004" DetectImage = "1"/>
+		<!--<AniIcon X="0" Y="0" Image="itemW0502_c.ent" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse001"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove001" DetectImage = "1"/>-->
+		<StaticText Name="ItemSlot004Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot004Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot005" Image="" X="462" Y="354" Left="0" Top="0" Right="1" Bottom="1" Hide="0">
+		<UIImage Name="ItemSlot005Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse005"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove005" DetectImage = "1"/>
+		<AniIcon X="0" Y="0" Image="itemW0502_d.ent" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse001"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove001" DetectImage = "1"/>
+		<StaticText Name="ItemSlot005Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot005Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot006" Image="" X="257" Y="395" Left="0" Top="0" Right="1" Bottom="1" Hide="0">
+		<UIImage Name="ItemSlot006Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse006"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove006" DetectImage = "1"/>
+		<StaticText Name="ItemSlot006Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot006Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot007" Image="" X="298" Y="395" Left="0" Top="0" Right="1" Bottom="1" Hide="0">
+		<UIImage Name="ItemSlot007Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse007"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove007" DetectImage = "1"/>
+		<StaticText Name="ItemSlot007Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot007Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot008" Image="" X="339" Y="395" Left="0" Top="0" Right="1" Bottom="1" Hide="0">
+		<UIImage Name="ItemSlot008Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse008"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove008" DetectImage = "1"/>
+		<StaticText Name="ItemSlot008Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot008Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot009" Image="" X="380" Y="395" Left="0" Top="0" Right="1" Bottom="1" Hide="0">
+		<UIImage Name="ItemSlot009Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse009"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove009" DetectImage = "1"/>
+		<StaticText Name="ItemSlot009Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot009Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot010" Image="" X="421" Y="395" Left="0" Top="0" Right="1" Bottom="1" Hide="0">
+		<UIImage Name="ItemSlot010Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse010"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove010" DetectImage = "1"/>
+		<StaticText Name="ItemSlot010Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot010Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot011" Image="" X="462" Y="395" Left="0" Top="0" Right="1" Bottom="1" Hide="0">
+		<UIImage Name="ItemSlot011Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse011"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove011" DetectImage = "1"/>
+		<StaticText Name="ItemSlot011Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot011Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot012" Image="" X="257" Y="436" Left="0" Top="0" Right="1" Bottom="1" Hide="">
+		<UIImage Name="ItemSlot012Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse012"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove012" DetectImage = "1"/>
+		<StaticText Name="ItemSlot012Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot012Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot013" Image="" X="298" Y="436" Left="0" Top="0" Right="1" Bottom="1" Hide="0">
+		<UIImage Name="ItemSlot013Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse013"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove013" DetectImage = "1"/>
+		<StaticText Name="ItemSlot013Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot013Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot014" Image="" X="339" Y="436" Left="0" Top="0" Right="1" Bottom="1" Hide="0">
+		<UIImage Name="ItemSlot014Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse014"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove014" DetectImage = "1"/>
+		<StaticText Name="ItemSlot014Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot014Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot015" Image="" X="380" Y="436" Left="0" Top="0" Right="1" Bottom="1" Hide="0">
+		<UIImage Name="ItemSlot015Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse015"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove015" DetectImage = "1"/>
+		<StaticText Name="ItemSlot015Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot015Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot016" Image="" X="421" Y="436" Left="0" Top="0" Right="1" Bottom="1" Hide="0">
+		<UIImage Name="ItemSlot016Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse016"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove016" DetectImage = "1"/>
+		<StaticText Name="ItemSlot016Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot016Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot017" Image="" X="462" Y="436" Left="0" Top="0" Right="1" Bottom="1" Hide="0">
+		<UIImage Name="ItemSlot017Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse017"	
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove017" DetectImage = "1"/>
+		<StaticText Name="ItemSlot017Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot017Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot018" Image="" X="257" Y="477" Left="0" Top="0" Right="1" Bottom="1" Hide="0">
+		<UIImage Name="ItemSlot018Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse018"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove018" DetectImage = "1"/>
+		<StaticText Name="ItemSlot018Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot018Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot019" Image="" X="298" Y="477" Left="0" Top="0" Right="1" Bottom="1" Hide="0">
+		<UIImage Name="ItemSlot019Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse019"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove019" DetectImage = "1"/>
+		<StaticText Name="ItemSlot019Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot019Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot020" Image="" X="339" Y="477" Left="0" Top="0" Right="1" Bottom="1" Hide="0">
+		<UIImage Name="ItemSlot020Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse020"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove020" DetectImage = "1"/>
+		<StaticText Name="ItemSlot020Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot020Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot021" Image="" X="380" Y="477" Left="0" Top="0" Right="1" Bottom="1" Hide="0">
+		<UIImage Name="ItemSlot021Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse021"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove021" DetectImage = "1"/>
+		<StaticText Name="ItemSlot021Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot021Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot022" Image="" X="421" Y="477" Left="0" Top="0" Right="1" Bottom="1" Hide="0">
+		<UIImage Name="ItemSlot022Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse022"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove022" DetectImage = "1"/>
+		<StaticText Name="ItemSlot022Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot022Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot023" Image="" X="462" Y="477" Left="0" Top="0" Right="1" Bottom="1" Hide="0">
+		<UIImage Name="ItemSlot023Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse023"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove023" DetectImage = "1"/>
+		<StaticText Name="ItemSlot023Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot023Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<!-- Normal Item Page 2 -->
+	<Panel Name="ItemSlot024" Image="" X="257" Y="354" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot024Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse024"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove024" DetectImage = "1"/>
+		<StaticText Name="ItemSlot024Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot024Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot025" Image="" X="298" Y="354" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot025Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse025"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove025" DetectImage = "1"/>
+		<StaticText Name="ItemSlot025Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot025Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot026" Image="" X="339" Y="354" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot026Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse026"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove026" DetectImage = "1"/>
+		<StaticText Name="ItemSlot026Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot026Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot027" Image="" X="380" Y="354" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot027Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse027"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove027" DetectImage = "1"/>
+		<StaticText Name="ItemSlot027Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot027Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot028" Image="" X="421" Y="354" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot028Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse028"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove028" DetectImage = "1"/>
+		<StaticText Name="ItemSlot028Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot028Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot029" Image="" X="462" Y="354" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot029Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse029"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove029" DetectImage = "1"/>
+		<StaticText Name="ItemSlot029Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot029Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot030" Image="" X="257" Y="395" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot030Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse030"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove030" DetectImage = "1"/>
+		<StaticText Name="ItemSlot030Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot030Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot031" Image="" X="298" Y="395" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot031Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse031"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove031" DetectImage = "1"/>
+		<StaticText Name="ItemSlot031Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot031Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot032" Image="" X="339" Y="395" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot032Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse032"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove032" DetectImage = "1"/>
+		<StaticText Name="ItemSlot032Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot032Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot033" Image="" X="380" Y="395" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot033Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse033"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove033" DetectImage = "1"/>
+		<StaticText Name="ItemSlot033Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot033Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot034" Image="" X="421" Y="395" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot034Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse034"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove034" DetectImage = "1"/>
+		<StaticText Name="ItemSlot034Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot034Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot035" Image="" X="462" Y="395" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot035Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse035"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove035" DetectImage = "1"/>
+		<StaticText Name="ItemSlot035Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot035Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot036" Image="" X="257" Y="436" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot036Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse036"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove036" DetectImage = "1"/>
+		<StaticText Name="ItemSlot036Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot036Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot037" Image="" X="298" Y="436" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot037Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse037"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove037" DetectImage = "1"/>
+		<StaticText Name="ItemSlot037Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot037Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot038" Image="" X="339" Y="436" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot038Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse038"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove038" DetectImage = "1"/>
+		<StaticText Name="ItemSlot038Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot038Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot039" Image="" X="380" Y="436" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot039Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse039"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove039" DetectImage = "1"/>
+		<StaticText Name="ItemSlot039Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot039Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot040" Image="" X="421" Y="436" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot040Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse040"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove040" DetectImage = "1"/>
+		<StaticText Name="ItemSlot040Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot040Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot041" Image="" X="462" Y="436" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot041Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse041"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove041" DetectImage = "1"/>
+		<StaticText Name="ItemSlot041Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot041Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot042" Image="" X="257" Y="477" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot042Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse042"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove042" DetectImage = "1"/>
+		<StaticText Name="ItemSlot042Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot042Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot043" Image="" X="298" Y="477" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot043Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse043"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove043" DetectImage = "1"/>
+		<StaticText Name="ItemSlot043Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot043Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot044" Image="" X="339" Y="477" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot044Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse044"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove044" DetectImage = "1"/>
+		<StaticText Name="ItemSlot044Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot044Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot045" Image="" X="380" Y="477" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot045Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse045"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove045" DetectImage = "1"/>
+		<StaticText Name="ItemSlot045Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot045Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot046" Image="" X="421" Y="477" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot046Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse046"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove046" DetectImage = "1"/>
+		<StaticText Name="ItemSlot046Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot046Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot047" Image="" X="462" Y="477" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot047Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse047"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove047" DetectImage = "1"/>
+		<StaticText Name="ItemSlot047Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot047Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<!-- Normal Item Page 3 -->
+	<Panel Name="ItemSlot048" Image="" X="257" Y="354" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot048Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse048"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove048" DetectImage = "1"/>
+		<StaticText Name="ItemSlot048Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot048Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot049" Image="" X="298" Y="354" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot049Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse049"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove049" DetectImage = "1"/>
+		<StaticText Name="ItemSlot049Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot049Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot050" Image="" X="339" Y="354" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot050Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse050"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove050" DetectImage = "1"/>
+		<StaticText Name="ItemSlot050Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot050Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot051" Image="" X="380" Y="354" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot051Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse051"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove051" DetectImage = "1"/>
+		<StaticText Name="ItemSlot051Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot051Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot052" Image="" X="421" Y="354" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot052Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse052"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove052" DetectImage = "1"/>
+		<StaticText Name="ItemSlot052Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot052Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot053" Image="" X="462" Y="354" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot053Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse053"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove053" DetectImage = "1"/>
+		<StaticText Name="ItemSlot053Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot053Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot054" Image="" X="257" Y="395" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot054Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse054"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove054" DetectImage = "1"/>
+		<StaticText Name="ItemSlot054Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot054Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot055" Image="" X="298" Y="395" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot055Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse055"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove055" DetectImage = "1"/>
+		<StaticText Name="ItemSlot055Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot055Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot056" Image="" X="339" Y="395" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot056Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse056"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove056" DetectImage = "1"/>
+		<StaticText Name="ItemSlot056Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot056Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot057" Image="" X="380" Y="395" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot057Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse057"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove057" DetectImage = "1"/>
+		<StaticText Name="ItemSlot057Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot057Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot058" Image="" X="421" Y="395" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot058Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse058"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove058" DetectImage = "1"/>
+		<StaticText Name="ItemSlot058Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot058Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot059" Image="" X="462" Y="395" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot059Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse059"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove059" DetectImage = "1"/>
+		<StaticText Name="ItemSlot059Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot059Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot060" Image="" X="257" Y="436" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot060Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse060"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove060" DetectImage = "1"/>
+		<StaticText Name="ItemSlot060Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot060Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot061" Image="" X="298" Y="436" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot061Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse061"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove061" DetectImage = "1"/>
+		<StaticText Name="ItemSlot061Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot061Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot062" Image="" X="339" Y="436" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot062Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse062"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove062" DetectImage = "1"/>
+		<StaticText Name="ItemSlot062Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot062Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot063" Image="" X="380" Y="436" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot063Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse063"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove063" DetectImage = "1"/>
+		<StaticText Name="ItemSlot063Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot063Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot064" Image="" X="421" Y="436" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot064Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse064"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove064" DetectImage = "1"/>
+		<StaticText Name="ItemSlot064Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot064Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot065" Image="" X="462" Y="436" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot065Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse065"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove065" DetectImage = "1"/>
+		<StaticText Name="ItemSlot065Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot065Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot066" Image="" X="257" Y="477" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot066Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse066"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove066" DetectImage = "1"/>
+		<StaticText Name="ItemSlot066Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot066Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot067" Image="" X="298" Y="477" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot067Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse067"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove067" DetectImage = "1"/>
+		<StaticText Name="ItemSlot067Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot067Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot068" Image="" X="339" Y="477" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot068Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse068"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove068" DetectImage = "1"/>
+		<StaticText Name="ItemSlot068Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot068Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot069" Image="" X="380" Y="477" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot069Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse069"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove069" DetectImage = "1"/>
+		<StaticText Name="ItemSlot069Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot069Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot070" Image="" X="421" Y="477" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot070Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse070"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove070" DetectImage = "1"/>
+		<StaticText Name="ItemSlot070Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot070Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot071" Image="" X="462" Y="477" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot071Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse071"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove071" DetectImage = "1"/>
+		<StaticText Name="ItemSlot071Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot071Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<!-- Normal Item Page 4 -->
+	<Panel Name="ItemSlot072" Image="" X="257" Y="354" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot072Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse072"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove072" DetectImage = "1"/>
+		<StaticText Name="ItemSlot072Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot072Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot073" Image="" X="298" Y="354" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot073Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse073"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove073" DetectImage = "1"/>
+		<StaticText Name="ItemSlot073Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot073Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot074" Image="" X="339" Y="354" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot074Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse074"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove074" DetectImage = "1"/>
+		<StaticText Name="ItemSlot074Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot074Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot075" Image="" X="380" Y="354" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot075Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse075"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove075" DetectImage = "1"/>
+		<StaticText Name="ItemSlot075Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot075Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot076" Image="" X="421" Y="354" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot076Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse076"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove076" DetectImage = "1"/>
+		<StaticText Name="ItemSlot076Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot076Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot077" Image="" X="462" Y="354" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot077Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse077"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove077" DetectImage = "1"/>
+		<StaticText Name="ItemSlot077Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot077Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot078" Image="" X="257" Y="395" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot078Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse078"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove078" DetectImage = "1"/>
+		<StaticText Name="ItemSlot078Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot078Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot079" Image="" X="298" Y="395" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot079Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse079"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove079" DetectImage = "1"/>
+		<StaticText Name="ItemSlot079Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot079Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot080" Image="" X="339" Y="395" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot080Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse080"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove080" DetectImage = "1"/>
+		<StaticText Name="ItemSlot080Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot080Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot081" Image="" X="380" Y="395" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot081Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse081"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove081" DetectImage = "1"/>
+		<StaticText Name="ItemSlot081Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot081Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot082" Image="" X="421" Y="395" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot082Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse082"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove082" DetectImage = "1"/>
+		<StaticText Name="ItemSlot082Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot082Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot083" Image="" X="462" Y="395" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot083Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse083"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove083" DetectImage = "1"/>
+		<StaticText Name="ItemSlot083Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot083Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot084" Image="" X="257" Y="436" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot084Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse084"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove084" DetectImage = "1"/>
+		<StaticText Name="ItemSlot084Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot084Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot085" Image="" X="298" Y="436" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot085Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse085"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove085" DetectImage = "1"/>
+		<StaticText Name="ItemSlot085Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot085Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot086" Image="" X="339" Y="436" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot086Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse086"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove086" DetectImage = "1"/>
+		<StaticText Name="ItemSlot086Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot086Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot087" Image="" X="380" Y="436" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot087Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse087"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove087" DetectImage = "1"/>
+		<StaticText Name="ItemSlot087Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot087Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot088" Image="" X="421" Y="436" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot088Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse088"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove088" DetectImage = "1"/>
+		<StaticText Name="ItemSlot088Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot088Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot089" Image="" X="462" Y="436" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot089Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse089"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove089" DetectImage = "1"/>
+		<StaticText Name="ItemSlot089Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot089Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot090" Image="" X="257" Y="477" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot090Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse090"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove090" DetectImage = "1"/>
+		<StaticText Name="ItemSlot090Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot090Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot091" Image="" X="298" Y="477" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot091Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse091"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove091" DetectImage = "1"/>
+		<StaticText Name="ItemSlot091Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot091Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot092" Image="" X="339" Y="477" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot092Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse092"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove092" DetectImage = "1"/>
+		<StaticText Name="ItemSlot092Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot092Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot093" Image="" X="380" Y="477" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot093Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse093"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove093" DetectImage = "1"/>
+		<StaticText Name="ItemSlot093Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot093Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot094" Image="" X="421" Y="477" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot094Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse094"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove094" DetectImage = "1"/>
+		<StaticText Name="ItemSlot094Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot094Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot095" Image="" X="462" Y="477" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot095Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse095"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove095" DetectImage = "1"/>
+		<StaticText Name="ItemSlot095Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot095Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<!-- Normal Item Page 5 -->
+	<Panel Name="ItemSlot096" Image="" X="257" Y="354" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot096Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse096"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove096" DetectImage = "1"/>
+		<StaticText Name="ItemSlot096Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot096Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot097" Image="" X="298" Y="354" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot097Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse097"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove097" DetectImage = "1"/>
+		<StaticText Name="ItemSlot097Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot097Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot098" Image="" X="339" Y="354" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot098Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse098"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove098" DetectImage = "1"/>
+		<StaticText Name="ItemSlot098Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot098Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot099" Image="" X="380" Y="354" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot099Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse099"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove099" DetectImage = "1"/>
+		<StaticText Name="ItemSlot099Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot099Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot100" Image="" X="421" Y="354" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot100Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse100"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove100" DetectImage = "1"/>
+		<StaticText Name="ItemSlot100Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot100Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot101" Image="" X="462" Y="354" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot101Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse101"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove101" DetectImage = "1"/>
+		<StaticText Name="ItemSlot101Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot101Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot102" Image="" X="257" Y="395" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot102Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse102"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove102" DetectImage = "1"/>
+		<StaticText Name="ItemSlot102Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot102Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot103" Image="" X="298" Y="395" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot103Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse103"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove103" DetectImage = "1"/>
+		<StaticText Name="ItemSlot103Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot103Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot104" Image="" X="339" Y="395" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot104Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse104"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove104" DetectImage = "1"/>
+		<StaticText Name="ItemSlot104Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot104Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot105" Image="" X="380" Y="395" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot105Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse105"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove105" DetectImage = "1"/>
+		<StaticText Name="ItemSlot105Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot105Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot106" Image="" X="421" Y="395" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot106Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse106"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove106" DetectImage = "1"/>
+		<StaticText Name="ItemSlot106Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot106Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot107" Image="" X="462" Y="395" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot107Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse107"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove107" DetectImage = "1"/>
+		<StaticText Name="ItemSlot107Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot107Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot108" Image="" X="257" Y="436" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot108Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse108"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove108" DetectImage = "1"/>
+		<StaticText Name="ItemSlot108Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot108Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot109" Image="" X="298" Y="436" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot109Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse109"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove109" DetectImage = "1"/>
+		<StaticText Name="ItemSlot109Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot109Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot110" Image="" X="339" Y="436" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot110Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse110"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove110" DetectImage = "1"/>
+		<StaticText Name="ItemSlot110Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot110Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot111" Image="" X="380" Y="436" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot111Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse111"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove111" DetectImage = "1"/>
+		<StaticText Name="ItemSlot111Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot111Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot112" Image="" X="421" Y="436" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot112Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse112"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove112" DetectImage = "1"/>
+		<StaticText Name="ItemSlot112Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot112Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot113" Image="" X="462" Y="436" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot113Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse113"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove113" DetectImage = "1"/>
+		<StaticText Name="ItemSlot113Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot113Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot114" Image="" X="257" Y="477" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot114Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse114"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove114" DetectImage = "1"/>
+		<StaticText Name="ItemSlot114Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot114Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot115" Image="" X="298" Y="477" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot115Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse115"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove115" DetectImage = "1"/>
+		<StaticText Name="ItemSlot115Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot115Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot116" Image="" X="339" Y="477" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot116Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse116"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove116" DetectImage = "1"/>
+		<StaticText Name="ItemSlot116Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot116Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot117" Image="" X="380" Y="477" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot117Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse117"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove117" DetectImage = "1"/>
+		<StaticText Name="ItemSlot117Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot117Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot118" Image="" X="421" Y="477" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot118Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse118"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove118" DetectImage = "1"/>
+		<StaticText Name="ItemSlot118Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot118Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="ItemSlot119" Image="" X="462" Y="477" Left="0" Top="0" Right="1" Bottom="1" Hide="1">
+		<UIImage Name="ItemSlot119Icon" X="0" Y="0" Image="" Left="0" Top="0" Right="40" Bottom="40" AutoDelete="0" LuaRButtonUp="ItemUse119"
+			Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ItemMove119" DetectImage = "1"/>
+		<StaticText Name="ItemSlot119Stack" X="3" Y="25" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemSlot119Lvl" X="3" Y="2" Row="1" Column="4" Width="22" Height="20" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+</UI>

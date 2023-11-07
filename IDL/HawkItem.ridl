@@ -1,0 +1,25 @@
+//-- Config
+config
+{
+	SubPath="Logic/";
+	ClassID=48000;
+	StartID=48000;
+	EndID  =48999;
+	ModifyMask=1;
+}
+
+//-- include
+
+//-- object class
+class HawkItem : NetObject
+{
+	//-- object attributes
+	idInfo	{		UInt32 item_uid;	
+				UInt32 item_id;			};
+	stackInfo { 		UInt8 item_stack; 		};
+
+	priceInfo { 		UInt32 item_price;	};
+
+	itemTypeInfo {		UInt8 item_type; 	};
+	indexInfo{		UInt8 item_index;	};	
+}

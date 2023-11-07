@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" ?>
+<UI>
+	<ID Name="QuestCancelBox" />
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	<Panel Expand="1" Name="QuestCancelBoxPanel" Image="Data\interface0003_popup.tga" X="270"
+		Y="350" Left="3" Top="7" Right="356" Bottom="23" 
+		LineRectLeft="3" LineRectTop="24"	LineRectRight="356" LineRectBottom="40" LineCount="2" 
+		BottomRectLeft="3" BottomRectTop="41"	BottomRectRight="356" BottomRectBottom="59" Hide="1"
+		Drag="1" DragLeft="0" DragTop="0" DragRight="307" DragBottom="30">
+		<ChatPanel Name="QuestCancelChat" X="5" Y="16" Width="330" Height="500" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" FillColor="7F0000FF" NotDetected = "1"></ChatPanel>
+		<Button Name="QuestCancelYes" Image="Data\interface0003_popup.tga" X="52" Y="0" LuaLButtonUp="QuestCancelConfirm">
+			<ButtonRect State="2" Left="4" Top="180" Right="83" Bottom="201" />
+			<ButtonRect State="1" Left="4" Top="157" Right="83" Bottom="178" />
+			<ButtonRect State="0" Left="4" Top="134" Right="83" Bottom="155" />
+		</Button>
+		<Button Name="QuestCancelConfirm" Image="Data\interface0003_popup.tga" X="137" Y="0" LuaLButtonUp="QuestCancelConfirm">
+			<ButtonRect State="0" Left="4" Top="65" Right="83" Bottom="86" />
+			<ButtonRect State="1" Left="4" Top="88" Right="83" Bottom="109" />
+			<ButtonRect State="2" Left="4" Top="111" Right="83" Bottom="132" />
+		</Button>
+		<Button Name="QuestCancelNo" Image="Data\interface0003_popup.tga" X="222" Y="0" LuaLButtonUp="QuestCancelCancel">
+			<ButtonRect State="2" Left="89" Top="180" Right="168" Bottom="201" />
+			<ButtonRect State="1" Left="89" Top="157" Right="168" Bottom="178" />
+			<ButtonRect State="0" Left="89" Top="134" Right="168" Bottom="155" />
+		</Button>
+		<Button Name="QuestCancelCancel" Image="Data\interface0003_popup.tga" X="137" Y="0" LuaLButtonUp="QuestCancelCancel">
+			<ButtonRect State="0" Left="89" Top="65" Right="168" Bottom="86" />
+			<ButtonRect State="1" Left="89" Top="88" Right="168" Bottom="109" />
+			<ButtonRect State="2" Left="89" Top="111" Right="168" Bottom="132" />
+		</Button>
+		<Button Name="QuestCancelAgree" Image="Data\interface0003_popup.tga" X="52" Y="0" LuaLButtonUp="QuestCancelConfirm">
+			<ButtonRect State="2" Left="4" Top="180" Right="83" Bottom="201" />
+			<ButtonRect State="1" Left="4" Top="157" Right="83" Bottom="178" />
+			<ButtonRect State="0" Left="4" Top="134" Right="83" Bottom="155" />
+		</Button>
+		<Button Name="QuestCancelRefuse" Image="Data\interface0003_popup.tga" X="222" Y="0" LuaLButtonUp="QuestCancelCancel">
+			<ButtonRect State="2" Left="89" Top="180" Right="168" Bottom="201" />
+			<ButtonRect State="1" Left="89" Top="157" Right="168" Bottom="178" />
+			<ButtonRect State="0" Left="89" Top="134" Right="168" Bottom="155" />
+		</Button>
+	</Panel>
+</UI>

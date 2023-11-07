@@ -1,0 +1,277 @@
+<?xml version="1.0" ?>
+<UI xmlns="http://tempuri.org/LoginUI.xsd">
+	<ID Name="MiniKeyBoard" />
+	<Font Name="Data\mingliu.ttc" Width="12" Height="12" />
+	<Panel Name="MiniKeyBoardPanel" X="450" Y="450" Image="Data\interface0016_begin_A.tga" Left="472" Top="332" Right="792" Bottom="442" Hide="0">
+		<Button Name="KeyEng1" Image="Data\interface0016_begin_A.tga" X="4" Y="6" LuaLButtonUp="InsertA" >
+			<ButtonRect State="0" Left="202" Top="497" Right="224" Bottom="519" />
+			<ButtonRect State="1" Left="226" Top="497" Right="248" Bottom="519" />
+			<ButtonRect State="2" Left="250" Top="497" Right="272" Bottom="519" />
+		</Button>
+		<Button Name="KeyEng2" Image="Data\interface0016_begin_A.tga" X="28" Y="6" LuaLButtonUp="InsertB" >
+			<ButtonRect State="0" Left="202" Top="523" Right="224" Bottom="545" />
+			<ButtonRect State="1" Left="226" Top="523" Right="248" Bottom="545" />
+			<ButtonRect State="2" Left="250" Top="523" Right="272" Bottom="545" />
+		</Button>
+		<Button Name="KeyEng3" Image="Data\interface0016_begin_A.tga" X="52" Y="6" LuaLButtonUp="InsertC" >
+			<ButtonRect State="0" Left="202" Top="548" Right="224" Bottom="570" />
+			<ButtonRect State="1" Left="226" Top="548" Right="248" Bottom="570" />
+			<ButtonRect State="2" Left="250" Top="548" Right="272" Bottom="570" />
+		</Button>
+		<Button Name="KeyEng4" Image="Data\interface0016_begin_A.tga" X="76" Y="6" LuaLButtonUp="InsertD" >
+			<ButtonRect State="0" Left="202" Top="573" Right="224" Bottom="595" />
+			<ButtonRect State="1" Left="226" Top="573" Right="248" Bottom="595" />
+			<ButtonRect State="2" Left="250" Top="573" Right="272" Bottom="595" />
+		</Button>
+		<Button Name="KeyEng5" Image="Data\interface0016_begin_A.tga" X="100" Y="6" LuaLButtonUp="InsertE" >
+			<ButtonRect State="0" Left="274" Top="497" Right="296" Bottom="519" />
+			<ButtonRect State="1" Left="298" Top="497" Right="320" Bottom="519" />
+			<ButtonRect State="2" Left="322" Top="497" Right="344" Bottom="519" />
+		</Button>
+		<Button Name="KeyEng6" Image="Data\interface0016_begin_A.tga" X="124" Y="6" LuaLButtonUp="InsertF" >
+			<ButtonRect State="0" Left="274" Top="523" Right="296" Bottom="545" />
+			<ButtonRect State="1" Left="298" Top="523" Right="320" Bottom="545" />
+			<ButtonRect State="2" Left="322" Top="523" Right="344" Bottom="545" />
+		</Button>
+		<Button Name="KeyEng7" Image="Data\interface0016_begin_A.tga" X="148" Y="6" LuaLButtonUp="InsertG" >
+			<ButtonRect State="0" Left="274" Top="548" Right="296" Bottom="570" />
+			<ButtonRect State="1" Left="298" Top="548" Right="320" Bottom="570" />
+			<ButtonRect State="2" Left="322" Top="548" Right="344" Bottom="570" />
+		</Button>
+		<Button Name="KeyEng8" Image="Data\interface0016_begin_A.tga" X="172" Y="6" LuaLButtonUp="InsertH" >
+			<ButtonRect State="0" Left="274" Top="573" Right="296" Bottom="595" />
+			<ButtonRect State="1" Left="298" Top="573" Right="320" Bottom="595" />
+			<ButtonRect State="2" Left="322" Top="573" Right="344" Bottom="595" />
+		</Button>
+		<Button Name="KeyEng9" Image="Data\interface0016_begin_A.tga" X="196" Y="6" LuaLButtonUp="InsertI" >
+			<ButtonRect State="0" Left="346" Top="497" Right="368" Bottom="519" />
+			<ButtonRect State="1" Left="370" Top="497" Right="392" Bottom="519" />
+			<ButtonRect State="2" Left="394" Top="497" Right="416" Bottom="519" />
+		</Button>
+		<Button Name="KeyEng10" Image="Data\interface0016_begin_A.tga" X="220" Y="6" LuaLButtonUp="InsertJ" >
+			<ButtonRect State="0" Left="346" Top="523" Right="368" Bottom="545" />
+			<ButtonRect State="1" Left="370" Top="523" Right="392" Bottom="545" />
+			<ButtonRect State="2" Left="394" Top="523" Right="416" Bottom="545" />
+		</Button>
+		<Button Name="KeyEng11" Image="Data\interface0016_begin_A.tga" X="244" Y="6" LuaLButtonUp="InsertK" >
+			<ButtonRect State="0" Left="346" Top="548" Right="368" Bottom="570" />
+			<ButtonRect State="1" Left="370" Top="548" Right="392" Bottom="570" />
+			<ButtonRect State="2" Left="394" Top="548" Right="416" Bottom="570" />
+		</Button>
+		<Button Name="KeyEng12" Image="Data\interface0016_begin_A.tga" X="268" Y="6" LuaLButtonUp="InsertL" >
+			<ButtonRect State="0" Left="346" Top="573" Right="368" Bottom="595" />
+			<ButtonRect State="1" Left="370" Top="573" Right="392" Bottom="595" />
+			<ButtonRect State="2" Left="394" Top="573" Right="416" Bottom="595" />
+		</Button>
+		<Button Name="KeyEng13" Image="Data\interface0016_begin_A.tga" X="292" Y="6" LuaLButtonUp="InsertM" >
+			<ButtonRect State="0" Left="417" Top="497" Right="439" Bottom="519" />
+			<ButtonRect State="1" Left="441" Top="497" Right="463" Bottom="519" />
+			<ButtonRect State="2" Left="465" Top="497" Right="487" Bottom="519" />
+		</Button>
+		
+		
+		<Button Name="KeyEng14" Image="Data\interface0016_begin_A.tga" X="4" Y="31" LuaLButtonUp="InsertN" >
+			<ButtonRect State="0" Left="417" Top="523" Right="439" Bottom="545" />
+			<ButtonRect State="1" Left="441" Top="523" Right="463" Bottom="545" />
+			<ButtonRect State="2" Left="465" Top="523" Right="487" Bottom="545" />
+		</Button>
+		<Button Name="KeyEng15" Image="Data\interface0016_begin_A.tga" X="28" Y="31" LuaLButtonUp="InsertO" >
+			<ButtonRect State="0" Left="417" Top="548" Right="439" Bottom="570" />
+			<ButtonRect State="1" Left="441" Top="548" Right="463" Bottom="570" />
+			<ButtonRect State="2" Left="465" Top="548" Right="487" Bottom="570" />
+		</Button>
+		<Button Name="KeyEng16" Image="Data\interface0016_begin_A.tga" X="52" Y="31" LuaLButtonUp="InsertP" >
+			<ButtonRect State="0" Left="417" Top="573" Right="439" Bottom="595" />
+			<ButtonRect State="1" Left="441" Top="573" Right="463" Bottom="595" />
+			<ButtonRect State="2" Left="465" Top="573" Right="487" Bottom="595" />
+		</Button>
+		<Button Name="KeyEng17" Image="Data\interface0016_begin_A.tga" X="76" Y="31" LuaLButtonUp="InsertQ" >
+			<ButtonRect State="0" Left="489" Top="497" Right="511" Bottom="519" />
+			<ButtonRect State="1" Left="513" Top="497" Right="535" Bottom="519" />
+			<ButtonRect State="2" Left="537" Top="497" Right="559" Bottom="519" />
+		</Button>
+		<Button Name="KeyEng18" Image="Data\interface0016_begin_A.tga" X="100" Y="31" LuaLButtonUp="InsertR" >
+			<ButtonRect State="0" Left="489" Top="523" Right="511" Bottom="545" />
+			<ButtonRect State="1" Left="513" Top="523" Right="535" Bottom="545" />
+			<ButtonRect State="2" Left="537" Top="523" Right="599" Bottom="545" />
+		</Button>
+		<Button Name="KeyEng19" Image="Data\interface0016_begin_A.tga" X="124" Y="31" LuaLButtonUp="InsertS" >
+			<ButtonRect State="0" Left="489" Top="548" Right="511" Bottom="570" />
+			<ButtonRect State="1" Left="513" Top="548" Right="535" Bottom="570" />
+			<ButtonRect State="2" Left="537" Top="548" Right="599" Bottom="570" />
+		</Button>
+		<Button Name="KeyEng20" Image="Data\interface0016_begin_A.tga" X="148" Y="31" LuaLButtonUp="InsertT" >
+			<ButtonRect State="0" Left="489" Top="573" Right="511" Bottom="595" />
+			<ButtonRect State="1" Left="513" Top="573" Right="535" Bottom="595" />
+			<ButtonRect State="2" Left="537" Top="573" Right="559" Bottom="595" />
+		</Button>
+		<Button Name="KeyEng21" Image="Data\interface0016_begin_A.tga" X="172" Y="31" LuaLButtonUp="InsertU" >
+			<ButtonRect State="0" Left="561" Top="497" Right="583" Bottom="519" />
+			<ButtonRect State="1" Left="585" Top="497" Right="607" Bottom="519" />
+			<ButtonRect State="2" Left="609" Top="497" Right="631" Bottom="519" />
+		</Button>
+		<Button Name="KeyEng22" Image="Data\interface0016_begin_A.tga" X="196" Y="31" LuaLButtonUp="InsertV" >
+			<ButtonRect State="0" Left="561" Top="523" Right="583" Bottom="545" />
+			<ButtonRect State="1" Left="585" Top="523" Right="607" Bottom="545" />
+			<ButtonRect State="2" Left="609" Top="523" Right="631" Bottom="545" />
+		</Button>
+		<Button Name="KeyEng23" Image="Data\interface0016_begin_A.tga" X="220" Y="31" LuaLButtonUp="InsertW" >
+			<ButtonRect State="0" Left="561" Top="548" Right="583" Bottom="570" />
+			<ButtonRect State="1" Left="585" Top="548" Right="607" Bottom="570" />
+			<ButtonRect State="2" Left="609" Top="548" Right="631" Bottom="570" />
+		</Button>
+		<Button Name="KeyEng24" Image="Data\interface0016_begin_A.tga" X="244" Y="31" LuaLButtonUp="InsertX" >
+			<ButtonRect State="0" Left="561" Top="573" Right="583" Bottom="595" />
+			<ButtonRect State="1" Left="585" Top="573" Right="607" Bottom="595" />
+			<ButtonRect State="2" Left="609" Top="573" Right="631" Bottom="595" />
+		</Button>
+		<Button Name="KeyEng25" Image="Data\interface0016_begin_A.tga" X="268" Y="31" LuaLButtonUp="InsertY" >
+			<ButtonRect State="0" Left="633" Top="497" Right="655" Bottom="519" />
+			<ButtonRect State="1" Left="657" Top="497" Right="679" Bottom="519" />
+			<ButtonRect State="2" Left="681" Top="497" Right="703" Bottom="519" />
+		</Button>
+		<Button Name="KeyEng26" Image="Data\interface0016_begin_A.tga" X="292" Y="31" LuaLButtonUp="InsertZ" >
+			<ButtonRect State="0" Left="633" Top="523" Right="655" Bottom="545" />
+			<ButtonRect State="1" Left="657" Top="523" Right="679" Bottom="545" />
+			<ButtonRect State="2" Left="681" Top="523" Right="703" Bottom="545" />
+		</Button>
+		<Button Name="KeyNum0" Image="Data\interface0016_begin_A.tga" X="4" Y="56" LuaLButtonUp="Insert0" >
+			<ButtonRect State="0" Left="633" Top="548" Right="655" Bottom="570" />
+			<ButtonRect State="1" Left="657" Top="548" Right="679" Bottom="570" />
+			<ButtonRect State="2" Left="681" Top="548" Right="703" Bottom="570" />
+		</Button>
+		<Button Name="KeyNum1" Image="Data\interface0016_begin_A.tga" X="28" Y="56" LuaLButtonUp="Insert1" >
+			<ButtonRect State="0" Left="633" Top="573" Right="655" Bottom="595" />
+			<ButtonRect State="1" Left="657" Top="573" Right="679" Bottom="595" />
+			<ButtonRect State="2" Left="681" Top="573" Right="703" Bottom="595" />
+		</Button>
+		<Button Name="KeyNum2" Image="Data\interface0016_begin_A.tga" X="52" Y="56" LuaLButtonUp="Insert2" >
+			<ButtonRect State="0" Left="704" Top="497" Right="726" Bottom="519" />
+			<ButtonRect State="1" Left="728" Top="497" Right="750" Bottom="519" />
+			<ButtonRect State="2" Left="752" Top="497" Right="774" Bottom="519" />
+		</Button>
+		<Button Name="KeyNum3" Image="Data\interface0016_begin_A.tga" X="76" Y="56" LuaLButtonUp="Insert3" >
+			<ButtonRect State="0" Left="704" Top="523" Right="726" Bottom="545" />
+			<ButtonRect State="1" Left="728" Top="523" Right="750" Bottom="545" />
+			<ButtonRect State="2" Left="752" Top="523" Right="774" Bottom="545" />
+		</Button>
+		<Button Name="KeyNum4" Image="Data\interface0016_begin_A.tga" X="100" Y="56" LuaLButtonUp="Insert4" >
+			<ButtonRect State="0" Left="704" Top="548" Right="726" Bottom="570" />
+			<ButtonRect State="1" Left="728" Top="548" Right="750" Bottom="570" />
+			<ButtonRect State="2" Left="752" Top="548" Right="774" Bottom="570" />
+		</Button>
+		<Button Name="KeyNum5" Image="Data\interface0016_begin_A.tga" X="124" Y="56" LuaLButtonUp="Insert5" >
+			<ButtonRect State="0" Left="704" Top="573" Right="726" Bottom="595" />
+			<ButtonRect State="1" Left="728" Top="573" Right="750" Bottom="595" />
+			<ButtonRect State="2" Left="752" Top="573" Right="774" Bottom="595" />
+		</Button>
+		<Button Name="KeyNum6" Image="Data\interface0016_begin_A.tga" X="148" Y="56" LuaLButtonUp="Insert6" >
+			<ButtonRect State="0" Left="776" Top="497" Right="798" Bottom="519" />
+			<ButtonRect State="1" Left="154" Top="497" Right="176" Bottom="519" />
+			<ButtonRect State="2" Left="178" Top="497" Right="200" Bottom="519" />
+		</Button>
+		<Button Name="KeyNum7" Image="Data\interface0016_begin_A.tga" X="172" Y="56" LuaLButtonUp="Insert7" >
+			<ButtonRect State="0" Left="776" Top="523" Right="798" Bottom="545" />
+			<ButtonRect State="1" Left="154" Top="523" Right="176" Bottom="545" />
+			<ButtonRect State="2" Left="178" Top="523" Right="200" Bottom="545" />
+		</Button>
+		<Button Name="KeyNum8" Image="Data\interface0016_begin_A.tga" X="196" Y="56" LuaLButtonUp="Insert8" >
+			<ButtonRect State="0" Left="776" Top="548" Right="798" Bottom="570" />
+			<ButtonRect State="1" Left="154" Top="548" Right="176" Bottom="570" />
+			<ButtonRect State="2" Left="178" Top="548" Right="200" Bottom="570" />
+		</Button>
+		<Button Name="KeyNum9" Image="Data\interface0016_begin_A.tga" X="220" Y="56" LuaLButtonUp="Insert9" >
+			<ButtonRect State="0" Left="776" Top="573" Right="798" Bottom="595" />
+			<ButtonRect State="1" Left="154" Top="573" Right="176" Bottom="595" />
+			<ButtonRect State="2" Left="178" Top="573" Right="200" Bottom="595" />
+		</Button>
+		<Button Name="KeySymbol1" Image="Data\interface0016_begin_A.tga" X="244" Y="56" LuaLButtonUp="InsertSymbol1" >
+			<ButtonRect State="0" Left="648" Top="277" Right="670" Bottom="299" />
+			<ButtonRect State="1" Left="672" Top="277" Right="694" Bottom="299" />
+			<ButtonRect State="2" Left="696" Top="277" Right="718" Bottom="299" />
+		</Button>
+		<Button Name="KeySymbol2" Image="Data\interface0016_begin_A.tga" X="268" Y="56" LuaLButtonUp="InsertSymbol2" >
+			<ButtonRect State="0" Left="648" Top="252" Right="670" Bottom="274" />
+			<ButtonRect State="1" Left="672" Top="252" Right="694" Bottom="274" />
+			<ButtonRect State="2" Left="696" Top="252" Right="718" Bottom="274" />
+		</Button>
+		<Button Name="KeySymbol3" Image="Data\interface0016_begin_A.tga" X="292" Y="56" LuaLButtonUp="InsertSymbol3" >
+			<ButtonRect State="0" Left="648" Top="227" Right="670" Bottom="249" />
+			<ButtonRect State="1" Left="672" Top="227" Right="694" Bottom="249" />
+			<ButtonRect State="2" Left="696" Top="227" Right="718" Bottom="249" />
+		</Button>
+		
+		
+		<Button Name="KeySymbol4" Image="Data\interface0016_begin_A.tga" X="124" Y="83" LuaLButtonUp="InsertSymbol4" >
+			<ButtonRect State="0" Left="720" Top="227" Right="742" Bottom="249" />
+			<ButtonRect State="1" Left="744" Top="227" Right="766" Bottom="249" />
+			<ButtonRect State="2" Left="768" Top="227" Right="790" Bottom="249" />
+		</Button>
+		<Button Name="KeySymbol5" Image="Data\interface0016_begin_A.tga" X="148" Y="83" LuaLButtonUp="InsertSymbol5" >
+			<ButtonRect State="0" Left="720" Top="252" Right="742" Bottom="274" />
+			<ButtonRect State="1" Left="744" Top="252" Right="766" Bottom="274" />
+			<ButtonRect State="2" Left="768" Top="252" Right="790" Bottom="274" />
+		</Button>
+		<Button Name="KeySymbol6" Image="Data\interface0016_begin_A.tga" X="172" Y="83" LuaLButtonUp="InsertSymbol6" >
+			<ButtonRect State="0" Left="720" Top="277" Right="742" Bottom="299" />
+			<ButtonRect State="1" Left="744" Top="277" Right="766" Bottom="299" />
+			<ButtonRect State="2" Left="768" Top="277" Right="790" Bottom="299" />
+		</Button>
+		<Button Name="KeySymbol7" Image="Data\interface0016_begin_A.tga" X="196" Y="83" LuaLButtonUp="InsertSymbol7" >
+			<ButtonRect State="0" Left="720" Top="302" Right="742" Bottom="324" />
+			<ButtonRect State="1" Left="744" Top="302" Right="766" Bottom="324" />
+			<ButtonRect State="2" Left="768" Top="302" Right="790" Bottom="324" />
+		</Button>
+		
+		<Button Name="KeySymbol8" Image="Data\interface0016_begin_A.tga" X="220" Y="83" LuaLButtonUp="InsertSymbol8" >
+			<ButtonRect State="0" Left="720" Top="128" Right="742" Bottom="150" />
+			<ButtonRect State="1" Left="744" Top="128" Right="766" Bottom="150" />
+			<ButtonRect State="2" Left="768" Top="128" Right="790" Bottom="150" />
+		</Button>
+		<Button Name="KeySymbol9" Image="Data\interface0016_begin_A.tga" X="244" Y="83" LuaLButtonUp="InsertSymbol9" >
+			<ButtonRect State="0" Left="720" Top="153" Right="742" Bottom="175" />
+			<ButtonRect State="1" Left="744" Top="153" Right="766" Bottom="175" />
+			<ButtonRect State="2" Left="768" Top="153" Right="790" Bottom="175" />
+		</Button>
+		<Button Name="KeySymbol10" Image="Data\interface0016_begin_A.tga" X="268" Y="83" LuaLButtonUp="InsertSymbol10" >
+			<ButtonRect State="0" Left="720" Top="178" Right="742" Bottom="200" />
+			<ButtonRect State="1" Left="744" Top="178" Right="766" Bottom="200" />
+			<ButtonRect State="2" Left="768" Top="178" Right="790" Bottom="200" />
+		</Button>
+		<Button Name="KeySymbol11" Image="Data\interface0016_begin_A.tga" X="292" Y="83" LuaLButtonUp="InsertSymbol11" >
+			<ButtonRect State="0" Left="720" Top="203" Right="742" Bottom="225" />
+			<ButtonRect State="1" Left="744" Top="203" Right="766" Bottom="225" />
+			<ButtonRect State="2" Left="768" Top="203" Right="790" Bottom="225" />
+		</Button>
+		
+		<!--<Button Name="KeyShift" Image="Data\interface0016_begin_A.tga" X="4" Y="83" LuaLButtonUp="" >
+			<ButtonRect State="0" Left="421" Top="470" Right="461" Bottom="492" />
+			<ButtonRect State="1" Left="465" Top="470" Right="505" Bottom="492" />
+			<ButtonRect State="2" Left="509" Top="470" Right="548" Bottom="492" />
+		</Button>
+		
+		<Button Name="KeyLock" Image="Data\interface0016_begin_A.tga" X="100" Y="83" LuaLButtonUp="" >
+			<ButtonRect State="0" Left="648" Top="303" Right="670" Bottom="325" />
+			<ButtonRect State="1" Left="672" Top="303" Right="694" Bottom="325" />
+			<ButtonRect State="2" Left="696" Top="303" Right="718" Bottom="325" />
+		</Button>-->
+		
+		<Button Name="KeyBackSpace" Image="Data\interface0016_begin_A.tga" X="57" Y="83" LuaLButtonUp="EnableBackSpace" >
+			<ButtonRect State="0" Left="420" Top="446" Right="460" Bottom="468" />
+			<ButtonRect State="1" Left="464" Top="446" Right="504" Bottom="468" />
+			<ButtonRect State="2" Left="508" Top="446" Right="548" Bottom="468" />
+		</Button>
+		
+		<CheckBox Name="KeyShift" X="4" Y="83" CheckX="0" CheckY="0" Image="Data\interface0016_begin_A.tga" State="0" LuaLButtonUp="EnableShift">
+			<CheckBoxRect Index="0" Left="508" Top="469" Right="548" Bottom="491" />
+			<CheckBoxRect Index="1" Left="420" Top="469" Right="460" Bottom="491" />
+			<CheckBoxRect Index="2" Left="464" Top="469" Right="504" Bottom="491" />
+		</CheckBox>
+		
+		<CheckBox Name="KeyLock" X="100" Y="83" CheckX="0" CheckY="0" Image="Data\interface0016_begin_A.tga" State="0" LuaLButtonUp="EnableLock">
+			<CheckBoxRect Index="0" Left="696" Top="302" Right="718" Bottom="324" />
+			<CheckBoxRect Index="1" Left="648" Top="302" Right="670" Bottom="324" />
+			<CheckBoxRect Index="2" Left="672" Top="302" Right="694" Bottom="324" />
+		</CheckBox>
+	</Panel>
+</UI>

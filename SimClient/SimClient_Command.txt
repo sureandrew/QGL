@@ -1,0 +1,588 @@
+
+General Command with no need for connection
+===========================================
+
+"connect"
+- connect to server
+
+"disconnect"
+- user logout from the server
+
+"reconnect"
+- user will logout first, and then reconnect to server
+
+"switch <accountID>
+- Switch to another accountID.
+- <accountID> is the ID of the account that you want to switch to, which must be currently logged on
+  if the switchover is successful.
+
+"restart"
+- to restart the game
+
+"option <AddDelete><ShowDataOption>"
+- to set different option of whether displaying data when the attribute(e.g.HP) of the character is updated.
+- <AddDelete> is a parameter of "+" or "-". If "+" is used, the option specified in <showDataOption> will be added.
+  If "-" is used, the option specified in <showDataOption> will be deleted(unselected).
+- <ShowDataOption> is an option of displaying data as listed below:
+   (1)show_self: show self update   
+   (2)show_other: show other update
+   (3)show_item: show item update
+   (4)show_move: show the movement details
+   (5)auto_select: auto select character to play
+   (6)auto_ping: auto ping
+- example 1. option +show_self : it adds the "show_self" option. It will show character info whenever the attributes of
+             the character are updated.
+  example 2. option -show_item: it delete the "show_item" option. It will not show the items details although the items are
+             updated.
+  example 3. option: if type "option" alone without parameter <AddDelete> and <ShowDataOption>, it will show all the options 
+             that you currently have selected.
+
+"loglevel <level>"
+- to set the log level
+-<level> is the log level that you want to set, with value ranging from 1 to 4.
+
+/////////////////////////////
+//     Robot/Lua Command
+/////////////////////////////
+
+"lua load <luafile>" 
+- load robot lua file
+- <luafile> is any lua file that you want to loaded into the simclient 
+- e.g. lua load robot11.lua
+
+"lua func <luaFunc>"
+- call a lua function
+- <luaFunc> is the lua function
+- e.g. lua func AccountAction
+
+Command that needs connection
+==============================
+
+//////////////////////////////////
+//  Account Login Command
+//////////////////////////////////
+"login <acctID> <password>"
+- login to the game
+- <acctID> is account ID
+- <password> is password
+
+"logout"
+- logout from the game
+
+"select <charID> <lineID>
+- select a character manually
+- <charID> is the character ID
+- <lineID> is the line ID. If this parameter is missing, value of 1 will be automatically assigned to line ID.
+
+/////////////////////////////////////
+//    Friend Command
+///////////////////////////////////// 
+
+"friend add_nearby <char_id> <group_num> <name>"
+- To add a character as your friend, who has to be located near to you, with the specified ID.
+- <char_id> is the ID of the character that you want to add.
+- <group_num> is the group list number that you want to assigned to the specified friend. The value is ranging
+   from 0 to 5, with value of 1 representing Black List Friend Group. 
+- <name> is name of the friend. If you don't know the name, you can just randomly type a string, because the 
+  function will search the ID of character automatically.
+- e.g. friend add_nearby 12 3 Jack: Add a friend with ID no.12 and name "Jack", who is near to you, and assigned him 
+  into group 3 friend list
+
+"friend add_online <char_id> <group_num> <name>"
+- Same as command "friend add_nearby", but this function will add anybody who is currently online.
+- <char_id> is ID of character
+- <group_num> is the group list number
+- <name> is the name of the friend. Unlike command "friend add_nearby", you have to make sure that the name MUST be
+  correct.
+
+"friend delete <targetID>"
+- delete/remove a friend
+- <targetID> is the ID of a character that you want to remove from your friend list.
+
+"friend send_msg <targetID> <PrivPub> <Msg>"
+- to send a message to your friend
+- <targetID> the character ID of a person that you want to talk to.
+- <PrivPub> is a parameter tht could be either "private" or "public". If "private" is chosen, the message is sent out
+  in private manner, otherwise in public manner if "public" is typed in.
+- <Msg> is the text message that you want to send.
+- e.g. friend send_msg 12 private Hello! Nice to meet you!!!
+
+"friend"
+- if omit all the parameters by just typing "friend", it will show all the friends that you have. 
+
+/////////////////////////////////////////////
+//       Character Command
+/////////////////////////////////////////////
+
+"move <action>"
+- to ask the character to repeat the move action or to stop him.
+- <action> could be the parameter listed as follows:
+   (1)stop: stop moving
+   (2)again: move again
+- e.g. move stop
+
+"move <GuidePts>"
+- to ask the character to move with specified guide points
+- <GuidePts> is the guide points you want to move, say 300 guide points, then you type"g300".
+- e.g. move g500
+
+"move <JumpPts>"
+- to jump with specified points
+- <JumpPts> is the points to jump. e.g. j200, which means jump 200 points
+- e.g. move j200
+
+"monitor <charID>"
+- To monitor other character nearby. 
+- <charID> is the ID of character that you want to monitor.
+
+"monitor leave"
+- To leave the monitor
+
+"set_pk <enable>"
+- set enable or disable PK
+- <enable> is 0 or 1. If it equals 0, it means disable. If it equals 1, it means enable.
+
+"battle join"
+- to join the battle for helping out.
+
+"battle pk <targetID>"
+- Try to PK with another character. 
+- <targetID> is the ID of a character that you want to PK with.
+
+"battle"
+- to start a battle
+
+"levelup"
+- to increment the level up for the character if there is enough EXP.
+
+"ap_add <Attri1> <Attri2> <Attri3> <Attri4> <Attri5>"
+- To raise different attributes of a character.
+- <Attri1> = value of STA that you want to raise
+- <Attri2> = value of SPR that you want to raise
+- <Attri3> = value of STR that you want to raise
+- <Attri4> = value of CON that you want to raise
+- <Attri5> = value of AGI that you want to raise
+
+/////////////////////////////////////////////
+//       Map Item Command
+/////////////////////////////////////////////
+
+"equip <BagIdx> <Place>"
+- to equip the player with a specified item
+- <BagIdx> is the bag index of a particular item. If the value exceed 120, the item will be unequiped.
+- <Place> is the place that you want to equip with, with value ranging from 0 to 255. Value 255 will
+   be assigned if you omit this parameter.
+
+"put <srcIdx> <destIdx>"
+- to move the item from the source index to destination index
+- <srcIdx>: source index
+- <destIdx>: destination index
+
+"drop <Item> <Count>"
+- to drop the items
+- <Item> is the item ID that you want to drop
+- <Count> is the number of how many items with ID provided in parameter <Item> that you want to drop. 
+  If you omit this parameter, 0 will be assigned to Count, which means no item is dropped.
+
+"bag"
+- show all the items in your bag
+
+"item <itemIdx>"
+- to show the details of a item
+- <itemIdx> is the item Index
+
+///////////////////////////////////////////
+//            Battle Command
+///////////////////////////////////////////
+
+"attack <EnemyID>"
+- attack any enemy invloved in a battle
+- <EnemyID> is the character ID of a enemy that you want to attack
+
+"skill <skillID> <targetID>"
+- to use skill on somebody in a battle.
+- <skillID> is the ID of a skill that you are going to use.
+- <targetID> is the ID of the target that your skill will be applied to. The target could be your
+  enemy or your partner, depends on the type of skill you use.
+- if you omit both parameter <skillID> and <targetID>, it will show all the skills that you have.
+
+"use <itemID> <targetID>"
+- to use a item on someone.
+- <itemID> is the ID of a item
+- <targetID> is the target ID.
+
+"defend"
+- to defend yourself
+
+"protect <charID>"
+- to protect somebody
+- <charID> is the character ID of a person that you want to protect.
+
+"auto"
+- to fight automatically
+
+"escape"
+- to escape
+
+"repeat"
+-to repeat the battle command
+
+"call <Partner>"
+-to call your partner
+-<Partner> is the character ID of a partner that you want to call
+
+"help"
+- to call help
+
+"p_attack <Partner>"
+- to order your partner to attack
+- <Partner> is the ID of the Partner
+
+"p_skill <skillID> <targetID>"
+- to use your partner skill on somebody
+- <skillID> the skill ID of your partner
+- <targetID> is the ID of taregt that the skill is applied to.
+
+"p_defend"
+- to ask your partner to defend
+
+"p_protect <targetID>"
+- to ask your partner to protect somebody
+- <targetID> is the ID of character that you is going to protect.
+
+"p_escape"
+- to order your partner to escape
+
+"whisper <characterID> <chatMsg>"
+- to whisper to someone.
+- <characterID> is the character ID of NPC that you want to chat with
+- <chatMsg> is the chat message
+
+"say <msg>"
+- to say a message
+- <msg> is the message that you want to say
+
+///////////////////////////////////////////////////////
+//                  Party Command
+///////////////////////////////////////////////////////
+
+"party create"
+- to create a party
+
+"party join <charID>"
+- to join with other character in a party
+- <charID> is the ID of character that you want to join to
+
+"party invite <charID>"
+- to invite somebody to party
+- <charID> is the ID of a character that you want to invite
+
+"party kick <charID>"
+- to kick a member out of a party. 
+- <charID> is the ID of member that you want to kick him out.
+
+"party promote <charID>"
+- to promote somebody to leader of a party
+- <charID> is the ID of a character that you want to promote
+
+"party leave"
+- to leave your own party
+
+"party status"
+- to show all the members of a party
+
+//////////////////////////////////////////////////
+//            Partner Command
+//////////////////////////////////////////////////
+
+"partner"
+- To show all partners
+
+"partner <PartnerIdx> follow"
+- To ask a particular partner to follow you
+- <PartnerIdx> is the partner index.
+
+"partner <PartnerIdx> stop"
+- to stop a particular partner to follow you
+- <PartnerIdx> is the partner index.
+
+"partner <PartnerIdx> fight"
+- To set a particular partner in fighting status.
+- <PartnerIdx> is the partner index.
+
+"partner <PartnerIdx> standby"
+- To set a particular partner in standby mode.
+- <PartnerIdx> is the partner index.
+
+"partner <PartnerIdx> delete"
+- To delete a particular partner. 
+- <PartnerIdx> is the partner index.
+
+"partner <PartnerIdx> attr_chg <+/-><attri> <value>"
+- to add/substract attribute point of a particular partner
+- <PartnerIdx> is the partner Index
+- <+/-> could be one of the following parameters:
+        + : add the attribute point
+        - : substract the attribute point
+- <attri> could be one of the following attribute type:
+          (1)STA (2)STR (3)SPR (4)CON (5)AGI
+- <value> is the point of attribute that you are going to add/remove.
+- Please note you can add/remove the attribute points in a sequence of different attribute type in one command line.
+  For example, partner 0 attr_chg +STA 32 +AGI 33 +STR 30 -STA 15 +SPR 80 -AGI 10 +STA 70 -STR 10
+  OR you just want to increase one attribute. e.g. partner 0 attr_chg +AGI 5
+ 
+
+"partner <PartnerIdx> attr_show"
+- to show how many attribute point of a partner has
+- <PartnerIdx> is the partner index
+        
+
+//////////////////////////////////////////////////
+//     		Giving Command
+/////////////////////////////////////////////////
+"give"
+- to show all the items, partners and the pets that you own.
+
+"give <targetID> <giveType> <money>|<itemslot>[x<count>]|<partnerIndex>|<petIndex>"
+- <targetID> is the character ID of the person to whom you give
+- <giveType> is the type of thing that you want to give, which include "money", "item", "partner" and "pet"
+- <money> is the game money that you want to give
+- <itemslot> is the item slot number in your bag
+- x<count> is the number of item count to give
+- <partnerIndex> is the partner index
+- <petIndex> is the pet index
+
+/////////////////////////////////////////////////////////
+//          Trading Command
+/////////////////////////////////////////////////////////
+"trade request <targetID>"
+- to raise a trade request with someone
+- <targetID> is the character ID of a person that you want to trade with
+
+"trade accept"
+- to accept a trade request raised by the other side
+
+"trade reject"
+- to reject a trade request raised by the other side
+
+"trade cancel"
+- after a tarde request is established, you can cancel the trade whatever you want
+
+"trade show"
+- to show all the things that you put on sales and the things that the opposite side put on sales.
+
+"trade add <tradeType> <itemslot> <tradeslot>"
+- to sell things(items, partner or pets) with opposite side
+- <tradeType> is the type of thing that you want to trade, which include "item", "partner" and "pet"
+- <itemslot> is the item slot number that you want to sell. 
+   - For item, it refer to the slot number in the item bag	
+   - For pet, the slot number is UID.
+   - For partner, the slot is partner ID.
+- <tradeslot> is the number of trading slot where you want to put your item for sales.
+- you can add the items in a long list.e.g. trade add item 12 0 item 8 1 partner 2 0
+  (i.e. item 12 and 8 is put into trading slot 0 and 1 respectively, and partner 2 is put in slot 0)
+- every time you add something, it will unlock the trade automatically. 
+
+"trade remove <tradeType> <tradeslot>"
+- to remove items, partners or pets from trading slot.
+- <tradeType> is the type of thing that you want to trade, which include "item", "partner", "pet" and "money"
+- <tradeslot> is the number of trading slot where you want to remove your item from. If <tradeType> is money,
+   the number of trading slot is irrelevant so that you can type any value of UInt8 type. 
+- you can remove items in a long list. e.g. trade remove item 0 partner 1 item 2
+- every time you remove something, it will unlock the trade automatically. 
+ 
+"trade lock"
+- to lock your trade
+
+"trade unlock"
+- to unlock your trade
+
+"trade confirm"
+- to confirm your trade after both side is locked
+
+
+/////////////////////////////////////////////////////////
+//          Online Shop Command
+/////////////////////////////////////////////////////////
+
+"shop open"
+- to open a online shop. Please note you have to open a shop before any action related to shop is taken.
+
+"shop close"
+- to close a shop after shopping.
+
+"shop show <itemtype>"
+- to show what things are available on the online shop for sales.
+- <itemtype> is the type/category of things that you are going to buy as follows:
+   (1).mix
+   (2).assc
+   (3).pet
+   (4).partner
+   (5).other
+   (6).hotsale
+   (7).limit
+   (8).discount
+  
+"shop money"
+- to show how much money that you have
+
+"shop buy <itemtype> <itemNum> <stack>"
+- to buy a sale item in online shop
+- <itemtype> is the type/category of things that you are going to buy as follows:
+   (1).mix
+   (2).assc
+   (3).pet
+   (4).partner
+   (5).other
+   (6).cloth
+   (7).limit
+   (8).discount
+- <itemNum> is the item number of a particular item that you want to buy. You can check
+   this number by using the "shop show <itemtype>" command.
+- <stack> is the qty of the sale item that you are going to buy.
+
+
+//////////////////////////////////////////////////////
+//               Pet Command                        //
+//////////////////////////////////////////////////////
+"pet show"
+- to show all the pets that you have
+
+"pet use <petIndex>"
+- to use a pet
+- <petIndex> is a pet index. Please note this index is not pet UID or ID. Instead, it refers to 0 if it is
+   your first pet, 1 if it is your second pet and so on.
+
+"pet standby <petIndex>"
+- to put a pet in standby mode
+- <petIndex> is a pet index. Please note this index is not pet UID or ID. Instead, it refers to 0 if it is
+   your first pet, 1 if it is your second pet and so on.
+
+"pet dump <petIndex>"
+- to dump a pet
+- <petIndex> is a pet index. Please note this index is not pet UID or ID. Instead, it refers to 0 if it is
+   your first pet, 1 if it is your second pet and so on.
+
+"pet name_chg <petIndex> <petName>"
+- to change a pet name
+- <petIndex> is a pet index. Please note this index is not pet UID or ID. Instead, it refers to 0 if it is
+   your first pet, 1 if it is your second pet and so on.
+- <petName> is the string of new name applied to the pet
+
+//////////////////////////////////////////////
+//        NPC talking command               //
+//////////////////////////////////////////////
+"npctalk start <NPC_UID>"
+- to start talking with a NPC
+- <NPC_UID> is the UID of a NPC who you want to talk to
+
+"npctalk <AnsOption>"
+- to choose an answer as a reply to NPC question
+- <AnsOption> is the index of an answer that you choose. For example, the NPC present two answer:
+  0: accpet the quest
+  1: reject and leave
+  '0' and '1' is the <AnsOption> that you choose.
+
+///////////////////////////////////////////////////
+//               Quest Command                   //    
+///////////////////////////////////////////////////
+"quest show"
+- to show all the quest that you have
+
+"quest cancel <questID>"
+- to cancel a specified quest
+- <questID> is the ID of a quest that you want to delete
+
+////////////////////////////////////////////////////
+//               Hawker Command                   // 
+////////////////////////////////////////////////////
+"hawker open <hawkerName> <type> <slotNo> <price> <stack>(*parameter for item type only)"
+- to open a hawking business
+- <hawkerName> is the name of the hawking business that you owned
+- <type> should be one of the following:
+   (1)item 
+   (2)partner
+   (3)pet
+- <slotNo> Specify the slot number (not the uid of pet/partner/item) of the thing that you want to 
+  put on sale. For example, if you have 2 partners and want to put your first partner on sale, you should 
+  type: hawker open I_am_Hawker partner 0 60. The '0' in the command means the first one, while 1 means
+  the 2nd one and so on. Same for the pet. For item, it is the bag index.
+- <price> is the price of that particular item that you want to sell.
+- <stack> is the number of item you want to put on sale. Only the type "item" need to input this value,
+  because the stack of partner and pet assumes to be 1.
+
+* Please note that you can put all the pets/partners/items on sales in one command line. 
+  For example, hawker open I_am_Hawker partner 0 60 pet 1 100 item 13 20 3
+
+"hawker close"
+- to open close 
+
+"hawker start_shop <TargetID>"
+- to start shopping process on a targeted hawker
+- <TargetID> is the character ID of a targeted Hawker
+
+"hawker stop_shop"
+- to stop the shopping process on a particular hawker
+
+"hawker buy <type> <slot> <stack>"
+- to buy things from a hawker
+- <type> is a integer representing the type that you want to buy. The integer can be one of the following:
+   0: a item
+   1: a partner
+   2: a pet
+
+"hawker display_sale"
+- to display what things you have put on sale in your hawking business(in this case, you are a hawker)
+
+"hawker display_buy"
+- to display what things are avaliable for sales from a hawker (in this case, you are a customer) 
+           
+///////////////////////////////////////////////////////
+//       Miscellaneous Command 
+///////////////////////////////////////////////////////
+
+"char"
+- Show all the details of your character
+
+"char <charID>"
+- Show the details of a character with specified ID
+- <charID> id the character ID
+
+"map"
+- Show map details
+
+"mapline <line_ID>"
+- To change a mapline.
+- <line_ID> is the line ID
+
+"cheat <code>"
+- to use a cheat code
+- <code> is the cheat code
+
+"ping"
+- to test if the connection valid
+
+"testlock"
+- to start the testlock testing
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 

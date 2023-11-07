@@ -1,0 +1,39 @@
+//-- Config
+config
+{
+	SubPath="Logic/";
+	ClassID=38000;
+	StartID=38000;
+	EndID  =38999;
+}
+
+//-- include
+
+//-- object class
+class Messenger : NetObject
+{
+	//-- object state
+	key {
+		UInt32 player_char_id;
+		UInt32 friend_char_id;
+	};
+	
+	relation
+	{
+		UInt16 friend_relation;
+	};
+	
+	group
+	{
+		UInt8	friend_group;
+	};
+	
+	friendly
+	{
+		UInt16	friend_friendly;
+	};
+	
+	public:
+	MoveGroup(UInt8 group);
+	ModifyRelation(UInt8Vector relations);
+}

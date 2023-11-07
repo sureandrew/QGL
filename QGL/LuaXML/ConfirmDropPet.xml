@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" ?>
+
+<UI>
+	<ID Name="ConfirmDropPet" />
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	<Panel Name="ConfirmDropPetPanel" Image="Data\inerface0004_main_A.tga" X="0" Y="0" Left="314" Top="293" Right="542" Bottom="391"
+		Drag="1" DragLeft="0" DragTop="0" DragRight="228"	DragBottom="98" 
+		LuaRButtonUp="CloseConfirmDropPet"  LuaKeyChar="CloseConfirmDropPet">
+		<StaticText Name="ConfirmDropPetText" X="0" Y="35" Height="20" Width="228" Row="1" Column="6" EdgeCode="LIGHT" FontColor="FFEDD97A" ShadowColor="FF000000" Align="CENTER">
+			请输入新名字
+		</StaticText>
+		
+		<Button Name="DropPetOK" Image="Data\inerface0004_main_A.tga" X="46" Y="60" LuaLButtonUp="ConfirmDropPet">
+			<ButtonRect State="0" Left="4" Top="511" Right="68" Bottom="528" />
+			<ButtonRect State="1" Left="70" Top="511" Right="134" Bottom="528" />
+			<ButtonRect State="2" Left="136" Top="511" Right="200" Bottom="528" />
+		</Button>
+		
+		<Button Name="DropPetNO" Image="Data\inerface0004_main_A.tga" X="123" Y="60" LuaLButtonUp="CloseConfirmDropPet">
+			<ButtonRect State="0" Left="4" Top="530" Right="68" Bottom="547" />
+			<ButtonRect State="1" Left="70" Top="530" Right="134" Bottom="547" />
+			<ButtonRect State="2" Left="136" Top="530" Right="200" Bottom="547" />
+		</Button>
+	
+	</Panel>	
+</UI>
+

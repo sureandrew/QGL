@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" ?>
+<!-- Our to do list data -->
+<UI>
+	<ID Name="QuestJournal" />
+	<!--<Font Name="Data\mingliu.ttc" Width="12" Height="12" />-->
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	<Panel Name="QuestJournalPanel" Image="Data\interface0030_main_O.tga" X="0" Y="0" 
+			Left="4" Top="2" Right="703" Bottom="406" LuaRButtonUp="CloseQuestJournalPanel" LuaKeyChar="CloseQuestJournalPanel" DetectImage = "1"
+			Drag="1" DragLeft="0" DragTop="0" DragRight="699" DragBottom="404" >
+			
+		<Button Name="QuestJournalPanelClose" Image="Data\interface0030_main_O.tga" X="663" Y="8" LuaLButtonDown="CloseQuestJournalPanel">
+			<ButtonRect State="0" Left="6" Top="435" Right="30" Bottom="453" />
+			<ButtonRect State="1" Left="31" Top="435" Right="55" Bottom="453" />
+			<ButtonRect State="2" Left="56" Top="435" Right="80" Bottom="453" />
+		</Button>
+		
+		<ScrollBarV Name="QuestJournalScroll" X="677" Y="58" Width ="14" Height="189" Limit="0" BarColor="0" LuaLButtonDown="QuestJournalScroll">
+			<PrevButton Name="QuestJournalUp" Image="Data\interface0030_main_O.tga" X="0" Y="0" LuaLButtonUp="QuestJournalScrollUp">
+				<ButtonRect State="0" Left="88" Top="435" Right="102" Bottom="449" />
+				<ButtonRect State="1" Left="104" Top="435" Right="118" Bottom="449" />
+				<ButtonRect State="2" Left="120" Top="435" Right="134" Bottom="449" />
+			</PrevButton>
+			<NextButton Name="QuestJournalDown" Image="Data\interface0030_main_O.tga" X="0" Y="175" LuaLButtonUp="QuestJournalScrollDown">
+				<ButtonRect State="0" Left="88" Top="452" Right="102" Bottom="465" />
+				<ButtonRect State="1" Left="104" Top="452" Right="118" Bottom="465" />
+				<ButtonRect State="2" Left="120" Top="452" Right="134" Bottom="465" />
+			</NextButton>
+			<MoveButton Image="Data\interface0030_main_O.tga" X="0" Y="14"  LuaMouseMove="QuestJournalScroll">
+				<ButtonRect State="0" Left="137" Top="435" Right="151" Bottom="464" />
+				<ButtonRect State="1" Left="137" Top="435" Right="151" Bottom="464" />
+				<ButtonRect State="2" Left="137" Top="435" Right="151" Bottom="464" />
+			</MoveButton>
+		</ScrollBarV>
+		
+		<UIImage Name="QuestJournalSelected" X="11" Y="224" Image="Data\interface0030_main_O.tga" Left="6" Top="412" Right="670" Bottom="429" NotDetected="1" Hide="1" />
+			
+		<StaticText Name="QuestJournalTime00" X="15" Y="62" Width="110" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="QuestJournalName00" X="132" Y="62" Width="100" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="QuestJournalNPC00" X="230" Y="62" Width="100" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="QuestJournalPlace00" X="327" Y="62" Width="100" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="QuestJournalLevel00" X="442" Y="62" Width="50" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="QuestJournalParty00" X="507" Y="62" Width="100" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="QuestJournalCount00" X="597" Y="62" Width="100" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		
+		
+		<StaticText Name="QuestJournalTime01" X="15" Y="80" Width="110" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="QuestJournalName01" X="132" Y="80" Width="100" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="QuestJournalNPC01" X="230" Y="80" Width="100" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="QuestJournalPlace01" X="327" Y="80" Width="100" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="QuestJournalLevel01" X="442" Y="80" Width="50" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="QuestJournalParty01" X="507" Y="80" Width="100" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="QuestJournalCount01" X="597" Y="80" Width="100" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		
+		<StaticText Name="QuestJournalTime02" X="15" Y="98" Width="110" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="QuestJournalName02" X="132" Y="98" Width="100" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="QuestJournalNPC02" X="230" Y="98" Width="100" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="QuestJournalPlace02" X="327" Y="98" Width="100" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="QuestJournalLevel02" X="442" Y="98" Width="50" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="QuestJournalParty02" X="507" Y="98" Width="100" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="QuestJournalCount02" X="597" Y="98" Width="100" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+	
+		<StaticText Name="QuestJournalTime03" X="15" Y="116" Width="110" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="QuestJournalName03" X="132" Y="116" Width="100" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center"> 
+		</StaticText>
+		<StaticText Name="QuestJournalNPC03" X="230" Y="116" Width="100" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="QuestJournalPlace03" X="327" Y="116" Width="100" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="QuestJournalLevel03" X="442" Y="116" Width="50" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="QuestJournalParty03" X="507" Y="116" Width="100" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="QuestJournalCount03" X="597" Y="116" Width="100" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		
+		<StaticText Name="QuestJournalTime04" X="15" Y="134" Width="110" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="QuestJournalName04" X="132" Y="134" Width="100" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="QuestJournalNPC04" X="230" Y="134" Width="100" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="QuestJournalPlace04" X="327" Y="134" Width="100" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="QuestJournalLevel04" X="442" Y="134" Width="50" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="QuestJournalParty04" X="507" Y="134" Width="100" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="QuestJournalCount04" X="597" Y="134" Width="100" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		
+		<StaticText Name="QuestJournalTime05" X="15" Y="152" Width="110" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="QuestJournalName05" X="132" Y="152" Width="100" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="QuestJournalNPC05" X="230" Y="152" Width="100" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="QuestJournalPlace05" X="327" Y="152" Width="100" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="QuestJournalLevel05" X="442" Y="152" Width="50" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="QuestJournalParty05" X="507" Y="152" Width="100" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="QuestJournalCount05" X="597" Y="152" Width="100" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		
+		<StaticText Name="QuestJournalTime06" X="15" Y="170" Width="110" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="QuestJournalName06" X="132" Y="170" Width="100" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="QuestJournalNPC06" X="230" Y="170" Width="100" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="QuestJournalPlace06" X="327" Y="170" Width="100" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="QuestJournalLevel06" X="442" Y="170" Width="50" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="QuestJournalParty06" X="507" Y="170" Width="100" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="QuestJournalCount06" X="597" Y="170" Width="100" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		
+		<StaticText Name="QuestJournalTime07" X="15" Y="188" Width="110" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="QuestJournalName07" X="132" Y="188" Width="100" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="QuestJournalNPC07" X="230" Y="188" Width="100" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="QuestJournalPlace07" X="327" Y="188" Width="100" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="QuestJournalLevel07" X="442" Y="188" Width="50" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="QuestJournalParty07" X="507" Y="188" Width="100" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="QuestJournalCount07" X="597" Y="188" Width="100" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		
+		<StaticText Name="QuestJournalTime08" X="15" Y="206" Width="110" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="QuestJournalName08" X="132" Y="206" Width="100" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="QuestJournalNPC08" X="230" Y="206" Width="100" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="QuestJournalPlace08" X="327" Y="206" Width="100" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="QuestJournalLevel08" X="442" Y="206" Width="50" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="QuestJournalParty08" X="507" Y="206" Width="100" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="QuestJournalCount08" X="597" Y="206" Width="100" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>	
+		
+		<StaticText Name="QuestJournalTime09" X="15" Y="224" Width="110" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="QuestJournalName09" X="132" Y="224" Width="100" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="QuestJournalNPC09" X="230" Y="224" Width="100" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="QuestJournalPlace09" X="327" Y="224" Width="100" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="QuestJournalLevel09" X="442" Y="224" Width="50" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="QuestJournalParty09" X="507" Y="224" Width="100" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="QuestJournalCount09" X="597" Y="224" Width="100" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		
+		<UIImage Name="QuestJournalSelect00" X="11" Y="60" Image="" Left="0" Top="0" Right="664" Bottom="16" Detect="1" LuaLButtonUp="SelectQuestJournal00" LuaLButtonDBLCLK="DBLCLKQuestJournal00"/>
+		<UIImage Name="QuestJournalSelect01" X="11" Y="78" Image="" Left="0" Top="0" Right="664" Bottom="16" Detect="1" LuaLButtonUp="SelectQuestJournal01" LuaLButtonDBLCLK="DBLCLKQuestJournal01"/>
+		<UIImage Name="QuestJournalSelect02" X="11" Y="96" Image="" Left="0" Top="0" Right="664" Bottom="16" Detect="1" LuaLButtonUp="SelectQuestJournal02" LuaLButtonDBLCLK="DBLCLKQuestJournal02"/>
+		<UIImage Name="QuestJournalSelect03" X="11" Y="114" Image="" Left="0" Top="0" Right="664" Bottom="16" Detect="1" LuaLButtonUp="SelectQuestJournal03" LuaLButtonDBLCLK="DBLCLKQuestJournal03"/>
+		<UIImage Name="QuestJournalSelect04" X="11" Y="132" Image="" Left="0" Top="0" Right="664" Bottom="16" Detect="1" LuaLButtonUp="SelectQuestJournal04" LuaLButtonDBLCLK="DBLCLKQuestJournal04"/>
+		<UIImage Name="QuestJournalSelect05" X="11" Y="150" Image="" Left="0" Top="0" Right="664" Bottom="16" Detect="1" LuaLButtonUp="SelectQuestJournal05" LuaLButtonDBLCLK="DBLCLKQuestJournal05"/>
+		<UIImage Name="QuestJournalSelect06" X="11" Y="168" Image="" Left="0" Top="0" Right="664" Bottom="16" Detect="1" LuaLButtonUp="SelectQuestJournal06" LuaLButtonDBLCLK="DBLCLKQuestJournal06"/>
+		<UIImage Name="QuestJournalSelect07" X="11" Y="186" Image="" Left="0" Top="0" Right="664" Bottom="16" Detect="1" LuaLButtonUp="SelectQuestJournal07" LuaLButtonDBLCLK="DBLCLKQuestJournal07"/>
+		<UIImage Name="QuestJournalSelect08" X="11" Y="204" Image="" Left="0" Top="0" Right="664" Bottom="16" Detect="1" LuaLButtonUp="SelectQuestJournal08" LuaLButtonDBLCLK="DBLCLKQuestJournal08"/>
+		<UIImage Name="QuestJournalSelect09" X="11" Y="222" Image="" Left="0" Top="0" Right="664" Bottom="16" Detect="1" LuaLButtonUp="SelectQuestJournal09" LuaLButtonDBLCLK="DBLCLKQuestJournal09"/>
+		
+		
+		<UIImage Name="QuestJournalNPCTalk0" X="4" Y="230" Image="Data\faceH20194a.tga" Left="0" Top="0" Right="110" Bottom="170" NotDetected="1" Hide="1" />
+		<UIImage Name="QuestJournalNPCTalk1" X="4" Y="230" Image="Data\faceH20193a.tga" Left="0" Top="0" Right="110" Bottom="170" NotDetected="1" Hide="1" />
+		
+		<ChatPanel Name="QuestJournalDesc" X="155" Y="269" Width="516" Height="112" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" FillColor="7F0000FF" Hide="0" NotDetected = "1">
+			
+		</ChatPanel>
+			
+	</Panel>
+	
+</UI>

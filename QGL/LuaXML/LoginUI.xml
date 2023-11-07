@@ -1,0 +1,63 @@
+<?xml version="1.0" ?>
+<!-- Login UI -->
+<UI>
+	<ID Name="Login" />
+	<Lua Filename="Data\Login.lua" />
+	<Default Enter="OKBtnDown" />
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	<!--
+	<Panel Name="Test" X="0" Y="0" Left="0" Top="0" Right="100" Bottom="100">
+		<UIImage Name="VerBarLim" ZipImage="Data\Pic00000.czip" X="0" Y="0" 
+			Left="0" Top="0" Right="100" Bottom="100" />
+	</Panel>
+	-->
+	<Panel Name="LoginEditPanel" X="247" Y="310" Image="Data\interface0016_begin_A.tga" Left="590" Top="5" Right="796"
+		Bottom="70" DetectImage = "1">
+		<EditBox Name="LoginName" X="77" Y="11" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FF000000" LuaKeyChar="LoginChangeEditBox"
+			NoSpace="1"
+			LIGHTColor="FF000000" Next="Password" Prev="Password" Limit="50" LuaLButtonUp="SelectNameField"/>
+		<EditBox Name="Password" Password="1" X="77" Y="42" Row="1" Column="8" EdgeCode="LIGHT" LuaKeyChar="LoginChangeEditBox"
+			NoSpace="1"
+			FontColor="FF000000" LIGHTColor="FF000000" Next="LoginName" Limit="50" Prev="LoginName" LuaLButtonUp="SelectPasswordField"/>
+	</Panel>
+	<Panel Name="LoginButtonPanel" X="180" Y="422" Left="0" Top="0" Right="298" Bottom="30">
+		<!--<Button Name="ChangePassButton" Image="Data\interface0016_begin_A.tga" X="0" Y="0" LuaLButtonUp=""
+			Tips="更改" TimeOutCount="200" LuaTimeOut="DefaultTips" >
+			<ButtonRect State="0" Left="144" Top="412" Right="228" Bottom="438" />
+			<ButtonRect State="1" Left="229" Top="412" Right="313" Bottom="438" />
+			<ButtonRect State="2" Left="314" Top="412" Right="398" Bottom="438" />
+		</Button>-->
+		<Button Name="OKButton" Image="Data\interface0016_begin_A.tga" X="115" Y="0" LuaLButtonUp="OKBtnDown"
+			Tips="决定" TimeOutCount="200" LuaTimeOut="DefaultTips" >
+			<ButtonRect State="0" Left="144" Top="440" Right="226" Bottom="466" />
+			<ButtonRect State="1" Left="229" Top="440" Right="312" Bottom="466" />
+			<ButtonRect State="2" Left="314" Top="440" Right="400" Bottom="466" />
+		</Button>
+		<Button Name="CancelButton" Image="Data\interface0016_begin_A.tga" X="207" Y="0" LuaLButtonUp="CancelBtnDown"
+			Tips="取消" TimeOutCount="200" LuaTimeOut="DefaultTips" >
+			<ButtonRect State="0" Left="144" Top="468" Right="226" Bottom="492" />
+			<ButtonRect State="1" Left="229" Top="468" Right="312" Bottom="492" />
+			<ButtonRect State="2" Left="314" Top="468" Right="400" Bottom="492" />
+		</Button>
+	</Panel>
+	<Panel Name="LoginCheckBoxPanel" X="465" Y="309" Left="0" Top="0" Right="40" Bottom="94">
+		<CheckBox Name="SaveLogin" X="0" Y="5" CheckX="0" CheckY="1" Image="Data\interface0016_begin_A.tga" State="0"
+			Tips="记住帐号" TimeOutCount="200" LuaTimeOut="DefaultTips" >
+			<CheckBoxRect Index="0" Left="619" Top="101" Right="643" Bottom="123" />
+			<CheckBoxRect Index="1" Left="619" Top="101" Right="643" Bottom="123" />
+			<CheckBoxRect Index="2" Left="590" Top="101" Right="614" Bottom="123" />
+		</CheckBox>
+		<CheckBox Name="KeyboardEnable" X="0" Y="38" CheckX="0" CheckY="0" Image="Data\interface0016_begin_A.tga" State="0" LuaLButtonUp="ShowKeyboard"
+			Tips="小键盘" TimeOutCount="200" LuaTimeOut="DefaultTips" >
+			<CheckBoxRect Index="0" Left="622" Top="138" Right="648" Bottom="154" />
+			<CheckBoxRect Index="1" Left="592" Top="138" Right="618" Bottom="154" />
+			<CheckBoxRect Index="2" Left="653" Top="138" Right="679" Bottom="154" />
+		</CheckBox>
+	</Panel>
+	<Panel Name="TipsPanel" X="100" Y="100" BackColor="FF000000" BoxColor="FFFFFFFF" Left="0"
+		Top="4" Right="274" Bottom="30" Hide="1" NotRemove="1">
+		<ChatPanel Name="TipsChat" X="4" Y="5" Width="270" Height="20" ContinueRun="1" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" FillColor="7F0000FF"></ChatPanel>
+	</Panel>
+	<Default Item="LoginName" />
+</UI>

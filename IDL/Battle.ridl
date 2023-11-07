@@ -1,0 +1,49 @@
+//-- Config
+config
+{
+	SubPath="Logic/";
+	ClassID=17000;
+	StartID=17000;
+	EndID  =17999;
+}
+
+//-- include
+
+//-- object class
+class Battle : NetObject
+{
+	//-- object attributes
+
+	battleType
+	{
+		UInt8		battleType;		// battle type (NPC, PK, FORCE_PK, MATCH)
+	};
+	//-- method called by client
+public:
+	EndTurn();
+	NextTalk();
+	ChooseResult(UInt8 ans);
+	SendBattleMessage(RPCNetID charNetID, String Msg);
+	
+	//-- callback
+	CB_Error(UInt32 errCode, String errMsg);
+	CB_PlayTurn(UInt8 turnNum, ByteArray array, UInt32 totalSize);
+	CB_PlayTurnMore(ByteArray array, UInt32 totalSize);
+	CB_NextTurn(UInt8 turnNum, UInt32 turnTime, UInt16 autoCount, Boolean bInput, Boolean bPartnerInput);
+	CB_EndBattle(UInt8 endState);
+	CB_AddActors(NetGroup* grp, UInt8 Team);
+	CB_AddPartners(NetGroup* grp, UInt8 Team);
+	CB_ControlCharacter(UInt8 charIdx);
+	CB_ControlPartner(UInt8 charIdx, UInt8 mobIdx);
+	CB_Reward(Boolean levelUp, UInt32 exp, UInt32Vector gotItems, UInt32Vector discardItems, UInt32 partnerExp, Boolean partnerLvlUp, UInt32 boundsExp, UInt32 boundsPartnerExp);
+	CB_Penalty(UInt32 exp, UInt32 money, UInt32 honor);
+	CB_NeedHelp(Boolean bNeed);
+
+	CB_WaitTalk(UInt8 turnNum, UInt32 turnTime);
+	CB_Choose(UInt8 askerType, UInt32 askerId, Boolean bLeft, UInt8 total, StringVector msgList);
+	CB_Say(String msg, int imageType, Boolean bLeft, UInt32 npc_id);
+	CB_CancelTalk();
+	CB_DisableCmd(UInt32 blockCmd);
+	CB_HideCmd(UInt8 index, Boolean hide);
+	CB_MartialResult(UInt8 result, UInt32 money, UInt8 point);
+}

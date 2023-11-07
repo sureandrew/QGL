@@ -1,0 +1,33 @@
+//-- Config
+config
+{
+	SubPath="Logic/";
+	ClassID=43000;
+	StartID=43000;
+	EndID  =43999;
+}
+
+
+//-- object class
+class RankCharacter
+{
+	//-- object attributes
+	id { 		UInt32 acct_id;
+				UInt32 char_id; 		};
+
+	info { 		String nickName;
+				UInt8 sex;
+				UInt8 cclass;
+				UInt8 sexClass;
+				UInt8 faction; 			};
+				
+	level {		UInt16 level;			};
+	money { 	UInt32 money; 			};
+	PKInfo	{	UInt16	PK_Value;
+				UInt32 wantedReward;	};
+	honor {		UInt32 honor;			};
+	bankMoney { 	UInt32 bankMoney; 			};
+	
+	PvPScoreSingle{		UInt32 PvPScoreSingle;	};
+	
+}

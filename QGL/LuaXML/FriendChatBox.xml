@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<UI>
+	<ID Name="FriendChatBox" />
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	<Panel Expand="1" Name="FriendChatBoxPanel" Image="Data\interface0003_popup.tga" X="300"
+		Y="200" Left="364" Top="7" Right="611" Bottom="23" 
+		LineRectLeft="364" LineRectTop="24"	LineRectRight="611" LineRectBottom="40" LineCount="2" 
+		BottomRectLeft="364" BottomRectTop="41"	BottomRectRight="611" BottomRectBottom="59" Hide="1"
+		LuaKeyChar="CloseFriendBox">
+		<ChatPanel Name="FriendChatChat" X="15" Y="15" Width="220" Height="500" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" FillColor="7F0000FF"></ChatPanel>
+		<Button Name="FriendChatYes" Image="Data\interface0003_popup.tga" X="30" Y="40" LuaLButtonUp="CloseFriendBox">
+			<ButtonRect State="0" Left="4" Top="65" Right="83" Bottom="86" />
+			<ButtonRect State="1" Left="4" Top="88" Right="83" Bottom="109" />
+			<ButtonRect State="2" Left="4" Top="111" Right="83" Bottom="132" />
+		</Button>
+		<Button Name="FriendChatConfirm" Image="Data\interface0003_popup.tga" X="97" Y="40" LuaLButtonUp="CloseFriendBox">
+			<ButtonRect State="0" Left="4" Top="65" Right="83" Bottom="86" />
+			<ButtonRect State="1" Left="4" Top="88" Right="83" Bottom="109" />
+			<ButtonRect State="2" Left="4" Top="111" Right="83" Bottom="132" />
+		</Button>
+		<Button Name="FriendChatNo" Image="Data\interface0003_popup.tga" X="140" Y="40" LuaLButtonUp="CloseFriendBox">
+			<ButtonRect State="0" Left="89" Top="65" Right="168" Bottom="86" />
+			<ButtonRect State="1" Left="89" Top="88" Right="168" Bottom="109" />
+			<ButtonRect State="2" Left="89" Top="111" Right="168" Bottom="132" />
+		</Button>
+		<Button Name="FriendChatCancel" Image="Data\interface0003_popup.tga" X="97" Y="40" LuaLButtonUp="CloseFriendBox">
+			<ButtonRect State="0" Left="89" Top="65" Right="168" Bottom="86" />
+			<ButtonRect State="1" Left="89" Top="88" Right="168" Bottom="109" />
+			<ButtonRect State="2" Left="89" Top="111" Right="168" Bottom="132" />
+		</Button>
+	</Panel>
+</UI>

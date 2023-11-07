@@ -1,0 +1,28 @@
+//-- Config
+config
+{
+	SubPath="Data/";
+	ClassID=10180;
+	StartID=10180;
+	EndID  =10189;
+	TwoDirect=1;
+}
+
+//-- include
+
+//-- object class
+class HawkHistoryData : NetObject
+{
+	historyId { 	UInt32 historyId; 	};
+
+	historyInfo {	UInt32 char_id;		
+			String itemName;
+			UInt8 itemType;
+			UInt8 stack;
+			UInt32 totalPrice;
+			UInt32 tax;		};
+
+	historyDate {	UInt32 historyDate;	};
+	//--- RPC method
+
+}

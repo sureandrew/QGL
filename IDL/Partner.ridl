@@ -1,0 +1,81 @@
+//-- Config
+config
+{
+	SubPath="Logic/";
+	ClassID=28000;
+	StartID=28000;
+	EndID  =28999;
+	ModifyMask=1;
+}
+
+//-- include
+
+//-- object class
+class Partner
+{
+	//-- object attributes
+	id { 		UInt32 partner_id;
+				UInt32 mob_id;			};
+	owner { 	UInt32 owner_id; 		};
+	info {		String raname;			};
+	level {		UInt16 level;			};
+	nextLvExp {	UInt32 nextLvExp;		};
+	exp {		UInt32 exp; 			};
+	attrib1 {	UInt16 STA;
+				UInt16 SPR;
+				UInt16 STR;
+				UInt16 CON;
+				UInt16 AGI; 			};
+	attrib2 { 	UInt16 ATK;
+				UInt16 DEF;
+				UInt16 HIT;
+				UInt16 EVA;
+				UInt16 POW;
+				UInt16 SPD; 			};
+	attrPoint { 	UInt16 attrPoint; 		};
+
+	HP {		UInt32 HP;
+				UInt32 maxHP;			};
+	SP {		UInt32 SP;
+				UInt32 maxSP;			};
+	native {	UInt16 HP_native;
+				UInt16 SP_native;
+				UInt16 ATK_native;
+				UInt16 DEF_native;
+				UInt16 SPD_native;
+				UInt16 POW_native;
+				UInt16 HIT_native;
+				UInt16 EVA_native;		};
+	
+	grow {		float  grow;			};
+	favor	{	float  favor;			};
+	health { 	UInt16 health; 			};
+	goodness {	Int32  goodness;		};
+	state { 	UInt8 state; 			};
+	buff { 		String buff; 			};
+	
+	soulboundState { UInt8 soulboundState;	};
+	ExpireDate{	UInt32 expireDate; 		};
+	Element	{	UInt8  element; 		};
+	OutLookColor { 	UInt16 outLookColor; };
+	buffCache {	String buffCache; 		};
+	inWareHouse{	UInt8 inWareHouse;	};
+	assetLock{      Boolean lock;            };	
+
+	Cultivation{	UInt16 cultivation;	};
+	Practice{	UInt16 practice;	};
+
+	growLevel{	UInt8 growLevel;	};
+	//-- RPC method
+public:
+	RaiseAttrib(UInt16 sta, UInt16 spr, UInt16 str, UInt16 con, UInt16 agi);
+	ChangePartnerName(String newName);
+	ChangePartnerState(UInt8 state);
+
+	CB_RaiseAttrib();
+	CB_ChangePartnerName(bool success);
+	CB_ChangePartnerState();
+	CB_UpdateSuccess();
+	CB_LearnSkillMessage(UInt16 skillID);
+	CB_FalseJoinBattle(UInt8 MsgType);
+}

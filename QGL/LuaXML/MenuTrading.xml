@@ -1,0 +1,267 @@
+<?xml version="1.0" ?>
+<!-- Our to do list data -->
+<UI>
+	<ID Name="Trading" />
+	<!--<Font Name="Data\mingliu.ttc" Width="12" Height="12" />-->
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	<Panel Name="TradingPanel" Image="Data\inerface0004_main_A.tga" X="456" Y="73" 
+			Left="2" Top="3" Right="311" Bottom="461" LuaRButtonUp="CloseTradingPanel" LuaKeyChar="CloseTradingPanel"
+			DetectImage = "1" LuaTimeOut="TradingDetailPopupTimeOut" TimeOutCount="500"
+			Drag="1" DragLeft="0" DragTop="0" DragRight="309" DragBottom="458" >
+			
+		<Button Name="TradingPanelClose" Image="Data\inerface0004_main_A.tga" X="275" Y="8" LuaLButtonUp="CloseTradingPanel">
+			<ButtonRect State="0" Left="311" Top="4" Right="335" Bottom="22" />
+			<ButtonRect State="1" Left="336" Top="4" Right="360" Bottom="22" />
+			<ButtonRect State="2" Left="361" Top="4" Right="385" Bottom="22" />
+		</Button>
+		<StaticText Name="TradingTargetName" X="31" Y="56" Width="135" Height="20" Row="1" Column="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="TradingTargetID" X="189" Y="56" Width="92" Height="20" Row="1" Column="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		
+		<AniIcon Name="TradingTargetItem000Icon" X="29" Y="99" Image="" AutoDelete="0" Detect = "1" Hide="1" 
+			LuaMouseIn = "TradingItemMouseIn" LuaMouseOut = "TradingItemMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="TradingTargetItem000Stack" X="32" Y="124" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="TradingTargetItem000Lvl" X="32" Y="101" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<AniIcon Name="TradingTargetItem001Icon" X="72" Y="99" Image=""  AutoDelete="0" Detect = "1" Hide="1" 
+			LuaMouseIn = "TradingItemMouseIn" LuaMouseOut = "TradingItemMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="TradingTargetItem001Stack" X="75" Y="124" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="TradingTargetItem001Lvl" X="75" Y="101" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<AniIcon Name="TradingTargetItem002Icon" X="115" Y="99" Image=""  AutoDelete="0" Detect = "1" Hide="1"
+			LuaMouseIn = "TradingItemMouseIn" LuaMouseOut = "TradingItemMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="TradingTargetItem002Stack" X="118" Y="124" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="TradingTargetItem002Lvl" X="118" Y="101" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<AniIcon Name="TradingTargetItem003Icon" X="158" Y="99" Image=""  AutoDelete="0" Detect = "1" Hide="1"
+			LuaMouseIn = "TradingItemMouseIn" LuaMouseOut = "TradingItemMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="TradingTargetItem003Stack" X="161" Y="124" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="TradingTargetItem003Lvl" X="161" Y="101" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<AniIcon Name="TradingTargetItem004Icon" X="201" Y="99" Image=""  AutoDelete="0" Detect = "1" Hide="1"
+			LuaMouseIn = "TradingItemMouseIn" LuaMouseOut = "TradingItemMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="TradingTargetItem004Stack" X="204" Y="124" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="TradingTargetItem004Lvl" X="204" Y="101" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<AniIcon Name="TradingTargetItem005Icon" X="244" Y="99" Image=""  AutoDelete="0" Detect = "1" Hide="1"
+			LuaMouseIn = "TradingItemMouseIn" LuaMouseOut = "TradingItemMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="TradingTargetItem005Stack" X="247" Y="124" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="TradingTargetItem005Lvl" X="247" Y="101" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<AniIcon Name="TradingTargetPartner000Icon" X="29" Y="168" Image=""  AutoDelete="0" Detect = "1" Hide="1"
+			LuaMouseIn = "TradingPartnerMouseIn" LuaMouseOut = "TradingItemMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="TradingTargetPartner000Lvl" X="29" Y="166" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<AniIcon Name="TradingTargetPartner001Icon" X="72" Y="168" Image=""  AutoDelete="0" Detect = "1" Hide="1"
+			LuaMouseIn = "TradingPartnerMouseIn" LuaMouseOut = "TradingItemMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="TradingTargetPartner001Lvl" X="72" Y="166" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<AniIcon Name="TradingTargetPartner002Icon" X="115" Y="168" Image=""  AutoDelete="0" Detect = "1" Hide="1"
+			LuaMouseIn = "TradingPartnerMouseIn" LuaMouseOut = "TradingItemMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="TradingTargetPartner002Lvl" X="115" Y="166" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<AniIcon Name="TradingTargetPet000Icon" X="163" Y="168" Image=""  AutoDelete="0" Detect = "1" Hide="1"
+			LuaMouseIn = "TradingPetMouseIn" LuaMouseOut = "TradingItemMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="TradingTargetPet000Lvl" X="163" Y="166" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<AniIcon Name="TradingTargetPet001Icon" X="206" Y="168" Image=""  AutoDelete="0" Detect = "1" Hide="1"
+			LuaMouseIn = "TradingPetMouseIn" LuaMouseOut = "TradingItemMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="TradingTargetPet001Lvl" X="206" Y="166" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<AniIcon Name="TradingTargetPet002Icon" X="249" Y="168" Image=""  AutoDelete="0" Detect = "1" Hide="1"
+			LuaMouseIn = "TradingPetMouseIn" LuaMouseOut = "TradingItemMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="TradingTargetPet002Lvl" X="249" Y="166" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<StaticText Name="TradingTargetMoney" X="99" Y="216" Row="1" Column="10" Width="80" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		</StaticText>
+		
+		<UIImage Name="TargetTradingLockedImage" X="6" Y="26" Image="Data\inerface0004_main_A.tga" Left="703" Top="7" Right="1000" Bottom="218" Hide="1" />
+		
+		<AniIcon Name="TradingItem000Icon" X="29" Y="270" Image="" AutoDelete="0" LuaLButtonUp="TradingItemMove000" Detect = "1" Hide="1" 
+			LuaMouseIn = "TradingItemMouseIn" LuaMouseOut = "TradingItemMouseOut" InsertToEventList = "1" />
+		<StaticText Name="TradingItem000Stack" X="32" Y="295" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="TradingItem000Lvl" X="32" Y="272" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<AniIcon Name="TradingItem001Icon" X="72" Y="270" Image=""  AutoDelete="0" LuaMouseIn = "TradingItemMouseIn" LuaMouseOut = "TradingItemMouseOut" InsertToEventList = "1"
+			LuaLButtonUp="TradingItemMove001" Detect = "1" Hide="1" />
+		<StaticText Name="TradingItem001Stack" X="75" Y="295" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="TradingItem001Lvl" X="75" Y="272" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<AniIcon Name="TradingItem002Icon" X="115" Y="270" Image=""  AutoDelete="0" LuaMouseIn = "TradingItemMouseIn" LuaMouseOut = "TradingItemMouseOut" InsertToEventList = "1"
+			LuaLButtonUp="TradingItemMove002" Detect = "1" Hide="1"/>
+		<StaticText Name="TradingItem002Stack" X="118" Y="295" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="TradingItem002Lvl" X="118" Y="272" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<AniIcon Name="TradingItem003Icon" X="158" Y="270" Image=""  AutoDelete="0" LuaMouseIn = "TradingItemMouseIn" LuaMouseOut = "TradingItemMouseOut" InsertToEventList = "1"
+			LuaLButtonUp="TradingItemMove003" Detect = "1" Hide="1"/>
+		<StaticText Name="TradingItem003Stack" X="161" Y="295" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="TradingItem003Lvl" X="161" Y="272" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<AniIcon Name="TradingItem004Icon" X="201" Y="270" Image=""  AutoDelete="0" LuaMouseIn = "TradingItemMouseIn" LuaMouseOut = "TradingItemMouseOut" InsertToEventList = "1"
+			LuaLButtonUp="TradingItemMove004" Detect = "1" Hide="1"/>
+		<StaticText Name="TradingItem004Stack" X="204" Y="295" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="TradingItem004Lvl" X="204" Y="272" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<AniIcon Name="TradingItem005Icon" X="244" Y="270" Image=""  AutoDelete="0" LuaMouseIn = "TradingItemMouseIn" LuaMouseOut = "TradingItemMouseOut" InsertToEventList = "1"
+			LuaLButtonUp="TradingItemMove005" Detect = "1" Hide="1"/>
+		<StaticText Name="TradingItem005Stack" X="247" Y="295" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="TradingItem005Lvl" X="247" Y="272" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<AniIcon Name="TradingPartner000Icon" X="29" Y="339" Image=""  AutoDelete="0" LuaMouseIn = "TradingPartnerMouseIn" LuaMouseOut = "TradingItemMouseOut" InsertToEventList = "1"
+			LuaLButtonUp="TradingPartnerMove000" Detect = "1" Hide="1"/>
+		<StaticText Name="TradingPartner000Lvl" X="29" Y="341" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<AniIcon Name="TradingPartner001Icon" X="72" Y="339" Image=""  AutoDelete="0" LuaMouseIn = "TradingPartnerMouseIn" LuaMouseOut = "TradingItemMouseOut" InsertToEventList = "1"
+			LuaLButtonUp="TradingPartnerMove001" Detect = "1" Hide="1"/>
+		<StaticText Name="TradingPartner001Lvl" X="72" Y="341" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<AniIcon Name="TradingPartner002Icon" X="115" Y="339" Image=""  AutoDelete="0" LuaMouseIn = "TradingPartnerMouseIn" LuaMouseOut = "TradingItemMouseOut" InsertToEventList = "1"
+			LuaLButtonUp="TradingPartnerMove002" Detect = "1" Hide="1"/>
+		<StaticText Name="TradingPartner002Lvl" X="115" Y="341" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<AniIcon Name="TradingPet000Icon" X="163" Y="339" Image=""  AutoDelete="0" LuaMouseIn = "TradingPetMouseIn" LuaMouseOut = "TradingItemMouseOut" InsertToEventList = "1"
+			LuaLButtonUp="TradingPetMove000" Detect = "1" Hide="1"/>
+		<StaticText Name="TradingPet000Lvl" X="163" Y="341" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<AniIcon Name="TradingPet001Icon" X="206" Y="339" Image=""  AutoDelete="0" LuaMouseIn = "TradingPetMouseIn" LuaMouseOut = "TradingItemMouseOut" InsertToEventList = "1"
+			LuaLButtonUp="TradingPetMove001" Detect = "1" Hide="1"/>
+		<StaticText Name="TradingPet001Lvl" X="206" Y="341" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<AniIcon Name="TradingPet002Icon" X="249" Y="339" Image=""  AutoDelete="0" LuaMouseIn = "TradingPetMouseIn" LuaMouseOut = "TradingItemMouseOut" InsertToEventList = "1"
+			LuaLButtonUp="TradingPetMove002" Detect = "1" Hide="1"/>
+		<StaticText Name="TradingPet002Lvl" X="249" Y="341" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<EditBox Name="TradingMoney" X="99" Y="387" Row="1" Column="9" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" LuaLButtonUp="SetKeyInTradingMoney" Limit="9" NumOnly="1" LuaKeyUp="SetmoneyColour"
+			LuaTimeOut="TradingShowMoney" LuaKeyChar="TradingMoneyStartTimer" TimeOutCount="500">
+		</EditBox>
+		
+		<CheckBox Name = "TradingLock" Image="Data\inerface0004_main_A.tga" X="267" Y="383"  LuaLButtonDown="SetTradingLock">
+			<CheckBoxRect Index="0" Left="314" Top="25" Right="337" Bottom="45" />
+			<CheckBoxRect Index="1" Left="314" Top="25" Right="337" Bottom="45" />
+			<CheckBoxRect Index="2" Left="314" Top="47" Right="337" Bottom="67" />
+		</CheckBox>
+		
+		<UIImage Name="TradingLockedImage" X="6" Y="246" Image="Data\inerface0004_main_A.tga" Left="703" Top="225" Right="1000" Bottom="398" Hide="1" NotDetected="1" />
+		
+		
+		<Button Name="TradingYes" Image="Data\inerface0004_main_A.tga" X="49" Y="421" LuaLButtonUp="ConfirmTrading">
+			<ButtonRect State="0" Left="4" Top="465" Right="83" Bottom="486" />
+			<ButtonRect State="1" Left="86" Top="465" Right="165" Bottom="486" />
+			<ButtonRect State="2" Left="168" Top="465" Right="247" Bottom="486" />
+			<ButtonRect State="3" Left="168" Top="465" Right="247" Bottom="486" />
+		</Button>
+		
+		
+		<Button Name="TradingNo" Image="Data\inerface0004_main_A.tga" X="177" Y="421" LuaLButtonUp="CloseTradingPanel">
+			<ButtonRect State="0" Left="4" Top="488" Right="83" Bottom="509" />
+			<ButtonRect State="1" Left="86" Top="488" Right="165" Bottom="509" />
+			<ButtonRect State="2" Left="168" Top="488" Right="247" Bottom="509" />
+		</Button>
+		
+		<UIImage Name="TradingTargetUnLock" Image="Data\inerface0004_main_A.tga" X="267" Y="211" 
+			Left="314" Top="25" Right="337" Bottom="45" />
+		<UIImage Name="TradingTargetLock" Image="Data\inerface0004_main_A.tga" X="267" Y="211" 
+			Left="314" Top="47" Right="337" Bottom="67" Hide="1" />
+				
+	</Panel>
+	
+	<!-- TradingItemCount -->
+	<Panel Name="TradingItemCountPanel" X="253" Y="267" Image="Data\inerface0004_main_A.tga" Left="314" Top="293" Right="542" Bottom="391" 
+		Drag="1" DragLeft="0" DragTop="0" DragRight="228" DragBottom="98"  Hide="1"
+		LuaRButtonUp="CloseTradingCount"  LuaKeyChar="CloseTradingCount"
+		>
+		
+		<UIImage X="12" Y="37" Image="Data\inerface0004_main_A.tga" Left="544" Top="394" Right="647" Bottom="412"/>
+		
+		<EditBox Name="NumberOfTradingItem" X="22" Y="40" Row="1" Column="3" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" Limit="5" NumOnly="1">
+			1 
+		</EditBox>
+			
+		
+		<StaticText Name="TradingText" X="12" Y="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFEDD97A" ShadowColor="FF000000">
+			请输入给予数量
+		</StaticText>
+		
+		<Button Name="ConfirmTradingYes" Image="Data\inerface0004_main_A.tga" X="86" Y="60" LuaLButtonUp="ConfirmTradingNum">
+			<ButtonRect State="0" Left="4" Top="511" Right="68" Bottom="528" />
+			<ButtonRect State="1" Left="70" Top="511" Right="134" Bottom="528" />
+			<ButtonRect State="2" Left="136" Top="511" Right="200" Bottom="528" />
+		</Button>
+		
+		
+		<Button Name="ConfirmTradingNo" Image="Data\inerface0004_main_A.tga" X="153" Y="60" LuaLButtonUp="CloseTradingCount">
+			<ButtonRect State="0" Left="4" Top="530" Right="68" Bottom="547" />
+			<ButtonRect State="1" Left="70" Top="530" Right="134" Bottom="547" />
+			<ButtonRect State="2" Left="136" Top="530" Right="200" Bottom="547" />
+		</Button>
+		
+		<Button Name="TradingMaxStack" Image="Data\inerface0004_main_A.tga" X="155" Y="38" LuaLButtonUp="TradingMaxStack">
+			<ButtonRect State="0" Left="384" Top="395" Right="414" Bottom="411" />
+			<ButtonRect State="1" Left="384" Top="412" Right="414" Bottom="428" />
+			<ButtonRect State="2" Left="384" Top="429" Right="414" Bottom="445" />
+		</Button>
+		
+		<Button Name="TradingSetZero" Image="Data\inerface0004_main_A.tga" X="186" Y="38" LuaLButtonUp="TradingSetZero">
+			<ButtonRect State="0" Left="352" Top="395" Right="382" Bottom="411" />
+			<ButtonRect State="1" Left="352" Top="412" Right="382" Bottom="428" />
+			<ButtonRect State="2" Left="352" Top="429" Right="382" Bottom="445" />
+		</Button>
+		
+		<Button Name="AddOneTradingStack" Image="Data\inerface0004_main_A.tga" X="119" Y="38" LuaLButtonUp="TradingAddOne">
+			<ButtonRect State="0" Left="314" Top="395" Right="331" Bottom="411" />
+			<ButtonRect State="1" Left="314" Top="412" Right="331" Bottom="428" />
+			<ButtonRect State="2" Left="314" Top="429" Right="331" Bottom="445" />
+		</Button>
+		
+		<Button Name="DiffOneTradingStack" Image="Data\inerface0004_main_A.tga" X="137" Y="38" LuaLButtonUp="TradingDiffOne">
+			<ButtonRect State="0" Left="333" Top="395" Right="350" Bottom="411" />
+			<ButtonRect State="1" Left="333" Top="412" Right="350" Bottom="428" />
+			<ButtonRect State="2" Left="333" Top="429" Right="350" Bottom="445" />
+		</Button>
+	</Panel>
+	
+	<!-- Moving Panel-->
+	<Panel Name="TradingMovingPanel" Image="" X="0" Y="50" Left="0" Top="0" Right="40" Bottom="40"
+		 Hide="1" Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="TradingEndDrag" LuaRButtonDown="ResetTradingDrag" >
+		<AniIcon Name="TradingMovingIcon" X="0" Y="0" Image=""  AutoDelete="0" Detect = "1" />
+	</Panel>
+</UI>

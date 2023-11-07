@@ -1,0 +1,146 @@
+<?xml version="1.0" ?>
+
+
+<UI>
+	<ID Name="WeaponsRank" />
+	<KeyIn Item="WeaponsRankSearchTextBox" />
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	<Panel Name="WeaponsRankPanel" Image="Data\interface0048_WeaponsRank.tga" X="0" Y="0" 
+			Left="0" Top="0" Right="571" Bottom="355" LuaRButtonUp="CloseWeaponsRankPanel" LuaKeyChar="CloseWeaponsRankPanel" DetectImage = "1"
+			Drag="1" DragLeft="0" DragTop="0" DragRight="566" DragBottom="350" >
+
+		<Button Name="WeaponsRankCheck" Image="Data\interface0048_WeaponsRank.tga" X="540" Y="20" LuaLButtonDown="CloseWeaponsRankPanel">
+			<ButtonRect State="0" Left="16" Top="371" Right="40" Bottom="388" />
+			<ButtonRect State="1" Left="40" Top="371" Right="66" Bottom="388" />
+			<ButtonRect State="2" Left="66" Top="371" Right="90" Bottom="388" />
+			
+		</Button>
+
+		<ScrollBarV Name="WeaponsRankScroll" X="548" Y="82" Width ="16" Height="228" Limit="0" BarColor="0" LuaLButtonDown="WeaponsRankScroll">
+			<PrevButton Name="WeaponsRankUp" Image="Data\interface0048_WeaponsRank.tga" X="0" Y="0" LuaLButtonUp="WeaponsRankScrollUp">
+				<ButtonRect State="0" Left="103" Top="374" Right="117" Bottom="388" />
+				<ButtonRect State="1" Left="119" Top="374" Right="133" Bottom="388" />
+				<ButtonRect State="2" Left="135" Top="374" Right="149" Bottom="388" />
+			</PrevButton>
+			<NextButton Name="WeaponsRankDown" Image="Data\interface0048_WeaponsRank.tga" X="0" Y="213" LuaLButtonUp="WeaponsRankScrollDown">
+				<ButtonRect State="0" Left="103" Top="391" Right="117" Bottom="404" />
+				<ButtonRect State="1" Left="119" Top="391" Right="133" Bottom="404" />
+				<ButtonRect State="2" Left="135" Top="391" Right="149" Bottom="404" />
+			</NextButton>
+			<MoveButton Image="Data\interface0048_WeaponsRank.tga" X="0" Y="16"  LuaMouseMove="WeaponsRankScroll">
+				<ButtonRect State="0" Left="152" Top="374" Right="166" Bottom="404" />
+				<ButtonRect State="1" Left="152" Top="374" Right="166" Bottom="404" />
+				<ButtonRect State="2" Left="152" Top="374" Right="166" Bottom="404" />
+			</MoveButton>
+		</ScrollBarV>
+
+		<UIImage Name="WeaponsRankSelected" X="26" Y="285" Image="Data\interface0048_WeaponsRank.tga" Left="16" Top="414" Right="538" Bottom="437" NotDetected="1" Hide="1" />
+
+		<StaticText Name="WeaponsRank00" X="27" Y="86" Width="48" Height="22"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="WeaponsName00" X="80" Y="86" Width="145" Height="22"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="WeaponsOwner00" X="210" Y="86" Width="95" Height="22"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="WeaponsDepict00" X="310" Y="86" Width="235" Height="22"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+
+		<StaticText Name="WeaponsRank01" X="27" Y="108" Width="48" Height="23"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="WeaponsName01" X="80" Y="108" Width="145" Height="23"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="WeaponsOwner01" X="210" Y="108" Width="95" Height="23"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="WeaponsDepict01" X="310" Y="108" Width="235" Height="23"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+
+		<StaticText Name="WeaponsRank02" X="27" Y="131" Width="48" Height="22"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="WeaponsName02" X="80" Y="131" Width="145" Height="22"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="WeaponsOwner02" X="210" Y="131" Width="95" Height="22"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="WeaponsDepict02" X="310" Y="131" Width="235" Height="22"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+
+		<StaticText Name="WeaponsRank03" X="27" Y="153" Width="48" Height="23"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="WeaponsName03" X="80" Y="153" Width="145" Height="23"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="WeaponsOwner03" X="210" Y="153" Width="95" Height="23"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="WeaponsDepict03" X="310" Y="153" Width="235" Height="23"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+
+		<StaticText Name="WeaponsRank04" X="27" Y="176" Width="48" Height="22"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="WeaponsName04" X="80" Y="176" Width="145" Height="22"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="WeaponsOwner04" X="210" Y="176" Width="95" Height="22"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="WeaponsDepict04" X="310" Y="176" Width="235" Height="22"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+
+		<StaticText Name="WeaponsRank05" X="27" Y="198" Width="48" Height="23"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="WeaponsName05" X="80" Y="198" Width="145" Height="23"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="WeaponsOwner05" X="210" Y="198" Width="95" Height="23"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="WeaponsDepict05" X="310" Y="198" Width="235" Height="23"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+
+		<StaticText Name="WeaponsRank06" X="27" Y="221" Width="48" Height="22"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="WeaponsName06" X="80" Y="221" Width="145" Height="22"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="WeaponsOwner06" X="210" Y="221" Width="95" Height="22"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="WeaponsDepict06" X="310" Y="221" Width="235" Height="22"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+
+		<StaticText Name="WeaponsRank07" X="27" Y="243" Width="48" Height="23"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="WeaponsName07" X="80" Y="243" Width="145" Height="23"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="WeaponsOwner07" X="210" Y="243" Width="95" Height="23"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="WeaponsDepict07" X="310" Y="243" Width="235" Height="23"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+
+		<StaticText Name="WeaponsRank08" X="27" Y="266" Width="48" Height="22"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="WeaponsName08" X="80" Y="266" Width="145" Height="22"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="WeaponsOwner08" X="210" Y="266" Width="95" Height="22"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="WeaponsDepict08" X="310" Y="266" Width="235" Height="22"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+
+		<StaticText Name="WeaponsRank09" X="27" Y="288" Width="48" Height="22"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="WeaponsName09" X="80" Y="288" Width="145" Height="22"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="WeaponsOwner09" X="210" Y="288" Width="95" Height="22"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="WeaponsDepict09" X="310" Y="288" Width="235" Height="22"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+
+		<UIImage Name="WeaponsRankSelect00" X="26" Y="83" Image="" Left="0" Top="0" Right="522" Bottom="23" Detect="1" LuaLButtonUp="SelectWeaponsRank00" LuaLButtonDBLCLK="DBLCLKWeaponsRank00"/>
+		<UIImage Name="WeaponsRankSelect01" X="26" Y="105" Image="" Left="0" Top="0" Right="522" Bottom="23" Detect="1" LuaLButtonUp="SelectWeaponsRank01" LuaLButtonDBLCLK="DBLCLKWeaponsRank01"/>
+		<UIImage Name="WeaponsRankSelect02" X="26" Y="128" Image="" Left="0" Top="0" Right="522" Bottom="23" Detect="1" LuaLButtonUp="SelectWeaponsRank02" LuaLButtonDBLCLK="DBLCLKWeaponsRank02"/>
+		<UIImage Name="WeaponsRankSelect03" X="26" Y="150" Image="" Left="0" Top="0" Right="522" Bottom="23" Detect="1" LuaLButtonUp="SelectWeaponsRank03" LuaLButtonDBLCLK="DBLCLKWeaponsRank03"/>
+		<UIImage Name="WeaponsRankSelect04" X="26" Y="173" Image="" Left="0" Top="0" Right="522" Bottom="23" Detect="1" LuaLButtonUp="SelectWeaponsRank04" LuaLButtonDBLCLK="DBLCLKWeaponsRank04"/>
+		<UIImage Name="WeaponsRankSelect05" X="26" Y="195" Image="" Left="0" Top="0" Right="522" Bottom="23" Detect="1" LuaLButtonUp="SelectWeaponsRank05" LuaLButtonDBLCLK="DBLCLKWeaponsRank05"/>
+		<UIImage Name="WeaponsRankSelect06" X="26" Y="218" Image="" Left="0" Top="0" Right="522" Bottom="23" Detect="1" LuaLButtonUp="SelectWeaponsRank06" LuaLButtonDBLCLK="DBLCLKWeaponsRank06"/>
+		<UIImage Name="WeaponsRankSelect07" X="26" Y="240" Image="" Left="0" Top="0" Right="522" Bottom="23" Detect="1" LuaLButtonUp="SelectWeaponsRank07" LuaLButtonDBLCLK="DBLCLKWeaponsRank07"/>
+		<UIImage Name="WeaponsRankSelect08" X="26" Y="263" Image="" Left="0" Top="0" Right="522" Bottom="23" Detect="1" LuaLButtonUp="SelectWeaponsRank08" LuaLButtonDBLCLK="DBLCLKWeaponsRank08"/>
+		<UIImage Name="WeaponsRankSelect09" X="26" Y="285" Image="" Left="0" Top="0" Right="522" Bottom="23" Detect="1" LuaLButtonUp="SelectWeaponsRank09" LuaLButtonDBLCLK="DBLCLKWeaponsRank09"/>
+
+		<EditBox Name="WeaponsRankSearchTextBox" X="101" Y="0" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			LIGHTColor="FF000000" Limit="50" LuaKeyChar="WeaponsRankSearchList" Hide="1" />
+		<EditBox Name="WeaponsRankSearchChiTextBox" X="101" Y="326" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			LIGHTColor="FF000000" Limit="50" LuaKeyChar="WeaponsRankSearchListInChi" Hide="0" LuaLButtonUp="WeaponsRankChangeKeyInToChi" />
+
+	</Panel>
+</UI>

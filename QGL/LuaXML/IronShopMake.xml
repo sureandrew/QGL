@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" ?>
+<UI>
+	<ID Name="IronShopMake" />
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	<Panel Name="IronShopMakePanel" X="253" Y="150" Image="Data\interface0032_thebox_42D.tga" Left="5" Top="1" Right="342" Bottom="422" 
+		Drag="1" DragLeft="0" DragTop="0" DragRight="338" DragBottom="421" DetectImage = "1" 
+		LuaRButtonUp="CloseIronShopMake" LuaKeyChar="CloseIronShopMake">
+		
+		<UIImage Name="IronShopMakeTitle" X="140" Y="5" Image="Data\interface0032_thebox_42D.tga" NotDetected = "1" Left="445" Top="20" Right="500" Bottom="35" Hide="1" />
+		<UIImage Name="IronShopRepairTitle" X="140" Y="5" Image="Data\interface0032_thebox_42D.tga" NotDetected = "1" Left="350" Top="20" Right="406" Bottom="35" Hide="1" />
+						
+		<UIImage Name="IronShopMakeDesc" X="30" Y="52" Image="Data\interface0032_thebox_42D.tga" NotDetected = "1" Left="356" Top="372" Right="630" Bottom="419" Hide="1" />
+		<UIImage Name="IronShopRepairDesc" X="29" Y="53" Image="Data\interface0032_thebox_42D.tga" NotDetected = "1" Left="352" Top="96" Right="631" Bottom="169" Hide="1" />
+		
+		<UIImage Name="IronShopMakeIron" X="41" Y="146" Image="Data\interface0032_thebox_42D.tga" NotDetected = "1" Left="352" Top="275" Right="432" Bottom="290" Hide="1" /> 
+		<UIImage Name="IronShopMakeScroll" X="41" Y="226" Image="Data\interface0032_thebox_42D.tga" NotDetected = "1" Left="352" Top="305" Right="471" Bottom="320" Hide="1" />
+		
+		<UIImage Name="IronShopRepairIron" X="34" Y="172" Image="Data\interface0032_thebox_42D.tga" NotDetected = "1" Left="352" Top="46" Right="519" Bottom="61" Hide="1" />
+		<UIImage Name="IronShopRepairScroll" X="34" Y="244" Image="Data\interface0032_thebox_42D.tga" NotDetected = "1" Left="352" Top="76" Right="472" Bottom="91" Hide="1" />
+		
+		<UIImage Name="IronMakeDragItemBlank00" X="235" Y="129" Image="Data\interface0032_thebox_42D.tga" Left="364" Top="195" Right="411" Bottom="242" Hide="1" />
+		<AniIcon Name="IronMakeDragItem00"  X="237" Y="131" Hide="1" LuaLButtonUp="IronSourceMove00" Detect = "1"/>
+		<UIImage Name="IronMakeDragItemBlank01" X="235" Y="210" Image="Data\interface0032_thebox_42D.tga" Left="364" Top="195" Right="411" Bottom="242" Hide="1" />
+		<AniIcon Name="IronMakeDragItem01"  X="237" Y="212" Hide="1" LuaLButtonUp="IronSourceMove01" Detect = "1"/>
+		
+		<UIImage Name="IronRepairDragItemBlank00" X="250" Y="155" Image="Data\interface0032_thebox_42D.tga" Left="364" Top="195" Right="411" Bottom="242" Hide="1" />
+		<AniIcon Name="IronRepairDragItem00"  X="252" Y="157" Hide="1" LuaLButtonUp="IronSourceMove00" Detect = "1"/>		
+		<UIImage Name="IronRepairDragItemBlank01" X="250" Y="228" Image="Data\interface0032_thebox_42D.tga" Left="364" Top="195" Right="411" Bottom="242" Hide="1" />
+		<AniIcon Name="IronRepairDragItem01"  X="252" Y="230" Hide="1" LuaLButtonUp="IronSourceMove01" Detect = "1"/>
+		
+		<LinerImage Name="IronShopTimeLine" X="17" Y="318" Image="Data\interface0032_thebox_Q.tga" Left="43" Top="429"
+			Right="49" Bottom="447" LineWidth="303" BaseWidth="303" Hide="1" Denumerator="100" Numerator="1" />
+	
+		<Button Name="IronShopButtonMake" Image="Data\interface0032_thebox_42D.tga" X="45" Y="365" LuaLButtonUp="IronShopStartMake" Hide="1">
+			<ButtonRect State="0" Left="4" Top="496" Right="98" Bottom="518" />
+			<ButtonRect State="1" Left="100" Top="496" Right="197" Bottom="518" />
+			<ButtonRect State="2" Left="196" Top="496" Right="290" Bottom="518" />
+			<ButtonRect State="3" Left="292" Top="496" Right="386" Bottom="518" />
+		</Button>	
+		<Button Name="IronShopButtonCancel" Image="Data\interface0032_thebox_42D.tga" X="195" Y="365" LuaLButtonUp="IronShopStartCancel" Hide="0">
+			<ButtonRect State="0" Left="4" Top="469" Right="98" Bottom="491" />
+			<ButtonRect State="1" Left="100" Top="469" Right="197" Bottom="491" />
+			<ButtonRect State="2" Left="196" Top="469" Right="290" Bottom="491" />
+			<ButtonRect State="3" Left="292" Top="469" Right="386" Bottom="491" />
+		</Button>
+		
+		<Button Name="IronShopButtonRepair" Image="Data\interface0032_thebox_42D.tga" X="45" Y="365" LuaLButtonUp="IronShopStartRepair" Hide="1">
+			<ButtonRect State="0" Left="4" Top="443" Right="98" Bottom="466" />
+			<ButtonRect State="1" Left="100" Top="443" Right="197" Bottom="466" />
+			<ButtonRect State="2" Left="196" Top="443" Right="290" Bottom="466" />
+			<ButtonRect State="3" Left="292" Top="443" Right="386" Bottom="466" />
+		</Button>		
+		
+		<Button Name="IronShopMakeClose" Image="Data\interface0032_thebox_Q.tga" X="305" Y="8" LuaLButtonUp="CloseIronShopMake">
+			<ButtonRect State="0" Left="5" Top="403" Right="29" Bottom="421" />
+			<ButtonRect State="1" Left="30" Top="403" Right="54" Bottom="421" />
+			<ButtonRect State="2" Left="55" Top="403" Right="79" Bottom="421" />
+		</Button>
+				
+		<UIImage Name="IronShopBlockImage" X="0" Y="0" Image="" Left="0" Top="0" Right="337" Bottom="350" Hide="1" />
+	</Panel>
+	
+	<!-- Moving Panel-->
+	<Panel Name="IronShopMakeMovingPanel" Image="" X="0" Y="50" Left="0" Top="0" Right="40" Bottom="40"
+		 Hide="1" Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="IronShopMakeEndDrag" LuaRButtonDown="ResetIronShopMakingDrag" >
+		<AniIcon Name="IronShopMakeMovingIcon" X="0" Y="0" Image=""  AutoDelete="0" Detect = "1" />
+	</Panel>
+</UI>

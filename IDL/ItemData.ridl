@@ -1,0 +1,92 @@
+//-- Config
+config
+{
+	SubPath="Data/";
+	ClassID=10030;
+	StartID=10030;
+	EndID  =10039;
+	TwoDirect=1;
+}
+
+//-- include
+
+//-- object class
+class ItemData
+{
+	//-- object attributes
+	id { 		UInt32 item_uid;
+				UInt32 item_id;		};
+	owner_id { 	UInt32 owner_id;	};
+	bagIndex {	UInt8  bagIndex; 	};
+	maker {		String maker; 		};
+	eq_element { 	UInt8 eq_element; 	};
+	endure { 	UInt16 endure; 		};
+	mEndure { 	UInt16 mEndure; 	};
+	grade {		UInt16 grade;		};
+	upgExp {	UInt16 upg_exp;		};
+	remain {	UInt8  remain;		};
+	stack {		UInt8  stack;		};
+	baseAttr {	Int16 base_STA;
+				Int16 base_SPR;
+				Int16 base_STR;
+				Int16 base_CON;
+				Int16 base_AGI;
+				Int16 base_ATK;
+				Int16 base_DEF;
+				Int16 base_HIT;
+				Int16 base_EVA;
+				Int16 base_POW;
+				Int16 base_SPD;
+				Int16 base_maxHP;
+				Int16 base_maxSP;
+				Int16 base_maxVP;	};
+	upgAttr {	Int16 upg_STA;
+				Int16 upg_SPR;
+				Int16 upg_STR;
+				Int16 upg_CON;
+				Int16 upg_AGI;
+				Int16 upg_ATK;
+				Int16 upg_DEF;
+				Int16 upg_HIT;
+				Int16 upg_EVA;
+				Int16 upg_POW;
+				Int16 upg_SPD;
+				Int16 upg_maxHP;
+				Int16 upg_maxSP;
+				Int16 upg_maxVP;	};
+	inlayGem {	UInt8 eq_gem;
+				UInt16 inlay_gem[10]; };
+	inlayAttr {	Int16 inlay_STA;
+				Int16 inlay_SPR;
+				Int16 inlay_STR;
+				Int16 inlay_CON;
+				Int16 inlay_AGI;
+				Int16 inlay_ATK;
+				Int16 inlay_DEF;
+				Int16 inlay_HIT;
+				Int16 inlay_EVA;
+				Int16 inlay_POW;
+				Int16 inlay_SPD;
+				Int16 inlay_maxHP;
+				Int16 inlay_maxSP;
+				Int16 inlay_maxVP;	};
+	addon { 	UInt16 addon; 		};
+	eqColor {	UInt16 eqColor;		};
+	quality {	UInt16 item_quality;	};
+	soulboundState{	UInt8 item_soulboundState;	};
+	IdentifyState {	UInt8 item_IdentifyState;	};
+	ExpireDate{	UInt32	item_expireDate; };
+	Value	{	UInt16	itemValue1;
+				UInt16	itemValue2;
+				UInt16	itemValue3;		};
+	buffID	{	UInt16 buffID;		};
+	buffValue1{	UInt32 buffValue1;};
+	buffValue2{	UInt32 buffValue2;};
+	buffValue3{	UInt32 buffValue3;};
+	buffCoolDown{	UInt32 buffCoolDown;};
+	buffPro	{	UInt8 buffPro;};
+	inWareHouse{	UInt8 inWareHouse;	};
+	assetLock{      Boolean lock;            };
+	skillID	{UInt16 skillID;};
+	//--- RPC method
+}

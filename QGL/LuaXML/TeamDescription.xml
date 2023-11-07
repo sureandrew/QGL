@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+
+
+<UI>
+	<ID Name="TeamDescription" />
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	<Panel Name="TeamDescriptionPanel" Image="Data\interface0014_main_H-b.tga" X="50" Y="71" Left="22"
+		Top="10" Right="362" Bottom="349" LuaRButtonUp="CloseTeamDescription" LuaKeyChar="CloseTeamDescription" 
+		DetectImage = "1" Drag="1" DragLeft="0" DragTop="0" DragRight="340" DragBottom="339">
+
+		<CheckBox Name="TeamDescriptionFieldBurning" Image="Data\interface0014_main_H-b.tga" X="21" Y="42" State="1" 
+					LuaLButtonDown="TeamDescriptionFieldBurning">
+			<CheckBoxRect Index="0"  Left="382" Top="73" Right="473" Bottom="93" />
+			<CheckBoxRect Index="1"  Left="382" Top="48" Right="473" Bottom="68" />
+			<CheckBoxRect Index="2"  Left="382" Top="23" Right="473" Bottom="43" />
+		</CheckBox>
+
+		<CheckBox Name="TeamDescriptionToPunishEvilTask" Image="Data\interface0014_main_H-b.tga" X="126" Y="42"  State="1" 
+				LuaLButtonDown="TeamDescriptionToPunishEvilTask">
+			<CheckBoxRect Index="0" Left="487" Top="73" Right="578" Bottom="93" />
+			<CheckBoxRect Index="1" Left="487" Top="48" Right="578" Bottom="68" />
+			<CheckBoxRect Index="2" Left="487" Top="23" Right="578" Bottom="43" />
+		</CheckBox>
+
+		<CheckBox Name="TeamDescriptionEliminateGreenTask" Image="Data\interface0014_main_H-b.tga" X="230" Y="42" State="1" 
+				LuaLButtonDown="TeamDescriptionEliminateGreenTask">
+			<CheckBoxRect Index="0" Left="591" Top="73" Right="682" Bottom="93" />
+			<CheckBoxRect Index="1" Left="591" Top="48" Right="682" Bottom="68" />
+			<CheckBoxRect Index="2" Left="591" Top="23" Right="682" Bottom="43" />
+		</CheckBox>
+
+		<CheckBox Name="TeamDescriptionVillaTask" Image="Data\interface0014_main_H-b.tga" X="21" Y="82" State="1" 
+				LuaLButtonDown="TeamDescriptionVillaTask">
+			<CheckBoxRect Index="0"  Left="382" Top="148" Right="473" Bottom="172" /> 
+			<CheckBoxRect Index="1" Left="382" Top="123" Right="473" Bottom="147" />
+			<CheckBoxRect Index="2" Left="382" Top="98" Right="473" Bottom="122" />
+		</CheckBox>
+		
+		<CheckBox Name="TeamDescriptionDuplicate" Image="Data\interface0014_main_H-b.tga" X="126" Y="82" State="1" 
+				LuaLButtonDown="TeamDescriptionDuplicate">
+			<CheckBoxRect Index="0"  Left="487" Top="148" Right="578" Bottom="172" />
+			<CheckBoxRect Index="1" Left="487" Top="123" Right="578" Bottom="147" />
+			<CheckBoxRect Index="2" Left="487" Top="98" Right="578" Bottom="122" />
+		</CheckBox>
+		
+		<CheckBox Name="TeamDescriptionEvents" Image="Data\interface0014_main_H-b.tga" X="230" Y="82" State="1" 
+				LuaLButtonDown="TeamDescriptionEvents">
+			<CheckBoxRect Index="0"  Left="591" Top="148" Right="682" Bottom="172" />
+			<CheckBoxRect Index="1" Left="591" Top="123" Right="682" Bottom="147" />
+			<CheckBoxRect Index="2" Left="591" Top="98" Right="682" Bottom="122" />
+		</CheckBox>
+		
+		<Button Name = "TeamDescriptionOK" Image="Data\interface0014_main_H-b.tga" X="104" Y="301" 
+					LuaLButtonUp="TeamDescriptionOK">
+			<ButtonRect State="0" Left="382" Top="173" Right="473" Bottom="197" />
+			<ButtonRect State="1" Left="382" Top="198" Right="473" Bottom="222" />
+			<ButtonRect State="2" Left="382" Top="223" Right="473" Bottom="247" />
+		</Button>
+		
+		<Button Name = "TeamDescriptionCancel" Image="Data\interface0014_main_H-b.tga" X="211" Y="301" 
+					LuaLButtonUp="TeamDescriptionCancel">
+			<ButtonRect State="0" Left="487" Top="173" Right="578" Bottom="197" />
+			<ButtonRect State="1" Left="487" Top="198" Right="578" Bottom="222" />
+			<ButtonRect State="2" Left="487" Top="223" Right="578" Bottom="247" />
+		</Button>
+
+		<EditBox Name="TeamDescriptionInput" X="43" Y="156" Row="1" Column="10" EdgeCode="CENTER" FontColor="FFFFFFFF"
+			LIGHTColor="FF000000" Limit="10" Width = "220" Height = "16" />
+
+		<EditBox Name="TeamDescriptionLevelDown" X="168" Y="241" Row="1" Column="3" EdgeCode="CENTER" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" LuaLButtonUp="" Limit="3"  NumOnly="1"/>
+
+		<EditBox Name="TeamDescriptionLevelUp" X="245" Y="241" Row="1" Column="3" EdgeCode="CENTER" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" LuaLButtonUp="" Limit="3"  NumOnly="1" />
+		</EditBox>
+
+	</Panel>
+</UI>
+
+
+
+
+

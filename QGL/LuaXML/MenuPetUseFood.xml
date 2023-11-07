@@ -1,0 +1,39 @@
+<?xml version="1.0" ?>
+<UI>
+	<ID Name="PetUseFood" />
+	<Font Name="Data\simsun.ttc" Width="13" Height="13" />
+	<Panel Name="PetUseFoodPanel" Image="Data\interface0047.tga" X="0" Y="0" 
+	Left="9" Top="9" Right="260" Bottom="149"
+		Drag="1" DragLeft="0" DragTop="0" DragRight="228"	DragBottom="98"
+		LuaRButtonUp="CloseUsePetFood"  LuaKeyChar="CloseUsePetFood" >
+		
+		
+		<StaticText Name="UseFoodPetName" X="105" Y="17" Row="1" Column="8" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFF0" ShadowColor="FF000000" Hide="0">
+			
+		</StaticText>
+
+		<UIImage Name="UseFoodPet0" X="60" Y="15" Image="Data\interface0047.tga" Left="290" Top="10" Right="332" Bottom="27" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="UseFoodPet1" X="60" Y="15" Image="Data\interface0047.tga" Left="290" Top="29" Right="332" Bottom="43" AutoDelete="0" NotDetected="1" Hide="1" />
+		
+		<UIImage Name="UseFoodEatEQ" X="50" Y="55" Image="Data\interface0047.tga" Left="290" Top="49" Right="365" Bottom="63" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="UseFoodEatFD" X="45" Y="55" Image="Data\interface0047.tga" Left="290" Top="65" Right="384" Bottom="81" AutoDelete="0" NotDetected="1" Hide="1" />
+		
+		<UIImage Name="UseItemBG" X="158" Y="37" Image="Data\interface0047.tga" Left="289" Top="87" Right="337" Bottom="145" AutoDelete="0" NotDetected="1" Hide="0" />
+		<AniIcon Name="UseItemAI"  X="164" Y="41" Hide="1" LuaLButtonUp="" Detect = "1"/>
+	
+	
+		<Button Name="PetUseFoodOK" Image="Data\interface0047.tga" X="55" Y="95" LuaLButtonUp="PetUseFoodItem">
+			<ButtonRect State="0" Left="11" Top="180" Right="75" Bottom="205" />
+			<ButtonRect State="1" Left="76" Top="180" Right="140" Bottom="205" />
+			<ButtonRect State="2" Left="141" Top="180" Right="205" Bottom="205" />
+			<ButtonRect State="3" Left="206" Top="180" Right="270" Bottom="205" />
+		</Button>
+		
+		<Button Name="PetUseFoodNO" Image="Data\interface0047.tga" X="145" Y="94" LuaLButtonUp="ClosePetUseFood">
+			<ButtonRect State="0" Left="11" Top="153" Right="75" Bottom="179" />
+			<ButtonRect State="1" Left="76" Top="153" Right="140" Bottom="179" />
+			<ButtonRect State="2" Left="141" Top="153" Right="205" Bottom="179" />
+			<ButtonRect State="3" Left="206" Top="153" Right="270" Bottom="179" />
+		</Button>
+	</Panel>
+</UI>

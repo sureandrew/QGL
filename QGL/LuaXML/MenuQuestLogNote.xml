@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<UI>
+	<ID Name="QuestLogNote" />
+	<Font Name="Data\simsun.ttc" Width="12" Height="12" />
+	<Panel Name="QuestLogNotePanel" Image="" X="220" Y="181"
+		Left="4" Top="2" Right="621" Bottom="442"
+		Drag="0" DragLeft="0" DragTop="0" DragRight="517" DragBottom="440">
+		<!-- Close Quest Lost Note button -->
+		<Button Name="CloseQuestLogNoteButton" Image="Data\inerface0001_main.tga" X="550" Y="15" LuaLButtonUp="CloseQuestLogNote">
+			<ButtonRect State="0" Left="91" Top="644" Right="114" Bottom="661"/>
+			<ButtonRect State="1" Left="116" Top="644" Right="139" Bottom="661"/>
+			<ButtonRect State="2" Left="141" Top="644" Right="164" Bottom="661"/>
+		</Button>
+		
+		<!-- Quest Content Description Chat Panel -->
+		<ChatPanel Name="QuestNoteDesc" X="340" Y="38" Width="300" Height="300" ContinueRun="1" EdgeCode="SHADOW" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" FillColor="7F0000FF" LuaLButtonDown="QuestNoteProcess">
+			who knows~
+		</ChatPanel>		
+	</Panel>
+</UI>

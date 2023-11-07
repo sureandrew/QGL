@@ -1,0 +1,356 @@
+<?xml version="1.0" ?>
+<!-- Our to do list data -->
+<UI>
+	<ID Name="ShopMenu" />
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	
+	<Panel Name="ShopMenuPanel" Image="Data\interface0009_shop.tga" X="456" Y="73" 
+			Left="3" Top="2" Right="304" Bottom="459" 
+			DetectImage = "1" LuaRButtonDown="CloseShopMenu"
+			Drag="1" DragLeft="0" DragTop="0" DragRight="301" DragBottom="457" LuaKeyChar="CloseShopMenu">
+			
+		<Button Name="ShopMenuClose" Image="Data\interface0009_shop.tga" X="267" Y="8" LuaLButtonDown="CloseShopMenu">
+			<ButtonRect State="0" Left="306" Top="10" Right="330" Bottom="28" />
+			<ButtonRect State="1" Left="331" Top="10" Right="355" Bottom="28" />
+			<ButtonRect State="2" Left="356" Top="10" Right="380" Bottom="28" />
+		</Button>
+		
+		<Button Name="ShopSellItemButton" Image="Data\interface0009_shop.tga" X="100" Y="416" LuaLButtonDown="ShopSellItem">
+			<ButtonRect State="0" Left="2" Top="464" Right="96" Bottom="487" />
+			<ButtonRect State="1" Left="98" Top="464" Right="192" Bottom="487" />
+			<ButtonRect State="2" Left="194" Top="464" Right="288" Bottom="487" />
+			<ButtonRect State="3" Left="290" Top="464" Right="384" Bottom="487" />
+		</Button>
+		
+		<!--<Button Name="ShopRepairItemButton" Image="Data\interface0009_shop.tga" X="168" Y="416" LuaLButtonDown="ShopRepairItem">
+			<ButtonRect State="0" Left="2" Top="490" Right="96" Bottom="513" />
+			<ButtonRect State="1" Left="98" Top="490" Right="192" Bottom="513" />
+			<ButtonRect State="2" Left="194" Top="490" Right="288" Bottom="513" />
+			<ButtonRect State="3" Left="290" Top="490" Right="384" Bottom="513" />
+		</Button>-->
+		
+		<!-- Shop Name -->
+		<UIImage Name="ShopName1" Image="Data\interface0009_shop.tga" X="130" Y="5" NotDetected="1"
+			Left="307" Top="31" Right="351" Bottom="47" Hide="1" AutoDelete="0"/>
+			
+		<UIImage Name="ShopName2" Image="Data\interface0009_shop.tga" X="130" Y="5" NotDetected="1"
+			Left="307" Top="53" Right="351" Bottom="69" Hide="1" AutoDelete="0"/>
+		
+		<UIImage Name="ShopName3" Image="Data\interface0009_shop.tga" X="130" Y="5" NotDetected="1"
+			Left="307" Top="74" Right="351" Bottom="91" Hide="1" AutoDelete="0"/>
+			
+		<UIImage Name="ShopName4" Image="Data\interface0009_shop.tga" X="130" Y="5" NotDetected="1"
+			Left="307" Top="96" Right="351" Bottom="112" Hide="1" AutoDelete="0"/>
+			
+		<UIImage Name="ShopName5" Image="Data\interface0009_shop.tga" X="130" Y="5" NotDetected="1"
+			Left="307" Top="117" Right="351" Bottom="133" Hide="1" AutoDelete="0"/>
+			
+		<UIImage Name="ShopName6" Image="Data\interface0009_shop.tga" X="130" Y="5" NotDetected="1"
+			Left="307" Top="139" Right="351" Bottom="155" Hide="1" AutoDelete="0"/>
+	
+		<!-- select rect -->
+		<UIImage Name="ShopSelectRect" X="0" Y="0" Image="Data\interface0005_main_B.tga" Left="388" Top="366" Right="430" Bottom="408" AutoDelete="0" NotDetected="1" Hide="1"
+		 TimeOutCount="100" LuaTimeOut="ShowShopSelectRect"/>
+	
+		<StaticText Name="BusinessMoneyText" X="90" Y="45" Row="1" Column="50" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="1">
+		</StaticText>
+		<!-- Item Icons -->
+		
+		<!-- 1st row -->
+		<AniIcon Name="SIS000Icon" X="28" Y="63" Image="" Detect = "1" AutoDelete="0"  LuaLButtonUp="DragShopItem"
+			LuaRButtonUp="BuyShopItem"  LuaMouseMove="ShopItemOver" LuaMouseOut = "ShopItemMouseOut" 
+			InsertToEventList = "1" />
+		<StaticText Name="SIS000Count" X="28" Y="88" Row="1" Column="14" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="1">
+		</StaticText>
+			
+		<AniIcon Name="SIS001Icon" X="69" Y="63" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragShopItem"
+			LuaRButtonUp="BuyShopItem"  LuaMouseMove="ShopItemOver" LuaMouseOut = "ShopItemMouseOut" 
+			InsertToEventList = "1" />
+		<StaticText Name="SIS001Count" X="69" Y="88" Row="1" Column="14" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="1">
+		</StaticText>
+		
+		<AniIcon Name="SIS002Icon" X="110" Y="63" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragShopItem"
+			LuaRButtonUp="BuyShopItem"  LuaMouseMove="ShopItemOver" LuaMouseOut = "ShopItemMouseOut" 
+			InsertToEventList = "1" />
+		<StaticText Name="SIS002Count" X="110" Y="88" Row="1" Column="14" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="1">
+		</StaticText>
+		
+		<AniIcon Name="SIS003Icon" X="151" Y="63" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragShopItem"
+			LuaRButtonUp="BuyShopItem"  LuaMouseMove="ShopItemOver" LuaMouseOut = "ShopItemMouseOut" 
+			InsertToEventList = "1" />
+		<StaticText Name="SIS003Count" X="151" Y="88" Row="1" Column="14" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="1">
+		</StaticText>
+			
+		<AniIcon Name="SIS004Icon" X="192" Y="63" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragShopItem"
+			LuaRButtonUp="BuyShopItem"  LuaMouseMove="ShopItemOver" LuaMouseOut = "ShopItemMouseOut" 
+			InsertToEventList = "1" />
+		<StaticText Name="SIS004Count" X="192" Y="88" Row="1" Column="14" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="1">
+		</StaticText>
+			
+		<AniIcon Name="SIS005Icon" X="233" Y="63" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragShopItem"
+			LuaRButtonUp="BuyShopItem"  LuaMouseMove="ShopItemOver" LuaMouseOut = "ShopItemMouseOut" 
+			InsertToEventList = "1" />
+		<StaticText Name="SIS005Count" X="233" Y="88" Row="1" Column="14" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="1">
+		</StaticText>
+			
+		<!-- 2nd row -->
+		<AniIcon Name="SIS006Icon" X="28" Y="104" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragShopItem"
+			LuaRButtonUp="BuyShopItem"  LuaMouseMove="ShopItemOver" LuaMouseOut = "ShopItemMouseOut" 
+			InsertToEventList = "1" />
+			
+		<AniIcon Name="SIS007Icon" X="69" Y="104" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragShopItem"
+			LuaRButtonUp="BuyShopItem"  LuaMouseMove="ShopItemOver" LuaMouseOut = "ShopItemMouseOut" 
+			InsertToEventList = "1" />
+		
+		<AniIcon Name="SIS008Icon" X="110" Y="104" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragShopItem"
+			LuaRButtonUp="BuyShopItem"  LuaMouseMove="ShopItemOver" LuaMouseOut = "ShopItemMouseOut" 
+			InsertToEventList = "1" />
+		
+		<AniIcon Name="SIS009Icon" X="151" Y="104" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragShopItem"
+			LuaRButtonUp="BuyShopItem"  LuaMouseMove="ShopItemOver" LuaMouseOut = "ShopItemMouseOut" 
+			InsertToEventList = "1" />
+			
+		<AniIcon Name="SIS010Icon" X="192" Y="104" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragShopItem"
+			LuaRButtonUp="BuyShopItem"  LuaMouseMove="ShopItemOver" LuaMouseOut = "ShopItemMouseOut" 
+			InsertToEventList = "1" />
+			
+		<AniIcon Name="SIS011Icon" X="233" Y="104" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragShopItem"
+			LuaRButtonUp="BuyShopItem"  LuaMouseMove="ShopItemOver" LuaMouseOut = "ShopItemMouseOut" 
+			InsertToEventList = "1" />
+			
+		<!-- 3rd -->
+		<AniIcon Name="SIS012Icon" X="28" Y="145" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragShopItem"
+			LuaRButtonUp="BuyShopItem"  LuaMouseMove="ShopItemOver" LuaMouseOut = "ShopItemMouseOut" 
+			InsertToEventList = "1" />
+			
+		<AniIcon Name="SIS013Icon" X="69" Y="145" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragShopItem"
+			LuaRButtonUp="BuyShopItem"  LuaMouseMove="ShopItemOver" LuaMouseOut = "ShopItemMouseOut" 
+			InsertToEventList = "1" />
+		
+		<AniIcon Name="SIS014Icon" X="110" Y="145" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragShopItem"
+			LuaRButtonUp="BuyShopItem"  LuaMouseMove="ShopItemOver" LuaMouseOut = "ShopItemMouseOut" 
+			InsertToEventList = "1" />
+		
+		<AniIcon Name="SIS015Icon" X="151" Y="145" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragShopItem"
+			LuaRButtonUp="BuyShopItem"  LuaMouseMove="ShopItemOver" LuaMouseOut = "ShopItemMouseOut" 
+			InsertToEventList = "1" />
+			
+		<AniIcon Name="SIS016Icon" X="192" Y="145" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragShopItem"
+			LuaRButtonUp="BuyShopItem"  LuaMouseMove="ShopItemOver" LuaMouseOut = "ShopItemMouseOut" 
+			InsertToEventList = "1" />
+			
+		<AniIcon Name="SIS017Icon" X="233" Y="145" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragShopItem"
+			LuaRButtonUp="BuyShopItem"  LuaMouseMove="ShopItemOver" LuaMouseOut = "ShopItemMouseOut" 
+			InsertToEventList = "1" />
+			
+		<!-- 4th row -->
+		<AniIcon Name="SIS018Icon" X="28" Y="186" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragShopItem"
+			LuaRButtonUp="BuyShopItem"  LuaMouseMove="ShopItemOver" LuaMouseOut = "ShopItemMouseOut" 
+			InsertToEventList = "1" />
+			
+		<AniIcon Name="SIS019Icon" X="69" Y="186" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragShopItem"
+			LuaRButtonUp="BuyShopItem"  LuaMouseMove="ShopItemOver" LuaMouseOut = "ShopItemMouseOut" 
+			InsertToEventList = "1" />
+		
+		<AniIcon Name="SIS020Icon" X="110" Y="186" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragShopItem"
+			LuaRButtonUp="BuyShopItem"  LuaMouseMove="ShopItemOver" LuaMouseOut = "ShopItemMouseOut" 
+			InsertToEventList = "1" />
+		
+		<AniIcon Name="SIS021Icon" X="151" Y="186" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragShopItem"
+			LuaRButtonUp="BuyShopItem"  LuaMouseMove="ShopItemOver" LuaMouseOut = "ShopItemMouseOut" 
+			InsertToEventList = "1" />
+			
+		<AniIcon Name="SIS022Icon" X="192" Y="186" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragShopItem"
+			LuaRButtonUp="BuyShopItem"  LuaMouseMove="ShopItemOver" LuaMouseOut = "ShopItemMouseOut" 
+			InsertToEventList = "1" />
+			
+		<AniIcon Name="SIS023Icon" X="233" Y="186" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragShopItem"
+			LuaRButtonUp="BuyShopItem"  LuaMouseMove="ShopItemOver" LuaMouseOut = "ShopItemMouseOut" 
+			InsertToEventList = "1" />
+		
+		<!-- 5th row-->
+		<AniIcon Name="SIS024Icon" X="28" Y="227" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragShopItem"
+			LuaRButtonUp="BuyShopItem"  LuaMouseMove="ShopItemOver" LuaMouseOut = "ShopItemMouseOut" 
+			InsertToEventList = "1" />
+			
+		<AniIcon Name="SIS025Icon" X="69" Y="227" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragShopItem"
+			LuaRButtonUp="BuyShopItem"  LuaMouseMove="ShopItemOver" LuaMouseOut = "ShopItemMouseOut" 
+			InsertToEventList = "1" />
+		
+		<AniIcon Name="SIS026Icon" X="110" Y="227" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragShopItem"
+			LuaRButtonUp="BuyShopItem"  LuaMouseMove="ShopItemOver" LuaMouseOut = "ShopItemMouseOut" 
+			InsertToEventList = "1" />
+		
+		<AniIcon Name="SIS027Icon" X="151" Y="227" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragShopItem"
+			LuaRButtonUp="BuyShopItem"  LuaMouseMove="ShopItemOver" LuaMouseOut = "ShopItemMouseOut" 
+			InsertToEventList = "1" />
+			
+		<AniIcon Name="SIS028Icon" X="192" Y="227" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragShopItem"
+			LuaRButtonUp="BuyShopItem"  LuaMouseMove="ShopItemOver" LuaMouseOut = "ShopItemMouseOut" 
+			InsertToEventList = "1" />
+			
+		<AniIcon Name="SIS029Icon" X="233" Y="227" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragShopItem"
+			LuaRButtonUp="BuyShopItem"  LuaMouseMove="ShopItemOver" LuaMouseOut = "ShopItemMouseOut" 
+			InsertToEventList = "1" />
+			
+		<!-- 6th row -->
+		<AniIcon Name="SIS030Icon" X="28" Y="268" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragShopItem"
+			LuaRButtonUp="BuyShopItem"  LuaMouseMove="ShopItemOver" LuaMouseOut = "ShopItemMouseOut" 
+			InsertToEventList = "1" />
+			
+		<AniIcon Name="SIS031Icon" X="69" Y="268" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragShopItem"
+			LuaRButtonUp="BuyShopItem"  LuaMouseMove="ShopItemOver" LuaMouseOut = "ShopItemMouseOut" 
+			InsertToEventList = "1" />
+		
+		<AniIcon Name="SIS032Icon" X="110" Y="268" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragShopItem"
+			LuaRButtonUp="BuyShopItem"  LuaMouseMove="ShopItemOver" LuaMouseOut = "ShopItemMouseOut" 
+			InsertToEventList = "1" />
+		
+		<AniIcon Name="SIS033Icon" X="151" Y="268" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragShopItem"
+			LuaRButtonUp="BuyShopItem"  LuaMouseMove="ShopItemOver" LuaMouseOut = "ShopItemMouseOut" 
+			InsertToEventList = "1" />
+			
+		<AniIcon Name="SIS034Icon" X="192" Y="268" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragShopItem"
+			LuaRButtonUp="BuyShopItem"  LuaMouseMove="ShopItemOver" LuaMouseOut = "ShopItemMouseOut" 
+			InsertToEventList = "1" />
+			
+		<AniIcon Name="SIS035Icon" X="233" Y="268" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragShopItem"
+			LuaRButtonUp="BuyShopItem"  LuaMouseMove="ShopItemOver" LuaMouseOut = "ShopItemMouseOut" 
+			InsertToEventList = "1" />
+			
+		<!-- 7th row -->
+		<AniIcon Name="SIS036Icon" X="28" Y="309" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragShopItem"
+			LuaRButtonUp="BuyShopItem"  LuaMouseMove="ShopItemOver" LuaMouseOut = "ShopItemMouseOut" 
+			InsertToEventList = "1" />
+			
+		<AniIcon Name="SIS037Icon" X="69" Y="309" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragShopItem"
+			LuaRButtonUp="BuyShopItem"  LuaMouseMove="ShopItemOver" LuaMouseOut = "ShopItemMouseOut" 
+			InsertToEventList = "1" />
+		
+		<AniIcon Name="SIS038Icon" X="110" Y="309" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragShopItem"
+			LuaRButtonUp="BuyShopItem"  LuaMouseMove="ShopItemOver" LuaMouseOut = "ShopItemMouseOut" 
+			InsertToEventList = "1" />
+		
+		<AniIcon Name="SIS039Icon" X="151" Y="309" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragShopItem"
+			LuaRButtonUp="BuyShopItem"  LuaMouseMove="ShopItemOver" LuaMouseOut = "ShopItemMouseOut" 
+			InsertToEventList = "1" />
+			
+		<AniIcon Name="SIS040Icon" X="192" Y="309" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragShopItem"
+			LuaRButtonUp="BuyShopItem"  LuaMouseMove="ShopItemOver" LuaMouseOut = "ShopItemMouseOut" 
+			InsertToEventList = "1" />
+			
+		<AniIcon Name="SIS041Icon" X="233" Y="309" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragShopItem"
+			LuaRButtonUp="BuyShopItem"  LuaMouseMove="ShopItemOver" LuaMouseOut = "ShopItemMouseOut" 
+			InsertToEventList = "1" />
+		
+		<!-- 8th row -->
+		<AniIcon Name="SIS042Icon" X="28" Y="350" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragShopItem"
+			LuaRButtonUp="BuyShopItem"  LuaMouseMove="ShopItemOver" LuaMouseOut = "ShopItemMouseOut" 
+			InsertToEventList = "1" />
+			
+		<AniIcon Name="SIS043Icon" X="69" Y="350" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragShopItem"
+			LuaRButtonUp="BuyShopItem"  LuaMouseMove="ShopItemOver" LuaMouseOut = "ShopItemMouseOut" 
+			InsertToEventList = "1" />
+		
+		<AniIcon Name="SIS044Icon" X="110" Y="350" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragShopItem"
+			LuaRButtonUp="BuyShopItem"  LuaMouseMove="ShopItemOver" LuaMouseOut = "ShopItemMouseOut" 
+			InsertToEventList = "1" />
+		
+		<AniIcon Name="SIS045Icon" X="151" Y="350" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragShopItem"
+			LuaRButtonUp="BuyShopItem"  LuaMouseMove="ShopItemOver" LuaMouseOut = "ShopItemMouseOut" 
+			InsertToEventList = "1" />
+			
+		<AniIcon Name="SIS046Icon" X="192" Y="350" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragShopItem"
+			LuaRButtonUp="BuyShopItem"  LuaMouseMove="ShopItemOver" LuaMouseOut = "ShopItemMouseOut" 
+			InsertToEventList = "1" />
+			
+		<AniIcon Name="SIS047Icon" X="233" Y="350" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragShopItem"
+			LuaRButtonUp="BuyShopItem"  LuaMouseMove="ShopItemOver" LuaMouseOut = "ShopItemMouseOut" 
+			InsertToEventList = "1" />
+	</Panel>
+	
+	
+	<!--  Shop Confirm Panel -->
+	<Panel Name="ShopConfirm" X="253" Y="267" Hide="1" Image="Data\inerface0004_main_A.tga" Left="314" Top="293" Right="542" Bottom="391"
+		Drag="1" DragLeft="0" DragTop="0" DragRight="228" DragBottom="98" >
+		
+		<StaticText Name="ShopConfirmText" X="20" Y="25" Row="1" Column="15" EdgeCode="LIGHT" FontColor="FFEDD97A" ShadowColor="FF000000">
+		</StaticText>
+		
+		<Button Name="ShopConfirmYes" Image="Data\inerface0004_main_A.tga" X="36" Y="60" LuaLButtonUp="SCB_ConfirmAnsYes">
+			<ButtonRect State="0" Left="4" Top="511" Right="68" Bottom="528" />
+			<ButtonRect State="1" Left="70" Top="511" Right="134" Bottom="528" />
+			<ButtonRect State="2" Left="136" Top="511" Right="200" Bottom="528" />
+		</Button>
+		
+		<Button Name="ShopConfirmNo" Image="Data\inerface0004_main_A.tga" X="128" Y="60" LuaLButtonUp="SCB_ConfirmAnsNo">
+			<ButtonRect State="0" Left="4" Top="530" Right="68" Bottom="547" />
+			<ButtonRect State="1" Left="70" Top="530" Right="134" Bottom="547" />
+			<ButtonRect State="2" Left="136" Top="530" Right="200" Bottom="547" />
+		</Button>	
+	</Panel>
+	
+	<!-- Shop Item Count Panel -->
+	
+	<Panel Name="ShopItemCountBox" X="253" Y="267" Hide="1" Image="Data\interface0009_shop.tga" Left="307" Top="290" Right="562" Bottom="407"  
+		Drag="1" DragLeft="0" DragTop="0" DragRight="281" DragBottom="117" >
+		
+		<StaticText Name="SICB_Text" X="20" Y="18" Row="1" Column="14" EdgeCode="LIGHT" FontColor="FFEDD97A" ShadowColor="FF000000">
+			label
+		</StaticText>
+		
+		<UIImage X="19" Y="39" Image="Data\interface0009_shop.tga" Left="409" Top="410" Right="512" Bottom="428"/>
+		
+		<EditBox Name="SICB_EditBox" X="31" Y="43" Row="1" Column="3" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" LuaKeyUp="SEB_OnKeyUp" LuaLButtonUp="" Limit="5" NumOnly="1">
+			1 
+		</EditBox>
+		
+		<StaticText Name="SICB_Price" X="20" Y="66" Row="1" Column="14" EdgeCode="LIGHT" FontColor="FFEDD97A" ShadowColor="FF000000">
+			Price 999, 999, 999, 999
+		</StaticText>
+				
+		<Button Name="SICB_YesButton" Image="Data\interface0009_shop.tga" X="100" Y="84" LuaLButtonUp="SICB_AnsYes">
+			<ButtonRect State="0" Left="387" Top="464" Right="451" Bottom="481" />
+			<ButtonRect State="1" Left="453" Top="464" Right="517" Bottom="481" />
+			<ButtonRect State="2" Left="520" Top="464" Right="583" Bottom="481" />
+		</Button>
+			
+		<Button Name="SICB_NoButton" Image="Data\interface0009_shop.tga" X="170" Y="84" LuaLButtonUp="SICB_AnsNo">
+			<ButtonRect State="0" Left="387" Top="483" Right="451" Bottom="500" />
+			<ButtonRect State="1" Left="453" Top="483" Right="517" Bottom="500" />
+			<ButtonRect State="2" Left="520" Top="483" Right="583" Bottom="500" />
+		</Button>
+		
+		<Button Name="SICB_MaxButton" Image="Data\interface0009_shop.tga" X="170" Y="40" LuaLButtonUp="SICB_SetMax">
+			<ButtonRect State="0" Left="377" Top="410" Right="407" Bottom="426" />
+			<ButtonRect State="1" Left="377" Top="427" Right="407" Bottom="443" />
+			<ButtonRect State="2" Left="377" Top="444" Right="407" Bottom="460" />
+		</Button>
+		
+		<Button Name="SICB_MinButton" Image="Data\interface0009_shop.tga" X="204" Y="40" LuaLButtonUp="SICB_SetMin">
+			<ButtonRect State="0" Left="345" Top="410" Right="375" Bottom="426" />
+			<ButtonRect State="1" Left="345" Top="427" Right="375" Bottom="443" />
+			<ButtonRect State="2" Left="345" Top="444" Right="375" Bottom="460" />
+		</Button>
+		
+		<Button Name="SICB_AddButton" Image="Data\interface0009_shop.tga" X="130" Y="40" LuaLButtonUp="SICB_Increase">
+			<ButtonRect State="0" Left="307" Top="410" Right="324" Bottom="426" />
+			<ButtonRect State="1" Left="307" Top="427" Right="324" Bottom="443" />
+			<ButtonRect State="2" Left="307" Top="444" Right="324" Bottom="460" />
+		</Button>
+		
+		<Button Name="SICB_SubButton" Image="Data\interface0009_shop.tga" X="150" Y="40" LuaLButtonUp="SICB_Decrease">
+			<ButtonRect State="0" Left="326" Top="410" Right="343" Bottom="426" />
+			<ButtonRect State="1" Left="326" Top="427" Right="343" Bottom="443" />
+			<ButtonRect State="2" Left="326" Top="444" Right="343" Bottom="460" />
+		</Button>
+	</Panel>
+
+	
+	<!-- Shop Item Drag Panel -->
+	<Panel Name="ShopItemDragPanel" Image="" X="0" Y="50" Left="0" Top="0" Right="40" Bottom="40"
+		 Hide="1" Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="ShopItemDragEnd" LuaRButtonDown="ShopItemResetDrag" >
+		<AniIcon Name="ShopItemDragIcon" X="0" Y="0" Image="" AutoDelete="0" Detect = "1" />
+	</Panel>
+</UI>

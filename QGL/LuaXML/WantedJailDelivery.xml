@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" ?>
+<UI>
+	<ID Name="WantedJailDelivery" />
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	<Panel Name="WantedJailDeliveryPanel" Image="Data\interface0042.tga" X="272" Y="240" 
+			Left="468" Top="125" Right="723" Bottom="243" LuaRButtonUp="CloseWantedJailDeliveryPanel"  DetectImage = "1"
+			Drag="1" DragLeft="0" DragTop="0" DragRight="699" DragBottom="404" >
+			
+		
+		<StaticText Name="WantedJailDeliveryText" X="40" Y="21" Width="170" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		请输入你要劫狱的玩家ID:
+		</StaticText>
+		
+		<EditBox Name="WantedJailDeliveryEditBox" X="36" Y="50" Row="1" Column="7" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" LuaLButtonUp="" Limit="7" NumOnly="1">
+		</EditBox>
+
+		<Button Name="WantedJailDeliveryOK" Image="Data\interface0042.tga" X="38" Y="79" LuaLButtonUp="WantedJailDeliveryOK">
+			<ButtonRect State="0" Left="191" Top="471" Right="269" Bottom="491" />
+			<ButtonRect State="1" Left="191" Top="494" Right="269" Bottom="514" />
+			<ButtonRect State="2" Left="191" Top="517" Right="269" Bottom="537" />
+		</Button>
+		
+		<Button Name="WantedJailDeliveryCancel" Image="Data\interface0042.tga" X="130" Y="79" LuaLButtonUp="WantedJailDeliveryCancel">
+			<ButtonRect State="0" Left="279" Top="471" Right="357" Bottom="491" />
+			<ButtonRect State="1" Left="279" Top="494" Right="357" Bottom="514" />
+			<ButtonRect State="2" Left="279" Top="517" Right="357" Bottom="537" />
+		</Button>
+			
+	</Panel>
+	
+</UI>

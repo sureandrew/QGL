@@ -1,0 +1,24 @@
+//-- Config
+config
+{
+	SubPath="Data/";
+	ClassID=10190;
+	StartID=10190;
+	EndID  =10200;
+	TwoDirect=1;
+}
+
+//-- include
+
+//-- object class
+class ExecuteCheatData : NetObject
+{
+	//-- object state
+	info { 			UInt32 exe_id;
+				UInt32 acct_id;
+				UInt32 target_acct_id;
+				UInt32 target_char_id;
+				String command;
+ 		};
+	//-- command to RPC server
+}

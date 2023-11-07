@@ -1,0 +1,28 @@
+//-- Config
+config
+{
+	SubPath="Logic/";
+	ClassID=31010;
+	StartID=31010;
+	EndID  =31019;
+}
+
+//-- include
+
+//-- object class
+class QuestType
+{
+	//-- object attributes
+	id { 				UInt32 char_id;
+						UInt16 Type_id;				};
+	name { 				String name; 				};
+	round { 			UInt16 round; 				};
+	maxRound { 			UInt16 maxRound; 			};
+	totalRound { 		UInt16 totalRound; 			};
+	limitRound { 		UInt16 limitRound; 			};
+	limitType { 		UInt16 limitType; 			};
+	lastClearTime { 	UInt32 lastClearTime; 		};
+	status { 			UInt8 status; 				};
+
+	//--- RPC method
+}

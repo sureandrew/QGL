@@ -1,0 +1,46 @@
+//-- Config
+config
+{
+	SubPath="Logic/";
+	ClassID=56000;
+	StartID=56000;
+	EndID  =56999;
+}
+
+//-- include
+
+//-- object class
+class Question : NetObject
+{
+	//-- object state
+	point {		UInt32 point; 		};
+	ranklist{	String name1;
+				UInt32 point1;
+				String name2;
+				UInt32 point2;
+				String name3;
+				UInt32 point3;
+				String name4;
+				UInt32 point4;
+				String name5;
+				UInt32 point5;
+				String name6;
+				UInt32 point6;
+				String name7;
+				UInt32 point7;
+				String name8;
+				UInt32 point8;
+				String name9;
+				UInt32 point9;
+				String name10;
+				UInt32 point10;
+	};
+
+	//-- command to RPC server
+	public:
+	CB_NextQuestion(UInt32 count,UInt32 question_id,String description, String option1, String option2, String option3, String option4);
+	Anwser(UInt32 question_id,UInt16 anwserIndex);
+	CB_AnswerResult(Boolean bRight);
+	CB_StartCountDown(UInt32 count);
+	
+}

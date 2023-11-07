@@ -1,0 +1,64 @@
+<?xml version="1.0" ?>
+<!-- Our to do list data -->
+<UI>
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+
+	<Panel Name="FriendChangeGroupPanel" Hide="0" X="300" Y="100" Image="Data\interface0007_main_D2.tga" Left="318" Top="387"
+		Right="529" Bottom="577" DetectImage="1" LuaRButtonUp="CloseChangeGroup" LuaKeyChar="CloseChangeGroup" Drag="1"
+		DragLeft="0" DragTop="0" DragRight="209" DragBottom="190">
+			
+		<StaticText Name="FriendChangeMsg" X="20" Y="40" Width="180" Height="50"  Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			將好友[無雙無雙無雙]移動至以下組別
+		</StaticText>
+		
+		<CheckBox Name = "FriendListChangeGroup1" Image="Data\interface0007_main_D.tga" X="39" Y="84"  LuaLButtonDown="ChangeFriendListGroup1Lua">
+			<CheckBoxRect Index="0" Left="430" Top="11" Right="458" Bottom="28" />
+			<CheckBoxRect Index="1" Left="430" Top="11" Right="458" Bottom="28" />
+			<CheckBoxRect Index="2" Left="461" Top="11" Right="489" Bottom="28" />
+		</CheckBox>
+		
+		<CheckBox Name = "FriendListChangeGroup2" Image="Data\interface0007_main_D.tga" X="71" Y="84"  LuaLButtonDown="ChangeFriendListGroup2Lua">
+			<CheckBoxRect Index="0" Left="430" Top="31" Right="458" Bottom="48" />
+			<CheckBoxRect Index="1" Left="430" Top="31" Right="458" Bottom="48" />
+			<CheckBoxRect Index="2" Left="461" Top="31" Right="489" Bottom="48" />
+		</CheckBox>
+		
+		<CheckBox Name = "FriendListChangeGroup3" Image="Data\interface0007_main_D.tga" X="103" Y="84"  LuaLButtonDown="ChangeFriendListGroup3Lua">
+			<CheckBoxRect Index="0" Left="558" Top="11" Right="586" Bottom="28" />
+			<CheckBoxRect Index="1" Left="558" Top="11" Right="586" Bottom="28" />
+			<CheckBoxRect Index="2" Left="589" Top="11" Right="617" Bottom="28" />
+		</CheckBox>
+		
+		<CheckBox Name = "FriendListChangeGroup4" Image="Data\interface0007_main_D.tga" X="135" Y="84"  LuaLButtonDown="ChangeFriendListGroup4Lua">
+			<CheckBoxRect Index="0" Left="558" Top="31" Right="586" Bottom="48" />
+			<CheckBoxRect Index="1" Left="558" Top="31" Right="586" Bottom="48" />
+			<CheckBoxRect Index="2" Left="589" Top="31" Right="617" Bottom="48" />
+		</CheckBox>
+		
+		<CheckBox Name = "TempFriendChangeGroup" Image="Data\interface0007_main_D.tga" X="39" Y="104"  LuaLButtonDown="ChangeFriendListGroupTempLua">
+			<CheckBoxRect Index="0" Left="687" Top="31" Right="747" Bottom="49" />
+			<CheckBoxRect Index="1" Left="687" Top="31" Right="747" Bottom="49" />
+			<CheckBoxRect Index="2" Left="749" Top="31" Right="809" Bottom="49" />
+		</CheckBox>
+		
+		<CheckBox Name = "BlackListChangeGroup" Image="Data\interface0007_main_D.tga" X="103" Y="105"  LuaLButtonDown="ChangeBlackListGroupLua">
+			<CheckBoxRect Index="0" Left="687" Top="11" Right="747" Bottom="28" />
+			<CheckBoxRect Index="1" Left="687" Top="11" Right="747" Bottom="28" />
+			<CheckBoxRect Index="2" Left="749" Top="11" Right="809" Bottom="28" />
+		</CheckBox>
+		
+		<Button Name="ChangeGroupConfirm" Image="Data\interface0007_main_D2.tga" X="20" Y="150" LuaLButtonUp="ChangeGroupConfirmLua" >
+			<ButtonRect State="0" Left="119" Top="354" Right="196" Bottom="373" />
+			<ButtonRect State="1" Left="119" Top="377" Right="196" Bottom="396" />
+			<ButtonRect State="2" Left="119" Top="400" Right="196" Bottom="419" />
+		</Button>
+		
+		<Button Name="ChangeGroupCancel" Image="Data\interface0007_main_D2.tga" X="110" Y="150" LuaLButtonUp="CloseChangeGroup" >
+			<ButtonRect State="0" Left="204" Top="354" Right="281" Bottom="373" />
+			<ButtonRect State="1" Left="204" Top="377" Right="281" Bottom="395" />
+			<ButtonRect State="2" Left="204" Top="400" Right="281" Bottom="419" />
+		</Button>
+		
+		</Panel>
+</UI>
+

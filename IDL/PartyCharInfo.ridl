@@ -1,0 +1,39 @@
+//-- Config
+config
+{
+	SubPath="Logic/";
+	ClassID=61000;
+	StartID=61000;
+	EndID  =61599;
+}
+
+class CPartyCharInfo : NetObject
+{
+	PartyIndex   {  UInt16 u16Index; };
+	CharBaseInfo {	UInt32 u32CharId;
+					RPCNetID stNetId;
+					UInt16 u16MapId;
+					UInt16 u16XPos;
+					UInt16 u16YPos;
+					UInt16 u16Level;
+					UInt8  u8SexClass;
+					UInt8 u8Faction;
+					UInt16 u16Hp; 
+					UInt16 u16MHp;
+					UInt16 u16MaxHp;
+					UInt16 u16Sp;
+					UInt16 u16MSp;
+					UInt16 u16MaxSp;	
+					String strNickName;	};
+	CharOrgEq { UInt32 u32OrgCloth;
+				UInt16 u16OrgClothColor;
+				UInt16 u16OrgHairStyle;
+				UInt16 u16OrgHairColor;
+				UInt16 u16HairStyle1;
+				UInt16 u16HairColor;	};
+	CharEq	{	UInt32 u32Cloth;
+				UInt16 u16ClothColor;
+				UInt16 u16HeadBand;
+				UInt32 u32Weapon;
+			};
+}

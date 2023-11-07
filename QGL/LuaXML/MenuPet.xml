@@ -1,0 +1,235 @@
+<?xml version="1.0" ?>
+<UI>
+	<ID Name="MenuPet" />
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	<Panel Name="PetPanel" Image="Data\interface0013_main_G.tga" X="456" Y="73" 
+		Left="8" Top="6" Right="347" Bottom="419" LuaRButtonUp="ClosePet" LuaKeyChar="ClosePet" DetectImage = "1"
+		Drag="1" DragLeft="0" DragTop="0" DragRight="339" DragBottom="413" LuaTimeOut="PetSkillDetailPopupTimeOut" TimeOutCount="100"
+		 LuaMouseWheel="PetPanelWheel">
+		
+		<Button Name="PetUse" Image="Data\interface0013_main_G.tga" X="34" Y="181" Tips="骑乘/使用宠物" 
+		               TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="PetUse" >
+			<ButtonRect State="0" Left="358" Top="242" Right="398" Bottom="262" />	
+			<ButtonRect State="1" Left="400" Top="242" Right="440" Bottom="262" />
+			<ButtonRect State="2" Left="442" Top="242" Right="482" Bottom="262" />
+			<ButtonRect State="3" Left="484" Top="242" Right="524" Bottom="262" />
+		</Button>	
+		
+		<Button Name="PetStandBy" Image="Data\interface0013_main_G.tga" X="90" Y="181" Tips="设置宠物待命状态" 
+                        TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="PetRest" >
+			<ButtonRect State="0" Left="358" Top="287" Right="398" Bottom="307" />	
+			<ButtonRect State="1" Left="400" Top="287" Right="440" Bottom="307" />
+			<ButtonRect State="2" Left="442" Top="287" Right="482" Bottom="307" />
+			<ButtonRect State="3" Left="484" Top="287" Right="524" Bottom="307" />
+		</Button>
+				
+		<Button Name="PetGiveUp" Image="Data\interface0013_main_G.tga" X="222" Y="172" Tips="遗弃宠物" 
+		              TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="OpenConfirmDropPet" >
+			<ButtonRect State="0" Left="357" Top="162" Right="403" Bottom="186" />	
+			<ButtonRect State="1" Left="404" Top="162" Right="450" Bottom="186" />
+			<ButtonRect State="2" Left="451" Top="162" Right="497" Bottom="186" />
+			<ButtonRect State="3" Left="498" Top="162" Right="544" Bottom="186" />
+		</Button>
+		
+		<Button Name="PetChangeName" Image="Data\interface0013_main_G.tga" X="173" Y="172" Tips="更改宠物名字"
+                       TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="OpenChangePetName" >
+			<ButtonRect State="0" Left="357" Top="188" Right="403" Bottom="212" />	
+			<ButtonRect State="1" Left="404" Top="188" Right="450" Bottom="212" />
+			<ButtonRect State="2" Left="451" Top="188" Right="497" Bottom="212" />
+			<ButtonRect State="3" Left="498" Top="188" Right="544" Bottom="212" />
+		</Button>
+		
+		<Button Name="PetTrain" Image="Data\interface0013_main_G.tga" X="270" Y="172" Tips="喂养宠物"
+                      TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="OpenUsePetFood" >
+			<ButtonRect State="0" Left="357" Top="214" Right="403" Bottom="238" />	
+			<ButtonRect State="1" Left="404" Top="214" Right="450" Bottom="238" />
+			<ButtonRect State="2" Left="451" Top="214" Right="497" Bottom="238" />
+			<ButtonRect State="3" Left="498" Top="214" Right="544" Bottom="238" />
+		</Button>
+		
+		<UIImage Name="PetIsBound" Image="Data\interface0013_main_G.tga" X="149" Y="65" Left="460" Top="341" Right="478" Bottom="376" Hide="1" />
+		<UIImage Name="PetNotBound" Image="Data\interface0013_main_G.tga" X="149" Y="65" Left="511" Top="341" Right="529" Bottom="376" Hide="1" />
+		<UIImage Name="PetIsUnique" Image="Data\interface0013_main_G.tga" X="149" Y="95" Left="435" Top="340" Right="453" Bottom="370" Hide="1" />
+		<UIImage Name="PetNotUnique" Image="Data\interface0013_main_G.tga" X="149" Y="95" Left="486" Top="340" Right="504" Bottom="370" Hide="1" />
+		<UIImage Name="PetLockSymbol" Image="Data\interface0005_main_B.tga" X="137" Y="62" 
+			Left="335" Top="476" Right="349" Bottom="489" Hide="1" />
+		
+		<ScrollBarV Name="PetScrollBar" X="308" Y="40" Width ="14" Height="127" Limit="0" BarColor="0"  LuaLButtondOWN="PetScroll">
+			<PrevButton Name="PetScrollUp" Image="Data\interface0013_main_G.tga" X="0" Y="0" LuaLButtonUp="PetScrollUp">
+				<ButtonRect State="0" Left="403" Top="126" Right="417" Bottom="140" />	
+				<ButtonRect State="1" Left="419" Top="126" Right="433" Bottom="140" />
+				<ButtonRect State="2" Left="435" Top="126" Right="449" Bottom="140" />
+			</PrevButton>
+			<NextButton Name="PetScrollDown" Image="Data\interface0013_main_G.tga" X="0" Y="113" LuaLButtonUp="PetScrollDown">
+				<ButtonRect State="0" Left="403" Top="143" Right="417" Bottom="156" />	
+				<ButtonRect State="1" Left="419" Top="143" Right="433" Bottom="156" />
+				<ButtonRect State="2" Left="435" Top="143" Right="449" Bottom="156" />
+			</NextButton>
+			<MoveButton Image="Data\interface0013_main_G.tga" X="0" Y="14"  LuaMouseMove="PetScroll">
+				<ButtonRect State="0" Left="452" Top="126" Right="466" Bottom="156" />
+				<ButtonRect State="1" Left="452" Top="126" Right="466" Bottom="156" />
+				<ButtonRect State="2" Left="452" Top="126" Right="466" Bottom="156" />
+			</MoveButton>
+		</ScrollBarV>
+		
+		<AniIcon Name="PetModel"  X="-175" Y="-190" Rotation = "1" AnimationIndex = "0" Loop = "1" Align = "0" Hide="0" Image="m00001_t001.ent"/>
+		
+		<UIImage Name="PetElement1" Image="Data\interface0013_main_G.tga" X="120" Y="150" Left="454" Top="310" Right="476" Bottom="332" Hide="1" />
+		<UIImage Name="PetElement2" Image="Data\interface0013_main_G.tga" X="120" Y="150" Left="430" Top="310" Right="452" Bottom="332" Hide="1" />
+		<UIImage Name="PetElement3" Image="Data\interface0013_main_G.tga" X="120" Y="150" Left="406" Top="310" Right="428" Bottom="332" Hide="1" />
+		<UIImage Name="PetElement4" Image="Data\interface0013_main_G.tga" X="120" Y="150" Left="381" Top="310" Right="403" Bottom="332" Hide="1" />
+		<UIImage Name="PetElement5" Image="Data\interface0013_main_G.tga" X="120" Y="150" Left="478" Top="310" Right="500" Bottom="332" Hide="1" />
+		
+		<UIImage Name="SelectPet1" Image="Data\interface0013_main_G.tga" X="172" Y="39" Left="359" Top="383" Right="494" Bottom="407" Hide="1" />
+		<UIImage Name="SelectPet2" Image="Data\interface0013_main_G.tga" X="172" Y="64" Left="359" Top="383" Right="494" Bottom="407" Hide="1" />
+		<UIImage Name="SelectPet3" Image="Data\interface0013_main_G.tga" X="172" Y="89" Left="359" Top="383" Right="494" Bottom="407" Hide="1" />
+		<UIImage Name="SelectPet4" Image="Data\interface0013_main_G.tga" X="172" Y="114" Left="359" Top="383" Right="494" Bottom="407" Hide="1" />
+		
+		<UIImage Name="PetState11" Image="Data\interface0013_main_G.tga" X="179" Y="41" Left="358" Top="310" Right="379" Bottom="330" Hide="1"/>
+		<UIImage Name="PetState12" Image="Data\interface0013_main_G.tga" X="179" Y="41" Left="358" Top="335" Right="379" Bottom="355" Hide="1"/>
+		<UIImage Name="PetState13" Image="Data\interface0013_main_G.tga" X="179" Y="41" Left="358" Top="359" Right="379" Bottom="379" Hide="1"/>
+		
+		<UIImage Name="PetState21" Image="Data\interface0013_main_G.tga" X="179" Y="66" Left="358" Top="310" Right="379" Bottom="330" Hide="1"/>
+		<UIImage Name="PetState22" Image="Data\interface0013_main_G.tga" X="179" Y="66" Left="358" Top="335" Right="379" Bottom="355" Hide="1"/>
+		<UIImage Name="PetState23" Image="Data\interface0013_main_G.tga" X="179" Y="66" Left="358" Top="359" Right="379" Bottom="379" Hide="1"/>
+		
+		<UIImage Name="PetState31" Image="Data\interface0013_main_G.tga" X="179" Y="91" Left="358" Top="310" Right="379" Bottom="330" Hide="1"/>
+		<UIImage Name="PetState32" Image="Data\interface0013_main_G.tga" X="179" Y="91" Left="358" Top="335" Right="379" Bottom="355" Hide="1"/>
+		<UIImage Name="PetState33" Image="Data\interface0013_main_G.tga" X="179" Y="91" Left="358" Top="359" Right="379" Bottom="379" Hide="1"/>
+		
+		<UIImage Name="PetState41" Image="Data\interface0013_main_G.tga" X="179" Y="116" Left="358" Top="310" Right="379" Bottom="330" Hide="1"/>
+		<UIImage Name="PetState42" Image="Data\interface0013_main_G.tga" X="179" Y="116" Left="358" Top="335" Right="379" Bottom="355" Hide="1"/>
+		<UIImage Name="PetState43" Image="Data\interface0013_main_G.tga" X="179" Y="116" Left="358" Top="359" Right="379" Bottom="379" Hide="1"/>
+		
+	
+		<StaticText Name="Pet1Text" X="195" Y="46" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="107" Height="20" NotDetected="1" Align="Center">
+			9999
+		</StaticText>
+		
+		<StaticText Name="Pet2Text" X="195" Y="71" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="107" Height="20" NotDetected="1" Align="Center">
+			9999
+		</StaticText>
+		
+		<StaticText Name="Pet3Text" X="195" Y="96" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="107" Height="20" NotDetected="1" Align="Center">
+			9999
+		</StaticText>
+		
+		<StaticText Name="Pet4Text" X="195" Y="121" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="107" Height="20" NotDetected="1" Align="Center">
+			9999
+		</StaticText>
+		
+		<StaticText Name="Pet5Text" X="195" Y="146" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="107" Height="20" NotDetected="1" Align="Center">
+			9999
+		</StaticText>
+		
+		<UIImage Name="LockPet1" Image="Data\interface0005_main_B.tga" X="295" Y="45" Left="461" Top="369" Right="471" Bottom="382" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="LockPet2" Image="Data\interface0005_main_B.tga" X="295" Y="70" Left="461" Top="369" Right="471" Bottom="382" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="LockPet3" Image="Data\interface0005_main_B.tga" X="295" Y="95" Left="461" Top="369" Right="471" Bottom="382" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="LockPet4" Image="Data\interface0005_main_B.tga" X="295" Y="120" Left="461" Top="369" Right="471" Bottom="382" AutoDelete="0" NotDetected="1" Hide="1" />
+		
+		<UIImage Name="Pet1" Image="" X="172" Y="39" Left="0" Top="0" Right="135" Bottom="24" LuaLButtonUp="SelectPet1" />
+		<UIImage Name="Pet2" Image="" X="172" Y="64" Left="0" Top="0" Right="135" Bottom="24" LuaLButtonUp="SelectPet2" />
+		<UIImage Name="Pet3" Image="" X="172" Y="89" Left="0" Top="0" Right="135" Bottom="24" LuaLButtonUp="SelectPet3" />
+		<UIImage Name="Pet4" Image="" X="172" Y="114" Left="0" Top="0" Right="135" Bottom="24" LuaLButtonUp="SelectPet4" />
+		
+		<!--
+		<StaticText Name="PetFather" X="44" Y="212" Height="20" Width="121" Row="1" Colume="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+		爸
+		</StaticText>
+		<Tips X="6" Y="212" Width="159" Height="20" Tips="此宠物父系主人的名字" TimeOutCount="500" />	
+		-->
+		<StaticText Name="PetType" X="44" Y="212" Height="20" Width="121" Row="1" Colume="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+		类型
+		</StaticText>
+		<Tips X="6" Y="212" Width="159" Height="20" Tips="宠物当前形态" TimeOutCount="500" />	
+		<!--
+		<StaticText Name="PetSex" X="208" Y="212" Height="20" Width="121" Row="1" Colume="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+		媽
+		</StaticText>-->
+		<Tips X="170" Y="212" Width="159" Height="20" Tips="宠物性别" TimeOutCount="500" />	
+		
+		<StaticText Name="PetSpirit" X="44" Y="286" Height="20" Width="121" Row="1" Colume="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+		無雙無雙無雙
+		</StaticText>
+		<Tips X="6" Y="286" Width="159" Height="20" Tips="影响战斗宠物技能使用几率" TimeOutCount="500" />	
+		
+		<StaticText Name="PetLevel" X="44" Y="238" Height="20" Width="121" Row="1" Colume="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+		99
+		</StaticText>
+		
+		
+		
+		
+		<LinerImage Name="PetFoodBar" X="206" Y="260" Image="Data\interface0013_main_G.tga" Left="392" Top="119"
+			Right="398" Bottom="137" LineWidth="122" BaseWidth="122" Hide="0" Denumerator="100" Numerator="0" />
+			
+		<StaticText Name="PetFood" X="206" Y="262" Height="20" Width="121" Row="1" Colume="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+		100/100
+		</StaticText>
+		<Tips X="170" Y="262" Width="159" Height="20" Tips="影响幼宠使用时间" TimeOutCount="500" />	
+		
+		<StaticText Name="PetFavor" X="44" Y="262" Height="20" Width="121" Row="1" Colume="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+		100/100
+		</StaticText>
+		<Tips X="6" Y="262" Width="159" Height="20" Tips="影响宠物快乐度" TimeOutCount="500" />	
+		
+		
+		<StaticText Name="PetLife" X="195" Y="376" Height="20" Width="130" Row="1" Colume="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+		30
+		</StaticText>
+		
+		<StaticText Name="PetReqLevel" X="55" Y="376" Height="20" Width="130" Row="1" Colume="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+		0
+		</StaticText>
+		<Tips X="170" Y="370" Width="159" Height="20" Tips="宠物的寿命值" TimeOutCount="500" />
+		
+		<LinerImage Name="PetVPBar" X="206" Y="285" Image="Data\interface0013_main_G.tga" Left="368" Top="119"
+			Right="374" Bottom="137" LineWidth="122" BaseWidth="122" Hide="0" Denumerator="100" Numerator="0" />
+		<StaticText Name="PetVPText" X="206" Y="286" Height="20" Width="121" Row="1" Colume="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+		8888/12345
+		</StaticText>
+		<Tips X="170" Y="285" Width="159" Height="20" Tips="影响无限寿命骑宠使用时间长短" TimeOutCount="500" />
+		
+		
+		<LinerImage Name="PetExp" X="206" Y="233" Image="Data\interface0013_main_G.tga" Left="384" Top="119"
+			Right="390" Bottom="137" LineWidth="122" BaseWidth="122" Hide="0" Denumerator="100" Numerator="0" />
+		<StaticText Name="PetExpText" X="205" Y="236" Height="20" Width="121" Row="1" Colume="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+		2222/3333
+		</StaticText>
+		
+		
+		<Button Name="PetMainCross" Image="Data\interface0013_main_G.tga" X="306" Y="8" LuaLButtonUp="ClosePet" >
+			<ButtonRect State="0" Left="356" Top="7" Right="380" Bottom="25" />	
+			<ButtonRect State="1" Left="381" Top="7" Right="405" Bottom="25" />
+			<ButtonRect State="2" Left="406" Top="7" Right="430" Bottom="25" />
+		</Button>	
+		
+		<AniIcon Name="PetSkill0" X="21" Y="332" Image=""  AutoDelete="0" LuaLButtonUp="PetUseSkill" LuaMouseIn="CheckMouseOverSkillIcon" LuaMouseOut="CheckMouseOverSkillIcon" InsertToEventList = "1" Detect = "1" Hide="1"/>
+		<AniIcon Name="PetSkill1" X="58" Y="332" Image=""  AutoDelete="0" LuaLButtonUp="PetUseSkill" LuaMouseIn="CheckMouseOverSkillIcon" LuaMouseOut="CheckMouseOverSkillIcon" InsertToEventList = "1" Detect = "1" Hide="1"/>
+		<AniIcon Name="PetSkill2" X="95" Y="332" Image=""  AutoDelete="0" LuaLButtonUp="PetUseSkill" LuaMouseIn="CheckMouseOverSkillIcon" LuaMouseOut="CheckMouseOverSkillIcon" InsertToEventList = "1" Detect = "1" Hide="1"/>
+		<AniIcon Name="PetSkill3" X="132" Y="332" Image=""  AutoDelete="0" LuaLButtonUp="PetUseSkill" LuaMouseIn="CheckMouseOverSkillIcon" LuaMouseOut="CheckMouseOverSkillIcon" InsertToEventList = "1" Detect = "1" Hide="1"/>
+		<AniIcon Name="PetSkill4" X="169" Y="332" Image=""  AutoDelete="0" LuaLButtonUp="PetUseSkill" LuaMouseIn="CheckMouseOverSkillIcon" LuaMouseOut="CheckMouseOverSkillIcon" InsertToEventList = "1" Detect = "1" Hide="1"/>
+		<AniIcon Name="PetSkill5" X="206" Y="332" Image=""  AutoDelete="0" LuaLButtonUp="PetUseSkill" LuaMouseIn="CheckMouseOverSkillIcon" LuaMouseOut="CheckMouseOverSkillIcon" InsertToEventList = "1" Detect = "1" Hide="1"/>
+		<AniIcon Name="PetSkill6" X="243" Y="332" Image=""  AutoDelete="0" LuaLButtonUp="PetUseSkill" LuaMouseIn="CheckMouseOverSkillIcon" LuaMouseOut="CheckMouseOverSkillIcon" InsertToEventList = "1" Detect = "1" Hide="1"/>
+		<AniIcon Name="PetSkill7" X="280" Y="332" Image=""  AutoDelete="0" LuaLButtonUp="PetUseSkill" LuaMouseIn="CheckMouseOverSkillIcon" LuaMouseOut="CheckMouseOverSkillIcon" InsertToEventList = "1" Detect = "1" Hide="1"/>
+		
+		
+		<UIImage Name="PetSex1" Image="Data\interface0013_main_G.tga" X="258" Y="212" Left="476" Top="120" Right="491" Bottom="134" Hide="0"/>
+		<UIImage Name="PetSex2" Image="Data\interface0013_main_G.tga" X="258" Y="212" Left="476" Top="144" Right="488" Bottom="158" Hide="0"/>
+		
+	</Panel>
+	
+	
+<!--	<Panel Name="PetSkillPanel"  Image="Data\interface0013_main_G.tga" X="345" Y="0" 
+		Left="357" Top="11" Right="555" Bottom="182" Hide="1"
+		Drag="1" DragLeft="0" DragTop="0" DragRight="198" DragBottom="171">
+	
+		<Button Name="PetSkillCross" Image="Data\interface0013_main_G.tga" X="169" Y="8" LuaLButtonUp="SwitchOffPetSkill" >
+			<ButtonRect State="0" Left="357" Top="189" Right="381" Bottom="207" />	
+			<ButtonRect State="1" Left="382" Top="189" Right="406" Bottom="207" />
+			<ButtonRect State="2" Left="407" Top="189" Right="431" Bottom="207" />
+		</Button>	
+	
+	</Panel>-->
+	
+</UI>

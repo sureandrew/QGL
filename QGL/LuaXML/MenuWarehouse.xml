@@ -1,0 +1,586 @@
+﻿<?xml version="1.0" ?>
+<!-- Our to do list data -->
+<UI>
+	<ID Name="Warehouse" />
+	<!--<Font Name="Data\mingliu.ttc" Width="12" Height="12" />-->
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	<Panel Name="WarehousePanel" Image="Data\interface0009_shop.tga" X="456" Y="73" 
+			Left="3" Top="2" Right="304" Bottom="459" LuaRButtonUp="CloseWarehousePanel" LuaKeyChar="CloseWarehousePanel" DetectImage = "1"
+			LuaTimeOut="WareHouseDetailPopupTimeOut" TimeOutCount="500"
+			Drag="1" DragLeft="0" DragTop="0" DragRight="301" DragBottom="457" >
+			
+		<UIImage Name="WarehouseName" X="135" Y="5" Image="Data\interface0009_shop.tga" NotDetected="1"   
+			Left="313" Top="161" Right="343" Bottom="177" />
+			
+		<Button Name="CloseWarehouseButton" Image="Data\interface0009_shop.tga" X="267" Y="8" LuaLButtonUp="CloseWarehousePanel">
+			<ButtonRect State="0" Left="306" Top="10" Right="330" Bottom="28" />
+			<ButtonRect State="1" Left="332" Top="10" Right="355" Bottom="28" />
+			<ButtonRect State="2" Left="356" Top="10" Right="380" Bottom="28" />
+		</Button>
+		
+		<CheckBox Name = "WarehouseSelectItem0" Image="Data\interface0009_shop.tga" X="27" Y="42"  LuaLButtonDown="SelectWarehouseItem0">
+			<CheckBoxRect Index="0" Left="365" Top="33" Right="420" Bottom="53" />
+			<CheckBoxRect Index="1" Left="365" Top="33" Right="420" Bottom="53" />
+			<CheckBoxRect Index="2" Left="439" Top="33" Right="497" Bottom="53" />
+		</CheckBox>
+		
+		<CheckBox Name = "WarehouseSelectItem1" Image="Data\interface0009_shop.tga" X="82" Y="42"  LuaLButtonDown="SelectWarehouseItem1">
+			<CheckBoxRect Index="0" Left="365" Top="33" Right="420" Bottom="53" />
+			<CheckBoxRect Index="1" Left="365" Top="33" Right="420" Bottom="53" />
+			<CheckBoxRect Index="2" Left="439" Top="33" Right="497" Bottom="53" />
+		</CheckBox>
+
+		<CheckBox Name = "WarehouseSelectPartner" Image="Data\interface0009_shop.tga" X="137" Y="42"  LuaLButtonDown="SelectWarehousePartner">
+			<CheckBoxRect Index="0" Left="365" Top="57" Right="420" Bottom="77" />
+			<CheckBoxRect Index="1" Left="365" Top="57" Right="420" Bottom="77" />
+			<CheckBoxRect Index="2" Left="439" Top="57" Right="497" Bottom="77" />
+		</CheckBox>
+			
+		<CheckBox Name = "WarehouseSelectPet" Image="Data\interface0009_shop.tga" X="192" Y="42"  LuaLButtonDown="SelectWarehousePet">
+			<CheckBoxRect Index="0" Left="365" Top="105" Right="422" Bottom="125" />
+			<CheckBoxRect Index="1" Left="365" Top="105" Right="422" Bottom="125" />
+			<CheckBoxRect Index="2" Left="439" Top="105" Right="497" Bottom="125" />
+		</CheckBox>
+		
+		<Button Name="CloseWarehouseButton" Image="Data\interface0009_shop.tga" X="108" Y="425" LuaLButtonUp="CleanWarehouse">
+			<ButtonRect State="0" Left="9" Top="523" Right="89" Bottom="544" />
+			<ButtonRect State="1" Left="91" Top="523" Right="171" Bottom="544" />
+			<ButtonRect State="2" Left="173" Top="523" Right="253" Bottom="544" />
+		</Button>
+		
+		<AniIcon Name="WarehouseItem000Icon" X="28" Y="63" Image="" AutoDelete="0" LuaLButtonUp="WarehouseItemMove" LuaRButtonUp="WarehouseItemUse" 
+			Detect = "1" Hide="1" LuaMouseIn = "WareHouseMouseIn" LuaMouseOut = "WareHouseMouseOut" InsertToEventList = "1" />
+		<StaticText Name="WarehouseItem000Stack" X="31" Y="88" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<UIImage Name="WarehouseItem000Block" X="28" Y="63" Image="Data\interface0009_shop.tga" NotDetected="1"   
+			Left="533" Top="82" Right="573" Bottom="122" />
+		
+		<AniIcon Name="WarehouseItem001Icon" X="69" Y="63" Image=""  AutoDelete="0" LuaLButtonUp="WarehouseItemMove" LuaRButtonUp="WarehouseItemUse" 
+			Detect = "1" Hide="1" LuaMouseIn = "WareHouseMouseIn" LuaMouseOut = "WareHouseMouseOut" InsertToEventList = "1" />
+		<StaticText Name="WarehouseItem001Stack" X="72" Y="88" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<UIImage Name="WarehouseItem001Block" X="69" Y="63" Image="Data\interface0009_shop.tga" NotDetected="1"   
+			Left="533" Top="82" Right="573" Bottom="122" />
+
+		<AniIcon Name="WarehouseItem002Icon" X="110" Y="63" Image=""  AutoDelete="0" LuaLButtonUp="WarehouseItemMove" LuaRButtonUp="WarehouseItemUse" 
+			Detect = "1" Hide="1" LuaMouseIn = "WareHouseMouseIn" LuaMouseOut = "WareHouseMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="WarehouseItem002Stack" X="113" Y="88" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<UIImage Name="WarehouseItem002Block" X="110" Y="63" Image="Data\interface0009_shop.tga" NotDetected="1"   
+			Left="533" Top="82" Right="573" Bottom="122" />
+		
+		<AniIcon Name="WarehouseItem003Icon" X="151" Y="63" Image=""  AutoDelete="0" LuaLButtonUp="WarehouseItemMove" LuaRButtonUp="WarehouseItemUse" 
+			Detect = "1" Hide="1" LuaMouseIn = "WareHouseMouseIn" LuaMouseOut = "WareHouseMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="WarehouseItem003Stack" X="154" Y="88" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<UIImage Name="WarehouseItem003Block" X="151" Y="63" Image="Data\interface0009_shop.tga" NotDetected="1"   
+			Left="533" Top="82" Right="573" Bottom="122" />
+
+		<AniIcon Name="WarehouseItem004Icon" X="192" Y="63" Image=""  AutoDelete="0" LuaLButtonUp="WarehouseItemMove" LuaRButtonUp="WarehouseItemUse" 
+			Detect = "1" Hide="1" LuaMouseIn = "WareHouseMouseIn" LuaMouseOut = "WareHouseMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="WarehouseItem004Stack" X="195" Y="88" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<UIImage Name="WarehouseItem004Block" X="192" Y="63" Image="Data\interface0009_shop.tga" NotDetected="1"   
+			Left="533" Top="82" Right="573" Bottom="122" />
+		
+		<AniIcon Name="WarehouseItem005Icon" X="233" Y="63" Image=""  AutoDelete="0" LuaLButtonUp="WarehouseItemMove" LuaRButtonUp="WarehouseItemUse" 
+			Detect = "1" Hide="1" LuaMouseIn = "WareHouseMouseIn" LuaMouseOut = "WareHouseMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="WarehouseItem005Stack" X="236" Y="88" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<UIImage Name="WarehouseItem005Block" X="233" Y="63" Image="Data\interface0009_shop.tga" NotDetected="1"   
+			Left="533" Top="82" Right="573" Bottom="122" />
+			
+		<AniIcon Name="WarehouseItem006Icon" X="28" Y="104" Image="" AutoDelete="0" LuaLButtonUp="WarehouseItemMove" LuaRButtonUp="WarehouseItemUse" 
+			Detect = "1" Hide="1" LuaMouseIn = "WareHouseMouseIn" LuaMouseOut = "WareHouseMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="WarehouseItem006Stack" X="31" Y="129" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<UIImage Name="WarehouseItem006Block" X="28" Y="104" Image="Data\interface0009_shop.tga" NotDetected="1"   
+			Left="533" Top="82" Right="573" Bottom="122" />
+		
+		<AniIcon Name="WarehouseItem007Icon" X="69" Y="104" Image=""  AutoDelete="0" LuaLButtonUp="WarehouseItemMove" LuaRButtonUp="WarehouseItemUse" 
+			Detect = "1" Hide="1" LuaMouseIn = "WareHouseMouseIn" LuaMouseOut = "WareHouseMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="WarehouseItem007Stack" X="72" Y="129" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<UIImage Name="WarehouseItem007Block" X="69" Y="104" Image="Data\interface0009_shop.tga" NotDetected="1"   
+			Left="533" Top="82" Right="573" Bottom="122" />
+		
+		<AniIcon Name="WarehouseItem008Icon" X="110" Y="104" Image=""  AutoDelete="0" LuaLButtonUp="WarehouseItemMove" LuaRButtonUp="WarehouseItemUse" 
+			Detect = "1" Hide="1" LuaMouseIn = "WareHouseMouseIn" LuaMouseOut = "WareHouseMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="WarehouseItem008Stack" X="113" Y="129" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<UIImage Name="WarehouseItem008Block" X="110" Y="104" Image="Data\interface0009_shop.tga" NotDetected="1"   
+			Left="533" Top="82" Right="573" Bottom="122" />
+		
+		<AniIcon Name="WarehouseItem009Icon" X="151" Y="104" Image=""  AutoDelete="0" LuaLButtonUp="WarehouseItemMove" LuaRButtonUp="WarehouseItemUse" 
+			Detect = "1" Hide="1" LuaMouseIn = "WareHouseMouseIn" LuaMouseOut = "WareHouseMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="WarehouseItem009Stack" X="154" Y="129" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<UIImage Name="WarehouseItem009Block" X="151" Y="104" Image="Data\interface0009_shop.tga" NotDetected="1"   
+			Left="533" Top="82" Right="573" Bottom="122" />
+		
+		<AniIcon Name="WarehouseItem010Icon" X="192" Y="104" Image=""  AutoDelete="0" LuaLButtonUp="WarehouseItemMove" LuaRButtonUp="WarehouseItemUse" 
+			Detect = "1" Hide="1" LuaMouseIn = "WareHouseMouseIn" LuaMouseOut = "WareHouseMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="WarehouseItem010Stack" X="195" Y="129" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<UIImage Name="WarehouseItem010Block" X="192" Y="104" Image="Data\interface0009_shop.tga" NotDetected="1"   
+			Left="533" Top="82" Right="573" Bottom="122" />
+		
+		<AniIcon Name="WarehouseItem011Icon" X="233" Y="104" Image=""  AutoDelete="0" LuaLButtonUp="WarehouseItemMove" LuaRButtonUp="WarehouseItemUse" 
+			Detect = "1" Hide="1" LuaMouseIn = "WareHouseMouseIn" LuaMouseOut = "WareHouseMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="WarehouseItem011Stack" X="236" Y="129" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<UIImage Name="WarehouseItem011Block" X="233" Y="104" Image="Data\interface0009_shop.tga" NotDetected="1"   
+			Left="533" Top="82" Right="573" Bottom="122" />
+
+		<AniIcon Name="WarehouseItem012Icon" X="28" Y="145" Image="" AutoDelete="0" LuaLButtonUp="WarehouseItemMove" LuaRButtonUp="WarehouseItemUse" 
+			Detect = "1" Hide="1" LuaMouseIn = "WareHouseMouseIn" LuaMouseOut = "WareHouseMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="WarehouseItem012Stack" X="31" Y="170" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<UIImage Name="WarehouseItem012Block" X="28" Y="145" Image="Data\interface0009_shop.tga" NotDetected="1"   
+			Left="533" Top="82" Right="573" Bottom="122" />
+		
+		<AniIcon Name="WarehouseItem013Icon" X="69" Y="145" Image=""  AutoDelete="0" LuaLButtonUp="WarehouseItemMove" LuaRButtonUp="WarehouseItemUse" 
+			Detect = "1" Hide="1" LuaMouseIn = "WareHouseMouseIn" LuaMouseOut = "WareHouseMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="WarehouseItem013Stack" X="72" Y="170" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<UIImage Name="WarehouseItem013Block" X="69" Y="145" Image="Data\interface0009_shop.tga" NotDetected="1"   
+			Left="533" Top="82" Right="573" Bottom="122" />
+		
+		<AniIcon Name="WarehouseItem014Icon" X="110" Y="145" Image=""  AutoDelete="0" LuaLButtonUp="WarehouseItemMove" LuaRButtonUp="WarehouseItemUse" 
+			Detect = "1" Hide="1" LuaMouseIn = "WareHouseMouseIn" LuaMouseOut = "WareHouseMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="WarehouseItem014Stack" X="113" Y="170" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<UIImage Name="WarehouseItem014Block" X="110" Y="145" Image="Data\interface0009_shop.tga" NotDetected="1"   
+			Left="533" Top="82" Right="573" Bottom="122" />
+		
+		<AniIcon Name="WarehouseItem015Icon" X="151" Y="145" Image=""  AutoDelete="0" LuaLButtonUp="WarehouseItemMove" LuaRButtonUp="WarehouseItemUse" 
+			Detect = "1" Hide="1" LuaMouseIn = "WareHouseMouseIn" LuaMouseOut = "WareHouseMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="WarehouseItem015Stack" X="154" Y="170" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<UIImage Name="WarehouseItem015Block" X="151" Y="145" Image="Data\interface0009_shop.tga" NotDetected="1"   
+			Left="533" Top="82" Right="573" Bottom="122" />
+		
+		<AniIcon Name="WarehouseItem016Icon" X="192" Y="145" Image=""  AutoDelete="0" LuaLButtonUp="WarehouseItemMove" LuaRButtonUp="WarehouseItemUse" 
+			Detect = "1" Hide="1" LuaMouseIn = "WareHouseMouseIn" LuaMouseOut = "WareHouseMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="WarehouseItem016Stack" X="195" Y="170" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<UIImage Name="WarehouseItem016Block" X="192" Y="145" Image="Data\interface0009_shop.tga" NotDetected="1"   
+			Left="533" Top="82" Right="573" Bottom="122" />
+				
+		<AniIcon Name="WarehouseItem017Icon" X="233" Y="145" Image=""  AutoDelete="0" LuaLButtonUp="WarehouseItemMove" LuaRButtonUp="WarehouseItemUse" 
+			Detect = "1" Hide="1" LuaMouseIn = "WareHouseMouseIn" LuaMouseOut = "WareHouseMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="WarehouseItem017Stack" X="236" Y="170" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<UIImage Name="WarehouseItem017Block" X="233" Y="145" Image="Data\interface0009_shop.tga" NotDetected="1"   
+			Left="533" Top="82" Right="573" Bottom="122" />
+
+		<AniIcon Name="WarehouseItem018Icon" X="28" Y="186" Image="" AutoDelete="0" LuaLButtonUp="WarehouseItemMove" LuaRButtonUp="WarehouseItemUse" 
+			Detect = "1" Hide="1" LuaMouseIn = "WareHouseMouseIn" LuaMouseOut = "WareHouseMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="WarehouseItem018Stack" X="31" Y="211" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<UIImage Name="WarehouseItem018Block" X="28" Y="186" Image="Data\interface0009_shop.tga" NotDetected="1"   
+			Left="533" Top="82" Right="573" Bottom="122" />
+		
+		<AniIcon Name="WarehouseItem019Icon" X="69" Y="186" Image=""  AutoDelete="0" LuaLButtonUp="WarehouseItemMove" LuaRButtonUp="WarehouseItemUse" 
+			Detect = "1" Hide="1" LuaMouseIn = "WareHouseMouseIn" LuaMouseOut = "WareHouseMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="WarehouseItem019Stack" X="72" Y="211" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<UIImage Name="WarehouseItem019Block" X="69" Y="186" Image="Data\interface0009_shop.tga" NotDetected="1"   
+			Left="533" Top="82" Right="573" Bottom="122" />
+		
+		<AniIcon Name="WarehouseItem020Icon" X="110" Y="186" Image=""  AutoDelete="0" LuaLButtonUp="WarehouseItemMove" LuaRButtonUp="WarehouseItemUse" 
+			Detect = "1" Hide="1" LuaMouseIn = "WareHouseMouseIn" LuaMouseOut = "WareHouseMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="WarehouseItem020Stack" X="113" Y="211" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<UIImage Name="WarehouseItem020Block" X="110" Y="186" Image="Data\interface0009_shop.tga" NotDetected="1"   
+			Left="533" Top="82" Right="573" Bottom="122" />
+		
+		<AniIcon Name="WarehouseItem021Icon" X="151" Y="186" Image=""  AutoDelete="0" LuaLButtonUp="WarehouseItemMove" LuaRButtonUp="WarehouseItemUse" 
+			Detect = "1" Hide="1" LuaMouseIn = "WareHouseMouseIn" LuaMouseOut = "WareHouseMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="WarehouseItem021Stack" X="154" Y="211" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<UIImage Name="WarehouseItem021Block" X="151" Y="186" Image="Data\interface0009_shop.tga" NotDetected="1"   
+			Left="533" Top="82" Right="573" Bottom="122" />
+		
+		<AniIcon Name="WarehouseItem022Icon" X="192" Y="186" Image=""  AutoDelete="0" LuaLButtonUp="WarehouseItemMove" LuaRButtonUp="WarehouseItemUse" 
+			Detect = "1" Hide="1" LuaMouseIn = "WareHouseMouseIn" LuaMouseOut = "WareHouseMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="WarehouseItem022Stack" X="195" Y="211" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<UIImage Name="WarehouseItem022Block" X="192" Y="186" Image="Data\interface0009_shop.tga" NotDetected="1"   
+			Left="533" Top="82" Right="573" Bottom="122" />
+		
+		<AniIcon Name="WarehouseItem023Icon" X="233" Y="186" Image=""  AutoDelete="0" LuaLButtonUp="WarehouseItemMove" LuaRButtonUp="WarehouseItemUse" 
+			Detect = "1" Hide="1" LuaMouseIn = "WareHouseMouseIn" LuaMouseOut = "WareHouseMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="WarehouseItem023Stack" X="236" Y="211" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<UIImage Name="WarehouseItem023Block" X="233" Y="186" Image="Data\interface0009_shop.tga" NotDetected="1"   
+			Left="533" Top="82" Right="573" Bottom="122" />
+
+		<AniIcon Name="WarehouseItem024Icon" X="28" Y="227" Image="" AutoDelete="0" LuaLButtonUp="WarehouseItemMove" LuaRButtonUp="WarehouseItemUse" 
+			Detect = "1" Hide="1" LuaMouseIn = "WareHouseMouseIn" LuaMouseOut = "WareHouseMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="WarehouseItem024Stack" X="31" Y="252" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<UIImage Name="WarehouseItem024Block" X="28" Y="227" Image="Data\interface0009_shop.tga" NotDetected="1"   
+			Left="533" Top="82" Right="573" Bottom="122" />
+		
+		<AniIcon Name="WarehouseItem025Icon" X="69" Y="227" Image=""  AutoDelete="0" LuaLButtonUp="WarehouseItemMove" LuaRButtonUp="WarehouseItemUse" 
+			Detect = "1" Hide="1" LuaMouseIn = "WareHouseMouseIn" LuaMouseOut = "WareHouseMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="WarehouseItem025Stack" X="72" Y="252" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<UIImage Name="WarehouseItem025Block" X="69" Y="227" Image="Data\interface0009_shop.tga" NotDetected="1"   
+			Left="533" Top="82" Right="573" Bottom="122" />
+		
+		<AniIcon Name="WarehouseItem026Icon" X="110" Y="227" Image=""  AutoDelete="0" LuaLButtonUp="WarehouseItemMove" LuaRButtonUp="WarehouseItemUse" 
+			Detect = "1" Hide="1" LuaMouseIn = "WareHouseMouseIn" LuaMouseOut = "WareHouseMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="WarehouseItem026Stack" X="113" Y="252" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<UIImage Name="WarehouseItem026Block" X="110" Y="227" Image="Data\interface0009_shop.tga" NotDetected="1"   
+			Left="533" Top="82" Right="573" Bottom="122" />
+		
+		<AniIcon Name="WarehouseItem027Icon" X="151" Y="227" Image=""  AutoDelete="0" LuaLButtonUp="WarehouseItemMove" LuaRButtonUp="WarehouseItemUse"
+			Detect = "1" Hide="1" LuaMouseIn = "WareHouseMouseIn" LuaMouseOut = "WareHouseMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="WarehouseItem027Stack" X="154" Y="252" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<UIImage Name="WarehouseItem027Block" X="151" Y="227" Image="Data\interface0009_shop.tga" NotDetected="1"   
+			Left="533" Top="82" Right="573" Bottom="122" />
+
+		<AniIcon Name="WarehouseItem028Icon" X="192" Y="227" Image=""  AutoDelete="0" LuaLButtonUp="WarehouseItemMove" LuaRButtonUp="WarehouseItemUse"
+			Detect = "1" Hide="1" LuaMouseIn = "WareHouseMouseIn" LuaMouseOut = "WareHouseMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="WarehouseItem028Stack" X="195" Y="252" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<UIImage Name="WarehouseItem028Block" X="192" Y="227" Image="Data\interface0009_shop.tga" NotDetected="1"   
+			Left="533" Top="82" Right="573" Bottom="122" />
+		
+		<AniIcon Name="WarehouseItem029Icon" X="233" Y="227" Image=""  AutoDelete="0" LuaLButtonUp="WarehouseItemMove" LuaRButtonUp="WarehouseItemUse"
+			Detect = "1" Hide="1" LuaMouseIn = "WareHouseMouseIn" LuaMouseOut = "WareHouseMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="WarehouseItem029Stack" X="236" Y="252" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<UIImage Name="WarehouseItem029Block" X="233" Y="227" Image="Data\interface0009_shop.tga" NotDetected="1"   
+			Left="533" Top="82" Right="573" Bottom="122" />
+
+		<AniIcon Name="WarehouseItem030Icon" X="28" Y="268" Image="" AutoDelete="0" LuaLButtonUp="WarehouseItemMove" LuaRButtonUp="WarehouseItemUse"
+			Detect = "1" Hide="1" LuaMouseIn = "WareHouseMouseIn" LuaMouseOut = "WareHouseMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="WarehouseItem030Stack" X="31" Y="293" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<UIImage Name="WarehouseItem030Block" X="28" Y="268" Image="Data\interface0009_shop.tga" NotDetected="1"   
+			Left="533" Top="82" Right="573" Bottom="122" />
+		
+		<AniIcon Name="WarehouseItem031Icon" X="69" Y="268" Image=""  AutoDelete="0" LuaLButtonUp="WarehouseItemMove" LuaRButtonUp="WarehouseItemUse"
+			Detect = "1" Hide="1" LuaMouseIn = "WareHouseMouseIn" LuaMouseOut = "WareHouseMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="WarehouseItem031Stack" X="72" Y="293" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<UIImage Name="WarehouseItem031Block" X="69" Y="268" Image="Data\interface0009_shop.tga" NotDetected="1"   
+			Left="533" Top="82" Right="573" Bottom="122" />
+		
+		<AniIcon Name="WarehouseItem032Icon" X="110" Y="268" Image=""  AutoDelete="0" LuaLButtonUp="WarehouseItemMove" LuaRButtonUp="WarehouseItemUse"
+			Detect = "1" Hide="1" LuaMouseIn = "WareHouseMouseIn" LuaMouseOut = "WareHouseMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="WarehouseItem032Stack" X="113" Y="293" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<UIImage Name="WarehouseItem032Block" X="110" Y="268" Image="Data\interface0009_shop.tga" NotDetected="1"   
+			Left="533" Top="82" Right="573" Bottom="122" />
+		
+		<AniIcon Name="WarehouseItem033Icon" X="151" Y="268" Image=""  AutoDelete="0" LuaLButtonUp="WarehouseItemMove" LuaRButtonUp="WarehouseItemUse"
+			Detect = "1" Hide="1" LuaMouseIn = "WareHouseMouseIn" LuaMouseOut = "WareHouseMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="WarehouseItem033Stack" X="154" Y="293" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<UIImage Name="WarehouseItem033Block" X="151" Y="268" Image="Data\interface0009_shop.tga" NotDetected="1"   
+			Left="533" Top="82" Right="573" Bottom="122" />
+		
+		<AniIcon Name="WarehouseItem034Icon" X="192" Y="268" Image=""  AutoDelete="0" LuaLButtonUp="WarehouseItemMove" LuaRButtonUp="WarehouseItemUse"
+			Detect = "1" Hide="1" LuaMouseIn = "WareHouseMouseIn" LuaMouseOut = "WareHouseMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="WarehouseItem034Stack" X="195" Y="293" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<UIImage Name="WarehouseItem034Block" X="192" Y="268" Image="Data\interface0009_shop.tga" NotDetected="1"   
+			Left="533" Top="82" Right="573" Bottom="122" />
+		
+		<AniIcon Name="WarehouseItem035Icon" X="233" Y="268" Image=""  AutoDelete="0" LuaLButtonUp="WarehouseItemMove" LuaRButtonUp="WarehouseItemUse"
+			Detect = "1" Hide="1" LuaMouseIn = "WareHouseMouseIn" LuaMouseOut = "WareHouseMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="WarehouseItem035Stack" X="236" Y="293" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<UIImage Name="WarehouseItem035Block" X="233" Y="268" Image="Data\interface0009_shop.tga" NotDetected="1"   
+			Left="533" Top="82" Right="573" Bottom="122" />
+
+		<AniIcon Name="WarehouseItem036Icon" X="28" Y="309" Image="" AutoDelete="0" LuaLButtonUp="WarehouseItemMove" LuaRButtonUp="WarehouseItemUse"
+			Detect = "1" Hide="1" LuaMouseIn = "WareHouseMouseIn" LuaMouseOut = "WareHouseMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="WarehouseItem036Stack" X="31" Y="334" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<UIImage Name="WarehouseItem036Block" X="28" Y="309" Image="Data\interface0009_shop.tga" NotDetected="1"   
+			Left="533" Top="82" Right="573" Bottom="122" />
+		
+		<AniIcon Name="WarehouseItem037Icon" X="69" Y="309" Image=""  AutoDelete="0" LuaLButtonUp="WarehouseItemMove" LuaRButtonUp="WarehouseItemUse"
+			Detect = "1" Hide="1" LuaMouseIn = "WareHouseMouseIn" LuaMouseOut = "WareHouseMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="WarehouseItem037Stack" X="72" Y="334" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<UIImage Name="WarehouseItem037Block" X="69" Y="309" Image="Data\interface0009_shop.tga" NotDetected="1"   
+			Left="533" Top="82" Right="573" Bottom="122" />
+		
+		<AniIcon Name="WarehouseItem038Icon" X="110" Y="309" Image=""  AutoDelete="0" LuaLButtonUp="WarehouseItemMove" LuaRButtonUp="WarehouseItemUse"
+			Detect = "1" Hide="1" LuaMouseIn = "WareHouseMouseIn" LuaMouseOut = "WareHouseMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="WarehouseItem038Stack" X="113" Y="334" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<UIImage Name="WarehouseItem038Block" X="110" Y="309" Image="Data\interface0009_shop.tga" NotDetected="1"   
+			Left="533" Top="82" Right="573" Bottom="122" />
+		
+		<AniIcon Name="WarehouseItem039Icon" X="151" Y="309" Image=""  AutoDelete="0" LuaLButtonUp="WarehouseItemMove" LuaRButtonUp="WarehouseItemUse"
+			Detect = "1" Hide="1" LuaMouseIn = "WareHouseMouseIn" LuaMouseOut = "WareHouseMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="WarehouseItem039Stack" X="154" Y="334" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<UIImage Name="WarehouseItem039Block" X="151" Y="309" Image="Data\interface0009_shop.tga" NotDetected="1"   
+			Left="533" Top="82" Right="573" Bottom="122" />
+		
+		<AniIcon Name="WarehouseItem040Icon" X="192" Y="309" Image=""  AutoDelete="0" LuaLButtonUp="WarehouseItemMove" LuaRButtonUp="WarehouseItemUse"
+			Detect = "1" Hide="1" LuaMouseIn = "WareHouseMouseIn" LuaMouseOut = "WareHouseMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="WarehouseItem040Stack" X="195" Y="334" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<UIImage Name="WarehouseItem040Block" X="192" Y="309" Image="Data\interface0009_shop.tga" NotDetected="1"   
+			Left="533" Top="82" Right="573" Bottom="122" />
+		
+		<AniIcon Name="WarehouseItem041Icon" X="233" Y="309" Image=""  AutoDelete="0" LuaLButtonUp="WarehouseItemMove" LuaRButtonUp="WarehouseItemUse"
+			Detect = "1" Hide="1" LuaMouseIn = "WareHouseMouseIn" LuaMouseOut = "WareHouseMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="WarehouseItem041Stack" X="236" Y="334" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<UIImage Name="WarehouseItem041Block" X="233" Y="309" Image="Data\interface0009_shop.tga" NotDetected="1"   
+			Left="533" Top="82" Right="573" Bottom="122" />
+
+		<AniIcon Name="WarehouseItem042Icon" X="28" Y="350" Image="" AutoDelete="0" LuaLButtonUp="WarehouseItemMove" LuaRButtonUp="WarehouseItemUse"
+			Detect = "1" Hide="1" LuaMouseIn = "WareHouseMouseIn" LuaMouseOut = "WareHouseMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="WarehouseItem042Stack" X="31" Y="375" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<UIImage Name="WarehouseItem042Block" X="28" Y="350" Image="Data\interface0009_shop.tga" NotDetected="1"   
+			Left="533" Top="82" Right="573" Bottom="122" />
+		
+		<AniIcon Name="WarehouseItem043Icon" X="69" Y="350" Image=""  AutoDelete="0" LuaLButtonUp="WarehouseItemMove" LuaRButtonUp="WarehouseItemUse"
+			Detect = "1" Hide="1" LuaMouseIn = "WareHouseMouseIn" LuaMouseOut = "WareHouseMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="WarehouseItem043Stack" X="72" Y="375" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<UIImage Name="WarehouseItem043Block" X="69" Y="350" Image="Data\interface0009_shop.tga" NotDetected="1"   
+			Left="533" Top="82" Right="573" Bottom="122" />
+		
+		<AniIcon Name="WarehouseItem044Icon" X="110" Y="350" Image=""  AutoDelete="0" LuaLButtonUp="WarehouseItemMove" LuaRButtonUp="WarehouseItemUse"
+			Detect = "1" Hide="1" LuaMouseIn = "WareHouseMouseIn" LuaMouseOut = "WareHouseMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="WarehouseItem044Stack" X="113" Y="375" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<UIImage Name="WarehouseItem044Block" X="110" Y="350" Image="Data\interface0009_shop.tga" NotDetected="1"   
+			Left="533" Top="82" Right="573" Bottom="122" />
+		
+		<AniIcon Name="WarehouseItem045Icon" X="151" Y="350" Image=""  AutoDelete="0" LuaLButtonUp="WarehouseItemMove" LuaRButtonUp="WarehouseItemUse"
+			Detect = "1" Hide="1" LuaMouseIn = "WareHouseMouseIn" LuaMouseOut = "WareHouseMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="WarehouseItem045Stack" X="154" Y="375" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<UIImage Name="WarehouseItem045Block" X="151" Y="350" Image="Data\interface0009_shop.tga" NotDetected="1"   
+			Left="533" Top="82" Right="573" Bottom="122" />
+		
+		<AniIcon Name="WarehouseItem046Icon" X="192" Y="350" Image=""  AutoDelete="0" LuaLButtonUp="WarehouseItemMove" LuaRButtonUp="WarehouseItemUse"
+			Detect = "1" Hide="1" LuaMouseIn = "WareHouseMouseIn" LuaMouseOut = "WareHouseMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="WarehouseItem046Stack" X="195" Y="375" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<UIImage Name="WarehouseItem046Block" X="192" Y="350" Image="Data\interface0009_shop.tga" NotDetected="1"   
+			Left="533" Top="82" Right="573" Bottom="122" />
+		
+		<AniIcon Name="WarehouseItem047Icon" X="233" Y="350" Image=""  AutoDelete="0" LuaLButtonUp="WarehouseItemMove" LuaRButtonUp="WarehouseItemUse"
+			Detect = "1" Hide="1" LuaMouseIn = "WareHouseMouseIn" LuaMouseOut = "WareHouseMouseOut" InsertToEventList = "1"/>	
+		<StaticText Name="WarehouseItem047Stack" X="236" Y="375" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<UIImage Name="WarehouseItem047Block" X="233" Y="350" Image="Data\interface0009_shop.tga" NotDetected="1"   
+			Left="533" Top="82" Right="573" Bottom="122" />
+		
+		<UIImage Name="WarehousePPBack00" X="27" Y="62" Image="Data\interface0009_shop.tga" NotDetected="1"   
+			Left="550" Top="416" Right="797" Bottom="458" />
+		<UIImage Name="WarehousePPBack01" X="27" Y="103" Image="Data\interface0009_shop.tga" NotDetected="1"   
+			Left="550" Top="416" Right="797" Bottom="458" />
+		<UIImage Name="WarehousePPBack02" X="27" Y="144" Image="Data\interface0009_shop.tga" NotDetected="1"   
+			Left="550" Top="416" Right="797" Bottom="458" />
+		<UIImage Name="WarehousePPBack03" X="27" Y="185" Image="Data\interface0009_shop.tga" NotDetected="1"   
+			Left="550" Top="416" Right="797" Bottom="458" />
+		<UIImage Name="WarehousePPBack04" X="27" Y="226" Image="Data\interface0009_shop.tga" NotDetected="1"   
+			Left="550" Top="416" Right="797" Bottom="458" />
+		<UIImage Name="WarehousePPBack05" X="27" Y="267" Image="Data\interface0009_shop.tga" NotDetected="1"   
+			Left="550" Top="416" Right="797" Bottom="458" />
+		<UIImage Name="WarehousePPBack06" X="27" Y="308" Image="Data\interface0009_shop.tga" NotDetected="1"   
+			Left="550" Top="416" Right="797" Bottom="458" />
+		<UIImage Name="WarehousePPBack07" X="27" Y="349" Image="Data\interface0009_shop.tga" NotDetected="1"   
+			Left="550" Top="416" Right="797" Bottom="458" />
+		
+		<AniIcon Name="WarehousePP00Icon" X="31" Y="66" Image=""  AutoDelete="0" LuaLButtonUp="WarehousePPMove00" LuaRButtonUp="WarehousePPUse00"
+			Detect = "1" Hide="1" LuaMouseIn = "WareHouseMouseIn" LuaMouseOut = "WareHouseMouseOut" InsertToEventList = "1"/>	
+		<UIImage Name="WarehousePP00Block" X="28" Y="63" Image="Data\interface0009_shop.tga" NotDetected="1" Hide="1"
+			Left="533" Top="82" Right="573" Bottom="122" />
+		<StaticText Name="WarehousePP00Name" X="80" Y="70" Width="160" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>	
+		<StaticText Name="WarehousePP00Lvl" X="80" Y="89" Width="160" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<AniIcon Name="WarehousePP01Icon" X="31" Y="107" Image=""  AutoDelete="0" LuaLButtonUp="WarehousePPMove01" LuaRButtonUp="WarehousePPUse01"
+			Detect = "1" Hide="1" LuaMouseIn = "WareHouseMouseIn" LuaMouseOut = "WareHouseMouseOut" InsertToEventList = "1"/>	
+		<UIImage Name="WarehousePP01Block" X="28" Y="104" Image="Data\interface0009_shop.tga" NotDetected="1" Hide="1"
+			Left="533" Top="82" Right="573" Bottom="122" />
+		<StaticText Name="WarehousePP01Name" X="80" Y="111" Width="160" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>	
+		<StaticText Name="WarehousePP01Lvl" X="80" Y="130" Width="160" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<AniIcon Name="WarehousePP02Icon" X="31" Y="148" Image=""  AutoDelete="0" LuaLButtonUp="WarehousePPMove02" LuaRButtonUp="WarehousePPUse02"
+			Detect = "1" Hide="1" LuaMouseIn = "WareHouseMouseIn" LuaMouseOut = "WareHouseMouseOut" InsertToEventList = "1"/>	
+		<UIImage Name="WarehousePP02Block" X="28" Y="145" Image="Data\interface0009_shop.tga" NotDetected="1" Hide="1"
+			Left="533" Top="82" Right="573" Bottom="122" />
+		<StaticText Name="WarehousePP02Name" X="80" Y="152" Width="160" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>	
+		<StaticText Name="WarehousePP02Lvl" X="80" Y="171" Width="160" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<AniIcon Name="WarehousePP03Icon" X="31" Y="189" Image=""  AutoDelete="0" LuaLButtonUp="WarehousePPMove03" LuaRButtonUp="WarehousePPUse03"
+			Detect = "1" Hide="1" LuaMouseIn = "WareHouseMouseIn" LuaMouseOut = "WareHouseMouseOut" InsertToEventList = "1"/>	
+		<UIImage Name="WarehousePP03Block" X="28" Y="186" Image="Data\interface0009_shop.tga" NotDetected="1" Hide="1"
+			Left="533" Top="82" Right="573" Bottom="122" />
+		<StaticText Name="WarehousePP03Name" X="80" Y="193" Width="160" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>	
+		<StaticText Name="WarehousePP03Lvl" X="80" Y="212" Width="160" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<AniIcon Name="WarehousePP04Icon" X="31" Y="230" Image=""  AutoDelete="0" LuaLButtonUp="WarehousePPMove04" LuaRButtonUp="WarehousePPUse04"
+			Detect = "1" Hide="1" LuaMouseIn = "WareHouseMouseIn" LuaMouseOut = "WareHouseMouseOut" InsertToEventList = "1"/>	
+		<UIImage Name="WarehousePP04Block" X="28" Y="227" Image="Data\interface0009_shop.tga" NotDetected="1" Hide="1"
+			Left="533" Top="82" Right="573" Bottom="122" />
+		<StaticText Name="WarehousePP04Name" X="80" Y="234" Width="160" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>	
+		<StaticText Name="WarehousePP04Lvl" X="80" Y="253" Width="160" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<AniIcon Name="WarehousePP05Icon" X="31" Y="271" Image=""  AutoDelete="0" LuaLButtonUp="WarehousePPMove05" LuaRButtonUp="WarehousePPUse05"
+			Detect = "1" Hide="1" LuaMouseIn = "WareHouseMouseIn" LuaMouseOut = "WareHouseMouseOut" InsertToEventList = "1"/>	
+		<UIImage Name="WarehousePP05Block" X="28" Y="268" Image="Data\interface0009_shop.tga" NotDetected="1" Hide="1"
+			Left="533" Top="82" Right="573" Bottom="122" />
+		<StaticText Name="WarehousePP05Name" X="80" Y="275" Width="160" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>	
+		<StaticText Name="WarehousePP05Lvl" X="80" Y="294" Width="160" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<AniIcon Name="WarehousePP06Icon" X="31" Y="312" Image=""  AutoDelete="0" LuaLButtonUp="WarehousePPMove06" LuaRButtonUp="WarehousePPUse06"
+			Detect = "1" Hide="1" LuaMouseIn = "WareHouseMouseIn" LuaMouseOut = "WareHouseMouseOut" InsertToEventList = "1"/>	
+		<UIImage Name="WarehousePP06Block" X="28" Y="309" Image="Data\interface0009_shop.tga" NotDetected="1" Hide="1"
+			Left="533" Top="82" Right="573" Bottom="122" />
+		<StaticText Name="WarehousePP06Name" X="80" Y="316" Width="160" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>	
+		<StaticText Name="WarehousePP06Lvl" X="80" Y="335" Width="160" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<AniIcon Name="WarehousePP07Icon" X="31" Y="355" Image=""  AutoDelete="0" LuaLButtonUp="WarehousePPMove07" LuaRButtonUp="WarehousePPUse07"
+			Detect = "1" Hide="1" LuaMouseIn = "WareHouseMouseIn" LuaMouseOut = "WareHouseMouseOut" InsertToEventList = "1"/>	
+		<UIImage Name="WarehousePP07Block" X="28" Y="350" Image="Data\interface0009_shop.tga" NotDetected="1" Hide="1"
+			Left="533" Top="82" Right="573" Bottom="122" />
+		<StaticText Name="WarehousePP07Name" X="80" Y="357" Width="160" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>	
+		<StaticText Name="WarehousePP07Lvl" X="80" Y="376" Width="160" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+	</Panel>
+	
+	<!-- WareHouseItemCount -->
+	<Panel Name="WareHouseItemCountPanel" X="253" Y="267" Image="Data\inerface0004_main_A.tga" Left="314" Top="293" Right="542" Bottom="391" 
+		Drag="1" DragLeft="0" DragTop="0" DragRight="228" DragBottom="98"  Hide="1">
+		
+		<UIImage X="12" Y="37" Image="Data\inerface0004_main_A.tga" Left="544" Top="394" Right="647" Bottom="412"/>
+		
+		<EditBox Name="NumberOfWareHouseItem" X="22" Y="40" Row="1" Column="3" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" Limit="5" NumOnly="1">
+			1 
+		</EditBox>
+					
+		<StaticText Name="WareHouseText" X="12" Y="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFEDD97A" ShadowColor="FF000000">
+			请输入给予数量
+		</StaticText>
+		
+		<Button Name="ConfirmWareHouseYes" Image="Data\inerface0004_main_A.tga" X="86" Y="60" LuaLButtonUp="ConfirmWareHouseNum">
+			<ButtonRect State="0" Left="4" Top="511" Right="68" Bottom="528" />
+			<ButtonRect State="1" Left="70" Top="511" Right="134" Bottom="528" />
+			<ButtonRect State="2" Left="136" Top="511" Right="200" Bottom="528" />
+		</Button>
+				
+		<Button Name="ConfirmWareHouseNo" Image="Data\inerface0004_main_A.tga" X="153" Y="60" LuaLButtonUp="CloseWareHouseCount">
+			<ButtonRect State="0" Left="4" Top="530" Right="68" Bottom="547" />
+			<ButtonRect State="1" Left="70" Top="530" Right="134" Bottom="547" />
+			<ButtonRect State="2" Left="136" Top="530" Right="200" Bottom="547" />
+		</Button>
+		
+		<Button Name="WareHouseMaxStack" Image="Data\inerface0004_main_A.tga" X="155" Y="38" LuaLButtonUp="WareHouseMaxStack">
+			<ButtonRect State="0" Left="384" Top="395" Right="414" Bottom="411" />
+			<ButtonRect State="1" Left="384" Top="412" Right="414" Bottom="428" />
+			<ButtonRect State="2" Left="384" Top="429" Right="414" Bottom="445" />
+		</Button>
+		
+		<Button Name="WareHouseSetZero" Image="Data\inerface0004_main_A.tga" X="186" Y="38" LuaLButtonUp="WareHouseSetZero">
+			<ButtonRect State="0" Left="352" Top="395" Right="382" Bottom="411" />
+			<ButtonRect State="1" Left="352" Top="412" Right="382" Bottom="428" />
+			<ButtonRect State="2" Left="352" Top="429" Right="382" Bottom="445" />
+		</Button>
+		
+		<Button Name="AddOneWareHouseStack" Image="Data\inerface0004_main_A.tga" X="119" Y="38" LuaLButtonUp="WareHouseAddOne">
+			<ButtonRect State="0" Left="314" Top="395" Right="331" Bottom="411" />
+			<ButtonRect State="1" Left="314" Top="412" Right="331" Bottom="428" />
+			<ButtonRect State="2" Left="314" Top="429" Right="331" Bottom="445" />
+		</Button>
+		
+		<Button Name="DiffOneWareHouseStack" Image="Data\inerface0004_main_A.tga" X="137" Y="38" LuaLButtonUp="WareHouseDiffOne">
+			<ButtonRect State="0" Left="333" Top="395" Right="350" Bottom="411" />
+			<ButtonRect State="1" Left="333" Top="412" Right="350" Bottom="428" />
+			<ButtonRect State="2" Left="333" Top="429" Right="350" Bottom="445" />
+		</Button>
+	</Panel>
+	
+	<!-- WareHouseToItemItemCount -->
+	<Panel Name="WareHouseToItemCountPanel" X="253" Y="267" Image="Data\inerface0004_main_A.tga" Left="314" Top="293" Right="542" Bottom="391" 
+		Drag="1" DragLeft="0" DragTop="0" DragRight="228" DragBottom="98"  Hide="1">
+		
+		<UIImage X="12" Y="37" Image="Data\inerface0004_main_A.tga" Left="544" Top="394" Right="647" Bottom="412"/>
+		
+		<EditBox Name="NumberOfWareHouseToItem" X="22" Y="40" Row="1" Column="3" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" Limit="5" NumOnly="1">
+			1 
+		</EditBox>
+					
+		<StaticText Name="WareHouseToItemText" X="12" Y="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFEDD97A" ShadowColor="FF000000">
+			请输入给予数量
+		</StaticText>
+		
+		<Button Name="ConfirmWareHouseToItemYes" Image="Data\inerface0004_main_A.tga" X="86" Y="60" LuaLButtonUp="ConfirmWareHouseToItemNum">
+			<ButtonRect State="0" Left="4" Top="511" Right="68" Bottom="528" />
+			<ButtonRect State="1" Left="70" Top="511" Right="134" Bottom="528" />
+			<ButtonRect State="2" Left="136" Top="511" Right="200" Bottom="528" />
+		</Button>
+				
+		<Button Name="ConfirmWareHouseToItemNo" Image="Data\inerface0004_main_A.tga" X="153" Y="60" LuaLButtonUp="CloseWareHouseToItemCount">
+			<ButtonRect State="0" Left="4" Top="530" Right="68" Bottom="547" />
+			<ButtonRect State="1" Left="70" Top="530" Right="134" Bottom="547" />
+			<ButtonRect State="2" Left="136" Top="530" Right="200" Bottom="547" />
+		</Button>
+		
+		<Button Name="WareHouseToItemMaxStack" Image="Data\inerface0004_main_A.tga" X="155" Y="38" LuaLButtonUp="WareHouseToItemMaxStack">
+			<ButtonRect State="0" Left="384" Top="395" Right="414" Bottom="411" />
+			<ButtonRect State="1" Left="384" Top="412" Right="414" Bottom="428" />
+			<ButtonRect State="2" Left="384" Top="429" Right="414" Bottom="445" />
+		</Button>
+		
+		<Button Name="WareHouseToItemSetZero" Image="Data\inerface0004_main_A.tga" X="186" Y="38" LuaLButtonUp="WareHouseToItemSetZero">
+			<ButtonRect State="0" Left="352" Top="395" Right="382" Bottom="411" />
+			<ButtonRect State="1" Left="352" Top="412" Right="382" Bottom="428" />
+			<ButtonRect State="2" Left="352" Top="429" Right="382" Bottom="445" />
+		</Button>
+		
+		<Button Name="AddOneWareHouseToItemStack" Image="Data\inerface0004_main_A.tga" X="119" Y="38" LuaLButtonUp="WareHouseToItemAddOne">
+			<ButtonRect State="0" Left="314" Top="395" Right="331" Bottom="411" />
+			<ButtonRect State="1" Left="314" Top="412" Right="331" Bottom="428" />
+			<ButtonRect State="2" Left="314" Top="429" Right="331" Bottom="445" />
+		</Button>
+		
+		<Button Name="DiffOneWareHouseToItemStack" Image="Data\inerface0004_main_A.tga" X="137" Y="38" LuaLButtonUp="WareHouseToItemDiffOne">
+			<ButtonRect State="0" Left="333" Top="395" Right="350" Bottom="411" />
+			<ButtonRect State="1" Left="333" Top="412" Right="350" Bottom="428" />
+			<ButtonRect State="2" Left="333" Top="429" Right="350" Bottom="445" />
+		</Button>
+	</Panel>
+	
+	<!-- Moving Panel-->
+	<Panel Name="WarehouseMovingPanel" Image="" X="0" Y="50" Left="0" Top="0" Right="40" Bottom="40"
+		 Hide="1" Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="WarehouseEndDrag" LuaRButtonDown="ResetWarehouseDrag" >
+		<AniIcon Name="WarehouseMovingIcon" X="0" Y="0" Image=""  AutoDelete="0" Detect = "1" />
+	</Panel>
+</UI>

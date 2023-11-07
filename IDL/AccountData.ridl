@@ -1,0 +1,33 @@
+//-- Config
+config
+{
+	SubPath="Data/";
+	ClassID=10010;
+	StartID=10010;
+	EndID  =10019;
+	TwoDirect=1;
+}
+
+//-- include
+
+//-- object class
+class AccountData : NetObject
+{
+	//-- object state
+	info { 			UInt32 acct_id;
+					String loginName;
+					ByteArray password_hash; 		};
+	addict {    	UInt32 disconnect_time;
+                	UInt32 offLnTime;
+                	UInt32 onLnTime;				}; 
+	yuanBao {		UInt32 yuanBao;
+					UInt32 yuanBaoTicket;			};
+	banTime {		UInt32 banTime;					};
+	addictType {	Boolean addictType;				};
+	yuanBaoLock {	Boolean yuanBaoLock;			};
+	assetLockPassword {   ByteArray lockPassword;	};
+	unlockTime {    UInt32 unlock_time;				};
+	inactive {    	Boolean inactive;				};
+
+	//-- command to RPC server
+}

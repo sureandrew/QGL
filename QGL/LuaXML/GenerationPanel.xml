@@ -1,0 +1,291 @@
+<?xml version="1.0" ?>
+<!-- Our to do list data -->
+<UI>
+	<ID Name="GenerationInfo" />
+	<!--<Font Name="Data\mingliu.ttc" Width="12" Height="12" />-->
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	<Panel Name="GenerationPanel" Image="Data\interface0043_AB.tga" X="127" Y="107" 
+			Left="17" Top="13" Right="493" Bottom="318" LuaRButtonUp="FunCloseGenerationPanel" LuaKeyChar="FunCloseGenerationPanel" DetectImage = "1"
+			Drag="1" DragLeft="0" DragTop="0" DragRight="255" DragBottom="215" >
+		
+		<UIImage Name="GenerationTitalNameYoung" X="9" Y="34" Image="Data\interface0043_AB.tga" Left="2" Top="326" Right="91" Bottom="340" Hide="1" />
+		<UIImage Name="GenerationTitalNameElder" X="9" Y="34" Image="Data\interface0043_AB.tga" Left="2" Top="346" Right="91" Bottom="360" Hide="1" />
+		<UIImage Name="GenerationTitalLevel" X="101" Y="34" Image="Data\interface0043_AB.tga" Left="111" Top="346" Right="156" Bottom="360" LuaLButtonDown="FunSortByLevel" />
+		<UIImage Name="GenerationTitalClass" X="150" Y="34" Image="Data\interface0043_AB.tga" Left="169" Top="346" Right="219" Bottom="360" LuaLButtonDown="FunSortByClass" />
+		<UIImage Name="GenerationTitalOffline" X="203" Y="34" Image="Data\interface0043_AB.tga" Left="230" Top="346" Right="310" Bottom="360" LuaLButtonDown="FunSortByOffline"/>
+		<UIImage Name="GenerationTitalAcc" X="286" Y="34" Image="Data\interface0043_AB.tga" Left="321" Top="326" Right="400" Bottom="340" LuaLButtonDown="FunSortByAccOrExp" Hide="1" />
+		<UIImage Name="GenerationTitalExp" X="286" Y="34" Image="Data\interface0043_AB.tga" Left="321" Top="346" Right="400" Bottom="360" LuaLButtonDown="FunSortByAccOrExp" Hide="1" />
+		<UIImage Name="GenerationTitalGift" X="368" Y="34" Image="Data\interface0043_AB.tga" Left="409" Top="326" Right="493" Bottom="340" LuaLButtonDown="FunSortByGiftOrHisAcc" Hide="1" />
+		<UIImage Name="GenerationTitalHisAcc" X="368" Y="34" Image="Data\interface0043_AB.tga" Left="409" Top="346" Right="493" Bottom="360" LuaLButtonDown="FunSortByGiftOrHisAcc" Hide="1" />
+		<UIImage Name="GenerationTitalLevelSel" X="101" Y="34" Image="Data\interface0043_AB.tga" Left="111" Top="366" Right="156" Bottom="380" LuaLButtonDown="FunSortByLevel" Hide="1"/>
+		<UIImage Name="GenerationTitalClassSel" X="150" Y="34" Image="Data\interface0043_AB.tga" Left="169" Top="366" Right="219" Bottom="380" LuaLButtonDown="FunSortByClass" Hide="1"/>
+		<UIImage Name="GenerationTitalOfflineSel" X="203" Y="34" Image="Data\interface0043_AB.tga" Left="230" Top="366" Right="310" Bottom="380" LuaLButtonDown="FunSortByOffline" Hide="1"/>
+		<UIImage Name="GenerationTitalAccSel" X="286" Y="34" Image="Data\interface0043_AB.tga" Left="321" Top="366" Right="400" Bottom="380" LuaLButtonDown="FunSortByAccOrExp" Hide="1" />
+		<UIImage Name="GenerationTitalExpSel" X="286" Y="34" Image="Data\interface0043_AB.tga" Left="321" Top="386" Right="400" Bottom="400" LuaLButtonDown="FunSortByAccOrExp" Hide="1" />
+		<UIImage Name="GenerationTitalGiftSel" X="368" Y="34" Image="Data\interface0043_AB.tga" Left="409" Top="366" Right="493" Bottom="380" LuaLButtonDown="FunSortByGiftOrHisAcc" Hide="1" />
+		<UIImage Name="GenerationTitalHisAccSel" X="368" Y="34" Image="Data\interface0043_AB.tga" Left="409" Top="386" Right="493" Bottom="400" LuaLButtonDown="FunSortByGiftOrHisAcc" Hide="1" />
+		<UIImage Name="GenerationPanelTitalYoung" X="200" Y="5" Image="Data\interface0043_AB.tga" Left="18" Top="427" Right="76" Bottom="441" NotDetected="1" Hide="1" />
+		<UIImage Name="GenerationPanelTitalElder" X="200" Y="5" Image="Data\interface0043_AB.tga" Left="18" Top="407" Right="76" Bottom="421" NotDetected="1" Hide="1" />
+		<UIImage Name="GenerationCurAcc" X="8" Y="268" Image="Data\interface0043_AB.tga" Left="92" Top="407" Right="126" Bottom="421" NotDetected="1" Hide="1" />
+		<UIImage Name="GenerationSavedExp" X="8" Y="268" Image="Data\interface0043_AB.tga" Left="168" Top="407" Right="232" Bottom="421" NotDetected="1" Hide="1" />
+		<UIImage Name="GenerationYoungNum" X="8" Y="284" Image="Data\interface0043_AB.tga" Left="92" Top="427" Right="156" Bottom="441" NotDetected="1" Hide="1" />
+		<UIImage Name="GenerationElderNum" X="8" Y="284" Image="Data\interface0043_AB.tga" Left="168" Top="427" Right="232" Bottom="441" NotDetected="1" Hide="1" />
+		
+		<Button Name="AccToExtEqu" Image="Data\interface0043_AB.tga" X="150" Y="272" LuaLButtonUp="FunAccToExtEqu" Hide="1">
+			<ButtonRect State="0" Left="376" Top="472" Right="454" Bottom="492" />
+			<ButtonRect State="1" Left="376" Top="495" Right="454" Bottom="514" />
+			<ButtonRect State="2" Left="376" Top="518" Right="454" Bottom="537" />
+			<ButtonRect State="3" Left="376" Top="449" Right="454" Bottom="468" />
+		</Button>
+		
+		<Button Name="SystemDesc" Image="Data\interface0043_AB.tga" X="231" Y="272" LuaLButtonUp="FunSystemDesc">
+			<ButtonRect State="0" Left="476" Top="472" Right="553" Bottom="491" />
+			<ButtonRect State="1" Left="476" Top="495" Right="553" Bottom="514" />
+			<ButtonRect State="2" Left="476" Top="518" Right="553" Bottom="537" />
+			<ButtonRect State="3" Left="476" Top="449" Right="553" Bottom="468" />
+		</Button>
+		
+		<Button Name="DisbandGeneration" Image="Data\interface0043_AB.tga" X="312" Y="272" LuaLButtonUp="FunDisbandGeneration">
+			<ButtonRect State="0" Left="573" Top="472" Right="650" Bottom="492" />
+			<ButtonRect State="1" Left="573" Top="495" Right="650" Bottom="515" />
+			<ButtonRect State="2" Left="573" Top="518" Right="650" Bottom="538" />
+			<ButtonRect State="3" Left="573" Top="449" Right="650" Bottom="470" />
+		</Button>
+		
+		<Button Name="RequestYounger" Image="Data\interface0043_AB.tga" X="393" Y="272" LuaLButtonUp="FunRequestYounger" Hide="1">
+			<ButtonRect State="0" Left="670" Top="472" Right="747" Bottom="492" />
+			<ButtonRect State="1" Left="670" Top="495" Right="747" Bottom="515" />
+			<ButtonRect State="2" Left="670" Top="518" Right="747" Bottom="538" />
+			<ButtonRect State="3" Left="670" Top="449" Right="747" Bottom="470" />
+		</Button>
+		
+		<Button Name="GetSavedExp" Image="Data\interface0043_AB.tga" X="150" Y="272" LuaLButtonUp="FunGetSavedExp" Hide="1">
+			<ButtonRect State="0" Left="573" Top="172" Right="650" Bottom="192" />
+			<ButtonRect State="1" Left="573" Top="194" Right="650" Bottom="214" />
+			<ButtonRect State="2" Left="573" Top="216" Right="650" Bottom="236" />
+			<ButtonRect State="3" Left="573" Top="150" Right="650" Bottom="170" />
+		</Button>
+		
+		<Button Name="RequestElder" Image="Data\interface0043_AB.tga" X="393" Y="272" LuaLButtonUp="FunRequestElder" Hide="1">
+			<ButtonRect State="0" Left="663" Top="172" Right="740" Bottom="192" />
+			<ButtonRect State="1" Left="663" Top="194" Right="740" Bottom="214" />
+			<ButtonRect State="2" Left="663" Top="216" Right="740" Bottom="236" />
+			<ButtonRect State="3" Left="663" Top="150" Right="740" Bottom="170" />
+		</Button>
+		
+		<Button Name="GenerationPanelClose" Image="Data\interface0043_AB.tga" X="445" Y="8" LuaLButtonUp="FunCloseGenerationPanel">
+			<ButtonRect State="0" Left="580" Top="89" Right="601" Bottom="105" />
+			<ButtonRect State="1" Left="605" Top="89" Right="626" Bottom="105" />
+			<ButtonRect State="2" Left="630" Top="89" Right="651" Bottom="105" />
+		</Button>
+		
+		<ScrollBarV Name="GenerationScroll" X="455" Y="35" Width ="14" Height="220" Limit="0" BarColor="0">
+			<PrevButton Name="GenerationUp" Image="Data\interface0043_AB.tga" X="0" Y="0" LuaLButtonUp="FunGenerationScrollUp">
+				<ButtonRect State="0" Left="579" Top="44" Right="593" Bottom="58" />
+				<ButtonRect State="1" Left="595" Top="44" Right="609" Bottom="58" />
+				<ButtonRect State="2" Left="611" Top="44" Right="625" Bottom="58" />
+			</PrevButton>
+			<NextButton Name="GenerationDown" Image="Data\interface0043_AB.tga" X="0" Y="206" LuaLButtonUp="FunGenerationScrollDown">
+				<ButtonRect State="0" Left="579" Top="61" Right="593" Bottom="74" />
+				<ButtonRect State="1" Left="595" Top="61" Right="609" Bottom="74" />
+				<ButtonRect State="2" Left="611" Top="61" Right="625" Bottom="74" />
+			</NextButton>
+			<MoveButton Name="GenerationScrollMove" Image="Data\interface0043_AB.tga" X="0" Y="14"  LuaMouseMove="FunGenerationScroll">
+				<ButtonRect State="0" Left="628" Top="44" Right="641" Bottom="58" />
+				<ButtonRect State="1" Left="628" Top="44" Right="641" Bottom="58" />
+				<ButtonRect State="2" Left="628" Top="44" Right="641" Bottom="58" />
+			</MoveButton>
+		</ScrollBarV>
+		
+		<UIImage Name="GenerationSelected" X="8" Y="48" Image="Data\interface0043_AB.tga" Left="324" Top="551" Right="768" Bottom="571" NotDetected="1" Hide="1" LuaRButtonUp="FunOpenCharDetail"/>
+		
+		<StaticText Name="GenerationAccOrExpValue" X="72" Y="268" Width="89" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Left">
+		</StaticText>
+		
+		<StaticText Name="GenerationNumValue" X="72" Y="284" Width="89" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Left">
+		</StaticText>
+		
+		<StaticText Name="GenerationName00" X="9" Y="48" Width="89" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		</StaticText>
+		<StaticText Name="GenerationLevel00" X="101" Y="48" Width="29" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		</StaticText>
+		<StaticText Name="GenerationClass00" X="150" Y="48" Width="51" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		</StaticText>
+		<StaticText Name="GenerationTime00" X="203" Y="48" Width="57" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		</StaticText>
+		<StaticText Name="GenerationAccOrExp00" X="286" Y="48" Width="57" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		</StaticText>
+		<StaticText Name="GenerationGiftOrAcc00" X="368" Y="48" Width="58" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		</StaticText>
+		
+		
+		<StaticText Name="GenerationName01" X="9" Y="68" Width="89" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		</StaticText>
+		<StaticText Name="GenerationLevel01" X="101" Y="68" Width="29" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		</StaticText>
+		<StaticText Name="GenerationClass01" X="150" Y="68" Width="51" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		</StaticText>
+		<StaticText Name="GenerationTime01" X="203" Y="68" Width="57" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		</StaticText>
+		<StaticText Name="GenerationAccOrExp01" X="286" Y="68" Width="57" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		</StaticText>
+		<StaticText Name="GenerationGiftOrAcc01" X="368" Y="68" Width="58" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		</StaticText>
+		
+		<StaticText Name="GenerationName02" X="9" Y="88" Width="89" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		</StaticText>
+		<StaticText Name="GenerationLevel02" X="101" Y="88" Width="29" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		</StaticText>
+		<StaticText Name="GenerationClass02" X="150" Y="88" Width="51" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		</StaticText>
+		<StaticText Name="GenerationTime02" X="203" Y="88" Width="57" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		</StaticText>
+		<StaticText Name="GenerationAccOrExp02" X="286" Y="88" Width="57" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		</StaticText>
+		<StaticText Name="GenerationGiftOrAcc02" X="368" Y="88" Width="58" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		</StaticText>
+	
+		<StaticText Name="GenerationName03" X="9" Y="108" Width="89" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		</StaticText>
+		<StaticText Name="GenerationLevel03" X="101" Y="108" Width="29" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		</StaticText>
+		<StaticText Name="GenerationClass03" X="150" Y="108" Width="51" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		</StaticText>
+		<StaticText Name="GenerationTime03" X="203" Y="108" Width="57" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		</StaticText>
+		<StaticText Name="GenerationAccOrExp03" X="286" Y="108" Width="57" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		</StaticText>
+		<StaticText Name="GenerationGiftOrAcc03" X="368" Y="108" Width="58" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		</StaticText>
+		
+		<StaticText Name="GenerationName04" X="9" Y="128" Width="89" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		</StaticText>
+		<StaticText Name="GenerationLevel04" X="101" Y="128" Width="29" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		</StaticText>
+		<StaticText Name="GenerationClass04" X="150" Y="128" Width="51" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		</StaticText>
+		<StaticText Name="GenerationTime04" X="203" Y="128" Width="57" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		</StaticText>
+		<StaticText Name="GenerationAccOrExp04" X="286" Y="128" Width="57" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		</StaticText>
+		<StaticText Name="GenerationGiftOrAcc04" X="368" Y="128" Width="58" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		</StaticText>
+		
+		<StaticText Name="GenerationName05" X="9" Y="148" Width="89" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		</StaticText>
+		<StaticText Name="GenerationLevel05" X="101" Y="148" Width="29" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		</StaticText>
+		<StaticText Name="GenerationClass05" X="150" Y="148" Width="51" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		</StaticText>
+		<StaticText Name="GenerationTime05" X="203" Y="148" Width="57" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		</StaticText>
+		<StaticText Name="GenerationAccOrExp05" X="286" Y="148" Width="57" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		</StaticText>
+		<StaticText Name="GenerationGiftOrAcc05" X="368" Y="148" Width="58" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		</StaticText>
+		
+		<StaticText Name="GenerationName06" X="9" Y="168" Width="89" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="GenerationLevel06" X="101" Y="168" Width="29" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="GenerationClass06" X="150" Y="168" Width="51" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="GenerationTime06" X="203" Y="168" Width="57" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="GenerationAccOrExp06" X="286" Y="168" Width="57" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="GenerationGiftOrAcc06" X="368" Y="168" Width="58" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		
+		<StaticText Name="GenerationName07" X="9" Y="188" Width="89" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="GenerationLevel07" X="101" Y="188" Width="29" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="GenerationClass07" X="150" Y="188" Width="51" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="GenerationTime07" X="203" Y="188" Width="57" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="GenerationAccOrExp07" X="286" Y="188" Width="57" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="GenerationGiftOrAcc07" X="368" Y="188" Width="58" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		
+		<StaticText Name="GenerationName08" X="9" Y="208" Width="89" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="GenerationLevel08" X="101" Y="208" Width="29" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="GenerationClass08" X="150" Y="208" Width="51" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="GenerationTime08" X="203" Y="208" Width="57" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="GenerationAccOrExp08" X="286" Y="208" Width="57" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="GenerationGiftOrAcc08" X="368" Y="208" Width="58" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>	
+		
+		<StaticText Name="GenerationName09" X="9" Y="228" Width="89" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="GenerationLevel09" X="101" Y="228" Width="29" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="GenerationClass09" X="150" Y="228" Width="51" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="GenerationTime09" X="203" Y="228" Width="57" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="GenerationAccOrExp09" X="286" Y="228" Width="57" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="GenerationGiftOrAcc09" X="368" Y="228" Width="58" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		
+		<UIImage Name="GenerationSelect00" X="8" Y="48" Image="" Left="25" Top="62" Right="468" Bottom="82" Detect="1" LuaLButtonUp="FunGenerationSelect00" LuaRButtonUp="FunOpenCharDetail" InsertToEventList = "1"/>
+		<UIImage Name="GenerationSelect01" X="8" Y="68" Image="" Left="25" Top="62" Right="468" Bottom="82" Detect="1" LuaLButtonUp="FunGenerationSelect01" LuaRButtonUp="FunOpenCharDetail" InsertToEventList = "1"/>
+		<UIImage Name="GenerationSelect02" X="8" Y="88" Image="" Left="25" Top="62" Right="468" Bottom="82" Detect="1" LuaLButtonUp="FunGenerationSelect02" LuaRButtonUp="FunOpenCharDetail" InsertToEventList = "1"/>
+		<UIImage Name="GenerationSelect03" X="8" Y="108" Image="" Left="25" Top="62" Right="468" Bottom="82" Detect="1" LuaLButtonUp="FunGenerationSelect03" LuaRButtonUp="FunOpenCharDetail" InsertToEventList = "1"/>
+		<UIImage Name="GenerationSelect04" X="8" Y="128" Image="" Left="25" Top="62" Right="468" Bottom="82" Detect="1" LuaLButtonUp="FunGenerationSelect04" LuaRButtonUp="FunOpenCharDetail" InsertToEventList = "1"/>
+		<UIImage Name="GenerationSelect05" X="8" Y="148" Image="" Left="25" Top="62" Right="468" Bottom="82" Detect="1" LuaLButtonUp="FunGenerationSelect05" LuaRButtonUp="FunOpenCharDetail" InsertToEventList = "1"/>
+		<UIImage Name="GenerationSelect06" X="8" Y="168" Image="" Left="25" Top="62" Right="468" Bottom="82" Detect="1" LuaLButtonUp="FunGenerationSelect06" LuaRButtonUp="FunOpenCharDetail" InsertToEventList = "1"/>
+		<UIImage Name="GenerationSelect07" X="8" Y="188" Image="" Left="25" Top="62" Right="468" Bottom="82" Detect="1" LuaLButtonUp="FunGenerationSelect07" LuaRButtonUp="FunOpenCharDetail" InsertToEventList = "1"/>
+		<UIImage Name="GenerationSelect08" X="8" Y="208" Image="" Left="25" Top="62" Right="468" Bottom="82" Detect="1" LuaLButtonUp="FunGenerationSelect08" LuaRButtonUp="FunOpenCharDetail" InsertToEventList = "1"/>
+		<UIImage Name="GenerationSelect09" X="8" Y="228" Image="" Left="25" Top="62" Right="468" Bottom="82" Detect="1" LuaLButtonUp="FunGenerationSelect09" LuaRButtonUp="FunOpenCharDetail" InsertToEventList = "1"/>
+	</Panel>
+	
+	<Panel Name="GenerationDisbandPanel" Image="Data\interface0043_AB.tga" X="273" Y="242" 
+			Left="16" Top="454" Right="270" Bottom="570" DetectImage = "1" Hide="1"
+			Drag="1" DragLeft="0" DragTop="0" DragRight="699" DragBottom="404" >
+		
+		<StaticText Name="GenerationDisbandDesc" X="17" Y="25" Width="224" Height="40"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		
+		<Button Name="GenerationDisbandConfirm" Image="Data\interface0043_AB.tga" X="45" Y="80" LuaLButtonUp="FunGenerationDisbandConfirm">
+			<ButtonRect State="0" Left="573" Top="254" Right="650" Bottom="273" />
+			<ButtonRect State="1" Left="573" Top="277" Right="650" Bottom="296" />
+			<ButtonRect State="2" Left="573" Top="300" Right="650" Bottom="319" />
+		</Button>
+		
+		<Button Name="GenerationDisbandCancle" Image="Data\interface0043_AB.tga" X="127" Y="80" LuaLButtonUp="FunGenerationDisbandCancle">
+			<ButtonRect State="0" Left="661" Top="254" Right="739" Bottom="273" />
+			<ButtonRect State="1" Left="661" Top="277" Right="739" Bottom="296" />
+			<ButtonRect State="2" Left="661" Top="300" Right="739" Bottom="319" />
+		</Button>
+	</Panel>
+	
+	<Panel Name="GenerationRequestPanel" Image="Data\interface0043_AB.tga" X="273" Y="242" 
+			Left="16" Top="454" Right="270" Bottom="570" DetectImage = "1" Hide="1"
+			Drag="1" DragLeft="0" DragTop="0" DragRight="699" DragBottom="404" >
+		
+		<StaticText Name="GenerationRequestDesc" X="17" Y="25" Width="224" Height="40"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		
+		<Button Name="GenerationRequestAllow" Image="Data\interface0043_AB.tga" X="45" Y="80" LuaLButtonUp="FunGenerationRequestAllow">
+			<ButtonRect State="0" Left="573" Top="330" Right="650" Bottom="349" />
+			<ButtonRect State="1" Left="573" Top="353" Right="650" Bottom="372" />
+			<ButtonRect State="2" Left="573" Top="376" Right="650" Bottom="395" />
+		</Button>
+		
+		<Button Name="GenerationRequestRefuse" Image="Data\interface0043_AB.tga" X="127" Y="80" LuaLButtonUp="FunGenerationRequestRefuse">
+			<ButtonRect State="0" Left="661" Top="330" Right="739" Bottom="349" />
+			<ButtonRect State="1" Left="661" Top="353" Right="739" Bottom="372" />
+			<ButtonRect State="2" Left="661" Top="376" Right="739" Bottom="395" />
+		</Button>
+	</Panel>
+	
+</UI>

@@ -1,0 +1,190 @@
+<?xml version="1.0" ?>
+<!-- Our to do list data -->
+<UI>
+	<ID Name="NPCSearch" />
+	<KeyIn Item="SearchTextBox" />
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	<Panel Name="NPCSearchPanel" Image="Data\interface0025_main_J.tga" X="50" Y="100" Left="3"
+		Top="0" Right="246" Bottom="392" Drag="1" DragLeft="0" DragTop="0" DragRight="243"
+		DragBottom="392" LuaRButtonUp="CloseNPCSearch" LuaKeyChar="CloseNPCSearch" LuaMouseWheel="NPCSearchPanelWheel"
+		DetectImage = "1">
+		
+		<ScrollBarV Name="NPCSearchScrollBar" X="222" Y="52" Width ="14" Height="276" Limit="0" BarColor="0" LuaLButtonDown="NPCSearchScroll">
+			<PrevButton Name="NPCSearchScrollUp" Image="Data\interface0025_main_J.tga" X="0" Y="0"  LuaLButtonDown="NPCSearchScrollUp">
+				<ButtonRect State="0" Left="315" Top="174" Right="329" Bottom="188" />
+				<ButtonRect State="1" Left="331" Top="174" Right="345" Bottom="188" />
+				<ButtonRect State="2" Left="347" Top="174" Right="361" Bottom="188" />
+			</PrevButton>
+			<NextButton Name="NPCSearchScrollDown" Image="Data\interface0025_main_J.tga" X="0" Y="262"  LuaLButtonDown="NPCSearchScrollDown">
+				<ButtonRect State="0" Left="315" Top="191" Right="329" Bottom="204" />
+				<ButtonRect State="1" Left="331" Top="191" Right="345" Bottom="204" />
+				<ButtonRect State="2" Left="347" Top="191" Right="361" Bottom="204" />
+			</NextButton>
+			<MoveButton Image="Data\interface0025_main_J.tga" X="0" Y="15"  LuaMouseMove="NPCSearchScroll">
+				<ButtonRect State="0" Left="364" Top="174" Right="378" Bottom="204" />
+				<ButtonRect State="1" Left="364" Top="174" Right="378" Bottom="204" />
+				<ButtonRect State="2" Left="364" Top="174" Right="378" Bottom="204" />
+			</MoveButton>
+		</ScrollBarV>
+	
+	
+		<Button Name="NPCSearchCross" Image="Data\interface0025_main_J.tga" X="210" Y="7" LuaLButtonUp="CloseNPCSearch">
+			<ButtonRect State="0" Left="265" Top="8" Right="289" Bottom="26" />
+			<ButtonRect State="1" Left="290" Top="8" Right="314" Bottom="26" />
+			<ButtonRect State="2" Left="315" Top="8" Right="339" Bottom="26" />
+		</Button>
+		<Button Name="SetCharacterMove" Image="Data\interface0025_main_J.tga" X="73" Y="361" LuaLButtonUp="SetCharacterMove">
+			<ButtonRect State="0" Left="354" Top="4" Right="446" Bottom="25" />
+			<ButtonRect State="1" Left="449" Top="4" Right="541" Bottom="25" />
+			<ButtonRect State="2" Left="544" Top="4" Right="636" Bottom="25" />
+		</Button>
+		
+		<Button Name="SetCharacterUpdate" Image="Data\interface0025_main_J.tga" X="73" Y="361" LuaLButtonUp="SetCharacterUpdate" Hide="1">
+			<ButtonRect State="0" Left="453" Top="54" Right="545" Bottom="75" />
+			<ButtonRect State="1" Left="548" Top="54" Right="640" Bottom="75" />
+			<ButtonRect State="2" Left="643" Top="54" Right="735" Bottom="75" />
+		</Button>
+		
+		<CheckBox Name="ShowCharList" Image="Data\interface0025_main_J.tga" X="71" Y="31" State="0" LuaLButtonDown="ShowCharList">
+			<CheckBoxRect Index="0" Left="334" Top="298" Right="403" Bottom="319" />
+			<CheckBoxRect Index="1" Left="334" Top="298" Right="403" Bottom="319" />
+			<CheckBoxRect Index="2" Left="260" Top="298" Right="329" Bottom="319" />
+		</CheckBox>
+		
+		<CheckBox Name="ShowNPCList" Image="Data\interface0025_main_J.tga" X="7" Y="31" State="1" LuaLButtonDown="ShowNPCList">
+			<CheckBoxRect Index="0" Left="334" Top="274" Right="398" Bottom="295" />
+			<CheckBoxRect Index="1" Left="334" Top="274" Right="398" Bottom="295" />
+			<CheckBoxRect Index="2" Left="260" Top="274" Right="329" Bottom="295" />
+		</CheckBox>
+		
+		<CheckBox Name="ShowPartyList" Image="Data\interface0025_main_J.tga" X="135" Y="31" State="0" LuaLButtonDown="ShowPartyList">
+			<CheckBoxRect Index="0" Left="334" Top="322" Right="398" Bottom="343" />
+			<CheckBoxRect Index="1" Left="334" Top="322" Right="398" Bottom="343" />
+			<CheckBoxRect Index="2" Left="260" Top="322" Right="329" Bottom="343" />
+		</CheckBox>
+		
+		<UIImage Name="NPCNameHighLight1" Image="Data\interface0025_main_J.tga" X="9" Y="52"  
+			LuaLButtonUp="NPCSearchClick" Left="249" Top="351" Right="459" Bottom="370" LuaRButtonUp="ShowSearchPartyPopUp" />
+		<UIImage Name="NPCNameHighLight2" Image="Data\interface0025_main_J.tga" X="9" Y="68"
+			LuaLButtonUp="NPCSearchClick" Left="249" Top="351" Right="459" Bottom="370" LuaRButtonUp="ShowSearchPartyPopUp" />
+		<UIImage Name="NPCNameHighLight3" Image="Data\interface0025_main_J.tga" X="9" Y="84" 
+			LuaLButtonUp="NPCSearchClick" Left="249" Top="351" Right="459" Bottom="370" LuaRButtonUp="ShowSearchPartyPopUp" />
+		<UIImage Name="NPCNameHighLight4" Image="Data\interface0025_main_J.tga" X="9" Y="100" 
+			LuaLButtonUp="NPCSearchClick" Left="249" Top="351" Right="459" Bottom="370" LuaRButtonUp="ShowSearchPartyPopUp" />
+		<UIImage Name="NPCNameHighLight5" Image="Data\interface0025_main_J.tga" X="9" Y="116" 
+			LuaLButtonUp="NPCSearchClick" Left="249" Top="351" Right="459" Bottom="370" LuaRButtonUp="ShowSearchPartyPopUp" />
+		<UIImage Name="NPCNameHighLight6" Image="Data\interface0025_main_J.tga" X="9" Y="132" 
+			LuaLButtonUp="NPCSearchClick" Left="249" Top="351" Right="459" Bottom="370" LuaRButtonUp="ShowSearchPartyPopUp" />
+		<UIImage Name="NPCNameHighLight7" Image="Data\interface0025_main_J.tga" X="9" Y="148" 
+			LuaLButtonUp="NPCSearchClick" Left="249" Top="351" Right="459" Bottom="370" LuaRButtonUp="ShowSearchPartyPopUp" />
+		<UIImage Name="NPCNameHighLight8" Image="Data\interface0025_main_J.tga" X="9" Y="164" 
+			LuaLButtonUp="NPCSearchClick" Left="249" Top="351" Right="459" Bottom="370" LuaRButtonUp="ShowSearchPartyPopUp" />
+		<UIImage Name="NPCNameHighLight9" Image="Data\interface0025_main_J.tga" X="9" Y="180" 
+			LuaLButtonUp="NPCSearchClick" Left="249" Top="351" Right="459" Bottom="370" LuaRButtonUp="ShowSearchPartyPopUp" />
+		<UIImage Name="NPCNameHighLight10" Image="Data\interface0025_main_J.tga" X="9" Y="196" 
+			LuaLButtonUp="NPCSearchClick" Left="249" Top="351" Right="459" Bottom="370" LuaRButtonUp="ShowSearchPartyPopUp" />
+		<UIImage Name="NPCNameHighLight11" Image="Data\interface0025_main_J.tga" X="9" Y="213" 
+			LuaLButtonUp="NPCSearchClick" Left="249" Top="351" Right="459" Bottom="370" LuaRButtonUp="ShowSearchPartyPopUp" />
+		<UIImage Name="NPCNameHighLight12" Image="Data\interface0025_main_J.tga" X="9" Y="228" 
+			LuaLButtonUp="NPCSearchClick" Left="249" Top="351" Right="459" Bottom="370" LuaRButtonUp="ShowSearchPartyPopUp" />
+		<UIImage Name="NPCNameHighLight13" Image="Data\interface0025_main_J.tga" X="9" Y="244" 
+			LuaLButtonUp="NPCSearchClick" Left="249" Top="351" Right="459" Bottom="370" LuaRButtonUp="ShowSearchPartyPopUp" />
+		<UIImage Name="NPCNameHighLight14" Image="Data\interface0025_main_J.tga" X="9" Y="260" 
+			LuaLButtonUp="NPCSearchClick" Left="249" Top="351" Right="459" Bottom="370" LuaRButtonUp="ShowSearchPartyPopUp" />
+		<UIImage Name="NPCNameHighLight15" Image="Data\interface0025_main_J.tga" X="9" Y="276" 
+			LuaLButtonUp="NPCSearchClick" Left="249" Top="351" Right="459" Bottom="370" LuaRButtonUp="ShowSearchPartyPopUp" />
+		<UIImage Name="NPCNameHighLight16" Image="Data\interface0025_main_J.tga" X="9" Y="292"
+			LuaLButtonUp="NPCSearchClick" Left="249" Top="351" Right="459" Bottom="370" LuaRButtonUp="ShowSearchPartyPopUp" />
+		<UIImage Name="NPCNameHighLight17" Image="Data\interface0025_main_J.tga" X="9" Y="308" 
+			LuaLButtonUp="NPCSearchClick" Left="249" Top="351" Right="459" Bottom="370" LuaRButtonUp="ShowSearchPartyPopUp"/>
+			
+		<UIImage Name="NPCNameHighLight" Image="Data\interface0025_main_J.tga" X="0" Y="0" Left="249"
+			Top="230" Right="459" Bottom="251" Hide="1" LuaLButtonDBLCLK="SetCharacterMove" LuaRButtonUp="ShowSearchPartyPopUp"/>
+		
+		<StaticText Name="NPCName1" X="16" Y="55" Width="120" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000"></StaticText>
+		<StaticText Name="NPCName2" X="16" Y="71" Width="120" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000"></StaticText>
+		<StaticText Name="NPCName3" X="16" Y="87" Width="120" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000"></StaticText>
+		<StaticText Name="NPCName4" X="16" Y="103" Width="120" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000"></StaticText>
+		<StaticText Name="NPCName5" X="16" Y="119" Width="120" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000"></StaticText>
+		<StaticText Name="NPCName6" X="16" Y="135" Width="120" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000"></StaticText>
+		<StaticText Name="NPCName7" X="16" Y="151" Width="120" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000"></StaticText>
+		<StaticText Name="NPCName8" X="16" Y="167" Width="120" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000"></StaticText>
+		<StaticText Name="NPCName9" X="16" Y="183" Width="120" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000"></StaticText>
+		<StaticText Name="NPCName10" X="16" Y="199" Width="120" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000"></StaticText>
+		<StaticText Name="NPCName11" X="16" Y="215" Width="120" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000"></StaticText>
+		<StaticText Name="NPCName12" X="16" Y="231" Width="120" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000"></StaticText>
+		<StaticText Name="NPCName13" X="16" Y="247" Width="120" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000"></StaticText>
+		<StaticText Name="NPCName14" X="16" Y="263" Width="120" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000"></StaticText>
+		<StaticText Name="NPCName15" X="16" Y="279" Width="120" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000"></StaticText>
+		<StaticText Name="NPCName16" X="16" Y="295" Width="120" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000"></StaticText>
+		<StaticText Name="NPCName17" X="16" Y="311" Width="120" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000"></StaticText>
+		
+		<StaticText Name="NPCNamePos1" X="136" Y="55" Width="120" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000"></StaticText>
+		<StaticText Name="NPCNamePos2" X="136" Y="71" Width="120" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000"></StaticText>
+		<StaticText Name="NPCNamePos3" X="136" Y="87" Width="120" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000"></StaticText>
+		<StaticText Name="NPCNamePos4" X="136" Y="103" Width="120" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000"></StaticText>
+		<StaticText Name="NPCNamePos5" X="136" Y="119" Width="120" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000"></StaticText>
+		<StaticText Name="NPCNamePos6" X="136" Y="135" Width="120" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000"></StaticText>
+		<StaticText Name="NPCNamePos7" X="136" Y="151" Width="120" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000"></StaticText>
+		<StaticText Name="NPCNamePos8" X="136" Y="167" Width="120" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000"></StaticText>
+		<StaticText Name="NPCNamePos9" X="136" Y="183" Width="120" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000"></StaticText>
+		<StaticText Name="NPCNamePos10" X="136" Y="199" Width="120" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000"></StaticText>
+		<StaticText Name="NPCNamePos11" X="136" Y="215" Width="120" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000"></StaticText>
+		<StaticText Name="NPCNamePos12" X="136" Y="231" Width="120" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000"></StaticText>
+		<StaticText Name="NPCNamePos13" X="136" Y="247" Width="120" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000"></StaticText>
+		<StaticText Name="NPCNamePos14" X="136" Y="263" Width="120" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000"></StaticText>
+		<StaticText Name="NPCNamePos15" X="136" Y="279" Width="120" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000"></StaticText>
+		<StaticText Name="NPCNamePos16" X="136" Y="295" Width="120" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000"></StaticText>
+		<StaticText Name="NPCNamePos17" X="136" Y="311" Width="120" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000"></StaticText>
+			
+		<EditBox Name="SearchTextBox" X="60" Y="0" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			LIGHTColor="FF000000" Limit="50" LuaKeyChar="SearchNPCList" Hide="1" />
+		<EditBox Name="SearchChiTextBox" X="60" Y="339" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			LIGHTColor="FF000000" Limit="50" LuaKeyChar="SearchNPCListInChi" Hide="0" LuaLButtonUp="ChangeKeyInToChi" />
+			
+	</Panel>
+	<Panel Expand="1" Name="SearchPartyPanel" Image="Data\inerface0001_main.tga" X="300" Y="100"
+		Left="89" Top="205" Right="159" Bottom="212" LineRectLeft="89" LineRectTop="230" LineRectRight="159"
+		LineRectBottom="243" LineCount="8" BottomRectLeft="89" BottomRectTop="279" BottomRectRight="159"
+		BottomRectBottom="289" Hide="1" LuaTimeOut="SearchPartyPopupTimeOut" TimeOutCount="5000"
+		LuaMouseOut="StartSearchPartyCloseCount" InsertToEventList="1" LuaMouseIn="HoldSearchPartyPopup" NotRemove="1">
+		<PopUpMenu Name="SearchPartyPopup" X="5" Y="7" BarWidth="53" Row="5" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" SelBarColor="FFFF0000" LuaLButtonDown="SearchPartyPopup"
+			LuaRButtonDown="SearchPartyPopupClose" FontName="Data\simsun.ttc" FontHeight="13" FontWidth="13">
+		</PopUpMenu>
+	</Panel>
+</UI>

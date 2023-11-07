@@ -1,0 +1,26 @@
+//-- Config
+config
+{
+	SubPath="Logic/";
+	ClassID=34000;
+	StartID=34000;
+	EndID  =34999;
+}
+
+//-- include
+#include "Reuben/Network/NetGroup.h"
+
+//-- object class
+class SkillGroup : NetGroup
+{
+	//-- object attributes
+	owner {		UInt32	owner_id;
+				BYTE	owner_type;		};
+
+	//-- method
+public:
+	
+	//-- callback
+	CB_AddSkills(NetGroup *skillGrp);
+	CB_RemoveSkills(UInt16Vector skill_ids);
+}

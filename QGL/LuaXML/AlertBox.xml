@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" ?>
+<UI>
+	<ID Name="AlertBox" />
+	<Font Name="Data\mingliu.ttc" Width="12" Height="12" />
+	<Panel Name="AlertBoxPanel" X="253" Y="267" Image="Data\inerface0004_main_A.tga" Left="314" Top="293" Right="542" Bottom="391" DetectImage = "1"
+		Drag="1" DragLeft="0" DragTop="0" DragRight="228" DragBottom="98" TimeOutCount="501" LuaTimeOut="ShowAlertOK">
+		
+		
+		<StaticText Name="AlertText" X="0" Y="35" Width="228" Height="20"  EdgeCode="SHADOW" FontColor="FFEDD97A" ShadowColor="FF000000" Align="Center">
+			some word in here
+		</StaticText>
+		
+		<StaticText Name="AlertCountDownText" X="0" Y="45" Width="228" Height="20" EdgeCode="SHADOW" FontColor="FFEDD97A" ShadowColor="FF000000" Align="Center" TimeOutCount="1000" LuaTimeOut="AlertCountDown" Hide="1">
+			0
+		</StaticText>
+		
+		<Button Name="ConfirmAlert" Image="Data\inerface0004_main_A.tga" X="81" Y="60" LuaLButtonUp="CloseAlertBox">
+			<ButtonRect State="0" Left="4" Top="511" Right="68" Bottom="528" />
+			<ButtonRect State="1" Left="70" Top="511" Right="134" Bottom="528" />
+			<ButtonRect State="2" Left="136" Top="511" Right="200" Bottom="528" />
+		</Button>	
+	</Panel>
+	
+
+</UI>

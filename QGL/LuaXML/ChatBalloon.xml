@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" ?>
+<!-- Our to do list data -->
+<UI>
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+		
+		<Panel Expand="1" Name="ChatBalloon" X="0" Y="0" Image="Data\interface008_chat.tga" Hide="0"
+		Left="361" Top="222" Right="498" Bottom="227" LineRectLeft="361" LineRectTop="228" LineRectRight="498"
+		LineRectBottom="232" LineCount="50" BottomRectLeft="361" BottomRectTop="233" BottomRectRight="498"
+		BottomRectBottom="244">
+		<ChatPanel Name="ChatBalloonContext" X="5" Y="6" Width="130" Height="600" ContinueRun = "1" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" FillColor="7F0000FF">
+		</ChatPanel>
+	</Panel>
+</UI>
+

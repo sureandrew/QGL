@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<!-- Our to do list data -->
+<UI>
+	<ID Name="BankDepositService" />
+	<!--<Font Name="Data\mingliu.ttc" Width="12" Height="12" />-->
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	<Panel Name="BankDepositPanel" Image="Data\interface0009_shop.tga" X="400" Y="50" 
+			Left="596" Top="4" Right="794" Bottom="209" LuaRButtonUp="CloseBankDepositPanel" LuaKeyChar="CloseBankDepositPanel" DetectImage = "1"
+			Drag="1" DragLeft="0" DragTop="0" DragRight="309" DragBottom="286" >
+			
+		<Button Name="BankDepositPanelClose" Image="Data\interface0009_shop.tga" X="170" Y="9" LuaLButtonUp="CloseBankDepositPanel">
+			<ButtonRect State="0" Left="306" Top="10" Right="330" Bottom="27" />
+			<ButtonRect State="1" Left="331" Top="10" Right="355" Bottom="27" />
+			<ButtonRect State="2" Left="357" Top="10" Right="379" Bottom="27" />
+		</Button>
+		<StaticText Name="DCurrentCash" X="85" Y="53" Width="93" Height="20" Row="1" Column="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="DBankDeposit" X="85" Y="81" Width="92" Height="20" Row="1" Column="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<UIImage Name="DepositTxt" X="11" Y="109" Image="Data\interface0009_shop.tga" 
+		Left="523" Top="176" Right="578" Bottom="189" AutoDelete="0" Hide="0"/>
+		
+		<EditBox Name="DepositMoney" X="85" Y="108" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" LuaLButtonUp="SetDepositFocus" Limit="8" NumOnly="1" LuaKeyUp="SetDemoneyColour">
+		</EditBox>
+		
+		
+		<Button Name="DepositYes" Image="Data\interface0009_shop.tga" X="15" Y="143" LuaLButtonUp="DepositConfirm">
+			<ButtonRect State="0" Left="552" Top="222" Right="631" Bottom="243" />
+			<ButtonRect State="1" Left="634" Top="222" Right="713" Bottom="243" />
+			<ButtonRect State="2" Left="716" Top="222" Right="795" Bottom="243" />
+		</Button>
+		
+		
+		<Button Name="DepositNo" Image="Data\interface0009_shop.tga" X="109" Y="143" LuaLButtonUp="DepositCancel">
+			<ButtonRect State="0" Left="552" Top="245" Right="631" Bottom="265" />
+			<ButtonRect State="1" Left="634" Top="245" Right="713" Bottom="265" />
+			<ButtonRect State="2" Left="716" Top="245" Right="795" Bottom="265" />
+		</Button>
+		
+	</Panel>
+</UI>

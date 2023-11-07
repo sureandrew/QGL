@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" ?>
+<UI>
+	<ID Name="LineupSelect" />
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	<Panel Name="LineupSelectPanel" Image="Data\interface0041.tga" X="181" Y="128" Left="5" 
+		Top="8" Right="512" Bottom="294" LuaRButtonUp="CloseLineupMenu" LuaKeyChar="CloseLineupMenu" DetectImage = "1"
+		Drag="1" DragLeft="0" DragTop="0" DragRight="437" DragBottom="257">
+		
+		<StaticText Name="CurrentLineup" X="84" Y="37" Row="1" Column="1" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" Width="100" Height="15">
+		</StaticText>
+			
+		<Button Name="DropLineupList" Image="Data\interface0041.tga" X="207" Y="36" LuaLButtonUp="FunOpenLearnedLineupList">
+			<ButtonRect State="0" Left="4" Top="483" Right="22" Bottom="501" />
+			<ButtonRect State="1" Left="24" Top="483" Right="42" Bottom="501" />
+			<ButtonRect State="2" Left="44" Top="483" Right="62" Bottom="501" />
+		</Button>
+		
+		<Button Name="ForgetLineup" Image="Data\interface0041.tga" X="283" Y="36" Tips="遗忘阵型"  TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="FunForgetLineup">
+			<ButtonRect State="0" Left="177" Top="412" Right="254" Bottom="431" />
+			<ButtonRect State="1" Left="177" Top="435" Right="254" Bottom="454" />
+			<ButtonRect State="2" Left="177" Top="458" Right="254" Bottom="477" />
+		</Button>
+		
+		<Button Name="SelectLineup" Image="Data\interface0041.tga" X="418" Y="36" Tips="选定阵型"  TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="FunSelectLineup">
+			<ButtonRect State="0" Left="273" Top="412" Right="350" Bottom="431" />
+			<ButtonRect State="1" Left="273" Top="435" Right="350" Bottom="454" />
+			<ButtonRect State="2" Left="273" Top="458" Right="350" Bottom="477" />
+		</Button>
+		
+		<UIImage Name="TeamLineupPartnerPos0" Image="Data\interface0041.tga" X="215" Y="60" Left="10" 
+		Top="556" Right="39" Bottom="617" />
+		
+		<UIImage Name="TeamLineupPartnerPos1" Image="Data\interface0041.tga" X="235" Y="80" Left="53" 
+		Top="556" Right="82" Bottom="617" />
+		
+		<UIImage Name="TeamLineupPartnerPos2" Image="Data\interface0041.tga" X="255" Y="90" Left="98" 
+		Top="556" Right="126" Bottom="617" />
+		
+		<UIImage Name="TeamLineupPartnerPos3" Image="Data\interface0041.tga" X="155" Y="100" Left="145" 
+		Top="556" Right="172" Bottom="617" />
+	
+		<UIImage Name="TeamLineupPartnerPos4" Image="Data\interface0041.tga" X="295" Y="110" Left="191" 
+		Top="556" Right="219" Bottom="617" />
+		
+		<UIImage Name="TeamLineupPos0" Image="Data\interface0041.tga" X="207" Y="50" Left="234" 
+		Top="489" Right="263" Bottom="549" />
+		
+		<UIImage Name="TeamLineupPos1" Image="Data\interface0041.tga" X="225" Y="70" Left="275" 
+		Top="489" Right="302" Bottom="549" />
+		
+		<UIImage Name="TeamLineupPos2" Image="Data\interface0041.tga" X="245" Y="90" Left="323" 
+		Top="489" Right="351" Bottom="549" />
+		
+		<UIImage Name="TeamLineupPos3" Image="Data\interface0041.tga" X="265" Y="100" Left="368" 
+		Top="489" Right="396" Bottom="549" />
+		
+		<UIImage Name="TeamLineupPos4" Image="Data\interface0041.tga" X="285" Y="110" Left="415" 
+		Top="489" Right="443" Bottom="549" />
+		
+		<StaticText Name="CurrentLineupDesc" X="348" Y="66" Row="8" Column="1" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" Width="145" Height="145">
+		</StaticText>
+		
+		<Button Name="KeyPosSelectA" Image="Data\interface0041.tga" X="346" Y="248" Tips="A" LuaLButtonUp="FunKeyPosSelectA">
+			<ButtonRect State="0" Left="92" Top="483" Right="110" Bottom="501" />
+			<ButtonRect State="1" Left="92" Top="505" Right="110" Bottom="523" />
+			<ButtonRect State="3" Left="92" Top="527" Right="110" Bottom="545" />
+		</Button>
+		
+		<Button Name="KeyPosSelectB" Image="Data\interface0041.tga" X="375" Y="248" Tips="B" LuaLButtonUp="FunKeyPosSelectB">
+			<ButtonRect State="0" Left="120" Top="483" Right="138" Bottom="501" />
+			<ButtonRect State="1" Left="120" Top="505" Right="138" Bottom="523" />
+			<ButtonRect State="3" Left="120" Top="527" Right="138" Bottom="545" />
+		</Button>
+		
+		<Button Name="KeyPosSelectC" Image="Data\interface0041.tga" X="404" Y="248" Tips="C" LuaLButtonUp="FunKeyPosSelectC">
+			<ButtonRect State="0" Left="148" Top="483" Right="166" Bottom="501" />
+			<ButtonRect State="1" Left="148" Top="505" Right="166" Bottom="523" />
+			<ButtonRect State="3" Left="148" Top="527" Right="166" Bottom="545" />
+		</Button>
+		
+		<Button Name="KeyPosSelectD" Image="Data\interface0041.tga" X="433" Y="248" Tips="D" LuaLButtonUp="FunKeyPosSelectD">
+			<ButtonRect State="0" Left="177" Top="483" Right="195" Bottom="501" />
+			<ButtonRect State="1" Left="177" Top="505" Right="195" Bottom="523" />
+			<ButtonRect State="3" Left="177" Top="527" Right="195" Bottom="545" />
+		</Button>
+		
+		<Button Name="KeyPosSelectE" Image="Data\interface0041.tga" X="462" Y="248" Tips="E" LuaLButtonUp="FunKeyPosSelectE">
+			<ButtonRect State="0" Left="205" Top="483" Right="223" Bottom="501" />
+			<ButtonRect State="1" Left="205" Top="505" Right="223" Bottom="523" />
+			<ButtonRect State="3" Left="205" Top="527" Right="223" Bottom="545" />
+		</Button>
+		
+		<Button Nmae="LineupMenuPanelClose" Image="Data\interface0041.tga" X="478" Y="8" LuaLButtonUp="CloseLineupMenu">
+			<ButtonRect State="0" Left="5" Top="506" Right="28" Bottom="522" />
+			<ButtonRect State="1" Left="29" Top="506" Right="54" Bottom="522" />
+			<ButtonRect State="3" Left="55" Top="506" Right="78" Bottom="522" />
+		</Button>
+	</Panel>
+		
+	<Panel Expand="1" Name="MenuLearnedLineup" Image="Data\interface0041.tga" X="262" Y="181" 
+		Left          ="5" Top          ="305" Right          ="150" Bottom          ="316"
+		LineRectLeft  ="5" LineRectTop  ="346" LineRectRight  ="150" LineRectBottom  ="362" LineCount="6"
+		BottomRectLeft="5" BottomRectTop="326" BottomRectRight="150" BottomRectBottom="335"
+		Hide="1" LuaTimeOut="MenuLearnedLineupPopupTimeOut" TimeOutCount="4500" 
+		LuaMouseOut="StartMenuLearnedLineupCount" InsertToEventList="1" LuaMouseIn="HoldLearnedLineupTeammatePopup"
+	>
+		<ListBox Name="LearnedLineup" X="5" Y="8" Row="5" Column= "1" BarWidth="120"
+			Width="120" Height="80" SelBarColor="FF000000" SelFontColor="FF0000FF" FontColor="FFFFFFFF" 
+			ShadowColor="FF000000" LuaLButtonDown="FunSetSelectResualt">
+		</ListBox>
+	</Panel>
+	
+	<Panel Name="ForgetLineupConfirmPanel" Image="Data\interface0041.tga" X="292" Y="253" Left="192" 
+	Top="306" Right="407" Bottom="398" LuaRButtonUp="CloseLineupMenu" LuaKeyChar="CloseLineupMenu" DetectImage = "1"
+	Drag="1" DragLeft="0" DragTop="0" DragRight="437" DragBottom="257" Hide="1">
+		
+		<StaticText Name="ComfirmTextLineupForgive" X="12" Y="23" Row="1" Column="1" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" Width="210" Height="15">
+			你确定要遗忘选定的阵法吗？
+		</StaticText>
+		
+		<Button Nmae="ForgetLineupConfirm" Image="Data\interface0041.tga" X="21" Y="43" LuaLButtonUp="ComfirmForgiveLineup">
+			<ButtonRect State="0" Left="5" Top="412" Right="82" Bottom="432" />
+			<ButtonRect State="1" Left="5" Top="435" Right="82" Bottom="455" />
+			<ButtonRect State="3" Left="5" Top="458" Right="82" Bottom="478" />
+		</Button>
+		
+		<Button Nmae="ForgetLineupCancle" Image="Data\interface0041.tga" X="126" Y="43" LuaLButtonUp="CancleForgiveLineup">
+			<ButtonRect State="0" Left="90" Top="412" Right="167" Bottom="432" />
+			<ButtonRect State="1" Left="90" Top="435" Right="167" Bottom="455" />
+			<ButtonRect State="3" Left="90" Top="458" Right="167" Bottom="478" />
+		</Button>
+		
+	</Panel>
+</UI>

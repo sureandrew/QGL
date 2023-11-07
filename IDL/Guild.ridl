@@ -1,0 +1,69 @@
+//-- Config
+config
+{
+	SubPath="Logic/";
+	ClassID=49000;
+	StartID=49000;
+	EndID  =49999;
+}
+
+//-- include
+
+//-- object class
+class Guild : NetObject
+{
+	//-- object state
+	id {		UInt32 guild_uid; 		};
+	name {		String name; 			};
+	creator { 	String creator; 		};
+	master {	String master; 			};
+	alliance {	UInt32 alliance_id; 	};
+	enemy {		UInt32 enemy_id; 		};
+	secMaster { String secMasterName;	};
+	level {		UInt16 level;			}; 
+	prosper { 	UInt32 prosper;
+				UInt16 max_prosper; 	};
+	fund { 		UInt32 fund; 			};
+	memberNum { UInt16 totalMember;
+				UInt16 maxMember; 		};
+	aim { 		String aim;				}; 
+	rule { 		String rule;			};
+	guildPvPScore	{	UInt32 guildPvPScore;	};
+	
+	guildPvPBid	{	UInt32 guildPvPBid;	};
+	guildPvPGroup	{	UInt8 guildPvPGroup;	};
+	groupPvPVSGuild	{	String groupPvPVSGuild;	};
+
+	manorScale	{	UInt8 manorScale;	};
+	manorRoom	{	UInt8 room;		};
+	manorMaterial	{	UInt32 material;	};
+	manorGuard	{	UInt8 guard;		};
+	manorTrainPlayerPow	{	UInt8 trainCharExPow;	
+					UInt8 trainCharInPow;	};
+	manorTrainPartnerPow	{	UInt8 trainPartnerExPow;
+					UInt8 trainPartnerInPow; };
+	manorRoomProperty	{	UInt8 drugLv;
+					UInt8 cookLv;
+					UInt8 wineLv;
+					UInt8 hpLv;
+					UInt8 spLv;	};
+	manorMaintainNum	{	UInt32 maintainNum;	};
+	lastMaintainDate	{	UInt32 lastMaintainDate;	};
+	manorAura		{	UInt8 aura;	};
+	offlinetime		{	UInt32 offlinetime;	};	
+	failMantainPayNum	{	UInt32 failPayNum;	};
+	clearBusinessDate {		UInt32 clearBusinessDate;		};
+	autoManageBusiness {	Boolean autoManageBusiness;		};
+
+	//-- command to RPC server
+	private:
+	
+
+	public:
+	CB_AddMember(NetObject * pMember);
+	CB_RemoveMember(UInt32 char_id, String reason);
+	
+	CB_AddApplicant(NetObject * pObj);
+	CB_RemoveApplicant(UInt32 char_id);
+	
+}

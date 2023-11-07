@@ -1,0 +1,88 @@
+#include "Common.h"
+#include "Proxy/Logic/PartyCharInfoClient.h"
+
+void CPartyCharInfoClient::SetData(CCharacter* pChar)
+{
+	SetU32CharId(pChar->GetChar_id());
+	SetStNetId(pChar->GetNetId());
+	SetU16MapId(pChar->GetMap_id());
+	SetU16XPos(pChar->GetCurPosX());
+	SetU16YPos(pChar->GetCurPosY());
+	SetU16Level(pChar->GetLevel());
+	SetU8SexClass(pChar->GetSexClass());
+	SetU8Faction(pChar->GetFaction());
+	SetU16Hp(pChar->GetHP());
+	SetU16MHp(pChar->GetMHP());
+	SetU16MaxHp(pChar->GetMaxHP());
+	SetU16Sp(pChar->GetSP());
+	SetU16MSp(pChar->GetMSP());
+	SetU16MaxSp(pChar->GetMaxSP());
+	SetStrNickName(pChar->GetNickName());
+	SetU32OrgCloth(pChar->GetOrg_eq_cloth());
+	SetU16OrgClothColor(pChar->GetOrg_eq_clothColor());
+	SetU16OrgHairStyle(pChar->GetOrg_hairStyle1());
+	SetU16OrgHairColor(pChar->GetOrg_hairColor());
+	SetU16HairStyle1(pChar->GetHairStyle1());
+	SetU16HairColor(pChar->GetHairColor());
+	SetU32Cloth(pChar->GetEq_cloth());
+	SetU16ClothColor(pChar->GetEq_clothColor());
+	SetU16HeadBand(pChar->GetEq_headBand());
+	SetU32Weapon(pChar->GetEq_weapon());
+}
+
+void CPartyCharInfoClient::SetData(CPartyCharInfo* pNewInfo)
+{
+	SetU32CharId(pNewInfo->GetU32CharId());
+	SetStNetId(pNewInfo->GetStNetId());
+	SetU16MapId(pNewInfo->GetU16MapId());
+	SetU16XPos(pNewInfo->GetU16XPos());
+	SetU16YPos(pNewInfo->GetU16YPos());
+	SetU16Level(pNewInfo->GetU16Level());
+	SetU8SexClass(pNewInfo->GetU8SexClass());
+	SetU8Faction(pNewInfo->GetU8Faction());
+	SetU16Hp(pNewInfo->GetU16Hp());
+	SetU16MHp(pNewInfo->GetU16MHp());
+	SetU16MaxHp(pNewInfo->GetU16MaxHp());
+	SetU16Sp(pNewInfo->GetU16Sp());
+	SetU16MSp(pNewInfo->GetU16MSp());
+	SetU16MaxSp(pNewInfo->GetU16MaxSp());
+	SetStrNickName(pNewInfo->GetStrNickName());
+	SetU32OrgCloth(pNewInfo->GetU32OrgCloth());
+	SetU16OrgClothColor(pNewInfo->GetU16OrgClothColor());
+	SetU16OrgHairStyle(pNewInfo->GetU16OrgHairStyle());
+	SetU16OrgHairColor(pNewInfo->GetU16OrgHairColor());
+	SetU16HairStyle1(pNewInfo->GetU16HairStyle1());
+	SetU16HairColor(pNewInfo->GetU16HairColor());
+	SetU32Cloth(pNewInfo->GetU32Cloth());
+	SetU16ClothColor(pNewInfo->GetU16ClothColor());
+	SetU16HeadBand(pNewInfo->GetU16HeadBand());
+	SetU32Weapon(pNewInfo->GetU32Weapon());
+}
+void CPartyCharInfoClient::SetData(CPartyCharInfoClient* pCpcc)
+{
+	SetU32CharId(pCpcc->GetU32CharId());
+	SetStNetId(pCpcc->GetStNetId());
+	SetU16MapId(pCpcc->GetU16MapId());
+	SetU16XPos(pCpcc->GetU16XPos());
+	SetU16YPos(pCpcc->GetU16YPos());
+	SetU16Level(pCpcc->GetU16Level());
+	SetU8SexClass(pCpcc->GetU8SexClass());
+	SetU8Faction(pCpcc->GetU8Faction());
+	SetU16Hp(pCpcc->GetU16Hp());
+	SetU16MHp(pCpcc->GetU16MHp());
+	SetU16MaxHp(pCpcc->GetU16MaxHp());
+	SetU16Sp(pCpcc->GetU16Sp());
+	SetU16MSp(pCpcc->GetU16MSp());
+	SetU16MaxSp(pCpcc->GetU16MaxSp());
+	SetStrNickName(pCpcc->GetStrNickName());
+	SetU32OrgCloth(pCpcc->GetU32OrgCloth());
+	SetU16OrgClothColor(pCpcc->GetU16OrgClothColor());
+	SetU16OrgHairStyle(pCpcc->GetU16OrgHairStyle());
+	SetU16OrgHairColor(pCpcc->GetU16OrgHairColor());
+	SetU16HairStyle1(pCpcc->GetU16HairStyle1());
+	SetU16HairColor(pCpcc->GetU16HairColor());
+	SetU32Cloth(pCpcc->GetU32Cloth());
+	SetU16ClothColor(pCpcc->GetU16ClothColor());
+	SetU16HeadBand(pCpcc->GetU16HeadBand());
+	SetU32Weapon(pCpcc->GetU32Weapon());
+}

@@ -1,0 +1,21 @@
+//-- Config
+config
+{
+	SubPath="Data/";
+	ClassID=10080;
+	StartID=10080;
+	EndID  =10089;
+	TwoDirect=1;
+}
+
+//-- include
+
+//-- object class
+class QuestFlagData : NetObject
+{
+	//-- object attributes
+	id { 		UInt32 char_id;
+				UInt16 flag_id;					};
+	flag { 		Int32 flag;	 					};
+	//--- RPC method
+}

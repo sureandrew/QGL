@@ -1,0 +1,147 @@
+<?xml version="1.0" ?>
+<UI>
+	<ID Name="PointsShop" />
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	<Panel Name="PointsShopPanel" X="182" Y="79" Image="Data\interface0025_main_K3.tga" Left="10" Top="2" Right="445" Bottom="446" 
+		Drag="1" DragLeft="0" DragTop="0" DragRight="159" DragBottom="365" DetectImage = "1" 
+		LuaRButtonUp="FunPointsShopClose" LuaKeyChar="FunPointsShopClose">
+		
+		<Button Name="PointsShopItemBtn00" Image="Data\interface0025_main_K3.tga" X="22" Y="46" LuaLButtonDown="FunSelectPointsShop00">
+			<ButtonRect State="0" Left="460" Top="422" Right="647" Bottom="468" />
+			<ButtonRect State="1" Left="460" Top="359" Right="647" Bottom="405" />
+			<ButtonRect State="2" Left="460" Top="305" Right="647" Bottom="351" />
+		</Button>
+		<AniIcon Name="PointsShopItem00"  X="25" Y="49" Hide="1" LuaLButtonUp="FunSelectPointsShop00" LuaMouseMove="FunPointsShopMouseOver00" LuaMouseOut="FunPointsShopMouseOut" Image="" Detect="1" AutoDelete="0" InsertToEventList = "1"/>
+		<StaticText Name="PointsShopItemName00" X="68" Y="50" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="136" Height="20"  Align="Left" >
+		</StaticText>
+		<StaticText Name="PointsShopItemCost00" X="68" Y="70" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="136" Height="20" Align="Left" >
+		</StaticText>
+		
+		<Button Name="PointsShopItemBtn01" Image="Data\interface0025_main_K3.tga" X="224" Y="46" LuaLButtonDown="FunSelectPointsShop01">
+			<ButtonRect State="0" Left="460" Top="422" Right="647" Bottom="468" />
+			<ButtonRect State="1" Left="460" Top="359" Right="647" Bottom="405" />
+			<ButtonRect State="2" Left="460" Top="305" Right="647" Bottom="351" />
+		</Button>
+		<AniIcon Name="PointsShopItem01"  X="227" Y="49" Hide="1" LuaLButtonUp="FunSelectPointsShop01" LuaMouseMove="FunPointsShopMouseOver01" LuaMouseOut="FunPointsShopMouseOut" Image="" Detect = "1" AutoDelete="0" InsertToEventList = "1"/>
+		<StaticText Name="PointsShopItemName01" X="270" Y="50" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="136" Height="20" Align="Left">
+		</StaticText>
+		<StaticText Name="PointsShopItemCost01" X="270" Y="70" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="136" Height="20" Align="Left">
+		</StaticText>
+		
+		<Button Name="PointsShopItemBtn02" Image="Data\interface0025_main_K3.tga" X="22" Y="111" LuaLButtonDown="FunSelectPointsShop02">
+			<ButtonRect State="0" Left="460" Top="422" Right="647" Bottom="468" />
+			<ButtonRect State="1" Left="460" Top="359" Right="647" Bottom="405" />
+			<ButtonRect State="2" Left="460" Top="305" Right="647" Bottom="351" />
+		</Button>
+		<AniIcon Name="PointsShopItem02"  X="25" Y="114" Hide="1" LuaLButtonUp="FunSelectPointsShop02" LuaMouseMove="FunPointsShopMouseOver02" LuaMouseOut="FunPointsShopMouseOut" Image="" Detect = "1" AutoDelete="0" InsertToEventList = "1"/>
+		<StaticText Name="PointsShopItemName02" X="68" Y="115" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="136" Height="20" Align="Left" >
+		</StaticText>
+		<StaticText Name="PointsShopItemCost02" X="68" Y="135" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="136" Height="20" Align="Left" >
+		</StaticText>
+		
+		<Button Name="PointsShopItemBtn03" Image="Data\interface0025_main_K3.tga" X="224" Y="111" LuaLButtonDown="FunSelectPointsShop03">
+			<ButtonRect State="0" Left="460" Top="422" Right="647" Bottom="468" />
+			<ButtonRect State="1" Left="460" Top="359" Right="647" Bottom="405" />
+			<ButtonRect State="2" Left="460" Top="305" Right="647" Bottom="351" />
+		</Button>
+		<AniIcon Name="PointsShopItem03"  X="227" Y="114" Hide="1" LuaLButtonUp="FunSelectPointsShop03" LuaMouseMove="FunPointsShopMouseOver03" LuaMouseOut="FunPointsShopMouseOut" Image="" Detect = "1" AutoDelete="0" InsertToEventList = "1"/>
+		<StaticText Name="PointsShopItemName03" X="270" Y="115" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="136" Height="20" Align="Left" >
+		</StaticText>
+		<StaticText Name="PointsShopItemCost03" X="270" Y="135" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="136" Height="20" Align="Left" >
+		</StaticText>
+		
+		<Button Name="PointsShopItemBtn04" Image="Data\interface0025_main_K3.tga" X="22" Y="176" LuaLButtonDown="FunSelectPointsShop04">
+			<ButtonRect State="0" Left="460" Top="422" Right="647" Bottom="468" />
+			<ButtonRect State="1" Left="460" Top="359" Right="647" Bottom="405" />
+			<ButtonRect State="2" Left="460" Top="305" Right="647" Bottom="351" />
+		</Button>
+		<AniIcon Name="PointsShopItem04"  X="25" Y="179" Hide="1" LuaLButtonUp="FunSelectPointsShop04" LuaMouseMove="FunPointsShopMouseOver04" LuaMouseOut="FunPointsShopMouseOut" Image="" Detect = "1" AutoDelete="0" InsertToEventList = "1"/>
+		<StaticText Name="PointsShopItemName04" X="68" Y="180" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="136" Height="20" Align="Left" >
+		</StaticText>
+		<StaticText Name="PointsShopItemCost04" X="68" Y="200" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="136" Height="20" Align="Left" >
+		</StaticText>
+		
+		<Button Name="PointsShopItemBtn05" Image="Data\interface0025_main_K3.tga" X="224" Y="176" LuaLButtonDown="FunSelectPointsShop05">
+			<ButtonRect State="0" Left="460" Top="422" Right="647" Bottom="468" />
+			<ButtonRect State="1" Left="460" Top="359" Right="647" Bottom="405" />
+			<ButtonRect State="2" Left="460" Top="305" Right="647" Bottom="351" />
+		</Button>
+		<AniIcon Name="PointsShopItem05"  X="227" Y="179" Hide="1" LuaLButtonUp="FunSelectPointsShop05" LuaMouseMove="FunPointsShopMouseOver05" LuaMouseOut="FunPointsShopMouseOut" Image="" Detect = "1" AutoDelete="0" InsertToEventList = "1"/>
+		<StaticText Name="PointsShopItemName05" X="270" Y="180" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="136" Height="20" Align="Left" >
+		</StaticText>
+		<StaticText Name="PointsShopItemCost05" X="270" Y="200" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="136" Height="20" Align="Left" >
+		</StaticText>
+		
+		<Button Name="PointsShopItemBtn06" Image="Data\interface0025_main_K3.tga" X="22" Y="241" LuaLButtonDown="FunSelectPointsShop06">
+			<ButtonRect State="0" Left="460" Top="422" Right="647" Bottom="468" />
+			<ButtonRect State="1" Left="460" Top="359" Right="647" Bottom="405" />
+			<ButtonRect State="2" Left="460" Top="305" Right="647" Bottom="351" />
+		</Button>
+		<AniIcon Name="PointsShopItem06"  X="25" Y="244" Hide="1" LuaLButtonUp="FunSelectPointsShop06" LuaMouseMove="FunPointsShopMouseOver06" LuaMouseOut="FunPointsShopMouseOut" Image="" Detect = "1" AutoDelete="0" InsertToEventList = "1"/>
+		<StaticText Name="PointsShopItemName06" X="68" Y="245" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="136" Height="20" Align="Left" >
+		</StaticText>
+		<StaticText Name="PointsShopItemCost06" X="68" Y="265" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="136" Height="20" Align="Left" >
+		</StaticText>
+		
+		<Button Name="PointsShopItemBtn07" Image="Data\interface0025_main_K3.tga" X="224" Y="241" LuaLButtonDown="FunSelectPointsShop07">
+			<ButtonRect State="0" Left="460" Top="422" Right="647" Bottom="468" />
+			<ButtonRect State="1" Left="460" Top="359" Right="647" Bottom="405" />
+			<ButtonRect State="2" Left="460" Top="305" Right="647" Bottom="351" />
+		</Button>
+		<AniIcon Name="PointsShopItem07"  X="227" Y="244" Hide="1" LuaLButtonUp="FunSelectPointsShop07" LuaMouseMove="FunPointsShopMouseOver07" LuaMouseOut="FunPointsShopMouseOut" Image="" Detect = "1" AutoDelete="0" InsertToEventList = "1"/>
+		<StaticText Name="PointsShopItemName07" X="270" Y="245" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="136" Height="20" Align="Left" >
+		</StaticText>
+		<StaticText Name="PointsShopItemCost07" X="270" Y="265" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="136" Height="20" Align="Left" >
+		</StaticText>
+		
+		<Button Name="PointsShopItemBtn08" Image="Data\interface0025_main_K3.tga" X="22" Y="306" LuaLButtonDown="FunSelectPointsShop08">
+			<ButtonRect State="0" Left="460" Top="422" Right="647" Bottom="468" />
+			<ButtonRect State="1" Left="460" Top="359" Right="647" Bottom="405" />
+			<ButtonRect State="2" Left="460" Top="305" Right="647" Bottom="351" />
+		</Button>
+		<AniIcon Name="PointsShopItem08"  X="25" Y="309" Hide="1" LuaLButtonUp="FunSelectPointsShop08" LuaMouseMove="FunPointsShopMouseOver08" LuaMouseOut="FunPointsShopMouseOut" Image="" Detect = "1" AutoDelete="0" InsertToEventList = "1"/>
+		<StaticText Name="PointsShopItemName08" X="68" Y="310" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="136" Height="20" Align="Left" >
+		</StaticText>
+		<StaticText Name="PointsShopItemCost08" X="68" Y="330" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="136" Height="20" Align="Left" >
+		</StaticText>
+		
+		<Button Name="PointsShopItemBtn09" Image="Data\interface0025_main_K3.tga" X="224" Y="306" LuaLButtonDown="FunSelectPointsShop09">
+			<ButtonRect State="0" Left="460" Top="422" Right="647" Bottom="468" />
+			<ButtonRect State="1" Left="460" Top="359" Right="647" Bottom="405" />
+			<ButtonRect State="2" Left="460" Top="305" Right="647" Bottom="351" />
+		</Button>
+		<AniIcon Name="PointsShopItem09"  X="227" Y="309" Hide="1" LuaLButtonUp="FunSelectPointsShop09" LuaMouseMove="FunPointsShopMouseOver09" LuaMouseOut="FunPointsShopMouseOut" Image="" Detect = "1" AutoDelete="0" InsertToEventList = "1"/>
+		<StaticText Name="PointsShopItemName09" X="270" Y="310" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="136" Height="20" Align="Left" >
+		</StaticText>
+		<StaticText Name="PointsShopItemCost09" X="270" Y="330" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="136" Height="20" Align="Left" >
+		</StaticText>
+		
+		<StaticText Name="PointsShopPageDesc" X="184" Y="366" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="65" Height="20" NotDetected="1" Align="Center" >
+		</StaticText>
+		<StaticText Name="PointsShopCurAcc" X="336" Y="368" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="75" Height="20" NotDetected="1" Align="Center" >
+		</StaticText>
+		
+		<Button Name="PointsShopCloseBtn" Image="Data\interface0025_main_K3.tga" X="401" Y="9" LuaLButtonDown="FunPointsShopClose">
+			<ButtonRect State="0" Left="460" Top="14" Right="482" Bottom="30" />
+			<ButtonRect State="1" Left="485" Top="14" Right="507" Bottom="30" />
+			<ButtonRect State="2" Left="510" Top="14" Right="532" Bottom="30" />
+		</Button>
+		<Button Name="PointsShopPrevPageBtn" Image="Data\interface0025_main_K3.tga" X="159" Y="364" LuaLButtonDown="FunPointsShopPrevPage">
+			<ButtonRect State="0" Left="459" Top="39" Right="483" Bottom="61" />
+			<ButtonRect State="1" Left="459" Top="64" Right="483" Bottom="86" />
+			<ButtonRect State="2" Left="459" Top="89" Right="483" Bottom="111" />
+		</Button>
+		<Button Name="PointsShopNextPageBtn" Image="Data\interface0025_main_K3.tga" X="250" Y="364" LuaLButtonDown="FunPointsShopNextPage">
+			<ButtonRect State="0" Left="495" Top="39" Right="519" Bottom="61" />
+			<ButtonRect State="1" Left="495" Top="64" Right="519" Bottom="86" />
+			<ButtonRect State="2" Left="495" Top="89" Right="519" Bottom="111" />
+		</Button>
+		<Button Name="PointsShopBuySelItemBtn" Image="Data\interface0025_main_K3.tga" X="168" Y="409" LuaLButtonDown="FunPointsShopBuySelItem">
+			<ButtonRect State="0" Left="458" Top="207" Right="548" Bottom="226" />
+			<ButtonRect State="1" Left="458" Top="232" Right="548" Bottom="251" />
+			<ButtonRect State="2" Left="458" Top="257" Right="548" Bottom="276" />
+		</Button>
+		
+		<UIImage Name="PointsShopSelectedRect" X="22" Y="46" Image="Data\interface0025_main_K3.tga" Left="460" Top="305" Right="647" Bottom="351" AutoDelete="0" NotDetected="1"/>
+	</Panel>
+</UI>

@@ -1,0 +1,63 @@
+<?xml version="1.0" ?>
+<!-- Login UI -->
+<UI>
+	<ID Name="AssetUnLock" />
+	<Font Name="Data\simsun.ttc" Width="12" Height="12" />
+
+	<Panel Name="AssetUnLockPanel" X="150" Y="150" Image="Data\interface0005_main_B2.tga" Left="6" Top="300" Right="292"
+		Bottom="549" Drag="1" DragLeft="0" DragTop="0" DragRight="286" DragBottom="249" DetectImage = "1">
+		
+		<Button Name="CrossAssetUnLockButton" Image="Data\interface0005_main_B.tga" X="253" Y="7" LuaLButtonUp="CloseAssetUnlockPanel">
+			<ButtonRect State="0" Left="362" Top="189" Right="386" Bottom="207" />
+			<ButtonRect State="1" Left="387" Top="189" Right="411" Bottom="207" />
+			<ButtonRect State="2" Left="412" Top="189" Right="436" Bottom="207" />
+		</Button>
+
+		<EditBox Name="AssetUnLockPasswordEdit" X="93" Y="35" Row="1" Column="12" EdgeCode="LIGHT" FontColor="FF000000" 
+			Password="1" NoSpace="1" LIGHTColor="FF000000" Limit="12" LuaLButtonUp="SelectAssetUnlockField"/>
+
+		<Button Name="AssetUnLockMiniKeyboard" Image="Data\interface0005_main_B2.tga" X="243" Y="33" LuaLButtonUp="ShowAssetUnlockKeyboard">
+			<ButtonRect State="0" Left="316" Top="18" Right="344" Bottom="36" />
+			<ButtonRect State="1" Left="346" Top="18" Right="374" Bottom="36" />
+			<ButtonRect State="2" Left="377" Top="18" Right="405" Bottom="36" />
+		</Button>		
+		<Button Name="ConfirmUnlockAssetButton" Image="Data\interface0005_main_B2.tga" X="32" Y="191" LuaLButtonUp="ConfirmAssetUnlockPassword">
+			<ButtonRect State="0" Left="316" Top="170" Right="395" Bottom="191" />
+			<ButtonRect State="1" Left="316" Top="193" Right="395" Bottom="214" />
+			<ButtonRect State="2" Left="316" Top="216" Right="395" Bottom="237" />
+		</Button>		
+		
+		<Button Name="CancelAssetUnlockButton" Image="Data\interface0005_main_B2.tga" X="175" Y="191" LuaLButtonUp="CloseAssetUnlockPanel">
+			<ButtonRect State="0" Left="401" Top="170" Right="480" Bottom="191" />
+			<ButtonRect State="1" Left="401" Top="193" Right="480" Bottom="214" />
+			<ButtonRect State="2" Left="401" Top="216" Right="480" Bottom="237" />
+		</Button>
+		
+		<Button Name="ChangeAssetPasswordButton" Image="Data\interface0005_main_B2.tga" X="26" Y="219" LuaLButtonUp="ChangeAssetPassword">
+			<ButtonRect State="0" Left="316" Top="68" Right="408" Bottom="89" />
+			<ButtonRect State="1" Left="412" Top="68" Right="504" Bottom="89" />
+			<ButtonRect State="2" Left="509" Top="68" Right="601" Bottom="89" />
+		</Button>		
+		
+		<Button Name="ClearAssetPasswordButton" Image="Data\interface0005_main_B2.tga" X="169" Y="219" LuaLButtonUp="ClearAssetPassword">
+			<ButtonRect State="0" Left="316" Top="43" Right="408" Bottom="64" />
+			<ButtonRect State="1" Left="412" Top="43" Right="504" Bottom="64" />
+			<ButtonRect State="2" Left="509" Top="43" Right="601" Bottom="64" />
+			<ButtonRect State="3" Left="509" Top="43" Right="601" Bottom="64" />	
+		</Button>
+		
+		<ChatPanel Name="AssetUnLockTip1" X="16" Y="65" Width="257" Height="40" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" FillColor="7F0000FF" Hide="0" NotDetected = "1">	
+		</ChatPanel>	
+
+		<ChatPanel Name="AssetUnLockTip2" X="16" Y="102" Width="257" Height="60" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" FillColor="7F0000FF" Hide="0" NotDetected = "1">	
+		</ChatPanel>	
+
+		<ChatPanel Name="AssetUnLockTip3" X="16" Y="155" Width="257" Height="40" EdgeCode="LIGHT" FontColor="FFFF0000"
+			ShadowColor="FF000000" FillColor="7F0000FF" Hide="0" NotDetected = "1">	
+		</ChatPanel>	
+			
+	</Panel>
+
+</UI>

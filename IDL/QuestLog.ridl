@@ -1,0 +1,90 @@
+//-- Config
+config
+{
+	SubPath="Logic/";
+	ClassID=31000;
+	StartID=31000;
+	EndID  =31009;
+}
+
+//-- include
+#ifndef Q_TARGET_NONE
+#define Q_TARGET_NONE		0
+#define Q_TARGET_NPC		1
+#define Q_TARGET_ITEM		2
+#define Q_TARGET_MOB		3
+#define Q_TARGET_PARTNER	4
+#define Q_TARGET_PET		5
+#define Q_TARGET_MAP		6
+#define Q_TARGET_NEWBIE		7
+#define Q_TARGET_ENCOUNT	8
+#define Q_TARGET_FOLLOWER	9
+#endif
+
+//-- object class
+class QuestLog : NetObject
+{
+	//-- object attributes
+	id { 			UInt32	char_id;
+					UInt16	quest_id;				};
+	info { 			UInt16	Type_id;
+					String	name;
+					String	descript; 				};
+	beginNpc {		UInt32	beginNpc;
+					UInt16	beginNpc_Map;
+					UInt16	beginNpc_x;
+					UInt16	beginNpc_y;				};
+	finishNpc {		UInt32	finishNpc;
+					UInt16	finishNpc_Map;
+					UInt16	finishNpc_x;
+					UInt16	finishNpc_y;			};
+	target1 {		UInt32	target1_id;
+					UInt16	target1_v1;
+					UInt16	target1_v2;
+					UInt16	target1_v3;
+					UInt8	target1_vtype;
+					UInt16	target1_num;
+					UInt16	target1_max;			};
+	target2 {		UInt32	target2_id;
+					UInt16	target2_v1;
+					UInt16	target2_v2;
+					UInt16	target2_v3;
+					UInt8	target2_vtype;
+					UInt16	target2_num;
+					UInt16	target2_max;			};
+	target3 {		UInt32	target3_id;
+					UInt16	target3_v1;
+					UInt16	target3_v2;
+					UInt16	target3_v3;
+					UInt8	target3_vtype;
+					UInt16	target3_num;
+					UInt16	target3_max;			};
+	target4 {		UInt32	target4_id;
+					UInt16	target4_v1;
+					UInt16	target4_v2;
+					UInt16	target4_v3;
+					UInt8	target4_vtype;
+					UInt16	target4_num;
+					UInt16	target4_max;			};
+	target5 {		UInt32	target5_id;
+					UInt16	target5_v1;
+					UInt16	target5_v2;
+					UInt16	target5_v3;
+					UInt8	target5_vtype;
+					UInt16	target5_num;
+					UInt16	target5_max;			};
+	timer 	{		UInt32	timeLimit;
+					UInt16	interval;				};
+	buff	{		UInt16	buff;					};
+	state 	{		UInt8 	state;					};
+	feature {		UInt16	feature;				};
+	status { 		UInt8 	status; 				};
+	target1_name { 	String	target1_name;			};
+	target2_name { 	String	target2_name;			};
+	target3_name { 	String	target3_name;			};
+	target4_name { 	String	target4_name;			};
+	target5_name { 	String	target5_name;			};
+	updateIcon { 	Boolean	updateIcon; 			};
+
+	//--- RPC method
+}

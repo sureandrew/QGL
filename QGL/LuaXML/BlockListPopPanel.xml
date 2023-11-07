@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<!-- Our to do list data -->
+<UI>
+	<Panel Name="BlockListPopPanel" Image="Data\interface008_chat.tga" X="10" Y="100" 
+			Left="331" Top="372" Right="450" Bottom="585" DetectImage = "1"
+			Drag="1" DragLeft="0" DragTop="0" DragRight="119" DragBottom="213" LuaRButtonUp="CloseBlockList">
+		<Button Image="Data\interface008_chat.tga" X="4" Y="190" LuaLButtonUp="AddCharToBlockList">
+			<ButtonRect State="0" Left="360" Top="282" Right="396" Bottom="300" />
+			<ButtonRect State="1" Left="397" Top="282" Right="433" Bottom="300" />
+			<ButtonRect State="2" Left="434" Top="282" Right="480" Bottom="300" />
+		</Button>
+		<Button Image="Data\interface008_chat.tga" X="41" Y="190" LuaLButtonUp="RemoveCharFromBlockList">
+			<ButtonRect State="0" Left="360" Top="303" Right="396" Bottom="321" />
+			<ButtonRect State="1" Left="397" Top="303" Right="433" Bottom="321" />
+			<ButtonRect State="2" Left="434" Top="303" Right="480" Bottom="321" />
+		</Button>
+		<Button Image="Data\interface008_chat.tga" X="77" Y="190" LuaLButtonUp="ClearBlockList">
+			<ButtonRect State="0" Left="360" Top="324" Right="396" Bottom="342" />
+			<ButtonRect State="1" Left="397" Top="324" Right="433" Bottom="342" />
+			<ButtonRect State="2" Left="434" Top="324" Right="480" Bottom="342" />
+		</Button>
+			
+		<Button Image="Data\interface008_chat.tga" X="95" Y="0"  LuaLButtonUp="CloseBlockList">
+			<ButtonRect State="0" Left="328" Top="349" Right="352" Bottom="367" />
+			<ButtonRect State="1" Left="353" Top="349" Right="377" Bottom="367" />
+			<ButtonRect State="2" Left="378" Top="349" Right="402" Bottom="367" />
+		</Button>
+		
+	</Panel>
+</UI>

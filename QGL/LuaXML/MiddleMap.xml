@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" ?>
+<!-- Our to do list data -->
+<UI>
+	<ID Name="MidMap" />
+	<Font Name="Data\simsun.ttc" Width="12" Height="12" />
+	<Panel Name="MidMapPanel" Image="" X="0" Y="0" Left="0" Top="0" Right="800" Bottom="600" Hide="0" DetectImage="0" Drag="1" 
+		LuaEndDrag="MoveCharacterTo" LuaKeyChar="CloseMiddleMap">
+				
+		<!--This few image will be deleted if the panelex of vertic is created-->
+		<UIImage Name="LeftUpBorder" X="0" Y="17" Image="Data\interface0025_main_J.tga" Left="252" Top="192" Right="254" Bottom="194" />
+		<UIImage Name="RightUpBorder" X="0" Y="0" Image="Data\interface0025_main_J.tga" Left="264" Top="192" Right="266" Bottom="194" />
+		<UIImage Name="LeftBottomBorder" X="0" Y="0" Image="Data\interface0025_main_J.tga" Left="252" Top="204" Right="254" Bottom="206" />
+		<UIImage Name="RightBottomBorder" X="0" Y="0" Image="Data\interface0025_main_J.tga" Left="264" Top="204" Right="266" Bottom="206" />
+		
+		<LinerImage Name="TopBorder" X="100" Y="100" Image="Data\interface0025_main_J.tga" Left="256" Top="192"
+			Right="262" Bottom="194" LineWidth="1" BaseWidth="1" Hide="0" Denumerator="100" Numerator="100" />
+		<LinerImageV Name="LeftBorder" X="100" Y="100" Image="Data\interface0025_main_J.tga" Left="252" Top="196"
+			Right="254" Bottom="202" LineWidth="1" BaseWidth="1" Hide="0" Denumerator="100" Numerator="100" />
+		<LinerImage Name="BottomBorder" X="100" Y="100" Image="Data\interface0025_main_J.tga" Left="256" Top="204"
+			Right="262" Bottom="206" LineWidth="1" BaseWidth="1" Hide="0" Denumerator="100" Numerator="100" />
+		<LinerImageV Name="RightBorder" X="100" Y="100" Image="Data\interface0025_main_J.tga" Left="264" Top="196"
+			Right="266" Bottom="202" LineWidth="1" BaseWidth="1" Hide="0" Denumerator="100" Numerator="100" />
+		
+		<UIImage Name="MidMapImage" Hide="0" X="2" Y="19" Image="" Left="0" Top="0" Right="120" Bottom="120" 
+			LuaMouseMove="ShowLocation"	AutoDelete="0" NotDetected="0"  LuaLButtonDown="DragMidMap" LuaMouseOut="OutMidMap" 
+			LuaMouseIn="InMidMap" InsertToEventList = "1" LuaRButtonUp="CloseMiddleMap"	/>
+
+		<UIImage Name="MidMapPath" X="2" Y="19" Left="0" Top="0"
+			Right="120" Bottom="120" AutoDelete="0" NotDetected="1" Hide="0" />
+		<UIImage Name="CharacterLocation" X="0" Y="0" Image="Data\interface0025_main_J.tga" Left="365" Top="130" Right="378" Bottom="148" NotDetected="1" /> 
+		
+		<UIImage Name="SearchNPCBack" Image="Data\interface0025_main_J.tga" X="0" Y="0" Left="256" Top="33" Right="350" Bottom="50" />
+		<Button Name="SearchNPC" Image="Data\interface0025_main_J.tga" X="22" Y="2" LuaLButtonUp="OpenSearchNPCList">
+			<ButtonRect State="0" Left="278" Top="55" Right="329" Bottom="70" />
+			<ButtonRect State="1" Left="331" Top="55" Right="382" Bottom="70" />
+			<ButtonRect State="2" Left="384" Top="55" Right="435" Bottom="70" />
+		</Button>
+		
+		<UIImage Name="NPCBar" Image="Data\interface0025_main_J.tga" X="0" Y="54" Left="351" Top="33" Right="534" Bottom="50" /> 
+		<Button Name="MidMapBusinessman" Image="Data\interface0025_main_J.tga" X="37" Y="54" LuaLButtonUp="MidMapShowBusinessman">
+			<ButtonRect State="0" Left="279" Top="91" Right="324" Bottom="106" />
+			<ButtonRect State="1" Left="332" Top="91" Right="377" Bottom="106" />
+			<ButtonRect State="2" Left="385" Top="91" Right="430" Bottom="106" />
+		</Button>
+		
+		<Button Name="MidMapNormalNpc" Image="Data\interface0025_main_J.tga" X="73" Y="54" LuaLButtonUp="MidMapShowNormalNpc">
+			<ButtonRect State="0" Left="278" Top="73" Right="324" Bottom="88" />
+			<ButtonRect State="1" Left="331" Top="73" Right="377" Bottom="88" />
+			<ButtonRect State="2" Left="384" Top="73" Right="430" Bottom="88" />
+		</Button>
+		
+		<Button Name="MidMapQuestNpc" Image="Data\interface0025_main_J.tga" X="109" Y="54" LuaLButtonUp="MidMapShowQuestNpc">
+			<ButtonRect State="0" Left="279" Top="109" Right="325" Bottom="124" />
+			<ButtonRect State="1" Left="332" Top="109" Right="378" Bottom="124" />
+			<ButtonRect State="2" Left="385" Top="109" Right="431" Bottom="124" />
+		</Button>
+		
+		<Button Name="MidMapCross" Image="Data\interface0025_main_J.tga" X="189" Y="4" LuaLButtonUp="CloseMiddleMap">
+			<ButtonRect State="0" Left="265" Top="8" Right="289" Bottom="26" />
+			<ButtonRect State="1" Left="290" Top="8" Right="314" Bottom="26" />
+			<ButtonRect State="2" Left="315" Top="8" Right="339" Bottom="26" />
+		</Button>
+		
+		<UIImage Name="TargetPoint" Image="Data\interface0025_main_J.tga" Left="273" Top="141" Right="290" Bottom="164"
+			Hide="1" X="0" Y="0" NotDetected="1" />
+			
+	</Panel>
+	<Panel Name="LocationBoxPanel" Image="" X="0" Y="0" Left="0" Top="0" Right="150" Bottom="30" Hide="1" NotDetected="1"  NotRemove="1">
+		<!--Location box-->
+		<UIImage Name="LocationBoxLeft" Image="Data\interface0025_main_J.tga" Left="288" Top="174" Right="293" Bottom="204"
+			Hide="0" X="0" Y="0" NotDetected="0" />
+		<LinerImage Name="LocationBox" X="100" Y="100" Image="Data\interface0025_main_J.tga" Left="295" Top="174"
+			Right="300" Bottom="204" LineWidth="68" BaseWidth="68" Hide="0" Denumerator="100" Numerator="100" />
+		<UIImage Name="LocationBoxRight" Image="Data\interface0025_main_J.tga" Left="302" Top="174" Right="307" Bottom="204"
+			Hide="0" X="0" Y="0" NotDetected="0" />
+		<StaticText Name="LocationString" X="100" Y="100" Row="1" Column="10" Width="120" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			
+		</StaticText>
+		
+		<StaticText Name="TargetName" X="100" Y="100" Row="1" Column="10" Width="120" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			
+		</StaticText>
+		
+	</Panel>
+</UI>

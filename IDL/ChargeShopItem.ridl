@@ -1,0 +1,42 @@
+//-- Config
+config
+{
+	SubPath="Logic/";
+	ClassID=42000;
+	StartID=42000;
+	EndID  =42999;
+	ModifyMask=1;
+}
+
+//-- include
+
+//-- object class
+class ChargeShopItem : NetObject
+{
+	//-- object attributes
+	idInfo	{		UInt32 chargeShopID;	};
+	itemInfo { 		String itemName;
+				UInt8 shopType;
+				UInt8 itemType;
+				UInt32 itemId;	
+				UInt32 yuanBao;	
+				UInt8 LV;
+				UInt8 PreviewType;	};
+
+	discountInfo { 		UInt8 discount;	};
+
+	stockInfo {		UInt16 totalStock; 	};
+	remainInfo{		UInt16 remain;		};
+
+	limitedInfo {		UInt8 LimitType;
+				UInt8 restore;		};
+
+	existTimeInfo { 	UInt32 StartTime;
+				UInt32 EndTime;		};
+
+	lastOrderInfo {		UInt32 lastOrderDate;	};
+			
+	sellInfo {		UInt32 totalSell;	};
+			
+	
+}

@@ -1,0 +1,24 @@
+//-- Config
+config
+{
+	SubPath="Logic/";
+	ClassID=60000;
+	StartID=60000;
+	EndID  =60599;
+	ModifyMask=1;
+}
+
+//-- include
+
+//-- object class
+class SellYuanBao
+{
+	id { 		UInt32 sellYuanBao_id;		};
+	charInfo {    	UInt32 char_id;
+                	String charName;		}; 
+	sellInfo {	UInt8 sellType;
+			UInt32 totalYBT;
+			UInt32 moneyPerYBT;
+			UInt32 expireDate;		};
+	soldYBT	{	UInt32 soldYBT;			};
+}

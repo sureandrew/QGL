@@ -1,0 +1,397 @@
+﻿<?xml version="1.0" ?>
+<!-- Our to do list data -->
+<UI>
+	<ID Name="GiftBox" />
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	<Panel Name="GiftBoxPanel" Image="Data\interface0009_shop.tga" X="456" Y="73" 
+			Left="3" Top="2" Right="304" Bottom="459" LuaTimeOut="GiftBoxDetailPopupTimeOut" TimeOutCount="500"
+			DetectImage = "1" LuaRButtonDown="CloseGiftBox"
+			Drag="1" DragLeft="0" DragTop="0" DragRight="301" DragBottom="457" LuaKeyChar="CloseGiftBox">
+			
+		<Button Name="GiftBoxCross" Image="Data\interface0009_shop.tga" X="267" Y="8" LuaLButtonDown="CloseGiftBox">
+			<ButtonRect State="0" Left="306" Top="10" Right="330" Bottom="28" />
+			<ButtonRect State="1" Left="331" Top="10" Right="355" Bottom="28" />
+			<ButtonRect State="2" Left="356" Top="10" Right="380" Bottom="28" />
+		</Button>
+		
+		<Button Name="GiftBoxUpdate" Image="Data\interface0025_main_K.tga" X="111" Y="420" LuaLButtonDown="UpdateGiftBox">
+			<ButtonRect State="0" Left="802" Top="439" Right="879" Bottom="460" />
+			<ButtonRect State="1" Left="802" Top="464" Right="879" Bottom="485" />
+			<ButtonRect State="2" Left="802" Top="489" Right="879" Bottom="510" />
+		</Button>
+		
+		<CheckBox Name = "GiftBoxItem" Image="Data\interface0009_shop.tga" X="27" Y="42"  LuaLButtonDown="SelectGiftBoxItem">
+			<CheckBoxRect Index="0" Left="365" Top="33" Right="420" Bottom="53" />
+			<CheckBoxRect Index="1" Left="365" Top="33" Right="420" Bottom="53" />
+			<CheckBoxRect Index="2" Left="439" Top="33" Right="497" Bottom="53" />
+		</CheckBox>
+			
+		<CheckBox Name = "GiftBoxPartner" Image="Data\interface0009_shop.tga" X="82" Y="42"  LuaLButtonDown="SelectGiftBoxPartner">
+			<CheckBoxRect Index="0" Left="365" Top="57" Right="420" Bottom="77" />
+			<CheckBoxRect Index="1" Left="365" Top="57" Right="420" Bottom="77" />
+			<CheckBoxRect Index="2" Left="439" Top="57" Right="497" Bottom="77" />
+		</CheckBox>
+			
+		<CheckBox Name = "GiftBoxPet" Image="Data\interface0009_shop.tga" X="137" Y="42"  LuaLButtonDown="SelectGiftBoxPet">
+			<CheckBoxRect Index="0" Left="365" Top="105" Right="422" Bottom="125" />
+			<CheckBoxRect Index="1" Left="365" Top="105" Right="422" Bottom="125" />
+			<CheckBoxRect Index="2" Left="439" Top="105" Right="497" Bottom="125" />
+		</CheckBox>	
+			
+		<!-- Gift Box -->
+		<UIImage Name="GiftBoxName" Image="Data\interface0009_shop.tga" X="130" Y="5" NotDetected="1"
+			Left="307" Top="184" Right="351" Bottom="202" Hide="0" AutoDelete="0"/>
+				
+		<!-- Item Icons -->
+		
+		<!-- 1st row -->
+		<UIImage Name="GiftBox000Bg" X="28" Y="63" Image="Data\interface0009_shop.tga" Left="534" Top="34" Right="572" Bottom="73" />
+		<AniIcon Name="GiftBox000Icon" X="28" Y="63" Image="" Detect = "1" AutoDelete="0"  LuaLButtonUp="DragGiftBox"
+			LuaRButtonUp="GetGiftBox"  LuaMouseMove = "GiftBoxMouseOver" LuaMouseOut = "GiftBoxMouseOut" 
+			InsertToEventList = "1" />
+		<StaticText Name="GiftBox000Stack" X="31" Y="88" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+
+		<UIImage Name="GiftBox001Bg" X="69" Y="63" Image="Data\interface0009_shop.tga" Left="534" Top="34" Right="572" Bottom="73" />			
+		<AniIcon Name="GiftBox001Icon" X="69" Y="63" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragGiftBox"
+			LuaRButtonUp="GetGiftBox"  LuaMouseMove = "GiftBoxMouseOver" LuaMouseOut = "GiftBoxMouseOut" 
+			InsertToEventList = "1" />
+		<StaticText Name="GiftBox001Stack" X="72" Y="88" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<UIImage Name="GiftBox002Bg" X="110" Y="63" Image="Data\interface0009_shop.tga" Left="534" Top="34" Right="572" Bottom="73" />
+		<AniIcon Name="GiftBox002Icon" X="110" Y="63" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragGiftBox"
+			LuaRButtonUp="GetGiftBox"  LuaMouseMove = "GiftBoxMouseOver" LuaMouseOut = "GiftBoxMouseOut" 
+			InsertToEventList = "1" />
+		<StaticText Name="GiftBox002Stack" X="113" Y="88" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<UIImage Name="GiftBox003Bg" X="151" Y="63" Image="Data\interface0009_shop.tga" Left="534" Top="34" Right="572" Bottom="73" />
+		<AniIcon Name="GiftBox003Icon" X="151" Y="63" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragGiftBox"
+			LuaRButtonUp="GetGiftBox"  LuaMouseMove = "GiftBoxMouseOver" LuaMouseOut = "GiftBoxMouseOut" 
+			InsertToEventList = "1" />
+		<StaticText Name="GiftBox003Stack" X="154" Y="88" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<UIImage Name="GiftBox004Bg" X="192" Y="63" Image="Data\interface0009_shop.tga" Left="534" Top="34" Right="572" Bottom="73" />	
+		<AniIcon Name="GiftBox004Icon" X="192" Y="63" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragGiftBox"
+			LuaRButtonUp="GetGiftBox"  LuaMouseMove = "GiftBoxMouseOver" LuaMouseOut = "GiftBoxMouseOut" 
+			InsertToEventList = "1" />
+		<StaticText Name="GiftBox004Stack" X="195" Y="88" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<UIImage Name="GiftBox005Bg" X="233" Y="63" Image="Data\interface0009_shop.tga" Left="534" Top="34" Right="572" Bottom="73" />			
+		<AniIcon Name="GiftBox005Icon" X="233" Y="63" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragGiftBox"
+			LuaRButtonUp="GetGiftBox"  LuaMouseMove = "GiftBoxMouseOver" LuaMouseOut = "GiftBoxMouseOut" 
+			InsertToEventList = "1" />
+		<StaticText Name="GiftBox005Stack" X="236" Y="88" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+			
+		<!-- 2nd row -->
+		<UIImage Name="GiftBox006Bg" X="28" Y="104" Image="Data\interface0009_shop.tga" Left="534" Top="34" Right="572" Bottom="73" />
+		<AniIcon Name="GiftBox006Icon" X="28" Y="104" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragGiftBox"
+			LuaRButtonUp="GetGiftBox"  LuaMouseMove = "GiftBoxMouseOver" LuaMouseOut = "GiftBoxMouseOut" 
+			InsertToEventList = "1" />
+		<StaticText Name="GiftBox006Stack" X="31" Y="129" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+			
+		<UIImage Name="GiftBox007Bg" X="69" Y="104" Image="Data\interface0009_shop.tga" Left="534" Top="34" Right="572" Bottom="73" />
+		<AniIcon Name="GiftBox007Icon" X="69" Y="104" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragGiftBox"
+			LuaRButtonUp="GetGiftBox"  LuaMouseMove = "GiftBoxMouseOver" LuaMouseOut = "GiftBoxMouseOut" 
+			InsertToEventList = "1" />
+		<StaticText Name="GiftBox007Stack" X="72" Y="129" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<UIImage Name="GiftBox008Bg" X="110" Y="104" Image="Data\interface0009_shop.tga" Left="534" Top="34" Right="572" Bottom="73" />
+		<AniIcon Name="GiftBox008Icon" X="110" Y="104" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragGiftBox"
+			LuaRButtonUp="GetGiftBox"  LuaMouseMove = "GiftBoxMouseOver" LuaMouseOut = "GiftBoxMouseOut" 
+			InsertToEventList = "1" />
+		<StaticText Name="GiftBox008Stack" X="113" Y="129" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<UIImage Name="GiftBox009Bg" X="151" Y="104" Image="Data\interface0009_shop.tga" Left="534" Top="34" Right="572" Bottom="73" />
+		<AniIcon Name="GiftBox009Icon" X="151" Y="104" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragGiftBox"
+			LuaRButtonUp="GetGiftBox"  LuaMouseMove = "GiftBoxMouseOver" LuaMouseOut = "GiftBoxMouseOut" 
+			InsertToEventList = "1" />
+		<StaticText Name="GiftBox009Stack" X="154" Y="129" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+			
+		<UIImage Name="GiftBox010Bg" X="192" Y="104" Image="Data\interface0009_shop.tga" Left="534" Top="34" Right="572" Bottom="73" />
+		<AniIcon Name="GiftBox010Icon" X="192" Y="104" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragGiftBox"
+			LuaRButtonUp="GetGiftBox"  LuaMouseMove = "GiftBoxMouseOver" LuaMouseOut = "GiftBoxMouseOut" 
+			InsertToEventList = "1" />
+		<StaticText Name="GiftBox010Stack" X="195" Y="129" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<UIImage Name="GiftBox011Bg" X="233" Y="104" Image="Data\interface0009_shop.tga" Left="534" Top="34" Right="572" Bottom="73" />
+		<AniIcon Name="GiftBox011Icon" X="233" Y="104" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragGiftBox"
+			LuaRButtonUp="GetGiftBox"  LuaMouseMove = "GiftBoxMouseOver" LuaMouseOut = "GiftBoxMouseOut" 
+			InsertToEventList = "1" />
+		<StaticText Name="GiftBox011Stack" X="236" Y="129" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+			
+		<!-- 3rd -->
+		<UIImage Name="GiftBox012Bg" X="28" Y="145" Image="Data\interface0009_shop.tga" Left="534" Top="34" Right="572" Bottom="73" />
+		<AniIcon Name="GiftBox012Icon" X="28" Y="145" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragGiftBox"
+			LuaRButtonUp="GetGiftBox"  LuaMouseMove = "GiftBoxMouseOver" LuaMouseOut = "GiftBoxMouseOut" 
+			InsertToEventList = "1" />
+		<StaticText Name="GiftBox012Stack" X="31" Y="170" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<UIImage Name="GiftBox013Bg" X="69" Y="145" Image="Data\interface0009_shop.tga" Left="534" Top="34" Right="572" Bottom="73" />
+		<AniIcon Name="GiftBox013Icon" X="69" Y="145" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragGiftBox"
+			LuaRButtonUp="GetGiftBox"  LuaMouseMove = "GiftBoxMouseOver" LuaMouseOut = "GiftBoxMouseOut" 
+			InsertToEventList = "1" />
+		<StaticText Name="GiftBox013Stack" X="72" Y="170" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<UIImage Name="GiftBox014Bg" X="110" Y="145" Image="Data\interface0009_shop.tga" Left="534" Top="34" Right="572" Bottom="73" />
+		<AniIcon Name="GiftBox014Icon" X="110" Y="145" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragGiftBox"
+			LuaRButtonUp="GetGiftBox"  LuaMouseMove = "GiftBoxMouseOver" LuaMouseOut = "GiftBoxMouseOut" 
+			InsertToEventList = "1" />
+		<StaticText Name="GiftBox014Stack" X="113" Y="170" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<UIImage Name="GiftBox015Bg" X="151" Y="145" Image="Data\interface0009_shop.tga" Left="534" Top="34" Right="572" Bottom="73" />
+		<AniIcon Name="GiftBox015Icon" X="151" Y="145" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragGiftBox"
+			LuaRButtonUp="GetGiftBox"  LuaMouseMove = "GiftBoxMouseOver" LuaMouseOut = "GiftBoxMouseOut" 
+			InsertToEventList = "1" />
+		<StaticText Name="GiftBox015Stack" X="154" Y="170" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<UIImage Name="GiftBox016Bg" X="192" Y="145" Image="Data\interface0009_shop.tga" Left="534" Top="34" Right="572" Bottom="73" />
+		<AniIcon Name="GiftBox016Icon" X="192" Y="145" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragGiftBox"
+			LuaRButtonUp="GetGiftBox"  LuaMouseMove = "GiftBoxMouseOver" LuaMouseOut = "GiftBoxMouseOut" 
+			InsertToEventList = "1" />
+		<StaticText Name="GiftBox016Stack" X="195" Y="170" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<UIImage Name="GiftBox017Bg" X="233" Y="145" Image="Data\interface0009_shop.tga" Left="534" Top="34" Right="572" Bottom="73" />
+		<AniIcon Name="GiftBox017Icon" X="233" Y="145" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragGiftBox"
+			LuaRButtonUp="GetGiftBox"  LuaMouseMove = "GiftBoxMouseOver" LuaMouseOut = "GiftBoxMouseOut" 
+			InsertToEventList = "1" />
+		<StaticText Name="GiftBox017Stack" X="236" Y="170" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+			
+		<!-- 4th row -->
+		<UIImage Name="GiftBox018Bg" X="28" Y="186" Image="Data\interface0009_shop.tga" Left="534" Top="34" Right="572" Bottom="73" />
+		<AniIcon Name="GiftBox018Icon" X="28" Y="186" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragGiftBox"
+			LuaRButtonUp="GetGiftBox"  LuaMouseMove = "GiftBoxMouseOver" LuaMouseOut = "GiftBoxMouseOut" 
+			InsertToEventList = "1" />
+		<StaticText Name="GiftBox018Stack" X="31" Y="211" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+
+		<UIImage Name="GiftBox019Bg" X="69" Y="186" Image="Data\interface0009_shop.tga" Left="534" Top="34" Right="572" Bottom="73" />			
+		<AniIcon Name="GiftBox019Icon" X="69" Y="186" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragGiftBox"
+			LuaRButtonUp="GetGiftBox"  LuaMouseMove = "GiftBoxMouseOver" LuaMouseOut = "GiftBoxMouseOut" 
+			InsertToEventList = "1" />
+		<StaticText Name="GiftBox019Stack" X="72" Y="211" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<UIImage Name="GiftBox020Bg" X="110" Y="186" Image="Data\interface0009_shop.tga" Left="534" Top="34" Right="572" Bottom="73" />
+		<AniIcon Name="GiftBox020Icon" X="110" Y="186" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragGiftBox"
+			LuaRButtonUp="GetGiftBox"  LuaMouseMove = "GiftBoxMouseOver" LuaMouseOut = "GiftBoxMouseOut" 
+			InsertToEventList = "1" />
+		<StaticText Name="GiftBox020Stack" X="113" Y="211" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<UIImage Name="GiftBox021Bg" X="151" Y="186" Image="Data\interface0009_shop.tga" Left="534" Top="34" Right="572" Bottom="73" />
+		<AniIcon Name="GiftBox021Icon" X="151" Y="186" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragGiftBox"
+			LuaRButtonUp="GetGiftBox"  LuaMouseMove = "GiftBoxMouseOver" LuaMouseOut = "GiftBoxMouseOut" 
+			InsertToEventList = "1" />
+		<StaticText Name="GiftBox021Stack" X="154" Y="211" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<UIImage Name="GiftBox022Bg" X="192" Y="186" Image="Data\interface0009_shop.tga" Left="534" Top="34" Right="572" Bottom="73" />
+		<AniIcon Name="GiftBox022Icon" X="192" Y="186" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragGiftBox"
+			LuaRButtonUp="GetGiftBox"  LuaMouseMove = "GiftBoxMouseOver" LuaMouseOut = "GiftBoxMouseOut" 
+			InsertToEventList = "1" />
+		<StaticText Name="GiftBox022Stack" X="195" Y="211" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<UIImage Name="GiftBox023Bg" X="233" Y="186" Image="Data\interface0009_shop.tga" Left="534" Top="34" Right="572" Bottom="73" />
+		<AniIcon Name="GiftBox023Icon" X="233" Y="186" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragGiftBox"
+			LuaRButtonUp="GetGiftBox"  LuaMouseMove = "GiftBoxMouseOver" LuaMouseOut = "GiftBoxMouseOut" 
+			InsertToEventList = "1" />
+		<StaticText Name="GiftBox023Stack" X="236" Y="211" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<!-- 5th row-->
+		<UIImage Name="GiftBox024Bg" X="28" Y="227" Image="Data\interface0009_shop.tga" Left="534" Top="34" Right="572" Bottom="73" />
+		<AniIcon Name="GiftBox024Icon" X="28" Y="227" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragGiftBox"
+			LuaRButtonUp="GetGiftBox"  LuaMouseMove = "GiftBoxMouseOver" LuaMouseOut = "GiftBoxMouseOut" 
+			InsertToEventList = "1" />
+		<StaticText Name="GiftBox024Stack" X="31" Y="252" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<UIImage Name="GiftBox025Bg" X="69" Y="227" Image="Data\interface0009_shop.tga" Left="534" Top="34" Right="572" Bottom="73" />
+		<AniIcon Name="GiftBox025Icon" X="69" Y="227" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragGiftBox"
+			LuaRButtonUp="GetGiftBox"  LuaMouseMove = "GiftBoxMouseOver" LuaMouseOut = "GiftBoxMouseOut" 
+			InsertToEventList = "1" />
+		<StaticText Name="GiftBox025Stack" X="72" Y="252" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<UIImage Name="GiftBox026Bg" X="110" Y="227" Image="Data\interface0009_shop.tga" Left="534" Top="34" Right="572" Bottom="73" />
+		<AniIcon Name="GiftBox026Icon" X="110" Y="227" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragGiftBox"
+			LuaRButtonUp="GetGiftBox"  LuaMouseMove = "GiftBoxMouseOver" LuaMouseOut = "GiftBoxMouseOut" 
+			InsertToEventList = "1" />
+		<StaticText Name="GiftBox026Stack" X="113" Y="252" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<UIImage Name="GiftBox027Bg" X="151" Y="227" Image="Data\interface0009_shop.tga" Left="534" Top="34" Right="572" Bottom="73" />
+		<AniIcon Name="GiftBox027Icon" X="151" Y="227" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragGiftBox"
+			LuaRButtonUp="GetGiftBox"  LuaMouseMove = "GiftBoxMouseOver" LuaMouseOut = "GiftBoxMouseOut" 
+			InsertToEventList = "1" />
+		<StaticText Name="GiftBox027Stack" X="154" Y="252" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<UIImage Name="GiftBox028Bg" X="192" Y="227" Image="Data\interface0009_shop.tga" Left="534" Top="34" Right="572" Bottom="73" />
+		<AniIcon Name="GiftBox028Icon" X="192" Y="227" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragGiftBox"
+			LuaRButtonUp="GetGiftBox"  LuaMouseMove = "GiftBoxMouseOver" LuaMouseOut = "GiftBoxMouseOut" 
+			InsertToEventList = "1" />
+		<StaticText Name="GiftBox028Stack" X="195" Y="252" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<UIImage Name="GiftBox029Bg" X="233" Y="227" Image="Data\interface0009_shop.tga" Left="534" Top="34" Right="572" Bottom="73" />
+		<AniIcon Name="GiftBox029Icon" X="233" Y="227" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragGiftBox"
+			LuaRButtonUp="GetGiftBox"  LuaMouseMove = "GiftBoxMouseOver" LuaMouseOut = "GiftBoxMouseOut" 
+			InsertToEventList = "1" />
+		<StaticText Name="GiftBox029Stack" X="236" Y="252" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+			
+		<!-- 6th row -->
+		<UIImage Name="GiftBox030Bg" X="28" Y="268" Image="Data\interface0009_shop.tga" Left="534" Top="34" Right="572" Bottom="73" />
+		<AniIcon Name="GiftBox030Icon" X="28" Y="268" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragGiftBox"
+			LuaRButtonUp="GetGiftBox"  LuaMouseMove = "GiftBoxMouseOver" LuaMouseOut = "GiftBoxMouseOut" 
+			InsertToEventList = "1" />
+		<StaticText Name="GiftBox030Stack" X="31" Y="293" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<UIImage Name="GiftBox031Bg" X="69" Y="268" Image="Data\interface0009_shop.tga" Left="534" Top="34" Right="572" Bottom="73" />			
+		<AniIcon Name="GiftBox031Icon" X="69" Y="268" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragGiftBox"
+			LuaRButtonUp="GetGiftBox"  LuaMouseMove = "GiftBoxMouseOver" LuaMouseOut = "GiftBoxMouseOut" 
+			InsertToEventList = "1" />
+		<StaticText Name="GiftBox031Stack" X="72" Y="293" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<UIImage Name="GiftBox032Bg" X="110" Y="268" Image="Data\interface0009_shop.tga" Left="534" Top="34" Right="572" Bottom="73" />
+		<AniIcon Name="GiftBox032Icon" X="110" Y="268" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragGiftBox"
+			LuaRButtonUp="GetGiftBox"  LuaMouseMove = "GiftBoxMouseOver" LuaMouseOut = "GiftBoxMouseOut" 
+			InsertToEventList = "1" />
+		<StaticText Name="GiftBox032Stack" X="113" Y="293" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+			
+		<UIImage Name="GiftBox033Bg" X="151" Y="268" Image="Data\interface0009_shop.tga" Left="534" Top="34" Right="572" Bottom="73" />
+		<AniIcon Name="GiftBox033Icon" X="151" Y="268" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragGiftBox"
+			LuaRButtonUp="GetGiftBox"  LuaMouseMove = "GiftBoxMouseOver" LuaMouseOut = "GiftBoxMouseOut" 
+			InsertToEventList = "1" />
+		<StaticText Name="GiftBox033Stack" X="154" Y="293" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+			
+		<UIImage Name="GiftBox034Bg" X="192" Y="268" Image="Data\interface0009_shop.tga" Left="534" Top="34" Right="572" Bottom="73" />	
+		<AniIcon Name="GiftBox034Icon" X="192" Y="268" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragGiftBox"
+			LuaRButtonUp="GetGiftBox"  LuaMouseMove = "GiftBoxMouseOver" LuaMouseOut = "GiftBoxMouseOut" 
+			InsertToEventList = "1" />
+		<StaticText Name="GiftBox034Stack" X="195" Y="293" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<UIImage Name="GiftBox035Bg" X="233" Y="268" Image="Data\interface0009_shop.tga" Left="534" Top="34" Right="572" Bottom="73" />	
+		<AniIcon Name="GiftBox035Icon" X="233" Y="268" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragGiftBox"
+			LuaRButtonUp="GetGiftBox"  LuaMouseMove = "GiftBoxMouseOver" LuaMouseOut = "GiftBoxMouseOut" 
+			InsertToEventList = "1" />
+		<StaticText Name="GiftBox035Stack" X="236" Y="293" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+			
+		<!-- 7th row -->
+		<UIImage Name="GiftBox036Bg" X="28" Y="309" Image="Data\interface0009_shop.tga" Left="534" Top="34" Right="572" Bottom="73" />
+		<AniIcon Name="GiftBox036Icon" X="28" Y="309" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragGiftBox"
+			LuaRButtonUp="GetGiftBox"  LuaMouseMove = "GiftBoxMouseOver" LuaMouseOut = "GiftBoxMouseOut" 
+			InsertToEventList = "1" />
+		<StaticText Name="GiftBox036Stack" X="31" Y="334" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<UIImage Name="GiftBox037Bg" X="69" Y="309" Image="Data\interface0009_shop.tga" Left="534" Top="34" Right="572" Bottom="73" />
+		<AniIcon Name="GiftBox037Icon" X="69" Y="309" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragGiftBox"
+			LuaRButtonUp="GetGiftBox"  LuaMouseMove = "GiftBoxMouseOver" LuaMouseOut = "GiftBoxMouseOut" 
+			InsertToEventList = "1" />
+		<StaticText Name="GiftBox037Stack" X="72" Y="334" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<UIImage Name="GiftBox038Bg" X="110" Y="309" Image="Data\interface0009_shop.tga" Left="534" Top="34" Right="572" Bottom="73" />
+		<AniIcon Name="GiftBox038Icon" X="110" Y="309" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragGiftBox"
+			LuaRButtonUp="GetGiftBox"  LuaMouseMove = "GiftBoxMouseOver" LuaMouseOut = "GiftBoxMouseOut" 
+			InsertToEventList = "1" />
+		<StaticText Name="GiftBox038Stack" X="113" Y="334" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<UIImage Name="GiftBox039Bg" X="151" Y="309" Image="Data\interface0009_shop.tga" Left="534" Top="34" Right="572" Bottom="73" />
+		<AniIcon Name="GiftBox039Icon" X="151" Y="309" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragGiftBox"
+			LuaRButtonUp="GetGiftBox"  LuaMouseMove = "GiftBoxMouseOver" LuaMouseOut = "GiftBoxMouseOut" 
+			InsertToEventList = "1" />
+		<StaticText Name="GiftBox039Stack" X="154" Y="334" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<UIImage Name="GiftBox040Bg" X="192" Y="309" Image="Data\interface0009_shop.tga" Left="534" Top="34" Right="572" Bottom="73" />
+		<AniIcon Name="GiftBox040Icon" X="192" Y="309" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragGiftBox"
+			LuaRButtonUp="GetGiftBox"  LuaMouseMove = "GiftBoxMouseOver" LuaMouseOut = "GiftBoxMouseOut" 
+			InsertToEventList = "1" />
+		<StaticText Name="GiftBox040Stack" X="195" Y="334" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+			
+		<UIImage Name="GiftBox041Bg" X="233" Y="309" Image="Data\interface0009_shop.tga" Left="534" Top="34" Right="572" Bottom="73" />
+		<AniIcon Name="GiftBox041Icon" X="233" Y="309" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragGiftBox"
+			LuaRButtonUp="GetGiftBox"  LuaMouseMove = "GiftBoxMouseOver" LuaMouseOut = "GiftBoxMouseOut" 
+			InsertToEventList = "1" />
+		<StaticText Name="GiftBox041Stack" X="236" Y="334" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<!-- 8th row -->
+		<UIImage Name="GiftBox042Bg" X="28" Y="350" Image="Data\interface0009_shop.tga" Left="534" Top="34" Right="572" Bottom="73" />
+		<AniIcon Name="GiftBox042Icon" X="28" Y="350" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragGiftBox"
+			LuaRButtonUp="GetGiftBox"  LuaMouseMove = "GiftBoxMouseOver" LuaMouseOut = "GiftBoxMouseOut" 
+			InsertToEventList = "1" />
+		<StaticText Name="GiftBox042Stack" X="31" Y="375" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<UIImage Name="GiftBox043Bg" X="69" Y="350" Image="Data\interface0009_shop.tga" Left="534" Top="34" Right="572" Bottom="73" />
+		<AniIcon Name="GiftBox043Icon" X="69" Y="350" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragGiftBox"
+			LuaRButtonUp="GetGiftBox"  LuaMouseMove = "GiftBoxMouseOver" LuaMouseOut = "GiftBoxMouseOut" 
+			InsertToEventList = "1" />
+		<StaticText Name="GiftBox043Stack" X="72" Y="375" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<UIImage Name="GiftBox044Bg" X="110" Y="350" Image="Data\interface0009_shop.tga" Left="534" Top="34" Right="572" Bottom="73" />
+		<AniIcon Name="GiftBox044Icon" X="110" Y="350" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragGiftBox"
+			LuaRButtonUp="GetGiftBox"  LuaMouseMove = "GiftBoxMouseOver" LuaMouseOut = "GiftBoxMouseOut" 
+			InsertToEventList = "1" />
+		<StaticText Name="GiftBox044Stack" X="113" Y="375" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<UIImage Name="GiftBox045Bg" X="151" Y="350" Image="Data\interface0009_shop.tga" Left="534" Top="34" Right="572" Bottom="73" />
+		<AniIcon Name="GiftBox045Icon" X="151" Y="350" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragGiftBox"
+			LuaRButtonUp="GetGiftBox"  LuaMouseMove = "GiftBoxMouseOver" LuaMouseOut = "GiftBoxMouseOut" 
+			InsertToEventList = "1" />
+		<StaticText Name="GiftBox045Stack" X="151" Y="375" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<UIImage Name="GiftBox046Bg" X="192" Y="350" Image="Data\interface0009_shop.tga" Left="534" Top="34" Right="572" Bottom="73" />
+		<AniIcon Name="GiftBox046Icon" X="192" Y="350" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragGiftBox"
+			LuaRButtonUp="GetGiftBox"  LuaMouseMove = "GiftBoxMouseOver" LuaMouseOut = "GiftBoxMouseOut" 
+			InsertToEventList = "1" />
+		<StaticText Name="GiftBox046Stack" X="195" Y="375" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<UIImage Name="GiftBox047Bg" X="233" Y="350" Image="Data\interface0009_shop.tga" Left="534" Top="34" Right="572" Bottom="73" />
+		<AniIcon Name="GiftBox047Icon" X="233" Y="350" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp="DragGiftBox"
+			LuaRButtonUp="GetGiftBox"  LuaMouseMove = "GiftBoxMouseOver" LuaMouseOut = "GiftBoxMouseOut" 
+			InsertToEventList = "1" />
+		<StaticText Name="GiftBox047Stack" X="236" Y="375" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+	</Panel>
+	
+	<!-- Gift Box Drag Panel -->
+	<Panel Name="GiftBoxDragPanel" Image="" X="0" Y="50" Left="0" Top="0" Right="40" Bottom="40"
+		 Hide="1" Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="GiftBoxDragEnd" LuaRButtonDown="GiftBoxResetDrag" >
+		<AniIcon Name="GiftBoxDragIcon" X="0" Y="0" Image="" AutoDelete="0" Detect = "1" />
+	</Panel>
+</UI>

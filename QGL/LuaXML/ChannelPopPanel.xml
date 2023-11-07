@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" ?>
+<!-- Our to do list data -->
+<UI>
+	<Panel Name="ChannelPopPanel" Image="Data\interface008_chat.tga" X="8" Y="396" 
+			Left="737" Top="145" Right="795" Bottom="321" NotRemove="1"
+		>
+		<Button Name = "MapChannel" Image="Data\interface008_chat.tga" X="2" Y="3"  LuaLButtonUp="ChangeMapChannel"
+			Tips="当前频道" TimeOutCount="200" LuaTimeOut="DefaultTips"
+		>
+			<ButtonRect State="0" Left="263" Top="195" Right="292" Bottom="210" />
+			<ButtonRect State="1" Left="295" Top="195" Right="324" Bottom="210" />
+			<ButtonRect State="2" Left="326" Top="195" Right="355" Bottom="210" />
+		</Button>
+		<Button Name = "PartyChannel" Image="Data\interface008_chat.tga" X="2" Y="22"  LuaLButtonUp="ChangePartyChannel"
+			Tips="队伍频道" TimeOutCount="200" LuaTimeOut="DefaultTips"
+		>
+			<ButtonRect State="0" Left="263" Top="214" Right="292" Bottom="229" />
+			<ButtonRect State="2" Left="326" Top="214" Right="355" Bottom="229" />
+			<ButtonRect State="1" Left="295" Top="214" Right="324" Bottom="229" />
+		</Button>
+		<Button Name = "GangChannel" Image="Data\interface008_chat.tga" X="2" Y="41"  LuaLButtonUp="ChangeGangChannel"
+			Tips="门派频道" TimeOutCount="200" LuaTimeOut="DefaultTips"
+		>
+			<ButtonRect State="0" Left="263" Top="233" Right="292" Bottom="248" />
+			<ButtonRect State="2" Left="326" Top="233" Right="355" Bottom="248" />
+			<ButtonRect State="1" Left="295" Top="233" Right="324" Bottom="248" />
+		</Button>
+		<Button Name = "GuildChannel" Image="Data\interface008_chat.tga" X="2" Y="60"  LuaLButtonUp="ChangeGuildChannel"
+			Tips="帮派频道" TimeOutCount="200" LuaTimeOut="DefaultTips"
+		>
+			<ButtonRect State="0" Left="263" Top="252" Right="292" Bottom="267" />
+			<ButtonRect State="2" Left="326" Top="252" Right="355" Bottom="267" />
+			<ButtonRect State="1" Left="295" Top="252" Right="324" Bottom="267" />
+		</Button>
+		<Button Name = "PrivateChannel" Image="Data\interface008_chat.tga" X="2" Y="79"  LuaLButtonUp="ChangePrivateChannel"
+			Tips="私聊频道" TimeOutCount="200" LuaTimeOut="DefaultTips"
+		>
+			<ButtonRect State="0" Left="263" Top="271" Right="292" Bottom="286" />
+			<ButtonRect State="2" Left="326" Top="271" Right="355" Bottom="286" />
+			<ButtonRect State="1" Left="295" Top="271" Right="324" Bottom="286" />
+		</Button>
+		<Button Name = "GlobalChannel" Image="Data\interface008_chat.tga" X="2" Y="98"  LuaLButtonUp="ChangeGlobalChannel"
+			Tips="江湖频道" TimeOutCount="200" LuaTimeOut="DefaultTips"
+		>
+			<ButtonRect State="0" Left="263" Top="290" Right="292" Bottom="305" />
+			<ButtonRect State="2" Left="326" Top="290" Right="355" Bottom="305" />
+			<ButtonRect State="1" Left="295" Top="290" Right="324" Bottom="305" />
+		</Button>
+
+		<!--<Button Name = "CoupleChannel" Image="Data\interface008_chat.tga" X="2" Y="117"  LuaLButtonUp="ChangeCoupleChannel"
+			Tips="情侶頻道" TimeOutCount="200" LuaTimeOut="DefaultTips"
+		>
+			<ButtonRect State="0" Left="263" Top="328" Right="292" Bottom="343" />
+			<ButtonRect State="2" Left="326" Top="328" Right="355" Bottom="343" />
+			<ButtonRect State="1" Left="295" Top="328" Right="324" Bottom="343" />
+		</Button>-->
+
+		<Button Name = "RumorChannel" Image="Data\interface008_chat.tga" X="2" Y="117"  LuaLButtonUp="ChangeRumorChannel"
+			Tips="传闻频道" TimeOutCount="200" LuaTimeOut="DefaultTips"
+		>
+			<ButtonRect State="0" Left="263" Top="157" Right="292" Bottom="172" />
+			<ButtonRect State="2" Left="326" Top="157" Right="355" Bottom="172" />
+			<ButtonRect State="1" Left="295" Top="157" Right="324" Bottom="172" />
+		</Button>
+
+		<Button Name = "SpeakerChannel" Image="Data\interface008_chat.tga" X="2" Y="136"  LuaLButtonUp="ChangeSpeakerChannel"
+			Tips="喇叭频道" TimeOutCount="200" LuaTimeOut="DefaultTips"
+		>
+			<ButtonRect State="0" Left="263" Top="309" Right="292" Bottom="324" />
+			<ButtonRect State="2" Left="326" Top="309" Right="355" Bottom="324" />
+			<ButtonRect State="1" Left="295" Top="309" Right="324" Bottom="324" />
+		</Button>
+		
+		<Button Name = "FriendChannel" Image="Data\interface008_chat.tga" X="2" Y="155"  LuaLButtonUp="ChangeFriendChannel"
+			Tips="好友频道" TimeOutCount="200" LuaTimeOut="DefaultTips"
+		>
+			<ButtonRect State="0" Left="263" Top="137" Right="292" Bottom="153" />
+			<ButtonRect State="2" Left="326" Top="137" Right="355" Bottom="153" />
+			<ButtonRect State="1" Left="295" Top="137" Right="324" Bottom="153" />
+		</Button>
+		
+		<CheckBox Name = "ReceiveMapChannel" Image="Data\interface008_chat.tga" X="37" Y="3" CheckX="0" CheckY="1" Hide ="0"LuaLButtonUp="ReceiveMapChannelFuc">
+			<CheckBoxRect Index="0" Left="212" Top="173" Right="227" Bottom="188" />
+			<CheckBoxRect Index="1" Left="212" Top="173" Right="227" Bottom="188" />
+			<CheckBoxRect Index="2" Left="212" Top="156" Right="227" Bottom="171" />
+		</CheckBox>
+		
+		<CheckBox Name = "ReceivePartyChannel" Image="Data\interface008_chat.tga" X="37" Y="22" CheckX="0" CheckY="1"Hide ="0" LuaLButtonUp="ReceivePartyChannelFuc">
+			<CheckBoxRect Index="0" Left="212" Top="173" Right="227" Bottom="188" />
+			<CheckBoxRect Index="1" Left="212" Top="173" Right="227" Bottom="188" />
+			<CheckBoxRect Index="2" Left="212" Top="156" Right="227" Bottom="171" />
+		</CheckBox>
+		
+		<CheckBox Name = "ReceiveGangChannel" Image="Data\interface008_chat.tga" X="37" Y="41" CheckX="0" CheckY="1" Hide ="0" LuaLButtonUp="ReceiveGangChannelFuc">
+			<CheckBoxRect Index="0" Left="212" Top="173" Right="227" Bottom="188" />
+			<CheckBoxRect Index="1" Left="212" Top="173" Right="227" Bottom="188" />
+			<CheckBoxRect Index="2" Left="212" Top="156" Right="227" Bottom="171" />
+		</CheckBox>
+		
+		<CheckBox Name = "ReceiveGuildChannel" Image="Data\interface008_chat.tga" X="37" Y="60" CheckX="0" CheckY="1" Hide ="0" LuaLButtonUp="ReceiveGuildChannelFuc">
+			<CheckBoxRect Index="0" Left="212" Top="173" Right="227" Bottom="188" />
+			<CheckBoxRect Index="1" Left="212" Top="173" Right="227" Bottom="188" />
+			<CheckBoxRect Index="2" Left="212" Top="156" Right="227" Bottom="171" />
+		</CheckBox>
+		
+		<CheckBox Name = "ReceivePrivateChannel" Image="Data\interface008_chat.tga" X="37" Y="79" CheckX="0" CheckY="1" Hide ="0" LuaLButtonUp="ReceivePrivateChannelFuc">
+			<CheckBoxRect Index="0" Left="212" Top="173" Right="227" Bottom="188" />
+			<CheckBoxRect Index="1" Left="212" Top="173" Right="227" Bottom="188" />
+			<CheckBoxRect Index="2" Left="212" Top="156" Right="227" Bottom="171" />
+		</CheckBox>
+		
+		<CheckBox Name = "ReceiveGlobalChannel" Image="Data\interface008_chat.tga" X="37" Y="98" CheckX="0" CheckY="1"Hide ="0" LuaLButtonUp="ReceiveGlobalChannelFuc">
+			<CheckBoxRect Index="0" Left="212" Top="173" Right="227" Bottom="188" />
+			<CheckBoxRect Index="1" Left="212" Top="173" Right="227" Bottom="188" />
+			<CheckBoxRect Index="2" Left="212" Top="156" Right="227" Bottom="171" />
+		</CheckBox>
+		
+		<!--<CheckBox Name = "ReceiveCoupleChannel" Image="Data\interface008_chat.tga" X="37" Y="117" CheckX="0" CheckY="1" Hide ="0" LuaLButtonUp="ReceiveCoupleChannelFuc">
+			<CheckBoxRect Index="0" Left="212" Top="173" Right="227" Bottom="188" />
+			<CheckBoxRect Index="1" Left="212" Top="173" Right="227" Bottom="188" />
+			<CheckBoxRect Index="2" Left="212" Top="156" Right="227" Bottom="171" />
+		</CheckBox>-->
+		
+		<CheckBox Name = "ReceiveRumorChannel" Image="Data\interface008_chat.tga" X="37" Y="117" CheckX="0" CheckY="1" Hide ="0" LuaLButtonUp="ReceiveRumorChannelFuc">
+			<CheckBoxRect Index="0" Left="212" Top="173" Right="227" Bottom="188" />
+			<CheckBoxRect Index="1" Left="212" Top="173" Right="227" Bottom="188" />
+			<CheckBoxRect Index="2" Left="212" Top="156" Right="227" Bottom="171" />
+		</CheckBox>
+		
+		<CheckBox Name = "ReceiveSpeakerChannel" Image="Data\interface008_chat.tga" X="37" Y="136" CheckX="0" CheckY="1" Hide ="0" LuaLButtonUp="ReceiveSpeakerChannelFuc">
+			<CheckBoxRect Index="0" Left="212" Top="173" Right="227" Bottom="188" />
+			<CheckBoxRect Index="1" Left="212" Top="173" Right="227" Bottom="188" />
+			<CheckBoxRect Index="2" Left="212" Top="156" Right="227" Bottom="171" />
+		</CheckBox>
+		
+		<CheckBox Name = "ReceiveFriendChannel" Image="Data\interface008_chat.tga" X="37" Y="155" CheckX="0" CheckY="1" Hide ="0" LuaLButtonUp="ReceiveFriendChannelFuc">
+			<CheckBoxRect Index="0" Left="212" Top="173" Right="227" Bottom="188" />
+			<CheckBoxRect Index="1" Left="212" Top="173" Right="227" Bottom="188" />
+			<CheckBoxRect Index="2" Left="212" Top="156" Right="227" Bottom="171" />
+		</CheckBox>
+		
+		<Button Image="Data\interface008_chat.tga" X="60" Y="3">
+			<ButtonRect State="0" Left="150" Top="133" Right="168" Bottom="190" />
+			<ButtonRect State="1" Left="150" Top="133" Right="168" Bottom="190" />
+			<ButtonRect State="2" Left="150" Top="133" Right="168" Bottom="190" />
+		</Button>
+	</Panel>
+</UI>

@@ -1,0 +1,39 @@
+//-- Config
+config
+{
+	SubPath="Logic/";
+	ClassID=22000;
+	StartID=22000;
+	EndID  =22999;
+}
+
+//-- include
+#include "Reuben/Network/NetGroup.h"
+
+//-- object class
+class Party : NetGroup
+{
+	//-- object attributes
+	avail { 		Boolean avail;				};
+	lineup {  UInt32 m_uLineupId; };
+	lineupkeypos { int m_iLineupKeyPos;};
+	Desc	{		String desc;};
+	LeaveTemporary { Boolean m_bTempLeave[5];};
+
+	//-- method
+public:
+	Promote(RPCNetID memberId);
+	Kick(RPCNetID memberId);
+	Leave();
+	Destroy();
+	JoinChannel(UInt32 char_id);
+	ChangeDesc(String desc);
+	
+	//-- callback
+	CB_Error(UInt32 errCode, String errMsg);
+	CB_LeaderChanged(UInt32 memberId, UInt8 memberIdx, Boolean shown);
+	CB_Join(NetObject* member, Boolean shown);
+	CB_Leave(NetObject* member, bool kick, Boolean shown);
+	CB_Destroy(bool kick, Boolean shown);
+	CB_Regroup(NetObject* member, UInt8 memberIdx);
+}

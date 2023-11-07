@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" ?>
+<UI>
+	<ID Name="OnlineShopPreviewWindow" />
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	<Panel Name="OnlineShopPreviewPanel" X="596" Y="73" Image="Data\interface0025_main_K2.tga" Left="4" Top="6" Right="208" Bottom="254" 
+		Drag="1" DragLeft="0" DragTop="0" DragRight="204" DragBottom="248" DetectImage = "1" 
+		LuaRButtonUp="CloseOnlineShopPreview" LuaKeyChar="CloseOnlineShopPreview">
+				
+		<AniIcon Name="OnlineShopPreviewModel"  X="-155" Y="-155" Rotation = "1" AnimationIndex = "0" Loop = "1" Align = "0" Hide="0" />
+		
+		<Button Name="OnlineShopPreviewLeft" Image="Data\interface0025_main_K2.tga" X="75" Y="216" LuaLButtonUp="OnlineShopPreviewLeft">
+			<ButtonRect State="0" Left="241" Top="111" Right="265" Bottom="133" />
+			<ButtonRect State="1" Left="241" Top="136" Right="265" Bottom="158" />
+			<ButtonRect State="2" Left="241" Top="161" Right="265" Bottom="183" />
+		</Button>
+	
+		<Button Name="OnlineShopPreviewRight" Image="Data\interface0025_main_K2.tga" X="105" Y="216" LuaLButtonUp="OnlineShopPreviewRight">
+			<ButtonRect State="0" Left="277" Top="111" Right="301" Bottom="133" />
+			<ButtonRect State="1" Left="277" Top="136" Right="301" Bottom="158" />
+			<ButtonRect State="2" Left="277" Top="161" Right="301" Bottom="183" />
+		</Button>
+		
+		<Button Name="OnlineShopPreviewCross" Image="Data\interface0025_main_K2.tga" X="174" Y="0" LuaLButtonUp="CloseOnlineShopPreview">
+			<ButtonRect State="0" Left="239" Top="13" Right="263" Bottom="31" />
+			<ButtonRect State="1" Left="264" Top="13" Right="288" Bottom="31" />
+			<ButtonRect State="2" Left="289" Top="13" Right="313" Bottom="31" />
+		</Button>
+		
+	</Panel>
+</UI>

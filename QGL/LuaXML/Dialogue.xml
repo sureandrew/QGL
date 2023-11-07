@@ -1,0 +1,73 @@
+<?xml version="1.0" ?>
+<!-- Our to do list data -->
+<UI>
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	<!-- main body -->
+	<Panel Expand="1" Name="DialogueBox" X="210" Y="220" Image="Data\interface008_chat.tga" Hide="0"
+		THeight="410"
+		Left="410" Top="9" Right="790" Bottom="22" 
+		LineRectLeft="410" LineRectTop="22" LineRectRight="790" LineRectBottom="42" LineCount="5" 
+		BottomRectLeft="410" BottomRectTop="119" BottomRectRight="790" BottomRectBottom="131"
+		LuaLButtonDown="ClickNextMsg">
+
+		<ChatPanel Name="DialogueChat" X="14" Y="15" Width="350" Height="70" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" FillColor="7F0000FF" LuaLButtonDown="ClickNextMsg">
+		</ChatPanel>
+		
+		<Button Name="DialogueUp" Image="Data\interface008_chat.tga" X="360" Y="10" Hide="1" LuaLButtonUp="DialogueScrollUp">
+			<ButtonRect State="0" Left="361" Top="249" Right="375" Bottom="264" />
+			<ButtonRect State="1" Left="377" Top="249" Right="391" Bottom="264" />
+			<ButtonRect State="2" Left="393" Top="249" Right="407" Bottom="264" />
+		</Button>
+			
+		<Button Name="DialogueDown" Image="Data\interface008_chat.tga" X="360" Y="105" Hide="1" LuaLButtonUp="DialogueScrollDown">
+			<ButtonRect State="0" Left="361" Top="266" Right="375" Bottom="279" />
+			<ButtonRect State="1" Left="377" Top="266" Right="391" Bottom="279" />
+			<ButtonRect State="2" Left="393" Top="266" Right="407" Bottom="279" />
+		</Button>
+
+		<PopUpMenu Name="DialogueChoosePopup" X="14" Y="15" Hide="1" BarWidth="350" Row="5" Column="24" 
+			EdgeCode="LIGHT" FontColor="FF00FF00" ShadowColor="FF000000"
+			LinePitch=6 SelFontColor="FFFF0000"
+			SelBarColor="00000000" LuaLButtonDown="DialogueChoose">
+		</PopUpMenu>
+	</Panel>
+	<!-- npc image -->
+	<Panel Name="DialogueImagePanel" X="210" Y="0" Left="0" Top="0" Right="220" Bottom="225">
+		<UIImage Name="NPCPic"  X="0" Y="0" 
+			NotDetected = "1"
+			Left="0" Top="0" Right="220" Bottom="211" AutoDelete="1">
+	</Panel>
+	<!--
+	
+	<Font Name="Data\mingliu.ttc" Width="12" Height="12" />
+	<Panel Expand="1" Name="DialogueBox" X="210" Y="220" Image="Data\interface008_chat.tga" Hide="0"
+		Left="410" Top="9" Right="790" Bottom="22" 
+		LineRectLeft="410" LineRectTop="22" LineRectRight="790" LineRectBottom="39" LineCount="5" 
+		BottomRectLeft="410" BottomRectTop="119" BottomRectRight="790" BottomRectBottom="131"
+		LuaLButtonDown="ClickNextMsg">
+
+		<ChatPanel Name="DialogueChat" X="14" Y="15" Width="350" Height="70" EdgeCode="SHADOW" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" FillColor="7F0000FF" LuaLButtonDown="ClickNextMsg">
+		</ChatPanel>
+		
+		<Button Name="DialogueUp" Image="Data\interface008_chat.tga" X="360" Y="10" Hide="1" LuaLButtonUp="DialogueScrollUp">
+			<ButtonRect State="0" Left="361" Top="249" Right="375" Bottom="264" />
+			<ButtonRect State="1" Left="377" Top="249" Right="391" Bottom="264" />
+			<ButtonRect State="2" Left="393" Top="249" Right="407" Bottom="264" />
+		</Button>
+			
+		<Button Name="DialogueDown" Image="Data\interface008_chat.tga" X="360" Y="105" Hide="1" LuaLButtonUp="DialogueScrollDown">
+			<ButtonRect State="0" Left="361" Top="266" Right="375" Bottom="279" />
+			<ButtonRect State="1" Left="377" Top="266" Right="391" Bottom="279" />
+			<ButtonRect State="2" Left="393" Top="266" Right="407" Bottom="279" />
+		</Button>
+
+		<PopUpMenu Name="DialogueChoosePopup" X="14" Y="15" Hide="1" BarWidth="400" Row="5" Column="25" 
+			EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000"
+			SelBarColor="FF7880F0" LuaLButtonDown="DialogueChoose">
+		</PopUpMenu>
+
+	</Panel>
+	-->
+</UI>

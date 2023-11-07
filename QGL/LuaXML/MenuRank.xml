@@ -1,0 +1,409 @@
+<?xml version="1.0" ?>
+<UI>
+	<ID Name="RankPanel" />
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	<KeyIn Item="RankSerach" />
+	<Panel Name="RankPanel" Image="Data\interface0031_main_P.tga" X="80" Y="60" 
+		Left="22" Top="13" Right="511" Bottom="415" DetectImage = "1"
+		Drag="1" DragLeft="0" DragTop="0" DragRight="488" DragBottom="402" LuaRButtonUp="CloseRankPanel" 
+		LuaKeyChar="CloseRankPanel" LuaMouseWheel="RankPanelWheel">
+
+	<UIImage Name="RankHightLight" X="8" Y="89" Image ="" Left="30" Top="102" Right="486" Bottom="373" LuaLButtonUp = "SelectRankItem"/>
+	
+	<UIImage Name="RankTypeLevel" Hide="0" X="220" Y="3" Image ="Data\interface0031_main_P.tga" Left="15" Top="437" Right="62" Bottom="454" NotDetected= "1"/>
+	<UIImage Name="RankTypeMoney" Hide="1" X="219" Y="3" Image ="Data\interface0031_main_P.tga" Left="75" Top="437" Right="124" Bottom="454" NotDetected= "1"/>
+	<UIImage Name="RankTypeClass" Hide="1" X="212" Y="3" Image ="Data\interface0031_main_P.tga" Left="129" Top="437" Right="185" Bottom="454" NotDetected= "1"/>
+	<UIImage Name="RankTypeFamous" Hide="1" X="220" Y="3" Image ="Data\interface0031_main_P.tga" Left="201" Top="437" Right="249" Bottom="454" NotDetected= "1"/>
+	<UIImage Name="RankTypeEvil" Hide="1" X="220" Y="3" Image ="Data\interface0031_main_P.tga" Left="269" Top="437" Right="317" Bottom="454" NotDetected= "1"/>
+	<UIImage Name="RankTypeFaction" Hide="1" X="206" Y="3" Image ="Data\interface0031_main_P.tga" Left="336" Top="437" Right="413" Bottom="454" NotDetected= "1"/>
+	<UIImage Name="RankTypeCouple" Hide="1" X="220" Y="3" Image ="Data\interface0031_main_P.tga" Left="432" Top="437" Right="479" Bottom="454" NotDetected= "1"/>
+	<UIImage Name="RankTypePvP" Hide="1" X="192" Y="3" Image ="Data\interface0031_main_P.tga" Left="494" Top="437" Right="597" Bottom="454" NotDetected= "1"/>
+	<UIImage Name="RankTypePvPGuild" Hide="1" X="192" Y="3" Image ="Data\interface0031_main_P.tga" Left="617" Top="437" Right="720" Bottom="454" NotDetected= "1"/>
+	
+	
+	<UIImage Name="RankNumber" Hide="0" X="20" Y="65" Image ="Data\interface0031_main_P.tga" Left="521" Top="183" Right="553" Bottom="200" NotDetected= "1"/>
+	<UIImage Name="RankNickName" Hide="0" X="95" Y="65" Image ="Data\interface0031_main_P.tga" Left="521" Top="208" Right="553" Bottom="224" NotDetected= "1"/>
+	<UIImage Name="RankLevel" Hide="0" X="215" Y="65" Image ="Data\interface0031_main_P.tga" Left="611" Top="183" Right="643" Bottom="200" NotDetected= "1"/>
+	<UIImage Name="RankMoney" Hide="1" X="215" Y="65" Image ="Data\interface0031_main_P.tga" Left="566" Top="206" Right="598" Bottom="224" NotDetected= "1"/>
+	<UIImage Name="RankHonor" Hide="1" X="215" Y="65" Image ="Data\interface0031_main_P.tga" Left="611" Top="206" Right="643" Bottom="224" NotDetected= "1"/>
+	<UIImage Name="RankPKValue" Hide="1" X="215" Y="65" Image ="Data\interface0031_main_P.tga" Left="658" Top="206" Right="703" Bottom="224" NotDetected= "1"/>
+	<UIImage Name="RankFaction" Hide="0" X="335" Y="65" Image ="Data\interface0031_main_P.tga" Left="657" Top="183" Right="688" Bottom="200" NotDetected= "1"/>
+	<UIImage Name="RankClass" Hide="0" X="415" Y="65" Image ="Data\interface0031_main_P.tga" Left="701" Top="183" Right="731" Bottom="200" NotDetected= "1"/>
+	<UIImage Name="RankGuild" Hide="0" X="95" Y="65" Image ="Data\interface0031_main_P.tga" Left="716" Top="206" Right="749" Bottom="224" NotDetected= "1"/>
+	<UIImage Name="RankGuildMaster" Hide="0" X="335" Y="65" Image ="Data\interface0031_main_P.tga" Left="523" Top="232" Right="554" Bottom="247" NotDetected= "1"/>
+	<UIImage Name="RankPvPScore" Hide="0" X="215" Y="65" Image ="Data\interface0031_main_P.tga" Left="575" Top="232" Right="639" Bottom="247" NotDetected= "1"/>
+	
+	<StaticText Name="RankText1Number" X="10" Y="100" Width="50" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		100
+	</StaticText>
+	
+	<StaticText Name="RankText1Name" X="45" Y="100" Width="133" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000"  Align="Center">
+		無雙無雙無雙
+	</StaticText>
+	
+	<StaticText Name="RankText1Value" X="165" Y="100" Width="133" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000"  Align="Center">
+		999,999,999,999
+	</StaticText>
+	
+	<StaticText Name="RankText1Guild" X="285" Y="100" Width="133" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000"  Align="Center">
+		無雙無雙無雙
+	</StaticText>
+	
+	<StaticText Name="RankText1Class" X="365" Y="100" Width="133" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		無雙無
+	</StaticText>
+	
+	<StaticText Name="RankText2Number" X="10" Y="126" Width="50" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		100
+	</StaticText>
+	
+	<StaticText Name="RankText2Name" X="45" Y="126" Width="133" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000"  Align="Center">
+		無雙無雙無雙
+	</StaticText>
+	
+	<StaticText Name="RankText2Value" X="165" Y="126" Width="133" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000"  Align="Center">
+		999,999,999,999
+	</StaticText>
+	
+	<StaticText Name="RankText2Guild" X="285" Y="126" Width="133" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000"  Align="Center">
+		無雙無雙無雙
+	</StaticText>
+	
+	<StaticText Name="RankText2Class" X="365" Y="126" Width="133" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		無雙無
+	</StaticText>
+	
+	<StaticText Name="RankText3Number" X="10" Y="152" Width="50" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		100
+	</StaticText>
+	
+	<StaticText Name="RankText3Name" X="45" Y="152" Width="133" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000"  Align="Center">
+		無雙無雙無雙
+	</StaticText>
+	
+	<StaticText Name="RankText3Value" X="165" Y="152" Width="133" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000"  Align="Center">
+		999,999,999,999
+	</StaticText>
+	
+	<StaticText Name="RankText3Guild" X="285" Y="152" Width="133" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000"  Align="Center">
+		無雙無雙無雙
+	</StaticText>
+	
+	<StaticText Name="RankText3Class" X="365" Y="152" Width="133" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		無雙無
+	</StaticText>
+	
+	<StaticText Name="RankText4Number" X="10" Y="178" Width="50" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		100
+	</StaticText>
+	
+	<StaticText Name="RankText4Name" X="45" Y="178" Width="133" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000"  Align="Center">
+		無雙無雙無雙
+	</StaticText>
+	
+	<StaticText Name="RankText4Value" X="165" Y="178" Width="133" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000"  Align="Center">
+		999,999,999,999
+	</StaticText>
+	
+	<StaticText Name="RankText4Guild" X="285" Y="178" Width="133" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000"  Align="Center">
+		無雙無雙無雙
+	</StaticText>
+	
+	<StaticText Name="RankText4Class" X="365" Y="178" Width="133" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		無雙無
+	</StaticText>
+	
+	<StaticText Name="RankText5Number" X="10" Y="204" Width="50" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		100
+	</StaticText>
+	
+	<StaticText Name="RankText5Name" X="45" Y="204" Width="133" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000"  Align="Center">
+		無雙無雙無雙
+	</StaticText>
+	
+	<StaticText Name="RankText5Value" X="165" Y="204" Width="133" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000"  Align="Center">
+		999,999,999,999
+	</StaticText>
+	
+	<StaticText Name="RankText5Guild" X="285" Y="204" Width="133" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000"  Align="Center">
+		無雙無雙無雙
+	</StaticText>
+	
+	<StaticText Name="RankText5Class" X="365" Y="204" Width="133" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		無雙無
+	</StaticText>
+	
+	<StaticText Name="RankText6Number" X="10" Y="230" Width="50" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		100
+	</StaticText>
+	
+	<StaticText Name="RankText6Name" X="45" Y="230" Width="133" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000"  Align="Center">
+		無雙無雙無雙
+	</StaticText>
+	
+	<StaticText Name="RankText6Value" X="165" Y="230" Width="133" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000"  Align="Center">
+		999,999,999,999
+	</StaticText>
+	
+	<StaticText Name="RankText6Guild" X="285" Y="230" Width="133" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000"  Align="Center">
+		無雙無雙無雙
+	</StaticText>
+	
+	<StaticText Name="RankText6Class" X="365" Y="230" Width="133" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		無雙無
+	</StaticText>
+	
+	<StaticText Name="RankText7Number" X="10" Y="256" Width="50" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		100
+	</StaticText>
+	
+	<StaticText Name="RankText7Name" X="45" Y="256" Width="133" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000"  Align="Center">
+		無雙無雙無雙
+	</StaticText>
+	
+	<StaticText Name="RankText7Value" X="165" Y="256" Width="133" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000"  Align="Center">
+		999,999,999,999
+	</StaticText>
+	
+	<StaticText Name="RankText7Guild" X="285" Y="256" Width="133" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000"  Align="Center">
+		無雙無雙無雙
+	</StaticText>
+	
+	<StaticText Name="RankText7Class" X="365" Y="256" Width="133" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		無雙無
+	</StaticText>
+	
+	<StaticText Name="RankText8Number" X="10" Y="282" Width="50" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		100
+	</StaticText>
+	
+	<StaticText Name="RankText8Name" X="45" Y="282" Width="133" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000"  Align="Center">
+		無雙無雙無雙
+	</StaticText>
+	
+	<StaticText Name="RankText8Value" X="165" Y="282" Width="133" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000"  Align="Center">
+		999,999,999,999
+	</StaticText>
+	
+	<StaticText Name="RankText8Guild" X="285" Y="282" Width="133" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000"  Align="Center">
+		無雙無雙無雙
+	</StaticText>
+	
+	<StaticText Name="RankText8Class" X="365" Y="282" Width="133" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		無雙無
+	</StaticText>
+	
+	<StaticText Name="RankText9Number" X="10" Y="308" Width="50" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		100
+	</StaticText>
+	
+	<StaticText Name="RankText9Name" X="45" Y="308" Width="133" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000"  Align="Center">
+		無雙無雙無雙
+	</StaticText>
+	
+	<StaticText Name="RankText9Value" X="165" Y="308" Width="133" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000"  Align="Center">
+		999,999,999,999
+	</StaticText>
+	
+	<StaticText Name="RankText9Guild" X="285" Y="308" Width="133" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000"  Align="Center">
+		無雙無雙無雙
+	</StaticText>
+	
+	<StaticText Name="RankText9Class" X="365" Y="308" Width="133" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		無雙無
+	</StaticText>
+	
+	<StaticText Name="RankText10Number" X="10" Y="334" Width="50" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		100
+	</StaticText>
+	
+	<StaticText Name="RankText10Name" X="45" Y="334" Width="133" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000"  Align="Center">
+		無雙無雙無雙
+	</StaticText>
+	
+	<StaticText Name="RankText10Value" X="165" Y="334" Width="133" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000"  Align="Center">
+		999,999,999,999
+	</StaticText>
+	
+	<StaticText Name="RankText10Guild" X="285" Y="334" Width="133" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000"  Align="Center">
+		無雙無雙無雙
+	</StaticText>
+	
+	<StaticText Name="RankText10Class" X="365" Y="334" Width="133" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		無雙無
+	</StaticText>
+		
+	<UIImage Name="RankHightLight" Hide="1" X="12" Y="34" Image ="Data\interface0031_main_P.tga" Left="14" Top="549" Right="468" Bottom="573" NotDetected= "1"/>
+		
+		<Button Name="RankFaction1" Image="Data\interface0031_main_P.tga" X="7" Y="30" LuaLButtonUp="RankSubSel1Lua">
+			<ButtonRect State="0" Left="620" Top="469" Right="675" Bottom="490" />	
+			<ButtonRect State="1" Left="620" Top="495" Right="675" Bottom="516" />
+			<ButtonRect State="2" Left="620" Top="521" Right="675" Bottom="542" />
+			<ButtonRect State="3" Left="620" Top="521" Right="675" Bottom="542" />
+			<ButtonRect State="4" Left="620" Top="495" Right="675" Bottom="516" />
+		</Button>
+		
+		<Button Name="RankFaction2" Image="Data\interface0031_main_P.tga" X="67" Y="30" LuaLButtonUp="RankSubSel2Lua">
+			<ButtonRect State="0" Left="502" Top="469" Right="557" Bottom="490" />	
+			<ButtonRect State="1" Left="502" Top="495" Right="557" Bottom="516" />
+			<ButtonRect State="2" Left="502" Top="521" Right="557" Bottom="542" />
+			<ButtonRect State="3" Left="502" Top="521" Right="557" Bottom="542" />
+			<ButtonRect State="4" Left="502" Top="495" Right="557" Bottom="516" />
+		</Button>
+		
+		<Button Name="RankFaction3" Image="Data\interface0031_main_P.tga" X="127" Y="30" LuaLButtonUp="RankSubSel3Lua">
+			<ButtonRect State="0" Left="443" Top="469" Right="498" Bottom="490" />	
+			<ButtonRect State="1" Left="443" Top="495" Right="498" Bottom="516" />
+			<ButtonRect State="2" Left="443" Top="521" Right="498" Bottom="542" />
+			<ButtonRect State="3" Left="443" Top="521" Right="498" Bottom="542" />
+			<ButtonRect State="4" Left="443" Top="495" Right="498" Bottom="516" />
+		</Button>
+		
+		<Button Name="RankFaction4" Image="Data\interface0031_main_P.tga" X="187" Y="30" LuaLButtonUp="RankSubSel4Lua">
+			<ButtonRect State="0" Left="266" Top="469" Right="321" Bottom="490" />	
+			<ButtonRect State="1" Left="266" Top="495" Right="321" Bottom="516" />
+			<ButtonRect State="2" Left="266" Top="521" Right="321" Bottom="542" />
+			<ButtonRect State="3" Left="266" Top="521" Right="321" Bottom="542" />
+			<ButtonRect State="4" Left="266" Top="495" Right="321" Bottom="516" />
+		</Button>
+		
+		<Button Name="RankFaction5" Image="Data\interface0031_main_P.tga" X="247" Y="30" LuaLButtonUp="RankSubSel5Lua">
+			<ButtonRect State="0" Left="384" Top="469" Right="439" Bottom="490" />	
+			<ButtonRect State="1" Left="384" Top="495" Right="439" Bottom="516" />
+			<ButtonRect State="2" Left="384" Top="521" Right="439" Bottom="542" />
+			<ButtonRect State="3" Left="384" Top="521" Right="439" Bottom="542" />
+			<ButtonRect State="4" Left="384" Top="495" Right="439" Bottom="516" />
+		</Button>
+		
+		<Button Name="RankFaction6" Image="Data\interface0031_main_P.tga" X="307" Y="30" LuaLButtonUp="RankSubSel6Lua">
+			<ButtonRect State="0" Left="325" Top="469" Right="380" Bottom="490" />	
+			<ButtonRect State="1" Left="325" Top="495" Right="380" Bottom="516" />
+			<ButtonRect State="2" Left="325" Top="521" Right="380" Bottom="542" />
+			<ButtonRect State="3" Left="325" Top="521" Right="380" Bottom="542" />
+			<ButtonRect State="4" Left="325" Top="495" Right="380" Bottom="516" />
+		</Button>
+		
+		<Button Name="RankFaction7" Image="Data\interface0031_main_P.tga" X="367" Y="30" LuaLButtonUp="RankSubSel7Lua">
+			<ButtonRect State="0" Left="679" Top="469" Right="734" Bottom="490" />	
+			<ButtonRect State="1" Left="679" Top="495" Right="734" Bottom="516" />
+			<ButtonRect State="2" Left="679" Top="521" Right="734" Bottom="542" />
+			<ButtonRect State="3" Left="679" Top="521" Right="734" Bottom="542" />
+			<ButtonRect State="4" Left="679" Top="495" Right="734" Bottom="516" />
+		</Button>
+		
+		<Button Name="RankFaction8" Image="Data\interface0031_main_P.tga" X="427" Y="30" LuaLButtonUp="RankSubSel8Lua">
+			<ButtonRect State="0" Left="561" Top="469" Right="616" Bottom="490" />	
+			<ButtonRect State="1" Left="561" Top="495" Right="616" Bottom="516" />
+			<ButtonRect State="2" Left="561" Top="521" Right="616" Bottom="542" />
+			<ButtonRect State="3" Left="561" Top="521" Right="616" Bottom="542" />
+			<ButtonRect State="4" Left="561" Top="495" Right="616" Bottom="516" />
+		</Button>
+		
+		
+		<Button Name="RankClass1" Image="Data\interface0031_main_P.tga" X="7" Y="30" LuaLButtonUp="RankSubSel1Lua">
+			<ButtonRect State="0" Left="517" Top="12" Right="572" Bottom="33" />	
+			<ButtonRect State="1" Left="517" Top="38" Right="572" Bottom="59" />
+			<ButtonRect State="2" Left="517" Top="64" Right="572" Bottom="85" />
+			<ButtonRect State="3" Left="517" Top="64" Right="572" Bottom="85" />
+			<ButtonRect State="4" Left="517" Top="38" Right="572" Bottom="59" />
+		</Button>
+		
+		<Button Name="RankClass2" Image="Data\interface0031_main_P.tga" X="67" Y="30" LuaLButtonUp="RankSubSel2Lua">
+			<ButtonRect State="0" Left="576" Top="12" Right="631" Bottom="33" />	
+			<ButtonRect State="1" Left="576" Top="38" Right="631" Bottom="59" />
+			<ButtonRect State="2" Left="576" Top="64" Right="631" Bottom="85" />
+			<ButtonRect State="3" Left="576" Top="64" Right="631" Bottom="85" />
+			<ButtonRect State="4" Left="576" Top="38" Right="631" Bottom="59" />
+		</Button>
+		
+		<Button Name="RankClass3" Image="Data\interface0031_main_P.tga" X="127" Y="30" LuaLButtonUp="RankSubSel3Lua">
+			<ButtonRect State="0" Left="635" Top="12" Right="690" Bottom="33" />	
+			<ButtonRect State="1" Left="635" Top="38" Right="690" Bottom="59" />
+			<ButtonRect State="2" Left="635" Top="64" Right="690" Bottom="85" />
+			<ButtonRect State="3" Left="635" Top="64" Right="690" Bottom="85" />
+			<ButtonRect State="4" Left="635" Top="38" Right="690" Bottom="59" />
+		</Button>
+		
+		<Button Name="RankClass4" Image="Data\interface0031_main_P.tga" X="187" Y="30" LuaLButtonUp="RankSubSel4Lua">
+			<ButtonRect State="0" Left="694" Top="12" Right="749" Bottom="33" />	
+			<ButtonRect State="1" Left="694" Top="38" Right="749" Bottom="59" />
+			<ButtonRect State="2" Left="694" Top="64" Right="749" Bottom="85" />
+			<ButtonRect State="3" Left="694" Top="64" Right="749" Bottom="85" />
+			<ButtonRect State="4" Left="694" Top="38" Right="749" Bottom="59" />
+		</Button>
+		
+		<Button Name="RankClass5" Image="Data\interface0031_main_P.tga" X="247" Y="30" LuaLButtonUp="RankSubSel5Lua">
+			<ButtonRect State="0" Left="517" Top="97" Right="572" Bottom="118" />	
+			<ButtonRect State="1" Left="517" Top="123" Right="572" Bottom="144" />
+			<ButtonRect State="2" Left="517" Top="149" Right="572" Bottom="170" />
+			<ButtonRect State="3" Left="517" Top="149" Right="572" Bottom="170" />
+			<ButtonRect State="4" Left="517" Top="123" Right="572" Bottom="144" />
+		</Button>
+		
+		<Button Name="RankClass6" Image="Data\interface0031_main_P.tga" X="307" Y="30" LuaLButtonUp="RankSubSel6Lua">
+			<ButtonRect State="0" Left="576" Top="97" Right="631" Bottom="118" />	
+			<ButtonRect State="1" Left="576" Top="123" Right="631" Bottom="144" />
+			<ButtonRect State="2" Left="576" Top="149" Right="631" Bottom="170" />
+			<ButtonRect State="3" Left="576" Top="149" Right="631" Bottom="170" />
+			<ButtonRect State="4" Left="576" Top="123" Right="631" Bottom="144" />
+		</Button>
+		
+		<Button Name="RankClass7" Image="Data\interface0031_main_P.tga" X="367" Y="30" LuaLButtonUp="RankSubSel7Lua">
+			<ButtonRect State="0" Left="635" Top="97" Right="690" Bottom="118" />	
+			<ButtonRect State="1" Left="635" Top="123" Right="690" Bottom="144" />
+			<ButtonRect State="2" Left="635" Top="149" Right="690" Bottom="170" />
+			<ButtonRect State="3" Left="635" Top="149" Right="690" Bottom="170" />
+			<ButtonRect State="4" Left="635" Top="123" Right="690" Bottom="144" />
+		</Button>
+		
+		<Button Name="RankClass8" Image="Data\interface0031_main_P.tga" X="427" Y="30" LuaLButtonUp="RankSubSel8Lua">
+			<ButtonRect State="0" Left="694" Top="97" Right="749" Bottom="118" />	
+			<ButtonRect State="1" Left="694" Top="123" Right="749" Bottom="144" />
+			<ButtonRect State="2" Left="694" Top="149" Right="749" Bottom="170" />
+			<ButtonRect State="3" Left="694" Top="149" Right="749" Bottom="170" />
+			<ButtonRect State="4" Left="694" Top="123" Right="749" Bottom="144" />
+		</Button>
+		
+		<Button Name="FindRankBtn" Image="Data\interface0031_main_P.tga" X="125" Y="372" LuaLButtonUp="FindRankContent">
+			<ButtonRect State="0" Left="15" Top="472" Right="92" Bottom="491" />	
+			<ButtonRect State="1" Left="15" Top="495" Right="92" Bottom="514" />
+			<ButtonRect State="2" Left="15" Top="518" Right="92" Bottom="537" />
+			<ButtonRect State="3" Left="15" Top="518" Right="92" Bottom="537" />
+		</Button>
+		
+		<Button Name="CloseRankPanel" Image="Data\interface0031_main_P.tga" X="458" Y="8" LuaLButtonUp="CloseRankPanel">
+			<ButtonRect State="0" Left="181" Top="471" Right="203" Bottom="487" />	
+			<ButtonRect State="1" Left="206" Top="471" Right="228" Bottom="487" />
+			<ButtonRect State="2" Left="231" Top="471" Right="253" Bottom="487" />
+		</Button>
+		
+		
+		<ScrollBarV Name="RankPanelScroll" X="466" Y="90" Width ="14" Height="270" Limit="0" BarColor="0" LuaLButtonDown ="RankPanelScrollLua">
+			<PrevButton Image="Data\interface0031_main_P.tga" X="30" Y="0" LuaLButtonUp="RankPanelUp">
+				<ButtonRect State="0" Left="105" Top="473" Right="119" Bottom="487" />
+				<ButtonRect State="1" Left="121" Top="473" Right="135" Bottom="487" />
+				<ButtonRect State="2" Left="137" Top="473" Right="151" Bottom="487" />
+				<ButtonRect State="3" Left="137" Top="473" Right="151" Bottom="487" />
+			</PrevButton>
+			<NextButton Image="Data\interface0031_main_P.tga" X="30" Y="200" LuaLButtonUp="RankPanelDown">
+				<ButtonRect State="0" Left="105" Top="490" Right="119" Bottom="503" />
+				<ButtonRect State="1" Left="121" Top="490" Right="135" Bottom="503" />
+				<ButtonRect State="2" Left="137" Top="490" Right="151" Bottom="503" />
+				<ButtonRect State="3" Left="137" Top="490" Right="151" Bottom="503" />
+			</NextButton>
+			<MoveButton Image="Data\interface0031_main_P.tga" X="30" Y="30" LuaMouseMove="RankPanelScrollLua" >
+				<ButtonRect State="0" Left="154" Top="473" Right="168" Bottom="503" />
+				<ButtonRect State="1" Left="154" Top="473" Right="168" Bottom="503" />
+				<ButtonRect State="2" Left="154" Top="473" Right="168" Bottom="503" />
+			</MoveButton>
+		</ScrollBarV>
+		
+
+		<EditBox Name="RankSerach" X="14" Y="376" Row="1" Column="15" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+		ShadowColor="FF000000" Limit="10" Width = "90" Height = "16" ></EditBox>
+	
+		
+		
+	</Panel>
+	
+</UI>

@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<!-- Our to do list data -->
+<UI>
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	<KeyIn Item="FindFriendID" />
+	<Panel Name="FindFriendPanel" Hide="0" X="300" Y="200" Image="Data\interface0007_main_D2.tga" Left="542" Top="383"
+		Right="789" Bottom="497" DetectImage="1" LuaRButtonUp="CloseFindFriendPanelLua" LuaKeyChar="CloseFindFriendPanelLua" Drag="1"
+		DragLeft="0" DragTop="0" DragRight="269" DragBottom="319">
+		
+		
+		<Button Name="FindFriendConfirm" Image="Data\interface0007_main_D2.tga" X="30" Y="76" LuaLButtonUp="FindFriendConfirm" >
+			<ButtonRect State="0" Left="119" Top="354" Right="196" Bottom="373" />
+			<ButtonRect State="1" Left="119" Top="377" Right="196" Bottom="396" />
+			<ButtonRect State="2" Left="119" Top="400" Right="196" Bottom="419" />
+		</Button>
+		
+		<Button Name="FindFriendCancel" Image="Data\interface0007_main_D2.tga" X="140" Y="76" LuaLButtonUp="CloseFindFriendPanelLua" >
+			<ButtonRect State="0" Left="204" Top="354" Right="281" Bottom="373" />
+			<ButtonRect State="1" Left="204" Top="377" Right="281" Bottom="395" />
+			<ButtonRect State="2" Left="204" Top="400" Right="281" Bottom="419" />
+		</Button>
+			
+		<EditBox Name="FindFriendID" X="88" Y="20" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			LIGHTColor="FF000000" Next="FindFriendName" Prev="FindFriendName" Limit="50" Width = "130" />
+			
+		<EditBox Name="FindFriendName" X="88" Y="48" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			LIGHTColor="FF000000" Next="FindFriendID" Prev="FindFriendID" Limit="50" Width = "130"/>
+			
+		
+		</Panel>
+</UI>
+

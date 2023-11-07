@@ -1,0 +1,311 @@
+<?xml version="1.0" ?>
+<UI>
+	<ID Name="MenuPartnerCollection" />
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	
+	<Panel Name="PartnerCollectionPanel" Image="Data\interface0037_PartnerCollection.tga" X="10" Y="10" 
+		Left="10" Top="10" Right="427" Bottom="487" 
+		LuaTimeOut="PartnerCollectionDetailPopupTimeOut" TimeOutCount="100" 
+		LuaRButtonUp="SwitchOffPartnerCollection" LuaKeyChar="SwitchOffPartnerCollection" DetectImage = "1"
+		Drag="1" DragLeft="0" DragTop="0" DragRight="427" DragBottom="487">
+
+		<Button Name="PartnerCollectionClose" Image="Data\interface0012_main_F.tga" X="385" Y="8" LuaLButtonUp="SwitchOffPartnerCollection">
+			<ButtonRect State="0" Left="641" Top="7" Right="665" Bottom="25" />	
+			<ButtonRect State="1" Left="666" Top="7" Right="690" Bottom="25" />
+			<ButtonRect State="2" Left="691" Top="7" Right="715" Bottom="25" />
+		</Button>
+	
+		<Button Name="PartnerCollectionRace1" Image="Data\interface0037_PartnerCollection.tga" X="30" Y="35" Tips="普通同伴宝宝"
+		              TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="PartnerCollectionRace1">
+			<ButtonRect State="0" Left="445" Top="158" Right="478" Bottom="193" />	
+			<ButtonRect State="1" Left="445" Top="198" Right="478" Bottom="232" />
+			<ButtonRect State="2" Left="445" Top="238" Right="478" Bottom="272" />
+			<ButtonRect State="3" Left="445" Top="238" Right="478" Bottom="272" />
+		</Button>
+		<Button Name="PartnerCollectionRace2" Image="Data\interface0037_PartnerCollection.tga" X="66" Y="35" Tips="变异同伴宝宝"
+		              TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="PartnerCollectionRace2">
+			<ButtonRect State="0" Left="481" Top="158" Right="514" Bottom="193" />	
+			<ButtonRect State="1" Left="481" Top="198" Right="514" Bottom="232" />
+			<ButtonRect State="2" Left="481" Top="238" Right="514" Bottom="272" />
+			<ButtonRect State="3" Left="481" Top="238" Right="514" Bottom="272" />
+		</Button>
+		<Button Name="PartnerCollectionRace3" Image="Data\interface0037_PartnerCollection.tga" X="102" Y="35" Tips="稀有同伴宝宝"
+		              TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="PartnerCollectionRace3">
+			<ButtonRect State="0" Left="517" Top="158" Right="550" Bottom="193" />	
+			<ButtonRect State="1" Left="517" Top="198" Right="550" Bottom="232" />
+			<ButtonRect State="2" Left="517" Top="238" Right="550" Bottom="272" />
+			<ButtonRect State="3" Left="517" Top="238" Right="550" Bottom="272" />
+		</Button>
+		<Button Name="PartnerCollectionRace4" Image="Data\interface0037_PartnerCollection.tga" X="138" Y="35" Tips="极品同伴宝宝"
+		              TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="PartnerCollectionRace4">
+			<ButtonRect State="0" Left="553" Top="158" Right="586" Bottom="193" />	
+			<ButtonRect State="1" Left="553" Top="198" Right="586" Bottom="232" />
+			<ButtonRect State="2" Left="553" Top="238" Right="586" Bottom="272" />
+			<ButtonRect State="3" Left="553" Top="238" Right="586" Bottom="272" />
+		</Button>
+		<Button Name="PartnerCollectionRace5" Image="Data\interface0037_PartnerCollection.tga" X="174" Y="35" Tips="特殊同伴宝宝"
+		              TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="PartnerCollectionRace5">
+			<ButtonRect State="0" Left="589" Top="158" Right="622" Bottom="193" />	
+			<ButtonRect State="1" Left="589" Top="198" Right="622" Bottom="232" />
+			<ButtonRect State="2" Left="589" Top="238" Right="622" Bottom="272" />
+			<ButtonRect State="3" Left="589" Top="238" Right="622" Bottom="272" />
+		</Button>
+		<Button Name="PartnerCollectionRace6" Image="Data\interface0037_PartnerCollection.tga" X="210" Y="35" Tips="动物宝宝" Hide="1"
+		              TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="PartnerCollectionRace6">
+			<ButtonRect State="0" Left="445" Top="282" Right="478" Bottom="315" />	
+			<ButtonRect State="1" Left="445" Top="322" Right="478" Bottom="355" />
+			<ButtonRect State="2" Left="445" Top="362" Right="478" Bottom="395" />
+			<ButtonRect State="3" Left="445" Top="362" Right="478" Bottom="395" />
+		</Button>
+		<Button Name="PartnerCollectionRace7" Image="Data\interface0037_PartnerCollection.tga" X="246" Y="35" Tips="变异动物宝宝" Hide="1"
+		              TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="PartnerCollectionRace7">
+			<ButtonRect State="0" Left="445" Top="282" Right="478" Bottom="315" />	
+			<ButtonRect State="1" Left="445" Top="322" Right="478" Bottom="355" />
+			<ButtonRect State="2" Left="445" Top="362" Right="478" Bottom="395" />
+			<ButtonRect State="3" Left="445" Top="362" Right="478" Bottom="395" />
+		</Button>
+		<Button Name="PartnerCollectionRace8" Image="Data\interface0037_PartnerCollection.tga" X="282" Y="35" Tips="珍兽宝宝" Hide="1"
+		              TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="PartnerCollectionRace8">
+			<ButtonRect State="0" Left="445" Top="282" Right="478" Bottom="315" />	
+			<ButtonRect State="1" Left="445" Top="322" Right="478" Bottom="355" />
+			<ButtonRect State="2" Left="445" Top="362" Right="478" Bottom="395" />
+			<ButtonRect State="3" Left="445" Top="362" Right="478" Bottom="395" />
+		</Button>
+		<Button Name="PartnerCollectionRace9" Image="Data\interface0037_PartnerCollection.tga" X="318" Y="35" Tips="圣兽宝宝" Hide="1"
+		              TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="PartnerCollectionRace9">
+			<ButtonRect State="0" Left="445" Top="282" Right="478" Bottom="315" />	
+			<ButtonRect State="1" Left="445" Top="322" Right="478" Bottom="355" />
+			<ButtonRect State="2" Left="445" Top="362" Right="478" Bottom="395" />
+			<ButtonRect State="3" Left="445" Top="362" Right="478" Bottom="395" />
+		</Button>
+		<Button Name="PartnerCollectionRace10" Image="Data\interface0037_PartnerCollection.tga" X="354" Y="35" Tips="特殊动物宝宝" Hide="1"
+		              TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="PartnerCollectionRace10">
+			<ButtonRect State="0" Left="445" Top="282" Right="478" Bottom="315" />	
+			<ButtonRect State="1" Left="445" Top="322" Right="478" Bottom="355" />
+			<ButtonRect State="2" Left="445" Top="362" Right="478" Bottom="395" />
+			<ButtonRect State="3" Left="445" Top="362" Right="478" Bottom="395" />
+		</Button>
+		<AniIcon Name="PartnerCollection01" X="28" Y="88" Image="" AutoDelete="0" LuaLButtonUp="" Detect = "1" Hide="1" 
+		LuaMouseIn = "PartnerCollectionMouseIn" LuaMouseOut = "PartnerCollectionMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="PartnerCollectionText01" X="26" Y="130" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartnerCollectionBuffDsc011" X="70" Y="83" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		臂力+100</StaticText>
+		<StaticText Name="PartnerCollectionBuffDsc012" X="70" Y="100" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		体质+100</StaticText>
+		<StaticText Name="PartnerCollectionBuffDsc013" X="70" Y="116" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		筋骨+100</StaticText>
+		<AniIcon Name="PartnerCollection02" X="153" Y="88" Image="" AutoDelete="0" LuaLButtonUp="" Detect = "1" Hide="1"
+		LuaMouseIn = "PartnerCollectionMouseIn" LuaMouseOut = "PartnerCollectionMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="PartnerCollectionText02" X="151" Y="130" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartnerCollectionBuffDsc021" X="195" Y="83" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		臂力+100</StaticText>
+		<StaticText Name="PartnerCollectionBuffDsc022" X="195" Y="100" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		体质+100</StaticText>
+		<StaticText Name="PartnerCollectionBuffDsc023" X="195" Y="116" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		筋骨+100</StaticText>
+		<AniIcon Name="PartnerCollection03" X="279" Y="88" Image="" AutoDelete="0" LuaLButtonUp="" Detect = "1" Hide="1"
+		LuaMouseIn = "PartnerCollectionMouseIn" LuaMouseOut = "PartnerCollectionMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="PartnerCollectionText03" X="277" Y="130" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartnerCollectionBuffDsc031" X="321" Y="83" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		臂力+100</StaticText>
+		<StaticText Name="PartnerCollectionBuffDsc032" X="321" Y="100" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		体质+100</StaticText>
+		<StaticText Name="PartnerCollectionBuffDsc033" X="321" Y="116" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		筋骨+100</StaticText>
+		<AniIcon Name="PartnerCollection04" X="28" Y="152" Image="" AutoDelete="0" LuaLButtonUp="" Detect = "1" Hide="1"
+		LuaMouseIn = "PartnerCollectionMouseIn" LuaMouseOut = "PartnerCollectionMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="PartnerCollectionText04" X="26" Y="193" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartnerCollectionBuffDsc041" X="70" Y="148" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		臂力+100</StaticText>
+		<StaticText Name="PartnerCollectionBuffDsc042" X="70" Y="164" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		体质+100</StaticText>
+		<StaticText Name="PartnerCollectionBuffDsc043" X="70" Y="180" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		筋骨+100</StaticText>
+		<AniIcon Name="PartnerCollection05" X="153" Y="152" Image="" AutoDelete="0" LuaLButtonUp="" Detect = "1" Hide="1"
+		LuaMouseIn = "PartnerCollectionMouseIn" LuaMouseOut = "PartnerCollectionMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="PartnerCollectionText05" X="151" Y="193" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartnerCollectionBuffDsc051" X="195" Y="148" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		臂力+100</StaticText>
+		<StaticText Name="PartnerCollectionBuffDsc052" X="195" Y="164" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		体质+100</StaticText>
+		<StaticText Name="PartnerCollectionBuffDsc053" X="195" Y="180" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		筋骨+100</StaticText>
+		<AniIcon Name="PartnerCollection06" X="279" Y="152" Image="" AutoDelete="0" LuaLButtonUp="" Detect = "1" Hide="1"
+		LuaMouseIn = "PartnerCollectionMouseIn" LuaMouseOut = "PartnerCollectionMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="PartnerCollectionText06" X="277" Y="193" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartnerCollectionBuffDsc061" X="321" Y="148" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		臂力+100</StaticText>
+		<StaticText Name="PartnerCollectionBuffDsc062" X="321" Y="164" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		体质+100</StaticText>
+		<StaticText Name="PartnerCollectionBuffDsc063" X="321" Y="180" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		筋骨+100</StaticText>
+		<AniIcon Name="PartnerCollection07" X="28" Y="215" Image="" AutoDelete="0" LuaLButtonUp="" Detect = "1" Hide="1"
+		LuaMouseIn = "PartnerCollectionMouseIn" LuaMouseOut = "PartnerCollectionMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="PartnerCollectionText07" X="26" Y="258" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartnerCollectionBuffDsc071" X="70" Y="212" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		臂力+100</StaticText>
+		<StaticText Name="PartnerCollectionBuffDsc072" X="70" Y="229" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		体质+100</StaticText>
+		<StaticText Name="PartnerCollectionBuffDsc073" X="70" Y="246" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		筋骨+100</StaticText>
+		<AniIcon Name="PartnerCollection08" X="153" Y="215" Image="" AutoDelete="0" LuaLButtonUp="" Detect = "1" Hide="1"
+		LuaMouseIn = "PartnerCollectionMouseIn" LuaMouseOut = "PartnerCollectionMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="PartnerCollectionText08" X="151" Y="258" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartnerCollectionBuffDsc081" X="195" Y="212" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		臂力+100</StaticText>
+		<StaticText Name="PartnerCollectionBuffDsc082" X="195" Y="229" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		体质+100</StaticText>
+		<StaticText Name="PartnerCollectionBuffDsc083" X="195" Y="246" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		筋骨+100</StaticText>
+		<AniIcon Name="PartnerCollection09" X="279" Y="215" Image="" AutoDelete="0" LuaLButtonUp="" Detect = "1" Hide="1"
+		LuaMouseIn = "PartnerCollectionMouseIn" LuaMouseOut = "PartnerCollectionMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="PartnerCollectionText09" X="276" Y="258" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartnerCollectionBuffDsc091" X="321" Y="212" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		臂力+100</StaticText>
+		<StaticText Name="PartnerCollectionBuffDsc092" X="321" Y="229" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		体质+100</StaticText>
+		<StaticText Name="PartnerCollectionBuffDsc093" X="321" Y="246" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		筋骨+100</StaticText>
+		<AniIcon Name="PartnerCollection10" X="28" Y="280" Image="" AutoDelete="0" LuaLButtonUp="" Detect = "1" Hide="1"
+		LuaMouseIn = "PartnerCollectionMouseIn" LuaMouseOut = "PartnerCollectionMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="PartnerCollectionText10" X="26" Y="322" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartnerCollectionBuffDsc101" X="70" Y="276" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		臂力+100</StaticText>
+		<StaticText Name="PartnerCollectionBuffDsc102" X="70" Y="293" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		体质+100</StaticText>
+		<StaticText Name="PartnerCollectionBuffDsc103" X="70" Y="310" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		筋骨+100</StaticText>
+		<AniIcon Name="PartnerCollection11" X="153" Y="280" Image="" AutoDelete="0" LuaLButtonUp="" Detect = "1" Hide="1"
+		LuaMouseIn = "PartnerCollectionMouseIn" LuaMouseOut = "PartnerCollectionMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="PartnerCollectionText11" X="151" Y="322" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartnerCollectionBuffDsc111" X="195" Y="276" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		臂力+100</StaticText>
+		<StaticText Name="PartnerCollectionBuffDsc112" X="195" Y="293" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		体质+100</StaticText>
+		<StaticText Name="PartnerCollectionBuffDsc113" X="195" Y="310" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		筋骨+100</StaticText>
+		<AniIcon Name="PartnerCollection12" X="279" Y="280" Image="" AutoDelete="0" LuaLButtonUp="" Detect = "1" Hide="1"
+		LuaMouseIn = "PartnerCollectionMouseIn" LuaMouseOut = "PartnerCollectionMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="PartnerCollectionText12" X="276" Y="322" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartnerCollectionBuffDsc121" X="321" Y="276" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		臂力+100</StaticText>
+		<StaticText Name="PartnerCollectionBuffDsc122" X="321" Y="293" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		体质+100</StaticText>
+		<StaticText Name="PartnerCollectionBuffDsc123" X="321" Y="310" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		筋骨+100</StaticText>
+		<AniIcon Name="PartnerCollection13" X="28" Y="344" Image="" AutoDelete="0" LuaLButtonUp="" Detect = "1" Hide="1"
+		LuaMouseIn = "PartnerCollectionMouseIn" LuaMouseOut = "PartnerCollectionMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="PartnerCollectionText13" X="26" Y="386" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartnerCollectionBuffDsc131" X="70" Y="340" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		臂力+100</StaticText>
+		<StaticText Name="PartnerCollectionBuffDsc132" X="70" Y="357" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		体质+100</StaticText>
+		<StaticText Name="PartnerCollectionBuffDsc133" X="70" Y="374" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		筋骨+100</StaticText>
+		<AniIcon Name="PartnerCollection14" X="153" Y="344" Image="" AutoDelete="0" LuaLButtonUp="" Detect = "1" Hide="1"
+		LuaMouseIn = "PartnerCollectionMouseIn" LuaMouseOut = "PartnerCollectionMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="PartnerCollectionText14" X="151" Y="386" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartnerCollectionBuffDsc141" X="195" Y="340" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		臂力+100</StaticText>
+		<StaticText Name="PartnerCollectionBuffDsc142" X="195" Y="357" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		体质+100</StaticText>
+		<StaticText Name="PartnerCollectionBuffDsc143" X="195" Y="374" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		筋骨+100</StaticText>
+		<AniIcon Name="PartnerCollection15" X="279" Y="344" Image="" AutoDelete="0" LuaLButtonUp="" Detect = "1" Hide="1"
+		LuaMouseIn = "PartnerCollectionMouseIn" LuaMouseOut = "PartnerCollectionMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="PartnerCollectionText15" X="276" Y="386" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartnerCollectionBuffDsc151" X="321" Y="340" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		臂力+100</StaticText>
+		<StaticText Name="PartnerCollectionBuffDsc152" X="321" Y="357" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		体质+100</StaticText>
+		<StaticText Name="PartnerCollectionBuffDsc153" X="321" Y="374" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		筋骨+100</StaticText>
+		
+		<Button Name="PartnerCollectionPageUp" Image="Data\interface0025_main_K.tga" X="256" Y="402" LuaLButtonUp="PartnerCollectionPrevPage" >
+			<ButtonRect State="0" Left="713" Top="362" Right="739" Bottom="386" />	
+			<ButtonRect State="1" Left="713" Top="387" Right="739" Bottom="411" />
+			<ButtonRect State="2" Left="713" Top="412" Right="739" Bottom="436" />
+		</Button>	
+		
+		<StaticText Name="PartnerCollectionPageNo" X="296" Y="407" Height="20" Width="55" Row="1" Colume="5" 
+			EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="CENTER">
+			999/999	
+		</StaticText>
+		
+		<Button Name="PartnerCollectionPageDown" Image="Data\interface0025_main_K.tga" X="360" Y="402" LuaLButtonUp="PartnerCollectionNextPage" >
+			<ButtonRect State="0" Left="749" Top="362" Right="775" Bottom="386" />	
+			<ButtonRect State="1" Left="749" Top="387" Right="775" Bottom="411" />
+			<ButtonRect State="2" Left="749" Top="412" Right="775" Bottom="436" />
+		</Button>
+		
+		<Button Name="PartnerCollectionUseBuffTemp" Image="Data\interface0037_PartnerCollection.tga" X="310" Y="446" LuaLButtonUp="PartnerCollectionUseBuffTemp" >
+			<ButtonRect State="0" Left="11" Top="498" Right="73" Bottom="513" />	
+			<ButtonRect State="1" Left="77" Top="498" Right="139" Bottom="513" />
+			<ButtonRect State="2" Left="143" Top="498" Right="205" Bottom="513" />
+			<ButtonRect State="3" Left="209" Top="498" Right="271" Bottom="513" />
+		</Button>
+		<Button Name="PartnerCollectionUnUseBuffTemp" Image="Data\interface0037_PartnerCollection.tga" X="310" Y="446" LuaLButtonUp="PartnerCollectionUnUseBuffTemp" Hide="1" >
+			<ButtonRect State="0" Left="11" Top="518" Right="73" Bottom="533" />	
+			<ButtonRect State="1" Left="77" Top="518" Right="139" Bottom="533" />
+			<ButtonRect State="2" Left="143" Top="518" Right="205" Bottom="533" />
+			<ButtonRect State="3" Left="209" Top="518" Right="271" Bottom="533" />
+		</Button>
+		<StaticText Name="PartnerCollectionTextSTR" X="54" Y="435" Row="1" Column="4" Width="60" Height="20" EdgeCode="LIGHT" FontColor="FF38F838" ShadowColor="FF000000" NotDetected="1">
+		+1234</StaticText>
+		<StaticText Name="PartnerCollectionTextCON" X="147" Y="435" Row="1" Column="4" Width="60" Height="20" EdgeCode="LIGHT" FontColor="FF38F838" ShadowColor="FF000000" NotDetected="1">
+		+2345</StaticText>
+		<StaticText Name="PartnerCollectionTextSTA" X="245" Y="435" Row="1" Column="4" Width="60" Height="20" EdgeCode="LIGHT" FontColor="FF38F838" ShadowColor="FF000000" NotDetected="1">
+		+3456</StaticText>
+		<StaticText Name="PartnerCollectionTextAGI" X="54" Y="455" Row="1" Column="4" Width="60" Height="20" EdgeCode="LIGHT" FontColor="FF38F838" ShadowColor="FF000000" NotDetected="1">
+		+4567</StaticText>
+		<StaticText Name="PartnerCollectionTextSPR" X="147" Y="455" Row="1" Column="4" Width="60" Height="20" EdgeCode="LIGHT" FontColor="FF38F838" ShadowColor="FF000000" NotDetected="1">
+		+5678</StaticText>
+		
+		<AniIcon Name="PartnerCollectionLight1" X="25" Y="400" Image="PartnerCollectionBase2.ent" AutoDelete="0" Hide = "1"/>
+		<AniIcon Name="PartnerCollectionLight2" X="50" Y="400" Image="PartnerCollectionBase2.ent" AutoDelete="0" Hide = "1"/>
+		<AniIcon Name="PartnerCollectionLight3" X="75" Y="400" Image="PartnerCollectionBase2.ent" AutoDelete="0" Hide = "1"/>
+		<AniIcon Name="PartnerCollectionLight4" X="100" Y="400" Image="PartnerCollectionBase2.ent" AutoDelete="0" Hide = "1"/>
+		<AniIcon Name="PartnerCollectionLight5" X="125" Y="400" Image="PartnerCollectionBase2.ent" AutoDelete="0" Hide = "1"/>
+	</Panel>	
+
+	<Panel Name="PartnerCollectionMovingPanel" Image="" X="0" Y="50" Left="0" Top="0" Right="40" Bottom="40"
+		 Hide="1" Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" 
+		 LuaEndDrag="PartnerCollectionDragEnd" LuaRButtonDown="ResetPartnerCollectionDrag" >
+		<AniIcon Name="PartnerCollectionMovingIcon" X="0" Y="0" Image=""  AutoDelete="0" Detect = "1" />
+	</Panel>
+	
+	<Panel Name="PartnerCollectionConfirmPanel" Image="Data\interface0037_PartnerCollection.tga" X="300" Y="250" 
+		Left="440" Top="410" Right="695" Bottom="528" Hide="1"
+		Drag="1" DragLeft="0" DragTop="0" DragRight="250" DragBottom="120"
+		LuaRButtonUp="ClosePartnerCollectionConfirmPanel"  LuaKeyChar="ClosePartnerCollectionConfirmPanel">
+		<StaticText Name="PartnerCollectionConfirmText" X="30" Y="35" Height="48" Width="200" Row="3" Colume="5" 
+			EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="CENTER">
+			你是否将该同伴放入同伴录，请注意：该同伴将会消失	
+		</StaticText>
+		<Button Name="PartnerCollectionConfirmOK" Image="Data\interface0037_PartnerCollection.tga" X="50" Y="80" LuaLButtonUp="PartnerCollectionConfirmOK" >
+			<ButtonRect State="0" Left="445" Top="19" Right="508" Bottom="35" />	
+			<ButtonRect State="1" Left="511" Top="19" Right="574" Bottom="35" />
+			<ButtonRect State="2" Left="577" Top="19" Right="640" Bottom="35" />
+		</Button>
+		<Button Name="PartnerCollectionConfirmCancel" Image="Data\interface0037_PartnerCollection.tga" X="150" Y="80" LuaLButtonUp="PartnerCollectionConfirmCancel" >
+			<ButtonRect State="0" Left="445" Top="38" Right="508" Bottom="54" />	
+			<ButtonRect State="1" Left="511" Top="38" Right="574" Bottom="54" />
+			<ButtonRect State="2" Left="577" Top="38" Right="640" Bottom="54" />
+		</Button>
+	</Panel>
+</UI>

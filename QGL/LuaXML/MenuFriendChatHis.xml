@@ -1,0 +1,57 @@
+<?xml version="1.0" ?>
+<!-- Our to do list data -->
+<UI>
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+
+	<Panel Name="FriendChatHisPanel" Hide="0" X="400" Y="100" Image="Data\interface0007_main_D.tga" Left="496" Top="164"
+		Right="849" Bottom="461" DetectImage="1" LuaRButtonUp="CloseFriendMsgHisLua" LuaKeyChar="CloseFriendMsgHisLua" Drag="1"
+		DragLeft="0" DragTop="0" DragRight="353" DragBottom="297" LuaMouseWheel="FriendChatHisWheel">
+		
+		<ChatPanel Name="FriendChatHisMsg" X="10" Y="33" Width="320" Height="220" ContinueRun = "0" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" FillColor="7F0000FF" DisableScroll="1">
+			hahaha
+		</ChatPanel>
+		
+		<Button Name="FriendChatHisRefresh" Image="Data\interface0007_main_D.tga" X="150" Y="265" LuaLButtonUp="RefreshHistoryLua" >
+			<ButtonRect State="0" Left="605" Top="70" Right="695" Bottom="89" />
+			<ButtonRect State="1" Left="605" Top="95" Right="695" Bottom="114" />
+			<ButtonRect State="2" Left="605" Top="120" Right="695" Bottom="139" />
+		</Button>
+		
+		<Button Name="FriendChatHisClear" Image="Data\interface0007_main_D.tga" X="250" Y="265" LuaLButtonUp="ClearHistoryLua" >
+			<ButtonRect State="0" Left="702" Top="70" Right="792" Bottom="89" />
+			<ButtonRect State="1" Left="702" Top="95" Right="792" Bottom="114" />
+			<ButtonRect State="2" Left="702" Top="120" Right="792" Bottom="139" />
+			<ButtonRect State="3" Left="702" Top="120" Right="792" Bottom="139" />
+		</Button>
+		
+		<Button Name="CloseFriendChatHisMenu" Image="Data\interface0007_main_D.tga" X="324" Y="8" LuaLButtonUp="CloseFriendMsgHisLua" >
+			<ButtonRect State="0" Left="151" Top="9" Right="173" Bottom="25" />
+			<ButtonRect State="1" Left="176" Top="9" Right="198" Bottom="25" />
+			<ButtonRect State="2" Left="201" Top="9" Right="223" Bottom="25" />
+			<ButtonRect State="3" Left="201" Top="9" Right="223" Bottom="25" />
+		</Button>
+		
+		<ScrollBarV Name="FriendChatHisScroll" X="334" Y="30" Width ="14" Height="229" Limit="0" BarColor="0">
+			<PrevButton Image="Data\interface0007_main_D.tga" X="30" Y="0" LuaLButtonUp="FriendChatHisPanelUp">
+				<ButtonRect State="0" Left="152" Top="32" Right="163" Bottom="46" />
+				<ButtonRect State="1" Left="166" Top="32" Right="177" Bottom="46" />
+				<ButtonRect State="2" Left="180" Top="32" Right="191" Bottom="46" />
+				<ButtonRect State="3" Left="180" Top="32" Right="191" Bottom="46" />
+			</PrevButton>
+			<NextButton Image="Data\interface0007_main_D.tga" X="30" Y="200" LuaLButtonUp="FriendChatHisPanelDown">
+				<ButtonRect State="0" Left="152" Top="48" Right="163" Bottom="61" />
+				<ButtonRect State="1" Left="166" Top="48" Right="177" Bottom="61" />
+				<ButtonRect State="2" Left="180" Top="48" Right="191" Bottom="61" />
+				<ButtonRect State="3" Left="180" Top="48" Right="191" Bottom="61" />
+			</NextButton>
+			<MoveButton Image="Data\interface0007_main_D.tga" X="30" Y="30" LuaMouseMove="FriendChatHisScrollLua">
+				<ButtonRect State="0" Left="196" Top="34" Right="208" Bottom="64" />
+				<ButtonRect State="1" Left="196" Top="34" Right="208" Bottom="64" />
+				<ButtonRect State="2" Left="196" Top="34" Right="208" Bottom="64" />
+				<ButtonRect State="3" Left="196" Top="34" Right="208" Bottom="64" />
+			</MoveButton>
+		</ScrollBarV>
+		</Panel>
+</UI>
+

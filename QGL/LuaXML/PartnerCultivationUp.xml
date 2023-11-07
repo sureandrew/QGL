@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" ?>
+<UI>
+	<ID Name="PartnerCultivationUp" />
+	<Font Name="Data\mingliu.ttc" Width="12" Height="12" />
+	<Panel Name="PartnerCultivationUpPanel" X="253" Y="267" Image="Data\interface0044.tga" Left="24" Top="29" Right="306" Bottom="268" DetectImage = "1"
+		Drag="1" DragLeft="0" DragTop="0" DragRight="283" DragBottom="240" TimeOutCount="501" LuaTimeOut=""
+		LuaRButtonUp="ClosePartnerCultivationUp" LuaKeyChar="ClosePartnerCultivationUp" >
+		
+		<Button Name="PartnerCultivationUpPanelClose" Image="Data\interface0044.tga" X="251" Y="9" LuaLButtonDown="ClosePartnerCultivationUp">
+			<ButtonRect State="0" Left="312" Top="31" Right="334" Bottom="46" />
+			<ButtonRect State="1" Left="337" Top="31" Right="359" Bottom="46" />
+			<ButtonRect State="2" Left="362" Top="31" Right="384" Bottom="46" />
+		</Button>
+		
+		<Button Name="PartnerCultivationUpByPartner" Image="Data\interface0044.tga" X="57" Y="207" LuaLButtonUp="PartnerCultivationUpByPartner" Hide="1">
+			<ButtonRect State="0" Left="120" Top="279" Right="196" Bottom="297" />
+			<ButtonRect State="1" Left="120" Top="302" Right="196" Bottom="320" />
+			<ButtonRect State="2" Left="120" Top="325" Right="196" Bottom="343" />
+			<ButtonRect State="3" Left="120" Top="325" Right="196" Bottom="343" />
+		</Button>
+		
+		<Button Name="PartnerCultivationUpByItem" Image="Data\interface0044.tga" X="57" Y="207" LuaLButtonUp="PartnerCultivationUpByItem" Hide="1">
+			<ButtonRect State="0" Left="35" Top="279" Right="111" Bottom="297" />
+			<ButtonRect State="1" Left="35" Top="302" Right="111" Bottom="320" />
+			<ButtonRect State="2" Left="35" Top="325" Right="111" Bottom="343" />
+			<ButtonRect State="3" Left="35" Top="325" Right="111" Bottom="343" />
+		</Button>
+		
+		<Button Name="PartnerCultivationUpCancel" Image="Data\interface0044.tga" X="142" Y="207" LuaLButtonUp="ClosePartnerCultivationUp">
+			<ButtonRect State="0" Left="205" Top="279" Right="281" Bottom="297" />
+			<ButtonRect State="1" Left="205" Top="302" Right="281" Bottom="320" />
+			<ButtonRect State="2" Left="205" Top="325" Right="281" Bottom="343" />
+		</Button>
+		
+		<UIImage Name="PartnerCultivationUpPartnerGroup" X="16" Y="36" Image="Data\interface0044.tga" NotDetected = "1" Left="22" Top="435" Right="277" Bottom="563" Hide="1" />		
+		<UIImage Name="PartnerCultivationUpPartnerTipsBG" X="33" Y="45" Image="Data\interface0044.tga" NotDetected = "1" Left="325" Top="68" Right="474" Bottom="120" Hide="1" />
+		<UIImage Name="PartnerCultivationUpPartnerBG" X="205" Y="47" Image="Data\interface0044.tga" NotDetected = "1" Left="325" Top="235" Right="368" Bottom="278" Hide="1" />		
+		<AniIcon Name="PartnerCultivationUpPartner"  X="208" Y="50" Hide="1" LuaLButtonUp="" Detect = "1"/>
+		
+		<UIImage Name="PartnerCultivationUpUsePartnerTipsBG" X="54" Y="112" Image="Data\interface0044.tga" NotDetected = "1" Left="325" Top="135" Right="413" Bottom="169" Hide="1" />
+		<UIImage Name="PartnerCultivationUpUsePartnerBG" X="205" Y="109" Image="Data\interface0044.tga" NotDetected = "1" Left="325" Top="235" Right="368" Bottom="278" Hide="1" />		
+		<AniIcon Name="PartnerCultivationUpUsePartner"  X="208" Y="112" Hide="1" LuaLButtonUp="" Detect = "1"/>
+		
+		<UIImage Name="PartnerCultivationUpUseItemBG" X="16" Y="102" Image="Data\interface0044.tga" NotDetected = "1" Left="23" Top="357" Right="276" Bottom="427" Hide="1" />		
+		
+		<StaticText Name="PartnerCultivationUpRate" X="105" Y="80" Width="50" Height="20"  EdgeCode="SHADOW" FontColor="FFEDD97A" ShadowColor="FF000000" Align="Center" Hide="1">
+		</StaticText>
+		
+		<StaticText Name="PartnerCultivationUpMoney" X="121" Y="180" Width="119" Height="20" EdgeCode="SHADOW" FontColor="FFEDD97A" ShadowColor="FF000000" Align="Center" Hide="1">
+		</StaticText>
+	</Panel>
+	
+
+</UI>

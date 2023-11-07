@@ -1,0 +1,53 @@
+//-- Config
+config
+{
+	SubPath="Logic/";
+	ClassID=11000;
+	StartID=11000;
+	EndID  =11999;
+	
+}
+
+//-- include
+
+//-- object class
+class Account : NetObject
+{
+	//-- object attributes
+	info { 		UInt32 acct_id;
+			String loginName; 		};
+
+	addict {         UInt32 disconnect_time;             
+                         UInt32 offLnTime;
+                         UInt32 onLnTime;                }; 
+	banTime {               UInt32 banTime;          };
+	addictType {            Boolean addictType;      };
+	
+
+public:
+nonblock:
+	GetOwnCharacters();
+	CheckCharacter(UInt32 char_id);
+	CheckCharacterName(String nickName);
+	SelectCharacter(UInt32 char_id, UInt8 line_id);
+	Logout();
+block:
+	AddCharacter(String nickName, UInt8 sex, UInt8 cclass, UInt16 hairStyle, UInt16 hairColor, UInt16 clothStyle, UInt16 clothColor);
+	RemoveCharacter(UInt32 char_id);
+	FreezeCharacter(UInt32 char_id);
+	RecoverCharacter(UInt32 char_id);
+		
+
+	//-- callback
+	CB_Error(UInt32 errCode, String errMsg);
+	CB_CheckCharacter(UInt8 status, Int32Vector lineCounts, UInt16Vector lineState);
+	CB_GetOwnCharacters(NetGroup* charInfos);
+	CB_SelectCharacter();
+	CB_LogoutSuccess();
+	CB_CreateSuccess();
+	CB_RemoveCharSuccess();
+	CB_CheckCharacterName(UInt8 index);
+	CB_RecoverCharSuccess(NetObject* charInfo);
+	CB_FreezeCharSuccess(NetObject* charInfo);
+
+}

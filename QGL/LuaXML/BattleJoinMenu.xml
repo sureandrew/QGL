@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" ?>
+<UI>
+	<ID Name="JoinBattleList" />
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	<Panel Name="JoinBattleListPanel" Image="Data\interface0015_main_I.tga" X="231" Y="71" 
+			Left="4" Top="4" Right="445" Bottom="245" DetectImage = "1" LuaRButtonUp="CloseJoinBattleListPanel"
+			LuaKeyChar="CloseJoinBattleListPanel"
+			Drag="1" DragLeft="0" DragTop="0" DragRight="441" DragBottom="241" LuaStartDrag="CloseJoinBattleApplicantPopup">
+			<Button Name="JoinBattleListUp" Image="Data\interface0015_main_I.tga" X="422" Y="55"  LuaLButtonUp="JoinBattleUp">
+				<ButtonRect State="0" Left="449" Top="50" Right="463" Bottom="64" />
+				<ButtonRect State="1" Left="465" Top="50" Right="479" Bottom="64" />
+				<ButtonRect State="2" Left="481" Top="50" Right="495" Bottom="64" />
+			</Button>
+			<Button Name="JoinBattleListDown" Image="Data\interface0015_main_I.tga" X="422" Y="188"  LuaLButtonUp="JoinBattleDown">
+				<ButtonRect State="0" Left="449" Top="67" Right="463" Bottom="81"/>
+				<ButtonRect State="1" Left="465" Top="67" Right="479" Bottom="81"/>
+				<ButtonRect State="2" Left="481" Top="67" Right="495" Bottom="81"/>
+			</Button>
+			<Button Name="JoinBattleListPanelClose" Image="Data\interface0015_main_I.tga" X="404" Y="11" LuaLButtonUp="CloseJoinBattleListPanel">
+				<ButtonRect State="0" Left="447" Top="28" Right="471" Bottom="46" />
+				<ButtonRect State="1" Left="472" Top="28" Right="496" Bottom="46" />
+				<ButtonRect State="2" Left="497" Top="28" Right="521" Bottom="46" />
+			</Button>
+		
+			
+			<!--<ScrollBarV X="422" Y="55" Width ="18" Height="148" Limit="100" BarColor="FFFFFFFF">
+				<PrevButton Image="Data\interface0015_main_I.tga" X="0" Y="0" LuaLButtonUp="ApplyScrollUp">
+					<Rect State="0" Left="449" Top="50" Right="463" Bottom="64" />
+					<Rect State="1" Left="465" Top="50" Right="479" Bottom="64" />
+					<Rect State="2" Left="481" Top="50" Right="495" Bottom="64" />
+				</PrevButton>
+				<NextButton Image="Data\interface0015_main_I.tga" X="0" Y="133" LuaLButtonUp="ApplyScrollDown">
+					<Rect State="0" Left="449" Top="67" Right="463" Bottom="81"/>
+					<Rect State="1" Left="465" Top="67" Right="479" Bottom="81"/>
+					<Rect State="2" Left="481" Top="67" Right="495" Bottom="81"/>
+				</NextButton>
+				<MoveButton Image="Data\interface0015_main_I.tga" X="0" Y="15">
+					<Rect State="0" Left="498" Top="50" Right="512" Buttom="80" />
+					<Rect State="1" Left="498" Top="50" Right="512" Buttom="80" />
+					<Rect State="2" Left="498" Top="50" Right="512" Buttom="80" />
+				</MoveButton>
+			</ScrollBarV>
+			-->
+				<!--<UIImage Name="JoinBattleScroll" X="422" Y="69" Image="Data\interface0015_main_I.tga"  Left="498" Top="50" Right="512" Bottom="80" />-->
+			
+			<UIImage Name="JoinBattleApplicant1" X="3" Y="55" Image="" Left="0" Top="0" Right="405" Bottom="15" AutoDelete="0" LuaRButtonDown="JoinBattleApplicant_Popup"	/>
+			<StaticText Name="JoinBattleApplicantName1" X="1" Y="55" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			上天下地無人能敵
+			</StaticText>
+			<StaticText Name="JoinBattleApplicantLevel1" X="113" Y="55" Row="1" Column="4" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			9999
+			</StaticText>
+			<StaticText Name="JoinBattleApplicantClass1" X="165" Y="55" Row="1" Column="6" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			任何職業
+			</StaticText>
+			<StaticText Name="JoinBattleApplicantFaction1" X="230" Y="55" Row="1" Column="6" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			任何幫派
+			</StaticText>
+			<StaticText Name="JoinBattleApplicantManor1" X="297" Y="55" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			任何山莊
+			</StaticText>
+			
+			<UIImage Name="JoinBattleApplicant2" X="3" Y="70" Image="" Left="0" Top="0" Right="405" Bottom="15" AutoDelete="0" LuaRButtonDown="JoinBattleApplicant_Popup"	/>
+			<StaticText Name="JoinBattleApplicantName2" X="1" Y="70" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			上天下地無人能敵
+			</StaticText>
+			<StaticText Name="JoinBattleApplicantLevel2" X="113" Y="70" Row="1" Column="4" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			9999
+			</StaticText>
+			<StaticText Name="JoinBattleApplicantClass2" X="165" Y="70" Row="1" Column="6" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			任何職業
+			</StaticText>
+			<StaticText Name="JoinBattleApplicantFaction2" X="230" Y="70" Row="1" Column="6" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			任何幫派
+			</StaticText>
+			<StaticText Name="JoinBattleApplicantManor2" X="297" Y="70" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			任何山莊
+			</StaticText>
+			
+			<UIImage Name="JoinBattleApplicant3" X="3" Y="85" Image="" Left="0" Top="0" Right="405" Bottom="15" AutoDelete="0" LuaRButtonDown="JoinBattleApplicant_Popup"	/>
+			<StaticText Name="JoinBattleApplicantName3" X="1" Y="85" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			上天下地無人能敵
+			</StaticText>
+			<StaticText Name="JoinBattleApplicantLevel3" X="113" Y="85" Row="1" Column="4" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			9999
+			</StaticText>
+			<StaticText Name="JoinBattleApplicantClass3" X="165" Y="85" Row="1" Column="6" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			任何職業
+			</StaticText>
+			<StaticText Name="JoinBattleApplicantFaction3" X="230" Y="85" Row="1" Column="6" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			任何幫派
+			</StaticText>
+			<StaticText Name="JoinBattleApplicantManor3" X="297" Y="85" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			任何山莊
+			</StaticText>
+			
+			<UIImage Name="JoinBattleApplicant4" X="3" Y="100" Image="" Left="0" Top="0" Right="405" Bottom="15" AutoDelete="0" LuaRButtonDown="JoinBattleApplicant_Popup"	/>
+			<StaticText Name="JoinBattleApplicantName4" X="1" Y="100" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			上天下地無人能敵
+			</StaticText>
+			<StaticText Name="JoinBattleApplicantLevel4" X="113" Y="100" Row="1" Column="4" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			9999
+			</StaticText>
+			<StaticText Name="JoinBattleApplicantClass4" X="165" Y="100" Row="1" Column="6" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			任何職業
+			</StaticText>
+			<StaticText Name="JoinBattleApplicantFaction4" X="230" Y="100" Row="1" Column="6" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			任何幫派
+			</StaticText>
+			<StaticText Name="JoinBattleApplicantManor4" X="297" Y="100" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			任何山莊
+			</StaticText>
+			
+			<UIImage Name="JoinBattleApplicant5" X="3" Y="115" Image="" Left="0" Top="0" Right="405" Bottom="15" AutoDelete="0" LuaRButtonDown="JoinBattleApplicant_Popup"	/>
+			<StaticText Name="JoinBattleApplicantName5" X="1" Y="115" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			上天下地無人能敵
+			</StaticText>
+			<StaticText Name="JoinBattleApplicantLevel5" X="113" Y="115" Row="1" Column="4" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			9999
+			</StaticText>
+			<StaticText Name="JoinBattleApplicantClass5" X="165" Y="115" Row="1" Column="6" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			任何職業
+			</StaticText>
+			<StaticText Name="JoinBattleApplicantFaction5" X="230" Y="115" Row="1" Column="6" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			任何幫派
+			</StaticText>
+			<StaticText Name="JoinBattleApplicantManor5" X="297" Y="115" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			任何山莊
+			</StaticText>
+			
+			<UIImage Name="JoinBattleApplicant6" X="3" Y="130" Image="" Left="0" Top="0" Right="405" Bottom="15" AutoDelete="0" LuaRButtonDown="JoinBattleApplicant_Popup"	/>
+			<StaticText Name="JoinBattleApplicantName6" X="1" Y="130" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			上天下地無人能敵
+			</StaticText>
+			<StaticText Name="JoinBattleApplicantLevel6" X="113" Y="130" Row="1" Column="4" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			9999
+			</StaticText>
+			<StaticText Name="JoinBattleApplicantClass6" X="165" Y="130" Row="1" Column="6" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			任何職業
+			</StaticText>
+			<StaticText Name="JoinBattleApplicantFaction6" X="230" Y="130" Row="1" Column="6" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			任何幫派
+			</StaticText>
+			<StaticText Name="JoinBattleApplicantManor6" X="297" Y="130" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			任何山莊
+			</StaticText>
+			
+			<UIImage Name="JoinBattleApplicant7" X="3" Y="145" Image="" Left="0" Top="0" Right="405" Bottom="15" AutoDelete="0" LuaRButtonDown="JoinBattleApplicant_Popup"	/>
+			<StaticText Name="JoinBattleApplicantName7" X="1" Y="145" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			上天下地無人能敵
+			</StaticText>
+			<StaticText Name="JoinBattleApplicantLevel7" X="113" Y="145" Row="1" Column="4" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			9999
+			</StaticText>
+			<StaticText Name="JoinBattleApplicantClass7" X="165" Y="145" Row="1" Column="6" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			任何職業
+			</StaticText>
+			<StaticText Name="JoinBattleApplicantFaction7" X="230" Y="145" Row="1" Column="6" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			任何幫派
+			</StaticText>
+			<StaticText Name="JoinBattleApplicantManor7" X="297" Y="145" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			任何山莊
+			</StaticText>
+			
+			<UIImage Name="JoinBattleApplicant8" X="3" Y="160" Image="" Left="0" Top="0" Right="405" Bottom="15" AutoDelete="0" LuaRButtonDown="JoinBattleApplicant_Popup"	/>
+			<StaticText Name="JoinBattleApplicantName8" X="1" Y="160" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			上天下地無人能敵
+			</StaticText>
+			<StaticText Name="JoinBattleApplicantLevel8" X="113" Y="160" Row="1" Column="4" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			9999
+			</StaticText>
+			<StaticText Name="JoinBattleApplicantClass8" X="165" Y="160" Row="1" Column="6" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			任何職業
+			</StaticText>
+			<StaticText Name="JoinBattleApplicantFaction8" X="230" Y="160" Row="1" Column="6" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			任何幫派
+			</StaticText>
+			<StaticText Name="JoinBattleApplicantManor8" X="297" Y="160" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			任何山莊
+			</StaticText>
+			
+			<UIImage Name="JoinBattleApplicant9" X="3" Y="175" Image="" Left="0" Top="0" Right="405" Bottom="15" AutoDelete="0" LuaRButtonDown="JoinBattleApplicant_Popup"	/>
+			<StaticText Name="JoinBattleApplicantName9" X="1" Y="175" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			上天下地無人能敵
+			</StaticText>
+			<StaticText Name="JoinBattleApplicantLevel9" X="113" Y="175" Row="1" Column="4" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			9999
+			</StaticText>
+			<StaticText Name="JoinBattleApplicantClass9" X="165" Y="175" Row="1" Column="6" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			任何職業
+			</StaticText>
+			<StaticText Name="JoinBattleApplicantFaction9" X="230" Y="175" Row="1" Column="6" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			任何幫派
+			</StaticText>
+			<StaticText Name="JoinBattleApplicantManor9" X="297" Y="175" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			任何山莊
+			</StaticText>
+			
+			<UIImage Name="JoinBattleApplicant10" X="3" Y="190" Image="" Left="0" Top="0" Right="405" Bottom="15" AutoDelete="0" LuaRButtonDown="JoinBattleApplicant_Popup"	/>
+			<StaticText Name="JoinBattleApplicantName10" X="1" Y="190" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			上天下地無人能敵
+			</StaticText>
+			<StaticText Name="JoinBattleApplicantLevel10" X="113" Y="190" Row="1" Column="4" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			9999
+			</StaticText>
+			<StaticText Name="JoinBattleApplicantClass10" X="165" Y="190" Row="1" Column="6" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			任何職業
+			</StaticText>
+			<StaticText Name="JoinBattleApplicantFaction10" X="230" Y="190" Row="1" Column="6" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			任何幫派
+			</StaticText>
+			<StaticText Name="JoinBattleApplicantManor10" X="297" Y="190" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+			任何山莊
+			</StaticText>
+						
+	</Panel>
+	<Panel Expand="1" Name="JoinBattleApplicantPopupPanel" Image="Data\inerface0001_main.tga" X="300" Y="100" 
+			Left          ="88" Top          ="205" Right          ="158" Bottom          ="212"
+			LineRectLeft  ="88" LineRectTop  ="230" LineRectRight  ="158" LineRectBottom  ="242" LineCount="3"
+			BottomRectLeft="88" BottomRectTop="279" BottomRectRight="158" BottomRectBottom="289"
+			Hide="1" LuaTimeOut="CloseJoinBattleApplicantPopup" TimeOutCount="5000" 
+			LuaMouseOut="StartJoinBattleApplicantCount" InsertToEventList="1" LuaMouseIn="HoldJoinBattleApplicantPopup"
+		>
+		<PopUpMenu Name="JoinBattleApplicantPopup" X="5" Y="7" BarWidth="53" Row="5" Column="6" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000"
+			SelBarColor="FFFF0000" LuaLButtonDown="JoinBattleApplicantPopup" LuaRButtonDown="CloseJoinBattleApplicantPopup" FontName="Data\simsun.ttc" FontHeight="13" FontWidth="13">
+			<PopUpMenuString Code="0">　密语　</PopUpMenuString>
+			<PopUpMenuString Code="1">接受加入</PopUpMenuString>
+			<PopUpMenuString Code="2">拒绝加入</PopUpMenuString>
+		</PopUpMenu>
+	</Panel>
+</UI>

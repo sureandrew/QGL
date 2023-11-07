@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<!-- Our to do list data -->
+<UI>
+	<ID Name="MixDetailMenu" />
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	<Panel Expand="1" Name="MixDetailMenuPanel" X="100" Y="100" Image="Data\interface0005_main_B.tga" Hide="0"
+		Left="9" Top="475" Right="297" Bottom="487" 
+		LineRectLeft="9" LineRectTop="489" LineRectRight="297"	LineRectBottom="502" LineCount="60"
+		BottomRectLeft="9" BottomRectTop="504" BottomRectRight="297" BottomRectBottom="518"
+		NotDetected="0" DetectImage="1" LuaRButtonDown="CloseMixDetail" LuaKeyChar="CloseMixDetail"
+		>
+		
+		<StaticText Name="MixDetailTextDesc" X="20" Y="20" Row="3" Column="40" Width="260" Height="52" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		
+		</StaticText>
+		
+		<StaticText Name="MixDetailTextFunctionDesc" X="20" Y="58" Row="5" Column="40" Width="260" Height="65" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+		
+		</StaticText>
+	</Panel>
+</UI>

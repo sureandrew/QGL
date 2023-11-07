@@ -1,0 +1,483 @@
+//-- Config
+config
+{
+	SubPath="Logic/";
+	ClassID=13000;
+	StartID=13000;
+	EndID  =13999;
+}
+
+//-- include
+#include "MapActor.h"
+#include "Common/common_binary.h"
+
+struct HawkerItemInfo
+{
+	UInt32 item_uid;
+	UInt32 item_id;
+	UInt8 item_stack;
+	UInt32 item_price;
+	UInt8 item_index;
+};
+
+struct HawkerHistory
+{
+	UInt32 historyId;
+	UInt32 char_id;		
+	UInt8 itemType;
+	UInt8 stack;
+	UInt32 totalPrice;
+	UInt32 tax;
+	UInt32 historyDate;
+};
+
+typedef StlVector<HawkerItemInfo, ManagedAllocator<HawkerItemInfo> > HawkerItemInfoVector;
+typedef StlVector<HawkerHistory, ManagedAllocator<HawkerHistory> > HawkerHistoryVector;
+
+typedef StlVector<String, ManagedAllocator<String> > StringVector;
+
+typedef StlVector<Byte, ManagedAllocator<Byte> > ByteVector; 
+
+//-- object class
+class Character : MapActor
+{
+	//-- object attributes
+	id { 			UInt32 acct_id;
+					UInt32 char_id; 			};
+	levelInfo {		UInt16 level;				
+				UInt32 nextLvExp;			};
+	exp {			UInt32 exp; 				};
+	attrib1 {		UInt16 STA;
+					UInt16 SPR;
+					UInt16 STR;
+					UInt16 CON;
+					UInt16 AGI; 				};
+	attrib2 { 		UInt16 ATK;
+					UInt16 DEF;
+					UInt16 HIT;
+					UInt16 EVA;
+					UInt16 POW;
+					UInt16 SPD; 				};
+	attrPoint { 	UInt16 attrPoint; 			};
+
+	HP {			UInt16 HP;
+					UInt16 mHP;
+					UInt16 maxHP;				};
+	SP {			UInt16 SP;
+					UInt16 mSP;
+					UInt16 maxSP;				};
+	DP {			UInt16 DP;
+					UInt16 mDP;
+					UInt16 maxDP;				};
+	WC {			UInt16 WC;
+					UInt16 maxWC;
+					UInt16 WcExp;				
+					UInt32 nextWCExp;			};
+	VP {			UInt16 VP;
+					UInt16 maxVP;				};
+	goodness {		Int32 goodness;				};
+	honor {			UInt32 honor;				};
+	title {			String title;				
+					UInt16 title_id; };
+	manor { 		UInt32 manor; 	
+				UInt32 pettwo_uid; 	
+				UInt32 pettwo_id;
+				String pettwoName;
+				UInt16 pettwoColorIndex;			};
+	donate { 		UInt32 fDonate;
+					UInt32 totalFDonate;
+					UInt32 mDonate;
+					UInt32 totalMDonate;		};
+	yuanBao { 		UInt32 yuanBao;
+				UInt32 yuanBaoTicket;			};
+	money { 		UInt32 money; 				};
+	bankMoney { 	UInt32 bankMoney; 			};
+	SMoney{			UInt32 SMoney;};
+	partner { 		UInt32 partner_id; 
+					UInt32 partnerMob_id;
+					String partnerName;
+					UInt16 partnerColorIndex;	};
+	pet { 			UInt32 pet_uid; 	
+					UInt32 pet_id;
+					String petName;
+					UInt16 petColorIndex;		};
+	maxOther {		UInt8 maxPartner;
+					UInt8 maxPet; 				};
+
+	style {			UInt16 photo_id;
+					UInt16 hairStyle1;
+					UInt16 hairStyle2;
+					UInt16 hairColor;			};
+
+	eqWeapon {		UInt32 eq_weapon;	
+					UInt16 eq_weaponColor;		};
+	eqHead {		UInt32 eq_headBand;	
+					UInt16 eq_headColor;		};
+	eqCloth {		UInt32 eq_cloth;	
+					UInt16 eq_clothColor;		};
+	state { 		UInt8 state; 				};
+	buff { 			String buff; 				};
+	buffCache {		String buffCache; 			};
+	shortcut {		UInt16 shortcut[10];		
+				UInt8 shortcuttype[10];			};
+	
+	partyInfo {		Boolean hasParty;
+					Boolean isLeader;		
+					RPCNetID partyNetID;		};
+	
+	PKInfo	{		UInt16	PK_Value;			};
+	
+	BattleInfo {	Boolean EnablePK;			};
+	SettingInfo {	Boolean EnableBlockGiven;
+					Boolean EnableBlockParty;
+					Boolean EnableBlockMsg;
+					Boolean EnableBlockTrading;
+					Boolean EnableBlockMakeFriend;	
+					Boolean EnableShowEquip;	};
+
+	orgHairStyle {	UInt16 org_hairStyle1;
+					UInt16 org_hairColor;		};
+	orgEqCloth {	UInt32 org_eq_cloth;	
+					UInt16 org_eq_clothColor;	};
+			
+	speakCount { 	UInt16 speakCount; 		};
+	offlineTime { 	UInt32 offlineTime; 		};
+	hawkInfo {		String hawkName;			};
+	TP {			UInt16 TP;		
+				UInt32 Model_mobid;			};			
+	speakBlock {	UInt32 speakBlock; 			};
+	hawkerTime {	UInt32 hawkerTime;			};
+	availBackPack {	UInt8  availBackPack;		};
+	availWareHouse{		UInt8 availItemWareHouse;
+				UInt8 availPartnerWareHouse;
+				UInt8 availPetWareHouse;	};
+	followerList {	UInt32Vector followerList;	};
+	PvPScoreSingle{		UInt32 PvPScoreSingle;	};
+	unlockTime {    UInt32 unlock_time;	};
+	yuanbaoLock {	Boolean yuanbaoLock;	};
+	bankLock {	Boolean bankLock;	};	
+	
+	SiblingId { UInt32 sibling_id; };
+	mark { UInt32 mark; };
+	wantedReward { UInt32 wantedReward; };
+	guildUid { 		UInt32 guildUid;		};
+	GenerationAcc{  UInt32 iHisGenAcc;
+					UInt32 uiCurGenAcc;			};
+	//-- RPC method
+public:
+
+nonblock:
+	MoveTo(UInt16 posX, UInt16 posY, UInt16 hint1, UInt16 hint2);
+	StopMove();
+	RespondTest(UInt32 minRespond, UInt32 maxRespond, 
+				float avgRespond, UInt32 respondCount);
+block:
+	TestBattle();
+	CancelAuto();
+	LevelUp();
+	RaiseAttrib(UInt16 sta, UInt16 spr, UInt16 str, UInt16 con, UInt16 agi);
+	PKRequest(UInt32 TargetID, BYTE Type);
+	//SetEnablePK(Boolean Value);
+	LeaveWatching();
+	MonitorBattle(UInt32 targetId);
+	JoinBattle(UInt32 char_id);
+	RequestJoinBattle(Boolean Force);
+	RejectHelper(UInt32 char_id);
+	SetFollowPartner(UInt32 partner_id);	
+	SetFollowPet(UInt32 pet_id);
+	ChangeMapLine(UInt8 line_id);
+	UpdateYuanBao();
+
+	CB_RequestJoinBattle(BYTE returnFlag);
+	CB_PKRequest(BYTE returnFlag, UInt32 Target_ID, UInt8 teamCount);
+	CB_SetEnablePK(BYTE returnFlag);
+	CB_JoinBattle(BYTE returnFlag);
+	CB_CancelAuto();
+	CB_LevelUp();
+	CB_RaiseAttrib();
+	CB_AddHelper(UInt32 char_id);
+	CB_RejectHelper();
+	CB_LeaveHelpersList(UInt32 char_id);
+	CB_ClearHelpersList();
+	CB_HelpRequestFail();
+	CB_WarningMessage(UInt8 msgIndex, Int32 value, UInt8 showIn);
+	
+	
+	//-- Char
+	SearchChar();
+	
+	CB_SearchChar(CharInfoVector CharInfoList);
+	
+	//-- WeaponsRank
+	CB_OpenWeaponsRankPanel();
+	
+	//-- Target
+	SetTarget(UInt32 char_id);
+	CB_SetTarget(Boolean bResult, UInt32 char_id, UInt16 x, UInt16 y);
+	
+	//-- Party
+	CreateParty();
+	PartyJoinRequest(RPCNetID memberId);
+	PartyJoinLevelControl(RPCNetID targetId,UInt16 levelDown,UInt16 levelUp);
+	PartyJoinReply(RPCNetID targetId, Boolean agree, Boolean showMsg);
+	PartyInviteRequest(RPCNetID targetId);
+	PartyInviteReply(RPCNetID partyId, Boolean agree, Boolean showMsg);
+	SearchParty();
+	GetPartyInfo(RPCNetID memberId);
+
+
+	CB_Error(UInt32 errCode, String errMsg);
+	CB_JoinParty(NetGroup* party);
+	CB_ChangeDesc(NetGroup* party);
+	CB_PartyRequestOk(String name);
+	CB_PartyRequestNo(UInt16 nState);
+	CB_GetPlayerEquip(UInt32 char_id);
+	CB_PartyInviteOk(String name);
+	CB_PartyJoinRequest(RPCNetID targetId);
+	CB_PartyInviteRequest(NetGroup* party);
+	CB_PartyClearRequest(RPCNetID targetId, Boolean showMsg);
+	CB_PartyClearInvite(RPCNetID partyId, Boolean showMsg);
+	CB_PartyMessage(UInt8 msgType, bool inviteOrJoin, String charName); 
+	CB_SearchParty(PartyInfoVector PartyInfoList);
+	CB_GetPartyInfo(PartyInfoVector PartyInfoList);
+	CB_OpenSearchPartyPanel();
+	ShutNewGuide(UInt8 flag);
+	CB_HandleGuideEvent(UInt16 ID);
+
+	//-- Cheat Code
+	CheatCode(UInt32 orderMakerAcct_id, String code);
+
+	//-- Respond Test
+	CB_RespondTest(UInt16 playerCount);
+	
+	// Skills
+	
+	LearnSkill(UInt16 skill_id);
+	UseSkill(UInt16 skill_id, UInt32 TargetID, BYTE TargetType);
+	UpGradeSkill(UInt16 skill_id);
+	RemoveSkill(UInt16 skill_id);
+	
+	CB_LearnSkill(UInt16 skill_id, BYTE returnFlag);
+	CB_UseSkill(UInt16 skill_id, BYTE returnFlag, String Msg, UInt32 SrcID, UInt32 TargetID);
+	CB_UpGradeSkill(UInt16 skill_id, BYTE returnFlag);
+	CB_RemoveSkill(UInt16 skill_id, BYTE returnFlag);
+	
+	SkillShopLearn(UInt16 skill_id);
+	LeaveSkillShop();
+	CB_SkillShopLearn(BYTE returnFlag);
+	
+	// Given
+	GivenProcess(RPCNetID targetId, UInt8Vector itemIndexs, UInt8Vector itemStacks, UInt32Vector PartnerIDs, UInt32Vector PetIDs, UInt32 gmoney);
+	CB_GivenProcess(Boolean success, UInt8 msgIndex);
+	CB_GivenItem(Boolean GivenBy, String targetName, UInt32Vector itemID, UInt8Vector itemStacks);
+	CB_GivenPartner(Boolean GivenBy, String targetName,StringVector PartnerNames);
+	CB_GivenPet(Boolean GivenBy, String targetName, StringVector PetNames);
+	CB_GivenMoney(Boolean GivenBy, String targetName, UInt32 gmoney);
+
+	// update shortcut
+	UpdateShortCutList(UInt16Vector shortcut, UInt8Vector shortcuttype);
+	UpdateShortCut(UInt16 shortcut, UInt8 shortcuttype, UInt8 position);
+	CB_UpdateShortCutSuccess();
+
+	// SystemSetting
+	SaveSystemSetting(Boolean EnableBlockGiven, Boolean EnableBlockParty, Boolean EnableBlockMsg, Boolean EnableBlockTrading, Boolean EnableBlockMakeFriend, Boolean EnableShowEquip);
+	CB_SaveSystemSetting();
+	
+	ChangeMsgIcon(UInt16 iconID);
+	
+	// Trading
+	AskForTrading(RPCNetID targetId);
+	CB_AskForTrading(RPCNetID askId);
+	ReplyReqTrading(Boolean trade, RPCNetID targetId);
+	CB_ReplyReqTrading(Boolean trade);
+	CB_TradingMessage(Boolean trade, UInt8 msgIndex);
+	CB_TradingObject(NetObject* trading);
+	
+	// Talk to NPC
+	TalkToNPC(UInt32 npc_id);
+	CB_TalkToNPC(UInt32 npc_id, bool bResult);
+	//Title
+	ChangeTitle(UInt16 title_id);
+	CB_TitleListUpdate(UInt16Vector title_id_list, StringVector title_string_list, UInt8Vector updateState);
+
+	//Anti-Hack 
+	CB_AntiHack(ByteArray image, AntiHackData data);
+	AnswerAntiHack(UInt8 answer, Boolean is_right);
+	CB_ReportAntiHack(Boolean is_right, UInt8 cwrong, UInt16 reward);
+	
+	//NPC Bank Service
+	DepositInBank(UInt32 money);
+	WithdrawFmBank(UInt32 money);
+	CB_DepositInBank(Boolean success);
+	CB_WithdrawFmBank(Boolean success);			
+	
+	//Hawk
+	StartHawk(String hawkName, HawkerItemInfoVector itemList, HawkerItemInfoVector partnerList, HawkerItemInfoVector petList);
+	CB_StartHawk(NetGroup* hawkGroup, UInt8 successIndex);	
+	GetHawkFromTarget(UInt32 targetId);
+	CB_GetHawk(Boolean self, NetGroup* hawkGroup, NetGroup* itemGroup, 
+		NetGroup* partnerGroup, UInt16Vector partnerSkillID, 
+		NetGroup* petGroup, UInt16Vector petSkillID);
+	CB_HawkMessage(UInt8 msgIndex);
+	CB_HawkHistory(HawkerHistoryVector historys, StringVector itemNames);
+	CB_UpdateHawkHistory(HawkerHistoryVector historys, StringVector itemNames,
+		UInt32Vector deleteHistoryID);
+	ClearHawkerHistory();
+	
+	//send message
+	CB_SendGrpMessage(UInt8 Result, UInt32 resultFlag);
+	SetListen(BOOL IsListen);
+	
+	// guild
+	DonateMoney(UInt32 guild_uid, UInt32 money);
+	CreateGuild(String name, bool cancel);
+	CB_OpenCreateGuild();
+	CB_AwardMsg(String msg);
+
+	//GiftBox
+	CB_OpenGiftBox(NetGroup* giftBox);
+
+	//Anti-Addiction
+	CB_AddictionWarning(String warnMsg);
+	CB_AddictCurrentStatus(String statusMsg);
+	CB_AddictionShutDown(UInt32 accOffTime);
+	CB_PlyInterestDwn(UInt8 interest);
+
+	//item
+	CB_UseItemCharacter(UInt32 item_id, UInt32 SrcID, UInt32 TargetID);
+
+	//question
+	EnterQuestion();
+	ExitQuestion();
+	
+	CB_AskEnterQuestion();
+	CB_EnterQuestion(NetObject* pQuestion);
+	CB_ExitQuestion();
+	CB_AnswerQuestion(UInt8 index, UInt32 CharID);
+	
+	//wareHouse
+	CloseWareHouse();
+	CB_OpenWareHouse(NetGroup* items, NetGroup* partners, NetGroup* pets, 
+		NetGroup* partnerSkillGroup, NetGroup* petSkillGroup);
+
+	//Lock and Unlock items/partners/pets/YuanBao/Money
+	LockAsset(UInt32 bagIndex, UInt8 assetType);
+	UnlockAsset(ByteArray password, UInt32 bagIndex, UInt8 assetType);	
+	SetAssetPassword(ByteArray password);
+	ForceResetAssetPassword();	
+	ChangeAssetPassword(ByteArray oldPassword, ByteArray newPassword);
+	CB_AssetProtectResult(UInt8 result, UInt32 index, UInt8 assetType);
+	CB_AssetReleaseLockResult(UInt8 result, UInt32 index, UInt8 assetType);
+	CB_SetAssetPassword(Boolean success);
+	CB_ForceResetAssetPassword(Boolean success);
+
+	// robot
+	CB_SetRobot(Boolean bRobot, String robotScript);
+	CB_RobotMapAction(String func, RPCNetID mapNetId, RPCNetID charNetId, 
+		RPCNetID otherNetId);
+	CB_RobotBattleTurn(String func, RPCNetID battleNetId, RPCNetID charNetId, 
+		RPCNetID batCharNetId, RPCNetID partnerNetId);
+	SetAutoWalk(Boolean bRobot);
+	SetAutoWalkHitBoss(Boolean hit);
+	CB_SetAutoWalkHitBoss(Boolean hit);
+	// guild
+	KickMember(UInt32 char_id, String reason);
+	CB_DonateResult(UInt32 donate, UInt8 returnFlag, UInt32 donateMoney);
+
+	// Partner Collection
+	CB_GetPartnerCollectionList(UInt32Vector PartnerIDs);
+	UsePartnerCollectionBuff(bool bUse);
+	CB_UsePartnerCollectionBuff(BYTE returnFlag);
+	AddPartnerCollection(UInt32 partner_id);
+	CB_AddPartnerCollection(UInt32 MOBid, BYTE returnFlag);
+
+	//change between YBT and YB, sellyuanbao
+	ChangeBetweenYBandYBT(UInt8 changeType, UInt32 num, ByteArray password);
+	CB_ChangeBetweenYBandYBT(UInt8 msgIndex);
+	AddSellYuanBao(UInt32 YBT, UInt32 pricePerUnit, ByteArray password);
+	CB_AddSellYuanBao(UInt8 msgIndex);
+	BuySellYuanBao(UInt32 sellYuanBaoID, UInt32 YBT, UInt32 moneyPerUnit, ByteArray password);
+	CB_BuySellYuanBao(UInt8 msgIndex);
+	GetAllMoneyAndYBT(ByteArray password);
+	CB_GetAllMoneyAndYBT(UInt8 msgIndex);
+
+	//target equip
+	RequestTargetEquip(UInt32 char_id);
+	CB_RequestTargetEquip(NetGroup *items);
+	
+	//relation system
+	CB_RelationSystem(NetObject* pRelationSystem);
+	
+	//hawk
+	AddStartHawkItem(HawkerItemInfo itemInfo,StartHawkAddType addType);
+	CB_SetTargetNameFormHawk(UInt32 char_id ,String char_name,Boolean isonline);
+	CB_InitTargetHawkConcernState(UInt32 char_id);
+	
+	//lineup
+	ModifyLineup(UInt16 uiLineupId);
+	CB_ModifyLineup(UInt16 uiLineupId);
+	ModifyLineupKeyPos(int iKeyPos);
+	CB_ModifyLineupKeyPos(int iKeyPos);
+	ForgiveLineup(UInt16 uiLineupId);
+	CB_ForgiveLineup(int iResault);
+	SetChangePos(UInt8 ui8PreIndex,UInt8 ui8DestIndex);
+	CB_SetChangePos(int iRetCode,UInt8 ui8PreIndex,UInt8 ui8DestIndex);
+
+	
+	//wanted
+	UpdateWantedReward(UInt32 targetId,String targetName,Int32 money);
+	CB_UpdateWantedReward(UInt32 targetId,Int32 money,Boolean result);
+	JailDelivery(UInt32 targetId);
+	CB_JailDelivery();
+	WantedBail(UInt32 targetId);
+	CB_WantedBail();
+	WantedTrace(UInt32 targetId);
+	CB_WantedTrace(String name, UInt32 lineId, UInt32 mapId, UInt32 mapX, UInt32 mapY);
+	CB_RequestWantedTrace();
+	
+		//Generation Function
+	GetGenerationGroup();
+	CB_GetGenerationGroup(NetGroup* pGntGrp);
+	RequestGeneration(UInt32 uiTargetId);
+	CB_RequestGenerationTrans(UInt32 uiRequstId);
+	RequestGenerationAns(BOOL bConfirm,UInt32 uiRelatedId);
+	CB_RequestGenerationResult(int iResultCode,UInt32 uiRelatedId);
+	DeleteGeneration(UInt32 uiRelatedId);
+	CB_DeleteGeneration(int iResultCode,UInt32 uiRelatedId);
+	CB_ChangeGenerationType(int iType);
+	GetSavedExp();
+	CB_UpdateGenerationAcc(UInt32 uiCurAcc,UInt32 uiHisAcc);
+	BuyAccShopItem(UInt32 iIndex);
+	CB_BugAccShopItem(int iRetCode,UInt32 iIndex);
+	CB_GenerationGainAcc(UInt32 iGainedAcc);
+
+	// PointsShop
+	BuyPointsShopItem(int iItemID, UInt32 nPointsShopID, UInt32 nPointsShopTypeID);
+	CB_BuyPointsShopItem(int iRetCode, UInt32 uiPoints);
+	
+	// business log
+	CB_OpenBusinessLog();
+	
+	CB_SetMarriageNpcAction(UInt32 npc_uid,UInt8 atcion,UInt8 direction);
+	CB_ShowMarriageEff(UInt8 state,UInt32 husbandID,UInt32 wifeID);
+	CB_ResetChangeLine();
+
+	CB_PetUseSkillMsg(String Msg);
+	
+	//cross map
+	RequestCrossMapJump(UInt32 uSrcJmpSeq,UInt32 uDstJmpSeq);
+	
+	//afk
+	LeaveTeamTemporarily();
+	CB_LeaveTeamTemporarily(UInt32 uRetCode,UInt32 uId);
+	CB_GetPartyInfoWhenJumpMap(NetGroup* pParty);
+	ReturnParty();
+	CB_ReturnParty(UInt32 uRetCode,NetObject* pChar);
+	CB_RefreshPartyCharInfo(NetObject* pPartyCharInfo);
+	CB_RestorePartyAsTemp(NetGroup* pParty);
+	
+	
+	//change mob
+	CB_SetChangeModelSkillGroup(NetGroup* skillGroup);
+	CB_ShowIncognitoBoxEff(UInt16 posx,UInt16 posy,UInt8 effType);
+}

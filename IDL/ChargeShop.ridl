@@ -1,0 +1,22 @@
+//-- Config
+config
+{
+	SubPath="Logic/";
+	ClassID=41000;
+	StartID=41000;
+	EndID  =41899;
+	ModifyMask=1;
+}
+
+//-- include
+#include "Reuben/Network/NetGroup.h"
+
+//-- object class
+class ChargeShop : NetGroup
+{
+	//-- object state
+
+	//-- command to RPC server
+	BuyItemInChargeShop(UInt32 chargeShopID, UInt16 stack);
+	CB_BuyItemInChargeShop(Boolean success, UInt8 msgCode, UInt32 chargeItemID, UInt8 itemType, UInt32 stack, UInt32 yuanbao);
+}

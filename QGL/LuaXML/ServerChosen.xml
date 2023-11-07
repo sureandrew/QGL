@@ -1,0 +1,117 @@
+<?xml version="1.0" ?>
+<UI xmlns="http://tempuri.org/LoginUI.xsd">
+	<ID Name="ServerChosen" />
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	<Panel Name="ServerChosenPanel" X="260" Y="128" Image="Data\interface0016_begin_B.tga" Left="596" Top="6" Right="887" Bottom="354" Hide="1">
+		<Button Name="ServerChosenPrev" Image="Data\interface0016_begin_B.tga" X="35" Y="312" LuaLButtonUp="GoBackCharacter">
+			<ButtonRect State="0" Left="174" Top="574" Right="267" Bottom="596" />
+			<ButtonRect State="1" Left="174" Top="597" Right="267" Bottom="618" />
+			<ButtonRect State="2" Left="174" Top="621" Right="267" Bottom="642" />
+		</Button>
+		<Button Name="ServerChosenNext" Image="Data\interface0016_begin_B.tga" X="165" Y="312" LuaLButtonUp="GoToGame">
+			<ButtonRect State="0" Left="323" Top="645" Right="415" Bottom="666" />
+			<ButtonRect State="1" Left="323" Top="668" Right="415" Bottom="689" />
+			<ButtonRect State="2" Left="323" Top="692" Right="415" Bottom="713" />
+		</Button>
+		
+		<UIImage Name="ServerSelected" X="0" Y="0" Image="Data\interface0016_begin_B.tga" Left="602" Top="376"
+			Right="878" Bottom="401" AutoDelete="1" Hide="1" />
+			
+			
+		<Button Name="Server1" Image="Data\interface0016_begin_B.tga" X="6" Y="43" LuaLButtonUp="SelectServer1">
+			<ButtonRect State="0" Left="602" Top="406" Right="878" Bottom="431" />
+			<ButtonRect State="1" Left="602" Top="376" Right="878" Bottom="401" />
+			<ButtonRect State="2" Left="602" Top="406" Right="878" Bottom="431" />
+		</Button>
+		<StaticText Name="ServerName1" X="35" Y="46" Row="1" Column="15" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<UIImage Name="ServerState1" X="210" Y="46" Image="" Left="" Top=""	Right="" Bottom="" AutoDelete="1" NotDetected="1" />
+			
+		<Button Name="Server2" Image="Data\interface0016_begin_B.tga" X="6" Y="68" LuaLButtonUp="SelectServer2">
+			<ButtonRect State="0" Left="602" Top="406" Right="878" Bottom="431" />
+			<ButtonRect State="1" Left="602" Top="376" Right="878" Bottom="401" />
+			<ButtonRect State="2" Left="602" Top="406" Right="878" Bottom="431" />
+		</Button>
+		<StaticText Name="ServerName2" X="35" Y="71" Row="1" Column="15" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<UIImage Name="ServerState2" X="210" Y="71" Image="" Left="" Top=""	Right="" Bottom="" AutoDelete="1" NotDetected="1" />
+			
+		
+		
+		<Button Name="Server3" Image="Data\interface0016_begin_B.tga" X="6" Y="93" LuaLButtonUp="SelectServer3">
+			<ButtonRect State="0" Left="602" Top="406" Right="878" Bottom="431" />
+			<ButtonRect State="1" Left="602" Top="376" Right="878" Bottom="401" />
+			<ButtonRect State="2" Left="602" Top="406" Right="878" Bottom="431" />
+		</Button>
+		<StaticText Name="ServerName3" X="35" Y="96" Row="1" Column="15" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<UIImage Name="ServerState3" X="210" Y="96" Image="" Left="" Top=""	Right="" Bottom="" AutoDelete="1" NotDetected="1" />
+			
+		<Button Name="Server4" Image="Data\interface0016_begin_B.tga" X="6" Y="118" LuaLButtonUp="SelectServer4">
+			<ButtonRect State="0" Left="602" Top="406" Right="878" Bottom="431" />
+			<ButtonRect State="1" Left="602" Top="376" Right="878" Bottom="401" />
+			<ButtonRect State="2" Left="602" Top="406" Right="878" Bottom="431" />
+		</Button>
+		<StaticText Name="ServerName4" X="35" Y="121" Row="1" Column="15" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<UIImage Name="ServerState4" X="210" Y="121" Image="" Left="" Top="" Right="" Bottom="" AutoDelete="1" NotDetected="1" />
+		
+		<Button Name="Server5" Image="Data\interface0016_begin_B.tga" X="6" Y="143" LuaLButtonUp="SelectServer5">
+			<ButtonRect State="0" Left="602" Top="406" Right="878" Bottom="431" />
+			<ButtonRect State="1" Left="602" Top="376" Right="878" Bottom="401" />
+			<ButtonRect State="2" Left="602" Top="406" Right="878" Bottom="431" />
+		</Button>
+		<StaticText Name="ServerName5" X="35" Y="146" Row="1" Column="15" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" >
+		</StaticText>
+		<UIImage Name="ServerState5" X="210" Y="146" Image="" Left="" Top="" Right="" Bottom="" AutoDelete="1" NotDetected="1" />
+		
+		<Button Name="Server6" Image="Data\interface0016_begin_B.tga" X="6" Y="168" LuaLButtonUp="SelectServer6">
+			<ButtonRect State="0" Left="602" Top="406" Right="878" Bottom="431" />
+			<ButtonRect State="1" Left="602" Top="376" Right="878" Bottom="401" />
+			<ButtonRect State="2" Left="602" Top="406" Right="878" Bottom="431" />
+		</Button>
+		<StaticText Name="ServerName6" X="35" Y="171" Row="1" Column="15" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<UIImage Name="ServerState6" X="210" Y="171" Image="" Left="" Top="" Right="" Bottom="" AutoDelete="1" NotDetected="1" />
+		
+		
+		<Button Name="Server7" Image="Data\interface0016_begin_B.tga" X="6" Y="193" LuaLButtonUp="SelectServer7">
+			<ButtonRect State="0" Left="602" Top="406" Right="878" Bottom="431" />
+			<ButtonRect State="1" Left="602" Top="376" Right="878" Bottom="401" />
+			<ButtonRect State="2" Left="602" Top="406" Right="878" Bottom="431" />
+		</Button>
+		<StaticText Name="ServerName7" X="35" Y="196" Row="1" Column="15" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" >
+		</StaticText>
+		<UIImage Name="ServerState7" X="210" Y="196" Image="" Left="" Top="" Right="" Bottom="" AutoDelete="1" NotDetected="1" />
+		
+		
+		<Button Name="Server8" Image="Data\interface0016_begin_B.tga" X="6" Y="218" LuaLButtonUp="SelectServer8">
+			<ButtonRect State="0" Left="602" Top="406" Right="878" Bottom="431" />
+			<ButtonRect State="1" Left="602" Top="376" Right="878" Bottom="401" />
+			<ButtonRect State="2" Left="602" Top="406" Right="878" Bottom="431" />
+		</Button>
+		<StaticText Name="ServerName8" X="35" Y="221" Row="1" Column="15" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" >
+		</StaticText>
+		<UIImage Name="ServerState8" X="210" Y="221" Image="" Left="" Top="" Right="" Bottom="" AutoDelete="1" NotDetected="1" />
+		
+		
+		<Button Name="Server9" Image="Data\interface0016_begin_B.tga" X="6" Y="243" LuaLButtonUp="SelectServer9">
+			<ButtonRect State="0" Left="602" Top="406" Right="878" Bottom="431" />
+			<ButtonRect State="1" Left="602" Top="376" Right="878" Bottom="401" />
+			<ButtonRect State="2" Left="602" Top="406" Right="878" Bottom="431" />
+		</Button>
+		<StaticText Name="ServerName9" X="35" Y="246" Row="1" Column="15" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" >
+		</StaticText>
+		<UIImage Name="ServerState9" X="210" Y="246" Image="" Left="" Top="" Right="" Bottom="" AutoDelete="1" NotDetected="1" />
+		
+		
+		<Button Name="Server10" Image="Data\interface0016_begin_B.tga" X="6" Y="268" LuaLButtonUp="SelectServer10">
+			<ButtonRect State="0" Left="602" Top="406" Right="878" Bottom="431" />
+			<ButtonRect State="1" Left="602" Top="376" Right="878" Bottom="401" />
+			<ButtonRect State="2" Left="602" Top="406" Right="878" Bottom="431" />
+		</Button>	
+		<StaticText Name="ServerName10" X="35" Y="271" Row="1" Column="15" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<UIImage Name="ServerState10" X="210" Y="271" Image="" Left="" Top="" Right="" Bottom="" AutoDelete="1" NotDetected="1" />
+	</Panel>
+</UI>

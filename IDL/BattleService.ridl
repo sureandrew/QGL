@@ -1,0 +1,34 @@
+//-- Config
+config
+{
+	SubPath="Service/";
+	StartID=4000;
+	EndID=4999;
+}
+
+//-- Include header
+
+//-- RPC functions
+private:
+RegisterProxy(ServiceID serviceId);
+UnregisterProxy(ServiceID serviceId);
+nonblock:
+ReleaseSession(Boolean bDelete);
+ChangeSessionId(SessionID oldSessId);
+block:
+ResumeSession();
+CB_ResumeSession(Boolean valid);
+GetAvailService();
+CreateBattle(UInt8 battleType, UInt32 npcId, UInt8 partyCount, UInt16 averageLv);
+//CreatePVPBattle(UInt8 PVPType);
+
+//-- P2P NET CALLBACK
+CB_Error(UInt32 err, String errMsg);
+
+// only for Map Service
+CB_GetAvailService(ServiceID serviceId);
+CB_CreateBattle(NetObject *battle);
+
+public:
+// only for client
+CB_EnterBattle(NetObject *battle, NetGroup *grp, UInt8 PlayerTeam, BYTE battleState, UInt32 npcId);

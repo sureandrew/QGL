@@ -1,0 +1,322 @@
+<?xml version="1.0" ?>
+<!-- Our to do list data -->
+<UI>
+	<ID Name="PartySearch" />
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	<Panel Name="PartySearchPanel" Image="Data\interface0046_search_party.tga" X="50" Y="100" Left="16"
+		Top="12" Right="516" Bottom="404" Drag="1" DragLeft="0" DragTop="0" DragRight="500"
+		DragBottom="392" LuaRButtonUp="CloseNPCSearch" LuaKeyChar="CloseNPCSearch"
+		DetectImage = "1">	
+		<Button Name="ClosePartySearch" Image="Data\interface0025_main_J.tga" X="470" Y="8" LuaLButtonUp="CloseNPCSearch">
+			<ButtonRect State="0" Left="265" Top="8" Right="289" Bottom="26" />
+			<ButtonRect State="1" Left="290" Top="8" Right="314" Bottom="26" />
+			<ButtonRect State="2" Left="315" Top="8" Right="339" Bottom="26" />
+		</Button>
+		<Button Name="PartySearchPagePrev" Image="Data\interface0025_main_K.tga" X="60" Y="360" LuaLButtonUp="OnPartySearchPagePrev" >
+			<ButtonRect State="0" Left="713" Top="362" Right="739" Bottom="386" />	
+			<ButtonRect State="1" Left="713" Top="387" Right="739" Bottom="411" />
+			<ButtonRect State="2" Left="713" Top="412" Right="739" Bottom="436" />
+		</Button>	
+		
+		<StaticText Name="PartySearchPageNo" X="100" Y="365" Height="20" Width="55" Row="1" Colume="5" 
+			EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="CENTER">
+		</StaticText>
+		
+		<Button Name="PartySearchPageNext" Image="Data\interface0025_main_K.tga" X="164" Y="360" LuaLButtonUp="OnPartySearchPageNext" >
+			<ButtonRect State="0" Left="749" Top="362" Right="775" Bottom="386" />	
+			<ButtonRect State="1" Left="749" Top="387" Right="775" Bottom="411" />
+			<ButtonRect State="2" Left="749" Top="412" Right="775" Bottom="436" />
+		</Button>
+		
+		<Button Name="JoinPartySearch" Image="Data\interface0046_search_party.tga" X="250" Y="360" LuaLButtonUp="OnJoinPartySearch" >
+			<ButtonRect State="0" Left="549" Top="72" Right="626" Bottom="91" />	
+			<ButtonRect State="1" Left="549" Top="95" Right="626" Bottom="114" />
+			<ButtonRect State="2" Left="549" Top="118" Right="626" Bottom="137" />
+		</Button>
+		
+		<Button Name="ClosePartySearch2" Image="Data\interface0046_search_party.tga" X="350" Y="360" LuaLButtonUp="CloseNPCSearch" >
+			<ButtonRect State="0" Left="639" Top="72" Right="716" Bottom="91" />	
+			<ButtonRect State="1" Left="639" Top="95" Right="716" Bottom="114" />
+			<ButtonRect State="2" Left="639" Top="118" Right="716" Bottom="137" />
+		</Button>
+		
+		<CheckBox Name="ShowCharList2" Image="Data\interface0025_main_J.tga" X="71" Y="31" State="0" LuaLButtonDown="ShowCharList2">
+			<CheckBoxRect Index="0" Left="334" Top="298" Right="403" Bottom="319" />
+			<CheckBoxRect Index="1" Left="334" Top="298" Right="403" Bottom="319" />
+			<CheckBoxRect Index="2" Left="260" Top="298" Right="329" Bottom="319" />
+		</CheckBox>
+		
+		<CheckBox Name="ShowNPCList2" Image="Data\interface0025_main_J.tga" X="7" Y="31" State="0" LuaLButtonDown="ShowNPCList2">
+			<CheckBoxRect Index="0" Left="334" Top="274" Right="398" Bottom="295" />
+			<CheckBoxRect Index="1" Left="334" Top="274" Right="398" Bottom="295" />
+			<CheckBoxRect Index="2" Left="260" Top="274" Right="329" Bottom="295" />
+		</CheckBox>
+		
+		<CheckBox Name="ShowPartyList2" Image="Data\interface0025_main_J.tga" X="135" Y="31" State="1" LuaLButtonDown="ShowPartyList2">
+			<CheckBoxRect Index="0" Left="334" Top="322" Right="398" Bottom="343" />
+			<CheckBoxRect Index="1" Left="334" Top="322" Right="398" Bottom="343" />
+			<CheckBoxRect Index="2" Left="260" Top="322" Right="329" Bottom="343" />
+		</CheckBox>
+		
+		<UIImage Name="PartyInfoHighLight" Image="Data\interface0046_search_party.tga" X="0" Y="0" Left="16"
+			Top="478" Right="500" Bottom="501" Hide="1" LuaRButtonUp="ShowLeaderInfo"/>
+		<UIImage Name="PartyInfoHighLight1" Image="Data\interface0046_search_party.tga" X="9" Y="70"  
+			LuaLButtonUp="PartyInfoSearchClick" Left="16" Top="504" Right="500" Bottom="527" LuaRButtonUp="ShowLeaderInfo"/>
+		<UIImage Name="PartyInfoHighLight2" Image="Data\interface0046_search_party.tga" X="9" Y="93"  
+			LuaLButtonUp="PartyInfoSearchClick" Left="16" Top="504" Right="500" Bottom="527" LuaRButtonUp="ShowLeaderInfo"/>
+		<UIImage Name="PartyInfoHighLight3" Image="Data\interface0046_search_party.tga" X="9" Y="112"  
+			LuaLButtonUp="PartyInfoSearchClick" Left="16" Top="504" Right="500" Bottom="527" LuaRButtonUp="ShowLeaderInfo"/>
+		<UIImage Name="PartyInfoHighLight4" Image="Data\interface0046_search_party.tga" X="9" Y="139"  
+			LuaLButtonUp="PartyInfoSearchClick" Left="16" Top="504" Right="500" Bottom="527" LuaRButtonUp="ShowLeaderInfo"/>
+		<UIImage Name="PartyInfoHighLight5" Image="Data\interface0046_search_party.tga" X="9" Y="162"  
+			LuaLButtonUp="PartyInfoSearchClick" Left="16" Top="504" Right="500" Bottom="527" LuaRButtonUp="ShowLeaderInfo"/>
+		<UIImage Name="PartyInfoHighLight6" Image="Data\interface0046_search_party.tga" X="9" Y="185"  
+			LuaLButtonUp="PartyInfoSearchClick" Left="16" Top="504" Right="500" Bottom="527" LuaRButtonUp="ShowLeaderInfo"/>
+		<UIImage Name="PartyInfoHighLight7" Image="Data\interface0046_search_party.tga" X="9" Y="208"  
+			LuaLButtonUp="PartyInfoSearchClick" Left="16" Top="504" Right="500" Bottom="527" LuaRButtonUp="ShowLeaderInfo"/>
+		<UIImage Name="PartyInfoHighLight8" Image="Data\interface0046_search_party.tga" X="9" Y="231"  
+			LuaLButtonUp="PartyInfoSearchClick" Left="16" Top="504" Right="500" Bottom="527" LuaRButtonUp="ShowLeaderInfo"/>
+		<UIImage Name="PartyInfoHighLight9" Image="Data\interface0046_search_party.tga" X="9" Y="254"  
+			LuaLButtonUp="PartyInfoSearchClick" Left="16" Top="504" Right="500" Bottom="527" LuaRButtonUp="ShowLeaderInfo"/>
+		<UIImage Name="PartyInfoHighLight10" Image="Data\interface0046_search_party.tga" X="9" Y="277"  
+			LuaLButtonUp="PartyInfoSearchClick" Left="16" Top="504" Right="500" Bottom="527" LuaRButtonUp="ShowLeaderInfo"/>
+		<UIImage Name="PartyInfoHighLight11" Image="Data\interface0046_search_party.tga" X="9" Y="300"  
+			LuaLButtonUp="PartyInfoSearchClick" Left="16" Top="504" Right="500" Bottom="527" LuaRButtonUp="ShowLeaderInfo"/>
+		<UIImage Name="PartyInfoHighLight12" Image="Data\interface0046_search_party.tga" X="9" Y="323"  
+			LuaLButtonUp="PartyInfoSearchClick" Left="16" Top="504" Right="500" Bottom="527" LuaRButtonUp="ShowLeaderInfo"/>
+			
+		<UIImage Name="PartyInfoName" Image="Data\interface0046_search_party.tga" X="40" Y="50"  
+			Left="10" Top="432" Right="44" Bottom="450"/>
+		<CheckBox Name="PartyInfoFaction" Image="Data\interface0046_search_party.tga" X="130" Y="50" State="0" LuaLButtonDown="PartyInfoFactionClick" >
+			<CheckBoxRect Index="0" Left="95" Top="412" Right="130" Bottom="430" />	
+			<CheckBoxRect Index="1" Left="95" Top="432" Right="130" Bottom="450" />
+			<CheckBoxRect Index="2" Left="95" Top="412" Right="130" Bottom="430" />
+		</CheckBox>
+		<CheckBox Name="PartyInfoCclass" Image="Data\interface0046_search_party.tga" X="200" Y="50" State="0" LuaLButtonDown="PartyInfoCclassClick" >
+			<CheckBoxRect Index="0" Left="165" Top="412" Right="200" Bottom="430" />
+			<CheckBoxRect Index="1" Left="165" Top="432" Right="200" Bottom="450" />	
+			<CheckBoxRect Index="2" Left="165" Top="412" Right="200" Bottom="430" />
+		</CheckBox>
+		<CheckBox Name="PartyInfoLevel" Image="Data\interface0046_search_party.tga" X="250" Y="50" State="0" LuaLButtonDown="PartyInfoLevelClick" >
+			<CheckBoxRect Index="0" Left="215" Top="412" Right="250" Bottom="430" />
+			<CheckBoxRect Index="1" Left="215" Top="432" Right="250" Bottom="450" />	
+			<CheckBoxRect Index="2" Left="215" Top="412" Right="250" Bottom="430" />
+		</CheckBox>
+		<CheckBox Name="PartyInfoCount" Image="Data\interface0046_search_party.tga" X="300" Y="50" State="0" LuaLButtonDown="PartyInfoCountClick" >
+			<CheckBoxRect Index="0" Left="268" Top="412" Right="300" Bottom="430" />
+			<CheckBoxRect Index="1" Left="268" Top="432" Right="300" Bottom="450" />	
+			<CheckBoxRect Index="2" Left="268" Top="412" Right="300" Bottom="430" />
+		</CheckBox>
+		<CheckBox Name="PartyInfoDesc" Image="Data\interface0046_search_party.tga" X="370" Y="50" State="1" LuaLButtonDown="PartyInfoDescClick" >
+			<CheckBoxRect Index="0" Left="352" Top="412" Right="414" Bottom="430" />
+			<CheckBoxRect Index="1" Left="352" Top="432" Right="414" Bottom="450" />	
+			<CheckBoxRect Index="2" Left="352" Top="412" Right="414" Bottom="430" />
+		</CheckBox>
+<!-- 		<UIImage Name="PartyInfoFaction" Image="Data\interface0046_search_party.tga" X="130" Y="50"  
+			LuaLButtonDown="PartyInfoFactionClick" Left="95" Top="412" Right="130" Bottom="430" DetectImage = "1"/>
+		<UIImage Name="PartyInfoCclass" Image="Data\interface0046_search_party.tga" X="200" Y="50"  
+			LuaLButtonDown="PartyInfoCclassClick" Left="165" Top="412" Right="200" Bottom="430" DetectImage = "1"/>
+		<UIImage Name="PartyInfoLevel" Image="Data\interface0046_search_party.tga" X="250" Y="50"  
+			LuaLButtonDown="PartyInfoLevelClick" Left="215" Top="412" Right="250" Bottom="430" DetectImage = "1"/>
+		<UIImage Name="PartyInfoCount" Image="Data\interface0046_search_party.tga" X="300" Y="50"  
+			LuaLButtonDown="PartyInfoCountClick" Left="268" Top="412" Right="300" Bottom="430" DetectImage = "1"/>
+		<UIImage Name="PartyInfoDesc" Image="Data\interface0046_search_party.tga" X="370" Y="50"  
+			LuaLButtonDown="PartyInfoDescClick" Left="352" Top="412" Right="414" Bottom="430" DetectImage = "1"/> -->
+			
+		<StaticText Name="PartyInfoName01" Align="Center" X="9" Y="73" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartyInfoFaction01" Align="Center" X="106" Y="73" Hide="1" Row="1" Column="4" Width="80" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartyInfoCclass01" Align="Center" X="191" Y="73" Hide="1" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartyInfoLevel01" Align="Center" X="242" Y="73" Hide="1" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartyInfoCount01" Align="Center" X="293" Y="73" Hide="1" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartyInfoDesc01" Align="Center" X="345" Y="73" Hide="1" Row="1" Column="4" Width="200" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		
+		<StaticText Name="PartyInfoName02" Align="Center" X="9" Y="96" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartyInfoFaction02" Align="Center" X="106" Y="96" Hide="1" Row="1" Column="4" Width="80" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartyInfoCclass02" Align="Center" X="191" Y="96" Hide="1" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartyInfoLevel02" Align="Center" X="242" Y="96" Hide="1" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartyInfoCount02" Align="Center" X="293" Y="96" Hide="1" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartyInfoDesc02" Align="Center" X="345" Y="96" Hide="1" Row="1" Column="4" Width="150" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		
+		<StaticText Name="PartyInfoName03" Align="Center" X="9" Y="119" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartyInfoFaction03" Align="Center" X="106" Y="119" Hide="1" Row="1" Column="4" Width="80" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartyInfoCclass03" Align="Center" X="191" Y="119" Hide="1" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartyInfoLevel03" Align="Center" X="242" Y="119" Hide="1" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartyInfoCount03" Align="Center" X="293" Y="119" Hide="1" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartyInfoDesc03" Align="Center" X="345" Y="119" Hide="1" Row="1" Column="4" Width="150" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		
+		<StaticText Name="PartyInfoName04" Align="Center" X="9" Y="142" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartyInfoFaction04" Align="Center" X="106" Y="142" Hide="1" Row="1" Column="4" Width="80" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartyInfoCclass04" Align="Center" X="191" Y="142" Hide="1" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartyInfoLevel04" Align="Center" X="242" Y="142" Hide="1" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartyInfoCount04" Align="Center" X="293" Y="142" Hide="1" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartyInfoDesc04" Align="Center" X="345" Y="142" Hide="1" Row="1" Column="4" Width="150" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		
+		<StaticText Name="PartyInfoName05" Align="Center" X="9" Y="165" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartyInfoFaction05" Align="Center" X="106" Y="165" Hide="1" Row="1" Column="4" Width="80" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartyInfoCclass05" Align="Center" X="191" Y="165" Hide="1" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartyInfoLevel05" Align="Center" X="242" Y="165" Hide="1" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartyInfoCount05" Align="Center" X="293" Y="165" Hide="1" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartyInfoDesc05" Align="Center" X="345" Y="165" Hide="1" Row="1" Column="4" Width="150" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		
+		<StaticText Name="PartyInfoName06" Align="Center" X="9" Y="188" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartyInfoFaction06" Align="Center" X="106" Y="188" Hide="1" Row="1" Column="4" Width="80" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartyInfoCclass06" Align="Center" X="191" Y="188" Hide="1" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartyInfoLevel06" Align="Center" X="242" Y="188" Hide="1" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartyInfoCount06" Align="Center" X="293" Y="188" Hide="1" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartyInfoDesc06" Align="Center" X="345" Y="188" Hide="1" Row="1" Column="4" Width="150" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		
+		<StaticText Name="PartyInfoName07" Align="Center" X="9" Y="211" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartyInfoFaction07" Align="Center" X="106" Y="211" Hide="1" Row="1" Column="4" Width="80" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartyInfoCclass07" Align="Center" X="191" Y="211" Hide="1" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartyInfoLevel07" Align="Center" X="242" Y="211" Hide="1" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartyInfoCount07" Align="Center" X="293" Y="211" Hide="1" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartyInfoDesc07" Align="Center" X="345" Y="211" Hide="1" Row="1" Column="4" Width="150" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		
+		<StaticText Name="PartyInfoName08" Align="Center" X="9" Y="234" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartyInfoFaction08" Align="Center" X="106" Y="234" Hide="1" Row="1" Column="4" Width="80" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartyInfoCclass08" Align="Center" X="191" Y="234" Hide="1" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartyInfoLevel08" Align="Center" X="242" Y="234" Hide="1" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartyInfoCount08" Align="Center" X="293" Y="234" Hide="1" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartyInfoDesc08" Align="Center" X="345" Y="234" Hide="1" Row="1" Column="4" Width="150" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		
+		<StaticText Name="PartyInfoName09" Align="Center" X="9" Y="257" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartyInfoFaction09" Align="Center" X="106" Y="257" Hide="1" Row="1" Column="4" Width="80" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartyInfoCclass09" Align="Center" X="191" Y="257" Hide="1" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartyInfoLevel09" Align="Center" X="242" Y="257" Hide="1" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartyInfoCount09" Align="Center" X="293" Y="257" Hide="1" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartyInfoDesc09" Align="Center" X="345" Y="257" Hide="1" Row="1" Column="4" Width="150" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		
+		<StaticText Name="PartyInfoName10" Align="Center" X="9" Y="280" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartyInfoFaction10" Align="Center" X="106" Y="280" Hide="1" Row="1" Column="4" Width="80" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartyInfoCclass10" Align="Center" X="191" Y="280" Hide="1" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartyInfoLevel10" Align="Center" X="242" Y="280" Hide="1" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartyInfoCount10" Align="Center" X="293" Y="280" Hide="1" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartyInfoDesc10" Align="Center" X="345" Y="280" Hide="1" Row="1" Column="4" Width="150" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		
+		<StaticText Name="PartyInfoName11" Align="Center" X="9" Y="303" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartyInfoFaction11" Align="Center" X="106" Y="303" Hide="1" Row="1" Column="4" Width="80" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartyInfoCclass11" Align="Center" X="191" Y="303" Hide="1" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartyInfoLevel11" Align="Center" X="242" Y="303" Hide="1" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartyInfoCount11" Align="Center" X="293" Y="303" Hide="1" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartyInfoDesc11" Align="Center" X="345" Y="303" Hide="1" Row="1" Column="4" Width="150" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		
+		<StaticText Name="PartyInfoName12" Align="Center" X="9" Y="326" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartyInfoFaction12" Align="Center" X="106" Y="326" Hide="1" Row="1" Column="4" Width="80" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartyInfoCclass12" Align="Center" X="191" Y="326" Hide="1" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartyInfoLevel12" Align="Center" X="242" Y="326" Hide="1" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartyInfoCount12" Align="Center" X="293" Y="326" Hide="1" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartyInfoDesc12" Align="Center" X="345" Y="326" Hide="1" Row="1" Column="4" Width="150" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+	<Panel Name="PartyInfoSelectPanel" Image="Data\interface0046_search_party.tga" X="50" Y="100" Left="548"
+		Top="220" Right="734" Bottom="451" Drag="1" DragLeft="0" DragTop="0" DragRight="186"
+		DragBottom="331" LuaRButtonUp="ClosePartyInfoSelectPanel" LuaKeyChar="ClosePartyInfoSelectPanel"
+		DetectImage = "1">	
+		<StaticText Name="PartyInfoSelectName1" Align="Center" X="14" Y="14" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartyInfoSelectLevel1" Align="Center" X="122" Y="14" Hide="1" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartyInfoSelectFaction1" Align="Center" X="14" Y="37" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartyInfoSelectCclass1" Align="Center" X="122" Y="37" Hide="1" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		
+		<StaticText Name="PartyInfoSelectName2" Align="Center" X="14" Y="70" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartyInfoSelectLevel2" Align="Center" X="122" Y="70" Hide="1" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartyInfoSelectFaction2" Align="Center" X="14" Y="93" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartyInfoSelectCclass2" Align="Center" X="122" Y="93" Hide="1" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		
+		<StaticText Name="PartyInfoSelectName3" Align="Center" X="14" Y="126" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartyInfoSelectLevel3" Align="Center" X="122" Y="126" Hide="1" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartyInfoSelectFaction3" Align="Center" X="14" Y="149" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartyInfoSelectCclass3" Align="Center" X="122" Y="149" Hide="1" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		
+		<StaticText Name="PartyInfoSelectName4" Align="Center" X="14" Y="182" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartyInfoSelectLevel4" Align="Center" X="122" Y="182" Hide="1" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartyInfoSelectFaction4" Align="Center" X="14" Y="205" Hide="1" Row="1" Column="4" Width="100" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="PartyInfoSelectCclass4" Align="Center" X="122" Y="205" Hide="1" Row="1" Column="4" Width="50" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	</Panel>
+</UI>

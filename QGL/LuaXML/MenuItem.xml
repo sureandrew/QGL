@@ -1,0 +1,737 @@
+﻿<?xml version="1.0" ?>
+<!-- Our to do list data -->
+<UI>
+	<ID Name="Item" />
+	<!--<Font Name="Data\mingliu.ttc" Width="12" Height="12" />-->
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	<Panel Name="ItemMenuPanel" Image="Data\interface0005_main_B.tga" X="413" Y="46" 
+			Left="12" Top="10" Right="351" Bottom="469" LuaRButtonUp="CloseItemMenu" LuaKeyChar="CloseItemMenu" DetectImage = "1"
+			Drag="1" DragLeft="0" DragTop="0" DragRight="339" DragBottom="459" LuaMouseWheel="ItemMenuPanelWheel">
+		<Button Name="ItemMenuPanelClose" Image="Data\interface0005_main_B.tga" X="305" Y="9" LuaLButtonDown="CloseItemMenu">
+			<ButtonRect State="0" Left="362" Top="189" Right="386" Bottom="207" />
+			<ButtonRect State="1" Left="387" Top="189" Right="411" Bottom="207" />
+			<ButtonRect State="2" Left="412" Top="189" Right="436" Bottom="207" />
+		</Button>
+		<Button Name="ItemCharacter" Image="Data\interface0005_main_B.tga" X="25" Y="190" Tips="切换对象为玩者角色"
+		                    TimeOutCount="500" LuaTimeOut="DefaultTips"LuaLButtonUp="ItemCharacter">
+			<ButtonRect State="0" Left="363" Top="37" Right="403" Bottom="57" />
+			<ButtonRect State="1" Left="405" Top="37" Right="445" Bottom="57" />
+			<ButtonRect State="2" Left="447" Top="37" Right="487" Bottom="57" />
+			<ButtonRect State="3" Left="489" Top="37" Right="529" Bottom="57" />
+		</Button>
+		<Button Name="ItemPartyMember" Image="Data\interface0005_main_B.tga" X="71" Y="190" Tips="切换对象为同伴"
+		             TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="ItemPartyMember">
+			<ButtonRect State="0" Left="363" Top="58" Right="403" Bottom="78" />
+			<ButtonRect State="1" Left="405" Top="58" Right="445" Bottom="78" />
+			<ButtonRect State="2" Left="447" Top="58" Right="487" Bottom="78" />
+			<ButtonRect State="3" Left="489" Top="58" Right="529" Bottom="78" />
+		</Button>
+		<Button Name="ItemPet" Image="Data\interface0005_main_B.tga" X="116" Y="190" Tips="切换对象为宠物"
+						TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="ItemPet"><!--ItemPet-->
+			<ButtonRect State="0" Left="363" Top="16" Right="403" Bottom="36" />
+			<ButtonRect State="1" Left="405" Top="16" Right="445" Bottom="36" />
+			<ButtonRect State="2" Left="447" Top="16" Right="487" Bottom="36" />
+			<ButtonRect State="3" Left="489" Top="16" Right="529" Bottom="36" />
+		</Button>
+		<Button Name="ItemCurrentBag" Image="Data\interface0005_main_B.tga" X="23" Y="252" LuaLButtonUp="ItemCurrentBag">
+			<ButtonRect State="0" Left="359" Top="81" Right="405" Bottom="105" />
+			<ButtonRect State="1" Left="406" Top="81" Right="452" Bottom="105" />
+			<ButtonRect State="2" Left="453" Top="81" Right="499" Bottom="105" />
+			<ButtonRect State="3" Left="500" Top="81" Right="546" Bottom="105" />
+		</Button>
+		<Button Name="ItemSideBag" Image="Data\interface0005_main_B.tga" X="69" Y="252" LuaLButtonUp="ItemSideBag">
+			<ButtonRect State="0" Left="359" Top="106" Right="405" Bottom="130" />
+			<ButtonRect State="1" Left="406" Top="106" Right="452" Bottom="130" />
+			<ButtonRect State="2" Left="453" Top="106" Right="499" Bottom="130" />
+			<ButtonRect State="3" Left="500" Top="106" Right="546" Bottom="130" />
+		</Button>
+		<Button Name="ItemBagExtra01" Image="Data\interface0005_main_B.tga" X="115" Y="252" LuaLButtonUp="ItemBagExtra01">
+			<ButtonRect State="0" Left="359" Top="131" Right="405" Bottom="155" />
+			<ButtonRect State="1" Left="406" Top="131" Right="452" Bottom="155" />
+			<ButtonRect State="2" Left="453" Top="131" Right="499" Bottom="155" />
+			<ButtonRect State="3" Left="500" Top="131" Right="546" Bottom="155" />
+		</Button>
+		<Button Name="ItemBagExtra02" Image="Data\interface0005_main_B.tga" X="161" Y="252" LuaLButtonUp="ItemBagExtra02">
+			<ButtonRect State="0" Left="359" Top="131" Right="405" Bottom="155" />
+			<ButtonRect State="1" Left="406" Top="131" Right="452" Bottom="155" />
+			<ButtonRect State="2" Left="453" Top="131" Right="499" Bottom="155" />
+			<ButtonRect State="3" Left="500" Top="131" Right="546" Bottom="155" />
+		</Button>
+		<Button Name="ItemBagExtra03" Image="Data\interface0005_main_B.tga" X="207" Y="252" LuaLButtonUp="ItemBagExtra03">
+			<ButtonRect State="0" Left="359" Top="131" Right="405" Bottom="155" />
+			<ButtonRect State="1" Left="406" Top="131" Right="452" Bottom="155" />
+			<ButtonRect State="2" Left="453" Top="131" Right="499" Bottom="155" />
+			<ButtonRect State="3" Left="500" Top="131" Right="546" Bottom="155" />
+		</Button>
+		
+		<Button Name="ItemLock" Image="Data\interface0005_main_B.tga" X="281" Y="252" LuaLButtonUp="ItemLock">
+			<ButtonRect State="0" Left="354" Top="159" Right="397" Bottom="183" />
+			<ButtonRect State="1" Left="402" Top="159" Right="445" Bottom="183" />
+			<ButtonRect State="2" Left="450" Top="159" Right="493" Bottom="183" />
+			<ButtonRect State="3" Left="498" Top="159" Right="541" Bottom="183" />
+		</Button>
+		
+		<Button Name="ItemUnLock" Image="Data\interface0005_main_B.tga" X="281" Y="283" LuaLButtonUp="ItemUnLock">
+			<ButtonRect State="0" Left="248" Top="533" Right="291" Bottom="566" />
+			<ButtonRect State="1" Left="295" Top="533" Right="338" Bottom="566" />
+			<ButtonRect State="2" Left="344" Top="533" Right="387" Bottom="566" />
+			<ButtonRect State="3" Left="390" Top="533" Right="433" Bottom="566" />
+		</Button>
+		
+		<!--<Button Name="ItemUnLock" Image="Data\interface0005_main_B.tga" X="281" Y="283" LuaLButtonUp="ItemUnLock">
+			<ButtonRect State="0" Left="354" Top="159" Right="397" Bottom="183" />
+			<ButtonRect State="1" Left="402" Top="159" Right="445" Bottom="183" />
+			<ButtonRect State="2" Left="450" Top="159" Right="493" Bottom="183" />
+			<ButtonRect State="3" Left="498" Top="159" Right="541" Bottom="183" />
+		</Button>
+		
+		<Button Name="ItemTheBox" Image="Data\interface0005_main_B.tga" X="289" Y="328" LuaLButtonUp="ItemTheBox">
+			<ButtonRect State="0" Left="362" Top="217" Right="392" Bottom="273" />
+			<ButtonRect State="1" Left="393" Top="217" Right="423" Bottom="273" />
+			<ButtonRect State="2" Left="424" Top="217" Right="454" Bottom="273" />
+			<ButtonRect State="3" Left="455" Top="217" Right="485" Bottom="273" />
+		</Button>
+		<Button Name="ItemDiamondInlay" Image="Data\interface0005_main_B.tga" X="289" Y="390" Tips="开启镶嵌界面"
+						TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="ItemDiamondInlay">
+			<ButtonRect State="0" Left="363" Top="279" Right="391" Bottom="335" />
+			<ButtonRect State="1" Left="394" Top="279" Right="422" Bottom="335" />
+			<ButtonRect State="2" Left="425" Top="279" Right="453" Bottom="335" />
+			<ButtonRect State="3" Left="456" Top="279" Right="484" Bottom="335" />
+		</Button>
+		-->
+		
+		<Button Name="ItemDiamondInlay" Image="Data\interface0005_main_B.tga" X="275" Y="350" Tips="点击整理当前背包"
+						TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="JpackItem">
+			<ButtonRect State="0" Left="504" Top="434" Right="559" Bottom="471" />
+			<ButtonRect State="1" Left="564" Top="434" Right="619" Bottom="471" />
+			<ButtonRect State="2" Left="675" Top="520" Right="731" Bottom="559" />
+			<ButtonRect State="3" Left="734" Top="520" Right="790" Bottom="559" />
+		</Button>
+		<AniIcon Name="ItemModelDummy"  X="90" Y="90" Rotation = "1" 
+		AnimationIndex = "0" Loop = "1" Align = "1" Hide="0" />
+		
+	
+		<!-- Equip UI -->
+		<UIImage Name="ItemEquipPanel" Image="Data\interface0005_main_B.tga" X="184" Y="39" 
+				Left="642" Top="17" Right="768" Bottom="143" Hide="0" AutoDelete="0"/>
+				
+		<!-- Character UI -->
+		<UIImage Name="MoneyInterface1" X="12" Y="228" Image="Data\interface0005_main_B.tga" 
+				Left="478" Top="487" Right="632" Bottom="512" AutoDelete="0" Hide="0"/>
+		<UIImage Name="MoneyInterface2" X="168" Y="170" Image="Data\interface0005_main_B.tga" 
+				Left="634" Top="429" Right="792" Bottom="512" AutoDelete="0" Hide="0"/>
+		<StaticText Name="ItemSCashDollar" X="239" Y="180" Row="1" Column="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0">
+		00000
+		</StaticText>
+		<StaticText Name="ItemCashDollar" X="239" Y="205" Row="1" Column="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0">
+		</StaticText>
+		<StaticText Name="ItemBankDollar" X="239" Y="231" Row="1" Column="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0">
+		</StaticText>
+		<StaticText Name="ItemGoldDollar" X="79" Y="231" Row="1" Column="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0">
+		</StaticText>
+		<UIImage Name="YuanBaoLockImage" X="152" Y="232" Image="Data\interface0005_main_B.tga" Left="461" Top="369" Right="471" Bottom="382" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="BankMoneyLockImage" X="312" Y="232" Image="Data\interface0005_main_B.tga" Left="461" Top="369" Right="471" Bottom="382" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="YuanBaoLock" Image="Data\interface0005_main_B.tga" X="9" Y="224" Left="477" Top="524" Right="547" Bottom="551"  Hide="0" LuaLButtonUp="SelectYuanBaoLock" />
+		<UIImage Name="BankMoneyLock" Image="Data\interface0005_main_B.tga" X="168" Y="223" Left="550" Top="524" Right="620" Bottom="551"  Hide="0" LuaLButtonUp="SelectBankMoneyLock" />		
+
+	<!--</Panel>-->
+
+		<!-- Partner+Pet UI -->
+
+		
+		<UIImage Name="ItemNameListPanel" Image="Data\interface0005_main_B.tga" X="172" Y="38" 
+			Left="633" Top="166" Right="788" Bottom="322" Hide="1" AutoDelete="0"/>
+			
+		<UIImage Name="ItemNameSelected1" Image="Data\interface0005_main_B.tga" X="177" Y="41" Left="488" Top="250" Right="621" Bottom="274" Hide="1" LuaLButtonUp="SelectedPPDrag1"/>
+		<UIImage Name="ItemNameSelected2" Image="Data\interface0005_main_B.tga" X="177" Y="66" Left="488" Top="250" Right="621" Bottom="274" Hide="1" LuaLButtonUp="SelectedPPDrag2"/>
+		<UIImage Name="ItemNameSelected3" Image="Data\interface0005_main_B.tga" X="177" Y="91" Left="488" Top="250" Right="621" Bottom="274"  Hide="1" LuaLButtonUp="SelectedPPDrag3"/>
+		<UIImage Name="ItemNameSelected4" Image="Data\interface0005_main_B.tga" X="177" Y="116" Left="488" Top="250" Right="621" Bottom="274" Hide="1" LuaLButtonUp="SelectedPPDrag4"/>
+		<UIImage Name="ItemNameSelected5" Image="Data\interface0005_main_B.tga" X="177" Y="141" Left="488" Top="250" Right="621" Bottom="274" Hide="1" LuaLButtonUp="SelectedPPDrag5"/>
+		<UIImage Name="ItemNameSelected6" Image="Data\interface0005_main_B.tga" X="177" Y="166" Left="488" Top="250" Right="621" Bottom="274" Hide="1" LuaLButtonUp="SelectedPPDrag6"/>
+		
+		<UIImage Name="PetPartnerLock1" Image="Data\interface0005_main_B.tga" X="300" Y="48" 
+			Left="461" Top="369" Right="471" Bottom="382" Hide="1" DetectImage = "0"/>
+		<UIImage Name="PetPartnerLock2" Image="Data\interface0005_main_B.tga" X="300" Y="73" 
+			Left="461" Top="369" Right="471" Bottom="382" Hide="1" DetectImage = "0"/>
+		<UIImage Name="PetPartnerLock3" Image="Data\interface0005_main_B.tga" X="300" Y="98" 
+			Left="461" Top="369" Right="471" Bottom="382" Hide="1" DetectImage = "0"/>
+		<UIImage Name="PetPartnerLock4" Image="Data\interface0005_main_B.tga" X="300" Y="123" 
+			Left="461" Top="369" Right="471" Bottom="382" Hide="1" DetectImage = "0"/>
+		<UIImage Name="PetPartnerLock5" Image="Data\interface0005_main_B.tga" X="300" Y="148" 
+			Left="461" Top="369" Right="471" Bottom="382" Hide="1" DetectImage = "0"/>	
+		<UIImage Name="PetPartnerLock6" Image="Data\interface0005_main_B.tga" X="300" Y="173" 
+			Left="461" Top="369" Right="471" Bottom="382" Hide="1" DetectImage = "0"/>
+		
+		<StaticText Name="ItemNameListLine1" X="177" Y="48" Width="133" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="1" Align="Center">
+		</StaticText>
+		<StaticText Name="ItemNameListLine2" X="177" Y="73" Width="133" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="1" Align="Center">
+		</StaticText>
+		<StaticText Name="ItemNameListLine3" X="177" Y="98" Width="133" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="1" Align="Center">
+		</StaticText>
+		<StaticText Name="ItemNameListLine4" X="177" Y="123" Width="133" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="1" Align="Center">
+		</StaticText>
+		<StaticText Name="ItemNameListLine5" X="177" Y="148" Width="133" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="1" Align="Center">
+		</StaticText>
+		<StaticText Name="ItemNameListLine6" X="177" Y="173" Width="133" Height="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="1" Align="Center">
+		</StaticText>
+		
+				
+		<UIImage Name="ItemNameImage1" Image="" X="177" Y="41" Left="0" Top="0" Right="133" Bottom="25" LuaLButtonUp="SelectItemPartner1" />
+		<UIImage Name="ItemNameImage2" Image="" X="177" Y="66" Left="0" Top="0" Right="133" Bottom="25" LuaLButtonUp="SelectItemPartner2" />
+		<UIImage Name="ItemNameImage3" Image="" X="177" Y="91" Left="0" Top="0" Right="133" Bottom="25" LuaLButtonUp="SelectItemPartner3" />
+		<UIImage Name="ItemNameImage4" Image="" X="177" Y="116" Left="0" Top="0" Right="133" Bottom="25" LuaLButtonUp="SelectItemPartner4" />
+		<UIImage Name="ItemNameImage5" Image="" X="177" Y="141" Left="0" Top="0" Right="133" Bottom="25" LuaLButtonUp="SelectItemPartner5" />
+		<UIImage Name="ItemNameImage6" Image="" X="177" Y="166" Left="0" Top="0" Right="133" Bottom="25" LuaLButtonUp="SelectItemPartner6" />
+		
+		<ScrollBarV Name="ItemNameListScroll" X="311" Y="42" Width ="14" Height="151" Limit="0" BarColor="0" LuaLButtonDown="ItemNameListScroll" Hide="1">
+			<PrevButton Name="ItemNameListUp" Image="Data\interface0005_main_B.tga" X="0" Y="0" LuaLButtonUp="ItemNameListScrollUp">
+				<ButtonRect State="0" Left="488" Top="217" Right="502" Bottom="231" />
+				<ButtonRect State="1" Left="504" Top="217" Right="518" Bottom="231" />
+				<ButtonRect State="2" Left="520" Top="217" Right="534" Bottom="231" />
+			</PrevButton>
+			<NextButton Name="ItemNameListDown" Image="Data\interface0005_main_B.tga" X="0" Y="138" LuaLButtonUp="ItemNameListScrollDown">
+				<ButtonRect State="0" Left="488" Top="234" Right="502" Bottom="247" />
+				<ButtonRect State="1" Left="504" Top="234" Right="518" Bottom="247" />
+				<ButtonRect State="2" Left="520" Top="234" Right="534" Bottom="247" />
+			</NextButton>
+			<MoveButton Image="Data\interface0005_main_B.tga" X="0" Y="14"  LuaMouseMove="ItemNameListScroll">
+				<ButtonRect State="0" Left="537" Top="217" Right="551" Bottom="247" />
+				<ButtonRect State="1" Left="537" Top="217" Right="551" Bottom="247" />
+				<ButtonRect State="2" Left="537" Top="217" Right="551" Bottom="247" />
+			</MoveButton>
+		</ScrollBarV>
+
+		
+	<!-- Partner UI -->
+		<UIImage Name="PartyPanelImage1" X="29" Y="221" Image="Data\interface0005_main_B.tga" 
+				Left="501" Top="397" Right="634" Bottom="420" AutoDelete="0" Hide="1"/>
+		<UIImage Name="PartyPanelImage2" X="165" Y="201" Image="Data\interface0005_main_B.tga" 
+				Left="638" Top="376" Right="793" Bottom="420" AutoDelete="0" Hide="1"/>
+		<LinerImage Name="ItemPartyHPBar" X="225" Y="206" Image="Data\interface0005_main_B.tga" Left="388" Top="341"
+			Right="394" Bottom="351" LineWidth="90" BaseWidth="90" Denumerator="100" Numerator="0"  Hide="1"/>
+		<LinerImage Name="ItemPartySPBar" X="225" Y="229" Image="Data\interface0005_main_B.tga" Left="404" Top="341"
+			Right="410" Bottom="351" LineWidth="90" BaseWidth="90" Denumerator="100" Numerator="0"  Hide="1"/>
+		<StaticText Name="ItemPartyLikeText" Width="72" Height="20" X="89" Y="224" Row="1" Column="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="1" Align="Center">
+		</StaticText>
+		<StaticText Name="ItemPartyHPText" Width="92" Height="20" X="227" Y="204" Row="1" Column="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="1" Align="Center">
+		</StaticText>
+		<StaticText Name="ItemPartySPText" Width="92" Height="20" X="227" Y="225" Row="1" Column="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="1" Align="Center">
+		</StaticText>
+		
+		<UIImage Name="ItemPartnerState11" Image="Data\interface0005_main_B.tga" X="179" Y="43" Left="362" Top="341" Right="383" Bottom="361" Hide="1"/>
+		<UIImage Name="ItemPartnerState12" Image="Data\interface0005_main_B.tga" X="179" Y="43" Left="362" Top="366" Right="383" Bottom="386" Hide="1"/>
+		
+		<UIImage Name="ItemPartnerState21" Image="Data\interface0005_main_B.tga" X="179" Y="68" Left="362" Top="341" Right="383" Bottom="361" Hide="1"/>
+		<UIImage Name="ItemPartnerState22" Image="Data\interface0005_main_B.tga" X="179" Y="68" Left="362" Top="366" Right="383" Bottom="386" Hide="1"/>
+		
+		<UIImage Name="ItemPartnerState31" Image="Data\interface0005_main_B.tga" X="179" Y="93" Left="362" Top="341" Right="383" Bottom="361" Hide="1"/>
+		<UIImage Name="ItemPartnerState32" Image="Data\interface0005_main_B.tga" X="179" Y="93" Left="362" Top="366" Right="383" Bottom="386" Hide="1"/>
+		
+		<UIImage Name="ItemPartnerState41" Image="Data\interface0005_main_B.tga" X="179" Y="118" Left="362" Top="341" Right="383" Bottom="361" Hide="1"/>
+		<UIImage Name="ItemPartnerState42" Image="Data\interface0005_main_B.tga" X="179" Y="118" Left="362" Top="366" Right="383" Bottom="386" Hide="1"/>
+		
+		<UIImage Name="ItemPartnerState51" Image="Data\interface0005_main_B.tga" X="179" Y="143" Left="362" Top="341" Right="383" Bottom="361" Hide="1"/>
+		<UIImage Name="ItemPartnerState52" Image="Data\interface0005_main_B.tga" X="179" Y="143" Left="362" Top="366" Right="383" Bottom="386" Hide="1"/>
+		
+		<UIImage Name="ItemPartnerState61" Image="Data\interface0005_main_B.tga" X="179" Y="168" Left="362" Top="341" Right="383" Bottom="361" Hide="1"/>
+		<UIImage Name="ItemPartnerState62" Image="Data\interface0005_main_B.tga" X="179" Y="168" Left="362" Top="366" Right="383" Bottom="386" Hide="1"/>
+	<!--</Panel>-->
+	
+	<!-- Pet UI -->
+	<!--<Panel Name="ItemPetPanel" Image="" X="29" Y="201" 
+			Left="0" Top="0" Right="40" Bottom="40" Hide="1">-->
+		<UIImage Name="PetPanelImage1" X="29" Y="221" Image="Data\interface0005_main_B.tga" 
+				Left="500" Top="350" Right="633" Bottom="373" AutoDelete="0" Hide="1"/>
+		<UIImage Name="PetPanelImage2" X="165" Y="201" Image="Data\interface0005_main_B.tga" 
+				Left="637" Top="329" Right="793" Bottom="372" AutoDelete="0" Hide="1"/>
+		<LinerImage Name="ItemPetHappyBar" X="225" Y="205" Image="Data\interface0005_main_B.tga" Left="420" Top="341"
+			Right="425" Bottom="351" LineWidth="90" BaseWidth="90" Denumerator="50" Numerator="100"  Hide="1"/>
+		<LinerImage Name="ItemPetVPBar" X="225" Y="228" Image="Data\interface0005_main_B.tga" Left="388" Top="341"
+			Right="394" Bottom="351" LineWidth="90" BaseWidth="90" Denumerator="50" Numerator="100"  Hide="1"/>
+		<StaticText Name="ItemPetLVText" X="85" Y="226" Width="72" Height="20" Row="1" Column="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="1" Align="Center">
+		Q?
+		</StaticText>
+		
+		<StaticText Name="ItemPetHappyText" X="227" Y="206" Row="1" Column="20" Width="92"  Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="1" Align="Center">
+		??
+		</StaticText>
+		<StaticText Name="ItemPetVPText" X="227" Y="227" Row="1" Column="20" Width="92"  Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="1" Align="Center">
+		??
+		</StaticText>
+	<!--</Panel>-->
+	
+	<!-- Equip Item -->
+	
+		<Tips Name="ItemNeckTips" X="175" Y="39" Width="44" Height="44" Tips="护身符" TimeOutCount="500" />
+		<Tips Name="ItemHeadTips" X="223" Y="39" Width="44" Height="44" Tips="头饰" TimeOutCount="500" />	
+		<Tips Name="ItemHatTips" X="271" Y="39" Width="44" Height="44" Tips="外观头饰" TimeOutCount="500" />
+		
+		<Tips Name="ItemWeaponTips" X="175" Y="87" Width="44" Height="44" Tips="武器" TimeOutCount="500" />
+		<Tips Name="ItemShirtTips" X="223" Y="87" Width="44" Height="44" Tips="衣服" TimeOutCount="500" />	
+		<Tips Name="ItemClothTips" X="271" Y="87" Width="44" Height="44" Tips="外观衣服" TimeOutCount="500" />
+		
+		<Tips Name="ItemRingTips" X="175" Y="135" Width="44" Height="44" Tips="戒指" TimeOutCount="500" />
+		<Tips Name="ItemShoesTips" X="223" Y="135" Width="44" Height="44" Tips="鞋子" TimeOutCount="500" />	
+		<Tips Name="ItemBeltTips" X="271" Y="135" Width="44" Height="44" Tips="腰带" TimeOutCount="500" />
+		
+	
+		<UIImage Name="ItemEquip006Color1" X="186" Y="41" Image="Data\interface0005_main_B.tga" Left="59" Top="525" Right="99" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemEquip006Color2" X="186" Y="41" Image="Data\interface0005_main_B.tga" Left="106" Top="525" Right="146" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemEquip006Color3" X="186" Y="41" Image="Data\interface0005_main_B.tga" Left="200" Top="525" Right="240" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemEquip006Color4" X="186" Y="41" Image="Data\interface0005_main_B.tga" Left="153" Top="525" Right="193" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemEquip006Color5" X="186" Y="41" Image="Data\interface0005_main_B.tga" Left="11" Top="525" Right="51" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<AniIcon Name="ItemEquip006Icon" X="186" Y="41" Image="" AutoDelete="0" LuaRButtonUp="ItemEquip006"
+			LuaLButtonUp="EquipItemMove006" LuaMouseMove="ItemEquipOver006" LuaMouseOut = "ItemDetailMouseOut" InsertToEventList = "1" Detect = "1"/>
+		<StaticText Name="ItemEquip006Stack" X="181" Y="67" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemEquip006Lvl" X="181" Y="44" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	
+		<UIImage Name="ItemEquip001Color1" X="227" Y="41" Image="Data\interface0005_main_B.tga" Left="59" Top="525" Right="99" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemEquip001Color2" X="227" Y="41" Image="Data\interface0005_main_B.tga" Left="106" Top="525" Right="146" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemEquip001Color3" X="227" Y="41" Image="Data\interface0005_main_B.tga" Left="200" Top="525" Right="240" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemEquip001Color4" X="227" Y="41" Image="Data\interface0005_main_B.tga" Left="153" Top="525" Right="193" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemEquip001Color5" X="227" Y="41" Image="Data\interface0005_main_B.tga" Left="11" Top="525" Right="51" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<AniIcon Name="ItemEquip001Icon" X="227" Y="41" Image=""  AutoDelete="0" LuaRButtonUp="ItemEquip001"
+			LuaLButtonUp="EquipItemMove001" LuaMouseMove="ItemEquipOver001" LuaMouseOut = "ItemDetailMouseOut" InsertToEventList = "1" Detect = "1"/>
+		<StaticText Name="ItemEquip001Stack" X="229" Y="67" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemEquip001Lvl" X="229" Y="44" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	
+		<UIImage Name="ItemEquip007Color1" X="268" Y="41" Image="Data\interface0005_main_B.tga" Left="59" Top="525" Right="99" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemEquip007Color2" X="268" Y="41" Image="Data\interface0005_main_B.tga" Left="106" Top="525" Right="146" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemEquip007Color3" X="268" Y="41" Image="Data\interface0005_main_B.tga" Left="200" Top="525" Right="240" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemEquip007Color4" X="268" Y="41" Image="Data\interface0005_main_B.tga" Left="153" Top="525" Right="193" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemEquip007Color5" X="268" Y="41" Image="Data\interface0005_main_B.tga" Left="11" Top="525" Right="51" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<AniIcon Name="ItemEquip007Icon" X="268" Y="41" Image=""  AutoDelete="0" LuaRButtonUp="ItemEquip007"
+			LuaLButtonUp="EquipItemMove007" LuaMouseMove="ItemEquipOver007" LuaMouseOut = "ItemDetailMouseOut" InsertToEventList = "1" Detect = "1"/>
+		<StaticText Name="ItemEquip007Stack" X="277" Y="67" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemEquip007Lvl" X="277" Y="44" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	
+		<UIImage Name="ItemEquip000Color1" X="186" Y="82" Image="Data\interface0005_main_B.tga" Left="59" Top="525" Right="99" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemEquip000Color2" X="186" Y="82" Image="Data\interface0005_main_B.tga" Left="106" Top="525" Right="146" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemEquip000Color3" X="186" Y="82" Image="Data\interface0005_main_B.tga" Left="200" Top="525" Right="240" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemEquip000Color4" X="186" Y="82" Image="Data\interface0005_main_B.tga" Left="153" Top="525" Right="193" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemEquip000Color5" X="186" Y="82" Image="Data\interface0005_main_B.tga" Left="11" Top="525" Right="51" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<AniIcon Name="ItemEquip000Icon" X="186" Y="82" Image=""  AutoDelete="0" LuaRButtonUp="ItemEquip000"
+			LuaLButtonUp="EquipItemMove000" LuaMouseMove="ItemEquipOver000" LuaMouseOut = "ItemDetailMouseOut" InsertToEventList = "1" Detect = "1"/>
+		<StaticText Name="ItemEquip000Stack" X="181" Y="115" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemEquip000Lvl" X="181" Y="92" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	
+		<UIImage Name="ItemEquip002Color1" X="227" Y="82" Image="Data\interface0005_main_B.tga" Left="59" Top="525" Right="99" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemEquip002Color2" X="227" Y="82" Image="Data\interface0005_main_B.tga" Left="106" Top="525" Right="146" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemEquip002Color3" X="227" Y="82" Image="Data\interface0005_main_B.tga" Left="200" Top="525" Right="240" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemEquip002Color4" X="227" Y="82" Image="Data\interface0005_main_B.tga" Left="153" Top="525" Right="193" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemEquip002Color5" X="227" Y="82" Image="Data\interface0005_main_B.tga" Left="11" Top="525" Right="51" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<AniIcon Name="ItemEquip002Icon" X="227" Y="82" Image=""  AutoDelete="0" LuaRButtonUp="ItemEquip002"
+			LuaLButtonUp="EquipItemMove002" LuaMouseMove="ItemEquipOver002" LuaMouseOut = "ItemDetailMouseOut" InsertToEventList = "1" Detect = "1"/>
+		<StaticText Name="ItemEquip002Stack" X="229" Y="115" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemEquip002Lvl" X="229" Y="92" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	
+		<UIImage Name="ItemEquip008Color1" X="268" Y="82" Image="Data\interface0005_main_B.tga" Left="59" Top="525" Right="99" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemEquip008Color2" X="268" Y="82" Image="Data\interface0005_main_B.tga" Left="106" Top="525" Right="146" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemEquip008Color3" X="268" Y="82" Image="Data\interface0005_main_B.tga" Left="200" Top="525" Right="240" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemEquip008Color4" X="268" Y="82" Image="Data\interface0005_main_B.tga" Left="153" Top="525" Right="193" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemEquip008Color5" X="268" Y="82" Image="Data\interface0005_main_B.tga" Left="11" Top="525" Right="51" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<AniIcon Name="ItemEquip008Icon" X="268" Y="82" Image=""  AutoDelete="0" LuaRButtonUp="ItemEquip008"
+			LuaLButtonUp="EquipItemMove008" LuaMouseMove="ItemEquipOver008" LuaMouseOut = "ItemDetailMouseOut" InsertToEventList = "1" Detect = "1"/>
+		<StaticText Name="ItemEquip008Stack" X="277" Y="67" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemEquip008Lvl" X="277" Y="44" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	
+		<UIImage Name="ItemEquip005Color1" X="186" Y="123" Image="Data\interface0005_main_B.tga" Left="59" Top="525" Right="99" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemEquip005Color2" X="186" Y="123" Image="Data\interface0005_main_B.tga" Left="106" Top="525" Right="146" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemEquip005Color3" X="186" Y="123" Image="Data\interface0005_main_B.tga" Left="200" Top="525" Right="240" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemEquip005Color4" X="186" Y="123" Image="Data\interface0005_main_B.tga" Left="153" Top="525" Right="193" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemEquip005Color5" X="186" Y="123" Image="Data\interface0005_main_B.tga" Left="11" Top="525" Right="51" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<AniIcon Name="ItemEquip005Icon" X="186" Y="123" Image=""  AutoDelete="0" LuaRButtonUp="ItemEquip005"
+			LuaLButtonUp="EquipItemMove005" LuaMouseMove="ItemEquipOver005" LuaMouseOut = "ItemDetailMouseOut" InsertToEventList = "1" Detect = "1"/>
+		<StaticText Name="ItemEquip005Stack" X="181" Y="163" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemEquip005Lvl" X="181" Y="140" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		
+		<UIImage Name="ItemEquip003Color1" X="227" Y="123" Image="Data\interface0005_main_B.tga" Left="59" Top="525" Right="99" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemEquip003Color2" X="227" Y="123" Image="Data\interface0005_main_B.tga" Left="106" Top="525" Right="146" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemEquip003Color3" X="227" Y="123" Image="Data\interface0005_main_B.tga" Left="200" Top="525" Right="240" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemEquip003Color4" X="227" Y="123" Image="Data\interface0005_main_B.tga" Left="153" Top="525" Right="193" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemEquip003Color5" X="227" Y="123" Image="Data\interface0005_main_B.tga" Left="11" Top="525" Right="51" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<AniIcon Name="ItemEquip003Icon" X="227" Y="123" Image=""  AutoDelete="0" LuaRButtonUp="ItemEquip003"
+			LuaLButtonUp="EquipItemMove003" LuaMouseMove="ItemEquipOver003" LuaMouseOut = "ItemDetailMouseOut" InsertToEventList = "1" Detect = "1"/>
+		<StaticText Name="ItemEquip003Stack" X="229" Y="163" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemEquip003Lvl" X="229" Y="140" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+
+		<UIImage Name="ItemEquip004Color1" X="268" Y="123" Image="Data\interface0005_main_B.tga" Left="59" Top="525" Right="99" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemEquip004Color2" X="268" Y="123" Image="Data\interface0005_main_B.tga" Left="106" Top="525" Right="146" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemEquip004Color3" X="268" Y="123" Image="Data\interface0005_main_B.tga" Left="200" Top="525" Right="240" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemEquip004Color4" X="268" Y="123" Image="Data\interface0005_main_B.tga" Left="153" Top="525" Right="193" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemEquip004Color5" X="268" Y="123" Image="Data\interface0005_main_B.tga" Left="11" Top="525" Right="51" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<AniIcon Name="ItemEquip004Icon" X="268" Y="123" Image=""  AutoDelete="0" LuaRButtonUp="ItemEquip004"
+			LuaLButtonUp="EquipItemMove004" LuaMouseMove="ItemEquipOver004" LuaMouseOut = "ItemDetailMouseOut" InsertToEventList = "1" Detect = "1"/>
+		<StaticText Name="ItemEquip004Stack" X="277" Y="163" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="ItemEquip004Lvl" X="277" Y="140" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+	
+	<!-- Normal Item Page 1 -->
+	
+		<UIImage Name="ItemSlot000Color1" X="26" Y="283" Image="Data\interface0005_main_B.tga" Left="59" Top="525" Right="99" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot000Color2" X="26" Y="283" Image="Data\interface0005_main_B.tga" Left="106" Top="525" Right="146" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot000Color3" X="26" Y="283" Image="Data\interface0005_main_B.tga" Left="200" Top="525" Right="240" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot000Color4" X="26" Y="283" Image="Data\interface0005_main_B.tga" Left="153" Top="525" Right="193" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot000Color5" X="26" Y="283" Image="Data\interface0005_main_B.tga" Left="11" Top="525" Right="51" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<AniIcon Name="ItemSlot000Icon" X="26" Y="282" Image=""  AutoDelete="0" LuaRButtonUp="ItemUse000"
+			LuaLButtonUp="ItemMove000" LuaMouseMove="ItemOver000" LuaMouseOut = "ItemDetailMouseOut" 
+			InsertToEventList = "1" Detect = "1" Hide="0"/>
+		<StaticText Name="ItemSlot000Stack" X="29" Y="308" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<StaticText Name="ItemSlot000Lvl" X="29" Y="285" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<UIImage Name="ItemSlot000Lock" X="26" Y="283" Image="Data\interface0005_main_B.tga" Left="461" Top="369" Right="471" Bottom="382" AutoDelete="0"  NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot000Red" X="26" Y="283" Image="Data\interface0005_main_B.tga" Left="362" Top="417" Right="402" Bottom="457" AutoDelete="0" NotDetected="1" Hide="1" />
+	
+		<UIImage Name="ItemSlot001Color1" X="67" Y="283" Image="Data\interface0005_main_B.tga" Left="59" Top="525" Right="99" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot001Color2" X="67" Y="283" Image="Data\interface0005_main_B.tga" Left="106" Top="525" Right="146" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot001Color3" X="67" Y="283" Image="Data\interface0005_main_B.tga" Left="200" Top="525" Right="240" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot001Color4" X="67" Y="283" Image="Data\interface0005_main_B.tga" Left="153" Top="525" Right="193" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot001Color5" X="67" Y="283" Image="Data\interface0005_main_B.tga" Left="11" Top="525" Right="51" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<AniIcon Name="ItemSlot001Icon" X="67" Y="283" Image=""  AutoDelete="0" LuaRButtonUp="ItemUse001" 
+			LuaLButtonUp="ItemMove001" LuaMouseMove="ItemOver001" LuaMouseOut = "ItemDetailMouseOut" InsertToEventList = "1" Detect = "1" Hide="0"/>
+		<StaticText Name="ItemSlot001Stack" X="70" Y="308" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<StaticText Name="ItemSlot001Lvl" X="70" Y="285" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<UIImage Name="ItemSlot001Lock" X="67" Y="283" Image="Data\interface0005_main_B.tga" Left="461" Top="369" Right="471" Bottom="382" AutoDelete="0" NotDetected="1" Hide="1" />	
+		<UIImage Name="ItemSlot001Red" X="67" Y="283" Image="Data\interface0005_main_B.tga" Left="362" Top="417" Right="402" Bottom="457" AutoDelete="0" NotDetected="1" Hide="1" />
+		
+		<UIImage Name="ItemSlot002Color1" X="108" Y="283" Image="Data\interface0005_main_B.tga" Left="59" Top="525" Right="99" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot002Color2" X="108" Y="283" Image="Data\interface0005_main_B.tga" Left="106" Top="525" Right="146" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot002Color3" X="108" Y="283" Image="Data\interface0005_main_B.tga" Left="200" Top="525" Right="240" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot002Color4" X="108" Y="283" Image="Data\interface0005_main_B.tga" Left="153" Top="525" Right="193" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot002Color5" X="108" Y="283" Image="Data\interface0005_main_B.tga" Left="11" Top="525" Right="51" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />		
+		<AniIcon Name="ItemSlot002Icon" X="108" Y="283" Image=""  AutoDelete="0" LuaRButtonUp="ItemUse002"
+			LuaLButtonUp="ItemMove002" LuaMouseMove="ItemOver002" LuaMouseOut = "ItemDetailMouseOut" InsertToEventList = "1" Detect = "1" Hide="0"/>
+		<StaticText Name="ItemSlot002Stack" X="111" Y="308" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<StaticText Name="ItemSlot002Lvl" X="111" Y="285" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<UIImage Name="ItemSlot002Lock" X="108" Y="283" Image="Data\interface0005_main_B.tga" Left="461" Top="369" Right="471" Bottom="382" AutoDelete="0" NotDetected="1" Hide="1" />	
+		<UIImage Name="ItemSlot002Red" X="108" Y="283" Image="Data\interface0005_main_B.tga" Left="362" Top="417" Right="402" Bottom="457" AutoDelete="0" NotDetected="1" Hide="1" />	
+		
+		<UIImage Name="ItemSlot003Color1" X="149" Y="283" Image="Data\interface0005_main_B.tga" Left="59" Top="525" Right="99" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot003Color2" X="149" Y="283" Image="Data\interface0005_main_B.tga" Left="106" Top="525" Right="146" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot003Color3" X="149" Y="283" Image="Data\interface0005_main_B.tga" Left="200" Top="525" Right="240" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot003Color4" X="149" Y="283" Image="Data\interface0005_main_B.tga" Left="153" Top="525" Right="193" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot003Color5" X="149" Y="283" Image="Data\interface0005_main_B.tga" Left="11" Top="525" Right="51" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<AniIcon Name="ItemSlot003Icon" X="149" Y="283" Image=""  AutoDelete="0" LuaRButtonUp="ItemUse003"
+			LuaLButtonUp="ItemMove003" LuaMouseMove="ItemOver003" LuaMouseOut = "ItemDetailMouseOut" InsertToEventList = "1" Detect = "1" Hide="0"/>
+		<StaticText Name="ItemSlot003Stack" X="152" Y="308" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<StaticText Name="ItemSlot003Lvl" X="152" Y="285" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<UIImage Name="ItemSlot003Lock" X="149" Y="283" Image="Data\interface0005_main_B.tga" Left="461" Top="369" Right="471" Bottom="382" AutoDelete="0" NotDetected="1" Hide="1" />	
+		<UIImage Name="ItemSlot003Red" X="149" Y="283" Image="Data\interface0005_main_B.tga" Left="362" Top="417" Right="402" Bottom="457" AutoDelete="0" NotDetected="1" Hide="1" />		
+	
+		<UIImage Name="ItemSlot004Color1" X="190" Y="283" Image="Data\interface0005_main_B.tga" Left="59" Top="525" Right="99" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot004Color2" X="190" Y="283" Image="Data\interface0005_main_B.tga" Left="106" Top="525" Right="146" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot004Color3" X="190" Y="283" Image="Data\interface0005_main_B.tga" Left="200" Top="525" Right="240" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot004Color4" X="190" Y="283" Image="Data\interface0005_main_B.tga" Left="153" Top="525" Right="193" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot004Color5" X="190" Y="283" Image="Data\interface0005_main_B.tga" Left="11" Top="525" Right="51" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<AniIcon Name="ItemSlot004Icon" X="190" Y="283" Image=""  AutoDelete="0" LuaRButtonUp="ItemUse004"
+			LuaLButtonUp="ItemMove004" LuaMouseMove="ItemOver004" LuaMouseOut = "ItemDetailMouseOut" InsertToEventList = "1" Detect = "1" Hide="0"/>
+		<StaticText Name="ItemSlot004Stack" X="193" Y="308" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<StaticText Name="ItemSlot004Lvl" X="193" Y="285" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<UIImage Name="ItemSlot004Lock" X="190" Y="283" Image="Data\interface0005_main_B.tga" Left="461" Top="369" Right="471" Bottom="382" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot004Red" X="190" Y="283" Image="Data\interface0005_main_B.tga" Left="362" Top="417" Right="402" Bottom="457" AutoDelete="0" NotDetected="1" Hide="1" />	
+	
+		<UIImage Name="ItemSlot005Color1" X="231" Y="283" Image="Data\interface0005_main_B.tga" Left="59" Top="525" Right="99" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot005Color2" X="231" Y="283" Image="Data\interface0005_main_B.tga" Left="106" Top="525" Right="146" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot005Color3" X="231" Y="283" Image="Data\interface0005_main_B.tga" Left="200" Top="525" Right="240" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot005Color4" X="231" Y="283" Image="Data\interface0005_main_B.tga" Left="153" Top="525" Right="193" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot005Color5" X="231" Y="283" Image="Data\interface0005_main_B.tga" Left="11" Top="525" Right="51" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<AniIcon Name="ItemSlot005Icon" X="231" Y="283" Image=""  AutoDelete="0" LuaRButtonUp="ItemUse005"
+			LuaLButtonUp="ItemMove005" LuaMouseMove="ItemOver005" LuaMouseOut = "ItemDetailMouseOut" InsertToEventList = "1" Detect = "1" Hide="0"/>
+		<StaticText Name="ItemSlot005Stack" X="234" Y="308" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<StaticText Name="ItemSlot005Lvl" X="234" Y="285" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<UIImage Name="ItemSlot005Lock" X="231" Y="283" Image="Data\interface0005_main_B.tga" Left="461" Top="369" Right="471" Bottom="382" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot005Red" X="231" Y="283" Image="Data\interface0005_main_B.tga" Left="362" Top="417" Right="402" Bottom="457" AutoDelete="0" NotDetected="1" Hide="1" />	
+	
+		<UIImage Name="ItemSlot006Color1" X="26" Y="324" Image="Data\interface0005_main_B.tga" Left="59" Top="525" Right="99" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot006Color2" X="26" Y="324" Image="Data\interface0005_main_B.tga" Left="106" Top="525" Right="146" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot006Color3" X="26" Y="324" Image="Data\interface0005_main_B.tga" Left="200" Top="525" Right="240" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot006Color4" X="26" Y="324" Image="Data\interface0005_main_B.tga" Left="153" Top="525" Right="193" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot006Color5" X="26" Y="324" Image="Data\interface0005_main_B.tga" Left="11" Top="525" Right="51" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<AniIcon Name="ItemSlot006Icon" X="26" Y="324" Image=""  AutoDelete="0" LuaRButtonUp="ItemUse006"
+			LuaLButtonUp="ItemMove006" LuaMouseMove="ItemOver006" LuaMouseOut = "ItemDetailMouseOut" InsertToEventList = "1" Detect = "1" Hide="0"/>
+		<StaticText Name="ItemSlot006Stack" X="29" Y="349" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1"  Hide="0">
+		</StaticText>
+		<StaticText Name="ItemSlot006Lvl" X="29" Y="326" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<UIImage Name="ItemSlot006Lock" X="26" Y="324" Image="Data\interface0005_main_B.tga" Left="461" Top="369" Right="471" Bottom="382" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot006Red" X="26" Y="324" Image="Data\interface0005_main_B.tga" Left="362" Top="417" Right="402" Bottom="457" AutoDelete="0" NotDetected="1" Hide="1" />	
+	
+		<UIImage Name="ItemSlot007Color1" X="67" Y="324" Image="Data\interface0005_main_B.tga" Left="59" Top="525" Right="99" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot007Color2" X="67" Y="324" Image="Data\interface0005_main_B.tga" Left="106" Top="525" Right="146" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot007Color3" X="67" Y="324" Image="Data\interface0005_main_B.tga" Left="200" Top="525" Right="240" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot007Color4" X="67" Y="324" Image="Data\interface0005_main_B.tga" Left="153" Top="525" Right="193" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot007Color5" X="67" Y="324" Image="Data\interface0005_main_B.tga" Left="11" Top="525" Right="51" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<AniIcon Name="ItemSlot007Icon" X="67" Y="324" Image=""  AutoDelete="0" LuaRButtonUp="ItemUse007"
+			LuaLButtonUp="ItemMove007" LuaMouseMove="ItemOver007" LuaMouseOut = "ItemDetailMouseOut" InsertToEventList = "1" Detect = "1" Hide="0"/>
+		<StaticText Name="ItemSlot007Stack" X="70" Y="349" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<StaticText Name="ItemSlot007Lvl" X="70" Y="326" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<UIImage Name="ItemSlot007Lock" X="67" Y="324" Image="Data\interface0005_main_B.tga" Left="461" Top="369" Right="471" Bottom="382" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot007Red" X="67" Y="324" Image="Data\interface0005_main_B.tga" Left="362" Top="417" Right="402" Bottom="457" AutoDelete="0" NotDetected="1" Hide="1" />		
+	
+		<UIImage Name="ItemSlot008Color1" X="108" Y="324" Image="Data\interface0005_main_B.tga" Left="59" Top="525" Right="99" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot008Color2" X="108" Y="324" Image="Data\interface0005_main_B.tga" Left="106" Top="525" Right="146" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot008Color3" X="108" Y="324" Image="Data\interface0005_main_B.tga" Left="200" Top="525" Right="240" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot008Color4" X="108" Y="324" Image="Data\interface0005_main_B.tga" Left="153" Top="525" Right="193" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot008Color5" X="108" Y="324" Image="Data\interface0005_main_B.tga" Left="11" Top="525" Right="51" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<AniIcon Name="ItemSlot008Icon" X="108" Y="324" Image=""  AutoDelete="0" LuaRButtonUp="ItemUse008"
+			LuaLButtonUp="ItemMove008" LuaMouseMove="ItemOver008" LuaMouseOut = "ItemDetailMouseOut" InsertToEventList = "1" Detect = "1" Hide="0"/>
+		<StaticText Name="ItemSlot008Stack" X="111" Y="349" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<StaticText Name="ItemSlot008Lvl" X="111" Y="326" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<UIImage Name="ItemSlot008Lock" X="108" Y="324" Image="Data\interface0005_main_B.tga" Left="461" Top="369" Right="471" Bottom="382" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot008Red" X="108" Y="324" Image="Data\interface0005_main_B.tga" Left="362" Top="417" Right="402" Bottom="457" AutoDelete="0" NotDetected="1" Hide="1" />	
+	
+		<UIImage Name="ItemSlot009Color1" X="149" Y="324" Image="Data\interface0005_main_B.tga" Left="59" Top="525" Right="99" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot009Color2" X="149" Y="324" Image="Data\interface0005_main_B.tga" Left="106" Top="525" Right="146" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot009Color3" X="149" Y="324" Image="Data\interface0005_main_B.tga" Left="200" Top="525" Right="240" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot009Color4" X="149" Y="324" Image="Data\interface0005_main_B.tga" Left="153" Top="525" Right="193" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot009Color5" X="149" Y="324" Image="Data\interface0005_main_B.tga" Left="11" Top="525" Right="51" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<AniIcon Name="ItemSlot009Icon" X="149" Y="324" Image=""  AutoDelete="0" LuaRButtonUp="ItemUse009" 
+			LuaLButtonUp="ItemMove009" LuaMouseMove="ItemOver009" LuaMouseOut = "ItemDetailMouseOut" InsertToEventList = "1" Detect = "1" Hide="0"/>
+		<StaticText Name="ItemSlot009Stack" X="152" Y="349" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<StaticText Name="ItemSlot009Lvl" X="152" Y="326" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<UIImage Name="ItemSlot009Lock" X="149" Y="324" Image="Data\interface0005_main_B.tga" Left="461" Top="369" Right="471" Bottom="382" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot009Red" X="149" Y="324" Image="Data\interface0005_main_B.tga" Left="362" Top="417" Right="402" Bottom="457" AutoDelete="0" NotDetected="1" Hide="1" />	
+	
+		<UIImage Name="ItemSlot010Color1" X="190" Y="324" Image="Data\interface0005_main_B.tga" Left="59" Top="525" Right="99" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot010Color2" X="190" Y="324" Image="Data\interface0005_main_B.tga" Left="106" Top="525" Right="146" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot010Color3" X="190" Y="324" Image="Data\interface0005_main_B.tga" Left="200" Top="525" Right="240" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot010Color4" X="190" Y="324" Image="Data\interface0005_main_B.tga" Left="153" Top="525" Right="193" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot010Color5" X="190" Y="324" Image="Data\interface0005_main_B.tga" Left="11" Top="525" Right="51" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<AniIcon Name="ItemSlot010Icon" X="190" Y="324" Image=""  AutoDelete="0" LuaRButtonUp="ItemUse010"
+			LuaLButtonUp="ItemMove010" LuaMouseMove="ItemOver010" LuaMouseOut = "ItemDetailMouseOut" InsertToEventList = "1" Detect = "1" Hide="0"/>
+		<StaticText Name="ItemSlot010Stack" X="193" Y="349" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<StaticText Name="ItemSlot010Lvl" X="193" Y="326" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<UIImage Name="ItemSlot010Lock" X="190" Y="324" Image="Data\interface0005_main_B.tga" Left="461" Top="369" Right="471" Bottom="382" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot010Red" X="190" Y="324" Image="Data\interface0005_main_B.tga" Left="362" Top="417" Right="402" Bottom="457" AutoDelete="0" NotDetected="1" Hide="1" />	
+	
+		<UIImage Name="ItemSlot011Color1" X="231" Y="324" Image="Data\interface0005_main_B.tga" Left="59" Top="525" Right="99" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot011Color2" X="231" Y="324" Image="Data\interface0005_main_B.tga" Left="106" Top="525" Right="146" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot011Color3" X="231" Y="324" Image="Data\interface0005_main_B.tga" Left="200" Top="525" Right="240" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot011Color4" X="231" Y="324" Image="Data\interface0005_main_B.tga" Left="153" Top="525" Right="193" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot011Color5" X="231" Y="324" Image="Data\interface0005_main_B.tga" Left="11" Top="525" Right="51" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<AniIcon Name="ItemSlot011Icon" X="231" Y="324" Image=""  AutoDelete="0" LuaRButtonUp="ItemUse011"
+			LuaLButtonUp="ItemMove011" LuaMouseMove="ItemOver011" LuaMouseOut = "ItemDetailMouseOut" InsertToEventList = "1" Detect = "1" Hide="0"/>
+		<StaticText Name="ItemSlot011Stack" X="234" Y="349" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<StaticText Name="ItemSlot011Lvl" X="234" Y="326" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<UIImage Name="ItemSlot011Lock" X="231" Y="324" Image="Data\interface0005_main_B.tga" Left="461" Top="369" Right="471" Bottom="382" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot011Red" X="231" Y="324" Image="Data\interface0005_main_B.tga" Left="362" Top="417" Right="402" Bottom="457" AutoDelete="0" NotDetected="1" Hide="1" />	
+	
+		<UIImage Name="ItemSlot012Color1" X="26" Y="365" Image="Data\interface0005_main_B.tga" Left="59" Top="525" Right="99" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot012Color2" X="26" Y="365" Image="Data\interface0005_main_B.tga" Left="106" Top="525" Right="146" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot012Color3" X="26" Y="365" Image="Data\interface0005_main_B.tga" Left="200" Top="525" Right="240" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot012Color4" X="26" Y="365" Image="Data\interface0005_main_B.tga" Left="153" Top="525" Right="193" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot012Color5" X="26" Y="365" Image="Data\interface0005_main_B.tga" Left="11" Top="525" Right="51" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<AniIcon Name="ItemSlot012Icon" X="26" Y="365" Image=""  AutoDelete="0" LuaRButtonUp="ItemUse012"
+			LuaLButtonUp="ItemMove012" LuaMouseMove="ItemOver012" LuaMouseOut = "ItemDetailMouseOut" InsertToEventList = "1" Detect = "1" Hide="0"/>
+		<StaticText Name="ItemSlot012Stack" X="29" Y="390" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<StaticText Name="ItemSlot012Lvl" X="29" Y="367" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<UIImage Name="ItemSlot012Lock" X="26" Y="365" Image="Data\interface0005_main_B.tga" Left="461" Top="369" Right="471" Bottom="382" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot012Red" X="26" Y="365" Image="Data\interface0005_main_B.tga" Left="362" Top="417" Right="402" Bottom="457" AutoDelete="0" NotDetected="1" Hide="1" />	
+	
+		<UIImage Name="ItemSlot013Color1" X="67" Y="365" Image="Data\interface0005_main_B.tga" Left="59" Top="525" Right="99" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot013Color2" X="67" Y="365" Image="Data\interface0005_main_B.tga" Left="106" Top="525" Right="146" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot013Color3" X="67" Y="365" Image="Data\interface0005_main_B.tga" Left="200" Top="525" Right="240" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot013Color4" X="67" Y="365" Image="Data\interface0005_main_B.tga" Left="153" Top="525" Right="193" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot013Color5" X="67" Y="365" Image="Data\interface0005_main_B.tga" Left="11" Top="525" Right="51" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<AniIcon Name="ItemSlot013Icon" X="67" Y="365" Image=""  AutoDelete="0" LuaRButtonUp="ItemUse013"
+			LuaLButtonUp="ItemMove013" LuaMouseMove="ItemOver013" LuaMouseOut = "ItemDetailMouseOut" InsertToEventList = "1" Detect = "1" Hide="0"/>
+		<StaticText Name="ItemSlot013Stack" X="70" Y="390" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<StaticText Name="ItemSlot013Lvl" X="70" Y="367" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<UIImage Name="ItemSlot013Lock" X="67" Y="365" Image="Data\interface0005_main_B.tga" Left="461" Top="369" Right="471" Bottom="382" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot013Red" X="67" Y="365" Image="Data\interface0005_main_B.tga" Left="362" Top="417" Right="402" Bottom="457" AutoDelete="0" NotDetected="1" Hide="1" />	
+	
+		<UIImage Name="ItemSlot014Color1" X="108" Y="365" Image="Data\interface0005_main_B.tga" Left="59" Top="525" Right="99" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot014Color2" X="108" Y="365" Image="Data\interface0005_main_B.tga" Left="106" Top="525" Right="146" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot014Color3" X="108" Y="365" Image="Data\interface0005_main_B.tga" Left="200" Top="525" Right="240" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot014Color4" X="108" Y="365" Image="Data\interface0005_main_B.tga" Left="153" Top="525" Right="193" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot014Color5" X="108" Y="365" Image="Data\interface0005_main_B.tga" Left="11" Top="525" Right="51" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<AniIcon Name="ItemSlot014Icon" X="108" Y="365" Image=""  AutoDelete="0" LuaRButtonUp="ItemUse014"
+			LuaLButtonUp="ItemMove014" LuaMouseMove="ItemOver014" LuaMouseOut = "ItemDetailMouseOut" InsertToEventList = "1" Detect = "1" Hide="0"/>
+		<StaticText Name="ItemSlot014Stack" X="111" Y="390" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<StaticText Name="ItemSlot014Lvl" X="111" Y="367" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<UIImage Name="ItemSlot014Lock" X="108" Y="365" Image="Data\interface0005_main_B.tga" Left="461" Top="369" Right="471" Bottom="382" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot014Red" X="108" Y="365" Image="Data\interface0005_main_B.tga" Left="362" Top="417" Right="402" Bottom="457" AutoDelete="0" NotDetected="1" Hide="1" />	
+	
+		<UIImage Name="ItemSlot015Color1" X="149" Y="365" Image="Data\interface0005_main_B.tga" Left="59" Top="525" Right="99" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot015Color2" X="149" Y="365" Image="Data\interface0005_main_B.tga" Left="106" Top="525" Right="146" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot015Color3" X="149" Y="365" Image="Data\interface0005_main_B.tga" Left="200" Top="525" Right="240" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot015Color4" X="149" Y="365" Image="Data\interface0005_main_B.tga" Left="153" Top="525" Right="193" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot015Color5" X="149" Y="365" Image="Data\interface0005_main_B.tga" Left="11" Top="525" Right="51" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<AniIcon Name="ItemSlot015Icon" X="149" Y="365" Image=""  AutoDelete="0" LuaRButtonUp="ItemUse015"
+			LuaLButtonUp="ItemMove015" LuaMouseMove="ItemOver015" LuaMouseOut = "ItemDetailMouseOut" InsertToEventList = "1" Detect = "1" Hide="0"/>
+		<StaticText Name="ItemSlot015Stack" X="152" Y="390" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<StaticText Name="ItemSlot015Lvl" X="152" Y="367" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<UIImage Name="ItemSlot015Lock" X="149" Y="365" Image="Data\interface0005_main_B.tga" Left="461" Top="369" Right="471" Bottom="382" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot015Red" X="149" Y="365" Image="Data\interface0005_main_B.tga" Left="362" Top="417" Right="402" Bottom="457" AutoDelete="0" NotDetected="1" Hide="1" />	
+	
+		<UIImage Name="ItemSlot016Color1" X="190" Y="365" Image="Data\interface0005_main_B.tga" Left="59" Top="525" Right="99" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot016Color2" X="190" Y="365" Image="Data\interface0005_main_B.tga" Left="106" Top="525" Right="146" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot016Color3" X="190" Y="365" Image="Data\interface0005_main_B.tga" Left="200" Top="525" Right="240" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot016Color4" X="190" Y="365" Image="Data\interface0005_main_B.tga" Left="153" Top="525" Right="193" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot016Color5" X="190" Y="365" Image="Data\interface0005_main_B.tga" Left="11" Top="525" Right="51" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<AniIcon Name="ItemSlot016Icon" X="190" Y="365" Image=""  AutoDelete="0" LuaRButtonUp="ItemUse016"
+			LuaLButtonUp="ItemMove016" LuaMouseMove="ItemOver016" LuaMouseOut = "ItemDetailMouseOut" InsertToEventList = "1" Detect = "1" Hide="0"/>
+		<StaticText Name="ItemSlot016Stack" X="193" Y="390" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<StaticText Name="ItemSlot016Lvl" X="193" Y="367" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<UIImage Name="ItemSlot016Lock" X="190" Y="365" Image="Data\interface0005_main_B.tga" Left="461" Top="369" Right="471" Bottom="382" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot016Red" X="190" Y="365" Image="Data\interface0005_main_B.tga" Left="362" Top="417" Right="402" Bottom="457" AutoDelete="0" NotDetected="1" Hide="1" />	
+	
+		<UIImage Name="ItemSlot017Color1" X="231" Y="365" Image="Data\interface0005_main_B.tga" Left="59" Top="525" Right="99" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot017Color2" X="231" Y="365" Image="Data\interface0005_main_B.tga" Left="106" Top="525" Right="146" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot017Color3" X="231" Y="365" Image="Data\interface0005_main_B.tga" Left="200" Top="525" Right="240" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot017Color4" X="231" Y="365" Image="Data\interface0005_main_B.tga" Left="153" Top="525" Right="193" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot017Color5" X="231" Y="365" Image="Data\interface0005_main_B.tga" Left="11" Top="525" Right="51" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<AniIcon Name="ItemSlot017Icon" X="231" Y="365" Image=""  AutoDelete="0" LuaRButtonUp="ItemUse017"	
+			LuaLButtonUp="ItemMove017" LuaMouseMove="ItemOver017" LuaMouseOut = "ItemDetailMouseOut" InsertToEventList = "1" Detect = "1" Hide="0"/>
+		<StaticText Name="ItemSlot017Stack" X="234" Y="390" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<StaticText Name="ItemSlot017Lvl" X="234" Y="367" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<UIImage Name="ItemSlot017Lock" X="231" Y="365" Image="Data\interface0005_main_B.tga" Left="461" Top="369" Right="471" Bottom="382" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot017Red" X="231" Y="365" Image="Data\interface0005_main_B.tga" Left="362" Top="417" Right="402" Bottom="457" AutoDelete="0" NotDetected="1" Hide="1" />	
+	
+		<UIImage Name="ItemSlot018Color1" X="26" Y="406" Image="Data\interface0005_main_B.tga" Left="59" Top="525" Right="99" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot018Color2" X="26" Y="406" Image="Data\interface0005_main_B.tga" Left="106" Top="525" Right="146" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot018Color3" X="26" Y="406" Image="Data\interface0005_main_B.tga" Left="200" Top="525" Right="240" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot018Color4" X="26" Y="406" Image="Data\interface0005_main_B.tga" Left="153" Top="525" Right="193" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot018Color5" X="26" Y="406" Image="Data\interface0005_main_B.tga" Left="11" Top="525" Right="51" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<AniIcon Name="ItemSlot018Icon" X="26" Y="406" Image=""  AutoDelete="0" LuaRButtonUp="ItemUse018"
+			LuaLButtonUp="ItemMove018" LuaMouseMove="ItemOver018" LuaMouseOut = "ItemDetailMouseOut" InsertToEventList = "1" Detect = "1" Hide="0"/>
+		<StaticText Name="ItemSlot018Stack" X="29" Y="431" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<StaticText Name="ItemSlot018Lvl" X="29" Y="408" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<UIImage Name="ItemSlot018Lock" X="26" Y="406" Image="Data\interface0005_main_B.tga" Left="461" Top="369" Right="471" Bottom="382" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot018Red" X="26" Y="406" Image="Data\interface0005_main_B.tga" Left="362" Top="417" Right="402" Bottom="457" AutoDelete="0" NotDetected="1" Hide="1" />	
+	
+		<UIImage Name="ItemSlot019Color1" X="67" Y="406" Image="Data\interface0005_main_B.tga" Left="59" Top="525" Right="99" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot019Color2" X="67" Y="406" Image="Data\interface0005_main_B.tga" Left="106" Top="525" Right="146" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot019Color3" X="67" Y="406" Image="Data\interface0005_main_B.tga" Left="200" Top="525" Right="240" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot019Color4" X="67" Y="406" Image="Data\interface0005_main_B.tga" Left="153" Top="525" Right="193" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot019Color5" X="67" Y="406" Image="Data\interface0005_main_B.tga" Left="11" Top="525" Right="51" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<AniIcon Name="ItemSlot019Icon" X="67" Y="406" Image=""  AutoDelete="0" LuaRButtonUp="ItemUse019"
+			LuaLButtonUp="ItemMove019" LuaMouseMove="ItemOver019" LuaMouseOut = "ItemDetailMouseOut" InsertToEventList = "1" Detect = "1" Hide="0"/>
+		<StaticText Name="ItemSlot019Stack" X="70" Y="431" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<StaticText Name="ItemSlot019Lvl" X="70" Y="408" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<UIImage Name="ItemSlot019Lock" X="67" Y="406" Image="Data\interface0005_main_B.tga" Left="461" Top="369" Right="471" Bottom="382" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot019Red" X="67" Y="406" Image="Data\interface0005_main_B.tga" Left="362" Top="417" Right="402" Bottom="457" AutoDelete="0" NotDetected="1" Hide="1" />	
+	
+		<UIImage Name="ItemSlot020Color1" X="108" Y="406" Image="Data\interface0005_main_B.tga" Left="59" Top="525" Right="99" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot020Color2" X="108" Y="406" Image="Data\interface0005_main_B.tga" Left="106" Top="525" Right="146" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot020Color3" X="108" Y="406" Image="Data\interface0005_main_B.tga" Left="200" Top="525" Right="240" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot020Color4" X="108" Y="406" Image="Data\interface0005_main_B.tga" Left="153" Top="525" Right="193" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot020Color5" X="108" Y="406" Image="Data\interface0005_main_B.tga" Left="11" Top="525" Right="51" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<AniIcon Name="ItemSlot020Icon" X="108" Y="406" Image=""  AutoDelete="0" LuaRButtonUp="ItemUse020"
+			LuaLButtonUp="ItemMove020" LuaMouseMove="ItemOver020" LuaMouseOut = "ItemDetailMouseOut" InsertToEventList = "1" Detect = "1" Hide="0"/>
+		<StaticText Name="ItemSlot020Stack" X="111" Y="431" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<StaticText Name="ItemSlot020Lvl" X="111" Y="408" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<UIImage Name="ItemSlot020Lock" X="108" Y="406" Image="Data\interface0005_main_B.tga" Left="461" Top="369" Right="471" Bottom="382" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot020Red" X="108" Y="406" Image="Data\interface0005_main_B.tga" Left="362" Top="417" Right="402" Bottom="457" AutoDelete="0" NotDetected="1" Hide="1" />	
+	
+		<UIImage Name="ItemSlot021Color1" X="149" Y="406" Image="Data\interface0005_main_B.tga" Left="59" Top="525" Right="99" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot021Color2" X="149" Y="406" Image="Data\interface0005_main_B.tga" Left="106" Top="525" Right="146" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot021Color3" X="149" Y="406" Image="Data\interface0005_main_B.tga" Left="200" Top="525" Right="240" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot021Color4" X="149" Y="406" Image="Data\interface0005_main_B.tga" Left="153" Top="525" Right="193" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot021Color5" X="149" Y="406" Image="Data\interface0005_main_B.tga" Left="11" Top="525" Right="51" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<AniIcon Name="ItemSlot021Icon" X="149" Y="406" Image=""  AutoDelete="0" LuaRButtonUp="ItemUse021"
+			LuaLButtonUp="ItemMove021" LuaMouseMove="ItemOver021" LuaMouseOut = "ItemDetailMouseOut" InsertToEventList = "1" Detect = "1" Hide="0"/>
+		<StaticText Name="ItemSlot021Stack" X="152" Y="431" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<StaticText Name="ItemSlot021Lvl" X="152" Y="408" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<UIImage Name="ItemSlot021Lock" X="149" Y="406" Image="Data\interface0005_main_B.tga" Left="461" Top="369" Right="471" Bottom="382" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot021Red" X="149" Y="406" Image="Data\interface0005_main_B.tga" Left="362" Top="417" Right="402" Bottom="457" AutoDelete="0" NotDetected="1" Hide="1" />	
+	
+		<UIImage Name="ItemSlot022Color1" X="190" Y="406" Image="Data\interface0005_main_B.tga" Left="59" Top="525" Right="99" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot022Color2" X="190" Y="406" Image="Data\interface0005_main_B.tga" Left="106" Top="525" Right="146" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot022Color3" X="190" Y="406" Image="Data\interface0005_main_B.tga" Left="200" Top="525" Right="240" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot022Color4" X="190" Y="406" Image="Data\interface0005_main_B.tga" Left="153" Top="525" Right="193" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot022Color5" X="190" Y="406" Image="Data\interface0005_main_B.tga" Left="11" Top="525" Right="51" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<AniIcon Name="ItemSlot022Icon" X="190" Y="406" Image=""  AutoDelete="0" LuaRButtonUp="ItemUse022"
+			LuaLButtonUp="ItemMove022" LuaMouseMove="ItemOver022" LuaMouseOut = "ItemDetailMouseOut" InsertToEventList = "1" Detect = "1" Hide="0"/>
+		<StaticText Name="ItemSlot022Stack" X="193" Y="431" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<StaticText Name="ItemSlot022Lvl" X="193" Y="408" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<UIImage Name="ItemSlot022Lock" X="190" Y="406" Image="Data\interface0005_main_B.tga" Left="461" Top="369" Right="471" Bottom="382" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot022Red" X="190" Y="406" Image="Data\interface0005_main_B.tga" Left="362" Top="417" Right="402" Bottom="457" AutoDelete="0" NotDetected="1" Hide="1" />	
+	
+		<UIImage Name="ItemSlot023Color1" X="231" Y="406" Image="Data\interface0005_main_B.tga" Left="59" Top="525" Right="99" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot023Color2" X="231" Y="406" Image="Data\interface0005_main_B.tga" Left="106" Top="525" Right="146" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot023Color3" X="231" Y="406" Image="Data\interface0005_main_B.tga" Left="200" Top="525" Right="240" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot023Color4" X="231" Y="406" Image="Data\interface0005_main_B.tga" Left="153" Top="525" Right="193" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<UIImage Name="ItemSlot023Color5" X="231" Y="406" Image="Data\interface0005_main_B.tga" Left="11" Top="525" Right="51" Bottom="565" AutoDelete="0" NotDetected="1" Hide="1" />
+		<AniIcon Name="ItemSlot023Icon" X="231" Y="406" Image=""  AutoDelete="0" LuaRButtonUp="ItemUse023"
+			LuaLButtonUp="ItemMove023" LuaMouseMove="ItemOver023" LuaMouseOut = "ItemDetailMouseOut" InsertToEventList = "1" Detect = "1" Hide="0"/>
+		<StaticText Name="ItemSlot023Stack" X="234" Y="431" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<StaticText Name="ItemSlot023Lvl" X="234" Y="408" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<UIImage Name="ItemSlot023Lock" X="231" Y="406" Image="Data\interface0005_main_B.tga" Left="461" Top="369" Right="471" Bottom="382" AutoDelete="0" NotDetected="1" Hide="1" />	
+		<UIImage Name="ItemSlot023Red" X="231" Y="406" Image="Data\interface0005_main_B.tga" Left="362" Top="417" Right="402" Bottom="457" AutoDelete="0" NotDetected="1" Hide="1" />	
+		
+		<UIImage Name="ItemBoard" X="0" Y="0" Image="Data\interface0005_main_B.tga" Left="388" Top="366" Right="430" Bottom="408" AutoDelete="0" NotDetected="1" Hide="1"
+		 TimeOutCount="100" LuaTimeOut="ShowItemBoard"/>
+	
+	</Panel>
+	
+	
+	
+	<!-- Moving Panel-->
+	<Panel Name="MovingPanel" Image="" X="0" Y="50" Left="0" Top="0" Right="40" Bottom="40"
+		 Hide="1" Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="DragEnd" LuaRButtonDown="ResetDrag" >
+		<AniIcon Name="ItemMovingIcon" X="0" Y="0" Image=""  AutoDelete="0" Detect = "1" />
+	</Panel>
+</UI>

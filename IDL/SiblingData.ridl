@@ -1,0 +1,40 @@
+//-- Config	
+config
+{
+	SubPath="Data/";
+	ClassID=10310;
+	StartID=10310;
+	EndID  =10319;
+	TwoDirect=1;
+}
+
+//-- include
+
+//-- object class
+class SiblingData : NetObject
+{
+	//-- object state
+	sibling_id{ 	UInt32 sibling_id; 	};
+	sibling_title_prefix {	String sibling_title_prefix;	};
+	member_id1 {	UInt32 member_id1;	};
+	member_title_suffix1 {	String member_title_suffix1;	};
+	member_id2 {	UInt32 member_id2;	};
+	member_title_suffix2 {	String member_title_suffix2;	};
+	member_id3 {	UInt32 member_id3;	};
+	member_title_suffix3 {	String member_title_suffix3;	};
+	member_id4 {	UInt32 member_id4;	};
+	member_title_suffix4 {	String member_title_suffix4;	};
+	member_id5 {	UInt32 member_id5;	};
+	member_title_suffix5 {	String member_title_suffix5;	};
+	member_id6 {	UInt32 member_id6;	};
+	member_title_suffix6 {	String member_title_suffix6;	};
+	member_id7 {	UInt32 member_id7;	};
+	member_title_suffix7 {	String member_title_suffix7;	};
+	member_id8 {	UInt32 member_id8;	};
+	member_title_suffix8 {	String member_title_suffix8;	};
+	member_id9 {	UInt32 member_id9;	};
+	member_title_suffix9 {	String member_title_suffix9;	};
+	member_id10 {	UInt32 member_id10;	};
+	member_title_suffix10 {	String member_title_suffix10;	};
+	//-- command to RPC server
+}

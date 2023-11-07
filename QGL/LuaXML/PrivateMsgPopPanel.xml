@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<!-- Our to do list data -->
+<UI>
+	<Font Name="Data\mingliu.ttc" Width="12" Height="12" />
+	<Panel Name="PrivateMsgPopUpPanel" X="260" Y="480" Image="Data\inerface0001_main.tga" Left="400"
+		Top="273" Right="489" Bottom="354" Hide="0" LuaRButtonDown="OpenPrivateMsgPopPanel">
+	<!--<Panel Expand="1" Name="PrivateMsgPopUpPanel" Image="Data\inerface0001_main.tga" X="300" Y="100" 
+			Left          ="400" Top          ="273" Right          ="489" Bottom          ="354"
+			LineRectLeft  ="400" LineRectTop  ="300" LineRectRight  ="489" LineRectBottom  ="312" LineCount="4"
+			BottomRectLeft="400" BottomRectTop="340" BottomRectRight="489" BottomRectBottom="354"
+			Hide="0"
+		>-->
+		<PopUpMenu Name="PrivateMsgPopUp" X="5" Y="7" BarWidth="77" Row="5" Column="6" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000"
+			SelBarColor="FF7880F0" LuaLButtonDown="PrivateMsgPopUpFunc" LuaRButtonDown="OpenPrivateMsgPopPanel">
+		</PopUpMenu>
+	</Panel>
+</UI>

@@ -1,0 +1,27 @@
+//-- Config
+config
+{
+	SubPath="Logic/";
+	ClassID=59000;
+	StartID=59000;
+	EndID  =59999;
+}
+
+//-- include
+
+//-- object class
+class RelationSystem
+{
+	//-- object attributes
+
+	//-- method
+public:
+	CB_RequestSetSiblingTitlePrefix(String thirdWord);
+	SetSiblingTitlePrefix(String prefix);
+	
+	CB_RequestSetSiblingTitleSuffix(String prefix);
+	SetSiblingTitleSuffix(String suffix);
+	
+	CB_RequestSelectMarriageTime();
+	SelectMarriageTime(UInt32 hour,UInt32 minute);
+}

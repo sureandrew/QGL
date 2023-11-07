@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" ?>
+<UI>
+	<ID Name="ReqTrading" />
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	<Panel Name="ReqTradingBox" X="253" Y="267" Image="Data\inerface0004_main_A.tga" Left="314" Top="293" Right="542" Bottom="391" 
+		Drag="1" DragLeft="0" DragTop="0" DragRight="228" DragBottom="98" LuaRButtonUp="">
+		
+		<StaticText Name="TradingReqMsg" X="0" Y="25" Width="227" Height="20" Row="1" Column="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		
+		<StaticText Name="TradingReqWarningMsg" X="0" Y="40" Width="227" Height="20" Row="1" Column="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		
+		<Button Name="ReqTradingYes" Image="Data\inerface0004_main_A.tga" X="43" Y="60" LuaLButtonUp="ConfirmReqTrading">
+			<ButtonRect State="0" Left="4" Top="511" Right="68" Bottom="528" />
+			<ButtonRect State="1" Left="70" Top="511" Right="134" Bottom="528" />
+			<ButtonRect State="2" Left="136" Top="511" Right="200" Bottom="528" />
+		</Button>
+		
+		
+		<Button Name="ReqTradingNo" Image="Data\inerface0004_main_A.tga" X="110" Y="60" LuaLButtonUp="RejectReqTrading">
+			<ButtonRect State="0" Left="4" Top="530" Right="68" Bottom="547" />
+			<ButtonRect State="1" Left="70" Top="530" Right="134" Bottom="547" />
+			<ButtonRect State="2" Left="136" Top="530" Right="200" Bottom="547" />
+		</Button>
+	
+	</Panel>
+</UI>

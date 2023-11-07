@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<UI>
+	<ID Name="ShowSkillName" />
+	<!--<Font Name="Data\mingliu.ttc" Width="12" Height="12" />-->
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	<Panel Name="ShowSkillPanel" X="0" Y="0" Image="" Left="0" Top="0" Right="800" Bottom="600">
+		<UIImage Name="ShowSkillPanelBKImage" X="574" Y="111" Image="Data\inerface0001_main.tga" Left="695" Top="657" Right="890" Bottom="693" NotDetected="1" />
+	
+		<StaticText Name="ShowActorNameist" X="0" Y="0" Row="0" Column="0" Width="200" Height="20" EdgeCode="LIGHT" FontColor="FF0FF0FF" ShadowColor="FF000000" >
+		</StaticText>
+	
+		<StaticText Name="ShowActorNamesnd" X="0" Y="0" Row="0" Column="0" Width="200" Height="20" EdgeCode="LIGHT" FontColor="FF0FF0FF" ShadowColor="FF000000" >
+		</StaticText>
+
+		<Button Name="ShowSkillButton" Image="Data\inerface0001_main.tga" X="772" Y="115"
+			LuaLButtonUp="onClickShow">
+			<ButtonRect State="0" Left="582" Top="654" Right="608" Bottom="680" />
+			<ButtonRect State="1" Left="612" Top="654" Right="638" Bottom="680" />
+			<ButtonRect State="2" Left="642" Top="654" Right="699" Bottom="680" />
+		</Button>
+	</Panel>
+
+</UI>

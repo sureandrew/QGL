@@ -1,0 +1,36 @@
+//-- Config
+config
+{
+	SubPath="Logic/";
+	ClassID=19000;
+	StartID=19000;
+	EndID  =19999;
+}
+
+//-- include
+#include "BatActor.h"
+
+//-- object class
+class BatMob : BatActor
+{
+	//-- object attributes
+	info { 		UInt32 mob_id;
+			String raname; 	
+              	                 };
+
+	owner { 	UInt32 owner_id; 	};
+	partner {	UInt32 partner_id;	};
+	mobType { 	UInt8 mob_type;		};
+	boss	{	Boolean	boss;		};
+	partnerType { UInt8 partner_type;};	
+	native {	UInt16 HP_native;
+				UInt16 SP_native;
+				UInt16 ATK_native;
+				UInt16 DEF_native;
+				UInt16 SPD_native;
+				UInt16 POW_native;
+				UInt16 HIT_native;
+				UInt16 EVA_native;	};
+	grow {		float grow;			};
+	partnerColor{	UInt16 colorIndex;	};
+}

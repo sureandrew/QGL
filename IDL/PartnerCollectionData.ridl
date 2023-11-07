@@ -1,0 +1,26 @@
+//-- Config	
+config
+{
+	SubPath="Data/";
+	ClassID=10300;
+	StartID=10300;
+	EndID  =10309;
+	TwoDirect=1;
+}
+
+//-- include
+
+//-- object class
+class PartnerCollectionData : NetObject
+{
+	//-- object state
+	key {
+		UInt32 collection_uid;
+	};	
+	info
+	{
+		UInt32 collection_id;
+		UInt32 char_id;
+	};	
+	//-- command to RPC server
+}

@@ -1,0 +1,85 @@
+<?xml version="1.0" ?>
+<UI>
+	<ID Name="PetDetail" />
+	<Font Name="Data\simsun.ttc" Width="12" Height="12" />
+	<Panel Name="PetDetailPanel" Image="Data\interface0013_main_G.tga" X="33" Y="73" 
+		Left="566" Top="3" Right="881" Bottom="261" NotDetected="0" DetectImage="1"
+		LuaRButtonUp="ClosePetDetail" LuaKeyChar="ClosePetDetail">
+		
+		<Button Name="PetDetailPanelClose" Image="Data\interface0005_main_B.tga" X="296" Y="4" LuaLButtonDown="ClosePetDetail" Tips="关闭" TimeOutCount="50" LuaTimeOut="DefaultTips">
+			<ButtonRect State="0" Left="335" Top="476" Right="349" Bottom="489" />
+			<ButtonRect State="1" Left="352" Top="476" Right="366" Bottom="489" />
+			<ButtonRect State="2" Left="369" Top="476" Right="383" Bottom="489" />
+		</Button>
+		
+		<AniIcon Name="PetDetailModel"  X="-180" Y="-200" Rotation = "1" AnimationIndex = "0" Loop = "1" Align = "0" Hide="0" Image="m00001_t001.ent"/>
+		
+		<UIImage Name="PetDetailElement1" Image="Data\interface0013_main_G.tga" X="110" Y="130" Left="454" Top="310" Right="476" Bottom="332" Hide="1" />
+		<UIImage Name="PetDetailElement2" Image="Data\interface0013_main_G.tga" X="110" Y="130" Left="430" Top="310" Right="452" Bottom="332" Hide="1" />
+		<UIImage Name="PetDetailElement3" Image="Data\interface0013_main_G.tga" X="110" Y="130" Left="406" Top="310" Right="428" Bottom="332" Hide="1" />
+		<UIImage Name="PetDetailElement4" Image="Data\interface0013_main_G.tga" X="110" Y="130" Left="381" Top="310" Right="403" Bottom="332" Hide="1" />
+		<UIImage Name="PetDetailElement5" Image="Data\interface0013_main_G.tga" X="110" Y="130" Left="478" Top="310" Right="500" Bottom="332" Hide="1" />
+		
+		<StaticText Name="PetDetailName" X="186" Y="13" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="96" Height="20" NotDetected="1" Align="Center">
+			9999
+		</StaticText>
+		
+		<UIImage Name="PetDetailSex0" X="287" Y="13" Image="Data\interface0013_main_G.tga" Left="476" Top="120" Right="491" Bottom="134" Hide="1"/>
+		<UIImage Name="PetDetailSex1" X="287" Y="13" Image="Data\interface0013_main_G.tga" Left="476" Top="144" Right="488" Bottom="158" Hide="1"/>
+		<UIImage Name="PetDetailSex255" X="287" Y="13" Image="Data\interface0013_main_G.tga" Left="498" Top="118" Right="510" Bottom="134" Hide="1"/>
+		
+		<StaticText Name="PetDetailType" X="186" Y="40" Height="20" Width="116" Row="1" Colume="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+		99
+		</StaticText>
+		
+		<StaticText Name="PetDetailLevel" X="186" Y="61" Height="20" Width="116" Row="1" Colume="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+		99
+		</StaticText>
+		
+		<LinerImage Name="PetDetailExp" X="186" Y="81" Image="Data\interface0013_main_G.tga" Left="384" Top="121"
+			Right="390" Bottom="135" LineWidth="116" BaseWidth="116" Hide="0" Denumerator="100" Numerator="0" />
+		<StaticText Name="PetDetailExpText" X="186" Y="82" Height="20" Width="116" Row="1" Colume="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+		2222/3333
+		</StaticText>
+		<!--	
+		<StaticText Name="PetDetailReqLv" X="196 " Y="82" Height="20" Width="116" Row="1" Colume="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+		0
+		</StaticText>-->
+		
+		<LinerImage Name="PetDetailVPBar" X="186" Y="123" Image="Data\interface0013_main_G.tga" Left="368" Top="121"
+			Right="374" Bottom="135" LineWidth="116" BaseWidth="116" Hide="0" Denumerator="100" Numerator="0" />
+		<StaticText Name="PetDetailVPText" X="186" Y="124" Height="20" Width="116" Row="1" Colume="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+		8888/12345
+		</StaticText>
+		
+		<StaticText Name="PetDetailLife" X="38" Y="166" Height="20" Width="116" Row="1" Colume="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+		30
+		</StaticText>
+		
+		<StaticText Name="PetDetailSpirit" X="186" Y="145" Height="20" Width="116" Row="1" Colume="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+		無雙無雙無雙
+		</StaticText>
+		
+		<LinerImage Name="PetDetailFoodBar" X="186" Y="102" Image="Data\interface0013_main_G.tga" Left="392" Top="121"
+			Right="398" Bottom="137" LineWidth="116" BaseWidth="116" Hide="0" Denumerator="100" Numerator="0" />
+			
+		<StaticText Name="PetDetailFood" X="186" Y="103" Height="20" Width="121" Row="1" Colume="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+		100/100
+		</StaticText>
+		
+		
+		<StaticText Name="PetDetailFavor" X="186" Y="166" Height="20" Width="121" Row="1" Colume="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Align="Center">
+		100/100
+		</StaticText>
+		
+		<AniIcon Name="PetDetailSkill0" X="13"  Y="216" Image="" Tips="ShortCut 1" TimeOutCount="50" LuaTimeOut="DefaultTips" AutoDelete="0" InsertToEventList = "1" Detect = "1" Hide="1"/>
+		<AniIcon Name="PetDetailSkill1" X="50"  Y="216" Image="" Tips="ShortCut 1" TimeOutCount="50" LuaTimeOut="DefaultTips" AutoDelete="0" InsertToEventList = "1" Detect = "1" Hide="1"/>
+		<AniIcon Name="PetDetailSkill2" X="87"  Y="216" Image="" Tips="ShortCut 1" TimeOutCount="50" LuaTimeOut="DefaultTips" AutoDelete="0" InsertToEventList = "1" Detect = "1" Hide="1"/>
+		<AniIcon Name="PetDetailSkill3" X="124" Y="216" Image="" Tips="ShortCut 1" TimeOutCount="50" LuaTimeOut="DefaultTips" AutoDelete="0" InsertToEventList = "1" Detect = "1" Hide="1"/>
+		<AniIcon Name="PetDetailSkill4" X="161" Y="216" Image="" Tips="ShortCut 1" TimeOutCount="50" LuaTimeOut="DefaultTips" AutoDelete="0" InsertToEventList = "1" Detect = "1" Hide="1"/>
+		<AniIcon Name="PetDetailSkill5" X="198" Y="216" Image="" Tips="ShortCut 1" TimeOutCount="50" LuaTimeOut="DefaultTips" AutoDelete="0" InsertToEventList = "1" Detect = "1" Hide="1"/>
+		<AniIcon Name="PetDetailSkill6" X="235" Y="216" Image="" Tips="ShortCut 1" TimeOutCount="50" LuaTimeOut="DefaultTips" AutoDelete="0" InsertToEventList = "1" Detect = "1" Hide="1"/>
+		<AniIcon Name="PetDetailSkill7" X="272" Y="216" Image="" Tips="ShortCut 1" TimeOutCount="50" LuaTimeOut="DefaultTips" AutoDelete="0" InsertToEventList = "1" Detect = "1" Hide="1"/>
+		
+	</Panel>
+</UI>

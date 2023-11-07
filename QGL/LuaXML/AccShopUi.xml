@@ -1,0 +1,147 @@
+<?xml version="1.0" ?>
+<UI>
+	<ID Name="AccShop" />
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	<Panel Name="AccShopPanel" X="182" Y="79" Image="Data\interface0025_main_K3.tga" Left="10" Top="2" Right="445" Bottom="446" 
+		Drag="1" DragLeft="0" DragTop="0" DragRight="159" DragBottom="365" DetectImage = "1" 
+		LuaRButtonUp="FunAccShopClose" LuaKeyChar="FunAccShopClose">
+		
+		<Button Name="AccShopItemBtn00" Image="Data\interface0025_main_K3.tga" X="22" Y="46" LuaLButtonDown="FunSelectAccShop00">
+			<ButtonRect State="0" Left="460" Top="422" Right="647" Bottom="468" />
+			<ButtonRect State="1" Left="460" Top="359" Right="647" Bottom="405" />
+			<ButtonRect State="2" Left="460" Top="305" Right="647" Bottom="351" />
+		</Button>
+		<AniIcon Name="AccShopItem00"  X="25" Y="49" Hide="1" LuaLButtonUp="FunSelectAccShop00" LuaMouseMove="FunAccShopMouseOver00" LuaMouseOut="FunAccShopMouseOut" Image="" Detect="1" AutoDelete="0" InsertToEventList = "1"/>
+		<StaticText Name="AccShopItemName00" X="68" Y="50" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="136" Height="20"  Align="Left" >
+		</StaticText>
+		<StaticText Name="AccShopItemCost00" X="68" Y="70" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="136" Height="20" Align="Left" >
+		</StaticText>
+		
+		<Button Name="AccShopItemBtn01" Image="Data\interface0025_main_K3.tga" X="224" Y="46" LuaLButtonDown="FunSelectAccShop01">
+			<ButtonRect State="0" Left="460" Top="422" Right="647" Bottom="468" />
+			<ButtonRect State="1" Left="460" Top="359" Right="647" Bottom="405" />
+			<ButtonRect State="2" Left="460" Top="305" Right="647" Bottom="351" />
+		</Button>
+		<AniIcon Name="AccShopItem01"  X="227" Y="49" Hide="1" LuaLButtonUp="FunSelectAccShop01" LuaMouseMove="FunAccShopMouseOver01" LuaMouseOut="FunAccShopMouseOut" Image="" Detect = "1" AutoDelete="0" InsertToEventList = "1"/>
+		<StaticText Name="AccShopItemName01" X="270" Y="50" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="136" Height="20" Align="Left">
+		</StaticText>
+		<StaticText Name="AccShopItemCost01" X="270" Y="70" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="136" Height="20" Align="Left">
+		</StaticText>
+		
+		<Button Name="AccShopItemBtn02" Image="Data\interface0025_main_K3.tga" X="22" Y="111" LuaLButtonDown="FunSelectAccShop02">
+			<ButtonRect State="0" Left="460" Top="422" Right="647" Bottom="468" />
+			<ButtonRect State="1" Left="460" Top="359" Right="647" Bottom="405" />
+			<ButtonRect State="2" Left="460" Top="305" Right="647" Bottom="351" />
+		</Button>
+		<AniIcon Name="AccShopItem02"  X="25" Y="114" Hide="1" LuaLButtonUp="FunSelectAccShop02" LuaMouseMove="FunAccShopMouseOver02" LuaMouseOut="FunAccShopMouseOut" Image="" Detect = "1" AutoDelete="0" InsertToEventList = "1"/>
+		<StaticText Name="AccShopItemName02" X="68" Y="115" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="136" Height="20" Align="Left" >
+		</StaticText>
+		<StaticText Name="AccShopItemCost02" X="68" Y="135" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="136" Height="20" Align="Left" >
+		</StaticText>
+		
+		<Button Name="AccShopItemBtn03" Image="Data\interface0025_main_K3.tga" X="224" Y="111" LuaLButtonDown="FunSelectAccShop03">
+			<ButtonRect State="0" Left="460" Top="422" Right="647" Bottom="468" />
+			<ButtonRect State="1" Left="460" Top="359" Right="647" Bottom="405" />
+			<ButtonRect State="2" Left="460" Top="305" Right="647" Bottom="351" />
+		</Button>
+		<AniIcon Name="AccShopItem03"  X="227" Y="114" Hide="1" LuaLButtonUp="FunSelectAccShop03" LuaMouseMove="FunAccShopMouseOver03" LuaMouseOut="FunAccShopMouseOut" Image="" Detect = "1" AutoDelete="0" InsertToEventList = "1"/>
+		<StaticText Name="AccShopItemName03" X="270" Y="115" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="136" Height="20" Align="Left" >
+		</StaticText>
+		<StaticText Name="AccShopItemCost03" X="270" Y="135" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="136" Height="20" Align="Left" >
+		</StaticText>
+		
+		<Button Name="AccShopItemBtn04" Image="Data\interface0025_main_K3.tga" X="22" Y="176" LuaLButtonDown="FunSelectAccShop04">
+			<ButtonRect State="0" Left="460" Top="422" Right="647" Bottom="468" />
+			<ButtonRect State="1" Left="460" Top="359" Right="647" Bottom="405" />
+			<ButtonRect State="2" Left="460" Top="305" Right="647" Bottom="351" />
+		</Button>
+		<AniIcon Name="AccShopItem04"  X="25" Y="179" Hide="1" LuaLButtonUp="FunSelectAccShop04" LuaMouseMove="FunAccShopMouseOver04" LuaMouseOut="FunAccShopMouseOut" Image="" Detect = "1" AutoDelete="0" InsertToEventList = "1"/>
+		<StaticText Name="AccShopItemName04" X="68" Y="180" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="136" Height="20" Align="Left" >
+		</StaticText>
+		<StaticText Name="AccShopItemCost04" X="68" Y="200" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="136" Height="20" Align="Left" >
+		</StaticText>
+		
+		<Button Name="AccShopItemBtn05" Image="Data\interface0025_main_K3.tga" X="224" Y="176" LuaLButtonDown="FunSelectAccShop05">
+			<ButtonRect State="0" Left="460" Top="422" Right="647" Bottom="468" />
+			<ButtonRect State="1" Left="460" Top="359" Right="647" Bottom="405" />
+			<ButtonRect State="2" Left="460" Top="305" Right="647" Bottom="351" />
+		</Button>
+		<AniIcon Name="AccShopItem05"  X="227" Y="179" Hide="1" LuaLButtonUp="FunSelectAccShop05" LuaMouseMove="FunAccShopMouseOver05" LuaMouseOut="FunAccShopMouseOut" Image="" Detect = "1" AutoDelete="0" InsertToEventList = "1"/>
+		<StaticText Name="AccShopItemName05" X="270" Y="180" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="136" Height="20" Align="Left" >
+		</StaticText>
+		<StaticText Name="AccShopItemCost05" X="270" Y="200" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="136" Height="20" Align="Left" >
+		</StaticText>
+		
+		<Button Name="AccShopItemBtn06" Image="Data\interface0025_main_K3.tga" X="22" Y="241" LuaLButtonDown="FunSelectAccShop06">
+			<ButtonRect State="0" Left="460" Top="422" Right="647" Bottom="468" />
+			<ButtonRect State="1" Left="460" Top="359" Right="647" Bottom="405" />
+			<ButtonRect State="2" Left="460" Top="305" Right="647" Bottom="351" />
+		</Button>
+		<AniIcon Name="AccShopItem06"  X="25" Y="244" Hide="1" LuaLButtonUp="FunSelectAccShop06" LuaMouseMove="FunAccShopMouseOver06" LuaMouseOut="FunAccShopMouseOut" Image="" Detect = "1" AutoDelete="0" InsertToEventList = "1"/>
+		<StaticText Name="AccShopItemName06" X="68" Y="245" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="136" Height="20" Align="Left" >
+		</StaticText>
+		<StaticText Name="AccShopItemCost06" X="68" Y="265" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="136" Height="20" Align="Left" >
+		</StaticText>
+		
+		<Button Name="AccShopItemBtn07" Image="Data\interface0025_main_K3.tga" X="224" Y="241" LuaLButtonDown="FunSelectAccShop07">
+			<ButtonRect State="0" Left="460" Top="422" Right="647" Bottom="468" />
+			<ButtonRect State="1" Left="460" Top="359" Right="647" Bottom="405" />
+			<ButtonRect State="2" Left="460" Top="305" Right="647" Bottom="351" />
+		</Button>
+		<AniIcon Name="AccShopItem07"  X="227" Y="244" Hide="1" LuaLButtonUp="FunSelectAccShop07" LuaMouseMove="FunAccShopMouseOver07" LuaMouseOut="FunAccShopMouseOut" Image="" Detect = "1" AutoDelete="0" InsertToEventList = "1"/>
+		<StaticText Name="AccShopItemName07" X="270" Y="245" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="136" Height="20" Align="Left" >
+		</StaticText>
+		<StaticText Name="AccShopItemCost07" X="270" Y="265" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="136" Height="20" Align="Left" >
+		</StaticText>
+		
+		<Button Name="AccShopItemBtn08" Image="Data\interface0025_main_K3.tga" X="22" Y="306" LuaLButtonDown="FunSelectAccShop08">
+			<ButtonRect State="0" Left="460" Top="422" Right="647" Bottom="468" />
+			<ButtonRect State="1" Left="460" Top="359" Right="647" Bottom="405" />
+			<ButtonRect State="2" Left="460" Top="305" Right="647" Bottom="351" />
+		</Button>
+		<AniIcon Name="AccShopItem08"  X="25" Y="309" Hide="1" LuaLButtonUp="FunSelectAccShop08" LuaMouseMove="FunAccShopMouseOver08" LuaMouseOut="FunAccShopMouseOut" Image="" Detect = "1" AutoDelete="0" InsertToEventList = "1"/>
+		<StaticText Name="AccShopItemName08" X="68" Y="310" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="136" Height="20" Align="Left" >
+		</StaticText>
+		<StaticText Name="AccShopItemCost08" X="68" Y="330" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="136" Height="20" Align="Left" >
+		</StaticText>
+		
+		<Button Name="AccShopItemBtn09" Image="Data\interface0025_main_K3.tga" X="224" Y="306" LuaLButtonDown="FunSelectAccShop09">
+			<ButtonRect State="0" Left="460" Top="422" Right="647" Bottom="468" />
+			<ButtonRect State="1" Left="460" Top="359" Right="647" Bottom="405" />
+			<ButtonRect State="2" Left="460" Top="305" Right="647" Bottom="351" />
+		</Button>
+		<AniIcon Name="AccShopItem09"  X="227" Y="309" Hide="1" LuaLButtonUp="FunSelectAccShop09" LuaMouseMove="FunAccShopMouseOver09" LuaMouseOut="FunAccShopMouseOut" Image="" Detect = "1" AutoDelete="0" InsertToEventList = "1"/>
+		<StaticText Name="AccShopItemName09" X="270" Y="310" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="136" Height="20" Align="Left" >
+		</StaticText>
+		<StaticText Name="AccShopItemCost09" X="270" Y="330" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="136" Height="20" Align="Left" >
+		</StaticText>
+		
+		<StaticText Name="AccShopPageDesc" X="184" Y="366" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="65" Height="20" NotDetected="1" Align="Center" >
+		</StaticText>
+		<StaticText Name="AccShopCurAcc" X="336" Y="368" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="75" Height="20" NotDetected="1" Align="Center" >
+		</StaticText>
+		
+		<Button Name="AccShopCloseBtn" Image="Data\interface0025_main_K3.tga" X="401" Y="9" LuaLButtonDown="FunAccShopClose">
+			<ButtonRect State="0" Left="460" Top="14" Right="482" Bottom="30" />
+			<ButtonRect State="1" Left="485" Top="14" Right="507" Bottom="30" />
+			<ButtonRect State="2" Left="510" Top="14" Right="532" Bottom="30" />
+		</Button>
+		<Button Name="AccShopPrevPageBtn" Image="Data\interface0025_main_K3.tga" X="159" Y="364" LuaLButtonDown="FunAccShopPrevPage">
+			<ButtonRect State="0" Left="459" Top="39" Right="483" Bottom="61" />
+			<ButtonRect State="1" Left="459" Top="64" Right="483" Bottom="86" />
+			<ButtonRect State="2" Left="459" Top="89" Right="483" Bottom="111" />
+		</Button>
+		<Button Name="AccShopNextPageBtn" Image="Data\interface0025_main_K3.tga" X="250" Y="364" LuaLButtonDown="FunAccShopNextPage">
+			<ButtonRect State="0" Left="495" Top="39" Right="519" Bottom="61" />
+			<ButtonRect State="1" Left="495" Top="64" Right="519" Bottom="86" />
+			<ButtonRect State="2" Left="495" Top="89" Right="519" Bottom="111" />
+		</Button>
+		<Button Name="AccShopBuySelItemBtn" Image="Data\interface0025_main_K3.tga" X="168" Y="409" LuaLButtonDown="FunAccShopBuySelItem">
+			<ButtonRect State="0" Left="458" Top="207" Right="548" Bottom="226" />
+			<ButtonRect State="1" Left="458" Top="232" Right="548" Bottom="251" />
+			<ButtonRect State="2" Left="458" Top="257" Right="548" Bottom="276" />
+		</Button>
+		
+		<UIImage Name="AccShopSelectedRect" X="22" Y="46" Image="Data\interface0025_main_K3.tga" Left="460" Top="305" Right="647" Bottom="351" AutoDelete="0" NotDetected="1"/>
+	</Panel>
+</UI>

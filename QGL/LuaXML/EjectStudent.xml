@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" ?>
+<UI>
+	<ID Name="EjectStudent" />
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	<Panel Name="EjectStudentPanel" Image="Data\interface0038_master.tga" X="280" Y="210" 
+			Left="4" Top="7" Right="247" Bottom="185" LuaRButtonUp="CloseEjectStudentPanel"  DetectImage = "1"
+			Drag="1" DragLeft="0" DragTop="0" DragRight="699" DragBottom="404" >
+			
+		<Button Name="EjectStudentPanelClose" Image="Data\interface0038_master.tga" X="209" Y="10" LuaLButtonDown="CloseEjectStudentPanel">
+			<ButtonRect State="0" Left="11" Top="271" Right="33" Bottom="286" />
+			<ButtonRect State="1" Left="35" Top="271" Right="58" Bottom="286" />
+			<ButtonRect State="2" Left="61" Top="271" Right="83" Bottom="286" />
+		</Button>
+		
+		<StaticText Name="EjectStudentDesc" X="0" Y="40" Width="250" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		你要将哪个徒弟逐出师门?请选择:
+		</StaticText>
+		
+		<ScrollBarV Name="EjectStudentScroll" X="223" Y="61" Width ="10" Height="80" Limit="0" BarColor="0" LuaLButtonDown="EjectStudentScroll">
+			<PrevButton Name="EjectStudentUp" Image="Data\interface0038_master.tga" X="0" Y="0" LuaLButtonUp="EjectStudentScrollUp">
+				<ButtonRect State="0" Left="88" Top="271" Right="97" Bottom="284" />
+				<ButtonRect State="1" Left="101" Top="271" Right="110" Bottom="284" />
+				<ButtonRect State="2" Left="114" Top="271" Right="123" Bottom="284" />
+			</PrevButton>
+			<NextButton Name="EjectStudentDown" Image="Data\interface0038_master.tga" X="0" Y="66" LuaLButtonUp="EjectStudentScrollDown">
+				<ButtonRect State="0" Left="88" Top="289" Right="97" Bottom="302" />
+				<ButtonRect State="1" Left="101" Top="289" Right="110" Bottom="302" />
+				<ButtonRect State="2" Left="114" Top="289" Right="123" Bottom="302" />
+			</NextButton>
+			<MoveButton Image="Data\interface0038_master.tga" X="0" Y="14"  LuaMouseMove="EjectStudentScroll">
+				<ButtonRect State="0" Left="129" Top="272" Right="138" Bottom="300" />
+				<ButtonRect State="1" Left="129" Top="272" Right="138" Bottom="300" />
+				<ButtonRect State="2" Left="129" Top="272" Right="138" Bottom="300" />
+			</MoveButton>
+		</ScrollBarV>
+		
+		<UIImage Name="EjectStudentSelected" X="9" Y="0" Image="Data\interface0038_master.tga" Left="10" Top="192" Right="221" Bottom="212" NotDetected="1" Hide="1" />
+			
+		<StaticText Name="EjectStudentName00" X="9" Y="64" Width="211" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="EjectStudentName01" X="9" Y="84" Width="211" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="EjectStudentName02" X="9" Y="104" Width="211" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="EjectStudentName03" X="9" Y="124" Width="211" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+	
+		
+		<UIImage Name="EjectStudentSelect00" X="9" Y="61" Image="" Left="0" Top="0" Right="211" Bottom="20" Detect="1" LuaLButtonUp="SelectEjectStudent00" LuaLButtonDBLCLK="DBLCLKEjectStudent00"/>
+		<UIImage Name="EjectStudentSelect01" X="9" Y="81" Image="" Left="0" Top="0" Right="211" Bottom="20" Detect="1" LuaLButtonUp="SelectEjectStudent01" LuaLButtonDBLCLK="DBLCLKEjectStudent01"/>
+		<UIImage Name="EjectStudentSelect02" X="9" Y="101" Image="" Left="0" Top="0" Right="211" Bottom="20" Detect="1" LuaLButtonUp="SelectEjectStudent02" LuaLButtonDBLCLK="DBLCLKEjectStudent02"/>
+		<UIImage Name="EjectStudentSelect03" X="9" Y="121" Image="" Left="0" Top="0" Right="211" Bottom="20" Detect="1" LuaLButtonUp="SelectEjectStudent03" LuaLButtonDBLCLK="DBLCLKEjectStudent03"/>
+
+		<Button Name="EjectStudentButtonOK" Image="Data\interface0038_master.tga" X="35" Y="149" LuaLButtonUp="EjectStudentButtonOK">
+			<ButtonRect State="0" Left="10" Top="225" Right="73" Bottom="241" />
+			<ButtonRect State="1" Left="76" Top="225" Right="139" Bottom="241" />
+			<ButtonRect State="2" Left="142" Top="225" Right="205" Bottom="241" />
+		</Button>
+		
+		<Button Name="EjectStudentButtonCancel" Image="Data\interface0038_master.tga" X="135" Y="149" LuaLButtonUp="EjectStudentButtonCancel">
+			<ButtonRect State="0" Left="10" Top="244" Right="73" Bottom="260" />
+			<ButtonRect State="1" Left="76" Top="244" Right="139" Bottom="260" />
+			<ButtonRect State="2" Left="142" Top="244" Right="205" Bottom="260" />
+		</Button>
+			
+	</Panel>
+	
+</UI>

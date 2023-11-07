@@ -1,0 +1,137 @@
+//-- Config
+config
+{
+	SubPath="Service/";
+	TrustOnly=0;
+	StartID=3000;
+	EndID=3999;
+}
+
+//-- Include header
+#include "Common/common_binary.h"
+
+struct NpcCreateType
+{
+	UInt32		npc_id;
+	UInt16		x;
+	UInt16		y;
+	UInt32		lifeTime;
+	UInt32		eventId;
+	UInt32		char_id;
+};
+
+typedef StlVector<NpcCreateType, ManagedAllocator<NpcCreateType> > NpcCreateList;
+
+//-- RPC functions
+private:
+RegisterProxy(ServiceID serviceId);
+UnregisterProxy(ServiceID serviceId);
+ReleaseSession(SessionID sid, Boolean bDelete);
+SyncProxy();
+CB_SyncProxy();
+
+nonblock:
+ChangeSessionId(SessionID oldSessId);
+block:
+ResumeSession();
+CB_ResumeSession(Boolean valid);
+RemoteCreateNpc(UInt16 map_id, UInt8 line_id, UInt32 owner_id,
+			NpcCreateList npcList);
+QueryInstance(UInt16 instId, UInt32 owner_id);
+CB_QueryInstance(Boolean bExist, UInt16 allowCount);
+
+//-- Map
+CharacterEnter(EnterInfo info, UInt32Vector memberIdList, 
+				AntiAddictInfo addictInfo, String buffCache,UInt32 uiLineupId,int iKeyPos);
+CharacterLeave(Boolean bCallback);
+NpcEnter(UInt32 npc_id, UInt16 map_id, UInt8 line_id, UInt16 x, UInt16 y,
+			UInt32 followId);
+
+nonblock:
+ChangeLoadLevel(UInt8 level);
+RankTitleUpdate(UInt32Vector char_ids, UInt16Vector title_ids);
+GuildUpdate(NetGroup * addGrp);
+GuildRemove(UInt32Vector guild_uids);
+GuildMemberUpdate(NetGroup * addGrp);
+GuildMemberRemove(UInt32Vector char_ids);
+MsgCharacterUpdate(NetGroup * grp);
+ManorForceOut(UInt32 guild_UID, UInt32Vector guild_charUIDs, Boolean memberKick);
+block:
+
+public:
+CB_Error(UInt32 err, String errMsg);
+// send to client when character enter
+CB_EnterSuccess(NetObject* map, NetObject* character);
+CB_CharacterStuff(NetObject* bag, NetObject* scriptSys, NetObject* questSys,
+	NetGroup* skillGroup, NetGroup* partnerGroup, NetGroup* petGroup,
+	UInt8 addictHealth);
+CB_LeaveSuccess(Boolean bDelete);
+CB_CharacterEnter();		// to world service
+CB_PartyEnter();
+CB_NpcEnter();
+//-- Battle for client
+CB_EnterBattle(NetObject *battle, NetGroup *grp, UInt8 PlayerTeam, 
+				UInt8 battleState, UInt32 npcId);
+
+private:
+//-- Cheat
+CharacterCheat(UInt32 exe_id, UInt32 SrcAcct_id, UInt32 target_acct_id, UInt32 target_char_id, String command);
+CB_CharacterCheat();
+
+nonblock:
+UpdateLimitedItemRemain(NetGroup* limitedItemData);
+block:
+
+public:
+ShowPublicItemDetail(UInt32 char_id, UInt32 item_uid, UInt32 char_idTo);
+ShowPublicPartnerDetail(UInt32 char_id, UInt32 partner_id, UInt32 char_idTo);
+ShowPublicPetDetail(UInt32 char_id, UInt32 pet_id, UInt32 char_idTo);
+
+//charge shop
+OpenChargeShop();
+CloseChargeShop();
+CB_OpenChargeShop(NetGroup* chargeShop, NetGroup* discountGroup, NetObject* limitedItem);
+
+CB_SyncCharacter();
+CB_SyncItem();
+CB_SyncPartner();
+CB_AddPartnersSuccess();
+CB_ShowPublicItemDetail(NetObject* item);
+CB_ShowPublicPartnerDetail(NetObject* Partner, UInt16Vector skillIDs);
+CB_ShowPublicPetDetail(NetObject* Pet, UInt16Vector skillIDs);
+
+nonblock:
+SendMapMessage(RPCNetID charNetID, String Msg);
+SendMapEmotion(RPCNetID charNetID, UInt32 emo_id, RPCNetID TargetNetID, bool isPet);
+CB_ReceiveMapMessage(String Msg, String SrcName, SessionIDVector listeners);
+CB_ReceiveMapEmotion(UInt32 emo_id, String SrcName, String TargetName, bool isPet);
+block:
+CB_ForceLogout(String forceOutMsg);
+
+//global channel
+ChangeMoney(UInt32 owner_id,Int32 change);
+
+private:
+nonblock:
+ClientDisconnect();
+
+public:
+GetPosition(UInt32 targetId);
+CB_GetPosition(UInt32 mapX, UInt32 mapY);
+UpdateWantedReward(UInt32 targetId, Int32 money);
+CB_UpdateWantedReward(Boolean result);
+
+public:
+DeleteGenerationFromWorld(UInt32 uiTargetId,UInt32 uiRelatedId);
+RecvGenerationAccmulation(UInt32 uiTargetId,UInt32 uiRelatedId,UInt32 uiAcc);
+GenerationOnlineNotify(UInt32 uiTargetId,UInt32 uiRelatedId);
+GenerationOfflineNotify(UInt32 uiTargetId,UInt32 uiRelatedId);
+GetGenenrationCharsResult(NetGroup* pResult);
+
+nonblock:
+ShowPublicItemDetailFromOtherLine(UInt32 char_id, UInt32 item_uid, UInt32 char_idTo);
+ShowPublicPartnerDetailFromOtherLine(UInt32 char_id, UInt32 partner_id, UInt32 char_idTo);
+ShowPublicPetDetailFromOtherLine(UInt32 char_id, UInt32 pet_id, UInt32 char_idTo);
+CB_ShowPublicPartnerDetailFromOtherLine(NetObject* Partner, UInt16Vector skillIDs, UInt32 char_idTo);
+CB_ShowPublicPetDetailFromOtherLine(NetObject* Pet, UInt16Vector skillIDs, UInt32 char_idTo);
+CB_ShowPublicItemDetailFromOtherLine(NetObject* item, UInt32 char_idTo);

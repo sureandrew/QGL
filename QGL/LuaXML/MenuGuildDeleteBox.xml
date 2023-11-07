@@ -1,0 +1,37 @@
+<?xml version="1.0" ?>
+<UI>
+	<ID Name="MenuGuildDeleteBox"/>
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	<Panel Name="MenuGuildDeleteBoxPanel" X="253" Y="267" Image="Data\interface0035_Guild2.tga" Left="104" Top="860" Right="305" Bottom="1023" 
+		Drag="1" DragLeft="0" DragTop="0" DragRight="201" DragBottom="163" LuaRButtonUp="CloseMenuGuildDeleteBox" DetectImage = "1">
+				
+		
+		<EditBox Name="MenuGuildDeleteBoxEdit" X="14" Y="48" Row="3" Column="8"  Width="200"EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" Limit="20" Expand="1" LuaKeyChar="MenuGuildDeleteBoxKeyIn" >
+		
+		</EditBox>
+			
+		
+		<StaticText Name="MenuGuildDeleteBoxText" X="12" Y="26" Row="2" Column="14" EdgeCode="LIGHT" FontColor="FFEDD97A" ShadowColor="FF000000">
+			请输入驱逐成员的理由
+		</StaticText>
+		
+		<Button Name="MenuGuildDeleteBoxYes" Image="Data\inerface0004_main_A.tga" X="55" Y="140" LuaLButtonUp="KickGuildMemberLua">
+			<ButtonRect State="0" Left="4" Top="511" Right="68" Bottom="528" />
+			<ButtonRect State="1" Left="70" Top="511" Right="134" Bottom="528" />
+			<ButtonRect State="2" Left="136" Top="511" Right="200" Bottom="528" />
+			<ButtonRect State="3" Left="136" Top="511" Right="200" Bottom="528" />
+		</Button>
+		
+		
+		<Button Name="MenuGuildDeleteBoxNo" Image="Data\inerface0004_main_A.tga" X="125" Y="140" LuaLButtonUp="CloseMenuGuildDeleteBox">
+			<ButtonRect State="0" Left="4" Top="530" Right="68" Bottom="547" />
+			<ButtonRect State="1" Left="70" Top="530" Right="134" Bottom="547" />
+			<ButtonRect State="2" Left="136" Top="530" Right="200" Bottom="547" />
+			<ButtonRect State="2" Left="136" Top="530" Right="200" Bottom="547" />
+		</Button>
+		
+	</Panel>
+	
+	
+</UI>

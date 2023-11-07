@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" ?>
+<UI>
+	<ID Name="MixShopGem" />
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	<Panel Name="MixShopGemPanel" X="253" Y="150" Image="Data\interface0032_thebox_42.tga" Left="5" Top="1" Right="345" Bottom="424" 
+		Drag="1" DragLeft="0" DragTop="0" DragRight="340" DragBottom="457" DetectImage = "1" 
+		LuaRButtonUp="CloseMixShopGem" LuaKeyChar="CloseMixShopGem" >
+		
+		<UIImage Name="MixShopTitle01" X="140" Y="5" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="365" Top="13" Right="424" Bottom="30" Hide="1" />
+		<UIImage Name="MixShopTitle02" X="140" Y="5" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="365" Top="34" Right="424" Bottom="51" Hide="1" />
+		<UIImage Name="MixShopTitle03" X="140" Y="5" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="365" Top="56" Right="424" Bottom="73" Hide="1" /> 
+		<UIImage Name="MixShopTitle10" X="140" Y="5" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="365" Top="77" Right="424" Bottom="94" Hide="1" />
+		<UIImage Name="MixShopTitle15" X="140" Y="5" Image="Data\interface0032_thebox_42B.tga" NotDetected = "1" Left="365" Top="13" Right="424" Bottom="30" Hide="1" />
+		<UIImage Name="MixShopTitle16" X="140" Y="5" Image="Data\interface0032_thebox_42B.tga" NotDetected = "1" Left="365" Top="34" Right="424" Bottom="51" Hide="1" />
+		<UIImage Name="MixShopTitle17" X="140" Y="5" Image="Data\interface0032_thebox_42C.tga" NotDetected = "1" Left="347" Top="19" Right="408" Bottom="37" Hide="1" />
+		
+		<Button Name="MixShopGetCross" Image="Data\interface0032_thebox_42.tga" X="307" Y="9" LuaLButtonUp="CloseMixShopGem">
+			<ButtonRect State="0" Left="433" Top="11" Right="457" Bottom="29" />
+			<ButtonRect State="1" Left="458" Top="11" Right="482" Bottom="29" />
+			<ButtonRect State="2" Left="483" Top="11" Right="507" Bottom="29" />
+		</Button>
+		
+		<!--
+		<UIImage Name="MixShopGemEqItemBG" X="249" Y="40" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="521" Top="202" Right="577" Bottom="258" Hide="1" />
+		<AniIcon Name="MixShopGemEqItem"  X="256" Y="47" Hide="1" LuaLButtonUp="" Detect = "1"/>
+		<StaticText Name="MixShopGemEqItemName" X="64" Y="55" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="80" Height="20" NotDetected="1" Align="Left" Hide="1" >
+		</StaticText>
+		-->
+		
+		<!-- gem mix -->
+		<UIImage Name="MixShopGemTipsBG" X="36" Y="55" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="422" Top="520" Right="695" Bottom="592" Hide="1" />		
+		
+		<UIImage Name="MixShopGemTipsBG2" X="120" Y="160" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="420" Top="492" Right="570" Bottom="510" Hide="1" />		
+		
+		<UIImage Name="MixShopGemBG00" X="30" Y="190" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="365" Top="315" Right="411" Bottom="361" Hide="1" />		
+		<AniIcon Name="MixShopGemItem00"  X="32" Y="192" Hide="1" LuaLButtonUp="" Detect = "1"/>
+
+		<UIImage Name="MixShopGemBG01" X="90" Y="190" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="365" Top="315" Right="411" Bottom="361" Hide="1" />				
+		<AniIcon Name="MixShopGemItem01"  X="92" Y="192" Hide="1" LuaLButtonUp="" Detect = "1"/>
+
+		<UIImage Name="MixShopGemBG02" X="150" Y="190" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="365" Top="315" Right="411" Bottom="361" Hide="1" />		
+		<AniIcon Name="MixShopGemItem02"  X="152" Y="192" Hide="1" LuaLButtonUp="" Detect = "1"/>
+
+		<UIImage Name="MixShopGemBG03" X="210" Y="190" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="365" Top="315" Right="411" Bottom="361" Hide="1" />		
+		<AniIcon Name="MixShopGemItem03"  X="212" Y="192" Hide="1" LuaLButtonUp="" Detect = "1"/>
+
+		<UIImage Name="MixShopGemBG04" X="270" Y="190" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="365" Top="315" Right="411" Bottom="361" Hide="1" />		
+		<AniIcon Name="MixShopGemItem04"  X="272" Y="192" Hide="1" LuaLButtonUp="" Detect = "1"/>
+
+		<!-- gem inlay -->
+		<UIImage Name="MixShopGemInlayEqItemBG" X="238" Y="59" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="365" Top="315" Right="411" Bottom="361" Hide="1" />		
+		<AniIcon Name="MixShopGemInlayEqItem"  X="240" Y="61" Hide="1" LuaLButtonUp="MixShopGemInlayEqItemMove" Detect = "1"/>
+		<UIImage Name="MixShopGemInlayEqItemNameBG" X="30" Y="71" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="420" Top="377" Right="570" Bottom="395" Hide="1" />
+		
+		<UIImage Name="MixShopGemInlayGemItemBG" X="238" Y="129" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="365" Top="315" Right="411" Bottom="361" Hide="1" />		
+		<AniIcon Name="MixShopGemInlayGemItem"  X="240" Y="131" Hide="1" LuaLButtonUp="MixShopGemInlayConsumeItemMove" Detect = "1"/>
+		<UIImage Name="MixShopGemInlayGemItemNameBG" X="30" Y="141" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="420" Top="446" Right="570" Bottom="464" Hide="1" />
+		
+		<UIImage Name="MixShopGemInlayConsumeItemBG" X="238" Y="199" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="365" Top="315" Right="411" Bottom="361" Hide="1" />		
+		<AniIcon Name="MixShopGemInlayConsumeItem"  X="240" Y="201" Hide="1" LuaLButtonUp="MixShopGemInlayGemItemMove" Detect = "1"/>
+		<UIImage Name="MixShopGemInlayConsumeItemNameBG" X="30" Y="211" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="420" Top="470" Right="570" Bottom="488" Hide="1" />
+		
+		<!-- gem remove -->
+		<UIImage Name="MixShopGemRemoveEqItemBG" X="241" Y="61" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="365" Top="315" Right="411" Bottom="361" Hide="1" />		
+		<AniIcon Name="MixShopGemRemoveEqItem"  X="243" Y="63" Hide="1" LuaLButtonUp="MixShopGemRemoveEqItemMove" Detect = "1"/>
+		<UIImage Name="MixShopGemRemoveEqItemNameBG" X="30" Y="71" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="420" Top="377" Right="570" Bottom="395" Hide="1" />
+
+		<UIImage Name="MixShopGemRemoveGemItemBG00" X="211" Y="121" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="365" Top="315" Right="411" Bottom="361" Hide="1" />		
+		<UIImage Name="MixShopGemRemoveGemItemSelect00" X="211" Y="121" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="477" Top="315" Right="523" Bottom="361" Hide="1" />		
+		<AniIcon Name="MixShopGemRemoveGemItem00"  X="213" Y="123" Hide="1" LuaLButtonUp="MixShopGemRemoveGemItemMove00" Detect = "1"/>
+
+		<UIImage Name="MixShopGemRemoveGemItemBG01" X="271" Y="121" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="365" Top="315" Right="411" Bottom="361" Hide="1" />		
+		<UIImage Name="MixShopGemRemoveGemItemSelect01" X="271" Y="121" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="477" Top="315" Right="523" Bottom="361" Hide="1" />		
+		<AniIcon Name="MixShopGemRemoveGemItem01"  X="273" Y="123" Hide="1" LuaLButtonUp="MixShopGemRemoveGemItemMove01" Detect = "1"/>
+
+		<UIImage Name="MixShopGemRemoveGemItemNameBG" X="30" Y="131" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="420" Top="400" Right="570" Bottom="418" Hide="1" />
+		
+		<UIImage Name="MixShopGemRemoveConsumeItemBG" X="241" Y="181" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="365" Top="315" Right="411" Bottom="361" Hide="1" />		
+		<AniIcon Name="MixShopGemRemoveConsumeItem"  X="243" Y="183" Hide="1" LuaLButtonUp="MixShopGemRemoveConsumeItemMove" Detect = "1"/>
+		<UIImage Name="MixShopGemRemoveConsumeItemNameBG" X="30" Y="191" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="420" Top="423" Right="570" Bottom="441" Hide="1" />
+
+		
+		<!-- gem melting -->
+		<UIImage Name="MixShopGemMeltingTipsBG" X="31" Y="55" Image="Data\interface0032_thebox_42B.tga" NotDetected = "1" Left="422" Top="520" Right="695" Bottom="592" Hide="1" />		
+		
+		<UIImage Name="MixShopGemMeltingTipsBG2" X="36" Y="187" Image="Data\interface0032_thebox_42B.tga" NotDetected = "1" Left="432" Top="374" Right="598" Bottom="391" Hide="1" />		
+		
+		<UIImage Name="MixShopGemMeltingItemBG" X="251" Y="170" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="365" Top="315" Right="411" Bottom="361" Hide="1" />		
+		<AniIcon Name="MixShopGemMeltingItem"  X="253" Y="172" Hide="1" LuaLButtonUp="" Detect = "1"/>
+		
+		<!-- gem polishing -->
+		<UIImage Name="MixShopGemPolishingTipsBG" X="37" Y="47" Image="Data\interface0032_thebox_42B.tga" NotDetected = "1" Left="422" Top="470" Right="695" Bottom="513" Hide="1" />		
+		
+		<UIImage Name="MixShopGemPolishingTipsBG1" X="43" Y="113" Image="Data\interface0032_thebox_42B.tga" NotDetected = "1" Left="432" Top="398" Right="520" Bottom="416" Hide="1" />		
+		<UIImage Name="MixShopGemPolishingBG1" X="236" Y="97" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="365" Top="315" Right="411" Bottom="361" Hide="1" />		
+		<AniIcon Name="MixShopGemPolishingItem1"  X="238" Y="99" Hide="1" LuaLButtonUp="" Detect = "1"/>
+		
+		<UIImage Name="MixShopGemPolishingTipsBG2" X="43" Y="168" Image="Data\interface0032_thebox_42B.tga" NotDetected = "1" Left="432" Top="422" Right="535" Bottom="440" Hide="1" />		
+		<UIImage Name="MixShopGemPolishingBG2" X="236" Y="151" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="365" Top="315" Right="411" Bottom="361" Hide="1" />		
+		<AniIcon Name="MixShopGemPolishingItem2"  X="238" Y="153" Hide="1" LuaLButtonUp="" Detect = "1"/>
+		
+		<UIImage Name="MixShopGemPolishingTipsBG3" X="43" Y="215" Image="Data\interface0032_thebox_42B.tga" NotDetected = "1" Left="432" Top="446" Right="535" Bottom="464" Hide="1" />		
+		<UIImage Name="MixShopGemPolishingBG3" X="236" Y="206" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="365" Top="315" Right="411" Bottom="361" Hide="1" />		
+		
+		<UIImage Name="MixShopGemPolishingItemEff0" X="236" Y="203" Image="Data\interface0032_thebox_42B.tga" NotDetected = "1" Left="744" Top="10" Right="789" Bottom="55" Hide="1" />		
+		<UIImage Name="MixShopGemPolishingItemEff1" X="236" Y="203" Image="Data\interface0032_thebox_42B.tga" NotDetected = "1" Left="744" Top="70" Right="789" Bottom="115" Hide="1" />		
+		<UIImage Name="MixShopGemPolishingItemEff5" X="236" Y="203" Image="Data\interface0032_thebox_42B.tga" NotDetected = "1" Left="744" Top="130" Right="789" Bottom="175" Hide="1" />		
+		<UIImage Name="MixShopGemPolishingItemEff6" X="236" Y="203" Image="Data\interface0032_thebox_42B.tga" NotDetected = "1" Left="744" Top="190" Right="789" Bottom="235" Hide="1" />		
+		<UIImage Name="MixShopGemPolishingItemEff2" X="236" Y="203" Image="Data\interface0032_thebox_42B.tga" NotDetected = "1" Left="744" Top="250" Right="789" Bottom="295" Hide="1" />		
+		<UIImage Name="MixShopGemPolishingItemEff7" X="236" Y="203" Image="Data\interface0032_thebox_42B.tga" NotDetected = "1" Left="744" Top="310" Right="789" Bottom="355" Hide="1" />		
+		<UIImage Name="MixShopGemPolishingItemEff3" X="236" Y="203" Image="Data\interface0032_thebox_42B.tga" NotDetected = "1" Left="744" Top="370" Right="789" Bottom="415" Hide="1" />		
+		<UIImage Name="MixShopGemPolishingItemEff4" X="236" Y="203" Image="Data\interface0032_thebox_42B.tga" NotDetected = "1" Left="744" Top="430" Right="789" Bottom="475" Hide="1" />		
+		
+		
+		<!-- color stone mix -->
+		<UIImage Name="MixShopColorStoneMixTipsBG" X="37" Y="47" Image="Data\interface0032_thebox_42C.tga" NotDetected = "1" Left="353" Top="97" Right="626" Bottom="170" Hide="1" />		
+		
+		<UIImage Name="MixShopColorStoneMixTipsBG1" X="43" Y="153" Image="Data\interface0032_thebox_42C.tga" NotDetected = "1" Left="353" Top="75" Right="472" Bottom="92" Hide="1" />		
+		<UIImage Name="MixShopColorStoneMixBG1" X="236" Y="137" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="365" Top="315" Right="411" Bottom="361" Hide="1" />		
+		<AniIcon Name="MixShopColorStoneMixItem1"  X="238" Y="139" Hide="1" LuaLButtonUp="" Detect = "1"/>
+		
+		<UIImage Name="MixShopColorStoneMixTipsBG2" X="43" Y="208" Image="Data\interface0032_thebox_42C.tga" NotDetected = "1" Left="353" Top="45" Right="456" Bottom="63" Hide="1" />		
+		<UIImage Name="MixShopColorStoneMixBG2" X="236" Y="200" Image="Data\interface0032_thebox_42.tga" NotDetected = "1" Left="365" Top="315" Right="411" Bottom="361" Hide="1" />		
+		<AniIcon Name="MixShopColorStoneMixItem2"  X="238" Y="202" Hide="1" LuaLButtonUp="" Detect = "1"/>
+		
+		
+		<LinerImage Name="MixShopGemTimeLine" X="20" Y="325" Image="Data\interface0032_thebox_Q.tga" Left="43" Top="429"
+			Right="49" Bottom="447" LineWidth="300" BaseWidth="300" Hide="1" Denumerator="100" Numerator="1" />
+			
+		<UIImage Name="MixShopGemBlockImage" X="0" Y="0" Image="" Left="0" Top="0" Right="340" Bottom="394" Hide="1" />
+		
+		<Button Name="MixShopGemEqDrill" Image="Data\interface0032_thebox_42.tga" X="132" Y="421" LuaLButtonUp="" Hide="1">
+			<ButtonRect State="0" Left="5" Top="466" Right="97" Bottom="487" />
+			<ButtonRect State="1" Left="101" Top="466" Right="193" Bottom="487" />
+			<ButtonRect State="2" Left="197" Top="466" Right="289" Bottom="487" />
+			<ButtonRect State="3" Left="293" Top="466" Right="385" Bottom="487" />
+		</Button>
+		
+		<StaticText Name="MixShopGemConsumeMoney" X="124" Y="288" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="158" Height="20" NotDetected="1" Align="Center" Hide="1" >
+		</StaticText>
+		
+		<Button Name="MixShopGemEqRemove" Image="Data\interface0032_thebox_42.tga" X="32" Y="370" LuaLButtonUp="MixShopGemStartEqRemove" Hide="1">
+			<ButtonRect State="0" Left="5" Top="492" Right="97" Bottom="513" />
+			<ButtonRect State="1" Left="101" Top="492" Right="193" Bottom="513" />
+			<ButtonRect State="2" Left="197" Top="492" Right="289" Bottom="513" />
+			<ButtonRect State="3" Left="293" Top="492" Right="385" Bottom="513" />
+		</Button>
+		
+		<Button Name="MixShopGemEqInlay" Image="Data\interface0032_thebox_42.tga" X="32" Y="370" LuaLButtonUp="MixShopGemStartEqInlay" Hide="1">
+			<ButtonRect State="0" Left="5" Top="518" Right="97" Bottom="539" />
+			<ButtonRect State="1" Left="101" Top="518" Right="193" Bottom="539" />
+			<ButtonRect State="2" Left="197" Top="518" Right="289" Bottom="539" />
+			<ButtonRect State="3" Left="293" Top="518" Right="385" Bottom="539" />
+		</Button>
+		
+		<Button Name="MixShopGemMix" Image="Data\interface0032_thebox_42.tga" X="32" Y="370" LuaLButtonUp="MixShopGemStartMix" Hide="1">
+			<ButtonRect State="0" Left="5" Top="570" Right="97" Bottom="591" />
+			<ButtonRect State="1" Left="101" Top="570" Right="193" Bottom="591" />
+			<ButtonRect State="2" Left="197" Top="570" Right="289" Bottom="591" />
+			<ButtonRect State="3" Left="293" Top="570" Right="385" Bottom="591" />
+		</Button>
+		
+		<Button Name="MixShopGemMelting" Image="Data\interface0032_thebox_42B.tga" X="32" Y="370" LuaLButtonUp="MixShopGemStartMelting" Hide="1">
+			<ButtonRect State="0" Left="3" Top="491" Right="96" Bottom="513" />
+			<ButtonRect State="1" Left="99" Top="491" Right="192" Bottom="513" />
+			<ButtonRect State="2" Left="195" Top="491" Right="288" Bottom="513" />
+			<ButtonRect State="3" Left="291" Top="491" Right="384" Bottom="513" />
+		</Button>
+		
+		<Button Name="MixShopGemPolishing" Image="Data\interface0032_thebox_42B.tga" X="32" Y="370" LuaLButtonUp="MixShopGemStartPolishing" Hide="1">
+			<ButtonRect State="0" Left="3" Top="517" Right="96" Bottom="539" />
+			<ButtonRect State="1" Left="99" Top="517" Right="192" Bottom="539" />
+			<ButtonRect State="2" Left="195" Top="517" Right="288" Bottom="539" />
+			<ButtonRect State="3" Left="291" Top="517" Right="384" Bottom="539" />
+		</Button>
+		
+		<Button Name="MixShopColorStoneMix" Image="Data\interface0032_thebox_42C.tga" X="32" Y="370" LuaLButtonUp="MixShopStartColorStoneMix" Hide="1">
+			<ButtonRect State="0" Left="3" Top="570" Right="96" Bottom="592" />
+			<ButtonRect State="1" Left="99" Top="570" Right="192" Bottom="592" />
+			<ButtonRect State="2" Left="195" Top="570" Right="288" Bottom="592" />
+			<ButtonRect State="3" Left="291" Top="570" Right="384" Bottom="592" />
+		</Button>
+		
+		<Button Name="MixShopGemCancel" Image="Data\interface0032_thebox_42.tga" X="200" Y="370" LuaLButtonUp="CancelMixShopGem" Hide="0">
+			<ButtonRect State="0" Left="5" Top="544" Right="97" Bottom="565" />
+			<ButtonRect State="1" Left="101" Top="544" Right="193" Bottom="565" />
+			<ButtonRect State="2" Left="197" Top="544" Right="289" Bottom="565" />
+			<ButtonRect State="3" Left="293" Top="544" Right="385" Bottom="565" />
+		</Button>
+		
+	</Panel>
+	
+	<!-- Moving Panel-->
+	<Panel Name="MixShopGemMovingPanel" Image="" X="0" Y="50" Left="0" Top="0" Right="40" Bottom="40"
+		 Hide="1" Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="MixShopGemEndDrag" LuaRButtonDown="ResetMixShopGemDrag" >
+		<AniIcon Name="MixShopGemMovingIcon" X="0" Y="0" Image=""  AutoDelete="0" Detect = "1" />
+	</Panel>
+</UI>

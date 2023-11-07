@@ -1,0 +1,357 @@
+<?xml version="1.0" ?>
+<UI>
+	<ID Name="QuestLogMenu" />
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />	
+	<Panel Name="QuestLogMenuPanel" Image="Data\interface0026_main_L.tga" X="150" Y="71" 
+		Left="4" Top="2" Right="521" Bottom="456" DetectImage = "1"
+		Drag="1" DragLeft="0" DragTop="0" DragRight="517" DragBottom="440" LuaRButtonUp="CloseQuestLog" LuaKeyChar="CloseQuestLog"
+		LuaMouseWheel="QuestLogMenuWheel">
+		<!-- Item Icons -->
+		
+		<!-- 1st row -->
+		<AniIcon Name="Quest000Icon" X="192" Y="370" Image="" Detect = "1" AutoDelete="0"  LuaLButtonUp=""
+			LuaRButtonUp=""  LuaMouseMove="QuestItemOver" LuaMouseOut = "QuestItemMouseOut" 
+			InsertToEventList = "1" />
+		<StaticText Name="Quest000Count" X="192" Y="370" Row="1" Column="14" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0">
+		</StaticText>
+			
+		<AniIcon Name="Quest001Icon" X="233" Y="370" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp=""
+			LuaRButtonUp=""  LuaMouseMove="QuestItemOver" LuaMouseOut = "QuestItemMouseOut" 
+			InsertToEventList = "1" />
+		<StaticText Name="Quest001Count" X="233" Y="370" Row="1" Column="14" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0">
+		</StaticText>
+		
+		<AniIcon Name="Quest002Icon" X="274" Y="370" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp=""
+			LuaRButtonUp=""  LuaMouseMove="QuestItemOver" LuaMouseOut = "QuestItemMouseOut" 
+			InsertToEventList = "1" />
+		<StaticText Name="Quest002Count" X="274" Y="370" Row="1" Column="14" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="1">
+		</StaticText>
+		
+		<AniIcon Name="Quest003Icon" X="315" Y="370" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp=""
+			LuaRButtonUp=""  LuaMouseMove="QuestItemOver" LuaMouseOut = "QuestItemMouseOut" 
+			InsertToEventList = "1" />
+		<StaticText Name="Quest003Count" X="315" Y="370" Row="1" Column="14" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="1">
+		</StaticText>
+			
+		<AniIcon Name="Quest004Icon" X="356" Y="370" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp=""
+			LuaRButtonUp=""  LuaMouseMove="QuestItemOver" LuaMouseOut = "QuestItemMouseOut" 
+			InsertToEventList = "1" />
+		<StaticText Name="Quest004Count" X="356" Y="370" Row="1" Column="14" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="1">
+		</StaticText>
+			
+		<AniIcon Name="Quest005Icon" X="397" Y="370" Image="" Detect = "1" AutoDelete="0" LuaLButtonUp=""
+			LuaRButtonUp=""  LuaMouseMove="QuestItemOver" LuaMouseOut = "QuestItemMouseOut" 
+			InsertToEventList = "1" />
+		<StaticText Name="Quest005Count" X="397" Y="370" Row="1" Column="14" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="1">
+		</StaticText>
+		
+		<!-- select rect Data\interface0005_main_B.tga -->
+		<UIImage Name="QuestSelectRect" X="0" Y="0" Image="Data\interface0026_main_L.tga" Left="388" Top="366" Right="430" Bottom="408" AutoDelete="0" NotDetected="1" Hide="1"
+		 TimeOutCount="100" LuaTimeOut="ShowQuestSelectRect"/>	
+	<!-- Select to QuestLogRadio -->	
+	<Panel Name="QuestLogRadio" X="1" Y="1" Left="0" Top="0" Right="40" Bottom="94">
+		<CheckBox Name="NoGettingQuestLog" X="75" Y="37" CheckX="0" CheckY="1" Image="Data\interface0026_main_L.tga" State="0" LuaLButtonDown="SelectNoQuestLog">
+			<CheckBoxRect Index="0" Left="531" Top="12" Right="617" Bottom="36" />
+			<CheckBoxRect Index="1" Left="531" Top="41" Right="617" Bottom="64" />
+			<CheckBoxRect Index="2" Left="531" Top="67" Right="617" Bottom="90" />
+		</CheckBox>
+
+		<CheckBox Name="GettingQuestLog" X="5" Y="37" CheckX="0" CheckY="1" Image="Data\interface0026_main_L.tga" State="1" LuaLButtonDown="SelectQuestLog">
+			<CheckBoxRect Index="0" Left="531" Top="101" Right="617" Bottom="122" />
+			<CheckBoxRect Index="1" Left="531" Top="130" Right="643" Bottom="150" />
+			<CheckBoxRect Index="2" Left="531" Top="531" Right="614" Bottom="178" />
+		</CheckBox>	
+	</Panel>
+	
+	<!-- Select to questTrace -->
+	<Panel Name="QTracePancel" X="1" Y="1" Left="0" Top="0" Right="40" Bottom="94">
+		<CheckBox Name="QTraceCheckBox" X="304" Y="423" CheckX="0" CheckY="1" Image="Data\interface0026_main_L.tga" State="0" LuaLButtonDown="SelectQuestTrace">
+			<CheckBoxRect Index="0" Left="308" Top="427" Right="328" Bottom="445" />
+			<CheckBoxRect Index="1" Left="308" Top="427" Right="328" Bottom="445" />
+			<CheckBoxRect Index="2" Left="221" Top="463" Right="241" Bottom="481" />
+		</CheckBox>
+	</Panel>
+		
+		<!-- Close Quest Lost Menu button -->
+		<Button Name="CloseQuestLogButton" Image="Data\interface0026_main_L.tga" X="485" Y="8" LuaLButtonUp="CloseQuestLog">
+			<ButtonRect State="0" Left="300" Top="464" Right="324" Bottom="482"/>
+			<ButtonRect State="1" Left="325" Top="464" Right="349" Bottom="482"/>
+			<ButtonRect State="2" Left="350" Top="464" Right="374" Bottom="482"/>
+		</Button>
+		<!-- Remove Quest Button -->
+		<Button Name="CancelQuestButton" Image="Data\interface0026_main_L.tga" X="44" Y="422" LuaLButtonUp="CancelQuest">
+			<ButtonRect State="0" Left="3" Top="463" Right="97" Bottom="486" />
+			<ButtonRect State="1" Left="3" Top="489" Right="97" Bottom="512" />
+			<ButtonRect State="2" Left="3" Top="515" Right="97" Bottom="538" />
+		</Button>
+		
+		<!-- ////   Main Quest  Introduction  List ////  -->
+		
+		<!-- Expend Folder Image -->
+		<UIImage Name="QuestLogExtendIcon" Hide="1" X="14" Y="30" Image="Data\interface0026_main_L.tga" 
+			Left="166" Top="466" Right="184" Bottom="478" AutoDelete="1" NotDetected="1" />
+			
+		<UIImage Name="QuestLogNotExtendIcon" Hide="1" X="14" Y="30" Image="Data\interface0026_main_L.tga" 
+			Left="190" Top="466" Right="208" Bottom="478" AutoDelete="1" NotDetected="1" />
+		
+		<!-- 1st Sel Quest Name -->
+		<CheckBox Name="QuestLineBtn1" Image="Data\interface0026_main_L.tga" X="11" Y="70" LuaLButtonDown="QuestMenuSel1">
+			<CheckBoxRect Index="0" Left="166" Top="517" Right="318" Bottom="535" />
+			<CheckBoxRect Index="1" Left="166" Top="517" Right="318" Bottom="535" />
+			<CheckBoxRect Index="2" Left="166" Top="493" Right="318" Bottom="511" />
+		</CheckBox>
+		
+		<StaticText Name="QuestLineText1" X="33" Y="71" Row="1" Column="15" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		
+		<UIImage Name="QuestLineState1" X="14" Y="73" Image="" Left="" Top=""	Right="" Bottom="" AutoDelete="1" NotDetected="1" />
+
+		<!-- 2nd  Sel Quest Name -->
+		<CheckBox Name="QuestLineBtn2" Image="Data\interface0026_main_L.tga" X="11" Y="88" LuaLButtonDown="QuestMenuSel2">
+			<CheckBoxRect Index="0" Left="166" Top="517" Right="318" Bottom="535" />
+			<CheckBoxRect Index="1" Left="166" Top="517" Right="318" Bottom="535" />
+			<CheckBoxRect Index="2" Left="166" Top="493" Right="318" Bottom="511" />
+		</CheckBox>
+		<StaticText Name="QuestLineText2" X="33" Y="89" Row="1" Column="15" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		
+		<UIImage Name="QuestLineState2" X="14" Y="91" Image="" Left="" Top=""	Right="" Bottom="" AutoDelete="1" NotDetected="1" />
+
+		<!-- 3rd  Sel Quest Name -->
+		<CheckBox Name="QuestLineBtn3" Image="Data\interface0026_main_L.tga" X="11" Y="106" LuaLButtonDown="QuestMenuSel3">
+			<CheckBoxRect Index="0" Left="166" Top="517" Right="318" Bottom="535" />
+			<CheckBoxRect Index="1" Left="166" Top="517" Right="318" Bottom="535" />
+			<CheckBoxRect Index="2" Left="166" Top="493" Right="318" Bottom="511" />
+		</CheckBox>
+		<StaticText Name="QuestLineText3" X="33" Y="107" Row="1" Column="15" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		
+		<UIImage Name="QuestLineState3" X="14" Y="109" Image="" Left="" Top=""	Right="" Bottom="" AutoDelete="1" NotDetected="1" />
+		<!-- 4th  Sel Quest Name -->
+		<CheckBox Name="QuestLineBtn4" Image="Data\interface0026_main_L.tga" X="11" Y="124" LuaLButtonDown="QuestMenuSel4">
+			<CheckBoxRect Index="0" Left="166" Top="517" Right="318" Bottom="535" />
+			<CheckBoxRect Index="1" Left="166" Top="517" Right="318" Bottom="535" />
+			<CheckBoxRect Index="2" Left="166" Top="493" Right="318" Bottom="511" />
+		</CheckBox>
+		<StaticText Name="QuestLineText4" X="33" Y="125" Row="1" Column="15" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		
+		<UIImage Name="QuestLineState4" X="14" Y="127" Image="" Left="" Top=""	Right="" Bottom="" AutoDelete="1" NotDetected="1" />
+		<!-- 5th  Sel Quest Name -->
+		<CheckBox Name="QuestLineBtn5" Image="Data\interface0026_main_L.tga" X="11" Y="142" LuaLButtonDown="QuestMenuSel5">
+			<CheckBoxRect Index="0" Left="166" Top="517" Right="318" Bottom="535" />
+			<CheckBoxRect Index="1" Left="166" Top="517" Right="318" Bottom="535" />
+			<CheckBoxRect Index="2" Left="166" Top="493" Right="318" Bottom="511" />
+		</CheckBox>
+		<StaticText Name="QuestLineText5" X="33" Y="143" Row="1" Column="15" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		
+		<UIImage Name="QuestLineState5" X="14" Y="145" Image="" Left="" Top=""	Right="" Bottom="" AutoDelete="1" NotDetected="1" />
+		<!-- 6th  Sel Quest Name -->
+		<CheckBox Name="QuestLineBtn6" Image="Data\interface0026_main_L.tga" X="11" Y="160" LuaLButtonDown="QuestMenuSel6">
+			<CheckBoxRect Index="0" Left="166" Top="517" Right="318" Bottom="535" />
+			<CheckBoxRect Index="1" Left="166" Top="517" Right="318" Bottom="535" />
+			<CheckBoxRect Index="2" Left="166" Top="493" Right="318" Bottom="511" />
+		</CheckBox>
+		<StaticText Name="QuestLineText6" X="33" Y="161" Row="1" Column="15" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		
+		<UIImage Name="QuestLineState6" X="14" Y="163" Image="" Left="" Top=""	Right="" Bottom="" AutoDelete="1" NotDetected="1" />
+		<!-- 7th Sel Quest Name -->
+		<CheckBox Name="QuestLineBtn7" Image="Data\interface0026_main_L.tga" X="11" Y="178" LuaLButtonDown="QuestMenuSel7">
+			<CheckBoxRect Index="0" Left="166" Top="517" Right="318" Bottom="535" />
+			<CheckBoxRect Index="1" Left="166" Top="517" Right="318" Bottom="535" />
+			<CheckBoxRect Index="2" Left="166" Top="493" Right="318" Bottom="511" />
+		</CheckBox>
+		<StaticText Name="QuestLineText7" X="33" Y="179" Row="1" Column="15" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		
+		<UIImage Name="QuestLineState7" X="14" Y="181" Image="" Left="" Top=""	Right="" Bottom="" AutoDelete="1" NotDetected="1" />
+		<!-- 8th Sel Quest Name -->
+		<CheckBox Name="QuestLineBtn8" Image="Data\interface0026_main_L.tga" X="11" Y="196" LuaLButtonDown="QuestMenuSel8">
+			<CheckBoxRect Index="0" Left="166" Top="517" Right="318" Bottom="535" />
+			<CheckBoxRect Index="1" Left="166" Top="517" Right="318" Bottom="535" />
+			<CheckBoxRect Index="2" Left="166" Top="493" Right="318" Bottom="511" />
+		</CheckBox>
+		<StaticText Name="QuestLineText8" X="33" Y="197" Row="1" Column="15" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		
+		<UIImage Name="QuestLineState8" X="14" Y="199" Image="" Left="" Top=""	Right="" Bottom="" AutoDelete="1" NotDetected="1" />
+		<!-- 9th Sel Quest Name -->
+		<CheckBox Name="QuestLineBtn9" Image="Data\interface0026_main_L.tga" X="11" Y="214" LuaLButtonDown="QuestMenuSel9">
+			<CheckBoxRect Index="0" Left="166" Top="517" Right="318" Bottom="535" />
+			<CheckBoxRect Index="1" Left="166" Top="517" Right="318" Bottom="535" />
+			<CheckBoxRect Index="2" Left="166" Top="493" Right="318" Bottom="511" />
+		</CheckBox>
+		<StaticText Name="QuestLineText9" X="33" Y="215" Row="1" Column="15" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		
+		<UIImage Name="QuestLineState9" X="14" Y="217" Image="" Left="" Top=""	Right="" Bottom="" AutoDelete="1" NotDetected="1" />
+		<!-- 10th Sel Quest Name -->
+		<CheckBox Name="QuestLineBtn10" Image="Data\interface0026_main_L.tga" X="11" Y="232" LuaLButtonDown="QuestMenuSel10">
+			<CheckBoxRect Index="0" Left="166" Top="517" Right="318" Bottom="535" />
+			<CheckBoxRect Index="1" Left="166" Top="517" Right="318" Bottom="535" />
+			<CheckBoxRect Index="2" Left="166" Top="493" Right="318" Bottom="511" />
+		</CheckBox>
+		<StaticText Name="QuestLineText10" X="33" Y="233" Row="1" Column="15" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		
+		<UIImage Name="QuestLineState10" X="14" Y="235" Image="" Left="" Top=""	Right="" Bottom="" AutoDelete="1" NotDetected="1" />
+		<!-- 11th Sel Quest Name -->
+		<CheckBox Name="QuestLineBtn11" Image="Data\interface0026_main_L.tga" X="11" Y="250" LuaLButtonDown="QuestMenuSel11">
+			<CheckBoxRect Index="0" Left="166" Top="517" Right="318" Bottom="535" />
+			<CheckBoxRect Index="1" Left="166" Top="517" Right="318" Bottom="535" />
+			<CheckBoxRect Index="2" Left="166" Top="493" Right="318" Bottom="511" />
+		</CheckBox>
+		<StaticText Name="QuestLineText11" X="33" Y="251" Row="1" Column="15" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		
+		<UIImage Name="QuestLineState11" X="14" Y="253" Image="" Left="" Top=""	Right="" Bottom="" AutoDelete="1" NotDetected="1" />
+		<!-- 12th Sel Quest Name -->
+		<CheckBox Name="QuestLineBtn12" Image="Data\interface0026_main_L.tga" X="11" Y="268" LuaLButtonDown="QuestMenuSel12">
+			<CheckBoxRect Index="0" Left="166" Top="517" Right="318" Bottom="535" />
+			<CheckBoxRect Index="1" Left="166" Top="517" Right="318" Bottom="535" />
+			<CheckBoxRect Index="2" Left="166" Top="493" Right="318" Bottom="511" />
+		</CheckBox>
+		<StaticText Name="QuestLineText12" X="33" Y="269" Row="1" Column="15" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		
+		<UIImage Name="QuestLineState12" X="14" Y="271" Image="" Left="" Top=""	Right="" Bottom="" AutoDelete="1" NotDetected="1" />
+		<!-- 13th Sel Quest Name -->
+		<CheckBox Name="QuestLineBtn13" Image="Data\interface0026_main_L.tga" X="11" Y="286" LuaLButtonDown="QuestMenuSel13">
+			<CheckBoxRect Index="0" Left="166" Top="517" Right="318" Bottom="535" />
+			<CheckBoxRect Index="1" Left="166" Top="517" Right="318" Bottom="535" />
+			<CheckBoxRect Index="2" Left="166" Top="493" Right="318" Bottom="511" />
+		</CheckBox>
+		<StaticText Name="QuestLineText13" X="33" Y="287" Row="1" Column="15" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		
+		<UIImage Name="QuestLineState13" X="14" Y="289" Image="" Left="" Top=""	Right="" Bottom="" AutoDelete="1" NotDetected="1" />
+		<!-- 14th Sel Quest Name -->
+		<CheckBox Name="QuestLineBtn14" Image="Data\interface0026_main_L.tga" X="11" Y="304" LuaLButtonDown="QuestMenuSel14">
+			<CheckBoxRect Index="0" Left="166" Top="517" Right="318" Bottom="535" />
+			<CheckBoxRect Index="1" Left="166" Top="517" Right="318" Bottom="535" />
+			<CheckBoxRect Index="2" Left="166" Top="493" Right="318" Bottom="511" />
+		</CheckBox>
+		<StaticText Name="QuestLineText14" X="33" Y="305" Row="1" Column="15" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		
+		<UIImage Name="QuestLineState14" X="14" Y="307" Image="" Left="" Top=""	Right="" Bottom="" AutoDelete="1" NotDetected="1" />
+		<!-- 15th Sel Quest Name -->
+		<CheckBox Name="QuestLineBtn15" Image="Data\interface0026_main_L.tga" X="11" Y="322" LuaLButtonDown="QuestMenuSel15">
+			<CheckBoxRect Index="0" Left="166" Top="517" Right="318" Bottom="535" />
+			<CheckBoxRect Index="1" Left="166" Top="517" Right="318" Bottom="535" />
+			<CheckBoxRect Index="2" Left="166" Top="493" Right="318" Bottom="511" />
+		</CheckBox>
+		<StaticText Name="QuestLineText15" X="33" Y="323" Row="1" Column="15" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		
+		<UIImage Name="QuestLineState15" X="14" Y="325" Image="" Left="" Top=""	Right="" Bottom="" AutoDelete="1" NotDetected="1" />
+		<!-- 16th Sel Quest Name -->
+		<CheckBox Name="QuestLineBtn16" Image="Data\interface0026_main_L.tga" X="11" Y="340" LuaLButtonDown="QuestMenuSel16">
+			<CheckBoxRect Index="0" Left="166" Top="517" Right="318" Bottom="535" />
+			<CheckBoxRect Index="1" Left="166" Top="517" Right="318" Bottom="535" />
+			<CheckBoxRect Index="2" Left="166" Top="493" Right="318" Bottom="511" />
+		</CheckBox>
+		<StaticText Name="QuestLineText16" X="33" Y="341" Row="1" Column="15" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		
+		<UIImage Name="QuestLineState16" X="14" Y="343" Image="" Left="" Top=""	Right="" Bottom="" AutoDelete="1" NotDetected="1" />
+		<!-- 17th Sel Quest Name -->
+		<CheckBox Name="QuestLineBtn17" Image="Data\interface0026_main_L.tga" X="11" Y="358" LuaLButtonDown="QuestMenuSel17">
+			<CheckBoxRect Index="0" Left="166" Top="517" Right="318" Bottom="535" />
+			<CheckBoxRect Index="1" Left="166" Top="517" Right="318" Bottom="535" />
+			<CheckBoxRect Index="2" Left="166" Top="493" Right="318" Bottom="511" />
+		</CheckBox>
+		<StaticText Name="QuestLineText17" X="33" Y="359" Row="1" Column="15" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		
+		<UIImage Name="QuestLineState17" X="14" Y="361" Image="" Left="" Top=""	Right="" Bottom="" AutoDelete="1" NotDetected="1" />
+		<!-- 18th Sel Quest Name -->
+		<CheckBox Name="QuestLineBtn18" Image="Data\interface0026_main_L.tga" X="11" Y="376" LuaLButtonDown="QuestMenuSel18">
+			<CheckBoxRect Index="0" Left="166" Top="517" Right="318" Bottom="535" />
+			<CheckBoxRect Index="1" Left="166" Top="517" Right="318" Bottom="535" />
+			<CheckBoxRect Index="2" Left="166" Top="493" Right="318" Bottom="511" />
+		</CheckBox>
+		<StaticText Name="QuestLineText18" X="33" Y="377" Row="1" Column="15" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		
+		<UIImage Name="QuestLineState18" X="14" Y="379" Image="" Left="" Top=""	Right="" Bottom="" AutoDelete="1" NotDetected="1" />
+		<!-- 19th Sel Quest Name -->
+		<CheckBox Name="QuestLineBtn19" Image="Data\interface0026_main_L.tga" X="11" Y="394" LuaLButtonDown="QuestMenuSel19">
+			<CheckBoxRect Index="0" Left="166" Top="517" Right="318" Bottom="535" />
+			<CheckBoxRect Index="1" Left="166" Top="517" Right="318" Bottom="535" />
+			<CheckBoxRect Index="2" Left="166" Top="493" Right="318" Bottom="511" />
+		</CheckBox>
+		<StaticText Name="QuestLineText19" X="33" Y="395" Row="1" Column="15" EdgeCode="SHADOW" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		
+		<UIImage Name="QuestLineState19" X="14" Y="397" Image="" Left="" Top=""	Right="" Bottom="" AutoDelete="1" NotDetected="1" />
+		
+		
+		<!-- Quest Content Description Chat Panel -->
+		<StaticText Name="QuestMenuTitle" X="195" Y="84" Row="1" Column="18" EdgeCode="SHADOW" FontColor="FFFFFF00" ShadowColor="FF000000" Align="Center" NotDetected="1">
+		</StaticText>
+		<ChatPanel Name="QuestMenuDesc" X="195" Y="118" Width="285" Height="260" ContinueRun="1" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" FillColor="7F0000FF" LuaLButtonDown="QuestMenuProcess" LuaRButtonUp="CloseQuestLog">
+			who knows~
+		</ChatPanel>
+		
+		<UIImage Name="QuestMenuTimeImage" Image="Data\interface0026_main_L.tga" X="300" Y="380" NotDetected="1"
+			Left="328" Top="493" Right="516" Bottom="524" Hide="1" AutoDelete="0"/>
+			
+		<StaticText Name="QuestMenuTimeTitle" X="310" Y="388" Row="1" Column="7" EdgeCode="SHADOW" FontColor="FFFFFFFF" 
+			ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		<StaticText Name="QuestMenuTimeText" X="380" Y="388" Row="1" Column="8" EdgeCode="SHADOW" FontColor="FFFFFFFF" 
+			ShadowColor="FF000000" NotDetected="1">
+		</StaticText>
+		
+		<!-- Quest Description List Scroll Bar  -->
+		<ScrollBarV Name="QMDesc_ScrollBarV" X="495" Y="70" Width ="15" Height="347" Limit="0" BarColor="0" LuaLButtonDown="QMDesc_ScrollMove" >
+		
+			<PrevButton Name="QMDesc_ScrollUpButton" Image="Data\interface0026_main_L.tga" X="0" Y="40"  LuaLButtonUp="QMDesc_ScrollUp">
+				<ButtonRect State="0" Left="100" Top="464" Right="114" Bottom="478"/>
+				<ButtonRect State="1" Left="116" Top="464" Right="130" Bottom="478"/>
+				<ButtonRect State="2" Left="132" Top="464" Right="146" Bottom="478"/>
+				<ButtonRect State="3" Left="132" Top="464" Right="146" Bottom="478"/>
+			</PrevButton>
+			
+			<NextButton Name="QMDesc_ScrollDownButton" Image="Data\interface0026_main_L.tga" X="0" Y="407"  LuaLButtonUp="QMDesc_ScrollDown">
+				<ButtonRect State="0" Left="100" Top="481" Right="114" Bottom="494"/>
+				<ButtonRect State="1" Left="116" Top="481" Right="130" Bottom="494"/>
+				<ButtonRect State="2" Left="132" Top="481" Right="146" Bottom="494"/>
+				<ButtonRect State="3" Left="132" Top="481" Right="146" Bottom="494"/>
+			</NextButton>
+			
+			<MoveButton Name="QMDesc_ScrollMoveButton" Image="Data\interface0026_main_L.tga" X="0" Y="55"  LuaMouseMove="QMDesc_ScrollMove">
+				<ButtonRect State="0" Left="149" Top="464" Right="163" Bottom="494" />
+				<ButtonRect State="1" Left="149" Top="464" Right="163" Bottom="494" />
+				<ButtonRect State="2" Left="149" Top="464" Right="163" Bottom="494" />
+			</MoveButton>
+		</ScrollBarV>	
+
+		<!-- Main Quest List ScrollBar V -->
+		<ScrollBarV Name="QMQList_ScrollV" X="166" Y="69" Width ="12" Height="334" Limit="0" BarColor="0" LuaLButtonDown="QMQList_ScrollMove">
+			<PrevButton Name="QMQList_ScrollUpButton" Image="Data\interface0026_main_L.tga" X="0" Y="0"  LuaLButtonUp="QMQList_ScrollUp">
+				<ButtonRect State="0" Left="101" Top="500" Right="111" Bottom="514"/>
+				<ButtonRect State="1" Left="114" Top="500" Right="124" Bottom="514"/>
+				<ButtonRect State="2" Left="128" Top="500" Right="138" Bottom="514"/>
+				<ButtonRect State="3" Left="128" Top="500" Right="138" Bottom="514"/>
+			</PrevButton>
+			
+			<NextButton Name="QMQList_ScrollDownButton" Image="Data\interface0026_main_L.tga" X="0" Y="370"  LuaLButtonUp="QMQList_ScrollDown">
+				<ButtonRect State="0" Left="101" Top="517" Right="111" Bottom="530"/>
+				<ButtonRect State="1" Left="114" Top="517" Right="124" Bottom="530"/>
+				<ButtonRect State="2" Left="128" Top="517" Right="138" Bottom="530"/>
+				<ButtonRect State="3" Left="128" Top="517" Right="138" Bottom="530"/>
+			</NextButton>
+			
+			<MoveButton Name="QMQList_ScrollMoveButton" Image="Data\interface0026_main_L.tga" X="0" Y="55"  LuaMouseMove="QMQList_ScrollMove">
+				<ButtonRect State="0" Left="142" Top="500" Right="153" Bottom="530" />
+				<ButtonRect State="1" Left="142" Top="500" Right="153" Bottom="530" />
+				<ButtonRect State="2" Left="142" Top="500" Right="153" Bottom="530" />
+			</MoveButton>
+		</ScrollBarV>
+	</Panel>
+</UI>

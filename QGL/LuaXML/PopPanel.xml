@@ -1,0 +1,49 @@
+<?xml version="1.0" ?>
+<!-- Our to do list data -->
+<UI>
+	<Font Name="Data\mingliu.ttc" Width="12" Height="12" />
+	<Panel Name="ColorPanel" Image="Data\interface008_chat.tga" X="290" Y="460" 
+			Left="114" Top="70" Right="147" Bottom="179"
+		>
+		<Button Image="Data\interface008_chat.tga" X="2" Y="3"  LuaLButtonUp="ChangeColor">
+			<ButtonRect State="0" Left="116" Top="73" Right="145" Bottom="85" />
+			<ButtonRect State="1" Left="116" Top="73" Right="145" Bottom="85" />
+			<ButtonRect State="2" Left="116" Top="73" Right="145" Bottom="85" />
+		</Button>
+		<Button Image="Data\interface008_chat.tga" X="2" Y="17"  LuaLButtonUp="ChangeColor">
+			<ButtonRect State="0" Left="116" Top="87" Right="145" Bottom="99" />
+			<ButtonRect State="1" Left="116" Top="87" Right="145" Bottom="99" />
+			<ButtonRect State="2" Left="116" Top="87" Right="145" Bottom="99" />
+		</Button>
+		<Button Image="Data\interface008_chat.tga" X="2" Y="30"  LuaLButtonUp="ChangeColor">
+			<ButtonRect State="0" Left="116" Top="100" Right="145" Bottom="112" />
+			<ButtonRect State="1" Left="116" Top="100" Right="145" Bottom="112" />
+			<ButtonRect State="2" Left="116" Top="100" Right="145" Bottom="112" />
+		</Button>
+		<Button Image="Data\interface008_chat.tga" X="2" Y="43"  LuaLButtonUp="ChangeColor">
+			<ButtonRect State="0" Left="116" Top="113" Right="145" Bottom="125" />
+			<ButtonRect State="1" Left="116" Top="113" Right="145" Bottom="125" />
+			<ButtonRect State="2" Left="116" Top="113" Right="145" Bottom="125" />
+		</Button>
+		<Button Image="Data\interface008_chat.tga" X="2" Y="56"  LuaLButtonUp="ChangeColor">
+			<ButtonRect State="0" Left="116" Top="126" Right="145" Bottom="138" />
+			<ButtonRect State="1" Left="116" Top="126" Right="145" Bottom="138" />
+			<ButtonRect State="2" Left="116" Top="126" Right="145" Bottom="138" />
+		</Button>
+		<Button Image="Data\interface008_chat.tga" X="2" Y="69"  LuaLButtonUp="ChangeColor">
+			<ButtonRect State="0" Left="116" Top="139" Right="145" Bottom="151" />
+			<ButtonRect State="1" Left="116" Top="139" Right="145" Bottom="151" />
+			<ButtonRect State="2" Left="116" Top="139" Right="145" Bottom="151" />
+		</Button>
+		<Button Image="Data\interface008_chat.tga" X="2" Y="82"  LuaLButtonUp="ChangeColor">
+			<ButtonRect State="0" Left="116" Top="152" Right="145" Bottom="164" />
+			<ButtonRect State="1" Left="116" Top="152" Right="145" Bottom="164" />
+			<ButtonRect State="2" Left="116" Top="152" Right="145" Bottom="164" />
+		</Button>
+		<Button Image="Data\interface008_chat.tga" X="2" Y="95"  LuaLButtonUp="ChangeColor">
+			<ButtonRect State="0" Left="116" Top="165" Right="145" Bottom="177" />
+			<ButtonRect State="1" Left="116" Top="165" Right="145" Bottom="177" />
+			<ButtonRect State="2" Left="116" Top="165" Right="145" Bottom="177" />
+		</Button>
+	</Panel>
+</UI>

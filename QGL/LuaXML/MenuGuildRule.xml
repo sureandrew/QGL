@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<!-- Our to do list data -->
+<UI>
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+		
+	<Panel Name="MenuGuildRuleEdit" X="200" Y="100"  Left="683"
+		Top="677" Right="1232" Bottom="1019" Hide="0" Image="Data\interface0035_Guild2.tga" 
+		Drag="1" DragLeft="0" DragTop="0" DragRight="549" DragBottom="342" LuaRButtonUp="CloseGuildRulePanel" DetectImage = "1">
+		
+		<Button Name="GuildClose" Image="Data\interface0035_Guild2.tga" X="516" Y="8" LuaLButtonUp="CloseGuildRulePanel">
+			<ButtonRect State="0" Left="590" Top="14" Right="612" Bottom="30" />	
+			<ButtonRect State="1" Left="615" Top="14" Right="638" Bottom="30" />
+			<ButtonRect State="2" Left="640" Top="14" Right="662" Bottom="30" />
+			<ButtonRect State="3" Left="640" Top="14" Right="662" Bottom="30" />
+			<ButtonRect State="4" Left="640" Top="14" Right="662" Bottom="30" />
+		</Button>
+		
+		<!--
+		<EditBox Name="MenuGuildRuleEditLine" Expand="1"  LinePitch="10" X="18" Y="33" Row="8" Column="15" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" Limit="300" Width="500" Height="254" 
+			LuaKeyChar="GuildRuleEditLineOnChar" LuaLButtonUp="SetGuildRuleEditLineFocus"  
+			></EditBox>
+		-->
+		
+		<ChatPanel Name="MenuGuildRuleEditLine" Edit="1" LinePitch="10" X="18" Y="33" Width="500" Height="254" ContinueRun="0" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" FillColor="7F0000FF" DisableScroll="1" Limit="300" UseEnter="1" MaxLine="11"
+			LuaKeyChar="GuildRuleEditLineOnChar" LuaLButtonUp="SetGuildRuleEditLineFocus"
+			>
+		</ChatPanel>
+		
+		<Button Name="MenuGuildRuleOK" Image="Data\interface0035_Guild2.tga" X="20" Y="300" LuaLButtonUp="ConfirmGuildRuleChange" >
+			<ButtonRect State="0" Left="387" Top="943" Right="481" Bottom="966" />
+			<ButtonRect State="1" Left="483" Top="943" Right="577" Bottom="966" />
+			<ButtonRect State="2" Left="579" Top="943" Right="673" Bottom="966" />
+		</Button>
+		
+		<Button Name="MenuGuildRuleCancel" Image="Data\interface0035_Guild2.tga" X="120" Y="300" LuaLButtonUp="CloseGuildRulePanel" >
+			<ButtonRect State="0" Left="387" Top="971" Right="481" Bottom="994" />
+			<ButtonRect State="1" Left="483" Top="971" Right="577" Bottom="994" />
+			<ButtonRect State="2" Left="579" Top="971" Right="673" Bottom="994" />
+		</Button>ww
+	</Panel>
+</UI>
+

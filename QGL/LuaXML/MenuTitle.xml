@@ -1,0 +1,99 @@
+<?xml version="1.0" ?>
+<UI>
+	<ID Name="MenuTitle" />
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	<Panel Name="TitlePanel" Image="Data\interface0010_main_E.tga" X="456" Y="73" 
+		Left="696" Top="290" Right="927" Bottom="587" LuaRButtonUp="CloseTitle" LuaKeyChar="CloseTitle" DetectImage = "1"
+		Drag="1" DragLeft="0" DragTop="0" DragRight="240" DragBottom="297"  LuaMouseWheel="TitlePanelWheel">
+		
+		<Button Name="TitleConfirm" Image="Data\interface0010_main_E.tga" X="10" Y="260" LuaLButtonUp="TitleConfirmLua">
+			<ButtonRect State="0" Left="7" Top="470" Right="101" Bottom="493" />
+			<ButtonRect State="1" Left="103" Top="470" Right="197" Bottom="493" />
+			<ButtonRect State="2" Left="199" Top="470" Right="293" Bottom="493" />
+		</Button>
+		
+		<Button Name="TitleCancel" Image="Data\interface0010_main_E.tga" X="130" Y="260" LuaLButtonUp="CloseTitle">
+			<ButtonRect State="0" Left="7" Top="498" Right="101" Bottom="521" />
+			<ButtonRect State="1" Left="103" Top="498" Right="197" Bottom="521" />
+			<ButtonRect State="2" Left="199" Top="498" Right="293" Bottom="521" />
+		</Button>
+
+		<Button Name="TitlePanelClose" Image="Data\interface0010_main_E.tga" X="200" Y="7"
+			LuaLButtonDown="CloseTitle" Tips="關閉">
+			<ButtonRect State="0" Left="350" Top="6" Right="374" Bottom="24" />
+			<ButtonRect State="1" Left="375" Top="6" Right="399" Bottom="24" />
+			<ButtonRect State="2" Left="400" Top="6" Right="424" Bottom="24" />
+		</Button>
+		
+		<ScrollBarV Name="TitlePanelScroll" X="211" Y="30" Width ="14" Height="228" Limit="0" BarColor="0" LuaLButtonUp="TitlePanelScrollLua">
+			<PrevButton Image="Data\interface0010_main_E.tga" X="30" Y="0" LuaLButtonUp="TitlePanelUp">
+				<ButtonRect State="0" Left="395" Top="144" Right="406" Bottom="158" />
+				<ButtonRect State="1" Left="409" Top="144" Right="420" Bottom="158" />
+				<ButtonRect State="2" Left="423" Top="144" Right="434" Bottom="158" />
+				<ButtonRect State="3" Left="423" Top="144" Right="434" Bottom="158" />
+			</PrevButton>
+			<NextButton Image="Data\interface0010_main_E.tga" X="30" Y="200" LuaLButtonUp="TitlePanelDown">
+				<ButtonRect State="0" Left="395" Top="160" Right="406" Bottom="173" />
+				<ButtonRect State="1" Left="409" Top="160" Right="420" Bottom="173" />
+				<ButtonRect State="2" Left="423" Top="160" Right="434" Bottom="173" />
+				<ButtonRect State="3" Left="423" Top="160" Right="434" Bottom="173" />
+			</NextButton>
+			<MoveButton Image="Data\interface0010_main_E.tga" X="30" Y="30" LuaMouseMove="TitlePanelScrollLua">
+				<ButtonRect State="0" Left="438" Top="144" Right="451" Bottom="174" />
+				<ButtonRect State="1" Left="438" Top="144" Right="451" Bottom="174" />
+				<ButtonRect State="2" Left="438" Top="144" Right="451" Bottom="174" />
+			</MoveButton>
+		</ScrollBarV>
+		
+		<UIImage Name="TitleHeader" Hide="0" X="80" Y="4" Image ="Data\interface0010_main_E.tga" Left="938" Top="302" Right="999" Bottom="318"/>	
+		<UIImage Name="TitleHighLight" Hide="0" X="9" Y="31" Image ="Data\interface0010_main_E.tga" Left="489" Top="553" Right="690" Bottom="576"/>	
+		
+		<StaticText Name="TitleName1" X="12" Y="35" Width="135" Height="20" Row="1" Column="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" 
+		LuaLButtonUp="SelectTitle" textDetect = "1">
+			無雙無雙無雙
+		</StaticText>
+		
+		<StaticText Name="TitleName2" X="12" Y="57" Width="135" Height="20" Row="1" Column="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" LuaLButtonUp="SelectTitle" textDetect = "1">
+			無雙無雙無雙
+		</StaticText>
+		
+		<StaticText Name="TitleName3" X="12" Y="79" Width="135" Height="20" Row="1" Column="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" LuaLButtonUp="SelectTitle" textDetect = "1">
+			無雙無雙無雙
+		</StaticText>
+		
+		<StaticText Name="TitleName4" X="12" Y="101" Width="135" Height="20" Row="1" Column="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" LuaLButtonUp="SelectTitle" textDetect = "1">
+			無雙無雙無雙
+		</StaticText>
+		
+		<StaticText Name="TitleName5" X="12" Y="123" Width="135" Height="20" Row="1" Column="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" LuaLButtonUp="SelectTitle" textDetect = "1">
+			無雙無雙無雙
+		</StaticText>
+		
+		<StaticText Name="TitleName6" X="12" Y="146" Width="135" Height="20" Row="1" Column="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" LuaLButtonUp="SelectTitle" textDetect = "1">
+			無雙無雙無雙
+		</StaticText>
+		
+		<StaticText Name="TitleName7" X="12" Y="168" Width="135" Height="20" Row="1" Column="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" LuaLButtonUp="SelectTitle" textDetect = "1">
+			無雙無雙無雙
+		</StaticText>
+		
+		<StaticText Name="TitleName8" X="12" Y="190" Width="135" Height="20" Row="1" Column="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" LuaLButtonUp="SelectTitle" textDetect = "1">
+			無雙無雙無雙
+		</StaticText>
+		
+		<StaticText Name="TitleName9" X="12" Y="212" Width="135" Height="20" Row="1" Column="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" LuaLButtonUp="SelectTitle" textDetect = "1">
+			無雙無雙無雙
+		</StaticText>
+		
+		<StaticText Name="TitleName10" X="12" Y="234" Width="135" Height="20" Row="1" Column="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" LuaLButtonUp="SelectTitle" textDetect = "1">
+			無雙無雙無雙
+		</StaticText>
+		
+		
+		
+		
+	</Panel>
+	
+	
+
+</UI>

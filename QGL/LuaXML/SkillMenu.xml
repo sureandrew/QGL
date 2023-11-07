@@ -1,0 +1,439 @@
+﻿<?xml version="1.0" ?>
+<UI>
+	<ID Name="Skill" />
+	<Font Name="Data\simsun.ttc" Width="12" Height="12" />
+	<Panel Name="SkillPanel" X="200" Y="71" 
+			Left="2" Top="2" Right="569" Bottom="460" DetectImage = "0"
+			Drag="1" DragLeft="0" DragTop="0" DragRight="336" DragBottom="446"  LuaKeyChar = "CloseSkillPanel"
+			LuaMouseWheel="SkillPanelWheel">
+		<UIImage  Name="SkillPanelBg" Hide="0" X="0" Y="0" Image="Data\interface0006_main_C.tga" Left="2" Top="2" Right="341" Bottom="460"
+		 AutoDelete="0"  LuaRButtonUp = "CloseSkillPanel" LuaLButtonDown ="SkillPanelDrag"
+			LuaTimeOut="SkillDetailPopupTimeOut" TimeOutCount="100"/>
+			<Button Name = "SkillCloseButton" Image="Data\interface0006_main_C.tga" X="306" Y="9" DetectImage = "1" LuaLButtonUp="CloseSkillPanel"><!--Item-->
+			<ButtonRect State="0" Left="628" Top="16" Right="651" Bottom="32" />
+			<ButtonRect State="1" Left="652" Top="16" Right="677" Bottom="32" />
+			<ButtonRect State="2" Left="678" Top="16" Right="701" Bottom="32" />
+			<ButtonRect State="3" Left="678" Top="16" Right="701" Bottom="32" />
+			</Button>
+			
+			<ScrollBarV Name="SkillMainMenuScrollBar" X="89" Y="69" Width ="14" Height="352" Limit="0" BarColor="0" LuaLButtonDown="SkillMainScrollLua">
+			
+			<PrevButton Name="SkillMainButtonUp" Image="Data\interface0006_main_C.tga" X="0" Y="0"  LuaLButtonDown="SkillMainButtonUpLua">
+			
+				<ButtonRect State="0" Left="345" Top="135" Right="353" Bottom="149" />
+				<ButtonRect State="1" Left="354" Top="135" Right="362" Bottom="149" />
+				<ButtonRect State="2" Left="363" Top="135" Right="371" Bottom="149" />
+				<ButtonRect State="3" Left="363" Top="135" Right="371" Bottom="149" />
+			</PrevButton>
+			<NextButton Name="SkillMainButtonDown" Image="Data\interface0006_main_C.tga" X="0" Y="340"  LuaLButtonDown="SkillMainButtonDownLua">
+				<ButtonRect State="0" Left="345" Top="152" Right="353" Bottom="165" />
+			<ButtonRect State="1" Left="354" Top="152" Right="362" Bottom="165" />
+			<ButtonRect State="2" Left="363" Top="152" Right="371" Bottom="165" />
+			<ButtonRect State="3" Left="363" Top="152" Right="371" Bottom="165" />
+			</NextButton>
+			<MoveButton Name="SkillMainScrol" Image="Data\interface0006_main_C.tga" X="0" Y="15"  LuaMouseMove="SkillMainScrollLua">
+				<ButtonRect State="0" Left="374" Top="135" Right="383" Bottom="165" />
+				<ButtonRect State="1" Left="374" Top="135" Right="383" Bottom="165" />
+				<ButtonRect State="2" Left="374" Top="135" Right="383" Bottom="165" />
+			</MoveButton>
+		</ScrollBarV>
+		
+			
+		<ScrollBarV Name="SkillSubMenuScrollBar" X="316" Y="69" Width ="14" Height="352" Limit="0" BarColor="0" LuaLButtonDown="SkillSubScrollLua">
+			
+			<PrevButton Name="SkillSubButtonUp" Image="Data\interface0006_main_C.tga" X="0" Y="0"  LuaLButtonDown="SkillSubButtonUpLua">
+				<ButtonRect State="0" Left="344" Top="99" Right="358" Bottom="113" />
+				<ButtonRect State="1" Left="360" Top="99" Right="374" Bottom="113" />
+				<ButtonRect State="2" Left="376" Top="99" Right="390" Bottom="113" />
+				<ButtonRect State="3" Left="376" Top="99" Right="390" Bottom="113" />
+			</PrevButton>
+			<NextButton Name="SkillSubButtonDown" Image="Data\interface0006_main_C.tga" X="0" Y="340"  LuaLButtonDown="SkillSubButtonDownLua">
+				<ButtonRect State="0" Left="344" Top="116" Right="358" Bottom="130" />
+				<ButtonRect State="1" Left="360" Top="116" Right="374" Bottom="130" />
+				<ButtonRect State="2" Left="376" Top="116" Right="390" Bottom="130" />
+				<ButtonRect State="3" Left="376" Top="116" Right="390" Bottom="130" />
+			</NextButton>
+			<MoveButton Name="SkillSubScroll" Image="Data\interface0006_main_C.tga" X="0" Y="15"  LuaMouseMove="SkillSubScrollLua">
+				<ButtonRect State="0" Left="393" Top="99" Right="407" Bottom="129" />
+				<ButtonRect State="1" Left="393" Top="99" Right="407" Bottom="129" />
+				<ButtonRect State="2" Left="393" Top="99" Right="407" Bottom="129" />
+			</MoveButton>
+			
+		</ScrollBarV>
+			
+			
+			<CheckBox Name = "SkillCheckGang" Image="Data\interface0006_main_C.tga" X="8" Y="32" Tips="门派技能"
+							TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonDown="SkillCheckGangLua">
+			<CheckBoxRect Index="0" Left="344" Top="16" Right="400" Bottom="39" />
+			<CheckBoxRect Index="1" Left="344" Top="44" Right="400" Bottom="67" />
+			<CheckBoxRect Index="2" Left="344" Top="71" Right="400" Bottom="94" />
+			</CheckBox>
+			
+			<CheckBox Name = "SkillCheckLive" Image="Data\interface0006_main_C.tga" X="74" Y="32" Tips="生活技能"
+                              TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonDown="SkillCheckLiveLua">
+			<CheckBoxRect Index="0" Left="415" Top="16" Right="471" Bottom="39" />
+			<CheckBoxRect Index="1" Left="415" Top="44" Right="471" Bottom="67" />
+			<CheckBoxRect Index="2" Left="415" Top="71" Right="471" Bottom="94" />
+			</CheckBox>
+			
+			<CheckBox Name = "SkillCheckGuild" Image="Data\interface0006_main_C.tga" X="140" Y="32"  Tips="山庄技能"
+								TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonDown="SkillCheckGuildLua">
+			<CheckBoxRect Index="0" Left="487" Top="16" Right="543" Bottom="39" />
+			<CheckBoxRect Index="1" Left="487" Top="44" Right="543" Bottom="67" />
+			<CheckBoxRect Index="2" Left="487" Top="71" Right="543" Bottom="94" />
+			</CheckBox>
+			
+			<CheckBox Name = "SkillCheckSpecial" Image="Data\interface0006_main_C.tga" X="206" Y="32"  Tips="光武技能"
+							TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonDown="SkillCheckSpecialLua">
+			<CheckBoxRect Index="0" Left="563" Top="152" Right="619" Bottom="175" />
+			<CheckBoxRect Index="1" Left="563" Top="180" Right="619" Bottom="204" />
+			<CheckBoxRect Index="2" Left="563" Top="207" Right="619" Bottom="231" />
+			</CheckBox>
+			
+			<CheckBox Name = "SkillCheckBattle" Image="Data\interface0006_main_C.tga" X="271" Y="32"  Tips="战斗技能"
+							TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonDown="SkillCheckBattleLua">
+			<CheckBoxRect Index="0" Left="559" Top="16" Right="615" Bottom="39" />
+			<CheckBoxRect Index="1" Left="559" Top="44" Right="615" Bottom="67" />
+			<CheckBoxRect Index="2" Left="559" Top="71" Right="615" Bottom="94" />
+			</CheckBox>
+			
+			<CheckBox Name = "SkillMainSel1" Image="Data\interface0006_main_C.tga" X="12" Y="70"  LuaLButtonDown="SkillMainSel1Lua">
+			<CheckBoxRect Index="0" Left="0" Top="465" Right="76" Bottom="534" />
+			<CheckBoxRect Index="1" Left="0" Top="465" Right="76" Bottom="534" />
+			<CheckBoxRect Index="2" Left="410" Top="153" Right="486" Bottom="223" />
+			</CheckBox>
+			
+			<CheckBox Name = "SkillMainSel2" Image="Data\interface0006_main_C.tga" X="12" Y="139"  LuaLButtonDown="SkillMainSel2Lua">
+			<CheckBoxRect Index="0" Left="0" Top="465" Right="76" Bottom="534" />
+			<CheckBoxRect Index="1" Left="0" Top="465" Right="76" Bottom="534" />
+			<CheckBoxRect Index="2" Left="410" Top="153" Right="486" Bottom="223" />
+			</CheckBox>
+			
+			<CheckBox Name = "SkillMainSel3" Image="Data\interface0006_main_C.tga" X="12" Y="208"  LuaLButtonDown="SkillMainSel3Lua">
+			<CheckBoxRect Index="0" Left="0" Top="465" Right="76" Bottom="534" />
+			<CheckBoxRect Index="1" Left="0" Top="465" Right="76" Bottom="534" />
+			<CheckBoxRect Index="2" Left="410" Top="153" Right="486" Bottom="223" />
+			</CheckBox>
+			
+			<CheckBox Name = "SkillMainSel4" Image="Data\interface0006_main_C.tga" X="12" Y="277"  LuaLButtonDown="SkillMainSel4Lua">
+			<CheckBoxRect Index="0" Left="0" Top="465" Right="76" Bottom="534" />
+			<CheckBoxRect Index="1" Left="0" Top="465" Right="76" Bottom="534" />
+			<CheckBoxRect Index="2" Left="410" Top="153" Right="486" Bottom="223" />
+			</CheckBox>
+			
+			<CheckBox Name = "SkillMainSel5" Image="Data\interface0006_main_C.tga" X="12" Y="346"  LuaLButtonDown="SkillMainSel5Lua">
+			<CheckBoxRect Index="0" Left="0" Top="465" Right="76" Bottom="534" />
+			<CheckBoxRect Index="1" Left="0" Top="465" Right="76" Bottom="534" />
+			<CheckBoxRect Index="2" Left="410" Top="153" Right="486" Bottom="223" />
+			</CheckBox>
+			
+			<AniIcon Name="SkillMainSelIcon1"  Image ="skill.ent" X="32" Y="72" Rotation = "0" 
+			AnimationIndex = "0" Loop = "1" Align = "0" Hide="0"  Detect = "1"   LuaLButtonDown="SkillMainSel1Lua"
+			 LuaMouseIn="SkillIconIn" LuaMouseOut="SkillIconOut"
+			InsertToEventList = "1" />
+			
+			<StaticText Name="SkillMainSelName1" X="11" Y="111" Row="1" Column="10" Width="78" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			無雙無雙無雙
+			</StaticText>
+			
+			<StaticText Name="SkillMainSelLevel1" X="11" Y="125" Row="1" Column="10" Width="78" Height="20" EdgeCode="LIGHT" FontColor="FFFFFF00" ShadowColor="FF000000" Align="Center">
+			等级 ： 100
+			</StaticText>
+			
+			<AniIcon Name="SkillMainSelIcon2"  Image ="skill.ent" X="32" Y="141" Rotation = "0" 
+			AnimationIndex = "0" Loop = "1" Align = "0" Hide="0"  Detect = "1"    LuaLButtonDown="SkillMainSel2Lua"
+			LuaMouseIn="SkillIconIn" LuaMouseOut="SkillIconOut"
+			InsertToEventList = "1"/>
+			
+			<StaticText Name="SkillMainSelName2" X="11" Y="180" Row="1" Column="10" Width="78" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			無雙無雙無雙
+			</StaticText>
+			
+			<StaticText Name="SkillMainSelLevel2" X="11" Y="194" Row="1" Column="10" Width="78" Height="20" EdgeCode="LIGHT" FontColor="FFFFFF00" ShadowColor="FF000000" Align="Center">
+			等级 ： 100
+			</StaticText>
+			
+			<AniIcon Name="SkillMainSelIcon3"  Image ="skill.ent" X="32" Y="210" Rotation = "0" 
+			AnimationIndex = "0" Loop = "1" Align = "0" Hide="0"  Detect = "1"    LuaLButtonDown="SkillMainSel3Lua"
+			LuaMouseIn="SkillIconIn" LuaMouseOut="SkillIconOut"
+			InsertToEventList = "1"/>
+			
+			<StaticText Name="SkillMainSelName3" X="11" Y="249" Row="1" Column="10" Width="78" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			無雙無雙無雙
+			</StaticText>
+			
+			<StaticText Name="SkillMainSelLevel3" X="11" Y="263" Row="1" Column="10" Width="78" Height="20" EdgeCode="LIGHT" FontColor="FFFFFF00" ShadowColor="FF000000" Align="Center">
+			等级 ： 100
+			</StaticText>
+			
+			<AniIcon Name="SkillMainSelIcon4"  Image ="skill.ent" X="32" Y="279" Rotation = "0" 
+			AnimationIndex = "0" Loop = "1" Align = "0" Hide="0"  Detect = "1"    LuaLButtonDown="SkillMainSel4Lua"
+			LuaMouseIn="SkillIconIn" LuaMouseOut="SkillIconOut"
+			InsertToEventList = "1"/>
+			
+			<StaticText Name="SkillMainSelName4" X="11" Y="318" Row="1" Column="10" Width="78" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			無雙無雙無雙
+			</StaticText>
+			
+			<StaticText Name="SkillMainSelLevel4" X="11" Y="332" Row="1" Column="10" Width="78" Height="20" EdgeCode="LIGHT" FontColor="FFFFFF00" ShadowColor="FF000000" Align="Center">
+			等级 ： 100
+			</StaticText>
+			
+			<AniIcon Name="SkillMainSelIcon5"  Image ="skill.ent" X="32" Y="348" Rotation = "0" 
+			AnimationIndex = "0" Loop = "1" Align = "0" Hide="0"  Detect = "1"   LuaLButtonDown="SkillMainSel5Lua"
+			LuaMouseIn="SkillIconIn" LuaMouseOut="SkillIconOut"
+			InsertToEventList = "1"/>
+			
+			<StaticText Name="SkillMainSelName5" X="11" Y="387" Row="1" Column="10" Width="78" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			無雙無雙無雙
+			</StaticText>
+			
+			<StaticText Name="SkillMainSelLevel5" X="11" Y="401" Row="1" Column="10" Width="78" Height="20" EdgeCode="LIGHT" FontColor="FFFFFF00" ShadowColor="FF000000" Align="Center">
+			等级 ： 100
+			</StaticText>
+			
+			<CheckBox Name = "SkillSubSel1" Image="Data\interface0006_main_C.tga" X="106" Y="70"  LuaLButtonDown="UseSkill1Lua"
+			LuaMouseIn="SkillIconIn" LuaMouseOut="SkillIconOut" InsertToEventList = "1">
+				<CheckBoxRect Index="0" Left="0" Top="461" Right="208" Bottom="511" />
+				<CheckBoxRect Index="1" Left="0" Top="461" Right="208" Bottom="511" />
+				<CheckBoxRect Index="2" Left="411" Top="99" Right="619" Bottom="148" />
+			</CheckBox>
+			
+			<CheckBox Name = "SkillSubSel2" Image="Data\interface0006_main_C.tga" X="106" Y="119"  LuaLButtonDown="UseSkill2Lua"
+			LuaMouseIn="SkillIconIn" LuaMouseOut="SkillIconOut" InsertToEventList = "1">
+				<CheckBoxRect Index="0" Left="0" Top="461" Right="208" Bottom="511" />
+				<CheckBoxRect Index="1" Left="0" Top="461" Right="208" Bottom="511" />
+				<CheckBoxRect Index="2" Left="411" Top="99" Right="619" Bottom="148" />
+			</CheckBox>
+			
+			<CheckBox Name = "SkillSubSel3" Image="Data\interface0006_main_C.tga" X="106" Y="168"  LuaLButtonDown="UseSkill3Lua"
+			LuaMouseIn="SkillIconIn" LuaMouseOut="SkillIconOut" InsertToEventList = "1">
+				<CheckBoxRect Index="0" Left="0" Top="461" Right="208" Bottom="511" />
+				<CheckBoxRect Index="1" Left="0" Top="461" Right="208" Bottom="511" />
+				<CheckBoxRect Index="2" Left="411" Top="99" Right="619" Bottom="148" />
+			</CheckBox>
+			
+			<CheckBox Name = "SkillSubSel4" Image="Data\interface0006_main_C.tga" X="106" Y="217"  LuaLButtonDown="UseSkill4Lua"
+			LuaMouseIn="SkillIconIn" LuaMouseOut="SkillIconOut" InsertToEventList = "1">
+				<CheckBoxRect Index="0" Left="0" Top="461" Right="208" Bottom="511" />
+				<CheckBoxRect Index="1" Left="0" Top="461" Right="208" Bottom="511" />
+				<CheckBoxRect Index="2" Left="411" Top="99" Right="619" Bottom="148" />
+			</CheckBox>
+			
+			<CheckBox Name = "SkillSubSel5" Image="Data\interface0006_main_C.tga" X="106" Y="266"  LuaLButtonDown="UseSkill5Lua"
+			LuaMouseIn="SkillIconIn" LuaMouseOut="SkillIconOut" InsertToEventList = "1">
+				<CheckBoxRect Index="0" Left="0" Top="461" Right="208" Bottom="511" />
+				<CheckBoxRect Index="1" Left="0" Top="461" Right="208" Bottom="511" />
+				<CheckBoxRect Index="2" Left="411" Top="99" Right="619" Bottom="148" />
+			</CheckBox>
+			
+			<CheckBox Name = "SkillSubSel6" Image="Data\interface0006_main_C.tga" X="106" Y="315"  LuaLButtonDown="UseSkill6Lua"
+			LuaMouseIn="SkillIconIn" LuaMouseOut="SkillIconOut" InsertToEventList = "1">
+				<CheckBoxRect Index="0" Left="0" Top="461" Right="208" Bottom="511" />
+				<CheckBoxRect Index="1" Left="0" Top="461" Right="208" Bottom="511" />
+				<CheckBoxRect Index="2" Left="411" Top="99" Right="619" Bottom="148" />
+			</CheckBox>
+			
+			<CheckBox Name = "SkillSubSel7" Image="Data\interface0006_main_C.tga" X="106" Y="364"  LuaLButtonDown="UseSkill7Lua"
+			LuaMouseIn="SkillIconIn" LuaMouseOut="SkillIconOut" InsertToEventList = "1">
+				<CheckBoxRect Index="0" Left="0" Top="461" Right="208" Bottom="511" />
+				<CheckBoxRect Index="1" Left="0" Top="461" Right="208" Bottom="511" />
+				<CheckBoxRect Index="2" Left="411" Top="99" Right="619" Bottom="148" />
+			</CheckBox>
+				
+			<AniIcon Name="SkillSubSelIcon1"  Image ="skill.ent" X="112" Y="75" Rotation = "0" 
+			AnimationIndex = "0" Loop = "1" Align = "0" Hide="0" Detect = "1" LuaLButtonDown="PickUpSkill1"/>
+			
+			<StaticText Name="SkillSubSelName1" X="152" Y="78" Row="1" Column="10" Width="85" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" FontName="Data\simsun.ttc" FontHeight="14" FontWidth="14">
+			無雙無雙無雙
+			</StaticText>
+			
+			<StaticText Name="SkillSubSelUse1" X="152" Y="96" Row="1" Column="10" Width="30" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+			消耗:
+			</StaticText>
+			
+			<StaticText Name="SkillSubSelUseValue1" X="182" Y="96" Row="1" Column="10" Width="120" Height="20" EdgeCode="LIGHT" FontColor="FFFFFF00" ShadowColor="FF000000">
+			15 生命, 50 內力
+			</StaticText>
+			
+			<AniIcon Name="SkillSubSelIcon2"  Image ="skill.ent" X="112" Y="124" Rotation = "0" 
+			AnimationIndex = "0" Loop = "1" Align = "0" Hide="0" Detect = "1" LuaLButtonDown="PickUpSkill2"/>
+			
+			<StaticText Name="SkillSubSelName2" X="152" Y="127" Row="1" Column="10" Width="85" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" FontName="Data\simsun.ttc" FontHeight="14" FontWidth="14">
+			無雙無雙無雙
+			</StaticText>
+			
+			<StaticText Name="SkillSubSelUse2" X="152" Y="145" Row="1" Column="10" Width="30" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+			消耗:
+			</StaticText>
+			
+			<StaticText Name="SkillSubSelUseValue2" X="182" Y="145" Row="1" Column="10" Width="120" Height="20" EdgeCode="LIGHT" FontColor="FFFFFF00" ShadowColor="FF000000">
+			15 生命, 50 內力
+			</StaticText>
+			
+			<AniIcon Name="SkillSubSelIcon3"  Image ="skill.ent" X="112" Y="173" Rotation = "0" 
+			AnimationIndex = "0" Loop = "1" Align = "0" Hide="0" Detect = "1"  LuaLButtonDown="PickUpSkill3"/>
+			
+			<StaticText Name="SkillSubSelName3" X="152" Y="176" Row="1" Column="10" Width="85" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" FontName="Data\simsun.ttc" FontHeight="14" FontWidth="14">
+			無雙無雙無雙
+			</StaticText>
+			
+			<StaticText Name="SkillSubSelUse3" X="152" Y="194" Row="1" Column="10" Width="30" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+			消耗:
+			</StaticText>
+			
+			<StaticText Name="SkillSubSelUseValue3" X="182" Y="194" Row="1" Column="10" Width="120" Height="20" EdgeCode="LIGHT" FontColor="FFFFFF00" ShadowColor="FF000000">
+			15 生命, 50 內力
+			</StaticText>
+			
+			<AniIcon Name="SkillSubSelIcon4"  Image ="skill.ent" X="112" Y="222" Rotation = "0" 
+			AnimationIndex = "0" Loop = "1" Align = "0" Hide="0" Detect = "1"  LuaLButtonDown="PickUpSkill4"
+			/>
+			
+			<StaticText Name="SkillSubSelName4" X="152" Y="225" Row="1" Column="10" Width="85" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" FontName="Data\simsun.ttc" FontHeight="14" FontWidth="14">
+			無雙無雙無雙
+			</StaticText>
+			
+			<StaticText Name="SkillSubSelUse4" X="152" Y="243" Row="1" Column="10" Width="30" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+			消耗:
+			</StaticText>
+			
+			<StaticText Name="SkillSubSelUseValue4" X="182" Y="243" Row="1" Column="10" Width="120" Height="20" EdgeCode="LIGHT" FontColor="FFFFFF00" ShadowColor="FF000000">
+			15 生命, 50 內力
+			</StaticText>
+			
+			<AniIcon Name="SkillSubSelIcon5"  Image ="skill.ent" X="112" Y="271" Rotation = "0" 
+			AnimationIndex = "0" Loop = "1" Align = "0" Hide="0" Detect = "1" LuaLButtonDown="PickUpSkill5"/>
+			
+			<StaticText Name="SkillSubSelName5" X="152" Y="274" Row="1" Column="10" Width="85" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FFFFFFFF" FontName="Data\simsun.ttc" FontHeight="14" FontWidth="14">
+			無雙無雙無雙
+			</StaticText>
+			
+			<StaticText Name="SkillSubSelUse5" X="152" Y="292" Row="1" Column="10" Width="30" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+			消耗:
+			</StaticText>
+			
+			<StaticText Name="SkillSubSelUseValue5" X="182" Y="292" Row="1" Column="10" Width="120" Height="20" EdgeCode="LIGHT" FontColor="FFFFFF00" ShadowColor="FF000000">
+			15 生命, 50 內力
+			</StaticText>
+			
+			<AniIcon Name="SkillSubSelIcon6"  Image ="skill.ent" X="112" Y="320" Rotation = "0" 
+			AnimationIndex = "0" Loop = "1" Align = "0" Hide="0" Detect = "1" LuaLButtonDown="PickUpSkill6"/>
+			
+			<StaticText Name="SkillSubSelName6" X="152" Y="323" Row="1" Column="10" Width="85" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" FontName="Data\simsun.ttc" FontHeight="14" FontWidth="14">
+			無雙無雙無雙
+			</StaticText>
+			
+			<StaticText Name="SkillSubSelUse6" X="152" Y="341" Row="1" Column="10" Width="30" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+			消耗:
+			</StaticText>
+			
+			<StaticText Name="SkillSubSelUseValue6" X="182" Y="341" Row="1" Column="10" Width="120" Height="20" EdgeCode="LIGHT" FontColor="FFFFFF00" ShadowColor="FF000000">
+			15 生命, 50 內力
+			</StaticText>
+			
+			<AniIcon Name="SkillSubSelIcon7"  Image ="skill.ent" X="112" Y="369" Rotation = "0" 
+			AnimationIndex = "0" Loop = "1" Align = "0" Hide="0" Detect = "1" LuaLButtonDown="PickUpSkill7"/>
+			
+			<StaticText Name="SkillSubSelName7" X="152" Y="372" Row="1" Column="10" Width="85" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" FontName="Data\simsun.ttc" FontHeight="14" FontWidth="14">
+			無雙無雙無雙
+			</StaticText>
+			
+			<StaticText Name="SkillSubSelUse7" X="152" Y="390" Row="1" Column="10" Width="30" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+			消耗:
+			</StaticText>
+			
+			<StaticText Name="SkillSubSelUseValue7" X="182" Y="390" Row="1" Column="10" Width="120" Height="20" EdgeCode="LIGHT" FontColor="FFFFFF00" ShadowColor="FF000000">
+			15 生命, 50 內力
+			</StaticText>
+			
+			
+	</Panel>
+	
+	<Panel Expand="1" Name="SkillShopPanel" X="0" Y="0" Image ="Data\interface0006_main_C.tga"
+			Left="410" Top="240" Right="706" Bottom="253" LineRectLeft="410" LineRectTop="256" LineRectRight="706"
+			LineRectBottom="274" LineCount="12" BottomRectLeft="410" BottomRectTop="277" BottomRectRight="706"
+		BottomRectBottom="291" DetectImage = "0" Hide="1" FollowPanel="SkillPanel">
+			
+			<StaticText Name="SkillShopLevel" X="20" Y="24" Row="1" Column="10" Width="85" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" FontName="Data\simsun.ttc" FontHeight="14" FontWidth="14">
+			技能等级:
+			</StaticText>
+			
+			<StaticText Name="SkillShopLevelValue" X="100" Y="24" Row="1" Column="10" Width="188" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" FontName="Data\simsun.ttc" FontHeight="14" FontWidth="14"Align="Center">
+			0/0
+			</StaticText>
+			
+			<StaticText Name="SkillShopExp" X="20" Y="42" Row="1" Column="10" Width="85" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" FontName="Data\simsun.ttc" FontHeight="14" FontWidth="14">
+			升级经验:
+			</StaticText>
+			
+			<StaticText Name="SkillShopExpValue" X="100" Y="42" Row="1" Column="10" Width="188" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" FontName="Data\simsun.ttc" FontHeight="14" FontWidth="14"Align="Center">
+			0/0
+			</StaticText>
+			
+			<StaticText Name="SkillShopMoney" X="20" Y="60" Row="1" Column="10" Width="85" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" FontName="Data\simsun.ttc" FontHeight="14" FontWidth="14">
+			升级银两:
+			</StaticText>
+			
+			<StaticText Name="SkillShopMoneyValue" X="100" Y="60" Row="1" Column="10" Width="188" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" FontName="Data\simsun.ttc" FontHeight="14" FontWidth="14"Align="Center">
+			0/0
+			</StaticText>
+			
+			<StaticText Name="SkillShopYuanBao" X="20" Y="78" Row="1" Column="10" Width="85" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" FontName="Data\simsun.ttc" FontHeight="14" FontWidth="14" >
+			升级元宝:
+			</StaticText>
+			
+			<StaticText Name="SkillShopYuanBaoValue" X="100" Y="78" Row="1" Column="10" Width="188" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" FontName="Data\simsun.ttc" FontHeight="14" FontWidth="14" Align="Center">
+			0/0
+			</StaticText>
+			
+			<StaticText Name="SkillShopHonor" X="20" Y="96" Row="1" Column="10" Width="85" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" FontName="Data\simsun.ttc" FontHeight="14" FontWidth="14" >
+			升级威望:
+			</StaticText>
+			
+			<StaticText Name="SkillShopHonorValue" X="100" Y="96" Row="1" Column="10" Width="188" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" FontName="Data\simsun.ttc" FontHeight="14" FontWidth="14" Align="Center">
+			0/0
+			</StaticText>
+			
+			<StaticText Name="SkillShopFDonate" X="20" Y="114" Row="1" Column="10" Width="85" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" FontName="Data\simsun.ttc" FontHeight="14" FontWidth="14" >
+			升级门贡:
+			</StaticText>
+			
+			<StaticText Name="SkillShopFDonateValue" X="100" Y="114" Row="1" Column="10" Width="188" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" FontName="Data\simsun.ttc" FontHeight="14" FontWidth="14" Align="Center">
+			0/0
+			</StaticText>
+			
+			<StaticText Name="SkillShopGDonate" X="20" Y="132" Row="1" Column="10" Width="85" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" FontName="Data\simsun.ttc" FontHeight="14" FontWidth="14" >
+			升级帮贡:
+			</StaticText>
+			
+			<StaticText Name="SkillShopGDonateValue" X="100" Y="132" Row="1" Column="10" Width="188" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" FontName="Data\simsun.ttc" FontHeight="14" FontWidth="14" Align="Center">
+			0/0
+			</StaticText>
+			
+			
+			<StaticText Name="SkillShopSMoney" X="20" Y="150" Row="1" Column="10" Width="85" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" FontName="Data\simsun.ttc" FontHeight="14" FontWidth="14">
+			银票:
+			</StaticText>
+			
+			<StaticText Name="SkillShopSMoneyValue" X="100" Y="150" Row="1" Column="10" Width="188" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" FontName="Data\simsun.ttc" FontHeight="14" FontWidth="14"Align="Center">
+			0
+			</StaticText>
+			
+			<StaticText Name="SkillShopSave" X="20" Y="168" Row="1" Column="10" Width="85" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" FontName="Data\simsun.ttc" FontHeight="14" FontWidth="14">
+			存款:
+			</StaticText>
+			
+			<StaticText Name="SkillShopSaveValue" X="100" Y="168" Row="1" Column="10" Width="188" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" FontName="Data\simsun.ttc" FontHeight="14" FontWidth="14" Align="Center">
+			0
+			</StaticText>
+			
+			<Button Name="LearnSkill" Image="Data\interface0006_main_C.tga" X="80" Y="186" LuaLButtonUp="LearnSkillLua">
+			<ButtonRect State="0" Left="490" Top="181" Right="556" Bottom="204" />
+			<ButtonRect State="1" Left="490" Top="208" Right="556" Bottom="231" />
+			<ButtonRect State="2" Left="490" Top="153" Right="556" Bottom="175" />
+			</Button>
+		
+		</Panel>
+	
+</UI>

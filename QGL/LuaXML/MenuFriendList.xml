@@ -1,0 +1,183 @@
+<?xml version="1.0" ?>
+<!-- Our to do list data -->
+<UI>
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+
+	<Panel Name="MessagerPanel" Hide="0" X="654" Y="187" Image="Data\interface0007_main_D.tga" Left="4" Top="7"
+		Right="143" Bottom="343" DetectImage="1" LuaRButtonUp="CloseFriendList" LuaKeyChar="CloseFriendList" Drag="1"
+		DragLeft="0" DragTop="0" DragRight="316" DragBottom="481" LuaMouseMove="MouseMoveOnMessager" LuaMouseOut="MessagerPanelOut"
+			InsertToEventList = "1" LuaMouseWheel="MessagerPanelWheel">
+		<Button Name="AddFriend" Image="Data\interface0007_main_D.tga" X="7" Y="268" Tips="添加好友"
+                      	TimeOutCount="500" LuaTimeOut="DefaultTips"	LuaLButtonUp="AddFriendToList">
+			<ButtonRect State="0" Left="151" Top="70" Right="210" Bottom="87" />
+			<ButtonRect State="1" Left="151" Top="91" Right="210" Bottom="108" />
+			<ButtonRect State="2" Left="151" Top="112" Right="210" Bottom="129" />
+		</Button>
+		
+		<Button Name="FindFriend" Image="Data\interface0007_main_D.tga" X="73" Y="268" Tips="查找好友"
+                       TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="OpenFindFriendMenu" >
+			<ButtonRect State="0" Left="216" Top="70" Right="275" Bottom="87" />
+			<ButtonRect State="1" Left="216" Top="91" Right="275" Bottom="108" />
+			<ButtonRect State="2" Left="216" Top="112" Right="275" Bottom="129" />
+		</Button>
+		
+		<Button Name="OpenAsYounger" Image="Data\interface0007_main_D.tga" X="7" Y="288" Tips="寻找前辈"
+                      	TimeOutCount="500" LuaTimeOut="DefaultTips"	LuaLButtonUp="FunOpenGenerationPanel">
+			<ButtonRect State="0" Left="872" Top="239" Right="930" Bottom="256" />
+			<ButtonRect State="1" Left="872" Top="259" Right="930" Bottom="276" />
+			<ButtonRect State="2" Left="872" Top="279" Right="930" Bottom="296" />
+		</Button>
+		
+		<Button Name="OpenAdElder" Image="Data\interface0007_main_D.tga" X="73" Y="288" Tips="寻找晚辈"
+                       TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="FunOpenGenerationPanel" >
+			<ButtonRect State="0" Left="937" Top="239" Right="996" Bottom="256" />
+			<ButtonRect State="1" Left="937" Top="259" Right="996" Bottom="276" />
+			<ButtonRect State="2" Left="937" Top="279" Right="996" Bottom="296" />
+		</Button>
+		<Button Name="SelfSetting" Image="Data\interface0007_main_D.tga" X="7" Y="307" Tips="设置个人信息"
+                        TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="OpenSelfSetting" >
+			<ButtonRect State="0" Left="281" Top="70" Right="340" Bottom="87" />
+			<ButtonRect State="1" Left="281" Top="91" Right="340" Bottom="108" />
+			<ButtonRect State="2" Left="281" Top="112" Right="340" Bottom="129" />
+		</Button>
+		
+		<Button Name="ConnectToWebSite" Image="Data\interface0007_main_D.tga" X="73" Y="307" Tips="联系GM"
+                      TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="ConnectToWebSiteLua" >
+			<ButtonRect State="0" Left="346" Top="70" Right="405" Bottom="87" />
+			<ButtonRect State="1" Left="346" Top="91" Right="405" Bottom="108" />
+			<ButtonRect State="2" Left="346" Top="112" Right="405" Bottom="129" />
+		</Button>
+		
+		<Button Name="CloseMessagerMenu" Image="Data\interface0007_main_D.tga" X="115" Y="5" LuaLButtonUp="CloseFriendList" >
+			<ButtonRect State="0" Left="151" Top="9" Right="173" Bottom="25" />
+			<ButtonRect State="1" Left="176" Top="9" Right="198" Bottom="25" />
+			<ButtonRect State="2" Left="201" Top="9" Right="223" Bottom="25" />
+		</Button>
+		
+		<ScrollBarV Name="MessagerPanelScroll" X="123" Y="66" Width ="14" Height="193" Limit="0" BarColor="0" LuaLButtonUp="MessagerPanelScrollLua">
+			<PrevButton Image="Data\interface0007_main_D.tga" X="30" Y="0" LuaLButtonUp="MessagerPanelUp">
+				<ButtonRect State="0" Left="152" Top="32" Right="163" Bottom="46" />
+				<ButtonRect State="1" Left="166" Top="32" Right="177" Bottom="46" />
+				<ButtonRect State="2" Left="180" Top="32" Right="191" Bottom="46" />
+				<ButtonRect State="3" Left="180" Top="32" Right="191" Bottom="46" />
+			</PrevButton>
+			<NextButton Image="Data\interface0007_main_D.tga" X="30" Y="200" LuaLButtonUp="MessagerPanelDown">
+				<ButtonRect State="0" Left="152" Top="48" Right="163" Bottom="61" />
+				<ButtonRect State="1" Left="166" Top="48" Right="177" Bottom="61" />
+				<ButtonRect State="2" Left="180" Top="48" Right="191" Bottom="61" />
+				<ButtonRect State="3" Left="180" Top="48" Right="191" Bottom="61" />
+			</NextButton>
+			<MoveButton Image="Data\interface0007_main_D.tga" X="30" Y="30" LuaMouseMove="MessagerPanelScrollLua">
+				<ButtonRect State="0" Left="196" Top="34" Right="208" Bottom="64" />
+				<ButtonRect State="1" Left="196" Top="34" Right="208" Bottom="64" />
+				<ButtonRect State="2" Left="196" Top="34" Right="208" Bottom="64" />
+			</MoveButton>
+		</ScrollBarV>
+		
+		<CheckBox Name = "FriendListGroup1" Image="Data\interface0007_main_D.tga" X="8" Y="24" Tips="好友分组1"  
+						  TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="FriendListGroup1Lua">
+			<CheckBoxRect Index="0" Left="430" Top="11" Right="458" Bottom="28" />
+			<CheckBoxRect Index="1" Left="430" Top="11" Right="458" Bottom="28" />
+			<CheckBoxRect Index="2" Left="461" Top="11" Right="489" Bottom="28" />
+		</CheckBox>
+		
+		<CheckBox Name = "FriendListGroup2" Image="Data\interface0007_main_D.tga" X="40" Y="24" Tips="好友分组2"
+                          TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="FriendListGroup2Lua">
+			<CheckBoxRect Index="0" Left="430" Top="31" Right="458" Bottom="48" />
+			<CheckBoxRect Index="1" Left="430" Top="31" Right="458" Bottom="48" />
+			<CheckBoxRect Index="2" Left="461" Top="31" Right="489" Bottom="48" />
+		</CheckBox>
+		
+		<CheckBox Name = "FriendListGroup3" Image="Data\interface0007_main_D.tga" X="72" Y="24" Tips="好友分组3"
+							TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="FriendListGroup3Lua">
+			<CheckBoxRect Index="0" Left="558" Top="11" Right="586" Bottom="28" />
+			<CheckBoxRect Index="1" Left="558" Top="11" Right="586" Bottom="28" />
+			<CheckBoxRect Index="2" Left="589" Top="11" Right="617" Bottom="28" />
+		</CheckBox>
+		
+		<CheckBox Name = "FriendListGroup4" Image="Data\interface0007_main_D.tga" X="104" Y="24" Tips="好友分组4"
+                        	TimeOutCount="500" LuaTimeOut="DefaultTips"	LuaLButtonUp="FriendListGroup4Lua">
+			<CheckBoxRect Index="0" Left="558" Top="31" Right="586" Bottom="48" />
+			<CheckBoxRect Index="1" Left="558" Top="31" Right="586" Bottom="48" />
+			<CheckBoxRect Index="2" Left="589" Top="31" Right="617" Bottom="48" />
+		</CheckBox>
+		
+		<CheckBox Name = "TempFriendGroup" Image="Data\interface0007_main_D.tga" X="8" Y="44" Tips="临时好友栏"
+                          	TimeOutCount="500" LuaTimeOut="DefaultTips"	LuaLButtonUp="FriendListGroupTempLua">
+			<CheckBoxRect Index="0" Left="687" Top="31" Right="747" Bottom="49" />
+			<CheckBoxRect Index="1" Left="687" Top="31" Right="747" Bottom="49" />
+			<CheckBoxRect Index="2" Left="749" Top="31" Right="809" Bottom="49" />
+		</CheckBox>
+		
+		<CheckBox Name = "BlackListGroup" Image="Data\interface0007_main_D.tga" X="72" Y="45"  Tips="列入黑名单之玩家" 
+		                   TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="BlackListGroupLua">
+			<CheckBoxRect Index="0" Left="687" Top="11" Right="747" Bottom="28" />
+			<CheckBoxRect Index="1" Left="687" Top="11" Right="747" Bottom="28" />
+			<CheckBoxRect Index="2" Left="749" Top="11" Right="809" Bottom="28" />
+		</CheckBox>
+			
+		<AniIcon Name="Friend1Icon" Image ="facechatS00000a.ent" X="10" Y="74" Rotation = "0" 
+			AnimationIndex = "0" Loop = "1" Align = "0" Hide="0"  Detect = "0"></AniIcon>
+		<StaticText Name="Friend1Name" X="34" Y="78" Row="1" Column="10" Width="90" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" >
+			六個字的名稱
+			</StaticText>
+		<UIImage Name="Friend1Away" Hide="1" X="10" Y="74" Image ="Data\interface0007_main_D.tga" Left="244" Top="37" Right="256" Bottom="49"/>
+			
+		<AniIcon Name="Friend2Icon" Image ="facechatS00000a.ent" X="10" Y="99" Rotation = "0" 
+			AnimationIndex = "0" Loop = "1" Align = "0" Hide="0"  Detect = "0"></AniIcon>
+		<StaticText Name="Friend2Name" X="34" Y="104" Row="1" Column="10" Width="90" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" >
+			六個字的名稱
+			</StaticText>
+		<UIImage Name="Friend2Away" Hide="1" X="10" Y="99" Image ="Data\interface0007_main_D.tga" Left="244" Top="37" Right="256" Bottom="49"/>
+			
+		<AniIcon Name="Friend3Icon" Image ="facechatS00000a.ent" X="10" Y="124" Rotation = "0" 
+			AnimationIndex = "0" Loop = "1" Align = "0" Hide="0"  Detect = "0"></AniIcon>
+		<StaticText Name="Friend3Name" X="34" Y="129" Row="1" Column="10" Width="90" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" >
+			六個字的名稱
+			</StaticText>
+		<UIImage Name="Friend3Away" Hide="1" X="10" Y="124" Image ="Data\interface0007_main_D.tga" Left="244" Top="37" Right="256" Bottom="49"/>
+			
+		<AniIcon Name="Friend4Icon" Image ="facechatS00000a.ent" X="10" Y="149" Rotation = "0" 
+			AnimationIndex = "0" Loop = "1" Align = "0" Hide="0"  Detect = "0"></AniIcon>
+		<StaticText Name="Friend4Name" X="34" Y="154" Row="1" Column="10" Width="90" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" >
+			六個字的名稱
+			</StaticText>
+		<UIImage Name="Friend4Away" Hide="1" X="10" Y="149" Image ="Data\interface0007_main_D.tga" Left="244" Top="37" Right="256" Bottom="49"/>
+			
+		<AniIcon Name="Friend5Icon" Image ="facechatS00000a.ent" X="10" Y="174" Rotation = "0" 
+			AnimationIndex = "0" Loop = "1" Align = "0" Hide="0"  Detect = "0"></AniIcon>
+		<StaticText Name="Friend5Name" X="34" Y="179" Row="1" Column="10" Width="90" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" >
+			六個字的名稱
+			</StaticText>
+			<UIImage Name="Friend5Away" Hide="1" X="10" Y="174" Image ="Data\interface0007_main_D.tga" Left="244" Top="37" Right="256" Bottom="49"/>
+		
+		<AniIcon Name="Friend6Icon" Image ="facechatS00000a.ent" X="10" Y="199" Rotation = "0" 
+			AnimationIndex = "0" Loop = "1" Align = "0" Hide="0"  Detect = "0"></AniIcon>
+		<StaticText Name="Friend6Name" X="34" Y="204" Row="1" Column="10" Width="90" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" >
+			六個字的名稱
+			</StaticText>
+		<UIImage Name="Friend6Away" Hide="1" X="10" Y="199" Image ="Data\interface0007_main_D.tga" Left="244" Top="37" Right="256" Bottom="49"/>
+		
+		<AniIcon Name="Friend7Icon" Image ="facechatS00000a.ent" X="10" Y="224" Rotation = "0" 
+			AnimationIndex = "0" Loop = "1" Align = "0" Hide="0"  Detect = "0"></AniIcon>
+		<StaticText Name="Friend7Name" X="34" Y="229" Row="1" Column="10" Width="90" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" >
+			六個字的名稱
+			</StaticText>
+		<UIImage Name="Friend7Away" Hide="1" X="10" Y="224" Image ="Data\interface0007_main_D.tga" Left="244" Top="37" Right="256" Bottom="49"/>
+		
+		<UIImage Name="FriendHighLight" Hide="1" X="10" Y="10" Image ="Data\interface0007_main_D.tga" Left="151" Top="136" Right="266" Bottom="159"
+			AutoDelete="0"  LuaLButtonDown="CopySelectedText" LuaLButtonUp="OpenFriendChat" LuaTimeOut="ChatDetailPopupTimeOut" TimeOutCount="500"
+			LuaRButtonUp="OpenFriendDetail"/>
+			
+		</Panel>
+		
+		<!--Friend Moving Panel-->
+		<Panel Name="FriendMovingPanel"  X="0" Y="0" Image ="Data\inerface0001_main.tga" Left="8" Top="448" Right="106" Bottom="471"
+			 Hide="1" Drag="1" DragLeft="0" DragTop="0" DragRight="98" DragBottom="23" LuaEndDrag="FriendDragEnd" >
+
+			<StaticText Name="FriendMovingName" X="7" Y="5" Row="1" Column="10" Width="90" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+			六個字的名稱
+			</StaticText>
+		</Panel>
+</UI>
+

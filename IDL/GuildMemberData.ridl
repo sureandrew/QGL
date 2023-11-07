@@ -1,0 +1,24 @@
+//-- Config	
+config
+{
+	SubPath="Data/";
+	ClassID=10160;
+	StartID=10160;
+	EndID  =10169;
+	TwoDirect=1;
+}
+
+//-- include
+
+//-- object class
+class GuildMemberData : NetObject
+{
+	key {			UInt32 char_id;
+					UInt32 guild_uid; 		};
+	donate {		UInt32 donate; 			};
+	totalDonate {	UInt32 totalDonate; 	};
+	post {			UInt8  post;			}; 
+	joinDate {		UInt32 joinDate;		};
+	business {		UInt16 businessCount;
+					UInt32 businessProfit; 	};
+}

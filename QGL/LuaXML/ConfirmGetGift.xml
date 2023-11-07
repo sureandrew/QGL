@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" ?>
+<UI>
+	<ID Name="ConfirmGetGift" />
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	<Panel Name="ConfirmGetGiftPanel" X="253" Y="267" Image="Data\inerface0004_main_A.tga" Left="314" Top="293" Right="542" Bottom="391" 
+		Drag="1" DragLeft="0" DragTop="0" DragRight="228" DragBottom="98" 
+		LuaKeyChar="CloseConfirmGetGiftPanel" LuaRButtonUp="CloseConfirmGetGiftPanel">
+				
+		<StaticText Name="ConfirmGetGiftText" X="51" Y="35" Row="1" Column="15" EdgeCode="LIGHT" FontColor="FFEDD97A" ShadowColor="FF000000">
+		</StaticText>
+		
+		<Button Name="ConfirmGetGiftYes" Image="Data\inerface0004_main_A.tga" X="51" Y="60" LuaLButtonUp="ConfirmGetGiftOK">
+			<ButtonRect State="0" Left="4" Top="511" Right="68" Bottom="528" />
+			<ButtonRect State="1" Left="70" Top="511" Right="134" Bottom="528" />
+			<ButtonRect State="2" Left="136" Top="511" Right="200" Bottom="528" />
+		</Button>
+				
+		<Button Name="ConfirmGetGiftNo" Image="Data\inerface0004_main_A.tga" X="118" Y="60" LuaLButtonUp="CloseConfirmGetGiftPanel">
+			<ButtonRect State="0" Left="4" Top="530" Right="68" Bottom="547" />
+			<ButtonRect State="1" Left="70" Top="530" Right="134" Bottom="547" />
+			<ButtonRect State="2" Left="136" Top="530" Right="200" Bottom="547" />
+		</Button>
+				
+	</Panel>
+</UI>

@@ -1,0 +1,175 @@
+<?xml version="1.0" ?>
+<!-- Our to do list data -->
+<UI>
+	<ID Name="GivenItem" />
+	<!--<Font Name="Data\mingliu.ttc" Width="12" Height="12" />-->
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	<Panel Name="GivenItemPanel" Image="Data\inerface0004_main_A.tga" X="456" Y="73" 
+			Left="386" Top="3" Right="695" Bottom="289" LuaRButtonUp="CloseGivenPanel" LuaKeyChar="CloseGivenPanel" DetectImage = "1"
+			Drag="1" DragLeft="0" DragTop="0" DragRight="309" DragBottom="286" >
+			
+		<Button Name="GivenItemPanelClose" Image="Data\inerface0004_main_A.tga" X="275" Y="8" LuaLButtonUp="CloseGivenPanel">
+			<ButtonRect State="0" Left="311" Top="4" Right="335" Bottom="22" />
+			<ButtonRect State="1" Left="336" Top="4" Right="360" Bottom="22" />
+			<ButtonRect State="2" Left="361" Top="4" Right="385" Bottom="22" />
+		</Button>
+		<StaticText Name="AcceptPersonName" X="31" Y="56" Width="135" Height="20" Row="1" Column="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		<StaticText Name="AcceptPersonID" X="189" Y="56" Width="92" Height="20" Row="1" Column="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		</StaticText>
+		
+		<AniIcon Name="GivenItem000Icon" X="29" Y="99" Image="" AutoDelete="0" LuaLButtonUp="GivenItemMove000" Detect = "1" Hide="1" />
+		<StaticText Name="GivenItem000Stack" X="32" Y="124" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="GivenItem000Lvl" X="32" Y="101" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<AniIcon Name="GivenItem001Icon" X="72" Y="99" Image=""  AutoDelete="0" 
+			LuaLButtonUp="GivenItemMove001" Detect = "1" Hide="1" />
+		<StaticText Name="GivenItem001Stack" X="75" Y="124" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="GivenItem001Lvl" X="75" Y="101" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<AniIcon Name="GivenItem002Icon" X="115" Y="99" Image=""  AutoDelete="0" 
+			LuaLButtonUp="GivenItemMove002" Detect = "1" Hide="1"/>
+		<StaticText Name="GivenItem002Stack" X="118" Y="124" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="GivenItem002Lvl" X="118" Y="101" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<AniIcon Name="GivenItem003Icon" X="158" Y="99" Image=""  AutoDelete="0" 
+			LuaLButtonUp="GivenItemMove003" Detect = "1" Hide="1"/>
+		<StaticText Name="GivenItem003Stack" X="161" Y="124" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="GivenItem003Lvl" X="161" Y="101" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<AniIcon Name="GivenItem004Icon" X="201" Y="99" Image=""  AutoDelete="0" 
+			LuaLButtonUp="GivenItemMove004" Detect = "1" Hide="1"/>
+		<StaticText Name="GivenItem004Stack" X="204" Y="124" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="GivenItem004Lvl" X="204" Y="101" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<AniIcon Name="GivenItem005Icon" X="244" Y="99" Image=""  AutoDelete="0" 
+			LuaLButtonUp="GivenItemMove005" Detect = "1" Hide="1"/>
+		<StaticText Name="GivenItem005Stack" X="247" Y="124" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="GivenItem005Lvl" X="247" Y="101" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<AniIcon Name="GivenPartner000Icon" X="29" Y="168" Image=""  AutoDelete="0" 
+			LuaLButtonUp="GivenPartnerMove000" Detect = "1" Hide="1"/>
+		<StaticText Name="GivenPartner000Lvl" X="29" Y="166" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<AniIcon Name="GivenPartner001Icon" X="72" Y="168" Image=""  AutoDelete="0" 
+			LuaLButtonUp="GivenPartnerMove001" Detect = "1" Hide="1"/>
+		<StaticText Name="GivenPartner001Lvl" X="72" Y="166" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<AniIcon Name="GivenPartner002Icon" X="115" Y="168" Image=""  AutoDelete="0" 
+			LuaLButtonUp="GivenPartnerMove002" Detect = "1" Hide="1"/>
+		<StaticText Name="GivenPartner002Lvl" X="115" Y="166" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<AniIcon Name="GivenPet000Icon" X="163" Y="168" Image=""  AutoDelete="0" 
+			LuaLButtonUp="GivenPetMove000" Detect = "1" Hide="1"/>
+		<StaticText Name="GivenPet000Lvl" X="163" Y="166" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<AniIcon Name="GivenPet001Icon" X="206" Y="168" Image=""  AutoDelete="0" 
+			LuaLButtonUp="GivenPetMove001" Detect = "1" Hide="1"/>
+		<StaticText Name="GivenPet001Lvl" X="206" Y="166" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<AniIcon Name="GivenPet002Icon" X="249" Y="168" Image=""  AutoDelete="0" 
+			LuaLButtonUp="GivenPetMove002" Detect = "1" Hide="1"/>
+		<StaticText Name="GivenPet002Lvl" X="249" Y="166" Row="1" Column="4" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<UIImage Name="GivenMoneyBg" X="24" Y="207" Image="Data\inerface0004_main_A.tga"  Left="316" Top="456" Right="504" Bottom="483" />
+		
+		<EditBox Name="GivenMoney" X="99" Y="214" Row="1" Column="5" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" LuaLButtonUp="SetKeyInMoney" Limit="5" NumOnly="1" LuaKeyUp="SetMoneyColour" >
+		</EditBox>
+		
+		<StaticText Name="NpcGivenText" X="3" Y="214" Width="302" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1" Align="Center">
+		</StaticText>
+	
+		<Button Name="GivenYes" Image="Data\inerface0004_main_A.tga" X="49" Y="247" LuaLButtonUp="GivenConfirm">
+			<ButtonRect State="0" Left="4" Top="465" Right="83" Bottom="486" />
+			<ButtonRect State="1" Left="86" Top="465" Right="165" Bottom="486" />
+			<ButtonRect State="2" Left="168" Top="465" Right="247" Bottom="486" />
+		</Button>
+		
+		
+		<Button Name="GivenNo" Image="Data\inerface0004_main_A.tga" X="177" Y="247" LuaLButtonUp="CloseGivenPanel">
+			<ButtonRect State="0" Left="4" Top="488" Right="83" Bottom="509" />
+			<ButtonRect State="1" Left="86" Top="488" Right="165" Bottom="509" />
+			<ButtonRect State="2" Left="168" Top="488" Right="247" Bottom="509" />
+		</Button>
+		
+	</Panel>
+	
+	<!-- GivenItemCount -->
+	<Panel Name="GivenItemCountPanel" X="253" Y="267" Image="Data\inerface0004_main_A.tga" Left="314" Top="293" Right="542" Bottom="391" 
+		Drag="1" DragLeft="0" DragTop="0" DragRight="228" DragBottom="98"  Hide="1">
+		
+		<UIImage X="12" Y="37" Image="Data\inerface0004_main_A.tga" Left="544" Top="394" Right="647" Bottom="412"/>
+		
+		<EditBox Name="NumberOfGivenItem" X="22" Y="40" Row="1" Column="3" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" Limit="5" NumOnly="1">
+			1 
+		</EditBox>
+			
+		
+		<StaticText Name="GivenText" X="12" Y="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFEDD97A" ShadowColor="FF000000">
+			请输入给予数量
+		</StaticText>
+		
+		<Button Name="ConfirmGivenYes" Image="Data\inerface0004_main_A.tga" X="86" Y="60" LuaLButtonUp="ConfirmGivenNum">
+			<ButtonRect State="0" Left="4" Top="511" Right="68" Bottom="528" />
+			<ButtonRect State="1" Left="70" Top="511" Right="134" Bottom="528" />
+			<ButtonRect State="2" Left="136" Top="511" Right="200" Bottom="528" />
+		</Button>
+		
+		
+		<Button Name="ConfirmGivenNo" Image="Data\inerface0004_main_A.tga" X="153" Y="60" LuaLButtonUp="CloseGivenCount">
+			<ButtonRect State="0" Left="4" Top="530" Right="68" Bottom="547" />
+			<ButtonRect State="1" Left="70" Top="530" Right="134" Bottom="547" />
+			<ButtonRect State="2" Left="136" Top="530" Right="200" Bottom="547" />
+		</Button>
+		
+		<Button Name="GivenMaxStack" Image="Data\inerface0004_main_A.tga" X="155" Y="38" LuaLButtonUp="GivenMaxStack">
+			<ButtonRect State="0" Left="384" Top="395" Right="414" Bottom="411" />
+			<ButtonRect State="1" Left="384" Top="412" Right="414" Bottom="428" />
+			<ButtonRect State="2" Left="384" Top="429" Right="414" Bottom="445" />
+		</Button>
+		
+		<Button Name="GivenSetZero" Image="Data\inerface0004_main_A.tga" X="186" Y="38" LuaLButtonUp="GivenSetZero">
+			<ButtonRect State="0" Left="352" Top="395" Right="382" Bottom="411" />
+			<ButtonRect State="1" Left="352" Top="412" Right="382" Bottom="428" />
+			<ButtonRect State="2" Left="352" Top="429" Right="382" Bottom="445" />
+		</Button>
+		
+		<Button Name="AddOneGivenStack" Image="Data\inerface0004_main_A.tga" X="119" Y="38" LuaLButtonUp="GivenAddOne">
+			<ButtonRect State="0" Left="314" Top="395" Right="331" Bottom="411" />
+			<ButtonRect State="1" Left="314" Top="412" Right="331" Bottom="428" />
+			<ButtonRect State="2" Left="314" Top="429" Right="331" Bottom="445" />
+		</Button>
+		
+		<Button Name="DiffOneGivenStack" Image="Data\inerface0004_main_A.tga" X="137" Y="38" LuaLButtonUp="GivenDiffOne">
+			<ButtonRect State="0" Left="333" Top="395" Right="350" Bottom="411" />
+			<ButtonRect State="1" Left="333" Top="412" Right="350" Bottom="428" />
+			<ButtonRect State="2" Left="333" Top="429" Right="350" Bottom="445" />
+		</Button>
+	</Panel>
+	
+	<!-- Moving Panel-->
+	<Panel Name="GivenMovingPanel" Image="" X="0" Y="50" Left="0" Top="0" Right="40" Bottom="40"
+		 Hide="1" Drag="2" DragLeft="0" DragTop="0" DragRight="40" DragBottom="40" LuaEndDrag="GivenEndDrag" LuaRButtonDown="ResetGivenDrag" >
+		<AniIcon Name="GivenMovingIcon" X="0" Y="0" Image=""  AutoDelete="0" Detect = "1" />
+	</Panel>
+</UI>

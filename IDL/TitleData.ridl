@@ -1,0 +1,37 @@
+//-- Config	
+config
+{
+	SubPath="Data/";
+	ClassID=10130;
+	StartID=10130;
+	EndID  =10139;
+	TwoDirect=1;
+}
+
+//-- include
+
+//-- object class
+class TitleData : NetObject
+{
+	//-- object state
+	key {
+		UInt32 title_uid;
+	};
+	
+	info
+	{
+		UInt16 title_id;
+	};
+	
+	owner
+	{
+		UInt32 owner_id;
+	};
+	
+	expireDate
+	{
+		UInt32 expireDate;
+	};
+	
+	//-- command to RPC server
+}

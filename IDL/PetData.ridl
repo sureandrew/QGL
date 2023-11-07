@@ -1,0 +1,46 @@
+//-- Config
+config
+{
+	SubPath="Data/";
+	ClassID=10120;
+	StartID=10120;
+	EndID  =10129;
+	TwoDirect=1;
+}
+
+//-- include
+
+//-- object class
+class PetData : NetObject
+{
+	//-- object attributes
+	id { 			UInt32 pet_uid;
+					UInt32 pet_id;			};
+	owner_id { 		UInt32 owner_id;		};
+	name {			String name;			};
+	sex {			UInt8 sex; 				};
+	level {			UInt16 level;			};
+	exp {			UInt32 exp; 			};
+	state { 		UInt16 state; 			};
+	birthCount {		UInt16 birthCount;		};
+	firstMaster {		String firstMaster; 	};
+	father {		UInt32 father_id; 	
+					String father_name; 	};
+	mother {		UInt32 mother_id;
+					String mother_name; 	};
+	happiness{		UInt16 happiness; 		};
+	VP {			UInt16 VP;
+					UInt16 maxVP;			};
+	element {		UInt8  element;			};
+	expireDate {		UInt32 expireDate;		};
+	soulbound {		UInt8 soulbound;		};
+	color {			UInt16 color;			};
+	spirit { 		UInt16 spirit; 			};
+	depute {		UInt32 depute_master;
+					UInt16 depute_time;
+					UInt16 depute_useTime;
+					UInt32 depute_exp;		};
+	inWareHouse{		UInt8 inWareHouse;	};
+	assetLock{      Boolean lock;            };	
+	//--- RPC method
+}

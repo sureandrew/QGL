@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" ?>
+<UI>
+	<ID Name="QuestionPanel" />
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	<Panel Name="QuestionPanel" Image="Data\interface0036_Question.tga" X="14" Y="99" 
+			Left="1" Top="0" Right="774" Bottom="334" LuaRButtonUp="" DetectImage = "1"
+			Drag="0" DragLeft="0" DragTop="0" DragRight="496" DragBottom="297" 
+			LuaTimeOut="" TimeOutCount="500">
+			
+			<StaticText Name="QuestionRankName1" X="62" Y="60" Row="1" Column="12" Width="100" Height="20" EdgeCode="LEFT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<StaticText Name="QuestionRankScore1" X="170" Y="60" Row="1" Column="12" Width="50" Height="20" EdgeCode="LEFT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<StaticText Name="QuestionRankName2" X="62" Y="85" Row="1" Column="12" Width="100" Height="20" EdgeCode="LEFT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<StaticText Name="QuestionRankScore2" X="170" Y="85" Row="1" Column="12" Width="50" Height="20" EdgeCode="LEFT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<StaticText Name="QuestionRankName3" X="62" Y="110" Row="1" Column="12" Width="100" Height="20" EdgeCode="LEFT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<StaticText Name="QuestionRankScore3" X="170" Y="110" Row="1" Column="12" Width="50" Height="20" EdgeCode="LEFT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<StaticText Name="QuestionRankName4" X="62" Y="135" Row="1" Column="12" Width="100" Height="20" EdgeCode="LEFT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<StaticText Name="QuestionRankScore4" X="170" Y="135" Row="1" Column="12" Width="50" Height="20" EdgeCode="LEFT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<StaticText Name="QuestionRankName5" X="62" Y="160" Row="1" Column="12" Width="100" Height="20" EdgeCode="LEFT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<StaticText Name="QuestionRankScore5" X="170" Y="160" Row="1" Column="12" Width="50" Height="20" EdgeCode="LEFT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<StaticText Name="QuestionRankName6" X="62" Y="185" Row="1" Column="12" Width="100" Height="20" EdgeCode="LEFT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<StaticText Name="QuestionRankScore6" X="170" Y="185" Row="1" Column="12" Width="50" Height="20" EdgeCode="LEFT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<StaticText Name="QuestionRankName7" X="62" Y="210" Row="1" Column="12" Width="100" Height="20" EdgeCode="LEFT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<StaticText Name="QuestionRankScore7" X="170" Y="210" Row="1" Column="12" Width="50" Height="20" EdgeCode="LEFT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<StaticText Name="QuestionRankName8" X="62" Y="235" Row="1" Column="12" Width="100" Height="20" EdgeCode="LEFT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<StaticText Name="QuestionRankScore8" X="170" Y="235" Row="1" Column="12" Width="50" Height="20" EdgeCode="LEFT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<StaticText Name="QuestionRankName9" X="62" Y="260" Row="1" Column="12" Width="100" Height="20" EdgeCode="LEFT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<StaticText Name="QuestionRankScore9" X="170" Y="260" Row="1" Column="12" Width="50" Height="20" EdgeCode="LEFT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<StaticText Name="QuestionRankName10" X="62" Y="285" Row="1" Column="12" Width="100" Height="20" EdgeCode="LEFT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<StaticText Name="QuestionRankScore10" X="170" Y="285" Row="1" Column="12" Width="50" Height="20" EdgeCode="LEFT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+			
+		
+		<StaticText Name="Question_Score" X="289" Y="310" Row="1" Column="12" Width="180" Height="25" EdgeCode="LEFT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		0
+		</StaticText>
+		
+		<StaticText Name="Question_Description" X="266" Y="59" Row="3" Column="25" Width="400" Height="49" EdgeCode="LEFT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		这里将显示问题内容
+		</StaticText>
+			
+		<Button Name="Question_OptionButton1" Image="Data\interface0036_Question.tga" X="266" Y="126" LuaLButtonUp="OnQuestion_OptionButton1">
+			<ButtonRect State="0" Left="24" Top="463" Right="52" Bottom="491" />
+			<ButtonRect State="1" Left="64" Top="463" Right="92" Bottom="491" />
+			<ButtonRect State="2" Left="104" Top="463" Right="132" Bottom="491" />
+			<ButtonRect State="3" Left="144" Top="463" Right="172" Bottom="491" />
+		</Button>
+		<StaticText Name="Question_Option1" X="308" Y="132" Row="1" Column="12" Width="360" Height="25" EdgeCode="LEFT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		这里将显示第一个选项
+		</StaticText>
+			
+		<Button Name="Question_OptionButton2" Image="Data\interface0036_Question.tga" X="266" Y="160" LuaLButtonUp="OnQuestion_OptionButton2">
+			<ButtonRect State="0" Left="24" Top="497" Right="52" Bottom="525" />
+			<ButtonRect State="1" Left="64" Top="497" Right="92" Bottom="525" />
+			<ButtonRect State="2" Left="104" Top="497" Right="132" Bottom="525" />
+			<ButtonRect State="3" Left="144" Top="497" Right="172" Bottom="525" />
+		</Button>
+		<StaticText Name="Question_Option2" X="308" Y="166" Row="1" Column="12" Width="340" Height="25" EdgeCode="LEFT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		这里将显示第二个选项
+		</StaticText>
+			
+		<Button Name="Question_OptionButton3" Image="Data\interface0036_Question.tga" X="266" Y="192" LuaLButtonUp="OnQuestion_OptionButton3">
+			<ButtonRect State="0" Left="24" Top="531" Right="52" Bottom="559" />
+			<ButtonRect State="1" Left="64" Top="531" Right="92" Bottom="559" />
+			<ButtonRect State="2" Left="104" Top="531" Right="132" Bottom="559" />
+			<ButtonRect State="3" Left="144" Top="531" Right="172" Bottom="559" />
+		</Button>
+		<StaticText Name="Question_Option3" X="308" Y="200" Row="1" Column="12" Width="340" Height="25" EdgeCode="LEFT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		这里将显示第三个选项
+		</StaticText>
+			
+		<Button Name="Question_OptionButton4" Image="Data\interface0036_Question.tga" X="266" Y="224" LuaLButtonUp="OnQuestion_OptionButton4">
+			<ButtonRect State="0" Left="24" Top="565" Right="52" Bottom="593" />
+			<ButtonRect State="1" Left="64" Top="565" Right="92" Bottom="593" />
+			<ButtonRect State="2" Left="104" Top="565" Right="132" Bottom="593" />
+			<ButtonRect State="3" Left="144" Top="565" Right="172" Bottom="593" />
+		</Button>
+		<StaticText Name="Question_Option4" X="308" Y="234" Row="1" Column="12" Width="340" Height="25" EdgeCode="LEFT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		这里将显示第四个选项
+		</StaticText>
+		
+		<Button Name="Question_Close" Image="Data\interface0036_Question.tga" X="711" Y="41" LuaLButtonUp="OnQuestion_Close">
+			<ButtonRect State="0" Left="216" Top="514" Right="265" Bottom="563" />
+			<ButtonRect State="1" Left="276" Top="514" Right="325" Bottom="563" />
+			<ButtonRect State="2" Left="336" Top="514" Right="385" Bottom="563" />
+			<ButtonRect State="3" Left="396" Top="514" Right="445" Bottom="563" />
+		</Button>	
+		
+		<Button Name="Question_Explain" Image="Data\interface0036_Question.tga" X="711" Y="94" LuaLButtonUp="OnQuestion_Explain">
+			<ButtonRect State="0" Left="216" Top="460" Right="265" Bottom="509" />
+			<ButtonRect State="1" Left="276" Top="460" Right="325" Bottom="509" />
+			<ButtonRect State="2" Left="336" Top="460" Right="385" Bottom="509" />
+			<ButtonRect State="3" Left="396" Top="460" Right="445" Bottom="509" />
+		</Button>	
+		<LinerImage Name="Question_CountDownBar" X="242" Y="278" Image="Data\interface0012_main_F.tga" Left="645" Top="120"
+			Right="651" Bottom="136" LineWidth="318" BaseWidth="318" Hide="0" Denumerator="100" Numerator="100" />
+			<StaticText Name="Question_CountDownText" X="395" Y="280" Row="1" Column="8" Width="200" Height="20" EdgeCode="LEFT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		</StaticText>
+		<AniIcon Name="AnswerResultImage" X="280" Y="70" Image="" AutoDelete="0" InsertToEventList = "1"  TimeOutCount="1000" LuaTimeOut="HideAnswerResultImage"/>
+	</Panel>	
+
+</UI>

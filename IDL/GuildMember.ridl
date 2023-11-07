@@ -1,0 +1,41 @@
+//-- Config
+config
+{
+	SubPath="Logic/";
+	ClassID=50000;
+	StartID=50000;
+	EndID  =50999;
+}
+
+//-- include
+
+//-- object class
+class GuildMember : NetObject
+{
+	//-- object state
+	key {			UInt32 char_id;
+					UInt32 guild_uid; 		};
+	donate {		UInt32 donate; 			};
+	totalDonate {	UInt32 totalDonate; 	};
+	post {			UInt8  post;			}; 
+	joinDate {		UInt32 joinDate;		};
+
+	name { 			String name; 			}; 
+	sexClass {		UInt8  sexClass;		};
+	level {			UInt16 level;			};
+	offlineTime {	UInt32 offlineTime; 	};
+	business {		UInt16 businessCount;
+					UInt32 businessProfit; 	};
+	inactive {		Boolean	inactive;		};
+	
+	public:
+	ResponseApplicant(UInt32 char_id, bool accept);
+	PositionChange(UInt32 char_id, UInt8 newPost);
+	ChangeAim(String text);
+	ChangeRule(String text);
+	ClearGuildBusinessLog();
+	
+	
+	CB_Error(UInt32 errCode, String errMsg);
+	CB_PositionChange(UInt32 src, UInt32 target, UInt8 position);
+}

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" ?>
+<UI>
+	<ID Name="SkillDetailMenu" />
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	<Panel Expand="1" Name="SkillDetailMenuPanel" X="100" Y="100" Image="Data\interface0005_main_B.tga" Hide="0"
+		Left="9" Top="475" Right="297" Bottom="487"
+		LineRectLeft="9" LineRectTop="489" LineRectRight="297"	LineRectBottom="492" LineCount="120"
+		BottomRectLeft="9" BottomRectTop="504" BottomRectRight="297" BottomRectBottom="518"
+		NotDetected="1" 
+		>
+		<ChatPanel Name="SkillDetailChat" X="10" Y="13" Width="270" Height="250" ContinueRun = "1" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" FillColor="7F0000FF">
+		</ChatPanel>
+		
+	</Panel>
+</UI>

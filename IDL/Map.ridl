@@ -1,0 +1,42 @@
+//-- Config
+config
+{
+	SubPath="Logic/";
+	ClassID=16000;
+	StartID=16000;
+	EndID  =16999;
+}
+
+//-- include
+
+struct JumpInfo
+{
+	UInt16 jpPosX;
+	UInt16 jpPosY;
+	UInt16 dstMapId;
+	UInt16 dstPosX;
+	UInt16 dstPosY;
+};
+
+typedef StlVector<JumpInfo, ManagedAllocator<JumpInfo> > JumpInfoVector;
+
+//-- object class
+class Map : NetObject
+{
+	//-- object attributes
+	info { 			UInt16 map_id;
+					UInt8  line_id; 	};
+	instance { 		UInt16 inst_id;
+					UInt32 owner_id; 	};
+
+	//-- method
+public:
+	GetCharInRange(UInt16 centerX, UInt16 centerY, UInt16 range);
+	GetJumpPoints();
+
+	//-- callback
+	CB_Error(UInt32 errCode, String errMsg);
+	CB_GetCharInRange(NetGroup* grp);
+	CB_GetJumpPoints(JumpInfoVector jumpInfoList);
+	CB_ObjectChanged(NetGroup* grp, RPCNetIDVector delIds, RPCNetIDVector curIds);
+}

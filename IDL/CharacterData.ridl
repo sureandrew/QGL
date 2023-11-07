@@ -1,0 +1,116 @@
+//-- Config
+config
+{
+	SubPath="Data/";
+	ClassID=10020;
+	StartID=10020;
+	EndID  =10029;
+	TwoDirect=1;
+}
+
+//-- include
+
+//-- object class
+class CharacterData : NetObject
+{
+	//-- object attributes
+	id { 			UInt32 acct_id;
+					UInt32 char_id; 		};
+
+	info { 			String nickName;
+					UInt8 sex;
+					UInt8 cclass;
+					UInt8 faction; 			};
+	levelInfo {		UInt16 level;			};
+	exp {			UInt32 exp; 			};
+	attrib {		UInt16 STA;
+					UInt16 SPR;
+					UInt16 STR;
+					UInt16 CON;
+					UInt16 AGI; 			};
+	attrPoint { 	UInt16 attrPoint; 		};
+
+	HP {			UInt16 HP;
+					UInt16 mHP;
+					UInt16 maxHP;			};
+	SP {			UInt16 SP;
+					UInt16 mSP;
+					UInt16 maxSP;			};
+	DP {			UInt16 DP;
+					UInt16 mDP;
+					UInt16 maxDP;			};
+	WC {			UInt16 WC;
+					UInt16 maxWC;
+					UInt16 WcExp;			};
+	VP {			UInt16 VP;
+					UInt16 maxVP;			};
+	goodness {		Int32 goodness;			};
+	honor {			UInt32 honor;			};
+	title {			String title;			};
+	manor { 		UInt32 manor; 			};
+	donate { 		UInt32 fDonate;
+					UInt32 totalFDonate;
+					UInt32 mDonate;
+					UInt32 totalMDonate;	};
+	//yuanBao { 		UInt32 yuanBao;			};
+	money { 		UInt32 money;			};
+	bankMoney { 	UInt32 bankMoney; 		};
+	SMoney{ UInt32 SMoney;};
+	partner { 		UInt32 partner; 		};
+	pet { 			UInt32 pet; 			};
+	maxOther {		UInt8 maxPartner;
+					UInt8 maxPet; 			};
+
+	map {			UInt16 map_id;
+					UInt16 map_x;
+					UInt16 map_y;
+					UInt32 map_ownerId; 	};
+	reborn { 		UInt16 reborn_map;
+					UInt16 reborn_x;
+					UInt16 reborn_y; 		};
+
+	style {			UInt16 photo_id;
+					UInt16 hairStyle1;
+					UInt16 hairStyle2;
+					UInt16 hairColor;		};
+
+	eqWeapon {		UInt32 eq_weapon;	
+					UInt16 eq_weaponColor;	};
+	eqHead {		UInt32 eq_headBand;	
+					UInt16 eq_headColor;	};
+	eqCloth {		UInt32 eq_cloth;	
+					UInt16 eq_clothColor;	};
+	state { 		UInt8 state; 			};
+	buff { 			String buff; 			};
+
+	shortcut {		UInt16 shortcut[10];	
+				UInt8 shortcuttype[10];		};	
+	PKInfo	{		UInt16	PK_Value;};
+
+	orgHairStyle {	UInt16 org_hairStyle1;
+					UInt16 org_hairColor;	};
+	orgEqCloth {	UInt32 org_eq_cloth;	
+					UInt16 org_eq_clothColor;	};
+			
+	speakCount { 	UInt16	speakCount; 	};
+	offlineTime {	UInt32	offlineTime; 	};
+
+	TP	{	UInt16	TP;};
+	speakBlock {	UInt32	speakBlock; 	};
+	hawkerTime	{	UInt32	hawkerTime;	};
+	availBackPack{		UInt8 availBackPack;	};
+	availWareHouse{		UInt8 availItemWareHouse;
+					UInt8 availPartnerWareHouse;
+					UInt8 availPetWareHouse;	};
+	PvPScoreSingle{		UInt32 PvPScoreSingle;	};
+	deleteTime {	UInt32 delete_time;	};
+	bankLock {	Boolean bankLock;	};	
+	SiblingId { UInt32 sibling_id; };
+	mark { UInt32 mark; };
+	wantedReward { UInt32 wantedReward; };
+	guild_uid {		UInt32 guild_uid;			 };	
+	GenerationAcc{  UInt32 iHisGenAcc;
+					UInt32 uiCurGenAcc;			};
+ 	
+	//--- RPC method
+}

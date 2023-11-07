@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" ?>
+
+<UI>
+	<ID Name="ShowBigMap" />
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	<Panel Name="BigMapPanel" Image="Data\interface0025_main_J4.tga" X="0" Y="0" Left="0" Top="0" Right="800" Bottom="600" DetectImage="1" 
+		LuaLButtonUp="ClearFlag" LuaRButtonUp="CloseBigMap" LuaKeyChar="CloseBigMap">
+		
+		<UIImage Name="BigMapShadow1" Image="Data\interface0025_main_J5.tga" X="0" Y="0" Left="0" Top="0" Right="800" Bottom="600"  Hide="1" NotDetected="1" LuaLButtonUp="ClearFlag"/>				
+		<UIImage Name="BigMapPath" Image="Data\interface0025_main_J3.tga" X="0" Y="0" Left="0" Top="0" Right="800" Bottom="600"  Hide="1" DetectImage="1" LuaLButtonUp="ClearFlag" LuaRButtonUp="CloseBigMap" />
+		<UIImage Name="BigMapShadow2" Image="Data\interface0025_main_J5.tga" X="0" Y="0" Left="0" Top="0" Right="800" Bottom="600"  Hide="1"/>				
+				
+		<UIImage Name="BigMapCheckBox" Image="Data\interface0025_main_J2.tga" X="700" Y="23" Left="285" Top="3" Right="370" Bottom="157" DetectImage="1" LuaRButtonUp="CloseBigMap"/>
+		
+		<CheckBox Name="BigMapCheck1" X="704" Y="25" CheckX="0" CheckY="1" Image="Data\interface0025_main_J2.tga" State="0" LuaLButtonDown="ShowMapButton1">
+			<CheckBoxRect Index="0" Left="289" Top="5" Right="302" Bottom="18" />
+			<CheckBoxRect Index="1" Left="289" Top="5" Right="302" Bottom="18" />
+			<CheckBoxRect Index="2" Left="387" Top="5" Right="400" Bottom="18" />
+		</CheckBox>
+		<CheckBox Name="BigMapCheck2" X="704" Y="43" CheckX="0" CheckY="1" Image="Data\interface0025_main_J2.tga" State="0" LuaLButtonDown="ShowMapButton2">
+			<CheckBoxRect Index="0" Left="289" Top="23" Right="302" Bottom="36" />
+			<CheckBoxRect Index="1" Left="289" Top="23" Right="302" Bottom="36" />
+			<CheckBoxRect Index="2" Left="387" Top="5" Right="400" Bottom="18" />
+		</CheckBox>
+		<CheckBox Name="BigMapCheck3" X="704" Y="62" CheckX="0" CheckY="1" Image="Data\interface0025_main_J2.tga" State="0" LuaLButtonDown="ShowMapButton3">
+			<CheckBoxRect Index="0" Left="289" Top="42" Right="302" Bottom="55" />
+			<CheckBoxRect Index="1" Left="289" Top="42" Right="302" Bottom="55" />
+			<CheckBoxRect Index="2" Left="387" Top="5" Right="400" Bottom="18" />
+		</CheckBox>
+		<CheckBox Name="BigMapCheck4" X="704" Y="80" CheckX="0" CheckY="1" Image="Data\interface0025_main_J2.tga" State="0" LuaLButtonDown="ShowMapButton4">
+			<CheckBoxRect Index="0" Left="289" Top="60" Right="302" Bottom="73" />
+			<CheckBoxRect Index="1" Left="289" Top="60" Right="302" Bottom="73" />
+			<CheckBoxRect Index="2" Left="387" Top="5" Right="400" Bottom="18" />
+		</CheckBox>
+		<CheckBox Name="BigMapCheck5" X="704" Y="99" CheckX="0" CheckY="1" Image="Data\interface0025_main_J2.tga" State="0" LuaLButtonDown="ShowMapButton5">
+			<CheckBoxRect Index="0" Left="289" Top="79" Right="302" Bottom="92" />
+			<CheckBoxRect Index="1" Left="289" Top="79" Right="302" Bottom="92" />
+			<CheckBoxRect Index="2" Left="387" Top="5" Right="400" Bottom="18" />
+		</CheckBox>
+		<CheckBox Name="BigMapCheck6" X="704" Y="118" CheckX="0" CheckY="1" Image="Data\interface0025_main_J2.tga" State="0" LuaLButtonDown="ShowMapButton6">
+			<CheckBoxRect Index="0" Left="289" Top="98" Right="302" Bottom="111" />
+			<CheckBoxRect Index="1" Left="289" Top="98" Right="302" Bottom="111" />
+			<CheckBoxRect Index="2" Left="387" Top="5" Right="400" Bottom="18" />
+		</CheckBox>
+		
+		<CheckBox Name="BigMapCheck7" X="704" Y="145" CheckX="0" CheckY="1" Image="Data\interface0025_main_J2.tga" State="1" LuaLButtonDown="ShowAllMapText">
+			<CheckBoxRect Index="0" Left="289" Top="98" Right="302" Bottom="111" />
+			<CheckBoxRect Index="1" Left="289" Top="98" Right="302" Bottom="111" />
+			<CheckBoxRect Index="2" Left="387" Top="5" Right="400" Bottom="18" />
+		</CheckBox>
+		
+		<CheckBox Name="BigMapCheck8" X="704" Y="162" CheckX="0" CheckY="1" Image="Data\interface0025_main_J2.tga" State="0" LuaLButtonDown="ShowAllPath">
+			<CheckBoxRect Index="0" Left="289" Top="144" Right="302" Bottom="157" />
+			<CheckBoxRect Index="1" Left="289" Top="144" Right="302" Bottom="157" />
+			<CheckBoxRect Index="2" Left="387" Top="5" Right="400" Bottom="18" />
+		</CheckBox>
+		
+		<Button Name="SeeBigMapDes" Image="Data\interface0025_main_J2.tga" X="695" Y="180" LuaLButtonUp="StartBigMapDescMode">
+			<ButtonRect State="0" Left="281" Top="165" Right="375" Bottom="203" />
+			<ButtonRect State="1" Left="281" Top="208" Right="375" Bottom="246" />
+			<ButtonRect State="2" Left="281" Top="250" Right="375" Bottom="288" />
+		</Button>
+		
+		<Button Name="BigMapCross" Image="Data\interface0025_main_J2.tga" X="780" Y="0" LuaLButtonUp="CloseBigMap">
+			<ButtonRect State="0" Left="414" Top="173" Right="430" Bottom="189" />
+			<ButtonRect State="1" Left="433" Top="173" Right="449" Bottom="189" />
+			<ButtonRect State="2" Left="452" Top="173" Right="468" Bottom="189" />
+		</Button>
+		
+		<AniIcon Name="BigMapLocation"  X="0" Y="0" Image="CursorR.ent" Rotation = "0" AnimationIndex = "0" Loop = "1" Align = "1" Hide="0" />
+		
+		<AniIcon Name="BigMapDes"  X="0" Y="0" Image="CursorQ.ent" Rotation = "0" AnimationIndex = "0" Loop = "1" Align = "1" Hide="1" />
+		
+	</Panel>	
+	<Panel Name="BigMapDescPanel" Image="" X="210" Y="80" Left="0" Top="0" Right="381" Bottom="400" DetectImage="0" LuaRButtonUp="CloseBigMapDesc" Hide="1">
+		<UIImage Name="NPCBigMapImage" X="0" Y="0" Image="" NotDetected = "1"	Left="0" Top="0" Right="189" Bottom="211" AutoDelete="0" LuaRButtonUp="CloseBigMapDesc"/> 
+		<UIImage Name="BigMapDesBox" X="0" Y="211" Image="Data\interface0025_main_J2.tga" NotDetected="0" Left="415" Top="4" Right="796" Bottom="170" AutoDelete="0" Hide="0" LuaLButtonUp="CloseBigMapDesc" LuaRButtonUp="CloseBigMapDesc"/>
+		<ChatPanel Name="BigMapDesc" X="21" Y="224" Width="355" Height="139" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" FillColor="7F0000FF" Hide="0" NotDetected = "1">
+		</ChatPanel>		
+	</Panel>
+</UI>
+

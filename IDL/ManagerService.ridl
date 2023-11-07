@@ -1,0 +1,32 @@
+//-- Config
+config
+{
+	SubPath="Service/";
+	StartID=7000;
+	EndID=7499;
+}
+
+//-- Include header
+
+//-- RPC functions
+private:
+RegisterManager();
+RegisterSlave();
+ForwardStatus(ServiceID serviceId, UInt32 status, UInt32 state);
+ForwardStatuses(ServiceStatusesMap services_statuses);
+ForwardCheats(NetGroup* grp);
+LoadConfig(String configFile);
+CheckAllServices();
+StartAllServices();
+StopAllServices(Boolean bStopClose);
+RestartAllServices(Boolean bErr);
+CheckService(ServiceID serviceId);
+StartService(ServiceID serviceId);
+StopService(ServiceID serviceId);
+RestartService(ServiceID serviceId);
+ErrorArchive(ServiceID serviceId);
+ShutdownAt(UInt32 downTime);
+
+RegisterSimClient(String prog, String title, String workDir, String args);
+UnregisterSimClient();
+StartProcess(UInt32 time, String prog, String title, String workDir, String cmd);

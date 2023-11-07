@@ -1,0 +1,159 @@
+<?xml version="1.0" ?>
+<!-- Our to do list data -->
+<UI>
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+		
+	<Panel Name="MenuGuildBusinessLog" X="200" Y="100"  Left="15"
+		Top="11" Right="400" Bottom="320" Hide="0" Image="Data\interface0045_businessLog.tga" 
+		Drag="1" DragLeft="0" DragTop="0" DragRight="380" DragBottom="300" LuaRButtonUp="CloseGuildBusinessLogPanel"
+		LuaMouseWheel="MenuGuildBusinessLogWheel">
+		
+		<UIImage Name="GuildBusinessLogHighLightBg" X="10" Y="63" Image ="" Left="0" Top="0" Right="350" Bottom="200" 
+		LuaLButtonUp = "SelectGuildBusinessLogItem"/>
+		
+		<UIImage Name="GuildBusinessLogHighLightBar" X="3" Y="56" Image ="Data\interface0045_businessLog.tga" Left="18" Top="487" Right="369" Bottom="513" Hide = "1"/>
+		
+		<Button Name="GuildBusinessLogClose" Image="Data\interface0045_businessLog.tga" X="355" Y="11" LuaLButtonUp="CloseGuildBusinessLogPanel">
+			<ButtonRect State="0" Left="286" Top="462" Right="309" Bottom="480" />	
+			<ButtonRect State="1" Left="311" Top="462" Right="335" Bottom="480" />
+			<ButtonRect State="2" Left="336" Top="462" Right="360" Bottom="480" />
+		</Button>
+		
+		<Button Name="GuildBusinessLogSearch" Image="Data\interface0045_businessLog.tga" X="40" Y="278" LuaLButtonUp="GuildBusinessLogSearch">
+			<ButtonRect State="0" Left="193" Top="520" Right="272" Bottom="541" />
+			<ButtonRect State="1" Left="193" Top="543" Right="272" Bottom="564" />
+			<ButtonRect State="2" Left="193" Top="543" Right="272" Bottom="564" />
+			<ButtonRect State="3" Left="193" Top="566" Right="272" Bottom="587" />
+		</Button>
+		
+		<Button Name="GuildBusinessLogClear" Image="Data\interface0045_businessLog.tga" X="150" Y="278" LuaLButtonUp="GuildBusinessLogClear">
+			<ButtonRect State="0" Left="281" Top="520" Right="359" Bottom="541" />
+			<ButtonRect State="1" Left="281" Top="543" Right="359" Bottom="564" />
+			<ButtonRect State="2" Left="281" Top="543" Right="359" Bottom="564" />
+			<ButtonRect State="3" Left="281" Top="566" Right="359" Bottom="587" />
+		</Button>
+		
+		<Button Name="GuildBusinessLogClose2" Image="Data\interface0045_businessLog.tga" X="260" Y="278" LuaLButtonUp="CloseGuildBusinessLogPanel">
+			<ButtonRect State="0" Left="283" Top="345" Right="361" Bottom="366" />
+			<ButtonRect State="1" Left="283" Top="369" Right="361" Bottom="390" />
+			<ButtonRect State="2" Left="283" Top="369" Right="361" Bottom="390" />
+			<ButtonRect State="3" Left="283" Top="391" Right="361" Bottom="412" />
+		</Button>
+		
+		<ScrollBarV Name="GuildBusinessLogScrollBar" X="360" Y="50" Width ="14" Height="222" Limit="0" BarColor="0" LuaLButtonDown="GuildBusinessLogScrollLua">
+			
+			<PrevButton Name="GuildBusinessLogButtonUp" Image="Data\interface0035_Guild.tga" X="0" Y="90"  LuaLButtonDown="GuildBusinessLogButtonUpLua">
+			
+				<ButtonRect State="0" Left="306" Top="320" Right="320" Bottom="334" />
+				<ButtonRect State="1" Left="322" Top="320" Right="336" Bottom="334" />
+				<ButtonRect State="2" Left="338" Top="320" Right="352" Bottom="334" />
+				<ButtonRect State="3" Left="338" Top="320" Right="352" Bottom="334" />
+			</PrevButton>
+			<NextButton Name="GuildBusinessLogButtonDown" Image="Data\interface0035_Guild.tga" X="0" Y="200"  LuaLButtonDown="GuildBusinessLogDownLua">
+				<ButtonRect State="0" Left="306" Top="336" Right="320" Bottom="350" />
+				<ButtonRect State="1" Left="322" Top="336" Right="336" Bottom="350" />
+				<ButtonRect State="2" Left="338" Top="336" Right="352" Bottom="350" />
+				<ButtonRect State="3" Left="338" Top="336" Right="352" Bottom="350" />
+			</NextButton>
+			<MoveButton Name="GuildBusinessLogScroll" Image="Data\interface0035_Guild.tga" X="0" Y="15"  LuaMouseMove="GuildBusinessLogScrollLua">
+				<ButtonRect State="0" Left="355" Top="320" Right="369" Bottom="350" />
+				<ButtonRect State="1" Left="355" Top="320" Right="369" Bottom="350" />
+				<ButtonRect State="2" Left="355" Top="320" Right="369" Bottom="350" />
+			</MoveButton>
+		</ScrollBarV>
+			
+			<StaticText Name="GuildBusinessLogName1" X="10" Y="70" Width="90" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">小鸟飞飞</StaticText>			
+			<StaticText Name="GuildBusinessLogLV1" X="100" Y="70" Width="55" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">123</StaticText>			
+			<StaticText Name="GuildBusinessLogCount1" X="155" Y="70" Width="80" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">321</StaticText>			
+			<StaticText Name="GuildBusinessLogProfit1" X="235" Y="70" Width="120" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">1234567</StaticText>
+			
+			<StaticText Name="GuildBusinessLogName2" X="10" Y="95" Width="90" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">小鸟飞飞</StaticText>			
+			<StaticText Name="GuildBusinessLogLV2" X="100" Y="95" Width="55" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">123</StaticText>			
+			<StaticText Name="GuildBusinessLogCount2" X="155" Y="95" Width="80" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">321</StaticText>			
+			<StaticText Name="GuildBusinessLogProfit2" X="235" Y="95" Width="120" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">1234567</StaticText>
+			
+			<StaticText Name="GuildBusinessLogName3" X="10" Y="120" Width="90" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">小鸟飞飞</StaticText>			
+			<StaticText Name="GuildBusinessLogLV3" X="100" Y="120" Width="55" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">123</StaticText>			
+			<StaticText Name="GuildBusinessLogCount3" X="155" Y="120" Width="80" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">321</StaticText>			
+			<StaticText Name="GuildBusinessLogProfit3" X="235" Y="120" Width="120" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">1234567</StaticText>
+			
+			<StaticText Name="GuildBusinessLogName4" X="10" Y="145" Width="90" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">小鸟飞飞</StaticText>			
+			<StaticText Name="GuildBusinessLogLV4" X="100" Y="145" Width="55" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">123</StaticText>			
+			<StaticText Name="GuildBusinessLogCount4" X="155" Y="145" Width="80" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">321</StaticText>			
+			<StaticText Name="GuildBusinessLogProfit4" X="235" Y="145" Width="120" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">1234567</StaticText>
+			
+			<StaticText Name="GuildBusinessLogName5" X="10" Y="170" Width="90" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">小鸟飞飞</StaticText>			
+			<StaticText Name="GuildBusinessLogLV5" X="100" Y="170" Width="55" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">123</StaticText>			
+			<StaticText Name="GuildBusinessLogCount5" X="155" Y="170" Width="80" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">321</StaticText>			
+			<StaticText Name="GuildBusinessLogProfit5" X="235" Y="170" Width="120" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">1234567</StaticText>
+			
+			<StaticText Name="GuildBusinessLogName6" X="10" Y="195" Width="90" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">小鸟飞飞</StaticText>			
+			<StaticText Name="GuildBusinessLogLV6" X="100" Y="195" Width="55" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">123</StaticText>			
+			<StaticText Name="GuildBusinessLogCount6" X="155" Y="195" Width="80" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">321</StaticText>			
+			<StaticText Name="GuildBusinessLogProfit6" X="235" Y="195" Width="120" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">1234567</StaticText>
+			
+			<StaticText Name="GuildBusinessLogName7" X="10" Y="220" Width="90" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">小鸟飞飞</StaticText>			
+			<StaticText Name="GuildBusinessLogLV7" X="100" Y="220" Width="55" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">123</StaticText>			
+			<StaticText Name="GuildBusinessLogCount7" X="155" Y="220" Width="80" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">321</StaticText>			
+			<StaticText Name="GuildBusinessLogProfit7" X="235" Y="220" Width="120" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">1234567</StaticText>
+			
+			<StaticText Name="GuildBusinessLogName8" X="10" Y="245" Width="90" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">小鸟飞飞</StaticText>			
+			<StaticText Name="GuildBusinessLogLV8" X="100" Y="245" Width="55" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">123</StaticText>			
+			<StaticText Name="GuildBusinessLogCount8" X="155" Y="245" Width="80" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">321</StaticText>			
+			<StaticText Name="GuildBusinessLogProfit8" X="235" Y="245" Width="120" Height="20" Row="1" Column="8" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">1234567</StaticText>
+	</Panel>
+	
+	<Panel Name="MenuGuildBusinessLogSearchPanel" X="253" Y="267" Image="Data\interface0045_businessLog.tga" Left="15" Top="344" Right="272" Bottom="463" 
+		Drag="1" DragLeft="0" DragTop="0" DragRight="256" DragBottom="118">
+			
+		<EditBox Name="NumberOfGuildBusinessLogSearch" X="80" Y="50" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" Limit="10" NumOnly="1">
+			
+		</EditBox>
+		
+		<Button Name="ConfirmGuildBusinessLogSearchYes" Image="Data\interface0045_businessLog.tga" X="40" Y="80" LuaLButtonUp="ConfirmGuildBusinessLogSearchYes">
+			<ButtonRect State="0" Left="18" Top="521" Right="95" Bottom="540" />
+			<ButtonRect State="1" Left="18" Top="543" Right="95" Bottom="564" />
+			<ButtonRect State="2" Left="18" Top="567" Right="95" Bottom="587" />
+		</Button>		
+		
+		<Button Name="ConfirmGuildBusinessLogSearchNo" Image="Data\interface0045_businessLog.tga" X="140" Y="80" LuaLButtonUp="CloseMenuGuildBusinessLogSearchPanel">
+			<ButtonRect State="0" Left="106" Top="521" Right="183" Bottom="540" />
+			<ButtonRect State="1" Left="106" Top="543" Right="183" Bottom="564" />
+			<ButtonRect State="2" Left="106" Top="567" Right="183" Bottom="587" />
+		</Button>		
+	</Panel>
+</UI>
+

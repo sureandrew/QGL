@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" ?>
+<UI>
+	<ID Name="SellYBChoice" />
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	<Panel Name="SellYBChoicePanel" X="253" Y="150" Image="Data\interface0040_Remit.tga" Left="488" Top="4" Right="759" Bottom="333" 
+		Drag="1" DragLeft="0" DragTop="0" DragRight="271" DragBottom="329" DetectImage = "1" 
+		LuaRButtonUp="CloseSellYuanBaoChoice" LuaKeyChar="CloseSellYuanBaoChoice">
+		
+		<Button Name="SellYBChoiceCross" Image="Data\interface0040_Remit.tga" X="234" Y="7" LuaLButtonUp="CloseSellYuanBaoChoice">
+			<ButtonRect State="0" Left="12" Top="420" Right="36" Bottom="438" />
+			<ButtonRect State="1" Left="37" Top="420" Right="61" Bottom="438" />
+			<ButtonRect State="2" Left="62" Top="420" Right="86" Bottom="438" />			
+		</Button>
+						
+		<UIImage Name="SellYBChoiceTitle00" X="91" Y="5" Image="Data\interface0040_Remit.tga" NotDetected = "1" Left="235" Top="495" Right="324" Bottom="512" Hide="1" />
+		<UIImage Name="SellYBChoiceTitle01" X="99" Y="5" Image="Data\interface0040_Remit.tga" NotDetected = "1" Left="157" Top="495" Right="230" Bottom="512" Hide="1" />
+		<UIImage Name="SellYBChoiceTitle02" X="106" Y="5" Image="Data\interface0040_Remit.tga" NotDetected = "1" Left="92" Top="495" Right="151" Bottom="512" Hide="1" />
+		
+		<ChatPanel Name="SellYBChoiceOwnInfo" X="8" Y="30" Width="245" Height="100" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" FillColor="7F0000FF" Hide="1" NotDetected = "1">
+			
+		</ChatPanel>	
+		<ChatPanel Name="SellYBChoiceRule" X="8" Y="110" Width="245" Height="90" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" FillColor="7F0000FF" Hide="1" NotDetected = "1">
+			
+		</ChatPanel>	
+						
+		<!-- sell yuanbao choice main page button -->
+		<Button Name="SellYBChoiceYBYBTExchange" Image="Data\interface0040_Remit.tga" X="77" Y="215" LuaLButtonUp="OpenChangeYBSelect" Hide="1">
+			<ButtonRect State="0" Left="93" Top="420" Right="213" Bottom="441" />
+			<ButtonRect State="1" Left="93" Top="445" Right="213" Bottom="466" />
+			<ButtonRect State="2" Left="93" Top="470" Right="213" Bottom="491" />
+			<ButtonRect State="3" Left="93" Top="470" Right="213" Bottom="491" />
+		</Button>
+		
+		<Button Name="SellYBChoiceSellYB" Image="Data\interface0040_Remit.tga" X="77" Y="240" LuaLButtonUp="OpenSellYBSell" Hide="1">
+			<ButtonRect State="0" Left="221" Top="420" Right="341" Bottom="441" />
+			<ButtonRect State="1" Left="221" Top="445" Right="341" Bottom="466" />
+			<ButtonRect State="2" Left="221" Top="470" Right="341" Bottom="491" />
+			<ButtonRect State="3" Left="221" Top="470" Right="341" Bottom="491" />
+		</Button>
+		
+		<Button Name="SellYBChoiceBuyYB" Image="Data\interface0040_Remit.tga" X="77" Y="265" LuaLButtonUp="OpenSellYBBuy" Hide="1">
+			<ButtonRect State="0" Left="350" Top="420" Right="470" Bottom="441" />
+			<ButtonRect State="1" Left="350" Top="445" Right="470" Bottom="466" />
+			<ButtonRect State="2" Left="350" Top="470" Right="470" Bottom="491" />
+			<ButtonRect State="3" Left="350" Top="470" Right="470" Bottom="491" />
+		</Button>
+		
+		<Button Name="SellYBChoiceTempBank" Image="Data\interface0040_Remit.tga" X="77" Y="290" LuaLButtonUp="GetSellYBTempBank" Hide="1">
+			<ButtonRect State="0" Left="480" Top="420" Right="600" Bottom="441" />
+			<ButtonRect State="1" Left="480" Top="445" Right="600" Bottom="466" />
+			<ButtonRect State="2" Left="480" Top="470" Right="600" Bottom="491" />
+			<ButtonRect State="3" Left="480" Top="470" Right="600" Bottom="491" />
+		</Button>
+							
+		<!-- change yuanbao or yuanbao ticket button-->
+		<Button Name="SellYBChoiceWantYBT" Image="Data\interface0040_Remit.tga" X="75" Y="220" LuaLButtonUp="OpenExchangeYBToYBT" Hide="1">
+			<ButtonRect State="0" Left="496" Top="341" Right="616" Bottom="362" />
+			<ButtonRect State="1" Left="496" Top="366" Right="616" Bottom="387" />
+			<ButtonRect State="2" Left="496" Top="391" Right="616" Bottom="412" />
+			<ButtonRect State="3" Left="496" Top="391" Right="616" Bottom="412" />
+		</Button>
+		
+		<Button Name="SellYBChoiceWantYB" Image="Data\interface0040_Remit.tga" X="75" Y="245" LuaLButtonUp="OpenExchangeYBTToYB" Hide="1">
+			<ButtonRect State="0" Left="626" Top="341" Right="746" Bottom="362" />
+			<ButtonRect State="1" Left="626" Top="366" Right="746" Bottom="387" />
+			<ButtonRect State="2" Left="626" Top="391" Right="746" Bottom="412" />
+			<ButtonRect State="3" Left="626" Top="391" Right="746" Bottom="412" />
+		</Button>
+		
+		<Button Name="SellYBChoiceWantBack" Image="Data\interface0040_Remit.tga" X="75" Y="270" LuaLButtonUp="OpenSellYBMain" Hide="1">
+			<ButtonRect State="0" Left="582" Top="500" Right="702" Bottom="521" />
+			<ButtonRect State="1" Left="582" Top="525" Right="702" Bottom="546" />
+			<ButtonRect State="2" Left="582" Top="550" Right="702" Bottom="571" />
+			<ButtonRect State="3" Left="582" Top="550" Right="702" Bottom="571" />
+		</Button>
+		
+		<!-- input YBT amount -->
+		<UIImage Name="SellYBChoiceChangeAmount" X="8" Y="220" Image="Data\interface0040_Remit.tga" NotDetected = "1" Left="362" Top="498" Right="535" Bottom="516" Hide="1" />
+		<EditBox Name="NumberOfSellYBChoiceChangeAmount" X="80" Y="223" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" Limit="8" NumOnly="1" Hide="1" LuaKeyChar="ShowSellYBChoiceTotalAmount"
+			LuaKeyDown="ShowSellYBChoiceTotalAmount_DelKey" >
+			1 
+		</EditBox>
+		
+		<StaticText Name="SellYBChoiceSpendYBTitle" X="8" Y="250" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="260" Height="20" NotDetected="1" Align="Left" Hide="1">
+			花费元宝 : 	
+		</StaticText>
+		<StaticText Name="SellYBChoiceGetYBTitle" X="8" Y="250" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="260" Height="20" NotDetected="1" Align="Left" Hide="1">
+			获得元宝 :
+		</StaticText>
+		
+		<StaticText Name="SellYBChoiceTotalAmount" X="90" Y="250" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="260" Height="20" NotDetected="1" Align="Left" Hide="1">
+		</StaticText>
+		
+		<Button Name="SellYBChoiceConfirm" Image="Data\interface0040_Remit.tga" X="39" Y="280" LuaLButtonUp="ShowConfirmChangeYBYBT" Hide="1">
+			<ButtonRect State="0" Left="191" Top="341" Right="283" Bottom="362" />
+			<ButtonRect State="1" Left="191" Top="366" Right="283" Bottom="387" />
+			<ButtonRect State="2" Left="191" Top="391" Right="283" Bottom="412" />
+			<ButtonRect State="3" Left="191" Top="391" Right="283" Bottom="412" />
+		</Button>
+		
+		<Button Name="SellYBChoiceBack" Image="Data\interface0040_Remit.tga" X="137" Y="280" LuaLButtonUp="OpenChangeYBSelect" Hide="1">
+			<ButtonRect State="0" Left="393" Top="341" Right="485" Bottom="362" />
+			<ButtonRect State="1" Left="393" Top="366" Right="485" Bottom="387" />
+			<ButtonRect State="2" Left="393" Top="391" Right="485" Bottom="412" />
+			<ButtonRect State="3" Left="393" Top="391" Right="485" Bottom="412" />
+		</Button>
+		
+	</Panel>
+	
+	<Panel Name="SellYBChoiceConfirmPanel" X="253" Y="150" Image="" Left="0" Top="0" Right="247" Bottom="125" 
+		Drag="1" DragLeft="0" DragTop="0" DragRight="247" DragBottom="125" DetectImage = "1" Hide="1"
+		LuaRButtonUp="CancelConfirmChangeYBYBT" LuaKeyChar="CancelConfirmChangeYBYBT">
+		
+		<UIImage Name="SellYBChoiceConfrimPanelHead" X="0" Y="0" Image="Data\interface0003_popup.tga" NotDetected = "1" Left="364" Top="7" Right="611" Bottom="23" />
+		<UIImage Name="SellYBChoiceConfrimPanelFoot" X="0" Y="107" Image="Data\interface0003_popup.tga" NotDetected = "1" Left="364" Top="41" Right="611" Bottom="59" />		
+		<LinerImageV Name="SellYBChoiceConfrimPanelMiddle" X="0" Y="16" Image="Data\interface0003_popup.tga" Left="364" Top="24"
+			Right="611" Bottom="40" LineHeight="91" BaseHeight="91" Hide="0" Denumerator="100" Numerator="100" />
+		
+		<StaticText Name="SellYBChoiceConfrimText" X="5" Y="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="240" Height="32" NotDetected="1" Align="Center">
+		</StaticText>
+		
+		<StaticText Name="SellYBChoicePasswordTitle" X="3" Y="63" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Width="90" Height="20" NotDetected="1" Align="Center">
+			账户密码:
+		</StaticText>
+		<UIImage Name="SellYBChoiceConfrimTextBG" X="90" Y="60" Image="Data\interface0040_Remit.tga" NotDetected = "1" Left="424" Top="498" Right="535" Bottom="516" />
+		<EditBox Name="SellYBChoiceConfrimTextPassword" Password="1" X="100" Y="63" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" Limit="50" LuaKeyChar="">		
+		</EditBox>
+		
+		<Button Name="SellYBChoiceFinalConfirm" Image="Data\interface0040_Remit.tga" X="29" Y="90" LuaLButtonUp="ConfirmChangeYBYBT">
+			<ButtonRect State="0" Left="191" Top="341" Right="283" Bottom="362" />
+			<ButtonRect State="1" Left="191" Top="366" Right="283" Bottom="387" />
+			<ButtonRect State="2" Left="191" Top="391" Right="283" Bottom="412" />
+			<ButtonRect State="3" Left="191" Top="391" Right="283" Bottom="412" />
+		</Button>
+		
+		<Button Name="SellYBChoiceConfirmCancel" Image="Data\interface0040_Remit.tga" X="137" Y="90" LuaLButtonUp="CancelConfirmChangeYBYBT">
+			<ButtonRect State="0" Left="393" Top="341" Right="485" Bottom="362" />
+			<ButtonRect State="1" Left="393" Top="366" Right="485" Bottom="387" />
+			<ButtonRect State="2" Left="393" Top="391" Right="485" Bottom="412" />
+			<ButtonRect State="3" Left="393" Top="391" Right="485" Bottom="412" />
+		</Button>
+	</Panel>
+	
+</UI>

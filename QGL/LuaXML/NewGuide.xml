@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+<UI>
+	<ID Name="NewGuideName" />
+	<!--<Font Name="Data\mingliu.ttc" Width="12" Height="12" />-->
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	<Panel Name="NewGuidePanel" X="230" Y="50" Image="Data\interface0048.tga" Left="1" Top="1" Right="339" Bottom="398" Drag="1" DragLeft="0" DragTop="0" DragRight="338" DragBottom="397" DetectImage = "1" 
+		LuaRButtonUp="CloseNewGuide" LuaKeyChar="CloseNewGuide">	
+		<CheckBox Name="WhetherCloseAssist" Image="Data\interface0048.tga" X="23" Y="371"  LuaLButtonUp="IsCloseAssist">
+			<CheckBoxRect Index="0" Left="24" Top="372" Right="46" Bottom="392" />
+			<CheckBoxRect Index="1" Left="24" Top="372" Right="46" Bottom="392" />
+			<CheckBoxRect Index="2" Left="340" Top="10" Right="362" Bottom="30" />
+		</CheckBox>
+		
+		<ChatPanel Name="NewGuideContext" X="38" Y="40" Width="266" Height="322" ContinueRun = "1" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" DisableScroll="1" LuaRButtonUp="CloseNewGuide">
+		</ChatPanel>
+		
+		<AniIcon Name="NewGuideImg1" X="0" Y="0" Image="" AutoDelete="0" NotDetected="1" Hide="1"/>
+		
+		<AniIcon Name="NewGuideImg2" X="0" Y="0" Image="" AutoDelete="0" NotDetected="1" Hide="1"/>
+		
+		<AniIcon Name="NewGuideImg3" X="0" Y="0" Image="" AutoDelete="0" NotDetected="1" Hide="1"/>
+		
+		<AniIcon Name="NewGuideImg4" X="0" Y="0" Image="" AutoDelete="0" NotDetected="1" Hide="1"/>
+		
+		<AniIcon Name="NewGuideImg5" X="0" Y="0" Image="" AutoDelete="0" NotDetected="1" Hide="1"/>
+
+		<Button Name="NewGuideButton" Image="Data\interface0048.tga" X="306" Y="7"
+			LuaLButtonUp="CloseNewGuide">
+			<ButtonRect State="0" Left="363" Top="11" Right="386" Bottom="28" />
+			<ButtonRect State="1" Left="388" Top="11" Right="412" Bottom="28" />
+			<ButtonRect State="2" Left="414" Top="11" Right="436" Bottom="28" />
+		</Button>
+	</Panel>
+	
+	<Panel Name="NewGuideArrow" X="0" Y="0" Image="" Left="0" Top="0" Right="800" Bottom="600">
+		<AniIcon Name="ClickArrowLeft" X="0" Y="0" Image="left_001.ent" AnimationIndex="0" AutoDelete="0" Loop="1" Hide="1" NotDetected="1"/>
+		
+		<AniIcon Name="ClickArrowRight" X="0" Y="0" Image="right_001.ent" AnimationIndex="0" AutoDelete="0" Loop="1" Hide="1" NotDetected="1"/>
+		
+		<AniIcon Name="ClickArrowDown" X="0" Y="0" Image="down_001.ent" AnimationIndex="0" AutoDelete="0" Loop="1" Hide="1" NotDetected="1"/>
+		
+		<AniIcon Name="ClickArrowLeft02" X="0" Y="0" Image="left_002.ent" AnimationIndex="0" AutoDelete="0" Loop="1" Hide="1" NotDetected="1"/>
+	</Panel>
+</UI>

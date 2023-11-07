@@ -1,0 +1,83 @@
+//-- Config
+config
+{
+	SubPath="Data/";
+	ClassID=10070;
+	StartID=10070;
+	EndID  =10079;
+	TwoDirect=1;
+}
+
+//-- include
+#ifndef Q_TARGET_NONE
+#define Q_TARGET_NONE		0
+#define Q_TARGET_NPC		1
+#define Q_TARGET_ITEM		2
+#define Q_TARGET_MOB		3
+#define Q_TARGET_PARTNER	4
+#define Q_TARGET_PET		5
+#define Q_TARGET_MAP		6
+#define Q_TARGET_NEWBIE		7
+#define Q_TARGET_ENCOUNT	8
+#endif
+
+//-- object class
+class QuestLogData : NetObject
+{
+	//-- object attributes
+	id { 			UInt32	char_id;
+					UInt16	quest_id;				};
+	info { 			UInt16	Type_id;
+					String	name;
+					String	descript; 				};
+	beginNpc {		UInt32	beginNpc;
+					UInt16	beginNpc_Map;
+					UInt16	beginNpc_x;
+					UInt16	beginNpc_y;				};
+	finishNpc {		UInt32	finishNpc;
+					UInt16	finishNpc_Map;
+					UInt16	finishNpc_x;
+					UInt16	finishNpc_y;			};
+	target1 {		UInt32	target1_id;
+					UInt16	target1_v1;
+					UInt16	target1_v2;
+					UInt16	target1_v3;
+					UInt8	target1_vtype;
+					UInt16	target1_num;
+					UInt16	target1_max;			};
+	target2 {		UInt32	target2_id;
+					UInt16	target2_v1;
+					UInt16	target2_v2;
+					UInt16	target2_v3;
+					UInt8	target2_vtype;
+					UInt16	target2_num;
+					UInt16	target2_max;			};
+	target3 {		UInt32	target3_id;
+					UInt16	target3_v1;
+					UInt16	target3_v2;
+					UInt16	target3_v3;
+					UInt8	target3_vtype;
+					UInt16	target3_num;
+					UInt16	target3_max;			};
+	target4 {		UInt32	target4_id;
+					UInt16	target4_v1;
+					UInt16	target4_v2;
+					UInt16	target4_v3;
+					UInt8	target4_vtype;
+					UInt16	target4_num;
+					UInt16	target4_max;			};
+	target5 {		UInt32	target5_id;
+					UInt16	target5_v1;
+					UInt16	target5_v2;
+					UInt16	target5_v3;
+					UInt8	target5_vtype;
+					UInt16	target5_num;
+					UInt16	target5_max;			};
+	timer 	{		UInt32	timeLimit;
+					UInt16	interval;				};
+	buff	{		UInt16	buff;					};
+	state 	{		UInt8 	state;					};
+	feature {		UInt16	feature;				};
+	status { 		UInt8 	status; 				};
+	//--- RPC method
+}

@@ -1,0 +1,141 @@
+<?xml version="1.0" ?>
+<!-- Our to do list data -->
+<UI>
+	<Image Name="Data\interface002_extrawindow.tga" />
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	<Background Image="Data\interface002_extrawindow.tga" Left="291" Top="171" Right="360" Bottom="312" />
+	<Panel Name="SubPanel" X="0" Y="0" Left="0" Top="0" Right="225" Bottom="600">
+		
+		<CheckBox Name="SubChannelMapButton" Image="Data\interface002_extrawindow.tga" X="0" Y="2"
+			CheckX="0" CheckY="1" LuaLButtonUp="SubChannelMap">
+			<CheckBoxRect Index="1" Left="239" Top="1" Right="262" Bottom="24" />
+			<CheckBoxRect Index="0" Left="265" Top="1" Right="288" Bottom="24" />
+			<CheckBoxRect Index="2" Left="291" Top="1" Right="314" Bottom="24" />
+		</CheckBox>
+		<CheckBox Name="SubChannelPartyButton" Image="Data\interface002_extrawindow.tga" X="25" Y="2"
+			CheckX="0" CheckY="1" LuaLButtonUp="SubChannelParty">
+			<CheckBoxRect Index="1" Left="239" Top="26" Right="262" Bottom="49" />
+			<CheckBoxRect Index="0" Left="265" Top="26" Right="288" Bottom="49" />
+			<CheckBoxRect Index="2" Left="291" Top="26" Right="314" Bottom="49" />
+		</CheckBox>
+		<CheckBox Name="SubChannelGangButton" Image="Data\interface002_extrawindow.tga" X="50" Y="2"
+			CheckX="0" CheckY="1" LuaLButtonUp="SubChannelGang">
+			<CheckBoxRect Index="1" Left="239" Top="51" Right="262" Bottom="74" />
+			<CheckBoxRect Index="0" Left="265" Top="51" Right="288" Bottom="74" />
+			<CheckBoxRect Index="2" Left="291" Top="51" Right="314" Bottom="74" />
+		</CheckBox>
+		<CheckBox Name="SubChannelGuildButton" Image="Data\interface002_extrawindow.tga" X="75" Y="2"
+			CheckX="0" CheckY="1" LuaLButtonUp="SubChannelGuild">
+			<CheckBoxRect Index="1" Left="239" Top="76" Right="262" Bottom="99" />
+			<CheckBoxRect Index="0" Left="265" Top="76" Right="288" Bottom="99" />
+			<CheckBoxRect Index="2" Left="291" Top="76" Right="314" Bottom="99" />
+		</CheckBox>
+		<CheckBox Name="SubChannelPrivateButton" Image="Data\interface002_extrawindow.tga" X="100"
+			Y="2" CheckX="0" CheckY="1" LuaLButtonUp="SubChannelPrivate">
+			<CheckBoxRect Index="1" Left="239" Top="101" Right="262" Bottom="124" />
+			<CheckBoxRect Index="0" Left="265" Top="101" Right="288" Bottom="124" />
+			<CheckBoxRect Index="2" Left="291" Top="101" Right="314" Bottom="124" />
+		</CheckBox>
+		<CheckBox Name="SubChannelGlobalButton" Image="Data\interface002_extrawindow.tga" X="125"
+			Y="2" CheckX="0" CheckY="1" LuaLButtonUp="SubChannelGlobal">
+			<CheckBoxRect Index="1" Left="239" Top="126" Right="262" Bottom="149" />
+			<CheckBoxRect Index="0" Left="265" Top="126" Right="288" Bottom="149" />
+			<CheckBoxRect Index="2" Left="291" Top="126" Right="314" Bottom="149" />
+		</CheckBox>
+
+		<CheckBox Name="SubChannelCoupleButton" Image="Data\interface002_extrawindow.tga" X="150"
+			Y="2" CheckX="0" CheckY="1" LuaLButtonUp="SubChannelCouple">
+			<CheckBoxRect Index="1" Left="317" Top="26" Right="340" Bottom="49" />
+			<CheckBoxRect Index="0" Left="343" Top="26" Right="366" Bottom="49" />
+			<CheckBoxRect Index="2" Left="369" Top="26" Right="392" Bottom="49" />
+		</CheckBox>
+		<Button Name="SubWindow" Image="Data\interface002_extrawindow.tga" X="2" Y="570" LuaLButtonUp="CloseSubWindow">
+			<ButtonRect State="0" Left="317" Top="101" Right="340" Bottom="124" />
+			<ButtonRect State="1" Left="343" Top="101" Right="366" Bottom="124" />
+			<ButtonRect State="2" Left="369" Top="101" Right="392" Bottom="124" />
+		</Button>
+		<Button Name="HideChat" Image="Data\interface002_extrawindow.tga" X="27" Y="570">
+			<ButtonRect State="0" Left="317" Top="126" Right="340" Bottom="149" />
+			<ButtonRect State="1" Left="343" Top="126" Right="366" Bottom="149" />
+			<ButtonRect State="2" Left="369" Top="126" Right="392" Bottom="149" />
+		</Button>
+		<Button Name="MaskChat" Image="Data\interface002_extrawindow.tga" X="52" Y="570" LuaLButtonUp="OpenBlockLstWindow">
+			<ButtonRect State="0" Left="317" Top="51" Right="340" Bottom="75" />
+			<ButtonRect State="1" Left="343" Top="51" Right="366" Bottom="75" />
+			<ButtonRect State="2" Left="369" Top="51" Right="392" Bottom="75" />
+		</Button>
+		<Button Name="MsgRecord" Image="Data\interface002_extrawindow.tga" X="77" Y="570" LuaLButtonUp="OpenChannelHistory">
+			<ButtonRect State="0" Left="317" Top="76" Right="340" Bottom="99" />
+			<ButtonRect State="1" Left="343" Top="76" Right="366" Bottom="99" />
+			<ButtonRect State="2" Left="369" Top="76" Right="392" Bottom="99" />
+		</Button>
+		<Button Name="BlankButton2" Image="Data\interface002_extrawindow.tga" X="103" Y="570" LuaLButtonUp="ChangeSubChatBg">
+			<ButtonRect State="0" Left="395" Top="76" Right="418" Bottom="99" />
+			<ButtonRect State="1" Left="421" Top="76" Right="444" Bottom="99" />
+			<ButtonRect State="2" Left="447" Top="76" Right="470" Bottom="99" />
+		</Button>
+		<Button Name="ClearMessage" Image="Data\interface002_extrawindow.tga" X="128" Y="570" LuaLButtonUp="ClearSubChatMessage">
+			<ButtonRect State="0" Left="395" Top="51" Right="418" Bottom="74" />
+			<ButtonRect State="1" Left="421" Top="51" Right="444" Bottom="74" />
+			<ButtonRect State="2" Left="447" Top="51" Right="470" Bottom="74" />
+		</Button>
+		
+		<UIImage Name="VerBarLim" Image="Data\interface002_extrawindow.tga" X="200" Y="0" Left="218"
+			Top="0" Right="235" Bottom="600" />
+		
+		<!--<Button Name="SubChatUpButton" Image="Data\interface002_extrawindow.tga" X="202" Y="30"
+			LuaLButtonUp="SubChatUp">
+			<ButtonRect State="0" Left="240" Top="158" Right="255" Bottom="172" />
+			<ButtonRect State="1" Left="257" Top="158" Right="272" Bottom="172" />
+			<ButtonRect State="2" Left="274" Top="158" Right="289" Bottom="172" />
+		</Button>
+		<Button Name="SubChatScrollButton22211" Image="Data\interface002_extrawindow.tga" X="0" Y="0">
+			<ButtonRect State="0" Left="239" Top="239" Right="319" Buttom="269" />
+			<ButtonRect State="1" Left="239" Top="239" Right="319" Buttom="269" />
+			<ButtonRect State="2" Left="239" Top="239" Right="319" Buttom="269" />
+		</Button>
+		<Button Name="SubChatDownButton" Image="Data\interface002_extrawindow.tga" X="202" Y="560"
+			LuaLButtonUp="SubChatDown">
+			<ButtonRect State="0" Left="240" Top="175" Right="255" Bottom="189" />
+			<ButtonRect State="1" Left="257" Top="175" Right="272" Bottom="189" />
+			<ButtonRect State="2" Left="274" Top="175" Right="289" Bottom="189" />
+		</Button>
+		-->
+		<ScrollBarV Name="SubChatScrollButton" X="201" Y="0" Width ="14" Height="584" Limit="0" BarColor="0" LuaLButtonDown="SubChatScrollLua">
+			<PrevButton Image="Data\interface002_extrawindow.tga" X="0" Y="0" LuaLButtonUp="SubChatUp">
+				<ButtonRect State="0" Left="240" Top="158" Right="255" Bottom="172" />
+				<ButtonRect State="1" Left="257" Top="158" Right="272" Bottom="172" />
+				<ButtonRect State="2" Left="274" Top="158" Right="289" Bottom="172" />
+			</PrevButton>
+			<NextButton Image="Data\interface002_extrawindow.tga" X="0" Y="530" LuaLButtonUp="SubChatDown">
+				<ButtonRect State="0" Left="240" Top="175" Right="255" Bottom="189" />
+				<ButtonRect State="1" Left="257" Top="175" Right="272" Bottom="189" />
+				<ButtonRect State="2" Left="274" Top="175" Right="289" Bottom="189" />
+			</NextButton>
+			<MoveButton Image="Data\interface002_extrawindow.tga" X="0" Y="30" LuaMouseMove="SubChatScrollLua">
+				<ButtonRect State="0" Left="239" Top="239" Right="252" Bottom="269" />
+				<ButtonRect State="1" Left="239" Top="239" Right="252" Bottom="269" />
+				<ButtonRect State="2" Left="239" Top="239" Right="252" Bottom="269" />
+			</MoveButton>
+		</ScrollBarV>
+		
+		<Button Name="SubChatEnableScroll" Image="Data\interface002_extrawindow.tga" X="202" Y="584"
+			LuaLButtonUp="SubEndRow">
+			<ButtonRect State="0" Left="239" Top="274" Right="254" Bottom="288" />
+			<ButtonRect State="1" Left="256" Top="274" Right="271" Bottom="288" />
+			<ButtonRect State="2" Left="273" Top="274" Right="288" Bottom="288" />
+		</Button>
+		<ChatPanel Name="SubChat" X="5" Y="34" Width="200" Height="530" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" FillColor="7F0000FF" LuaMouseWheel="SubChatMouseWheel" 
+			LuaLButtonDown="SubChatLinkProcess" LuaRButtonDown="SubChatLinkProcessR" >
+			</ChatPanel>
+	</Panel>
+	<Panel Name="SubFloatNamePanel" X="100" Y="100" BackColor="FF000000" BoxColor="FFFFFFFF" Left="0" Top="0" 
+		Right="120" Bottom="20" Hide="1" 
+		Drag="2" DragLeft="0" DragTop="0" DragRight="120" DragBottom="20" 
+		LuaRButtonDown="FloatNameReset">
+		<ChatPanel Name="SubFloatNameStr" X="1" Y="1" Width="120" Height="20" ContinueRun = "1" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" FillColor="7F0000FF">
+		</ChatPanel>
+	</Panel>
+</UI>

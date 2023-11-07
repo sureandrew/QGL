@@ -1,0 +1,25 @@
+//-- Config
+config
+{
+	SubPath="Logic/";
+	ClassID=53000;
+	StartID=53000;
+	EndID  =53999;
+	ModifyMask=1;
+}
+
+//-- include
+#include "Reuben/Network/NetGroup.h"
+
+//-- object class
+class GiftBox : NetGroup
+{
+	//-- object state
+
+	//-- command to RPC server
+	TakeGiftBox(UInt32 giftID);
+	CloseGiftBox();
+	CB_TakeGiftBox(Boolean success, UInt8 msgIndex);
+	UpdateGiftBox();
+	CB_UpdateGiftBox(UInt8 msgIndex, NetGroup* updateGrp);	
+}

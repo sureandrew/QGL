@@ -1,0 +1,36 @@
+//-- Config
+config
+{
+	SubPath="Service/";
+	StartID=6000;
+	EndID=6999;
+}
+
+//-- Include header
+
+//-- RPC functions
+private:
+
+LogAccount(UInt32 acct_id, UInt32 ip, UInt8 action_type);
+LogCharacter(UInt32 acct_id, UInt32 char_id, UInt8 line_id, UInt8 action_type);
+LogItem(UInt32 char_id, UInt8 target_type, UInt32 target_id, UInt32 item_uid, UInt32 item_id, UInt16 item_count, UInt8 action_type);
+LogQuest(UInt32 char_id, UInt8 line_id, UInt8 source_type, UInt32 source_id, UInt32 quest_id, UInt8 action_type);
+LogPlayerCount(UInt8 line_id, UInt16 player_count);
+LogGiftBox(UInt32 acct_id, UInt32 char_id, UInt32 item_id, UInt8 itemType, UInt8 quantity, String serialNo);
+LogChargeShop(UInt32 acct_id, UInt32 char_id, UInt32 item_id, UInt16 item_count, UInt8 item_type, UInt32 yuanbao);
+LogExchange(UInt32 char_id, UInt32 target_char_id, UInt8 process_type, UInt8 item_type, UInt32 item_uid, UInt32 item_id, UInt8 item_count, UInt32 money, UInt32 tax);
+LogExchangeForItemList(UInt32 char_id, UInt32 target_char_id, UInt8 process_type, UInt8Vector item_type, UInt32Vector item_uid, UInt32Vector item_id, UInt8Vector item_count);
+LogYuanBao(UInt32 acct_id, UInt32 char_id, UInt8 useplace, UInt32 yuanbao);
+LogCheat(UInt32 exe_id, UInt32 source_acct_id, UInt32 target_acct_id, UInt32 target_char_id, String command, UInt8 status);
+LogCharExp(UInt16 exp_type, Int32 exp_value, UInt32 acct_id, UInt32 char_id, UInt32 total_exp, UInt16 level);
+LogMoney(UInt32 acct_id, UInt32 char_id, UInt16 source, UInt32 money, UInt32 totalMoney);
+LogSMoney(UInt32 acct_id, UInt32 char_id, UInt16 source, UInt32 smoney);
+LogMix(UInt32 char_id, UInt8 process_type, UInt32 result_item_id, UInt8 result_item_count, UInt32Vector source_item_uid, UInt32Vector source_item_id, UInt8Vector source_item_count);
+LogGoodness(UInt32 acct_id, UInt32 char_id, UInt16 source, Int32 goodness);
+LogHack(String acctName, String charName, UInt32 msgTime, UInt16 msgType, String TypeName, String msg);
+LogSellYuanBao(UInt32 acct_id, UInt32 char_id, UInt8 process_type, UInt32 target_id, UInt32 YB, UInt32 YBT, UInt32 moneyPerUnit, UInt32 totalMoney, UInt32 tax, UInt32 expireDate);
+LogHonor(UInt32 char_id, Int32 change);
+LogPartner(UInt32 partner_id, UInt32 mob_id, UInt32 char_id, UInt8 process_type);
+LogGenerationAcc(UInt32 uiTargetId, UInt32 uiRelatedId, UInt32 uiAcc,UInt16 ui16TargetLevel, UInt16 ui16RelatedLevel,UInt32 uiItemUId,UInt32 uiItemId);
+LogManor(UInt32 guild_uid, UInt32 fund, UInt32 prosper, UInt8 scale, UInt8 fundSrc, UInt8 prosperSrc);
+LogGuildDonate(UInt32 guild_uid, UInt32 char_uid, Int32 donate, UInt32 total_donate, UInt8 source);

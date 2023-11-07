@@ -1,0 +1,164 @@
+<?xml version="1.0" ?>
+<!-- Our to do list data -->
+<UI>
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+
+	<Panel Name="FriendChatIconSelPanel" Hide="0" X="400" Y="100" Image="Data\interface0007_main_D2.tga" Left="288" Top="9"
+		Right="589" Bottom="376" DetectImage="1" LuaRButtonUp="CloseFriendChatIconSel" LuaKeyChar="CloseFriendChatIconSel" Drag="1"
+		DragLeft="0" DragTop="0" DragRight="301" DragBottom="367" LuaMouseMove="MouseMoveOnChatIconSel" LuaMouseWheel="FriendChatIconSelWheel">
+			
+		<AniIcon Name="FriendChatIcon1" Image ="facechatL00000a.ent" X="13" Y="58" Rotation = "0" 
+			AnimationIndex = "0" Loop = "1" Align = "0" Hide="0"  Detect = "1"></AniIcon>
+			
+		<AniIcon Name="FriendChatIcon2" Image ="facechatL00001a.ent" X="58" Y="58" Rotation = "0" 
+			AnimationIndex = "0" Loop = "1" Align = "0" Hide="0"  Detect = "1"></AniIcon>
+			
+		<AniIcon Name="FriendChatIcon3" Image ="facechatL00002a.ent" X="103" Y="58" Rotation = "0" 
+			AnimationIndex = "0" Loop = "1" Align = "0" Hide="0"  Detect = "1"></AniIcon>
+			
+		<AniIcon Name="FriendChatIcon4" Image ="facechatL00003a.ent" X="148" Y="58" Rotation = "0" 
+			AnimationIndex = "0" Loop = "1" Align = "0" Hide="0"  Detect = "1"></AniIcon>
+			
+		<AniIcon Name="FriendChatIcon5" Image ="facechatL00004a.ent" X="193" Y="58" Rotation = "0" 
+			AnimationIndex = "0" Loop = "1" Align = "0" Hide="0"  Detect = "1"></AniIcon>
+			
+		<AniIcon Name="FriendChatIcon6" Image ="facechatL00005a.ent" X="238" Y="58" Rotation = "0" 
+			AnimationIndex = "0" Loop = "1" Align = "0" Hide="0"  Detect = "1"></AniIcon>
+			
+		<AniIcon Name="FriendChatIcon7" Image ="facechatL00006a.ent" X="13" Y="102" Rotation = "0" 
+			AnimationIndex = "0" Loop = "1" Align = "0" Hide="0"  Detect = "1"></AniIcon>
+			
+		<AniIcon Name="FriendChatIcon8" Image ="facechatL00007a.ent" X="58" Y="102" Rotation = "0" 
+			AnimationIndex = "0" Loop = "1" Align = "0" Hide="0"  Detect = "1"></AniIcon>
+			
+		<AniIcon Name="FriendChatIcon9" Image ="facechatL00008a.ent" X="103" Y="102" Rotation = "0" 
+			AnimationIndex = "0" Loop = "1" Align = "0" Hide="0"  Detect = "1"></AniIcon>
+			
+		<AniIcon Name="FriendChatIcon10" Image ="facechatL00009a.ent" X="148" Y="102" Rotation = "0" 
+			AnimationIndex = "0" Loop = "1" Align = "0" Hide="0"  Detect = "1"></AniIcon>
+			
+		<AniIcon Name="FriendChatIcon11" Image ="facechatL00010a.ent" X="193" Y="102" Rotation = "0" 
+			AnimationIndex = "0" Loop = "1" Align = "0" Hide="0"  Detect = "1"></AniIcon>
+			
+		<AniIcon Name="FriendChatIcon12" Image ="facechatL00011a.ent" X="238" Y="102" Rotation = "0" 
+			AnimationIndex = "0" Loop = "1" Align = "0" Hide="0"  Detect = "1"></AniIcon>
+			
+		<AniIcon Name="FriendChatIcon13" Image ="facechatL00012a.ent" X="13" Y="147" Rotation = "0" 
+			AnimationIndex = "0" Loop = "1" Align = "0" Hide="0"  Detect = "1"></AniIcon>
+			
+		<AniIcon Name="FriendChatIcon14" Image ="facechatL00013a.ent" X="58" Y="147" Rotation = "0" 
+			AnimationIndex = "0" Loop = "1" Align = "0" Hide="0"  Detect = "1"></AniIcon>
+			
+		<AniIcon Name="FriendChatIcon15" Image ="facechatL00014a.ent" X="103" Y="147" Rotation = "0" 
+			AnimationIndex = "0" Loop = "1" Align = "0" Hide="0"  Detect = "1"></AniIcon>
+			
+		<AniIcon Name="FriendChatIcon16" Image ="facechatL00015a.ent" X="148" Y="147" Rotation = "0" 
+			AnimationIndex = "0" Loop = "1" Align = "0" Hide="0"  Detect = "1"></AniIcon>
+			
+		<AniIcon Name="FriendChatIcon17" Image ="facechatL00016a.ent" X="193" Y="147" Rotation = "0" 
+			AnimationIndex = "0" Loop = "1" Align = "0" Hide="0"  Detect = "1"></AniIcon>
+			
+		<AniIcon Name="FriendChatIcon18" Image ="facechatL00017a.ent" X="238" Y="147" Rotation = "0" 
+			AnimationIndex = "0" Loop = "1" Align = "0" Hide="0"  Detect = "1"></AniIcon>
+			
+		<AniIcon Name="FriendChatIcon19" Image ="facechatL00018a.ent" X="13" Y="193" Rotation = "0" 
+			AnimationIndex = "0" Loop = "1" Align = "0" Hide="0"  Detect = "1"></AniIcon>
+			
+		<AniIcon Name="FriendChatIcon20" Image ="facechatL00019a.ent" X="58" Y="193" Rotation = "0" 
+			AnimationIndex = "0" Loop = "1" Align = "0" Hide="0"  Detect = "1"></AniIcon>
+			
+		<AniIcon Name="FriendChatIcon21" Image ="facechatL00020a.ent" X="103" Y="193" Rotation = "0" 
+			AnimationIndex = "0" Loop = "1" Align = "0" Hide="0"  Detect = "1"></AniIcon>
+			
+		<AniIcon Name="FriendChatIcon22" Image ="facechatL00021a.ent" X="148" Y="193" Rotation = "0" 
+			AnimationIndex = "0" Loop = "1" Align = "0" Hide="0"  Detect = "1"></AniIcon>
+			
+		<AniIcon Name="FriendChatIcon23" Image ="facechatL00022a.ent" X="193" Y="193" Rotation = "0" 
+			AnimationIndex = "0" Loop = "1" Align = "0" Hide="0"  Detect = "1"></AniIcon>
+			
+		<AniIcon Name="FriendChatIcon24" Image ="facechatL00023a.ent" X="238" Y="193" Rotation = "0" 
+			AnimationIndex = "0" Loop = "1" Align = "0" Hide="0"  Detect = "1"></AniIcon>
+			
+		<AniIcon Name="FriendChatIcon25" Image ="facechatL00024a.ent" X="13" Y="238" Rotation = "0" 
+			AnimationIndex = "0" Loop = "1" Align = "0" Hide="0"  Detect = "1"></AniIcon>
+			
+		<AniIcon Name="FriendChatIcon26" Image ="facechatL00025a.ent" X="58" Y="238" Rotation = "0" 
+			AnimationIndex = "0" Loop = "1" Align = "0" Hide="0"  Detect = "1"></AniIcon>
+			
+		<AniIcon Name="FriendChatIcon27" Image ="facechatL00026a.ent" X="103" Y="238" Rotation = "0" 
+			AnimationIndex = "0" Loop = "1" Align = "0" Hide="0"  Detect = "1"></AniIcon>
+			
+		<AniIcon Name="FriendChatIcon28" Image ="facechatL00027a.ent" X="148" Y="238" Rotation = "0" 
+			AnimationIndex = "0" Loop = "1" Align = "0" Hide="0"  Detect = "1"></AniIcon>
+			
+		<AniIcon Name="FriendChatIcon29" Image ="facechatL00028a.ent" X="193" Y="238" Rotation = "0" 
+			AnimationIndex = "0" Loop = "1" Align = "0" Hide="0"  Detect = "1"></AniIcon>
+			
+		<AniIcon Name="FriendChatIcon30" Image ="facechatL00029a.ent" X="238" Y="238" Rotation = "0" 
+			AnimationIndex = "0" Loop = "1" Align = "0" Hide="0"  Detect = "1"></AniIcon>
+			
+		<AniIcon Name="FriendChatIcon31" Image ="facechatL00030a.ent" X="13" Y="283" Rotation = "0" 
+			AnimationIndex = "0" Loop = "1" Align = "0" Hide="0"  Detect = "1"></AniIcon>
+			
+		<AniIcon Name="FriendChatIcon32" Image ="facechatL00031a.ent" X="58" Y="283" Rotation = "0" 
+			AnimationIndex = "0" Loop = "1" Align = "0" Hide="0"  Detect = "1"></AniIcon>
+			
+		<AniIcon Name="FriendChatIcon33" Image ="facechatL00032a.ent" X="103" Y="283" Rotation = "0" 
+			AnimationIndex = "0" Loop = "1" Align = "0" Hide="0"  Detect = "1"></AniIcon>
+			
+		<AniIcon Name="FriendChatIcon34" Image ="facechatL00033a.ent" X="148" Y="283" Rotation = "0" 
+			AnimationIndex = "0" Loop = "1" Align = "0" Hide="0"  Detect = "1"></AniIcon>
+			
+		<AniIcon Name="FriendChatIcon35" Image ="facechatL00034a.ent" X="193" Y="283" Rotation = "0" 
+			AnimationIndex = "0" Loop = "1" Align = "0" Hide="0"  Detect = "1"></AniIcon>
+			
+		<AniIcon Name="FriendChatIcon36" Image ="facechatL00035a.ent" X="238" Y="283" Rotation = "0" 
+			AnimationIndex = "0" Loop = "1" Align = "0" Hide="0"  Detect = "1"></AniIcon>
+
+		<Button Name="CloseFriendSelIconMenu" Image="Data\interface0007_main_D.tga" X="270" Y="8" LuaLButtonUp="CloseFriendChatIconSel" >
+			<ButtonRect State="0" Left="151" Top="9" Right="173" Bottom="25" />
+			<ButtonRect State="1" Left="176" Top="9" Right="198" Bottom="25" />
+			<ButtonRect State="2" Left="201" Top="9" Right="223" Bottom="25" />
+		</Button>
+		
+		<Button Name="FriendChatIconSelConfirm" Image="Data\interface0007_main_D2.tga" X="130" Y="335" LuaLButtonUp="FriendChatIconSelConfirmLua" >
+			<ButtonRect State="0" Left="119" Top="354" Right="196" Bottom="373" />
+			<ButtonRect State="1" Left="119" Top="377" Right="196" Bottom="396" />
+			<ButtonRect State="2" Left="119" Top="400" Right="196" Bottom="419" />
+		</Button>
+		
+		<Button Name="FriendChatIconSelCancel" Image="Data\interface0007_main_D2.tga" X="215" Y="335" LuaLButtonUp="CloseFriendChatIconSel" >
+			<ButtonRect State="0" Left="204" Top="354" Right="281" Bottom="373" />
+			<ButtonRect State="1" Left="204" Top="377" Right="281" Bottom="395" />
+			<ButtonRect State="2" Left="204" Top="400" Right="281" Bottom="419" />
+		</Button>
+		
+		<ScrollBarV Name="FriendChatIconSelScroll" X="284" Y="54" Width ="14" Height="274" Limit="0" BarColor="0">
+			<PrevButton Image="Data\interface0007_main_D.tga" X="30" Y="0" LuaLButtonUp="FriendChatIconSelUp">
+				<ButtonRect State="0" Left="152" Top="32" Right="163" Bottom="46" />
+				<ButtonRect State="1" Left="166" Top="32" Right="177" Bottom="46" />
+				<ButtonRect State="2" Left="180" Top="32" Right="191" Bottom="46" />
+				<ButtonRect State="3" Left="180" Top="32" Right="191" Bottom="46" />
+			</PrevButton>
+			<NextButton Image="Data\interface0007_main_D.tga" X="30" Y="200" LuaLButtonUp="FriendChatIconSelDown">
+				<ButtonRect State="0" Left="152" Top="48" Right="163" Bottom="61" />
+				<ButtonRect State="1" Left="166" Top="48" Right="177" Bottom="61" />
+				<ButtonRect State="2" Left="180" Top="48" Right="191" Bottom="61" />
+				<ButtonRect State="3" Left="180" Top="48" Right="191" Bottom="61" />
+			</NextButton>
+			<MoveButton Image="Data\interface0007_main_D.tga" X="30" Y="30" LuaMouseMove="FriendChatIconSelLua">
+				<ButtonRect State="0" Left="196" Top="34" Right="208" Bottom="64" />
+				<ButtonRect State="1" Left="196" Top="34" Right="208" Bottom="64" />
+				<ButtonRect State="2" Left="196" Top="34" Right="208" Bottom="64" />
+			</MoveButton>
+		</ScrollBarV>
+		
+		
+		<UIImage Name="FriendChatIconSel" Hide="1" X="10" Y="10" Image ="Data\interface0007_main_D2.tga" Left="640" Top="22" Right="682" Bottom="64"
+			AutoDelete="0" />
+		
+		<UIImage Name="FriendChatIconHLight" LuaLButtonUp="SelChatIcon" Hide="1" X="10" Y="10" Image ="Data\interface0007_main_D2.tga" Left="594" Top="22" Right="636" Bottom="64"
+			AutoDelete="0" />
+		</Panel>
+</UI>
+

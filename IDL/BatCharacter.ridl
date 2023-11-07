@@ -1,0 +1,35 @@
+//-- Config
+config
+{
+	SubPath="Logic/";
+	ClassID=18000;
+	StartID=18000;
+	EndID  =18999;
+}
+
+//-- include
+#include "BatActor.h"
+
+//-- object class
+class BatCharacter : BatActor
+{
+	//-- object attributes
+	info {		UInt32 acct_id;
+				UInt32 char_id;
+				String nickName;
+				UInt8 sex;				};
+	style {		UInt16 photo_id;
+				UInt16 hairStyle1;
+				UInt16 hairStyle2;
+				UInt16 hairColor;		};
+	eqWeapon {	UInt32 eq_weapon;	
+				UInt16 eq_weaponColor;	};
+	eqHead {	UInt32 eq_headBand;	
+				UInt16 eq_headColor;	};
+	eqCloth {	UInt32 eq_cloth;	
+				UInt16 eq_clothColor;	};
+	PKInfo	{	UInt16 PK_Value;		};
+	maxPartner {	UInt8 maxPartner;		};
+	TP {			UInt16 TP;			
+				UInt32 Model_mobid;			};
+}

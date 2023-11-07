@@ -1,0 +1,272 @@
+<?xml version="1.0" ?>
+<UI>
+	<ID Name="Teammate" />
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	<Panel Name="TeammatePanel" Image="Data\interface0014_main_H.tga" X="50" Y="71" Left="4" 
+		Top="5" Right="705" Bottom="434" LuaRButtonUp="CloseTeammateMenu" LuaKeyChar="CloseTeammateMenu" DetectImage = "1"
+		Drag="1" DragLeft="0" DragTop="0" DragRight="701" DragBottom="429">
+		
+		<Button Name="ApplyMembership" Image="Data\interface0014_main_H.tga" X="275" Y="381" Tips="打开申请组队列表"
+		              TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="OpenApplyMembershipList">
+			<ButtonRect State="0" Left="4" Top="441" Right="96" Bottom="462" />
+			<ButtonRect State="1" Left="102" Top="441" Right="194" Bottom="462" />
+			<ButtonRect State="2" Left="200" Top="441" Right="292" Bottom="462" />
+			<ButtonRect State="3" Left="597" Top="541" Right="689" Bottom="563" />
+		</Button>
+		<Button Name="InviteToJoin" Image="Data\interface0014_main_H.tga" X="381" Y="381" Tips="邀请玩家加入队伍" 
+		               TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="InviteToJoin">
+			<ButtonRect State="0" Left="4" Top="475" Right="96" Bottom="496" />
+			<ButtonRect State="1" Left="102" Top="475" Right="194" Bottom="496" />
+			<ButtonRect State="2" Left="200" Top="475" Right="292" Bottom="496" />
+			<ButtonRect State="3" Left="597" Top="541" Right="689" Bottom="563" />
+		</Button>
+		
+		<Button Name="TeamDescriptionButton" Image="Data\interface0014_main_H.tga" X="416" Y="49" Tips="设置队伍相关信息" 
+		              TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="TeamDescriptionButton">
+			<ButtonRect State="0" Left="4" Top="608" Right="96" Bottom="629" />
+			<ButtonRect State="1" Left="102" Top="608" Right="194" Bottom="629" />
+			<ButtonRect State="2" Left="200" Top="608" Right="292" Bottom="629" />
+			<ButtonRect State="3" Left="597" Top="541" Right="689" Bottom="663" />
+		</Button>
+		
+		<Button Name="Signal" Image="Data\interface0014_main_H.tga" X="487" Y="381" Tips="设置队伍相关信息" 
+		              TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="">
+			<ButtonRect State="0" Left="4" Top="508" Right="96" Bottom="529" />
+			<ButtonRect State="1" Left="102" Top="508" Right="194" Bottom="529" />
+			<ButtonRect State="2" Left="200" Top="508" Right="292" Bottom="529" />
+			<ButtonRect State="3" Left="597" Top="541" Right="689" Bottom="563" />
+		</Button>
+		<Button Name="LeaveParty" Image="Data\interface0014_main_H.tga" X="593" Y="381" LuaLButtonUp="LeaveParty">
+			<ButtonRect State="0" Left="301" Top="574" Right="393" Bottom="595" />
+			<ButtonRect State="1" Left="399" Top="574" Right="491" Bottom="595" />
+			<ButtonRect State="2" Left="694" Top="574" Right="589" Bottom="784" />
+		</Button>
+		
+		<Button Name="FormationChosen" Image="Data\interface0014_main_H.tga" X="314" Y="49" LuaLButtonUp="SelectLineup">
+			<ButtonRect State="0" Left="4" Top="541" Right="96" Bottom="562" />
+			<ButtonRect State="1" Left="102" Top="541" Right="194" Bottom="563" />
+			<ButtonRect State="2" Left="200" Top="541" Right="292" Bottom="563" />
+			<ButtonRect State="3" Left="597" Top="541" Right="689" Bottom="563" />
+		</Button>
+		
+		<Button Name="LineupInfoView" Image="Data\interface0014_main_H.tga" X="314" Y="49" LuaLButtonUp="FunLineupInfoView">
+			<ButtonRect State="0" Left="596" Top="442" Right="686" Bottom="462" />
+			<ButtonRect State="1" Left="596" Top="476" Right="686" Bottom="496" />
+			<ButtonRect State="2" Left="596" Top="510" Right="686" Bottom="530" />
+			<ButtonRect State="3" Left="597" Top="541" Right="689" Bottom="563" />
+		</Button>
+		
+		<Button Nmae="TeammatePanelClose" Image="Data\interface0014_main_H.tga" X="667" Y="12" LuaLButtonUp="CloseTeammateMenu">
+			<ButtonRect State="0" Left="708" Top="6" Right="732" Bottom="24" />
+			<ButtonRect State="1" Left="733" Top="6" Right="757" Bottom="24" />
+			<ButtonRect State="2" Left="758" Top="6" Right="782" Bottom="24" />
+		</Button>
+		
+		<Button Name="PrevTeam" Image="Data\interface0014_main_H.tga" X="21" Y="381" Hide="1" LuaLButtonUp="PrevTeam">
+			<ButtonRect State="0" Left="301" Top="441" Right="393" Bottom="462" />
+			<ButtonRect State="1" Left="399" Top="441" Right="491" Bottom="462" />
+			<ButtonRect State="2" Left="497" Top="441" Right="589" Bottom="462" />
+		</Button>
+		
+		<Button Name="NextTeam" Image="Data\interface0014_main_H.tga" X="593" Y="381" Hide="1" LuaLButtonUp="NextTeam">
+			<ButtonRect State="0" Left="301" Top="475" Right="393" Bottom="496" />
+			<ButtonRect State="1" Left="399" Top="475" Right="491" Bottom="496" />
+			<ButtonRect State="2" Left="497" Top="475" Right="589" Bottom="496" />
+		</Button>
+		
+		<Button Name="InviteAccept" Image="Data\interface0014_main_H.tga" X="250" Y="381" Hide="1" LuaLButtonUp="InviteAccept">
+			<ButtonRect State="0" Left="301" Top="541" Right="393" Bottom="562" />
+			<ButtonRect State="1" Left="399" Top="541" Right="491" Bottom="562" />
+			<ButtonRect State="2" Left="497" Top="541" Right="589" Bottom="562" />
+		</Button>
+		
+		<Button Name="InviteReject" Image="Data\interface0014_main_H.tga" X="375" Y="381" Hide="1" LuaLButtonUp="InviteReject">
+			<ButtonRect State="0" Left="301" Top="508" Right="393" Bottom="529" />
+			<ButtonRect State="1" Left="399" Top="508" Right="491" Bottom="529" />
+			<ButtonRect State="2" Left="497" Top="508" Right="589" Bottom="529" />
+		</Button>
+		
+		<Button Name="LeaveTemporarily" Image="Data\interface0014_main_H.tga" X="498" Y="381" Hide="0" LuaLButtonUp="LeaveTemporarily">
+			<ButtonRect State="0" Left="4" Top="575" Right="96" Bottom="595" />
+			<ButtonRect State="1" Left="102" Top="575" Right="194" Bottom="595" />
+			<ButtonRect State="2" Left="200" Top="575" Right="292" Bottom="595" />
+		</Button>
+		
+		<Button Name="ReturnParty" Image="Data\interface0014_main_H.tga" X="498" Y="381" Hide="1" LuaLButtonUp="ReturnParty">
+			<ButtonRect State="0" Left="4" Top="676" Right="96" Bottom="696" />
+			<ButtonRect State="1" Left="102" Top="676" Right="194" Bottom="696" />
+			<ButtonRect State="2" Left="200" Top="676" Right="292" Bottom="696" />
+		</Button>
+		
+		
+		<StaticText Name="FormationName" X="86" Y="53" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000">
+		普通阵法	
+		</StaticText>
+		
+		<StaticText Name="TeamMenuLineupKeyPos" X="254" Y="53" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000">
+		A
+		</StaticText>
+		
+		<StaticText Name="TeamDescriptionText" X="524" Y="53" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000">
+		野外烧双
+		</StaticText>
+
+
+		<Button Name="AutoAcceptButton" Image="Data\interface0014_main_H.tga" X="186" Y="385" Tips="点选使用后将自动允许玩家加入队伍" 
+		              TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="AutoAcceptButton">
+			<ButtonRect State="0" Left="23" Top="645" Right="77" Bottom="659" />
+			<ButtonRect State="1" Left="23" Top="645" Right="77" Bottom="659" />
+			<ButtonRect State="2" Left="23" Top="645" Right="77" Bottom="659" />
+		</Button>
+
+		<CheckBox Name = "AutoAcceptCheckBox" Image="Data\interface0014_main_H.tga" X="133" Y="384"  Tips="点选使用后将自动允许玩家加入队伍"
+		                     TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonDown="AutoAcceptCheckBox">
+			<CheckBoxRect Index="0" Left="21" Top="728" Right="41" Bottom="746" />
+			<CheckBoxRect Index="1" Left="21" Top="728" Right="41" Bottom="746" />
+			<CheckBoxRect Index="2" Left="51" Top="728" Right="71" Bottom="746" />
+		</CheckBox>
+
+		<AniIcon Name="TeammateCharacter1"  X="80" Y="127" Rotation = "1" 
+			AnimationIndex = "0" Loop = "1" Align = "1" Hide="0" />
+		
+		<UIImage Name="TeammatePopUp1" X="18" Y="91" Image="" Left="0" Top="0" Right="126"  Bottom="129" LuaRButtonUp="ShowTeammatePopUp1" />
+		<StaticText Name="TeammateName1" X="20" Y="224" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" Align="Center">
+
+		</StaticText>
+		<StaticText Name="TeammateLevel1" X="28" Y="260" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" Align="Center">
+
+		</StaticText>
+		<StaticText Name="TeammateClass1" X="28" Y="286" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" Align="Center">
+
+		</StaticText>
+		<StaticText Name="TeammateFaction1" X="28" Y="314" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" Align="Center">
+
+		</StaticText>
+		<StaticText Name="TeammateDist1" X="28" Y="340" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" Align="Center">
+
+		</StaticText>
+		
+		<AniIcon Name="TeammateCharacter2"  X="214" Y="127" Rotation = "1" 
+			AnimationIndex = "0" Loop = "1" Align = "1" Hide="0" />
+		<UIImage Name="TeammatePopUp2" X="152" Y="91" Image="" Left="0" Top="0" Right="126" Bottom="129" 
+			LuaRButtonUp="ShowTeammatePopUp2" LuaLButtonUp="FunSetChangePos2"/>
+		<StaticText Name="TeammateName2" X="151" Y="224" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" Align="Center">
+
+		</StaticText>
+		<StaticText Name="TeammateLevel2" X="162" Y="260" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" Align="Center">
+
+		</StaticText>
+		<StaticText Name="TeammateClass2" X="162" Y="286" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" Align="Center">
+
+		</StaticText>
+		<StaticText Name="TeammateFaction2" X="162" Y="314" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" Align="Center">
+
+		</StaticText>
+		<StaticText Name="TeammateDist2" X="162" Y="340" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" Align="Center">
+
+		</StaticText>
+		
+		<AniIcon Name="TeammateCharacter3"  X="348" Y="127" Rotation = "1" 
+			AnimationIndex = "0" Loop = "1" Align = "1" Hide="0" />
+		<UIImage Name="TeammatePopUp3" X="286" Y="91" Image="" Left="0" Top="0" Right="126" Bottom="129" 
+			LuaRButtonUp="ShowTeammatePopUp3" LuaLButtonUp="FunSetChangePos3"/>
+		<StaticText Name="TeammateName3" X="285" Y="224" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" Align="Center">
+	
+		</StaticText>
+		<StaticText Name="TeammateLevel3" X="296" Y="260" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" Align="Center">
+	
+		</StaticText>
+		<StaticText Name="TeammateClass3" X="296" Y="286" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" Align="Center">
+
+		</StaticText>
+		<StaticText Name="TeammateFaction3" X="296" Y="314" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" Align="Center">
+
+		</StaticText>
+		<StaticText Name="TeammateDist3" X="296" Y="340" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" Align="Center">
+
+		</StaticText>
+		
+		<AniIcon Name="TeammateCharacter4"  X="482" Y="127" Rotation = "1" 
+			AnimationIndex = "0" Loop = "1" Align = "1" Hide="0" />
+		<UIImage Name="TeammatePopUp4" X="420" Y="91" Image="" Left="0" Top="0" Right="126" Bottom="129" 
+			LuaRButtonUp="ShowTeammatePopUp4" LuaLButtonUp="FunSetChangePos4" />
+		<StaticText Name="TeammateName4" X="420" Y="224" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" Align="Center">
+
+		</StaticText>
+		<StaticText Name="TeammateLevel4" X="429" Y="260" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" Align="Center">
+
+		</StaticText>
+		<StaticText Name="TeammateClass4" X="429" Y="286" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" Align="Center">
+
+		</StaticText>
+		<StaticText Name="TeammateFaction4" X="429" Y="314" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" Align="Center">
+
+		</StaticText>
+		<StaticText Name="TeammateDist4" X="429" Y="340" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" Align="Center">
+	
+		</StaticText>
+		
+		<AniIcon Name="TeammateCharacter5"  X="616" Y="127" Rotation = "1" 
+			AnimationIndex = "0" Loop = "1" Align = "1" Hide="0" />
+		<UIImage Name="TeammatePopUp5" X="554" Y="91" Image="" Left="0" Top="0" Right="126" Bottom="129" 
+			LuaRButtonUp="ShowTeammatePopUp5" LuaLButtonUp="FunSetChangePos5"/>
+		<StaticText Name="TeammateName5" X="553" Y="224" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" Align="Center">
+	
+		</StaticText>
+		<StaticText Name="TeammateLevel5" X="563" Y="260" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" Align="Center">
+	
+		</StaticText>
+		<StaticText Name="TeammateClass5" X="563" Y="286" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" Align="Center">
+	
+		</StaticText>
+		<StaticText Name="TeammateFaction5" X="563" Y="314" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" Align="Center">
+		
+		</StaticText>
+		<StaticText Name="TeammateDist5" X="563" Y="340" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" Align="Center">
+	
+		</StaticText>
+		
+		
+	</Panel>
+	
+	<Panel Expand="1" Name="MenuTeammatePopupPanel" Image="Data\inerface0001_main.tga" X="300" Y="100" 
+			Left          ="88" Top          ="205" Right          ="158" Bottom          ="212"
+			LineRectLeft  ="88" LineRectTop  ="230" LineRectRight  ="158" LineRectBottom  ="242" LineCount="8"
+			BottomRectLeft="88" BottomRectTop="279" BottomRectRight="158" BottomRectBottom="289"
+			Hide="1" LuaTimeOut="MenuTeammatePopupTimeOut" TimeOutCount="5000" 
+			LuaMouseOut="StartMenuTeammateCount" InsertToEventList="1" LuaMouseIn="HoldMenuTeammatePopup"
+		>
+		<PopUpMenu Name="MenuTeammatePopup" X="5" Y="7" BarWidth="53" Row="8" Column="6" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000"
+			SelBarColor="FFFF0000" LuaLButtonDown="MenuTeammatePopup" LuaRButtonDown="CloseMenuTeammatePopup" FontName="Data\simsun.ttc" FontHeight="12" FontWidth="12">
+			
+		</PopUpMenu>
+	</Panel>
+</UI>

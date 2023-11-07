@@ -1,0 +1,23 @@
+//-- Config
+config
+{
+	SubPath="Logic/";
+	ClassID=52000;
+	StartID=52000;
+	EndID  =52999;
+	ModifyMask=1;
+}
+
+//-- include
+
+//-- object class
+class Gift : NetObject
+{
+	//-- object attributes
+	idInfo { 		UInt32 giftID;
+					UInt32 acctID;			};
+	giftInfo {		UInt32 itemID;
+					UInt8  itemType;
+					UInt8  itemQuantity;	};
+	serialNoInfo {	String serialNo;		};
+}

@@ -1,0 +1,38 @@
+//-- Config
+config
+{
+	SubPath="Logic/";
+	ClassID=29000;
+	StartID=29000;
+	EndID  =29999;
+}
+
+//-- include
+#include "Reuben/Network/NetGroup.h"
+
+//-- object class
+class PartnerGroup : NetGroup
+{
+	//-- object attributes
+
+	//-- method
+public:
+	DeletePartner(UInt32 partner_id);
+	ChangePartnerState(UInt32 partner_id, UInt8 state);
+	PutToWareHouse(UInt32 partnerID);
+	GetFromWareHouse(UInt32 partnerID);
+
+	PartnerCultivationUpByPartner(UInt32 src_partnerID, UInt32 dest_partnerID);
+	PartnerCultivationUpByItem(UInt32 src_partnerID, UInt32 dest_itemUid);
+	
+	//-- callback
+	CB_DeleteListSuccess(UInt32Vector partnerIDs, bool showDelMsg);
+	CB_AddPartnerGroup(NetGroup* partnerGroup, NetGroup* skillGroups); //to client
+	CB_ChangePartnerState();
+	CB_AddPartner(NetObject* partner, NetGroup* skillGroup);
+	CB_UpdateAllPartner(NetGroup* partnerGroup);	
+	CB_AddSkills(NetGroup * skillGrp);
+	CB_WareHouse(UInt8 processIndex, UInt8 msgIndex);
+
+	CB_PartnerCultivationUp(UInt8 msgIndex, UInt8 msgValue, UInt32 src_partnerID);
+}

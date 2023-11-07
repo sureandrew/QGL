@@ -1,0 +1,94 @@
+//-- Config
+config
+{
+	SubPath="Logic/";
+	ClassID=20000;
+	StartID=20000;
+	EndID  =20999;
+}
+
+//-- include
+
+//-- object class
+class BatActor
+{
+	//-- object attributes
+	info2 {		UInt8 cclass;
+				UInt8 sexClass;
+				UInt8 faction; 		};
+	index { 	UInt8  index; 		};
+	level { 	UInt16 level; 		};
+	attrib1 { 	UInt16 STA;
+				UInt16 SPR;
+				UInt16 STR;
+				UInt16 CON;
+				UInt16 AGI; 		};
+	attrib2 { 	UInt16 ATK;
+				UInt16 DEF;
+				UInt16 HIT;
+				UInt16 EVA;
+				UInt16 POW;
+				UInt16 SPD; 		};
+	HP {		UInt32 HP; 		
+				Int32  dHP;
+				Int32  dShowHP; 	};
+	mHP	{		UInt32 mHP;
+				Int32 dMHP;
+				Int32 dShowMHP;		};
+	maxHP {		UInt32 maxHP;		};
+	SP {		UInt32 SP; 		
+				Int32  dSP;
+				Int32 dShowSP; 		};
+	mSP	{		UInt32 mSP;
+				Int32 dMSP;	
+				Int32 dShowMSP;		};
+	maxSP {		UInt32 maxSP;		};
+	DP {		UInt16 DP; 		
+				Int16  dDP;
+				Int16 dShowDP; 			};
+	mDP	{		UInt16 mDP;				};
+	maxDP {		UInt16 maxDP;			};
+	WC {		UInt16 WC; 		
+				Int16  dWC;
+				Int16  dShowWC; 		};
+	WcExp	{	UInt16 WcExp;			};
+	maxWC {		UInt16 maxWC;			};
+	VP {		UInt16 VP;
+				Int16  dVP;
+				Int16  dShowVP; 		};
+	maxVP {		UInt16 maxVP; 			};
+	state { 	UInt8  state; 		};
+	buff { 		String buff;  		};
+	buffCache {	String buffCache; 	};
+
+	team { 		UInt8  team; 		};
+	position { 	UInt8  position; 	};
+	action { 	UInt8  action; 		};
+	reaction { 	UInt8  reaction; 	};
+	target { 	UInt8  target; 		};
+	subType { 	UInt32 subType; 	};
+	additional{	UInt32 additional;	};
+	linkNext { Boolean linkNext; 	};
+	leftBattle { Boolean leftBattle; };
+	goodness {	Int32 goodness;		};
+	pet { 		UInt32 pet_uid; 	
+				UInt32 pet_id;
+				String petName;
+				UInt16 petColorIndex;		};
+	pet_active {	bool pet_active; 		};
+	TP	{	UInt16	TP;};
+	hitTogether { Boolean hitTogether;};
+	//-- method called by client
+public:
+	SendCommand(UInt8 cmd, UInt8 target, UInt32 sub_type, UInt32 additional);
+	CheatCode(String code);
+	CancelAuto();
+
+	//-- callback from server
+	CB_Error(UInt32 errCode, String errMsg);
+	CB_CommandSuccess(UInt8 cmd);
+	CB_Inputed(UInt8 cmd);
+	CB_AutoCount(UInt16 autoCount);
+	CB_BattleMsg(UInt8 MsgType, String Msg, UInt16 subType);
+	
+}

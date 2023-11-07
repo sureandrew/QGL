@@ -1,0 +1,290 @@
+<?xml version="1.0" ?>
+<!-- Our to do list data -->
+<UI>
+	<ID Name="Character" />
+	<!--<Font Name="Data\mingliu.ttc" Width="12" Height="12" />-->
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	<Panel Name="CharacterMenuPanel" Image="Data\interface0010_main_E.tga" X="33" Y="73" DetectImage="1"
+		Left="7" Top="6" Right="347" Bottom="465" LuaRButtonUp="CloseCharacterMenu" LuaKeyChar="CloseCharacterMenu" 
+		Drag="1" DragLeft="0" DragTop="0" DragRight="339" DragBottom="459">
+		<LinerImage Name="CharHPBarLim" X="176" Y="184" Image="Data\interface0010_main_E.tga" Left="352"
+			Top="165" Right="358" Bottom="181" LineWidth="153" BaseWidth="153" Hide="0" Denumerator="100"
+			Numerator="0" />
+		<LinerImage Name="CharHPBar" X="176" Y="184" Image="Data\interface0010_main_E.tga" Left="352"
+			Top="144" Right="358" Bottom="160" LineWidth="153" BaseWidth="153" Hide="0" Denumerator="100"
+			Numerator="0" />
+		<LinerImage Name="CharSPBar" X="176" Y="207" Image="Data\interface0010_main_E.tga" Left="368"
+			Top="144" Right="374" Bottom="160" LineWidth="153" BaseWidth="153" Hide="0" Denumerator="100"
+			Numerator="0" />
+		<LinerImage Name="CharVPBar" X="45" Y="207" Image="Data\interface0010_main_E.tga" Left="360"
+			Top="144" Right="366" Bottom="160" LineWidth="91" BaseWidth="91" Hide="0" Denumerator="100"
+			Numerator="0" />
+		<LinerImage Name="CharDPBar" X="176" Y="230" Image="Data\interface0010_main_E.tga" Left="384"
+			Top="144" Right="390" Bottom="160" LineWidth="153" BaseWidth="153" Hide="0" Denumerator="100"
+			Numerator="0" />
+		<LinerImage Name="CharWCBar" X="45" Y="230" Image="Data\interface0010_main_E.tga" Left="384"
+			Top="144" Right="390" Bottom="160" LineWidth="90" BaseWidth="90" Hide="0" Denumerator="100"
+			Numerator="0" />
+		<LinerImage Name="CharExpBar" X="44" Y="411" Image="Data\interface0010_main_E.tga" Left="376"
+			Top="144" Right="382" Bottom="160" LineWidth="236" BaseWidth="236" Hide="0" Denumerator="100"
+			Numerator="0" />
+		<StaticText Name="CharNickName" X="186" Y="44" Row="1" Column="10" Width="120" Height="20" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		名稱的數值
+		</StaticText>
+		<Tips X="139" Y="64" Width="168" Height="20" Tips="显示玩家身份" TimeOutCount="500" />
+		<StaticText Name="CharTitle" X="170" Y="70" Row="1" Column="10" Width="150" Height="20" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		稱號的數值
+		</StaticText>
+		<!--<StaticText Name="CharClass" X="180" Y="99" Row="1" Column="5" Width="50" Height="20" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		職業的數值
+		</StaticText>
+		-->
+		<Tips X="139" Y="139" Width="186" Height="20" Tips="通过带新人野外战斗可以获得侠义值" TimeOutCount="500" />
+		<StaticText Name="CharGoodness" X="186" Y="146" Row="1" Column="5" Width="130" Height="20" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		正邪的數值
+		</StaticText>
+		<Tips X="139" Y="88" Width="168" Height="20" Tips="显示玩家门派" TimeOutCount="500" />
+		<StaticText Name="CharFaction" X="186" Y="95" Row="1" Column="10" Width="120" Height="20" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		幫派的數值
+		</StaticText>
+		<!--<StaticText Name="CharFactionDonate" X="180" Y="151" Row="1" Column="5" Width="50" Height="20"
+			EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		幫貢的數值
+		</StaticText>
+		-->
+		<Tips X="139" Y="114" Width="145" Height="20" Tips="显示玩家江湖地位的高低" TimeOutCount="500" />
+		<StaticText Name="CharHonor" X="186" Y="120" Row="1" Column="5" Width="120" Height="20" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		威望的數值
+		</StaticText>
+		<StaticText Name="CharLevel" X="48" Y="186" Row="1" Column="8" Width="80" Height="20" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		等級的數值
+		</StaticText>
+		<StaticText Name="CharHP" X="180" Y="186" Row="1" Column="10" Width="145" Height="20" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center" FontName="Data\simsun.ttc" FontHeight="13"
+			FontWidth="13">
+		生命的數值
+		</StaticText>
+		<StaticText Name="CharVP" X="48" Y="210" Row="1" Column="8" Width="80" Height="20" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center" FontName="Data\simsun.ttc" FontHeight="13"
+			FontWidth="13">
+		體力的數值
+		</StaticText>
+		<Tips X="9" Y="204" Width="126" Height="15" Tips="玩家的体力值" TimeOutCount="500" />
+		<StaticText Name="CharSP" X="180" Y="210" Row="1" Column="10" Width="145" Height="20" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center" FontName="Data\simsun.ttc" FontHeight="13"
+			FontWidth="13">
+		內力的數值
+		</StaticText>
+		<Tips X="9" Y="230" Width="126" Height="15" Tips="玩家的酒量等级及酒量经验" TimeOutCount="500" />
+		<StaticText Name="CharWc" X="48" Y="233" Row="1" Column="8" Width="80" Height="20" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center" FontName="Data\simsun.ttc" FontHeight="13"
+			FontWidth="13">
+		酒量的數值
+		</StaticText>
+		<Tips X="139" Y="230" Width="189" Height="15" Tips="玩家的酒量等级及酒量经验" TimeOutCount="500" />
+		<StaticText Name="CharDP" X="180" Y="233" Row="1" Column="10" Width="145" Height="20" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center" FontName="Data\simsun.ttc" FontHeight="13"
+			FontWidth="13">
+		酒意的數值
+		</StaticText>
+		<StaticText Name="CharATK" X="23" Y="266" Row="1" Column="8" Width="140" Height="20" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		攻擊的數值
+		</StaticText>
+		<Tips X="7" Y="262" Width="130" Height="20" Tips="决定外功攻击的威力" TimeOutCount="500" />
+		<StaticText Name="CharSTR" X="160" Y="266" Row="1" Column="8" Width="140" Height="20" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		臂力的數值
+		</StaticText>
+		<Tips X="139" Y="263" Width="130" Height="20" Tips="增加攻击力和少许内功，并略微影响速度" TimeOutCount="500" />
+		<StaticText Name="CharDEF" X="23" Y="290" Row="1" Column="8" Width="140" Height="20" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		防御的數值
+		</StaticText>
+		<Tips X="9" Y="286" Width="130" Height="20" Tips="对外功攻击的防御力" TimeOutCount="500" />
+		<StaticText Name="CharCON" X="160" Y="290" Row="1" Column="8" Width="140" Height="20" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		體質的數值
+		</StaticText>
+		<Tips X="139" Y="286" Width="130" Height="20" Tips="增加防御力和少许内功，并略微影响速度" TimeOutCount="500" />
+		<StaticText Name="CharHIT" X="23" Y="313" Row="1" Column="8" Width="140" Height="20" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		命中的數值
+		</StaticText>
+		<Tips X="7" Y="306" Width="130" Height="20" Tips="决定外功攻击和内功招式的命中率" TimeOutCount="500" />
+		<StaticText Name="CharSTA" X="160" Y="313" Row="1" Column="8" Width="140" Height="20" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		根骨的數值
+		</StaticText>
+		<Tips X="139" Y="307" Width="130" Height="20" Tips="增加生命值和少许内功，并略微影响速度" TimeOutCount="500" />
+		<StaticText Name="CharEVA" X="23" Y="335" Row="1" Column="8" Width="140" Height="20" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		閃避的數值
+		</StaticText>
+		<Tips X="7" Y="332" Width="130" Height="20" Tips="对外功攻击和内功招式的躲避几率" TimeOutCount="500" />
+		<StaticText Name="CharAGI" X="160" Y="335" Row="1" Column="8" Width="140" Height="20" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		身法的數值
+		</StaticText>
+		<Tips X="139" Y="332" Width="130" Height="20" Tips="提升速度、闪避和命中" TimeOutCount="500" />
+		<StaticText Name="CharPWD" X="23" Y="358" Row="1" Column="8" Width="140" Height="20" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		內功的數值
+		</StaticText>
+		<Tips X="10" Y="355" Width="130" Height="20" Tips="决定内功攻击威力" TimeOutCount="500" />
+		<StaticText Name="CharSPR" X="160" Y="358" Row="1" Column="8" Width="140" Height="20" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		內息的數值
+		</StaticText>
+		<Tips X="139" Y="358" Width="130" Height="20" Tips="提升内功及内力上限" TimeOutCount="500" />
+		<StaticText Name="CharSPD" X="23" Y="381" Row="1" Column="8" Width="140" Height="20" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center">
+		速度的數值
+		</StaticText>
+		<Tips X="8" Y="378" Width="130" Height="20" Tips="决定战斗中出招的先后" TimeOutCount="500" />	
+		<StaticText Name="Charpotential" X="160" Y="381" Row="1" Column="8" Width="140" Height="20" EdgeCode="LIGHT"
+			FontColor="FFFFFF00" ShadowColor="FF000000" Align="Center">
+		潛力的數值
+		</StaticText>
+		<Tips X="141" Y="378" Width="130" Height="20" Tips="可分配的属性点" TimeOutCount="500" />		
+		<StaticText Name="CharExp" X="43" Y="413" Width="236" Height="20" EdgeCode="LIGHT"
+			FontColor="FFFFFFFF" ShadowColor="FF000000" Align="Center" FontName="Data\simsun.ttc" FontHeight="13"
+			FontWidth="13">
+		經驗的數值
+		</StaticText>
+		<Button Name="CharacterMenuPanelClose" Image="Data\interface0010_main_E.tga" X="308" Y="8"
+			LuaLButtonDown="CloseCharacterMenu" Tips="关闭" TimeOutCount="2000" LuaTimeOut="DefaultTips">
+			<ButtonRect State="0" Left="350" Top="6" Right="374" Bottom="24" />
+			<ButtonRect State="1" Left="375" Top="6" Right="399" Bottom="24" />
+			<ButtonRect State="2" Left="400" Top="6" Right="424" Bottom="24" />
+		</Button>
+		<Button Name="CharSTRPlus" Image="Data\interface0010_main_E.tga" X="284" Y="260" Tips="增加属性点" 
+		              TimeOutCount="500" LuaTimeOut="DefaultTips"  LuaLButtonUp="CharSTRPlus" LuaRButtonUp="CharSTRPlus(10)">
+			<ButtonRect State="0" Left="350" Top="49" Right="372" Bottom="70" />
+			<ButtonRect State="1" Left="373" Top="49" Right="395" Bottom="70" />
+			<ButtonRect State="2" Left="396" Top="49" Right="418" Bottom="70" />
+			<ButtonRect State="3" Left="419" Top="49" Right="441" Bottom="70" />
+		</Button>
+		<Button Name="CharSTRMinus" Image="Data\interface0010_main_E.tga" X="306" Y="260" Tips="减少属性点"
+		              TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="CharSTRMinus" LuaRButtonUp="CharSTRMinus(10)">
+			<ButtonRect State="0" Left="350" Top="71" Right="372" Bottom="92" />
+			<ButtonRect State="1" Left="373" Top="71" Right="395" Bottom="92" />
+			<ButtonRect State="2" Left="396" Top="71" Right="418" Bottom="92" />
+			<ButtonRect State="3" Left="419" Top="71" Right="441" Bottom="92" />
+		</Button>
+		<Button Name="CharCONPlus" Image="Data\interface0010_main_E.tga" X="284" Y="285" Tips="增加属性点"
+		               TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="CharCONPlus">
+			<ButtonRect State="0" Left="350" Top="49" Right="372" Bottom="70" />
+			<ButtonRect State="1" Left="373" Top="49" Right="395" Bottom="70" />
+			<ButtonRect State="2" Left="396" Top="49" Right="418" Bottom="70" />
+			<ButtonRect State="3" Left="419" Top="49" Right="441" Bottom="70" />
+		</Button>
+		<Button Name="CharCONMinus" Image="Data\interface0010_main_E.tga" X="306" Y="285" Tips="减少属性点" 
+		                TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="CharCONMinus">
+			<ButtonRect State="0" Left="350" Top="71" Right="372" Bottom="92" />
+			<ButtonRect State="1" Left="373" Top="71" Right="395" Bottom="92" />
+			<ButtonRect State="2" Left="396" Top="71" Right="418" Bottom="92" />
+			<ButtonRect State="3" Left="419" Top="71" Right="441" Bottom="92" />
+		</Button>
+		<Button Name="CharSTAPlus" Image="Data\interface0010_main_E.tga" X="284" Y="308" Tips="增加属性点" 
+		                TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="CharSTAPlus">
+			<ButtonRect State="0" Left="350" Top="49" Right="372" Bottom="70" />
+			<ButtonRect State="1" Left="373" Top="49" Right="395" Bottom="70" />
+			<ButtonRect State="2" Left="396" Top="49" Right="418" Bottom="70" />
+			<ButtonRect State="3" Left="419" Top="49" Right="441" Bottom="70" />
+		</Button>
+		<Button Name="CharSTAMinus" Image="Data\interface0010_main_E.tga" X="306" Y="308" Tips="减少属性点"
+		                TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="CharSTAMinus">
+			<ButtonRect State="0" Left="350" Top="71" Right="372" Bottom="92" />
+			<ButtonRect State="1" Left="373" Top="71" Right="395" Bottom="92" />
+			<ButtonRect State="2" Left="396" Top="71" Right="418" Bottom="92" />
+			<ButtonRect State="3" Left="419" Top="71" Right="441" Bottom="92" />
+		</Button>
+		<Button Name="CharAGIPlus" Image="Data\interface0010_main_E.tga" X="284" Y="331" Tips="增加属性点" 
+		               TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="CharAGIPlus">
+			<ButtonRect State="0" Left="350" Top="49" Right="372" Bottom="70" />
+			<ButtonRect State="1" Left="373" Top="49" Right="395" Bottom="70" />
+			<ButtonRect State="2" Left="396" Top="49" Right="418" Bottom="70" />
+			<ButtonRect State="3" Left="419" Top="49" Right="441" Bottom="70" />
+		</Button>
+		<Button Name="CharAGIMinus" Image="Data\interface0010_main_E.tga" X="306" Y="331" Tips="减少属性点" 
+		                TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="CharAGIMinus">
+			<ButtonRect State="0" Left="350" Top="71" Right="372" Bottom="92" />
+			<ButtonRect State="1" Left="373" Top="71" Right="395" Bottom="92" />
+			<ButtonRect State="2" Left="396" Top="71" Right="418" Bottom="92" />
+			<ButtonRect State="3" Left="419" Top="71" Right="441" Bottom="92" />
+		</Button>
+		<Button Name="CharSPRPlus" Image="Data\interface0010_main_E.tga" X="284" Y="354" Tips="增加属性点" 
+		                TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="CharSPRPlus">
+			<ButtonRect State="0" Left="350" Top="49" Right="372" Bottom="70" />
+			<ButtonRect State="1" Left="373" Top="49" Right="395" Bottom="70" />
+			<ButtonRect State="2" Left="396" Top="49" Right="418" Bottom="70" />
+			<ButtonRect State="3" Left="419" Top="49" Right="441" Bottom="70" />
+		</Button>
+		<Button Name="CharSPRMinus" Image="Data\interface0010_main_E.tga" X="306" Y="354" Tips="减少属性点" 
+		               TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="CharSPRMinus">
+			<ButtonRect State="0" Left="350" Top="71" Right="372" Bottom="92" />
+			<ButtonRect State="1" Left="373" Top="71" Right="395" Bottom="92" />
+			<ButtonRect State="2" Left="396" Top="71" Right="418" Bottom="92" />
+			<ButtonRect State="3" Left="419" Top="71" Right="441" Bottom="92" />
+		</Button>
+		<Button Name="CharTitleDetail" Image="Data\interface0010_main_E.tga" X="307" Y="65" Tips="设置称号"
+						TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="OpenTitle">
+			<ButtonRect State="0" Left="350" Top="27" Right="372" Bottom="48" />
+			<ButtonRect State="1" Left="373" Top="27" Right="395" Bottom="48" />
+			<ButtonRect State="2" Left="396" Top="27" Right="418" Bottom="48" />
+			<ButtonRect State="3" Left="419" Top="27" Right="441" Bottom="48" />
+		</Button>
+		<Button Name="CharAttOk" Image="Data\interface0010_main_E.tga" X="282" Y="377" Tips="点击确认分配潜能点"
+                       TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="CharAttOk">
+			<ButtonRect State="0" Left="351" Top="94" Right="400" Bottom="115" />
+			<ButtonRect State="1" Left="401" Top="95" Right="450" Bottom="116" />
+			<ButtonRect State="2" Left="453" Top="94" Right="502" Bottom="115" />
+			<ButtonRect State="3" Left="504" Top="94" Right="553" Bottom="115" />
+		</Button>
+		<Button Name="CharLevelUp" Image="Data\interface0010_main_E.tga" X="282" Y="409" Tips="点击提升人物等级"
+		                TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="CharLevelUp">
+			<ButtonRect State="0" Left="351" Top="117" Right="400" Bottom="138" />
+			<ButtonRect State="1" Left="401" Top="118" Right="450" Bottom="139" />
+			<ButtonRect State="2" Left="453" Top="117" Right="502" Bottom="138" />
+			<ButtonRect State="3" Left="504" Top="117" Right="553" Bottom="138" />
+		</Button>
+		
+		<AniIcon Name="LevelUpSpark" X="286" Y="410" Image="" Hide="0" AutoDelete="0" />
+		
+		<UIImage Name="CharFace" Hide="0" X="11" Y="42" Image="" Left="0" Top="0" Right="120" Bottom="120"
+			AutoDelete="0" />
+					
+		<Button Name="CharFactionInfo" Image="Data\interface0010_main_E.tga" X="309" Y="91" Tips="门派简介"
+						TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonUp="OpenFactionDetail">
+			<ButtonRect State="0" Left="509" Top="150" Right="529" Bottom="170" />
+			<ButtonRect State="1" Left="532" Top="150" Right="552" Bottom="170" />
+			<ButtonRect State="2" Left="555" Top="150" Right="575" Bottom="170" />
+			<ButtonRect State="3" Left="578" Top="150" Right="598" Bottom="170" />
+		</Button>
+		
+		<Button Name="CharHonorInfo" Image="Data\interface0010_main_E.tga" X="286" Y="115" LuaLButtonUp="OpenCharHonorInfo">
+			<ButtonRect State="0" Left="7" Top="528" Right="50" Bottom="550" />
+			<ButtonRect State="1" Left="54" Top="528" Right="97" Bottom="550" />
+			<ButtonRect State="2" Left="101" Top="528" Right="144" Bottom="550" />
+			<ButtonRect State="3" Left="148" Top="528" Right="191" Bottom="550" />
+		</Button>
+		
+		<UIImage Name="Class1Im" Hide="0" X="52" Y="153" Image ="Data\interface0010_main_E.tga" Left="8" Top="556" Right="53" Bottom="573"/>
+		<UIImage Name="Class2Im" Hide="0" X="52" Y="153" Image ="Data\interface0010_main_E.tga" Left="57" Top="556" Right="102" Bottom="573"/>
+		<UIImage Name="Class3Im" Hide="0" X="52" Y="153" Image ="Data\interface0010_main_E.tga" Left="106" Top="556" Right="150" Bottom="573"/>
+		<UIImage Name="Class4Im" Hide="0" X="52" Y="153" Image ="Data\interface0010_main_E.tga" Left="155" Top="556" Right="200" Bottom="573"/>
+		<UIImage Name="Class5Im" Hide="0" X="52" Y="153" Image ="Data\interface0010_main_E.tga" Left="204" Top="556" Right="248" Bottom="573"/>
+		<UIImage Name="Class6Im" Hide="0" X="52" Y="153" Image ="Data\interface0010_main_E.tga" Left="253" Top="556" Right="297" Bottom="573"/>
+		<UIImage Name="Class7Im" Hide="0" X="52" Y="153" Image ="Data\interface0010_main_E.tga" Left="301" Top="556" Right="346" Bottom="573"/>
+		<UIImage Name="Class8Im" Hide="0" X="52" Y="153" Image ="Data\interface0010_main_E.tga" Left="351" Top="556" Right="395" Bottom="573"/>
+		
+	</Panel>
+</UI>

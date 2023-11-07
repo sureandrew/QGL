@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" ?>
+<UI>
+	<ID Name="QuestionExplainPanel" />
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	<Panel Name="QuestionExplainPanel" Image="Data\interface0036_Question.tga" X="34" Y="428" 
+			Left="1" Top="343" Right="726" Bottom="448" LuaRButtonUp="" DetectImage = "1"
+			Drag="0" DragLeft="0" DragTop="0" DragRight="496" DragBottom="297" 
+			LuaTimeOut="" TimeOutCount="500">
+			
+		<StaticText Name="QuestionExplain" X="40" Y="20" Row="5" Column="18" Width="650" Height="150" EdgeCode="LEFT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="0">
+		^-^大李小百科为益智问答类型游戏，每次共有30题的题目供玩家作答，当题目出现时，玩家有15秒的时间，用鼠标左键点击介面上的A、B、C、D按钮作答。在作答时间15秒之内，越快作答且正确答案者，便可获得较高的积分。在比赛期间内，按下离开键、关闭游戏、重登或是断线，都将会被传送离开比赛场地，所得到的积分也将一律清掉，不会被记录。
+		</StaticText>
+	</Panel>	
+
+</UI>

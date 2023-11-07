@@ -1,0 +1,24 @@
+//-- Config
+config
+{
+	SubPath="Data/";
+	ClassID=10330;
+	StartID=10330;
+	EndID  =10339;
+	TwoDirect=1;
+}
+
+//-- include
+
+//-- object class
+class GenerationData : NetObject
+{
+     ids {	UInt32 uiYoungerId;
+			UInt32 uiElderId;
+     };
+     info { String strNickName;
+			UInt32 uiAccmulOrRecvExp;
+			UInt32 uiGiftPointOrHistAccm;
+     };
+     flag { BOOL bYoung; };
+}

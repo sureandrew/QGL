@@ -1,0 +1,27 @@
+//-- Config
+config
+{
+	SubPath="Data/";
+	ClassID=10200;
+	StartID=10200;
+	EndID  =10299;
+	TwoDirect=1;
+}
+
+//-- include
+
+//-- object class
+class SellYuanBaoData : NetObject
+{
+	//-- object state
+	id { 		UInt32 sellYuanBao_id;		};
+	charInfo {    	UInt32 char_id;
+                	String charName;		}; 
+	sellInfo {	UInt8 sellType;
+			UInt32 totalYBT;
+			UInt32 moneyPerYBT;
+			UInt32 expireDate;		};
+	soldYBT	{	UInt32 soldYBT;			};
+
+	//-- command to RPC server
+}

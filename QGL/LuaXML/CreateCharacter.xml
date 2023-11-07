@@ -1,0 +1,239 @@
+<?xml version="1.0" ?>
+<!-- Login UI -->
+<UI>
+	<ID Name="CreateCharacter" />
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	<Default Item="CharacterName" />
+	<Panel Name="CreateCharacterPanel" X="0" Y="0" Image="" Left="0" Top="0" Right="800" Bottom="600">
+		<UIImage Name="CharacterLImage1" Image="Data\NPCFACE\ImgL00001a.tga" X="225" Y="0" Left="0"
+			Top="0" Right="431" Bottom="576" AutoDelete="0" Hide="1"/>
+		<UIImage Name="CharacterLImage2" Image="Data\NPCFACE\ImgL00002b.tga" X="225" Y="0" Left="0"
+			Top="0" Right="431" Bottom="576" AutoDelete="0" Hide="1" />
+		<UIImage Name="CharacterLImage3" Image="Data\NPCFACE\ImgL00003a.tga" X="225" Y="0" Left="0"
+			Top="0" Right="431" Bottom="576" AutoDelete="0" Hide="1" />
+		<UIImage Name="CharacterLImage4" Image="Data\NPCFACE\ImgL00004c.tga" X="225" Y="0" Left="0"
+			Top="0" Right="431" Bottom="576" AutoDelete="0" Hide="1" />
+		<UIImage Name="CharacterLImage5" Image="Data\NPCFACE\ImgL00005b.tga" X="225" Y="0" Left="0"
+			Top="0" Right="431" Bottom="576" AutoDelete="0" Hide="1" />
+		<UIImage Name="CharacterLImage6" Image="Data\NPCFACE\ImgL00006a.tga" X="225" Y="0" Left="0"
+			Top="0" Right="431" Bottom="576" AutoDelete="0" Hide="1" />
+		<UIImage Name="CharacterLImage7" Image="Data\NPCFACE\ImgL00007a.tga" X="225" Y="0" Left="0"
+			Top="0" Right="431" Bottom="576" AutoDelete="0" Hide="1" />
+		<UIImage Name="CharacterLImage8" Image="Data\NPCFACE\ImgL00008a.tga" X="225" Y="0" Left="0"
+			Top="0" Right="431" Bottom="576" AutoDelete="0" Hide="1" />
+		<UIImage Name="CreateCharInterface" X="0" Y="0" Image="Data\interface0016_begin_C.tga" Left="0"
+			Top="0" Right="800" Bottom="600" AutoDelete="1" />
+			
+		<UIImage Name="HeadPic7" Image="Data\NPCFACE\ImgSS00007a.tga" X="30" Y="107" Left="0" Top="0"
+			Right="100" Bottom="100" AutoDelete="0" LuaLButtonUp="SetCharacter7" LuaMouseMove="HeadPicHighLight7"
+			LuaMouseOut="HeadPicHighLightOff" InsertToEventList="1" />
+		<UIImage Name="HeadPic8" Image="Data\NPCFACE\ImgSS00008b.tga" X="134" Y="107" Left="0" Top="0"
+			Right="100" Bottom="100" AutoDelete="0" LuaLButtonUp="SetCharacter8" LuaMouseMove="HeadPicHighLight8"
+			LuaMouseOut="HeadPicHighLightOff" InsertToEventList="1" />
+		<UIImage Name="HeadPic1" Image="Data\NPCFACE\ImgSS00001a.tga" X="30" Y="211" Left="0" Top="0"
+			Right="100" Bottom="100" AutoDelete="0" LuaLButtonUp="SetCharacter1" LuaMouseMove="HeadPicHighLight1"
+			LuaMouseOut="HeadPicHighLightOff" InsertToEventList="1" />
+		<UIImage Name="HeadPic2" Image="Data\NPCFACE\ImgSS00002c.tga" X="134" Y="211" Left="0" Top="0"
+			Right="100" Bottom="100" AutoDelete="0" LuaLButtonUp="SetCharacter2" LuaMouseMove="HeadPicHighLight2"
+			LuaMouseOut="HeadPicHighLightOff" InsertToEventList="1" />
+		<UIImage Name="HeadPic5" Image="Data\NPCFACE\ImgSS00005b.tga" X="30" Y="315" Left="0" Top="0"
+			Right="100" Bottom="100" AutoDelete="0" LuaLButtonUp="SetCharacter5" LuaMouseMove="HeadPicHighLight5"
+			LuaMouseOut="HeadPicHighLightOff" InsertToEventList="1" />
+		<UIImage Name="HeadPic6" Image="Data\NPCFACE\ImgSS00006a.tga" X="134" Y="315" Left="0" Top="0"
+			Right="100" Bottom="100" AutoDelete="0" LuaLButtonUp="SetCharacter6" LuaMouseMove="HeadPicHighLight6"
+			LuaMouseOut="HeadPicHighLightOff" InsertToEventList="1" />
+		<UIImage Name="HeadPic3" Image="Data\NPCFACE\ImgSS00003a.tga" X="30" Y="419" Left="0" Top="0"
+			Right="100" Bottom="100" AutoDelete="0" LuaLButtonUp="SetCharacter3" LuaMouseMove="HeadPicHighLight3"
+			LuaMouseOut="HeadPicHighLightOff" InsertToEventList="1" />
+		<UIImage Name="HeadPic4" Image="Data\NPCFACE\ImgSS00004a.tga" X="134" Y="419" Left="0" Top="0"
+			Right="100" Bottom="100" AutoDelete="0" LuaLButtonUp="SetCharacter4" LuaMouseMove="HeadPicHighLight4"
+			LuaMouseOut="HeadPicHighLightOff" InsertToEventList="1" />
+		<!--<UIImage Name="HeadPic9" Image="Data\NPCFACE\ImgSS10014a.tga" X="30" Y="475" Left="0" Top="0"
+			Right="100" Bottom="100" AutoDelete="0" LuaLButtonUp="" LuaMouseMove=""
+			LuaMouseOut="HeadPicHighLightOff" InsertToEventList="1" />
+		<UIImage Name="HeadPic10" Image="Data\NPCFACE\ImgSS10028a.tga" X="134" Y="475" Left="0" Top="0"
+			Right="100" Bottom="100" AutoDelete="0" LuaLButtonUp="" LuaMouseMove=""
+			LuaMouseOut="HeadPicHighLightOff" InsertToEventList="1" />-->
+		<UIImage Name="HeadBoard" Image="Data\interface0016_begin_C.tga" X="19" Y="106" Left="677"
+			Top="702" Right="782" Bottom="807" AutoDelete="1" NotDetected="1" />
+			
+		<EditBox Name="CharacterName" X="626" Y="143" Row="1" Column="8" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" Limit="6" NoSpace="1"></EditBox>
+		<Button Name="CheckName" Image="Data\interface0016_begin_C.tga" X="765" Y="135" LuaLButtonUp="CheckCharacterName">
+			<ButtonRect State="0" Left="521" Top="603" Right="547" Bottom="628" />
+			<ButtonRect State="1" Left="549" Top="603" Right="575" Bottom="628" />
+			<ButtonRect State="2" Left="577" Top="603" Right="603" Bottom="628" />
+		</Button>
+		
+		<UIImage Name="CharDefautName1" X="265" Y="320" Image="Data\interface0016_begin_C.tga" Left="9"
+			Top="612" Right="128" Bottom="666" AutoDelete="1" Hide="1"/>
+		<UIImage Name="CharDefautName2" X="265" Y="311" Image="Data\interface0016_begin_C.tga" Left="5"
+			Top="670" Right="134" Bottom="728" AutoDelete="1" Hide="1" />
+		<UIImage Name="CharDefautName3" X="265" Y="305" Image="Data\interface0016_begin_C.tga" Left="7"
+			Top="733" Right="134" Bottom="799" AutoDelete="1" Hide="1" />
+		<UIImage Name="CharDefautName4" X="265" Y="313" Image="Data\interface0016_begin_C.tga" Left="4"
+			Top="804" Right="142" Bottom="862" AutoDelete="1" Hide="1" />
+		<UIImage Name="CharDefautName5" X="265" Y="305" Image="Data\interface0016_begin_C.tga" Left="6"
+			Top="864" Right="133" Bottom="933" AutoDelete="1" Hide="1" />
+		<UIImage Name="CharDefautName6" X="265" Y="318" Image="Data\interface0016_begin_C.tga" Left="7"
+			Top="935" Right="141" Bottom="989" AutoDelete="1" Hide="1" />
+		<UIImage Name="CharDefautName7" X="265" Y="316" Image="Data\interface0016_begin_C.tga" Left="139"
+			Top="610" Right="263" Bottom="665" AutoDelete="1" Hide="1" />
+		<UIImage Name="CharDefautName8" X="265" Y="311" Image="Data\interface0016_begin_C.tga" Left="137"
+			Top="672" Right="260" Bottom="737" AutoDelete="1" Hide="1" />
+			
+		<Button Name="HairStyleLeft" Image="Data\interface0016_begin_C.tga" X="646" Y="200" LuaLButtonUp="HairStylePrev">
+			<ButtonRect State="0" Left="615" Top="684" Right="630" Bottom="703" />
+			<ButtonRect State="1" Left="615" Top="709" Right="630" Bottom="728" />
+			<ButtonRect State="2" Left="615" Top="734" Right="630" Bottom="753" />
+		</Button>
+		<Button Name="HairStyleRight" Image="Data\interface0016_begin_C.tga" X="741" Y="200" LuaLButtonUp="HairStyleNext">
+			<ButtonRect State="0" Left="640" Top="684" Right="655" Bottom="703" />
+			<ButtonRect State="1" Left="640" Top="709" Right="655" Bottom="728" />
+			<ButtonRect State="2" Left="640" Top="734" Right="655" Bottom="753" />
+		</Button>
+		
+		<UIImage Name="HairStyle1" X="676" Y="200" Image="Data\interface0016_begin_C.tga" Left="272"
+			Top="602" Right="325" Bottom="622" AutoDelete="1" Hide="1" />
+		<UIImage Name="HairStyle2" X="676" Y="200" Image="Data\interface0016_begin_C.tga" Left="272"
+			Top="624" Right="325" Bottom="644" AutoDelete="1" Hide="1" />
+		<UIImage Name="HairStyle3" X="676" Y="200" Image="Data\interface0016_begin_C.tga" Left="272"
+			Top="646" Right="325" Bottom="666" AutoDelete="1" Hide="1" />
+		<UIImage Name="HairStyle4" X="676" Y="200" Image="Data\interface0016_begin_C.tga" Left="272"
+			Top="668" Right="325" Bottom="689" AutoDelete="1" Hide="1" />
+		<UIImage Name="HairStyle5" X="676" Y="200" Image="Data\interface0016_begin_C.tga" Left="272"
+			Top="690" Right="325" Bottom="711" AutoDelete="1" Hide="1" />
+		<UIImage Name="HairStyle6" X="676" Y="200" Image="Data\interface0016_begin_C.tga" Left="272"
+			Top="712" Right="325" Bottom="733" AutoDelete="1" Hide="1" />
+		<UIImage Name="HairStyle7" X="676" Y="200" Image="Data\interface0016_begin_C.tga" Left="272"
+			Top="734" Right="325" Bottom="755" AutoDelete="1" Hide="1" />
+		<UIImage Name="HairStyle8" X="676" Y="200" Image="Data\interface0016_begin_C.tga" Left="272"
+			Top="756" Right="325" Bottom="778" AutoDelete="1" Hide="1" />
+		<UIImage Name="HairStyle9" X="676" Y="200" Image="Data\interface0016_begin_C.tga" Left="272"
+			Top="778" Right="325" Bottom="800" AutoDelete="1" Hide="1" />
+		<UIImage Name="HairStyle10" X="676" Y="200" Image="Data\interface0016_begin_C.tga" Left="272"
+			Top="800" Right="325" Bottom="822" AutoDelete="1" Hide="1" />
+			
+		<Button Name="HairColorLeft" Image="Data\interface0016_begin_C.tga" X="646" Y="238" LuaLButtonUp="HairColorPrev">
+			<ButtonRect State="0" Left="615" Top="684" Right="630" Bottom="703" />
+			<ButtonRect State="1" Left="615" Top="709" Right="630" Bottom="728" />
+			<ButtonRect State="2" Left="615" Top="734" Right="630" Bottom="753" />
+		</Button>
+		<Button Name="HairColorRight" Image="Data\interface0016_begin_C.tga" X="741" Y="238" LuaLButtonUp="HairColorNext">
+			<ButtonRect State="0" Left="640" Top="684" Right="655" Bottom="703" />
+			<ButtonRect State="1" Left="640" Top="709" Right="655" Bottom="728" />
+			<ButtonRect State="2" Left="640" Top="734" Right="655" Bottom="753" />
+		</Button>
+		<UIImage Name="HairColor1" X="676" Y="238" Image="Data\interface0016_begin_C.tga" Left="331"
+			Top="602" Right="384" Bottom="622" AutoDelete="1" Hide="1" />
+		<UIImage Name="HairColor2" X="676" Y="238" Image="Data\interface0016_begin_C.tga" Left="331"
+			Top="624" Right="384" Bottom="644" AutoDelete="1" Hide="1" />
+		<UIImage Name="HairColor3" X="676" Y="238" Image="Data\interface0016_begin_C.tga" Left="331"
+			Top="646" Right="384" Bottom="666" AutoDelete="1" Hide="1" />
+		<UIImage Name="HairColor4" X="676" Y="238" Image="Data\interface0016_begin_C.tga" Left="331"
+			Top="668" Right="384" Bottom="688" AutoDelete="1" Hide="1" />
+		<UIImage Name="HairColor5" X="676" Y="238" Image="Data\interface0016_begin_C.tga" Left="331"
+			Top="690" Right="384" Bottom="710" AutoDelete="1" Hide="1" />
+		<UIImage Name="HairColor6" X="676" Y="238" Image="Data\interface0016_begin_C.tga" Left="331"
+			Top="712" Right="384" Bottom="732" AutoDelete="1" Hide="1" />
+		<UIImage Name="HairColor7" X="676" Y="238" Image="Data\interface0016_begin_C.tga" Left="331"
+			Top="734" Right="384" Bottom="754" AutoDelete="1" Hide="1" />
+		<UIImage Name="HairColor8" X="676" Y="238" Image="Data\interface0016_begin_C.tga" Left="331"
+			Top="756" Right="384" Bottom="776" AutoDelete="1" Hide="1" />
+		<UIImage Name="HairColor9" X="676" Y="238" Image="Data\interface0016_begin_C.tga" Left="331"
+			Top="778" Right="384" Bottom="798" AutoDelete="1" Hide="1" />
+		<UIImage Name="HairColor10" X="676" Y="238" Image="Data\interface0016_begin_C.tga" Left="331"
+			Top="800" Right="384" Bottom="820" AutoDelete="1" Hide="1" />
+				
+		<!--<Button Name="ClothLeft" Image="Data\interface0016_begin_C.tga" X="646" Y="272" LuaLButtonUp="ClothPrev">
+			<ButtonRect State="0" Left="615" Top="684" Right="630" Bottom="703" />
+			<ButtonRect State="1" Left="615" Top="709" Right="630" Bottom="728" />
+			<ButtonRect State="2" Left="615" Top="734" Right="630" Bottom="753" />
+		</Button>
+		<Button Name="ClothRight" Image="Data\interface0016_begin_C.tga" X="741" Y="272" LuaLButtonUp="ClothNext">
+			<ButtonRect State="0" Left="640" Top="684" Right="655" Bottom="703" />
+			<ButtonRect State="1" Left="640" Top="709" Right="655" Bottom="728" />
+			<ButtonRect State="2" Left="640" Top="734" Right="655" Bottom="753" />
+		</Button>
+		<UIImage Name="Cloth1" X="676" Y="272" Image="Data\interface0016_begin_C.tga" Left="390"
+			Top="602" Right="443" Bottom="622" AutoDelete="1" Hide="1" />
+		<UIImage Name="Cloth2" X="676" Y="272" Image="Data\interface0016_begin_C.tga" Left="390"
+			Top="624" Right="443" Bottom="644" AutoDelete="1" Hide="1" />
+		<UIImage Name="Cloth3" X="676" Y="272" Image="Data\interface0016_begin_C.tga" Left="390"
+			Top="646" Right="443" Bottom="666" AutoDelete="1" Hide="1" />
+		<UIImage Name="Cloth4" X="676" Y="272" Image="Data\interface0016_begin_C.tga" Left="390"
+			Top="668" Right="443" Bottom="688" AutoDelete="1" Hide="1" />
+		<UIImage Name="Cloth5" X="676" Y="272" Image="Data\interface0016_begin_C.tga" Left="390"
+			Top="690" Right="443" Bottom="710" AutoDelete="1" Hide="1" />
+		<UIImage Name="Cloth6" X="676" Y="272" Image="Data\interface0016_begin_C.tga" Left="390"
+			Top="712" Right="443" Bottom="732" AutoDelete="1" Hide="1" />
+		<UIImage Name="Cloth7" X="676" Y="272" Image="Data\interface0016_begin_C.tga" Left="390"
+			Top="734" Right="443" Bottom="754" AutoDelete="1" Hide="1" />
+		<UIImage Name="Cloth8" X="676" Y="272" Image="Data\interface0016_begin_C.tga" Left="390"
+			Top="756" Right="443" Bottom="776" AutoDelete="1" Hide="1" />
+		<UIImage Name="Cloth9" X="676" Y="272" Image="Data\interface0016_begin_C.tga" Left="390"
+			Top="778" Right="443" Bottom="798" AutoDelete="1" Hide="1" />
+		<UIImage Name="Cloth10" X="676" Y="272" Image="Data\interface0016_begin_C.tga" Left="390"
+			Top="800" Right="443" Bottom="820" AutoDelete="1" Hide="1" />
+		<Button Name="ClothColorLeft" Image="Data\interface0016_begin_C.tga" X="646" Y="312" LuaLButtonUp="ClothColorPrev">
+			<ButtonRect State="0" Left="615" Top="684" Right="630" Bottom="703" />
+			<ButtonRect State="1" Left="615" Top="709" Right="630" Bottom="728" />
+			<ButtonRect State="2" Left="615" Top="734" Right="630" Bottom="753" />
+		</Button>
+		<Button Name="ClothColorRight" Image="Data\interface0016_begin_C.tga" X="741" Y="312" LuaLButtonUp="ClothColorNext">
+			<ButtonRect State="0" Left="640" Top="684" Right="655" Bottom="703" />
+			<ButtonRect State="1" Left="640" Top="709" Right="655" Bottom="728" />
+			<ButtonRect State="2" Left="640" Top="734" Right="655" Bottom="753" />
+		</Button>
+		<UIImage Name="ClothColor1" X="676" Y="312" Image="Data\interface0016_begin_C.tga" Left="449"
+			Top="602" Right="502" Bottom="622" AutoDelete="1" Hide="1" />
+		<UIImage Name="ClothColor2" X="676" Y="312" Image="Data\interface0016_begin_C.tga" Left="449"
+			Top="624" Right="502" Bottom="644" AutoDelete="1" Hide="1" />
+		<UIImage Name="ClothColor3" X="676" Y="312" Image="Data\interface0016_begin_C.tga" Left="449"
+			Top="646" Right="502" Bottom="666" AutoDelete="1" Hide="1" />
+		<UIImage Name="ClothColor4" X="676" Y="312" Image="Data\interface0016_begin_C.tga" Left="449"
+			Top="668" Right="502" Bottom="688" AutoDelete="1" Hide="1" />
+		<UIImage Name="ClothColor5" X="676" Y="312" Image="Data\interface0016_begin_C.tga" Left="449"
+			Top="690" Right="502" Bottom="710" AutoDelete="1" Hide="1" />
+		<UIImage Name="ClothColor6" X="676" Y="312" Image="Data\interface0016_begin_C.tga" Left="449"
+			Top="712" Right="502" Bottom="732" AutoDelete="1" Hide="1" />
+		<UIImage Name="ClothColor7" X="676" Y="312" Image="Data\interface0016_begin_C.tga" Left="449"
+			Top="734" Right="502" Bottom="754" AutoDelete="1" Hide="1" />
+		<UIImage Name="ClothColor8" X="676" Y="312" Image="Data\interface0016_begin_C.tga" Left="449"
+			Top="756" Right="502" Bottom="776" AutoDelete="1" Hide="1" />
+		<UIImage Name="ClothColor9" X="676" Y="312" Image="Data\interface0016_begin_C.tga" Left="449"
+			Top="778" Right="502" Bottom="798" AutoDelete="1" Hide="1" />
+		<UIImage Name="ClothColor10" X="676" Y="312" Image="Data\interface0016_begin_C.tga" Left="449"
+			Top="800" Right="502" Bottom="820" AutoDelete="1" Hide="1" />-->
+		<AniIcon Name="CharacterModel" X="700" Y="306" Rotation="1" Image="d10007_t001.ent" AnimationIndex="0"
+			Loop="1" Align="1" Hide="0" />
+		<Button Name="CharacterRotateLeft" Image="Data\interface0016_begin_C.tga" X="620" Y="332" LuaLButtonDown="CreateCharRotateLeft">
+			<ButtonRect State="0" Left="522" Top="635" Right="556" Bottom="669" />
+			<ButtonRect State="1" Left="522" Top="674" Right="556" Bottom="708" />
+			<ButtonRect State="2" Left="522" Top="713" Right="556" Bottom="747" />
+		</Button>
+		<Button Name="CharacterRotateRight" Image="Data\interface0016_begin_C.tga" X="751" Y="332" LuaLButtonDown="CreateCharRotateRight">
+			<ButtonRect State="0" Left="561" Top="635" Right="595" Bottom="669" />
+			<ButtonRect State="1" Left="561" Top="674" Right="595" Bottom="708" />
+			<ButtonRect State="2" Left="561" Top="713" Right="595" Bottom="747" />
+		</Button>
+			
+		<StaticText Name="CreateCharacterDESC" LinePitch="3" X="265" Y="375" Row="6" Col="100" Width="450" Height="140" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000"></StaticText>
+		<StaticText Name="CreateCharacterWPDESC" X="265" Y="425" Row="1" Col="30" EdgeCode="LIGHT" FontColor="FF4BC4B5"
+			ShadowColor="FF000000"></StaticText>
+			
+		<Button Name="CreateCharacterPrev" Image="Data\interface0016_begin_C.tga" X="576" Y="500"
+			LuaLButtonUp="CreateCharacterPrev">
+			<ButtonRect State="0" Left="607" Top="605" Right="699" Bottom="626" />
+			<ButtonRect State="1" Left="607" Top="631" Right="699" Bottom="652" />
+			<ButtonRect State="2" Left="607" Top="657" Right="699" Bottom="678" />
+		</Button>
+		<Button Name="CreateCharacterNext" Image="Data\interface0016_begin_C.tga" X="690" Y="500"
+			LuaLButtonUp="CreateCharacterNext">
+			<ButtonRect State="0" Left="703" Top="605" Right="795" Bottom="626" />
+			<ButtonRect State="1" Left="703" Top="631" Right="795" Bottom="652" />
+			<ButtonRect State="2" Left="703" Top="657" Right="795" Bottom="678" />
+		</Button>
+	</Panel>
+</UI>

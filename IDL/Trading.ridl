@@ -1,0 +1,54 @@
+//-- Config
+config
+{
+	SubPath="Logic/";
+	ClassID=39000;
+	StartID=39000;
+	EndID  =39999;
+}
+
+//-- include
+
+//-- object class
+class Trading : NetObject
+{
+	//-- object attributes
+
+
+	//-- method
+public:
+
+	SetTradingItemSlot(UInt8 itemBagIndex, UInt8 stack, UInt8 tradingPosition);
+	RemoveTradingItemSlot(UInt8 tradingPosition);
+	SetTradingPartnerSlot(UInt32 partnerID, UInt8 position);
+	RemoveTradingPartnerSlot(UInt8 position);
+	SetTradingPetSlot(UInt32 petID, UInt8 position);
+	RemoveTradingPetSlot(UInt8 position);
+	SetTradingLock(Boolean lock);
+	SetTradingMoney(UInt32 gmoney);
+	CancelTrading();
+	ConfirmTrading();
+
+	CB_SetItemSlot(NetObject* item, UInt8 position);
+	CB_RemoveItemSlot(UInt8 position);
+
+	CB_SetPartnerSlot(NetObject* partner, UInt16Vector skillID, UInt8 position);
+	CB_RemovePartnerSlot(UInt8 position);
+
+	CB_SetPetSlot(NetObject* pet, UInt16Vector skillID, UInt8 position);
+	CB_RemovePetSlot(UInt8 position);
+
+	CB_SetLock(UInt32 char_id, Boolean lock);
+	
+	CB_SetMoney(UInt32 gmoney);
+
+	CB_CancelTrading(UInt32 owner_id);
+
+	CB_ConfirmTrading(UInt32 owner_id);
+
+	CB_TradingProcess(Boolean success, String message, UInt32 errorCharID);
+	CB_TradingItem( UInt32Vector itemID, UInt8Vector itemStacks);
+	CB_TradingPartner(UInt32Vector partnerID);
+	CB_TradingPet(UInt32Vector petID);
+	CB_TradingMoney(UInt32 gmoney);
+}

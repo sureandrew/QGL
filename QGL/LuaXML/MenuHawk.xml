@@ -1,0 +1,841 @@
+<?xml version="1.0" ?>
+<!-- Our to do list data -->
+<UI>
+	<ID Name="Hawk" />
+	<!--<Font Name="Data\mingliu.ttc" Width="12" Height="12" />-->
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	<Panel Name="HawkPanel" Image="Data\interface0033_Hawker.tga" X="0" Y="0" 
+			Left="4" Top="3" Right="681" Bottom="461" LuaRButtonUp="CloseHawk" DetectImage = "1"
+			Drag="1" DragLeft="0" DragTop="0" DragRight="677" DragBottom="458" LuaKeyChar="CloseHawk" 
+			LuaTimeOut="HawkDetailPopupTimeOut" TimeOutCount="500">
+			
+		<StaticText Name="HawkerTitle" X="282" Y="5" Row="1" Column="8" Width="114" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Align="CENTER" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<CheckBox Name = "HawkSellItem" Image="Data\interface0033_Hawker.tga" X="6" Y="34"  LuaLButtonDown="SelectHawkSellItem">
+			<CheckBoxRect Index="0" Left="688" Top="57" Right="753" Bottom="77" />
+			<CheckBoxRect Index="1" Left="688" Top="57" Right="753" Bottom="77" />
+			<CheckBoxRect Index="2" Left="772" Top="57" Right="841" Bottom="77" />
+		</CheckBox>
+			
+		<CheckBox Name = "HawkSellPartner" Image="Data\interface0033_Hawker.tga" X="71" Y="34"  LuaLButtonDown="SelectHawkSellPartner">
+			<CheckBoxRect Index="0" Left="688" Top="81" Right="753" Bottom="101" />
+			<CheckBoxRect Index="1" Left="688" Top="81" Right="753" Bottom="101" />
+			<CheckBoxRect Index="2" Left="772" Top="81" Right="841" Bottom="101" />
+		</CheckBox>
+			
+		<CheckBox Name = "HawkSellPet" Image="Data\interface0033_Hawker.tga" X="136" Y="34"  LuaLButtonDown="SelectHawkSellPet">
+			<CheckBoxRect Index="0" Left="688" Top="129" Right="753" Bottom="149" />
+			<CheckBoxRect Index="1" Left="688" Top="129" Right="753" Bottom="149" />
+			<CheckBoxRect Index="2" Left="772" Top="129" Right="841" Bottom="149" />
+		</CheckBox>	
+		
+		<StaticText Name="SetConcernText" X="560" Y="34" Height="20" Width="228" Row="1" Column="6" EdgeCode="LIGHT" FontColor="FFEDD97A" ShadowColor="FF000000" Align="Left">
+			关注:
+		</StaticText>
+		
+		<StaticText Name="HawkCharacterUIDText" X="250" Y="34" Height="20" Width="228" Row="1" Column="6" EdgeCode="LIGHT" FontColor="FFEDD97A" ShadowColor="FF000000" Align="Left">
+			摊主:
+		</StaticText>
+		
+		<StaticText Name="HawkCharacterUID" X="290" Y="34" Height="20" Width="228" Row="1" Column="6" EdgeCode="LIGHT" FontColor="FFEDD97A" ShadowColor="FF000000" Align="Left">
+			
+		</StaticText>
+		
+		<CheckBox Name = "SetConcern" Image="Data\interface0038_zidong.tga" X="600" Y="30"
+								TimeOutCount="500" LuaTimeOut="DefaultTips" LuaLButtonDown="CheckConcernTarget">
+			<CheckBoxRect Index="0" Left="124" Top="268" Right="145" Bottom="288" />
+			<CheckBoxRect Index="1" Left="124" Top="268" Right="145" Bottom="288" />
+			<CheckBoxRect Index="2" Left="94" Top="268" Right="115" Bottom="288" />
+		</CheckBox>
+		
+		<UIImage Name="HawkLeftUpCorner"  Image="Data\interface0033_Hawker.tga" X="6" Y="54" Left="691" Top="17" Right="704" Bottom="30" /> 
+		<UIImage Name="HawkRightUpCorner"  Image="Data\interface0033_Hawker.tga" X="658" Y="54" Left="712" Top="17" Right="725" Bottom="30" />
+		<UIImage Name="HawkLeftBottomCorner"  Image="Data\interface0033_Hawker.tga" X="6" Y="370" Left="691" Top="40" Right="704" Bottom="53" />
+		<UIImage Name="HawkRightBottomCorner"  Image="Data\interface0033_Hawker.tga" X="658" Y="370" Left="712" Top="40" Right="725" Bottom="53" />
+		<LinerImage Name="HawkTopBorder" X="19" Y="54" Image="Data\interface0033_Hawker.tga" Left="706" Top="17"
+			Right="710" Bottom="19" LineWidth="639" BaseWidth="639" Hide="0" Denumerator="100" Numerator="100" />
+		<LinerImageV Name="HawkLeftBorder" X="6" Y="67" Image="Data\interface0033_Hawker.tga" Left="691" Top="32"
+			Right="693" Bottom="38" LineHeight="303" BaseHeight="303" Hide="0" Denumerator="100" Numerator="100" />
+		<LinerImage Name="HawkBottomBorder" X="19" Y="381" Image="Data\interface0033_Hawker.tga" Left="706" Top="51"
+			Right="710" Bottom="53" LineWidth="639" BaseWidth="639" Hide="0" Denumerator="100" Numerator="100" />
+		<LinerImageV Name="HawkRightBorder" X="669" Y="67" Image="Data\interface0033_Hawker.tga" Left="723" Top="32"
+			Right="725" Bottom="38" LineHeight="303" BaseHeight="303" Hide="0" Denumerator="100" Numerator="100" />
+			
+		<UIImage Name="HawkSellSlot000ButtonBg"  Image="Data\interface0033_Hawker.tga" X="11" Y="60" Left="688" Top="180" Right="848" Bottom="230" Hide="1" /> 
+		<Button Name="HawkSellSlot000" Image="Data\interface0033_Hawker.tga" X="11" Y="60" LuaLButtonUp="SelectHawkSellSlot000">
+			<ButtonRect State="0" Left="688" Top="180" Right="848" Bottom="230" />
+			<ButtonRect State="1" Left="852" Top="41" Right="1012" Bottom="91" />
+			<ButtonRect State="2" Left="852" Top="180" Right="1012" Bottom="230" />
+			<ButtonRect State="3" Left="852" Top="180" Right="1012" Bottom="230" />
+		</Button>
+		<AniIcon Name="HawkSell000Icon" X="16" Y="65" Image="" AutoDelete="0" LuaLButtonUp="" Detect = "1" Hide="1" 
+			LuaMouseIn = "HawkSellItemMouseIn" LuaMouseOut = "HawkSellItemMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="HawkSell000Name" X="60" Y="67" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkSell000PriceTitle" X="60" Y="86" Row="1" Column="12" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+			单价：
+		</StaticText>
+		<StaticText Name="HawkSell000Price" X="90" Y="86" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkSell000Stack" X="19" Y="91" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<UIImage Name="HawkSellSlot001ButtonBg"  Image="Data\interface0033_Hawker.tga" X="174" Y="60" Left="688" Top="180" Right="848" Bottom="230" Hide="1"/> 
+		<Button Name="HawkSellSlot001" Image="Data\interface0033_Hawker.tga" X="174" Y="60" LuaLButtonUp="SelectHawkSellSlot001">
+			<ButtonRect State="0" Left="688" Top="180" Right="848" Bottom="230" />
+			<ButtonRect State="1" Left="852" Top="41" Right="1012" Bottom="91" />
+			<ButtonRect State="2" Left="852" Top="180" Right="1012" Bottom="230" />
+			<ButtonRect State="3" Left="852" Top="180" Right="1012" Bottom="230" />
+		</Button>
+		<AniIcon Name="HawkSell001Icon" X="179" Y="65" Image="" AutoDelete="0" LuaLButtonUp="" Detect = "1" Hide="1" 
+			LuaMouseIn = "HawkSellItemMouseIn" LuaMouseOut = "HawkSellItemMouseOut" InsertToEventList = "1" />
+		<StaticText Name="HawkSell001Name" X="223" Y="67" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkSell001PriceTitle" X="223" Y="86" Row="1" Column="12" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+			单价：
+		</StaticText>
+		<StaticText Name="HawkSell001Price" X="253" Y="86" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkSell001Stack" X="182" Y="91" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<UIImage Name="HawkSellSlot002ButtonBg"  Image="Data\interface0033_Hawker.tga" X="338" Y="60" Left="688" Top="180" Right="848" Bottom="230" Hide="1"/> 		
+		<Button Name="HawkSellSlot002" Image="Data\interface0033_Hawker.tga" X="338" Y="60" LuaLButtonUp="SelectHawkSellSlot002">
+			<ButtonRect State="0" Left="688" Top="180" Right="848" Bottom="230" />
+			<ButtonRect State="1" Left="852" Top="41" Right="1012" Bottom="91" />
+			<ButtonRect State="2" Left="852" Top="180" Right="1012" Bottom="230" />
+			<ButtonRect State="3" Left="852" Top="180" Right="1012" Bottom="230" />
+		</Button>
+		<AniIcon Name="HawkSell002Icon" X="342" Y="65" Image="" AutoDelete="0" LuaLButtonUp="" Detect = "1" Hide="1"
+			LuaMouseIn = "HawkSellItemMouseIn" LuaMouseOut = "HawkSellItemMouseOut" InsertToEventList = "1" />
+		<StaticText Name="HawkSell002Name" X="387" Y="67" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkSell002PriceTitle" X="387" Y="86" Row="1" Column="12" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+			单价：
+		</StaticText>
+		<StaticText Name="HawkSell002Price" X="417" Y="86" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkSell002Stack" X="345" Y="91" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<UIImage Name="HawkSellSlot003ButtonBg"  Image="Data\interface0033_Hawker.tga" X="501" Y="60" Left="688" Top="180" Right="848" Bottom="230" Hide="1"/> 
+		<Button Name="HawkSellSlot003" Image="Data\interface0033_Hawker.tga" X="501" Y="60" LuaLButtonUp="SelectHawkSellSlot003">
+			<ButtonRect State="0" Left="688" Top="180" Right="848" Bottom="230" />
+			<ButtonRect State="1" Left="852" Top="41" Right="1012" Bottom="91" />
+			<ButtonRect State="2" Left="852" Top="180" Right="1012" Bottom="230" />
+			<ButtonRect State="3" Left="852" Top="180" Right="1012" Bottom="230" />
+		</Button>
+		<AniIcon Name="HawkSell003Icon" X="506" Y="65" Image="" AutoDelete="0" LuaLButtonUp="" Detect = "1" Hide="1" 
+			LuaMouseIn = "HawkSellItemMouseIn" LuaMouseOut = "HawkSellItemMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="HawkSell003Name" X="550" Y="67" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkSell003PriceTitle" X="550" Y="86" Row="1" Column="12" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+			单价：
+		</StaticText>
+		<StaticText Name="HawkSell003Price" X="580" Y="86" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkSell003Stack" X="509" Y="91" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<UIImage Name="HawkSellSlot004ButtonBg"  Image="Data\interface0033_Hawker.tga" X="11" Y="114" Left="688" Top="180" Right="848" Bottom="230" Hide="1"/> 
+		<Button Name="HawkSellSlot004" Image="Data\interface0033_Hawker.tga" X="11" Y="114" LuaLButtonUp="SelectHawkSellSlot004">
+			<ButtonRect State="0" Left="688" Top="180" Right="848" Bottom="230" />
+			<ButtonRect State="1" Left="852" Top="41" Right="1012" Bottom="91" />
+			<ButtonRect State="2" Left="852" Top="180" Right="1012" Bottom="230" />
+			<ButtonRect State="3" Left="852" Top="180" Right="1012" Bottom="230" />
+		</Button>
+		<AniIcon Name="HawkSell004Icon" X="16" Y="119" Image="" AutoDelete="0" LuaLButtonUp="" Detect = "1" Hide="1" 
+			LuaMouseIn = "HawkSellItemMouseIn" LuaMouseOut = "HawkSellItemMouseOut" InsertToEventList = "1" />
+		<StaticText Name="HawkSell004Name" X="60" Y="121" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkSell004PriceTitle" X="60" Y="140" Row="1" Column="12" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+			单价：
+		</StaticText>
+		<StaticText Name="HawkSell004Price" X="90" Y="140" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkSell004Stack" X="19" Y="145" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<UIImage Name="HawkSellSlot005ButtonBg"  Image="Data\interface0033_Hawker.tga" X="174" Y="114" Left="688" Top="180" Right="848" Bottom="230" Hide="1"/> 
+		<Button Name="HawkSellSlot005" Image="Data\interface0033_Hawker.tga" X="174" Y="114" LuaLButtonUp="SelectHawkSellSlot005">
+			<ButtonRect State="0" Left="688" Top="180" Right="848" Bottom="230" />
+			<ButtonRect State="1" Left="852" Top="41" Right="1012" Bottom="91" />
+			<ButtonRect State="2" Left="852" Top="180" Right="1012" Bottom="230" />
+			<ButtonRect State="3" Left="852" Top="180" Right="1012" Bottom="230" />
+		</Button>
+		<AniIcon Name="HawkSell005Icon" X="179" Y="119" Image="" AutoDelete="0" LuaLButtonUp="" Detect = "1" Hide="1" 
+			LuaMouseIn = "HawkSellItemMouseIn" LuaMouseOut = "HawkSellItemMouseOut" InsertToEventList = "1" />
+		<StaticText Name="HawkSell005Name" X="223" Y="121" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkSell005PriceTitle" X="223" Y="140" Row="1" Column="12" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+			单价：
+		</StaticText>
+		<StaticText Name="HawkSell005Price" X="253" Y="140" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkSell005Stack" X="182" Y="145" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<UIImage Name="HawkSellSlot006ButtonBg"  Image="Data\interface0033_Hawker.tga" X="338" Y="114" Left="688" Top="180" Right="848" Bottom="230" Hide="1"/> 
+		<Button Name="HawkSellSlot006" Image="Data\interface0033_Hawker.tga" X="338" Y="114" LuaLButtonUp="SelectHawkSellSlot006">
+			<ButtonRect State="0" Left="688" Top="180" Right="848" Bottom="230" />
+			<ButtonRect State="1" Left="852" Top="41" Right="1012" Bottom="91" />
+			<ButtonRect State="2" Left="852" Top="180" Right="1012" Bottom="230" />
+			<ButtonRect State="3" Left="852" Top="180" Right="1012" Bottom="230" />
+		</Button>
+		<AniIcon Name="HawkSell006Icon" X="342" Y="119" Image="" AutoDelete="0" LuaLButtonUp="" Detect = "1" Hide="1" 
+			LuaMouseIn = "HawkSellItemMouseIn" LuaMouseOut = "HawkSellItemMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="HawkSell006Name" X="387" Y="121" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkSell006PriceTitle" X="387" Y="140" Row="1" Column="12" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+			单价：
+		</StaticText>
+		<StaticText Name="HawkSell006Price" X="417" Y="140" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkSell006Stack" X="345" Y="145" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<UIImage Name="HawkSellSlot007ButtonBg"  Image="Data\interface0033_Hawker.tga" X="501" Y="114" Left="688" Top="180" Right="848" Bottom="230" Hide="1"/> 
+		<Button Name="HawkSellSlot007" Image="Data\interface0033_Hawker.tga" X="501" Y="114" LuaLButtonUp="SelectHawkSellSlot007">
+			<ButtonRect State="0" Left="688" Top="180" Right="848" Bottom="230" />
+			<ButtonRect State="1" Left="852" Top="41" Right="1012" Bottom="91" />
+			<ButtonRect State="2" Left="852" Top="180" Right="1012" Bottom="230" />
+			<ButtonRect State="3" Left="852" Top="180" Right="1012" Bottom="230" />
+		</Button>
+		<AniIcon Name="HawkSell007Icon" X="506" Y="119" Image="" AutoDelete="0" LuaLButtonUp="" Detect = "1" Hide="1" 
+			LuaMouseIn = "HawkSellItemMouseIn" LuaMouseOut = "HawkSellItemMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="HawkSell007Name" X="550" Y="121" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkSell007PriceTitle" X="550" Y="140" Row="1" Column="12" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+			单价：
+		</StaticText>
+		<StaticText Name="HawkSell007Price" X="580" Y="140" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkSell007Stack" X="509" Y="145" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		
+		</StaticText>
+		
+		<UIImage Name="HawkSellSlot008ButtonBg"  Image="Data\interface0033_Hawker.tga" X="11" Y="167" Left="688" Top="180" Right="848" Bottom="230" Hide="1"/> 
+		<Button Name="HawkSellSlot008" Image="Data\interface0033_Hawker.tga" X="11" Y="167" LuaLButtonUp="SelectHawkSellSlot008">
+			<ButtonRect State="0" Left="688" Top="180" Right="848" Bottom="230" />
+			<ButtonRect State="1" Left="852" Top="41" Right="1012" Bottom="91" />
+			<ButtonRect State="2" Left="852" Top="180" Right="1012" Bottom="230" />
+			<ButtonRect State="3" Left="852" Top="180" Right="1012" Bottom="230" />
+		</Button>
+		<AniIcon Name="HawkSell008Icon" X="16" Y="172" Image="" AutoDelete="0" LuaLButtonUp="" Detect = "1" Hide="1" 
+			LuaMouseIn = "HawkSellItemMouseIn" LuaMouseOut = "HawkSellItemMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="HawkSell008Name" X="60" Y="174" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkSell008PriceTitle" X="60" Y="193" Row="1" Column="12" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+			单价：
+		</StaticText>
+		<StaticText Name="HawkSell008Price" X="90" Y="193" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkSell008Stack" X="19" Y="198" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<UIImage Name="HawkSellSlot009ButtonBg"  Image="Data\interface0033_Hawker.tga" X="174" Y="167" Left="688" Top="180" Right="848" Bottom="230" Hide="1"/> 
+		<Button Name="HawkSellSlot009" Image="Data\interface0033_Hawker.tga" X="174" Y="167" LuaLButtonUp="SelectHawkSellSlot009">
+			<ButtonRect State="0" Left="688" Top="180" Right="848" Bottom="230" />
+			<ButtonRect State="1" Left="852" Top="41" Right="1012" Bottom="91" />
+			<ButtonRect State="2" Left="852" Top="180" Right="1012" Bottom="230" />
+			<ButtonRect State="3" Left="852" Top="180" Right="1012" Bottom="230" />
+		</Button>
+		<AniIcon Name="HawkSell009Icon" X="179" Y="172" Image="" AutoDelete="0" LuaLButtonUp="" Detect = "1" Hide="1" 
+			LuaMouseIn = "HawkSellItemMouseIn" LuaMouseOut = "HawkSellItemMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="HawkSell009Name" X="223" Y="174" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkSell009PriceTitle" X="223" Y="193" Row="1" Column="12" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+			单价：
+		</StaticText>
+		<StaticText Name="HawkSell009Price" X="253" Y="193" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkSell009Stack" X="182" Y="198" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<UIImage Name="HawkSellSlot010ButtonBg"  Image="Data\interface0033_Hawker.tga" X="338" Y="167" Left="688" Top="180" Right="848" Bottom="230" Hide="1"/> 
+		<Button Name="HawkSellSlot010" Image="Data\interface0033_Hawker.tga" X="338" Y="167" LuaLButtonUp="SelectHawkSellSlot010">
+			<ButtonRect State="0" Left="688" Top="180" Right="848" Bottom="230" />
+			<ButtonRect State="1" Left="852" Top="41" Right="1012" Bottom="91" />
+			<ButtonRect State="2" Left="852" Top="180" Right="1012" Bottom="230" />
+			<ButtonRect State="3" Left="852" Top="180" Right="1012" Bottom="230" />
+		</Button>
+		<AniIcon Name="HawkSell010Icon" X="342" Y="172" Image="" AutoDelete="0" LuaLButtonUp="" Detect = "1" Hide="1" 
+			LuaMouseIn = "HawkSellItemMouseIn" LuaMouseOut = "HawkSellItemMouseOut" InsertToEventList = "1" />
+		<StaticText Name="HawkSell010Name" X="387" Y="174" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkSell010PriceTitle" X="387" Y="193" Row="1" Column="12" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+			单价：
+		</StaticText>
+		<StaticText Name="HawkSell010Price" X="417" Y="193" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkSell010Stack" X="345" Y="198" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<UIImage Name="HawkSellSlot011ButtonBg"  Image="Data\interface0033_Hawker.tga" X="501" Y="167" Left="688" Top="180" Right="848" Bottom="230" Hide="1"/> 
+		<Button Name="HawkSellSlot011" Image="Data\interface0033_Hawker.tga" X="501" Y="167" LuaLButtonUp="SelectHawkSellSlot011">
+			<ButtonRect State="0" Left="688" Top="180" Right="848" Bottom="230" />
+			<ButtonRect State="1" Left="852" Top="41" Right="1012" Bottom="91" />
+			<ButtonRect State="2" Left="852" Top="180" Right="1012" Bottom="230" />
+			<ButtonRect State="3" Left="852" Top="180" Right="1012" Bottom="230" />
+		</Button>
+		<AniIcon Name="HawkSell011Icon" X="506" Y="172" Image="" AutoDelete="0" LuaLButtonUp="" Detect = "1" Hide="1" 
+			LuaMouseIn = "HawkSellItemMouseIn" LuaMouseOut = "HawkSellItemMouseOut" InsertToEventList = "1" />
+		<StaticText Name="HawkSell011Name" X="550" Y="174" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkSell011PriceTitle" X="550" Y="193" Row="1" Column="12" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+			单价：
+		</StaticText>
+		<StaticText Name="HawkSell011Price" X="580" Y="193" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkSell011Stack" X="509" Y="198" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">		
+		</StaticText>
+		
+		<UIImage Name="HawkSellSlot012ButtonBg"  Image="Data\interface0033_Hawker.tga" X="11" Y="220" Left="688" Top="180" Right="848" Bottom="230" Hide="1"/> 
+		<Button Name="HawkSellSlot012" Image="Data\interface0033_Hawker.tga" X="11" Y="220" LuaLButtonUp="SelectHawkSellSlot012">
+			<ButtonRect State="0" Left="688" Top="180" Right="848" Bottom="230" />
+			<ButtonRect State="1" Left="852" Top="41" Right="1012" Bottom="91" />
+			<ButtonRect State="2" Left="852" Top="180" Right="1012" Bottom="230" />
+			<ButtonRect State="3" Left="852" Top="180" Right="1012" Bottom="230" />
+		</Button>
+		<AniIcon Name="HawkSell012Icon" X="16" Y="225" Image="" AutoDelete="0" LuaLButtonUp="" Detect = "1" Hide="1" 
+			LuaMouseIn = "HawkSellItemMouseIn" LuaMouseOut = "HawkSellItemMouseOut" InsertToEventList = "1"/>
+		<StaticText Name="HawkSell012Name" X="60" Y="227" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkSell012PriceTitle" X="60" Y="246" Row="1" Column="12" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+			单价：
+		</StaticText>
+		<StaticText Name="HawkSell012Price" X="90" Y="246" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkSell012Stack" X="19" Y="251" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<UIImage Name="HawkSellSlot013ButtonBg"  Image="Data\interface0033_Hawker.tga" X="174" Y="220" Left="688" Top="180" Right="848" Bottom="230" Hide="1"/> 
+		<Button Name="HawkSellSlot013" Image="Data\interface0033_Hawker.tga" X="174" Y="220" LuaLButtonUp="SelectHawkSellSlot013">
+			<ButtonRect State="0" Left="688" Top="180" Right="848" Bottom="230" />
+			<ButtonRect State="1" Left="852" Top="41" Right="1012" Bottom="91" />
+			<ButtonRect State="2" Left="852" Top="180" Right="1012" Bottom="230" />
+			<ButtonRect State="3" Left="852" Top="180" Right="1012" Bottom="230" />
+		</Button>
+		<AniIcon Name="HawkSell013Icon" X="179" Y="225" Image="" AutoDelete="0" LuaLButtonUp="" Detect = "1" Hide="1" 
+			LuaMouseIn = "HawkSellItemMouseIn" LuaMouseOut = "HawkSellItemMouseOut" InsertToEventList = "1" />
+		<StaticText Name="HawkSell013Name" X="223" Y="227" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkSell013PriceTitle" X="223" Y="246" Row="1" Column="12" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+			单价：
+		</StaticText>
+		<StaticText Name="HawkSell013Price" X="253" Y="246" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkSell013Stack" X="182" Y="251" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<UIImage Name="HawkSellSlot014ButtonBg"  Image="Data\interface0033_Hawker.tga" X="338" Y="220" Left="688" Top="180" Right="848" Bottom="230" Hide="1"/> 
+		<Button Name="HawkSellSlot014" Image="Data\interface0033_Hawker.tga" X="338" Y="220" LuaLButtonUp="SelectHawkSellSlot014">
+			<ButtonRect State="0" Left="688" Top="180" Right="848" Bottom="230" />
+			<ButtonRect State="1" Left="852" Top="41" Right="1012" Bottom="91" />
+			<ButtonRect State="2" Left="852" Top="180" Right="1012" Bottom="230" />
+			<ButtonRect State="3" Left="852" Top="180" Right="1012" Bottom="230" />
+		</Button>
+		<AniIcon Name="HawkSell014Icon" X="342" Y="225" Image="" AutoDelete="0" LuaLButtonUp="" Detect = "1" Hide="1" 
+			LuaMouseIn = "HawkSellItemMouseIn" LuaMouseOut = "HawkSellItemMouseOut" InsertToEventList = "1" />
+		<StaticText Name="HawkSell014Name" X="387" Y="227" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkSell014PriceTitle" X="387" Y="246" Row="1" Column="12" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+			单价：
+		</StaticText>
+		<StaticText Name="HawkSell014Price" X="417" Y="246" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkSell014Stack" X="345" Y="251" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<UIImage Name="HawkSellSlot015ButtonBg"  Image="Data\interface0033_Hawker.tga" X="501" Y="220" Left="688" Top="180" Right="848" Bottom="230" Hide="1"/> 
+		<Button Name="HawkSellSlot015" Image="Data\interface0033_Hawker.tga" X="501" Y="220" LuaLButtonUp="SelectHawkSellSlot015">
+			<ButtonRect State="0" Left="688" Top="180" Right="848" Bottom="230" />
+			<ButtonRect State="1" Left="852" Top="41" Right="1012" Bottom="91" />
+			<ButtonRect State="2" Left="852" Top="180" Right="1012" Bottom="230" />
+			<ButtonRect State="3" Left="852" Top="180" Right="1012" Bottom="230" />
+		</Button>
+		<AniIcon Name="HawkSell015Icon" X="506" Y="225" Image="" AutoDelete="0" LuaLButtonUp="" Detect = "1" Hide="1" 
+			LuaMouseIn = "HawkSellItemMouseIn" LuaMouseOut = "HawkSellItemMouseOut" InsertToEventList = "1" />
+		<StaticText Name="HawkSell015Name" X="550" Y="227" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkSell015PriceTitle" X="550" Y="246" Row="1" Column="12" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+			单价：
+		</StaticText>
+		<StaticText Name="HawkSell015Price" X="580" Y="246" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkSell015Stack" X="509" Y="251" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<UIImage Name="HawkSellSlot016ButtonBg"  Image="Data\interface0033_Hawker.tga" X="11" Y="273" Left="688" Top="180" Right="848" Bottom="230" Hide="1"/> 
+		<Button Name="HawkSellSlot016" Image="Data\interface0033_Hawker.tga" X="11" Y="273" LuaLButtonUp="SelectHawkSellSlot016">
+			<ButtonRect State="0" Left="688" Top="180" Right="848" Bottom="230" />
+			<ButtonRect State="1" Left="852" Top="41" Right="1012" Bottom="91" />
+			<ButtonRect State="2" Left="852" Top="180" Right="1012" Bottom="230" />
+			<ButtonRect State="3" Left="852" Top="180" Right="1012" Bottom="230" />
+		</Button>
+		<AniIcon Name="HawkSell016Icon" X="16" Y="278" Image="" AutoDelete="0" LuaLButtonUp="" Detect = "1" Hide="1" 
+			LuaMouseIn = "HawkSellItemMouseIn" LuaMouseOut = "HawkSellItemMouseOut" InsertToEventList = "1" />
+		<StaticText Name="HawkSell016Name" X="60" Y="280" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkSell016PriceTitle" X="60" Y="299" Row="1" Column="12" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+			单价：
+		</StaticText>
+		<StaticText Name="HawkSell016Price" X="90" Y="299" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkSell016Stack" X="19" Y="304" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<UIImage Name="HawkSellSlot017ButtonBg"  Image="Data\interface0033_Hawker.tga" X="174" Y="273" Left="688" Top="180" Right="848" Bottom="230" Hide="1"/> 
+		<Button Name="HawkSellSlot017" Image="Data\interface0033_Hawker.tga" X="174" Y="273" LuaLButtonUp="SelectHawkSellSlot017">
+			<ButtonRect State="0" Left="688" Top="180" Right="848" Bottom="230" />
+			<ButtonRect State="1" Left="852" Top="41" Right="1012" Bottom="91" />
+			<ButtonRect State="2" Left="852" Top="180" Right="1012" Bottom="230" />
+			<ButtonRect State="3" Left="852" Top="180" Right="1012" Bottom="230" />
+		</Button>
+		<AniIcon Name="HawkSell017Icon" X="179" Y="278" Image="" AutoDelete="0" LuaLButtonUp="" Detect = "1" Hide="1" 
+			LuaMouseIn = "HawkSellItemMouseIn" LuaMouseOut = "HawkSellItemMouseOut" InsertToEventList = "1" />
+		<StaticText Name="HawkSell017Name" X="223" Y="280" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkSell017PriceTitle" X="223" Y="299" Row="1" Column="12" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+			单价：
+		</StaticText>
+		<StaticText Name="HawkSell017Price" X="253" Y="299" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkSell017Stack" X="182" Y="304" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<UIImage Name="HawkSellSlot018ButtonBg"  Image="Data\interface0033_Hawker.tga" X="338" Y="273" Left="688" Top="180" Right="848" Bottom="230" Hide="1"/> 
+		<Button Name="HawkSellSlot018" Image="Data\interface0033_Hawker.tga" X="338" Y="273" LuaLButtonUp="SelectHawkSellSlot018">
+			<ButtonRect State="0" Left="688" Top="180" Right="848" Bottom="230" />
+			<ButtonRect State="1" Left="852" Top="41" Right="1012" Bottom="91" />
+			<ButtonRect State="2" Left="852" Top="180" Right="1012" Bottom="230" />
+			<ButtonRect State="3" Left="852" Top="180" Right="1012" Bottom="230" />
+		</Button>
+		<AniIcon Name="HawkSell018Icon" X="342" Y="278" Image="" AutoDelete="0" LuaLButtonUp="" Detect = "1" Hide="1" 
+			LuaMouseIn = "HawkSellItemMouseIn" LuaMouseOut = "HawkSellItemMouseOut" InsertToEventList = "1" />
+		<StaticText Name="HawkSell018Name" X="387" Y="280" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkSell018PriceTitle" X="387" Y="299" Row="1" Column="12" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+			单价：
+		</StaticText>
+		<StaticText Name="HawkSell018Price" X="417" Y="299" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkSell018Stack" X="345" Y="304" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<UIImage Name="HawkSellSlot019ButtonBg"  Image="Data\interface0033_Hawker.tga" X="501" Y="273" Left="688" Top="180" Right="848" Bottom="230" Hide="1"/> 
+		<Button Name="HawkSellSlot019" Image="Data\interface0033_Hawker.tga" X="501" Y="273" LuaLButtonUp="SelectHawkSellSlot019">
+			<ButtonRect State="0" Left="688" Top="180" Right="848" Bottom="230" />
+			<ButtonRect State="1" Left="852" Top="41" Right="1012" Bottom="91" />
+			<ButtonRect State="2" Left="852" Top="180" Right="1012" Bottom="230" />
+			<ButtonRect State="3" Left="852" Top="180" Right="1012" Bottom="230" />
+		</Button>
+		<AniIcon Name="HawkSell019Icon" X="506" Y="278" Image="" AutoDelete="0" LuaLButtonUp="" Detect = "1" Hide="1" 
+			LuaMouseIn = "HawkSellItemMouseIn" LuaMouseOut = "HawkSellItemMouseOut" InsertToEventList = "1" />
+		<StaticText Name="HawkSell019Name" X="550" Y="280" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkSell019PriceTitle" X="550" Y="299" Row="1" Column="12" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+			单价：
+		</StaticText>
+		<StaticText Name="HawkSell019Price" X="580" Y="299" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkSell019Stack" X="509" Y="304" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<UIImage Name="HawkSellSlot020ButtonBg"  Image="Data\interface0033_Hawker.tga" X="11" Y="326" Left="688" Top="180" Right="848" Bottom="230" Hide="1"/> 
+		<Button Name="HawkSellSlot020" Image="Data\interface0033_Hawker.tga" X="11" Y="326" LuaLButtonUp="SelectHawkSellSlot020">
+			<ButtonRect State="0" Left="688" Top="180" Right="848" Bottom="230" />
+			<ButtonRect State="1" Left="852" Top="41" Right="1012" Bottom="91" />
+			<ButtonRect State="2" Left="852" Top="180" Right="1012" Bottom="230" />
+			<ButtonRect State="3" Left="852" Top="180" Right="1012" Bottom="230" />
+		</Button>
+		<AniIcon Name="HawkSell020Icon" X="16" Y="331" Image="" AutoDelete="0" LuaLButtonUp="" Detect = "1" Hide="1" 
+			LuaMouseIn = "HawkSellItemMouseIn" LuaMouseOut = "HawkSellItemMouseOut" InsertToEventList = "1" />
+		<StaticText Name="HawkSell020Name" X="60" Y="333" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkSell020PriceTitle" X="60" Y="352" Row="1" Column="12" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+			单价：
+		</StaticText>
+		<StaticText Name="HawkSell020Price" X="90" Y="352" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkSell020Stack" X="19" Y="357" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<UIImage Name="HawkSellSlot021ButtonBg"  Image="Data\interface0033_Hawker.tga" X="174" Y="326" Left="688" Top="180" Right="848" Bottom="230" Hide="1"/> 
+		<Button Name="HawkSellSlot021" Image="Data\interface0033_Hawker.tga" X="174" Y="326" LuaLButtonUp="SelectHawkSellSlot021">
+			<ButtonRect State="0" Left="688" Top="180" Right="848" Bottom="230" />
+			<ButtonRect State="1" Left="852" Top="41" Right="1012" Bottom="91" />
+			<ButtonRect State="2" Left="852" Top="180" Right="1012" Bottom="230" />
+			<ButtonRect State="3" Left="852" Top="180" Right="1012" Bottom="230" />
+		</Button>
+		<AniIcon Name="HawkSell021Icon" X="179" Y="331" Image="" AutoDelete="0" LuaLButtonUp="" Detect = "1" Hide="1" 
+			LuaMouseIn = "HawkSellItemMouseIn" LuaMouseOut = "HawkSellItemMouseOut" InsertToEventList = "1" />
+		<StaticText Name="HawkSell021Name" X="223" Y="333" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkSell021PriceTitle" X="223" Y="352" Row="1" Column="12" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+			单价：
+		</StaticText>
+		<StaticText Name="HawkSell021Price" X="253" Y="352" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkSell021Stack" X="182" Y="357" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<UIImage Name="HawkSellSlot022ButtonBg"  Image="Data\interface0033_Hawker.tga" X="338" Y="326" Left="688" Top="180" Right="848" Bottom="230" Hide="1"/> 
+		<Button Name="HawkSellSlot022" Image="Data\interface0033_Hawker.tga" X="338" Y="326" LuaLButtonUp="SelectHawkSellSlot022">
+			<ButtonRect State="0" Left="688" Top="180" Right="848" Bottom="230" />
+			<ButtonRect State="1" Left="852" Top="41" Right="1012" Bottom="91" />
+			<ButtonRect State="2" Left="852" Top="180" Right="1012" Bottom="230" />
+			<ButtonRect State="3" Left="852" Top="180" Right="1012" Bottom="230" />
+		</Button>
+		<AniIcon Name="HawkSell022Icon" X="342" Y="331" Image="" AutoDelete="0" LuaLButtonUp="" Detect = "1" Hide="1" 
+			LuaMouseIn = "HawkSellItemMouseIn" LuaMouseOut = "HawkSellItemMouseOut" InsertToEventList = "1" />
+		<StaticText Name="HawkSell022Name" X="387" Y="333" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkSell022PriceTitle" X="387" Y="352" Row="1" Column="12" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+			单价：
+		</StaticText>
+		<StaticText Name="HawkSell022Price" X="417" Y="352" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkSell022Stack" X="345" Y="357" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<UIImage Name="HawkSellSlot023ButtonBg"  Image="Data\interface0033_Hawker.tga" X="501" Y="326" Left="688" Top="180" Right="848" Bottom="230" Hide="1"/> 
+		<Button Name="HawkSellSlot023" Image="Data\interface0033_Hawker.tga" X="501" Y="326" LuaLButtonUp="SelectHawkSellSlot023">
+			<ButtonRect State="0" Left="688" Top="180" Right="848" Bottom="230" />
+			<ButtonRect State="1" Left="852" Top="41" Right="1012" Bottom="91" />
+			<ButtonRect State="2" Left="852" Top="180" Right="1012" Bottom="230" />
+			<ButtonRect State="3" Left="852" Top="180" Right="1012" Bottom="230" />
+		</Button>
+		<AniIcon Name="HawkSell023Icon" X="506" Y="331" Image="" AutoDelete="0" LuaLButtonUp="" Detect = "1" Hide="1" 
+			LuaMouseIn = "HawkSellItemMouseIn" LuaMouseOut = "HawkSellItemMouseOut" InsertToEventList = "1" />
+		<StaticText Name="HawkSell023Name" X="550" Y="333" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkSell023PriceTitle" X="550" Y="352" Row="1" Column="12" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+			单价：
+		</StaticText>
+		<StaticText Name="HawkSell023Price" X="580" Y="352" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkSell023Stack" X="509" Y="357" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<UIImage Name="HawkSellPPSlot000ButtonBg"  Image="Data\interface0033_Hawker.tga" X="11" Y="60" Left="688" Top="236" Right="1006" Bottom="286" Hide="1"/> 
+		<Button Name="HawkSellPPSlot000" Image="Data\interface0033_Hawker.tga" X="11" Y="60" LuaLButtonUp="SelectHawkSellPPSlot000" Hide="1">
+			<ButtonRect State="0" Left="688" Top="236" Right="1006" Bottom="286" />
+			<ButtonRect State="1" Left="688" Top="419" Right="1006" Bottom="469" />
+			<ButtonRect State="2" Left="688" Top="290" Right="1006" Bottom="340" />
+			<ButtonRect State="3" Left="688" Top="290" Right="1006" Bottom="340" />
+		</Button>
+		<UIImage Name="HawkSellPP000Bg" X="16" Y="65" Image="Data\interface0033_Hawker.tga" Left="739" Top="11" Right="778" Bottom="50" NotDetected="1" Hide="1"/>
+		<AniIcon Name="HawkSellPP000Icon" X="18" Y="67" Image="" AutoDelete="0" LuaLButtonUp="" Detect = "1" Hide="1" 
+			LuaRButtonUp = "HawkSellItemMouseIn" InsertToEventList = "1" />
+		<StaticText Name="HawkSellPP000Name" X="60" Y="67" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkSellPP000PriceTitle" X="60" Y="86" Row="1" Column="12" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+			单价：
+		</StaticText>
+		<StaticText Name="HawkSellPP000Price" X="90" Y="86" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<UIImage Name="HawkSellPPSlot001ButtonBg"  Image="Data\interface0033_Hawker.tga" X="333" Y="60" Left="688" Top="236" Right="1006" Bottom="286" Hide="1"/> 
+		<Button Name="HawkSellPPSlot001" Image="Data\interface0033_Hawker.tga" X="333" Y="60" LuaLButtonUp="SelectHawkSellPPSlot001" Hide="1">
+			<ButtonRect State="0" Left="688" Top="236" Right="1006" Bottom="286" />
+			<ButtonRect State="1" Left="688" Top="419" Right="1006" Bottom="469" />
+			<ButtonRect State="2" Left="688" Top="290" Right="1006" Bottom="340" />
+			<ButtonRect State="3" Left="688" Top="290" Right="1006" Bottom="340" />
+		</Button>
+		<UIImage Name="HawkSellPP001Bg" X="338" Y="65" Image="Data\interface0033_Hawker.tga" Left="739" Top="11" Right="778" Bottom="50" NotDetected="1" Hide="1" />
+		<AniIcon Name="HawkSellPP001Icon" X="340" Y="67" Image="" AutoDelete="0" LuaLButtonUp="" Detect = "1" Hide="1" 
+			LuaRButtonUp = "HawkSellItemMouseIn"  InsertToEventList = "1" />
+		<StaticText Name="HawkSellPP001Name" X="382" Y="67" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkSellPP001PriceTitle" X="382" Y="86" Row="1" Column="12" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+			单价：
+		</StaticText>
+		<StaticText Name="HawkSellPP001Price" X="412" Y="86" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<UIImage Name="HawkSellPPSlot002ButtonBg"  Image="Data\interface0033_Hawker.tga" X="11" Y="113" Left="688" Top="236" Right="1006" Bottom="286" Hide="1"/> 
+		<Button Name="HawkSellPPSlot002" Image="Data\interface0033_Hawker.tga" X="11" Y="113" LuaLButtonUp="SelectHawkSellPPSlot002" Hide="1">
+			<ButtonRect State="0" Left="688" Top="236" Right="1006" Bottom="286" />
+			<ButtonRect State="1" Left="688" Top="419" Right="1006" Bottom="469" />
+			<ButtonRect State="2" Left="688" Top="290" Right="1006" Bottom="340" />
+			<ButtonRect State="3" Left="688" Top="290" Right="1006" Bottom="340" />
+		</Button>
+		<UIImage Name="HawkSellPP002Bg" X="16" Y="118" Image="Data\interface0033_Hawker.tga" Left="739" Top="11" Right="778" Bottom="50" NotDetected="1" Hide="1" />
+		<AniIcon Name="HawkSellPP002Icon" X="18" Y="120" Image="" AutoDelete="0" LuaLButtonUp="" Detect = "1" Hide="1" 
+			LuaRButtonUp = "HawkSellItemMouseIn"  InsertToEventList = "1" />
+		<StaticText Name="HawkSellPP002Name" X="60" Y="120" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkSellPP002PriceTitle" X="60" Y="139" Row="1" Column="12" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+			单价：
+		</StaticText>
+		<StaticText Name="HawkSellPP002Price" X="90" Y="139" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<UIImage Name="HawkSellPPSlot003ButtonBg"  Image="Data\interface0033_Hawker.tga" X="333" Y="113" Left="688" Top="236" Right="1006" Bottom="286" Hide="1"/> 
+		<Button Name="HawkSellPPSlot003" Image="Data\interface0033_Hawker.tga" X="333" Y="113" LuaLButtonUp="SelectHawkSellPPSlot003" Hide="1">
+			<ButtonRect State="0" Left="688" Top="236" Right="1006" Bottom="286" />
+			<ButtonRect State="1" Left="688" Top="419" Right="1006" Bottom="469" />
+			<ButtonRect State="2" Left="688" Top="290" Right="1006" Bottom="340" />
+			<ButtonRect State="3" Left="688" Top="290" Right="1006" Bottom="340" />
+		</Button>
+		<UIImage Name="HawkSellPP003Bg" X="338" Y="118" Image="Data\interface0033_Hawker.tga" Left="739" Top="11" Right="778" Bottom="50" NotDetected="1" Hide="1" />
+		<AniIcon Name="HawkSellPP003Icon" X="340" Y="120" Image="" AutoDelete="0" LuaLButtonUp="" Detect = "1" Hide="1" 
+			LuaRButtonUp = "HawkSellItemMouseIn"  InsertToEventList = "1" />
+		<StaticText Name="HawkSellPP003Name" X="382" Y="120" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkSellPP003PriceTitle" X="382" Y="139" Row="1" Column="12" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+			单价：
+		</StaticText>
+		<StaticText Name="HawkSellPP003Price" X="412" Y="139" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<UIImage Name="HawkSellPPSlot004ButtonBg"  Image="Data\interface0033_Hawker.tga" X="11" Y="166" Left="688" Top="236" Right="1006" Bottom="286" Hide="1"/> 
+		<Button Name="HawkSellPPSlot004" Image="Data\interface0033_Hawker.tga" X="11" Y="166" LuaLButtonUp="SelectHawkSellPPSlot004" Hide="1">
+			<ButtonRect State="0" Left="688" Top="236" Right="1006" Bottom="286" />
+			<ButtonRect State="1" Left="688" Top="419" Right="1006" Bottom="469" />
+			<ButtonRect State="2" Left="688" Top="290" Right="1006" Bottom="340" />
+			<ButtonRect State="3" Left="688" Top="290" Right="1006" Bottom="340" />
+		</Button>
+		<UIImage Name="HawkSellPP004Bg" X="16" Y="171" Image="Data\interface0033_Hawker.tga" Left="739" Top="11" Right="778" Bottom="50" NotDetected="1" Hide="1" />
+		<AniIcon Name="HawkSellPP004Icon" X="18" Y="173" Image="" AutoDelete="0" LuaLButtonUp="" Detect = "1" Hide="1" 
+			LuaRButtonUp = "HawkSellItemMouseIn"  InsertToEventList = "1" />
+		<StaticText Name="HawkSellPP004Name" X="60" Y="173" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkSellPP004PriceTitle" X="60" Y="192" Row="1" Column="12" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+			单价：
+		</StaticText>
+		<StaticText Name="HawkSellPP004Price" X="90" Y="192" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<UIImage Name="HawkSellPPSlot005ButtonBg"  Image="Data\interface0033_Hawker.tga" X="333" Y="166" Left="688" Top="236" Right="1006" Bottom="286" Hide="1"/> 
+		<Button Name="HawkSellPPSlot005" Image="Data\interface0033_Hawker.tga" X="333" Y="166" LuaLButtonUp="SelectHawkSellPPSlot005" Hide="1">
+			<ButtonRect State="0" Left="688" Top="236" Right="1006" Bottom="286" />
+			<ButtonRect State="1" Left="688" Top="419" Right="1006" Bottom="469" />
+			<ButtonRect State="2" Left="688" Top="290" Right="1006" Bottom="340" />
+			<ButtonRect State="3" Left="688" Top="290" Right="1006" Bottom="340" />
+		</Button>
+		<UIImage Name="HawkSellPP005Bg" X="338" Y="171" Image="Data\interface0033_Hawker.tga" Left="739" Top="11" Right="778" Bottom="50" NotDetected="1" Hide="1" />
+		<AniIcon Name="HawkSellPP005Icon" X="340" Y="173" Image="" AutoDelete="0" LuaLButtonUp="" Detect = "1" Hide="1" 
+			LuaRButtonUp = "HawkSellItemMouseIn"  InsertToEventList = "1" />
+		<StaticText Name="HawkSellPP005Name" X="382" Y="173" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkSellPP005PriceTitle" X="382" Y="192" Row="1" Column="12" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+			单价：
+		</StaticText>
+		<StaticText Name="HawkSellPP005Price" X="412" Y="192" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<UIImage Name="HawkSellPPSlot006ButtonBg"  Image="Data\interface0033_Hawker.tga" X="11" Y="219" Left="688" Top="236" Right="1006" Bottom="286" Hide="1"/> 
+		<Button Name="HawkSellPPSlot006" Image="Data\interface0033_Hawker.tga" X="11" Y="219" LuaLButtonUp="SelectHawkSellPPSlot006" Hide="1">
+			<ButtonRect State="0" Left="688" Top="236" Right="1006" Bottom="286" />
+			<ButtonRect State="1" Left="688" Top="419" Right="1006" Bottom="469" />
+			<ButtonRect State="2" Left="688" Top="290" Right="1006" Bottom="340" />
+			<ButtonRect State="3" Left="688" Top="290" Right="1006" Bottom="340" />
+		</Button>
+		<UIImage Name="HawkSellPP006Bg" X="16" Y="224" Image="Data\interface0033_Hawker.tga" Left="739" Top="11" Right="778" Bottom="50" NotDetected="1" Hide="1" />
+		<AniIcon Name="HawkSellPP006Icon" X="18" Y="226" Image="" AutoDelete="0" LuaLButtonUp="" Detect = "1" Hide="1" 
+			LuaRButtonUp = "HawkSellItemMouseIn"  InsertToEventList = "1" />
+		<StaticText Name="HawkSellPP006Name" X="60" Y="226" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkSellPP006PriceTitle" X="60" Y="245" Row="1" Column="12" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+			单价：
+		</StaticText>
+		<StaticText Name="HawkSellPP006Price" X="90" Y="245" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<UIImage Name="HawkSellPPSlot007ButtonBg"  Image="Data\interface0033_Hawker.tga" X="333" Y="219" Left="688" Top="236" Right="1006" Bottom="286" Hide="1"/> 
+		<Button Name="HawkSellPPSlot007" Image="Data\interface0033_Hawker.tga" X="333" Y="219" LuaLButtonUp="SelectHawkSellPPSlot007" Hide="1">
+			<ButtonRect State="0" Left="688" Top="236" Right="1006" Bottom="286" />
+			<ButtonRect State="1" Left="688" Top="419" Right="1006" Bottom="469" />
+			<ButtonRect State="2" Left="688" Top="290" Right="1006" Bottom="340" />
+			<ButtonRect State="3" Left="688" Top="290" Right="1006" Bottom="340" />
+		</Button>
+		<UIImage Name="HawkSellPP007Bg" X="338" Y="224" Image="Data\interface0033_Hawker.tga" Left="739" Top="11" Right="778" Bottom="50" NotDetected="1" Hide="1" />
+		<AniIcon Name="HawkSellPP007Icon" X="340" Y="226" Image="" AutoDelete="0" LuaLButtonUp="" Detect = "1" Hide="1" 
+			LuaRButtonUp = "HawkSellItemMouseIn"  InsertToEventList = "1" />
+		<StaticText Name="HawkSellPP007Name" X="382" Y="226" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkSellPP007PriceTitle" X="382" Y="245" Row="1" Column="12" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+			单价：
+		</StaticText>
+		<StaticText Name="HawkSellPP007Price" X="412" Y="245" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<UIImage Name="HawkSellPPSlot008ButtonBg"  Image="Data\interface0033_Hawker.tga" X="11" Y="272" Left="688" Top="236" Right="1006" Bottom="286" Hide="1"/> 
+		<Button Name="HawkSellPPSlot008" Image="Data\interface0033_Hawker.tga" X="11" Y="272" LuaLButtonUp="SelectHawkSellPPSlot008" Hide="1">
+			<ButtonRect State="0" Left="688" Top="236" Right="1006" Bottom="286" />
+			<ButtonRect State="1" Left="688" Top="419" Right="1006" Bottom="469" />
+			<ButtonRect State="2" Left="688" Top="290" Right="1006" Bottom="340" />
+			<ButtonRect State="3" Left="688" Top="290" Right="1006" Bottom="340" />
+		</Button>
+		<UIImage Name="HawkSellPP008Bg" X="16" Y="277" Image="Data\interface0033_Hawker.tga" Left="739" Top="11" Right="778" Bottom="50" NotDetected="1" Hide="1" />
+		<AniIcon Name="HawkSellPP008Icon" X="18" Y="279" Image="" AutoDelete="0" LuaLButtonUp="" Detect = "1" Hide="1" 
+			LuaRButtonUp = "HawkSellItemMouseIn"  InsertToEventList = "1" />
+		<StaticText Name="HawkSellPP008Name" X="60" Y="279" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkSellPP008PriceTitle" X="60" Y="298" Row="1" Column="12" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+			单价：
+		</StaticText>
+		<StaticText Name="HawkSellPP008Price" X="90" Y="298" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<UIImage Name="HawkSellPPSlot009ButtonBg"  Image="Data\interface0033_Hawker.tga" X="333" Y="272" Left="688" Top="236" Right="1006" Bottom="286" Hide="1"/> 
+		<Button Name="HawkSellPPSlot009" Image="Data\interface0033_Hawker.tga" X="333" Y="272" LuaLButtonUp="SelectHawkSellPPSlot009" Hide="1">
+			<ButtonRect State="0" Left="688" Top="236" Right="1006" Bottom="286" />
+			<ButtonRect State="1" Left="688" Top="419" Right="1006" Bottom="469" />
+			<ButtonRect State="2" Left="688" Top="290" Right="1006" Bottom="340" />
+			<ButtonRect State="3" Left="688" Top="290" Right="1006" Bottom="340" />
+		</Button>
+		<UIImage Name="HawkSellPP009Bg" X="338" Y="277" Image="Data\interface0033_Hawker.tga" Left="739" Top="11" Right="778" Bottom="50" NotDetected="1" Hide="1" />
+		<AniIcon Name="HawkSellPP009Icon" X="340" Y="279" Image="" AutoDelete="0" LuaLButtonUp="" Detect = "1" Hide="1" 
+			LuaRButtonUp = "HawkSellItemMouseIn"  InsertToEventList = "1" />
+		<StaticText Name="HawkSellPP009Name" X="382" Y="279" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkSellPP009PriceTitle" X="382" Y="298" Row="1" Column="12" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+			单价：
+		</StaticText>
+		<StaticText Name="HawkSellPP009Price" X="412" Y="298" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<UIImage Name="HawkSellPPSlot010ButtonBg"  Image="Data\interface0033_Hawker.tga" X="11" Y="325" Left="688" Top="236" Right="1006" Bottom="286" Hide="1"/> 
+		<Button Name="HawkSellPPSlot010" Image="Data\interface0033_Hawker.tga" X="11" Y="325" LuaLButtonUp="SelectHawkSellPPSlot010" Hide="1">
+			<ButtonRect State="0" Left="688" Top="236" Right="1006" Bottom="286" />
+			<ButtonRect State="1" Left="688" Top="419" Right="1006" Bottom="469" />
+			<ButtonRect State="2" Left="688" Top="290" Right="1006" Bottom="340" />
+			<ButtonRect State="3" Left="688" Top="290" Right="1006" Bottom="340" />
+		</Button>
+		<UIImage Name="HawkSellPP010Bg" X="16" Y="330" Image="Data\interface0033_Hawker.tga" Left="739" Top="11" Right="778" Bottom="50" NotDetected="1" Hide="1" />
+		<AniIcon Name="HawkSellPP010Icon" X="18" Y="332" Image="" AutoDelete="0" LuaLButtonUp="" Detect = "1" Hide="1" />
+		<StaticText Name="HawkSellPP010Name" X="60" Y="332" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkSellPP010PriceTitle" X="60" Y="351" Row="1" Column="12" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+			单价：
+		</StaticText>
+		<StaticText Name="HawkSellPP010Price" X="90" Y="351" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<UIImage Name="HawkSellPPSlot011ButtonBg"  Image="Data\interface0033_Hawker.tga" X="333" Y="325" Left="688" Top="236" Right="1006" Bottom="286" Hide="1"/> 
+		<Button Name="HawkSellPPSlot011" Image="Data\interface0033_Hawker.tga" X="333" Y="325" LuaLButtonUp="SelectHawkSellPPSlot011" Hide="1">
+			<ButtonRect State="0" Left="688" Top="236" Right="1006" Bottom="286" />
+			<ButtonRect State="1" Left="688" Top="419" Right="1006" Bottom="469" />
+			<ButtonRect State="2" Left="688" Top="290" Right="1006" Bottom="340" />
+			<ButtonRect State="3" Left="688" Top="290" Right="1006" Bottom="340" />
+		</Button>
+		<UIImage Name="HawkSellPP011Bg" X="338" Y="330" Image="Data\interface0033_Hawker.tga" Left="739" Top="11" Right="778" Bottom="50" NotDetected="1" Hide="1" />
+		<AniIcon Name="HawkSellPP011Icon" X="340" Y="332" Image="" AutoDelete="0" LuaLButtonUp="" Detect = "1" Hide="1" 
+			LuaRButtonUp = "HawkSellItemMouseIn"  InsertToEventList = "1" />
+		<StaticText Name="HawkSellPP011Name" X="382" Y="332" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		<StaticText Name="HawkSellPP011PriceTitle" X="382" Y="351" Row="1" Column="12" Width="32" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+			单价：
+		</StaticText>
+		<StaticText Name="HawkSellPP011Price" X="412" Y="351" Row="1" Column="12" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1" Hide="1">
+		</StaticText>
+		
+		<Button Name="HawkPanelCross" Image="Data\interface0033_Hawker.tga" X="643" Y="8" LuaLButtonUp="CloseHawk">
+			<ButtonRect State="0" Left="788" Top="15" Right="812" Bottom="33" />
+			<ButtonRect State="1" Left="813" Top="15" Right="837" Bottom="33" />
+			<ButtonRect State="2" Left="838" Top="15" Right="862" Bottom="33" />
+		</Button>
+		
+		<UIImage Name="HawkMoneyBoxImage" Image="Data\interface0033_Hawker.tga" X="78" Y="394" Left="14" Top="496" Right="159" Bottom="518" />
+		<UIImage Name="HawkMoneyTextImage" Image="Data\interface0033_Hawker.tga" X="10" Y="396" Left="86" Top="469" Right="145" Bottom="486" />
+		<StaticText Name="HawkMoneyText" X="85" Y="399" Row="1" Column="10" Width="140" Height="20" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" NotDetected="1">
+		
+		</StaticText>	
+		
+		<Button Name="HawkBuy" Image="Data\interface0033_Hawker.tga" X="471" Y="394" LuaLButtonUp="HawkPreBuy">
+			<ButtonRect State="0" Left="787" Top="472" Right="879" Bottom="493" />
+			<ButtonRect State="1" Left="787" Top="497" Right="879" Bottom="518" />
+			<ButtonRect State="2" Left="787" Top="522" Right="879" Bottom="543" />
+		</Button>
+		
+		<Button Name="HawkCancal" Image="Data\interface0033_Hawker.tga" X="571" Y="394" LuaLButtonUp="CloseHawk">
+			<ButtonRect State="0" Left="884" Top="472" Right="976" Bottom="493" />
+			<ButtonRect State="1" Left="884" Top="497" Right="976" Bottom="518" />
+			<ButtonRect State="2" Left="884" Top="522" Right="976" Bottom="543" />
+		</Button>			
+			
+	</Panel>
+	
+	<!-- GivenItemCount -->
+	<Panel Name="HawkItemCountPanel" X="253" Y="267" Image="Data\inerface0004_main_A.tga" Left="314" Top="293" Right="542" Bottom="391" 
+		Drag="1" DragLeft="0" DragTop="0" DragRight="228" DragBottom="98"  Hide="1">
+		
+		<UIImage X="12" Y="37" Image="Data\inerface0004_main_A.tga" Left="544" Top="394" Right="647" Bottom="412"/>
+		
+		<EditBox Name="NumberOfHawkItem" X="22" Y="40" Row="1" Column="3" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" Limit="2" NumOnly="1" LuaKeyUp="NumberOfHawkItemKeyUp">
+			1 
+		</EditBox>
+			
+		
+		<StaticText Name="HawkNumberText" X="12" Y="20" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFEDD97A" ShadowColor="FF000000">
+			请输入数量
+		</StaticText>
+		
+		<StaticText Name="HawkTotalPrice" X="12" Y="60" Row="1" Column="10" EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000">
+			
+		</StaticText>
+		
+		<Button Name="ConfirmHawkYes" Image="Data\inerface0004_main_A.tga" X="86" Y="60" LuaLButtonUp="ShowConfirmHawkBuy">
+			<ButtonRect State="0" Left="4" Top="511" Right="68" Bottom="528" />
+			<ButtonRect State="1" Left="70" Top="511" Right="134" Bottom="528" />
+			<ButtonRect State="2" Left="136" Top="511" Right="200" Bottom="528" />
+		</Button>
+		
+		
+		<Button Name="ConfirmHawkNo" Image="Data\inerface0004_main_A.tga" X="153" Y="60" LuaLButtonUp="CloseHawkCount">
+			<ButtonRect State="0" Left="4" Top="530" Right="68" Bottom="547" />
+			<ButtonRect State="1" Left="70" Top="530" Right="134" Bottom="547" />
+			<ButtonRect State="2" Left="136" Top="530" Right="200" Bottom="547" />
+		</Button>
+		
+		<Button Name="HawkMaxStack" Image="Data\inerface0004_main_A.tga" X="155" Y="38" LuaLButtonUp="HawkMaxStack">
+			<ButtonRect State="0" Left="384" Top="395" Right="414" Bottom="411" />
+			<ButtonRect State="1" Left="384" Top="412" Right="414" Bottom="428" />
+			<ButtonRect State="2" Left="384" Top="429" Right="414" Bottom="445" />
+		</Button>
+		
+		<Button Name="HawkSetZero" Image="Data\inerface0004_main_A.tga" X="186" Y="38" LuaLButtonUp="HawkSetMin">
+			<ButtonRect State="0" Left="352" Top="395" Right="382" Bottom="411" />
+			<ButtonRect State="1" Left="352" Top="412" Right="382" Bottom="428" />
+			<ButtonRect State="2" Left="352" Top="429" Right="382" Bottom="445" />
+		</Button>
+		
+		<Button Name="AddOneHawkStack" Image="Data\inerface0004_main_A.tga" X="119" Y="38" LuaLButtonUp="HawkAddOne">
+			<ButtonRect State="0" Left="314" Top="395" Right="331" Bottom="411" />
+			<ButtonRect State="1" Left="314" Top="412" Right="331" Bottom="428" />
+			<ButtonRect State="2" Left="314" Top="429" Right="331" Bottom="445" />
+		</Button>
+		
+		<Button Name="DiffOneHawkStack" Image="Data\inerface0004_main_A.tga" X="137" Y="38" LuaLButtonUp="HawkDiffOne">
+			<ButtonRect State="0" Left="333" Top="395" Right="350" Bottom="411" />
+			<ButtonRect State="1" Left="333" Top="412" Right="350" Bottom="428" />
+			<ButtonRect State="2" Left="333" Top="429" Right="350" Bottom="445" />
+		</Button>
+	</Panel>
+	
+	<Panel Name="ConfirmBuyHawkItemPanel" Image="Data\inerface0004_main_A.tga" X="300" Y="250" Left="314" Top="293" Right="542" Bottom="391"
+		Drag="1" DragLeft="0" DragTop="0" DragRight="228"	DragBottom="98" Hide="1">
+		<StaticText Name="ConfirmBuyHawkItemText" X="0" Y="35" Height="20" Width="228" Row="1" Column="6" EdgeCode="LIGHT" FontColor="FFEDD97A" ShadowColor="FF000000" Align="CENTER">
+			确定购买?
+		</StaticText>
+		
+		<Button Name="BuyHawkItemOK" Image="Data\inerface0004_main_A.tga" X="46" Y="60" LuaLButtonUp="ConfirmHawkBuy">
+			<ButtonRect State="0" Left="4" Top="511" Right="68" Bottom="528" />
+			<ButtonRect State="1" Left="70" Top="511" Right="134" Bottom="528" />
+			<ButtonRect State="2" Left="136" Top="511" Right="200" Bottom="528" />
+		</Button>
+		
+		<Button Name="BuyHawkItemNO" Image="Data\inerface0004_main_A.tga" X="123" Y="60" LuaLButtonUp="CloseConfirmHawkBuyPanel">
+			<ButtonRect State="0" Left="4" Top="530" Right="68" Bottom="547" />
+			<ButtonRect State="1" Left="70" Top="530" Right="134" Bottom="547" />
+			<ButtonRect State="2" Left="136" Top="530" Right="200" Bottom="547" />
+		</Button>
+	
+	</Panel>	
+
+</UI>

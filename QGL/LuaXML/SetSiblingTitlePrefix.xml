@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" ?>
+<UI>
+	<ID Name="SetSiblingTitlePrefix" />
+	<Font Name="Data\simsun.ttc" Width="14" Height="14" />
+	<Panel Name="SetSiblingTitlePrefixPanel" Image="Data\interface0039_sibling.tga" X="280" Y="210" 
+			Left="10" Top="10" Right="230" Bottom="170" LuaRButtonUp="CloseSetSiblingTitlePrefixPanel"  DetectImage = "1"
+			Drag="1" DragLeft="0" DragTop="0" DragRight="699" DragBottom="404" >
+			
+		<Button Name="SetSiblingTitlePrefixClose" Image="Data\interface0039_sibling.tga" X="189" Y="8" LuaLButtonDown="CloseSetSiblingTitlePrefixPanel">
+			<ButtonRect State="0" Left="10" Top="268" Right="34" Bottom="285" />
+			<ButtonRect State="1" Left="35" Top="268" Right="59" Bottom="285" />
+			<ButtonRect State="2" Left="60" Top="268" Right="84" Bottom="285" />
+		</Button>
+		
+		<StaticText Name="SetSiblingTitlePrefixWord3" X="111" Y="80" Width="20" Height="20"  EdgeCode="LIGHT" FontColor="FFFFFFFF" ShadowColor="FF000000" Hide="0" Align="Center">
+		双
+		</StaticText>
+		
+		<EditBox Name="SetSiblingTitlePrefixWord1" X="34" Y="81" Row="1" Column="1" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" LuaLButtonUp="" Limit="1" >
+		</EditBox>
+		<EditBox Name="SetSiblingTitlePrefixWord2" X="74" Y="81" Row="1" Column="1" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" LuaLButtonUp="" Limit="1" >
+		</EditBox>
+		<EditBox Name="SetSiblingTitlePrefixWord4" X="154" Y="81" Row="1" Column="1" EdgeCode="LIGHT" FontColor="FFFFFFFF"
+			ShadowColor="FF000000" LuaLButtonUp="" Limit="1" >
+		</EditBox>
+
+		<Button Name="SetSiblingTitlePrefixOK" Image="Data\interface0039_sibling.tga" X="29" Y="121" LuaLButtonUp="SetSiblingTitlePrefixOK">
+			<ButtonRect State="0" Left="10" Top="191" Right="88" Bottom="211" />
+			<ButtonRect State="1" Left="10" Top="214" Right="88" Bottom="234" />
+			<ButtonRect State="2" Left="10" Top="237" Right="88" Bottom="257" />
+		</Button>
+		
+		<Button Name="SetSiblingTitlePrefixCancel" Image="Data\interface0039_sibling.tga" X="114" Y="121" LuaLButtonUp="SetSiblingTitlePrefixCancel">
+			<ButtonRect State="0" Left="95" Top="191" Right="173" Bottom="211" />
+			<ButtonRect State="1" Left="95" Top="214" Right="173" Bottom="234" />
+			<ButtonRect State="2" Left="95" Top="237" Right="173" Bottom="257" />
+		</Button>
+			
+	</Panel>
+	
+</UI>

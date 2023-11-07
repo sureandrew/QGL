@@ -1,0 +1,193 @@
+//-- Config
+config
+{
+	SubPath="Service/";
+	TrustOnly=0;
+	StartID=5000;
+	EndID=5999;
+}
+
+//-- Include header
+#include "Common/common_binary.h"
+
+#ifndef SIMCLIENT
+	#ifndef MESSAGE
+		#ifndef QGL
+			#include "Stub/Logic/Item.h"
+			#include "Stub/Logic/Partner.h"
+			#include "Stub/Logic/Pet.h"
+		#else
+			#include "Proxy/Logic/Item.h"
+			#include "Proxy/Logic/Partner.h"
+			#include "Proxy/Logic/Pet.h"
+		#endif
+	#else
+		#include "Proxy/Logic/Item.h"
+		#include "Proxy/Logic/Partner.h"
+		#include "Proxy/Logic/Pet.h"
+	#endif
+#else
+	#include "SimClient/Item.h"
+	#include "SimClient/Partner.h"
+	#include "SimClient/Pet.h"
+#endif
+
+//-- RPC functions
+private:
+RegisterProxy(ServiceID serviceId);
+UnregisterProxy(ServiceID serviceId);
+RegisterMap(ServiceID serviceId, UInt16 map_id, UInt8 line_id, UInt32 owner_id);
+UnregisterMap(ServiceID serviceId, UInt16 map_id, UInt8 line_id, UInt32 owner_id);
+ReleaseSession(SessionID sid, Boolean bDelete);
+ApplyChange(UInt32 guild_uid, RPCMask changeMask, Int32Vector updatedata, UInt8 source);
+GenerateGuildGroup(UInt8 guildWarState);
+GenerateGuildGroupCW(UInt8 guildWarState);
+GuildWarResult(UInt32 guild_uid1, UInt32 guild_uid2, UInt32 win_guild_uid);
+KickMember(UInt32 guild_uid, UInt32 kicker_id, UInt32 member_id, String reason);
+ManorScaleChange(UInt32 guild_uid, UInt8 scale);
+TransmitGuildMsg(String Msg, UInt32 guildUID);
+
+nonblock:
+GetAvailService();
+SendHorseLightMessage(String Msg, UInt32 SourceId, UInt32 count);
+SendSystemMessage(String Msg, UInt32 SourceId);
+SendRumorMessage(String Msg, UInt32 SourceId, BYTE SubType);
+BattleEndUpdate(UInt32Vector char_idList);
+CB_BattleEndUpdate();
+AddMsgSchedule(UInt16 id, UInt32 startTime, UInt16 periodCount, UInt16 count,UInt32 period,UInt8	msgType,String msg, UInt32 char_id);
+RemoveMsgSchedule(UInt16 id);
+UpdateCharInfo(NetGroup *grp);
+CB_GetAvailService(ServiceID serviceId);
+
+block:
+ChannelsBlockHandle(UInt32 char_id, UInt8Vector bkChannels, UInt8Vector unBkChannels);
+ChangeMsgIcon(UInt32 char_id, UInt16 iconID, Boolean change);
+CB_ChangeMsgIcon(Boolean canChange);
+AddSpeakCount(UInt32 char_id, Int16 count);
+ChangeGDonate(UInt32 guild_uid, UInt32 char_id, Int gChange, UInt8 source);
+RemoveMessengersByOwner(UInt32 char_id);
+CB_RemoveMessengersByOwner();
+
+RemoveAllGuildApplicant(UInt32 char_id);
+CharacterLeave(UInt32 char_id);
+
+//guild function
+CreateGuild(UInt32 char_id, String guild_name, String guild_creator, String guild_master);
+OpenGuildApply(UInt32 char_id);
+CB_CreateGuild(UInt8 bResult);
+DonateMoney(UInt32 guild_uid, UInt32 char_id, UInt32 money);
+CB_DonateMoney(UInt32 addedGDonate, UInt8 returnFlag, UInt32 addGMoney);
+
+
+//-- P2P NET CALLBACK
+InitMessageChannel(UInt32 char_id);
+ResumeMessageChannel(UInt32 char_id);
+ReleaseMsgCharacter(UInt32 char_id);
+
+public:
+CB_Error(UInt32 err, String errMsg);
+CB_InitMessageChannel(BYTE Result);
+CB_ReceiveMessageChannel(NetObject * channel, BYTE Type);
+SendPrivateMessage(String Msg, UInt32 SourceId, UInt32 TargetID, String TargetName, boolean isFriend);
+CB_SendPrivateMessage(BYTE Result, boolean isFriend, UInt32 resultFlag);
+
+SendFriendMessage(String Msg,UInt32 Char_id);
+CB_ReceiveFriendMessage(String Msg,String SrcName);
+
+CB_SendHorseLightMessage(BYTE Result);
+CB_SendSystemMessage(BYTE Result);
+CB_SendRumorMessage(BYTE Result);
+CB_SendShutdownMessage(UInt32 downTime);
+
+CB_ReceivePrivateMessage(String Msg, String SrcName, UInt32 SrcChar_id, String TargetName, UInt32 TargetID, boolean isFriend);
+CB_ReceiveHorseLightMessage(String Msg, UInt32 count, SessionIDVector listeners);
+CB_ReceiveSystemMessage(String Msg, SessionIDVector listeners);
+CB_ReceiveRumorMessage(String Msg, BYTE SubType, SessionIDVector listeners);
+
+LeaveChannel(UInt32 char_id, String ChannelName);
+LeaveAllChannel(UInt32 char_id);
+
+SetListen(BOOL IsListen, UInt32 char_Id);
+CB_SetListen();
+
+JoinMessageChannel(UInt32 char_id, String char_Name, String ChannelName , BYTE JoinMode);
+CB_JoinMessageChannel(BYTE Result);
+
+//Relations function
+CreateMessenger(UInt32 owner_id, UInt32 target_id, UInt16Vector relations, UInt8 group, UInt16 friendly, String targetName);
+RemoveMessenger(UInt32 owner_id, UInt32 target_id);
+RemoveRelation(UInt32 owner_id, UInt32 target_id,UInt16 relation);
+
+
+CB_UpdateMessengers(NetGroup * messengers);
+CB_UpdateMsgCharInfo(NetGroup * magCharInfoGrp);
+CB_RemoveMessengers(UInt32 owner_id, UInt32 target_id);
+
+RequestInfo(UInt32 char_id, String name, bool update, bool tip);
+CB_RequestInfo(NetObject * msgCharData, bool update);
+CB_MessageReturn(String msg, String name);
+
+GetMessengers(UInt32 owner_id,UInt16 relation);
+CB_GetMessengers(UInt32 owner_id,UInt32Vector messgers);
+
+GetMessengersName(UInt32 owner_id,UInt16 relation);
+CB_GetMessengersName(UInt32 owner_id,StringVector messgers_name);
+
+GetFriendly(UInt32 owner_id, UInt32 target_id);
+CB_GetFriendly(UInt32 friendly);
+
+IsFriend(UInt32 owner_id, UInt32 target_id);
+CB_IsFriend(UInt32 isFriend);
+
+ChangeFriendly(UInt32 owner_id, UInt32 target_id, Int32 changed);
+CB_ChangeFriendly();
+
+//guild 
+ApplyGuild(UInt32 char_id, UInt32 guild_uid);
+RequestGuildAim(UInt32 guild_uid);
+CB_ApplyGuild(UInt32 guild_uid);
+CB_Guilds(NetGroup* GuildGrp, bool openApply);
+CB_GuildMembers(NetGroup* GuildMemberGrp);
+CB_RequestApplicant(NetGroup * pGrp);
+CB_CreateGuildMsg(String guildName, String creator, SessionIDVector listeners);
+
+// syn title
+ChangeTitle(UInt32 char_id, String title);
+
+//global channel
+SetMoney(UInt32 owner_id,UInt32 money);
+
+// target hawk
+GetTargetFromHawk(UInt32 target_id);
+CB_GetTargetFromHawk(bool isonline,String char_name);
+
+//business shop
+BuyItemFromBusinessShop(UInt32 itemId, Int16 shopId, UInt16 count, UInt32 money, UInt32 guild_uid, UInt32 char_id);
+CB_BuyItemFromBusinessShop(Boolean success, UInt16 finalCount, UInt32 finalPrice);
+SellItemToBusinessShop(UInt32 itemId, Int16 shopId, UInt16 count, UInt32 guild_uid, UInt32 char_id);
+CB_SellItemToBusinessShop(Boolean success, UInt32 finalPrice);
+OpenBusinessShopMenu(UInt32 owner_id, UInt16 shop_id, UInt32 money);
+CB_OpenBusinessShopMenu(Boolean sell, UInt16 shop_id, UInt8 shopName, 
+						UInt32 SynTime, UInt32 BusinessMoney, BusinessShopItemInfoVector ItemInfoList);
+UpdateBusinessShopList(UInt16 shop_id);
+CB_UpdateBusinessShopList(BusinessShopItemInfoVector ItemInfoList);
+ChangeBusinessProfit(UInt32 guild_uid, UInt32 char_id, Int32 profit);
+ApplyTrader(UInt32 guild_uid, UInt32 char_id);
+
+GetGenerationChars(UInt32Vector uiVtRelatedIds);
+GetTargetInfo(UInt32 char_id);
+CB_GetTargetInfo(NetObject * msgTargetData);
+private:
+nonblock:
+ClientDisconnect();
+
+
+public:
+nonblock:
+//show item detail
+ShowPublicPartnerDetailFromOtherLine(UInt32 char_id, UInt32 partner_id, UInt32 char_idTo);
+ShowPublicPetDetailFromOtherLine(UInt32 char_id, UInt32 pet_id, UInt32 char_idTo);
+ShowPublicItemDetailFromOtherLine(UInt32 char_id, UInt32 item_uid, UInt32 char_idTo);
+CB_ShowPublicItemDetailFromOtherLine(CItem item);
+CB_ShowPublicPartnerDetailFromOtherLine(CPartner partner, UInt16Vector skillIDs);
+CB_ShowPublicPetDetailFromOtherLine(CPet pet, UInt16Vector skillIDs);
